@@ -1,6 +1,6 @@
 /**
- * [GIPPP] Global Insight Profiler Project - Core Engine v2.3
- * Focus: UI Stability (Fixed Height), Centered Layout, Bug Fixes
+ * [GIPPP] Global Insight Profiler Project - Core Engine v2.4
+ * Focus: Amazon Affiliate Slot, Trait-Based Recommendation, UI Stability
  */
 
 const GIPPP_ENGINE = (() => {
@@ -16,28 +16,41 @@ const GIPPP_ENGINE = (() => {
     const uiStrings = {
         ko: {
             desc: "글로벌 인사이트 프로파일러 프로젝트",
-            security: "🔒 보안 안내: 본 시스템은 데이터를 저장하지 않습니다. QR코드나 이미지를 통해 결과를 소장하세요.",
+            security: "🔒 보안 안내: 본 시스템은 데이터를 저장하지 않습니다.",
             loading: "데이터 엔진 로딩 중...",
             processing: "정밀 프로파일 분석 중...",
             wait: "데이터셋 대조를 위해 잠시만 기다려 주세요.",
             saveImg: "📸 결과 이미지로 저장 (QR포함)",
             retest: "새로운 테스트 시작하기",
             reportTitle: "인사이트 리포트",
-            qrNote: "📱 이 QR을 스캔하면 언제든 결과를 다시 볼 수 있습니다",
+            qrNote: "📱 이 QR을 스캔하면 결과를 소장할 수 있습니다",
+            recommendTitle: "💡 당신을 위한 맞춤 추천",
+            viewAmazon: "아마존에서 보기",
             traits: { E: "외향성", A: "친화성", C: "성실성", N: "신경증", O: "개방성" }
         },
         en: {
             desc: "Global Insight Profiler Project",
-            security: "🔒 Security: No data stored. Save your results via QR or Image.",
+            security: "🔒 Security: No data stored on server.",
             loading: "Loading data engine...",
             processing: "Generating Deep Profile...",
             wait: "Comparing with global datasets...",
             saveImg: "📸 Save as Image (with QR)",
             retest: "Start New Test",
             reportTitle: "Insight Report",
-            qrNote: "📱 Scan this QR to view your results anytime",
+            qrNote: "📱 Scan to take your results with you",
+            recommendTitle: "💡 Recommended for You",
+            viewAmazon: "View on Amazon",
             traits: { E: "Extraversion", A: "Agreeableness", C: "Conscientiousness", N: "Neuroticism", O: "Openness" }
         }
+    };
+
+    // 성격 특성별 추천 상품 키워드 매핑
+    const amazonProducts = {
+        E: { ko: "사교성을 높여주는 파티 게임", en: "Party Games for Socializing", keyword: "party games" },
+        A: { ko: "마음을 전하는 따뜻한 선물 세트", en: "Thoughtful Gift Sets", keyword: "gift sets" },
+        C: { ko: "생산성을 높여주는 플래너", en: "Productivity Planners", keyword: "productivity planner" },
+        N: { ko: "스트레스 완화를 위한 명상 도구", en: "Meditation & Stress Relief", keyword: "meditation kit" },
+        O: { ko: "창의력을 자극하는 예술 용품", en: "Creative Art Supplies", keyword: "art supplies" }
     };
 
     const ui = {
@@ -61,11 +74,8 @@ const GIPPP_ENGINE = (() => {
         await loadData();
 
         const resData = urlParams.get('res');
-        if (resData) {
-            decodeAndShowResult(resData);
-        } else {
-            renderQuestion();
-        }
+        if (resData) decodeAndShowResult(resData);
+        else renderQuestion();
     };
 
     const loadData = async () => {
@@ -80,13 +90,10 @@ const GIPPP_ENGINE = (() => {
     const renderQuestion = () => {
         if (!state.questions[state.currentIndex]) return;
         const q = state.questions[state.currentIndex];
-        
-        // 질문 번호와 텍스트 분리 렌더링
         ui.questionText.innerHTML = `
             <div style="font-size: 1rem; color: #3498db; margin-bottom: 10px;">Question ${state.currentIndex + 1} / ${state.questions.length}</div>
             <div>${q.text}</div>
         `;
-        
         ui.optionsGroup.innerHTML = '';
         const labels = state.lang === 'ko' ? ["전혀 아니다", "아니다", "보통이다", "그렇다", "매우 그렇다"] : ["Strongly Disagree", "Disagree", "Neutral", "Agree", "Strongly Agree"];
 
@@ -97,11 +104,8 @@ const GIPPP_ENGINE = (() => {
             btn.onclick = () => {
                 const finalScore = (q.direction === "-") ? (6 - score) : score;
                 state.answers.push({ trait: q.trait, score: finalScore });
-                if (++state.currentIndex < state.questions.length) {
-                    renderQuestion();
-                } else {
-                    showProcessing();
-                }
+                if (++state.currentIndex < state.questions.length) renderQuestion();
+                else showProcessing();
             };
             ui.optionsGroup.appendChild(btn);
         });
@@ -110,12 +114,7 @@ const GIPPP_ENGINE = (() => {
 
     const showProcessing = () => {
         const strings = uiStrings[state.lang];
-        ui.mainContent.innerHTML = `
-            <div style="padding: 40px 0;">
-                <div class="spinner"></div>
-                <h3 style="font-size: 1.5rem;">${strings.processing}</h3>
-                <p style="color: #666;">${strings.wait}</p>
-            </div>`;
+        ui.mainContent.innerHTML = `<div style="padding: 40px 0;"><div class="spinner"></div><h3 style="font-size: 1.5rem;">${strings.processing}</h3><p style="color: #666;">${strings.wait}</p></div>`;
         setTimeout(() => {
             state.results = calculateScores();
             renderFinalReport();
@@ -131,51 +130,44 @@ const GIPPP_ENGINE = (() => {
         }, {});
     };
 
-    const encodeResults = () => {
-        if (!state.results) return "";
-        return Object.entries(state.results)
-            .map(([trait, data]) => {
-                const p = data.count === 20 ? data.total : Math.round((data.total / (data.count * 5)) * 100);
-                return trait + p;
-            }).join('');
-    };
-
-    const decodeAndShowResult = (code) => {
-        const scores = {};
-        const matches = code.match(/([EACNO])(\d+)/g);
-        if (matches) {
-            matches.forEach(m => {
-                const trait = m[0];
-                const score = parseInt(m.substring(1));
-                scores[trait] = { total: score, count: 20 }; 
-            });
-            state.results = scores;
-            renderFinalReport();
-        }
-    };
-
     const renderFinalReport = () => {
         const strings = uiStrings[state.lang];
         const resCode = encodeResults();
         const shareUrl = `${window.location.origin}${window.location.pathname}?lang=${state.lang}&res=${resCode}`;
         const qrImgUrl = `https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=${encodeURIComponent(shareUrl)}`;
 
-        let reportHtml = `
-            <div class="result-card" style="text-align:left;">
-                <h2 style="text-align:center; color:#2c3e50; border-bottom:4px solid #3498db; padding-bottom:15px; font-size:1.8rem;">${strings.reportTitle}</h2>`;
+        // 가장 높은 점수의 특성 찾기 (추천용)
+        let maxTrait = 'O';
+        let maxScore = -1;
+        const traitPercentages = {};
 
         for (const [trait, data] of Object.entries(state.results)) {
-            const traitName = strings.traits[trait];
-            const percentage = data.count === 20 ? data.total : Math.round((data.total / (data.count * 5)) * 100);
-            const desc = percentage >= 50 ? state.descriptions[trait].high : state.descriptions[trait].low;
+            const p = data.count === 20 ? data.total : Math.round((data.total / (data.count * 5)) * 100);
+            traitPercentages[trait] = p;
+            if (p > maxScore) { maxScore = p; maxTrait = trait; }
+        }
 
+        let reportHtml = `<div class="result-card" style="text-align:left;"><h2 style="text-align:center; color:#2c3e50; border-bottom:4px solid #3498db; padding-bottom:15px; font-size:1.8rem;">${strings.reportTitle}</h2>`;
+
+        for (const [trait, p] of Object.entries(traitPercentages)) {
+            const traitName = strings.traits[trait];
+            const desc = p >= 50 ? state.descriptions[trait].high : state.descriptions[trait].low;
             reportHtml += `
                 <div style="margin-bottom: 25px;">
-                    <div style="display: flex; justify-content: space-between; font-weight: bold; font-size:1.2rem;"><span>${traitName}</span><span>${percentage}%</span></div>
-                    <div style="width: 100%; height: 15px; background: #eee; border-radius: 8px; margin: 8px 0; overflow:hidden;"><div style="width: ${percentage}%; height: 100%; background: linear-gradient(90deg, #3498db, #2ecc71); border-radius: 8px;"></div></div>
+                    <div style="display: flex; justify-content: space-between; font-weight: bold; font-size:1.2rem;"><span>${traitName}</span><span>${p}%</span></div>
+                    <div style="width: 100%; height: 15px; background: #eee; border-radius: 8px; margin: 8px 0; overflow:hidden;"><div style="width: ${p}%; height: 100%; background: linear-gradient(90deg, #3498db, #2ecc71); border-radius: 8px;"></div></div>
                     <p style="font-size: 1.1rem; color: #333; line-height: 1.6;">${desc}</p>
                 </div>`;
         }
+
+        // [수익화] 아마존 추천 슬롯
+        const product = amazonProducts[maxTrait];
+        reportHtml += `
+            <div style="margin: 30px 0; padding: 20px; background: #fff9e6; border-radius: 20px; border: 2px solid #ffcc00; text-align:center;">
+                <h4 style="margin:0 0 10px 0; color:#e67e22;">${strings.recommendTitle}</h4>
+                <p style="font-size:1.1rem; font-weight:bold; margin-bottom:15px;">${product[state.lang]}</p>
+                <a href="https://www.amazon.com/s?k=${encodeURIComponent(product.keyword)}" target="_blank" style="display:inline-block; padding:12px 25px; background:#ff9900; color:white; text-decoration:none; border-radius:10px; font-weight:bold;">${strings.viewAmazon}</a>
+            </div>`;
 
         reportHtml += `
                 <div style="text-align:center; margin: 30px 0; padding: 20px; background: #f0f7ff; border-radius: 20px; border: 2px solid #d0e3ff;">
@@ -190,16 +182,30 @@ const GIPPP_ENGINE = (() => {
         window.scrollTo(0, 0);
     };
 
+    const encodeResults = () => {
+        if (!state.results) return "";
+        return Object.entries(state.results).map(([trait, data]) => {
+            const p = data.count === 20 ? data.total : Math.round((data.total / (data.count * 5)) * 100);
+            return trait + p;
+        }).join('');
+    };
+
+    const decodeAndShowResult = (code) => {
+        const scores = {};
+        const matches = code.match(/([EACNO])(\d+)/g);
+        if (matches) {
+            matches.forEach(m => { scores[m[0]] = { total: parseInt(m.substring(1)), count: 20 }; });
+            state.results = scores;
+            renderFinalReport();
+        }
+    };
+
     const generateImage = () => {
         const canvas = document.getElementById('resultCanvas');
         const ctx = canvas.getContext('2d');
         const strings = uiStrings[state.lang];
         const qrImg = document.getElementById('qrImage');
-        
-        if (!qrImg.complete) {
-            alert("Preparing image...");
-            return;
-        }
+        if (!qrImg.complete) return;
 
         canvas.width = 600; canvas.height = 950;
         ctx.fillStyle = '#ffffff'; ctx.fillRect(0, 0, 600, 950);
@@ -220,7 +226,6 @@ const GIPPP_ENGINE = (() => {
 
         ctx.fillStyle = '#f8f9fa'; ctx.fillRect(0, 750, 600, 200);
         try { ctx.drawImage(qrImg, 50, 775, 150, 150); } catch (e) {}
-        
         ctx.fillStyle = '#2c3e50'; ctx.font = 'bold 22px sans-serif'; ctx.textAlign = 'left';
         ctx.fillText(state.lang === 'ko' ? '당신의 인사이트가 궁금하다면?' : 'Curious about your insight?', 220, 830);
         ctx.fillStyle = '#7f8c8d'; ctx.font = '18px sans-serif';
