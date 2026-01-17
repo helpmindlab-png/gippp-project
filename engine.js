@@ -1,6 +1,7 @@
 /**
- * [Insight Profiler] Core Engine v2.5
- * Principles: Zero-Persistence, Standalone, High Readability
+ * [Insight Profiler] Core Engine v2.6
+ * Fixes: Exported generateImage (Image Save Fix), Async Load Sequence
+ * Features: Virtual Router for SEO, Amazon Recommendation, QR Offloading
  */
 
 const GIPPP_ENGINE = (() => {
@@ -61,42 +62,54 @@ const GIPPP_ENGINE = (() => {
         mainContent: document.getElementById('main-content')
     };
 
+    /**
+     * 가상 라우터 및 초기화
+     */
     const init = async () => {
         const urlParams = new URLSearchParams(window.location.search);
+        
+        // 1. 언어 결정 (URL 파라미터 -> 브라우저 설정)
         const forcedLang = urlParams.get('lang');
         state.lang = (forcedLang && uiStrings[forcedLang]) ? forcedLang : (navigator.language.substring(0, 2) === 'ko' ? 'ko' : 'en');
 
+        // 2. UI 텍스트 초기화
         const strings = uiStrings[state.lang];
         if(ui.brandDesc) ui.brandDesc.innerText = strings.desc;
         if(ui.securityNote) ui.securityNote.innerText = strings.security;
 
+        // 3. 데이터 로드 (비동기 완료 대기)
         await loadData();
 
+        // 4. 라우팅 처리 (결과 복원 vs 새로운 테스트)
         const resData = urlParams.get('res');
-        if (resData) decodeAndShowResult(resData);
-        else renderQuestion();
+        if (resData) {
+            decodeAndShowResult(resData);
+        } else {
+            renderQuestion();
+        }
     };
 
     const loadData = async () => {
         try {
             const response = await fetch(`./data/questions_${state.lang}.json`);
-            if (!response.ok) throw new Error("File not found");
+            if (!response.ok) throw new Error("JSON Load Failed");
             const data = await response.json();
             state.questions = data.items;
             state.descriptions = data.descriptions;
         } catch (e) { 
-            ui.questionText.innerText = "Data Load Error. Check JSON structure."; 
-            console.error(e);
+            if(ui.questionText) ui.questionText.innerText = "Data Load Error. Please check JSON files."; 
         }
     };
 
     const renderQuestion = () => {
         if (!state.questions || !state.questions[state.currentIndex]) return;
         const q = state.questions[state.currentIndex];
+        
         ui.questionText.innerHTML = `
             <div style="font-size: 1rem; color: #3498db; margin-bottom: 10px;">Question ${state.currentIndex + 1} / ${state.questions.length}</div>
             <div style="min-height: 80px; display: flex; align-items: center; justify-content: center;">${q.text}</div>
         `;
+        
         ui.optionsGroup.innerHTML = '';
         const labels = state.lang === 'ko' ? ["전혀 아니다", "아니다", "보통이다", "그렇다", "매우 그렇다"] : ["Strongly Disagree", "Disagree", "Neutral", "Agree", "Strongly Agree"];
 
@@ -107,8 +120,11 @@ const GIPPP_ENGINE = (() => {
             btn.onclick = () => {
                 const finalScore = (q.direction === "-") ? (6 - score) : score;
                 state.answers.push({ trait: q.trait, score: finalScore });
-                if (++state.currentIndex < state.questions.length) renderQuestion();
-                else showProcessing();
+                if (++state.currentIndex < state.questions.length) {
+                    renderQuestion();
+                } else {
+                    showProcessing();
+                }
             };
             ui.optionsGroup.appendChild(btn);
         });
@@ -122,9 +138,6 @@ const GIPPP_ENGINE = (() => {
                 <div class="spinner"></div>
                 <h3 style="font-size: 1.5rem;">${strings.processing}</h3>
                 <p style="color: #666;">${strings.wait}</p>
-                <div id="ad-processing" style="margin-top:30px; min-height:200px; background:#f9f9f9; border:1px dashed #ccc; display:flex; align-items:center; justify-content:center;">
-                    <p style="font-size:0.8rem; color:#999;">ADVERTISEMENT SLOT</p>
-                </div>
             </div>`;
         setTimeout(() => {
             state.results = calculateScores();
@@ -158,7 +171,7 @@ const GIPPP_ENGINE = (() => {
         let reportHtml = `
             <div class="result-card">
                 <h2 style="text-align:center; color:#2c3e50; border-bottom:4px solid #3498db; padding-bottom:15px; font-size:1.8rem;">${strings.reportTitle}</h2>
-                <div id="ad-result-top" style="margin:15px 0; min-height:60px; background:#f9f9f9; text-align:center; border:1px dashed #eee; font-size:0.7rem; color:#ccc;">AD SLOT (TOP)</div>
+                <div id="ad-result-top" style="margin:15px 0; min-height:60px; background:#f9f9f9; text-align:center; border:1px dashed #eee; font-size:0.7rem; color:#ccc; display:flex; align-items:center; justify-content:center;">AD SLOT (TOP)</div>
         `;
 
         for (const [trait, p] of Object.entries(traitPercentages)) {
@@ -179,7 +192,7 @@ const GIPPP_ENGINE = (() => {
                 <p style="font-size:1.1rem; font-weight:bold; margin-bottom:15px;">${product[state.lang]}</p>
                 <a href="https://www.amazon.com/s?k=${encodeURIComponent(product.keyword)}" target="_blank" style="display:inline-block; padding:12px 25px; background:#ff9900; color:white; text-decoration:none; border-radius:10px; font-weight:bold;">${strings.viewAmazon}</a>
             </div>
-            <div id="ad-result-bottom" style="margin:20px 0; min-height:100px; background:#f9f9f9; text-align:center; border:1px dashed #eee; font-size:0.7rem; color:#ccc;">AD SLOT (BOTTOM)</div>
+            <div id="ad-result-bottom" style="margin:20px 0; min-height:100px; background:#f9f9f9; text-align:center; border:1px dashed #eee; font-size:0.7rem; color:#ccc; display:flex; align-items:center; justify-content:center;">AD SLOT (BOTTOM)</div>
             <div style="text-align:center; margin: 30px 0; padding: 20px; background: #f0f7ff; border-radius: 20px; border: 2px solid #d0e3ff;">
                 <p style="font-size: 1rem; color: #0056b3; margin-bottom: 15px; font-weight:bold;">${strings.qrNote}</p>
                 <img id="qrImage" src="${qrImgUrl}" crossorigin="anonymous" alt="QR Code" style="border: 8px solid white; width:150px; height:150px;">
@@ -215,7 +228,11 @@ const GIPPP_ENGINE = (() => {
         const ctx = canvas.getContext('2d');
         const strings = uiStrings[state.lang];
         const qrImg = document.getElementById('qrImage');
-        if (!qrImg || !qrImg.complete) return;
+        
+        if (!qrImg || !qrImg.complete) {
+            alert("QR Code is still loading. Please try again.");
+            return;
+        }
 
         canvas.width = 600; canvas.height = 950;
         ctx.fillStyle = '#ffffff'; ctx.fillRect(0, 0, 600, 950);
@@ -235,7 +252,8 @@ const GIPPP_ENGINE = (() => {
         });
 
         ctx.fillStyle = '#f8f9fa'; ctx.fillRect(0, 750, 600, 200);
-        try { ctx.drawImage(qrImg, 50, 775, 150, 150); } catch (e) {}
+        try { ctx.drawImage(qrImg, 50, 775, 150, 150); } catch (e) { console.error("QR Draw Failed", e); }
+        
         ctx.fillStyle = '#2c3e50'; ctx.font = 'bold 22px sans-serif'; ctx.textAlign = 'left';
         ctx.fillText(state.lang === 'ko' ? '당신의 인사이트가 궁금하다면?' : 'Curious about your insight?', 220, 830);
         ctx.fillStyle = '#7f8c8d'; ctx.font = '18px sans-serif';
@@ -249,7 +267,8 @@ const GIPPP_ENGINE = (() => {
         link.click();
     };
 
-    return { init };
+    // 외부 노출 함수 (중요: generateImage 포함)
+    return { init, generateImage };
 })();
 
 document.addEventListener('DOMContentLoaded', GIPPP_ENGINE.init);
