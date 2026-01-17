@@ -1,6 +1,6 @@
 /**
- * [GIPPP] Global Insight Profiler Project - Core Engine v1.8
- * Focus: URL Parameter Routing (Force Language), Stability, High Readability
+ * [GIPPP] Global Insight Profiler Project - Core Engine v1.9
+ * Focus: Full UI Localization (Header, Footer, Content), URL Parameter Routing
  */
 
 const GIPPP_ENGINE = (() => {
@@ -13,28 +13,55 @@ const GIPPP_ENGINE = (() => {
         results: null
     };
 
+    // UI 텍스트 사전 (헤더, 푸터 등 정적 요소용)
+    const uiStrings = {
+        ko: {
+            desc: "글로벌 인사이트 프로파일러 프로젝트",
+            security: "🔒 보안 안내: 본 시스템은 어떠한 데이터도 서버에 저장하지 않으며, 창을 닫는 즉시 모든 분석 데이터는 파기됩니다.",
+            loading: "데이터 엔진 로딩 중...",
+            processing: "정밀 프로파일 분석 중...",
+            wait: "데이터셋 대조를 위해 잠시만 기다려 주세요.",
+            saveImg: "📸 결과 이미지로 저장",
+            retest: "다시 테스트하기",
+            reportTitle: "인사이트 리포트"
+        },
+        en: {
+            desc: "Global Insight Profiler Project",
+            security: "🔒 Security Notice: This system does not store any data on the server. All analysis data is destroyed immediately upon closing the window.",
+            loading: "Loading data engine...",
+            processing: "Generating Deep Profile...",
+            wait: "Comparing with global datasets...",
+            saveImg: "📸 Save as Image",
+            retest: "Retest",
+            reportTitle: "Insight Report"
+        }
+    };
+
     const ui = {
+        brandDesc: document.getElementById('brand-desc'),
+        securityNote: document.getElementById('security-note'),
         questionText: document.getElementById('question-text'),
         optionsGroup: document.getElementById('options-group'),
         progressFill: document.getElementById('progress-fill'),
         mainContent: document.getElementById('main-content')
     };
 
-    /**
-     * 초기화: URL 파라미터(?lang=) 확인 후 언어 결정
-     */
     const init = async () => {
-        // 1. URL에서 lang 파라미터 추출 (예: ?lang=en)
+        // 1. 언어 결정 (URL 파라미터 우선 -> 브라우저 설정)
         const urlParams = new URLSearchParams(window.location.search);
         const forcedLang = urlParams.get('lang');
-
         if (forcedLang && ['ko', 'en'].includes(forcedLang)) {
             state.lang = forcedLang;
         } else {
-            // 2. 파라미터가 없으면 브라우저 언어 감지
             const userLang = navigator.language.substring(0, 2);
             state.lang = (userLang === 'ko') ? 'ko' : 'en';
         }
+
+        // 2. 정적 UI 텍스트 즉시 반영
+        const strings = uiStrings[state.lang];
+        ui.brandDesc.innerText = strings.desc;
+        ui.securityNote.innerText = strings.security;
+        ui.questionText.innerText = strings.loading;
         
         try {
             const response = await fetch(`./data/questions_${state.lang}.json`);
@@ -43,7 +70,7 @@ const GIPPP_ENGINE = (() => {
             state.descriptions = data.descriptions;
             renderQuestion();
         } catch (error) {
-            ui.questionText.innerText = "Data Load Error. Please check JSON files.";
+            ui.questionText.innerText = "Data Load Error.";
         }
     };
 
@@ -57,7 +84,6 @@ const GIPPP_ENGINE = (() => {
         `;
         
         ui.optionsGroup.innerHTML = '';
-
         const labels = state.lang === 'ko' 
             ? ["전혀 아니다", "아니다", "보통이다", "그렇다", "매우 그렇다"]
             : ["Strongly Disagree", "Disagree", "Neutral", "Agree", "Strongly Agree"];
@@ -79,26 +105,27 @@ const GIPPP_ENGINE = (() => {
             };
             ui.optionsGroup.appendChild(btn);
         });
-
         ui.progressFill.style.width = `${(state.currentIndex / state.questions.length) * 100}%`;
     };
 
     const showProcessing = () => {
+        const strings = uiStrings[state.lang];
         ui.mainContent.innerHTML = `
             <div style="padding: 50px 0; text-align: center;">
                 <div class="spinner" style="margin: 0 auto 20px;"></div>
-                <h3 style="font-size: 1.4rem;">${state.lang === 'ko' ? '정밀 프로파일 분석 중...' : 'Generating Deep Profile...'}</h3>
+                <h3 style="font-size: 1.4rem;">${strings.processing}</h3>
+                <p style="color: #666;">${strings.wait}</p>
                 <div id="ad-processing" style="margin-top:30px; min-height:150px; background:#fdfdfd; border:1px dashed #ddd; display:flex; align-items:center; justify-content:center;">
                     <p style="font-size:0.8rem; color:#bbb;">ADVERTISEMENT</p>
                 </div>
             </div>`;
-        
         setTimeout(renderFinalReport, 3000);
     };
 
     const renderFinalReport = () => {
         const scores = calculateScores();
         state.results = scores;
+        const strings = uiStrings[state.lang];
 
         const traits = {
             E: { ko: "외향성", en: "Extraversion" },
@@ -111,7 +138,7 @@ const GIPPP_ENGINE = (() => {
         let reportHtml = `
             <div class="result-card" style="text-align:left;">
                 <h2 style="text-align:center; color:#2c3e50; border-bottom:3px solid #3498db; padding-bottom:15px;">
-                    ${state.lang === 'ko' ? '인사이트 리포트' : 'Insight Report'}
+                    ${strings.reportTitle}
                 </h2>
         `;
 
@@ -135,10 +162,10 @@ const GIPPP_ENGINE = (() => {
         reportHtml += `
                 <div style="margin-top: 35px;">
                     <button onclick="GIPPP_ENGINE.generateImage()" style="width:100%; padding:18px; background:#3498db; color:white; border:none; border-radius:12px; font-size:1.1rem; cursor:pointer; margin-bottom:12px; font-weight:bold;">
-                        📸 ${state.lang === 'ko' ? '결과 이미지로 저장' : 'Save as Image'}
+                        ${strings.saveImg}
                     </button>
                     <button onclick="location.reload()" style="width:100%; padding:15px; background:#f8f9fa; color:#7f8c8d; border:1px solid #ddd; border-radius:12px; font-size:1rem; cursor:pointer;">
-                        ${state.lang === 'ko' ? '다시 테스트하기' : 'Retest'}
+                        ${strings.retest}
                     </button>
                 </div>
             </div>
