@@ -1,6 +1,6 @@
 /**
- * [GIPPP] Global Insight Profiler Project - Core Engine v1.9
- * Focus: Full UI Localization (Header, Footer, Content), URL Parameter Routing
+ * [GIPPP] Global Insight Profiler Project - Core Engine v2.0
+ * Focus: Image Localization, QR Code Offloading, Full UI Sync
  */
 
 const GIPPP_ENGINE = (() => {
@@ -13,7 +13,6 @@ const GIPPP_ENGINE = (() => {
         results: null
     };
 
-    // UI 텍스트 사전 (헤더, 푸터 등 정적 요소용)
     const uiStrings = {
         ko: {
             desc: "글로벌 인사이트 프로파일러 프로젝트",
@@ -23,17 +22,21 @@ const GIPPP_ENGINE = (() => {
             wait: "데이터셋 대조를 위해 잠시만 기다려 주세요.",
             saveImg: "📸 결과 이미지로 저장",
             retest: "다시 테스트하기",
-            reportTitle: "인사이트 리포트"
+            reportTitle: "인사이트 리포트",
+            qrNote: "📱 스마트폰으로 스캔하여 결과를 소장하세요",
+            traits: { E: "외향성", A: "친화성", C: "성실성", N: "신경증", O: "개방성" }
         },
         en: {
             desc: "Global Insight Profiler Project",
-            security: "🔒 Security Notice: This system does not store any data on the server. All analysis data is destroyed immediately upon closing the window.",
+            security: "🔒 Security Notice: This system does not store any data on the server. All data is destroyed immediately upon closing.",
             loading: "Loading data engine...",
             processing: "Generating Deep Profile...",
             wait: "Comparing with global datasets...",
             saveImg: "📸 Save as Image",
             retest: "Retest",
-            reportTitle: "Insight Report"
+            reportTitle: "Insight Report",
+            qrNote: "📱 Scan to take your results with you",
+            traits: { E: "Extraversion", A: "Agreeableness", C: "Conscientiousness", N: "Neuroticism", O: "Openness" }
         }
     };
 
@@ -47,17 +50,10 @@ const GIPPP_ENGINE = (() => {
     };
 
     const init = async () => {
-        // 1. 언어 결정 (URL 파라미터 우선 -> 브라우저 설정)
         const urlParams = new URLSearchParams(window.location.search);
         const forcedLang = urlParams.get('lang');
-        if (forcedLang && ['ko', 'en'].includes(forcedLang)) {
-            state.lang = forcedLang;
-        } else {
-            const userLang = navigator.language.substring(0, 2);
-            state.lang = (userLang === 'ko') ? 'ko' : 'en';
-        }
+        state.lang = (forcedLang && uiStrings[forcedLang]) ? forcedLang : (navigator.language.substring(0, 2) === 'ko' ? 'ko' : 'en');
 
-        // 2. 정적 UI 텍스트 즉시 반영
         const strings = uiStrings[state.lang];
         ui.brandDesc.innerText = strings.desc;
         ui.securityNote.innerText = strings.security;
@@ -69,24 +65,18 @@ const GIPPP_ENGINE = (() => {
             state.questions = data.items;
             state.descriptions = data.descriptions;
             renderQuestion();
-        } catch (error) {
-            ui.questionText.innerText = "Data Load Error.";
-        }
+        } catch (error) { ui.questionText.innerText = "Data Load Error."; }
     };
 
     const renderQuestion = () => {
         if (!state.questions[state.currentIndex]) return;
         const q = state.questions[state.currentIndex];
-        
         ui.questionText.innerHTML = `
             <div style="font-size: 0.9rem; color: #3498db; margin-bottom: 5px;">Question ${state.currentIndex + 1} / ${state.questions.length}</div>
             <div style="font-size: 1.3rem; font-weight: bold; line-height: 1.4;">${q.text}</div>
         `;
-        
         ui.optionsGroup.innerHTML = '';
-        const labels = state.lang === 'ko' 
-            ? ["전혀 아니다", "아니다", "보통이다", "그렇다", "매우 그렇다"]
-            : ["Strongly Disagree", "Disagree", "Neutral", "Agree", "Strongly Agree"];
+        const labels = state.lang === 'ko' ? ["전혀 아니다", "아니다", "보통이다", "그렇다", "매우 그렇다"] : ["Strongly Disagree", "Disagree", "Neutral", "Agree", "Strongly Agree"];
 
         [1, 2, 3, 4, 5].forEach(score => {
             const btn = document.createElement('button');
@@ -96,12 +86,8 @@ const GIPPP_ENGINE = (() => {
             btn.onclick = () => {
                 const finalScore = (q.direction === "-") ? (6 - score) : score;
                 state.answers.push({ trait: q.trait, score: finalScore });
-                if (++state.currentIndex < state.questions.length) {
-                    renderQuestion();
-                    window.scrollTo(0, 0);
-                } else {
-                    showProcessing();
-                }
+                if (++state.currentIndex < state.questions.length) { renderQuestion(); window.scrollTo(0, 0); }
+                else showProcessing();
             };
             ui.optionsGroup.appendChild(btn);
         });
@@ -110,15 +96,7 @@ const GIPPP_ENGINE = (() => {
 
     const showProcessing = () => {
         const strings = uiStrings[state.lang];
-        ui.mainContent.innerHTML = `
-            <div style="padding: 50px 0; text-align: center;">
-                <div class="spinner" style="margin: 0 auto 20px;"></div>
-                <h3 style="font-size: 1.4rem;">${strings.processing}</h3>
-                <p style="color: #666;">${strings.wait}</p>
-                <div id="ad-processing" style="margin-top:30px; min-height:150px; background:#fdfdfd; border:1px dashed #ddd; display:flex; align-items:center; justify-content:center;">
-                    <p style="font-size:0.8rem; color:#bbb;">ADVERTISEMENT</p>
-                </div>
-            </div>`;
+        ui.mainContent.innerHTML = `<div style="padding: 50px 0; text-align: center;"><div class="spinner" style="margin: 0 auto 20px;"></div><h3 style="font-size: 1.4rem;">${strings.processing}</h3><p style="color: #666;">${strings.wait}</p></div>`;
         setTimeout(renderFinalReport, 3000);
     };
 
@@ -127,50 +105,34 @@ const GIPPP_ENGINE = (() => {
         state.results = scores;
         const strings = uiStrings[state.lang];
 
-        const traits = {
-            E: { ko: "외향성", en: "Extraversion" },
-            A: { ko: "친화성", en: "Agreeableness" },
-            C: { ko: "성실성", en: "Conscientiousness" },
-            N: { ko: "신경증", en: "Neuroticism" },
-            O: { ko: "개방성", en: "Openness" }
-        };
-
-        let reportHtml = `
-            <div class="result-card" style="text-align:left;">
-                <h2 style="text-align:center; color:#2c3e50; border-bottom:3px solid #3498db; padding-bottom:15px;">
-                    ${strings.reportTitle}
-                </h2>
-        `;
+        let reportHtml = `<div class="result-card" style="text-align:left;"><h2 style="text-align:center; color:#2c3e50; border-bottom:3px solid #3498db; padding-bottom:15px;">${strings.reportTitle}</h2>`;
 
         for (const [trait, data] of Object.entries(scores)) {
-            const traitName = traits[trait][state.lang];
+            const traitName = strings.traits[trait];
             const percentage = Math.round((data.total / (data.count * 5)) * 100);
             const desc = percentage >= 50 ? state.descriptions[trait].high : state.descriptions[trait].low;
 
             reportHtml += `
                 <div style="margin-bottom: 25px;">
-                    <div style="display: flex; justify-content: space-between; font-weight: bold; font-size:1.1rem;">
-                        <span>${traitName}</span><span>${percentage}%</span>
-                    </div>
-                    <div style="width: 100%; height: 12px; background: #eee; border-radius: 6px; margin: 8px 0; overflow:hidden;">
-                        <div style="width: ${percentage}%; height: 100%; background: linear-gradient(90deg, #3498db, #2ecc71); border-radius: 6px;"></div>
-                    </div>
+                    <div style="display: flex; justify-content: space-between; font-weight: bold; font-size:1.1rem;"><span>${traitName}</span><span>${percentage}%</span></div>
+                    <div style="width: 100%; height: 12px; background: #eee; border-radius: 6px; margin: 8px 0; overflow:hidden;"><div style="width: ${percentage}%; height: 100%; background: linear-gradient(90deg, #3498db, #2ecc71); border-radius: 6px;"></div></div>
                     <p style="font-size: 0.95rem; color: #444; line-height: 1.6;">${desc}</p>
                 </div>`;
         }
 
+        // QR 코드 영역 추가
+        const qrUrl = `https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${encodeURIComponent(window.location.href)}`;
+        
         reportHtml += `
-                <div style="margin-top: 35px;">
-                    <button onclick="GIPPP_ENGINE.generateImage()" style="width:100%; padding:18px; background:#3498db; color:white; border:none; border-radius:12px; font-size:1.1rem; cursor:pointer; margin-bottom:12px; font-weight:bold;">
-                        ${strings.saveImg}
-                    </button>
-                    <button onclick="location.reload()" style="width:100%; padding:15px; background:#f8f9fa; color:#7f8c8d; border:1px solid #ddd; border-radius:12px; font-size:1rem; cursor:pointer;">
-                        ${strings.retest}
-                    </button>
+                <div style="text-align:center; margin: 30px 0; padding: 20px; background: #f9f9f9; border-radius: 15px;">
+                    <p style="font-size: 0.9rem; color: #666; margin-bottom: 10px;">${strings.qrNote}</p>
+                    <img src="${qrUrl}" alt="QR Code" style="border: 5px solid white; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
                 </div>
-            </div>
-            <canvas id="resultCanvas" style="display:none;"></canvas>
-        `;
+                <div style="margin-top: 20px;">
+                    <button onclick="GIPPP_ENGINE.generateImage()" style="width:100%; padding:18px; background:#3498db; color:white; border:none; border-radius:12px; font-size:1.1rem; cursor:pointer; margin-bottom:12px; font-weight:bold;">${strings.saveImg}</button>
+                    <button onclick="location.reload()" style="width:100%; padding:15px; background:#f8f9fa; color:#7f8c8d; border:1px solid #ddd; border-radius:12px; font-size:1rem; cursor:pointer;">${strings.retest}</button>
+                </div>
+            </div><canvas id="resultCanvas" style="display:none;"></canvas>`;
 
         ui.mainContent.innerHTML = reportHtml;
         window.scrollTo(0, 0);
@@ -185,21 +147,27 @@ const GIPPP_ENGINE = (() => {
         }, {});
     };
 
+    /**
+     * 이미지 생성 (현지화 적용)
+     */
     const generateImage = () => {
         const canvas = document.getElementById('resultCanvas');
         const ctx = canvas.getContext('2d');
+        const strings = uiStrings[state.lang];
+        
         canvas.width = 600; canvas.height = 800;
         ctx.fillStyle = '#ffffff'; ctx.fillRect(0, 0, 600, 800);
         ctx.fillStyle = '#3498db'; ctx.fillRect(0, 0, 600, 80);
         ctx.fillStyle = '#ffffff'; ctx.font = 'bold 28px sans-serif'; ctx.textAlign = 'center';
-        ctx.fillText('GIPPP Insight Report', 300, 50);
+        ctx.fillText(strings.reportTitle, 300, 50);
 
-        const traits = { E: "Extraversion", A: "Agreeableness", C: "Conscientiousness", N: "Neuroticism", O: "Openness" };
         let y = 180;
         Object.entries(state.results).forEach(([trait, data]) => {
+            const traitName = strings.traits[trait];
             const p = Math.round((data.total / (data.count * 5)) * 100);
+            
             ctx.fillStyle = '#2c3e50'; ctx.font = 'bold 20px sans-serif'; ctx.textAlign = 'left';
-            ctx.fillText(traits[trait], 50, y);
+            ctx.fillText(traitName, 50, y);
             ctx.textAlign = 'right'; ctx.fillText(`${p}%`, 550, y);
             ctx.fillStyle = '#eee'; ctx.fillRect(50, y + 15, 500, 15);
             ctx.fillStyle = '#3498db'; ctx.fillRect(50, y + 15, (500 * p) / 100, 15);
@@ -207,7 +175,7 @@ const GIPPP_ENGINE = (() => {
         });
 
         const link = document.createElement('a');
-        link.download = `GIPPP_Result.png`;
+        link.download = `GIPPP_${state.lang}_Result.png`;
         link.href = canvas.toDataURL();
         link.click();
     };
