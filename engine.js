@@ -1,16 +1,37 @@
 /**
- * [GIPPP] Global Insight Profiler Project - Core Engine v2.7
- * Features: Manual Language Switcher, Multi-Country Ready, Image/QR Sync
+ * [GIPPP] Global Insight Profiler Project - Core Engine v2.8
+ * Fixes: Multi-language Labels, Vietnamese JSON Sync, Image/QR Localization
  */
 
 const GIPPP_ENGINE = (() => {
     let state = { currentIndex: 0, answers: [], questions: [], descriptions: {}, lang: 'en', results: null };
 
     const uiStrings = {
-        ko: { desc: "글로벌 인사이트 프로파일러", security: "🔒 보안: 데이터 저장 안 함", processing: "분석 중...", wait: "잠시만 기다려 주세요.", saveImg: "📸 이미지 저장", retest: "다시 하기", reportTitle: "인사이트 리포트", recommendTitle: "💡 맞춤 추천", viewAmazon: "아마존 보기", qrNote: "📱 스캔하여 결과 소장", traits: { E: "외향성", A: "친화성", C: "성실성", N: "신경증", O: "개방성" } },
-        en: { desc: "Global Insight Profiler", security: "🔒 Security: No data stored", processing: "Analyzing...", wait: "Please wait...", saveImg: "📸 Save Image", retest: "Retest", reportTitle: "Insight Report", recommendTitle: "💡 Recommended", viewAmazon: "View on Amazon", qrNote: "📱 Scan to save results", traits: { E: "Extraversion", A: "Agreeableness", C: "Conscientiousness", N: "Neuroticism", O: "Openness" } },
-        es: { desc: "Perfilador de Perspectiva Global", security: "🔒 Seguridad: Sin datos guardados", processing: "Analizando...", wait: "Por favor espere...", saveImg: "📸 Guardar Imagen", retest: "Reiniciar", reportTitle: "Informe de Perspectiva", recommendTitle: "💡 Recomendado", viewAmazon: "Ver en Amazon", qrNote: "📱 Escanea para guardar", traits: { E: "Extraversión", A: "Amabilidad", C: "Responsabilidad", N: "Neuroticismo", O: "Apertura" } },
-        jp: { desc: "グローバル・インサイト・プロファイラー", security: "🔒 セキュリティ: データ保存なし", processing: "分析中...", wait: "少々お待ちください...", saveImg: "📸 画像을保存", retest: "再テスト", reportTitle: "インサイトレポート", recommendTitle: "💡 おすすめ商品", viewAmazon: "Amazonで見る", qrNote: "📱 スキャンして保存", traits: { E: "外向性", A: "協조性", C: "誠実性", N: "神経症傾向", O: "開放性" } }
+        ko: { 
+            desc: "글로벌 인사이트 프로파일러", security: "🔒 보안: 데이터 저장 안 함", processing: "분석 중...", wait: "잠시만 기다려 주세요.", saveImg: "📸 이미지 저장", retest: "다시 하기", reportTitle: "인사이트 리포트", recommendTitle: "💡 맞춤 추천", viewAmazon: "아마존 보기", qrNote: "📱 스캔하여 결과 소장", 
+            traits: { E: "외향성", A: "친화성", C: "성실성", N: "신경증", O: "개방성" },
+            labels: ["전혀 아니다", "아니다", "보통이다", "그렇다", "매우 그렇다"]
+        },
+        en: { 
+            desc: "Global Insight Profiler", security: "🔒 Security: No data stored", processing: "Analyzing...", wait: "Please wait...", saveImg: "📸 Save Image", retest: "Retest", reportTitle: "Insight Report", recommendTitle: "💡 Recommended", viewAmazon: "View on Amazon", qrNote: "📱 Scan to save results", 
+            traits: { E: "Extraversion", A: "Agreeableness", C: "Conscientiousness", N: "Neuroticism", O: "Openness" },
+            labels: ["Strongly Disagree", "Disagree", "Neutral", "Agree", "Strongly Agree"]
+        },
+        es: { 
+            desc: "Perfilador de Perspectiva Global", security: "🔒 Seguridad: Sin datos guardados", processing: "Analizando...", wait: "Por favor espere...", saveImg: "📸 Guardar Imagen", retest: "Reiniciar", reportTitle: "Informe de Perspectiva", recommendTitle: "💡 Recomendado", viewAmazon: "Ver en Amazon", qrNote: "📱 Escanea para guardar", 
+            traits: { E: "Extraversión", A: "Amabilidad", C: "Responsabilidad", N: "Neuroticismo", O: "Apertura" },
+            labels: ["Muy en desacuerdo", "En desacuerdo", "Neutral", "De acuerdo", "Muy de acuerdo"]
+        },
+        jp: { 
+            desc: "グローバル・インサイト・プロファイラー", security: "🔒 セキュリティ: 데이터保存なし", processing: "分析中...", wait: "少々お待ちください...", saveImg: "📸 画像を保存", retest: "再テスト", reportTitle: "インサイトレポート", recommendTitle: "💡 おすすめ商品", viewAmazon: "Amazonで見る", qrNote: "📱 スキャンして保存", 
+            traits: { E: "外向性", A: "協調性", C: "誠実性", N: "神経症傾向", O: "開放性" },
+            labels: ["全くそう思わない", "そう思わない", "どちらともいえない", "そう思う", "強くそう思う"]
+        },
+        vn: { 
+            desc: "Hệ thống Phân tích Tâm lý Toàn cầu", security: "🔒 Bảo mật: Không lưu trữ dữ liệu", processing: "Đang phân tích...", wait: "Vui lòng chờ trong giây lát...", saveImg: "📸 Lưu hình ảnh", retest: "Làm lại", reportTitle: "Báo cáo Tâm lý", recommendTitle: "💡 Gợi ý cho bạn", viewAmazon: "Xem trên Amazon", qrNote: "📱 Quét để lưu kết quả", 
+            traits: { E: "Hướng ngoại", A: "Tận tâm", C: "Chu đáo", N: "Nhạy cảm", O: "Cởi mở" },
+            labels: ["Rất không đồng ý", "Không đồng ý", "Bình thường", "Đồng ý", "Rất đồng ý"]
+        }
     };
 
     const amazonProducts = { E: "party games", A: "gift sets", C: "planner", N: "meditation", O: "art supplies" };
@@ -21,7 +42,6 @@ const GIPPP_ENGINE = (() => {
         const forcedLang = urlParams.get('lang');
         state.lang = (forcedLang && uiStrings[forcedLang]) ? forcedLang : (navigator.language.substring(0, 2) === 'ko' ? 'ko' : 'en');
         
-        // UI 언어 설정 및 셀렉터 동기화
         const strings = uiStrings[state.lang];
         ui.brandDesc.innerText = strings.desc;
         ui.securityNote.innerText = strings.security;
@@ -48,11 +68,16 @@ const GIPPP_ENGINE = (() => {
     };
 
     const renderQuestion = () => {
-        if (!state.questions[state.currentIndex]) return;
+        if (!state.questions || !state.questions[state.currentIndex]) return;
         const q = state.questions[state.currentIndex];
+        const strings = uiStrings[state.lang];
+        
         ui.questionText.innerHTML = `<div style="font-size:0.9rem; color:#3498db; margin-bottom:5px;">Q${state.currentIndex + 1} / ${state.questions.length}</div><div>${q.text}</div>`;
         ui.optionsGroup.innerHTML = '';
-        const labels = state.lang === 'ko' ? ["전혀 아니다", "아니다", "보통이다", "그렇다", "매우 그렇다"] : ["Strongly Disagree", "Disagree", "Neutral", "Agree", "Strongly Agree"];
+        
+        // [수정] uiStrings에서 해당 언어의 라벨을 가져옴
+        const labels = strings.labels;
+
         [1, 2, 3, 4, 5].forEach(score => {
             const btn = document.createElement('button');
             btn.className = 'opt-btn';
