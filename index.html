@@ -3,34 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Insight Profiler | Discover Your Inner Self</title>
-    
-    <!-- SEO 및 SNS 공유 설정 (GIPPP 임시 명칭 반영) -->
-    <meta name="description" content="Professional personality analysis based on global IPIP datasets. No data stored, 100% secure.">
+    <title>Insight Profiler | Global Psychology Project</title>
+    <meta name="description" content="Professional personality analysis based on IPIP. No data stored.">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Insight Profiler: Who are you really?">
-    <meta property="og:description" content="Get professional psychological insights in 3 minutes. Your data is never stored.">
-    <meta property="og:image" content="https://your-username.github.io/gippp-project/assets/og-image.png">
-    <meta name="twitter:card" content="summary_large_image">
-
-    <!-- 구조화 데이터 (JSON-LD) - 검색 엔진 최적화 -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "SoftwareApplication",
-      "name": "Insight Profiler",
-      "operatingSystem": "Any",
-      "applicationCategory": "PsychologyApplication",
-      "description": "Professional-grade personality analysis tool with zero-data persistence.",
-      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
-    }
-    </script>
-
+    <meta property="og:title" content="Insight Profiler: Who are you?">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div id="app">
         <header>
+            <!-- 언어 전환 스위치 -->
+            <div class="lang-selector">
+                <select id="lang-select" onchange="GIPPP_ENGINE.changeLanguage(this.value)">
+                    <option value="ko">한국어</option>
+                    <option value="en">English</option>
+                    <option value="es">Español</option>
+                    <option value="jp">日本語</option>
+                    <option value="vn">Tiếng Việt</option>
+                </select>
+            </div>
             <h1 id="brand">GIPPP</h1>
             <p id="brand-desc"></p>
             <div id="progress-bar"><div id="progress-fill"></div></div>
@@ -38,7 +29,7 @@
 
         <main id="main-content">
             <div id="question-container">
-                <p id="question-text">Initializing Engine...</p>
+                <p id="question-text">Initializing...</p>
                 <div id="options-group"></div>
             </div>
         </main>
@@ -47,7 +38,6 @@
             <p id="security-note" class="security-note"></p>
         </footer>
     </div>
-    <!-- 핵심 엔진 로드 -->
     <script src="engine.js"></script>
 </body>
 </html>
