@@ -1,9 +1,27 @@
 [
-    { "id": 1, "trait": "E", "direction": "+", "text": "나는 파티나 모임에서 대화를 주도하는 편이다." },
-    { "id": 2, "trait": "A", "direction": "+", "text": "나는 타인의 감정에 공감하고 위로하는 것을 잘한다." },
-    { "id": 3, "trait": "C", "direction": "+", "text": "나는 일을 시작하기 전에 항상 철저하게 계획을 세운다." },
-    { "id": 4, "trait": "N", "direction": "+", "text": "나는 작은 일에도 쉽게 걱정에 빠지곤 한다." },
-    { "id": 5, "trait": "O", "direction": "+", "text": "나는 새로운 아이디어나 철학적인 토론을 즐긴다." },
-    { "id": 6, "trait": "E", "direction": "-", "text": "나는 모르는 사람들 사이에 있으면 말수가 적어진다." },
-    { "id": 7, "trait": "A", "direction": "-", "text": "나는 가끔 타인의 문제에 무관심할 때가 있다." }
+    { 
+        "id": 1, "trait": "E", "direction": "+", 
+        "text": "나는 처음 만나는 사람들과의 대화에서도 자연스럽게 분위기에 녹아드는 편이다.",
+        "intent": "Social adaptability and extraversion in group settings"
+    },
+    { 
+        "id": 2, "trait": "A", "direction": "+", 
+        "text": "나는 주변 사람들의 기분이나 상황을 세심하게 살피고 배려하려 노력한다.",
+        "intent": "Interpersonal harmony and empathy"
+    },
+    { 
+        "id": 3, "trait": "C", "direction": "+", 
+        "text": "나는 맡은 일을 처리할 때 사소한 부분까지 놓치지 않으려 꼼꼼하게 챙기는 편이다.",
+        "intent": "Conscientiousness and attention to detail"
+    },
+    { 
+        "id": 4, "trait": "N", "direction": "+", 
+        "text": "나는 예상치 못한 상황이 생기면 평소보다 더 예민하게 반응하거나 걱정하는 경향이 있다.",
+        "intent": "Emotional sensitivity to stress"
+    },
+    { 
+        "id": 5, "trait": "O", "direction": "+", 
+        "text": "나는 익숙한 방식보다는 새로운 관점이나 창의적인 아이디어를 접하는 것을 즐긴다.",
+        "intent": "Openness to new experiences and ideas"
+    }
 ]
