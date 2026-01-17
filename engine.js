@@ -1,7 +1,6 @@
 /**
- * [GIPPP] Global Insight Profiler Project - Core Engine v2.2
- * Fixes: Canvas Taint (Image Save), Async Load (QR Restore), Full Localization
- * Principles: Zero-Persistence, Standalone, High Readability
+ * [GIPPP] Global Insight Profiler Project - Core Engine v2.3
+ * Focus: UI Stability (Fixed Height), Centered Layout, Bug Fixes
  */
 
 const GIPPP_ENGINE = (() => {
@@ -59,10 +58,8 @@ const GIPPP_ENGINE = (() => {
         ui.brandDesc.innerText = strings.desc;
         ui.securityNote.innerText = strings.security;
 
-        // 1. 데이터 먼저 로드 (비동기 보장)
         await loadData();
 
-        // 2. QR 유입인지 일반 유입인지 판별
         const resData = urlParams.get('res');
         if (resData) {
             decodeAndShowResult(resData);
@@ -83,23 +80,28 @@ const GIPPP_ENGINE = (() => {
     const renderQuestion = () => {
         if (!state.questions[state.currentIndex]) return;
         const q = state.questions[state.currentIndex];
+        
+        // 질문 번호와 텍스트 분리 렌더링
         ui.questionText.innerHTML = `
             <div style="font-size: 1rem; color: #3498db; margin-bottom: 10px;">Question ${state.currentIndex + 1} / ${state.questions.length}</div>
-            <div style="font-size: 1.4rem; font-weight: bold; line-height: 1.5;">${q.text}</div>
+            <div>${q.text}</div>
         `;
+        
         ui.optionsGroup.innerHTML = '';
         const labels = state.lang === 'ko' ? ["전혀 아니다", "아니다", "보통이다", "그렇다", "매우 그렇다"] : ["Strongly Disagree", "Disagree", "Neutral", "Agree", "Strongly Agree"];
 
         [1, 2, 3, 4, 5].forEach(score => {
             const btn = document.createElement('button');
             btn.className = 'opt-btn';
-            btn.style.cssText = "width:100%; padding:18px; margin:10px 0; font-size:1.2rem; cursor:pointer; border-radius:15px; border:1px solid #ddd; background:white;";
             btn.innerText = labels[score - 1];
             btn.onclick = () => {
                 const finalScore = (q.direction === "-") ? (6 - score) : score;
                 state.answers.push({ trait: q.trait, score: finalScore });
-                if (++state.currentIndex < state.questions.length) { renderQuestion(); window.scrollTo(0, 0); }
-                else showProcessing();
+                if (++state.currentIndex < state.questions.length) {
+                    renderQuestion();
+                } else {
+                    showProcessing();
+                }
             };
             ui.optionsGroup.appendChild(btn);
         });
@@ -108,7 +110,12 @@ const GIPPP_ENGINE = (() => {
 
     const showProcessing = () => {
         const strings = uiStrings[state.lang];
-        ui.mainContent.innerHTML = `<div style="padding: 60px 0; text-align: center;"><div class="spinner" style="margin: 0 auto 20px;"></div><h3 style="font-size: 1.5rem;">${strings.processing}</h3><p style="color: #666;">${strings.wait}</p></div>`;
+        ui.mainContent.innerHTML = `
+            <div style="padding: 40px 0;">
+                <div class="spinner"></div>
+                <h3 style="font-size: 1.5rem;">${strings.processing}</h3>
+                <p style="color: #666;">${strings.wait}</p>
+            </div>`;
         setTimeout(() => {
             state.results = calculateScores();
             renderFinalReport();
@@ -151,11 +158,11 @@ const GIPPP_ENGINE = (() => {
         const strings = uiStrings[state.lang];
         const resCode = encodeResults();
         const shareUrl = `${window.location.origin}${window.location.pathname}?lang=${state.lang}&res=${resCode}`;
-        
-        // QR 생성 시 CORS 문제 해결을 위해 crossOrigin 설정이 가능한 방식으로 호출
         const qrImgUrl = `https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=${encodeURIComponent(shareUrl)}`;
 
-        let reportHtml = `<div class="result-card" style="text-align:left;"><h2 style="text-align:center; color:#2c3e50; border-bottom:4px solid #3498db; padding-bottom:15px; font-size:1.8rem;">${strings.reportTitle}</h2>`;
+        let reportHtml = `
+            <div class="result-card" style="text-align:left;">
+                <h2 style="text-align:center; color:#2c3e50; border-bottom:4px solid #3498db; padding-bottom:15px; font-size:1.8rem;">${strings.reportTitle}</h2>`;
 
         for (const [trait, data] of Object.entries(state.results)) {
             const traitName = strings.traits[trait];
@@ -175,7 +182,7 @@ const GIPPP_ENGINE = (() => {
                     <p style="font-size: 1rem; color: #0056b3; margin-bottom: 15px; font-weight:bold;">${strings.qrNote}</p>
                     <img id="qrImage" src="${qrImgUrl}" crossorigin="anonymous" alt="QR Code" style="border: 8px solid white; width:150px; height:150px;">
                 </div>
-                <button onclick="GIPPP_ENGINE.generateImage()" style="width:100%; padding:20px; background:#3498db; color:white; border:none; border-radius:15px; font-size:1.3rem; cursor:pointer; margin-bottom:15px; font-weight:bold; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">${strings.saveImg}</button>
+                <button onclick="GIPPP_ENGINE.generateImage()" style="width:100%; padding:20px; background:#3498db; color:white; border:none; border-radius:15px; font-size:1.3rem; cursor:pointer; margin-bottom:15px; font-weight:bold;">${strings.saveImg}</button>
                 <button onclick="location.href=window.location.pathname" style="width:100%; padding:15px; background:#f8f9fa; color:#7f8c8d; border:1px solid #ddd; border-radius:15px; font-size:1.1rem; cursor:pointer;">${strings.retest}</button>
             </div><canvas id="resultCanvas" style="display:none;"></canvas>`;
 
@@ -189,21 +196,17 @@ const GIPPP_ENGINE = (() => {
         const strings = uiStrings[state.lang];
         const qrImg = document.getElementById('qrImage');
         
-        // 이미지 생성 전 QR 이미지가 로드되었는지 확인
         if (!qrImg.complete) {
-            alert(state.lang === 'ko' ? "이미지를 준비 중입니다. 잠시 후 다시 시도하세요." : "Preparing image. Please try again in a second.");
+            alert("Preparing image...");
             return;
         }
 
         canvas.width = 600; canvas.height = 950;
         ctx.fillStyle = '#ffffff'; ctx.fillRect(0, 0, 600, 950);
-        
-        // 헤더
         ctx.fillStyle = '#3498db'; ctx.fillRect(0, 0, 600, 120);
         ctx.fillStyle = '#ffffff'; ctx.font = 'bold 36px sans-serif'; ctx.textAlign = 'center';
         ctx.fillText(strings.reportTitle, 300, 75);
 
-        // 결과 그리기
         let y = 220;
         Object.entries(state.results).forEach(([trait, data]) => {
             const p = data.count === 20 ? data.total : Math.round((data.total / (data.count * 5)) * 100);
@@ -215,13 +218,8 @@ const GIPPP_ENGINE = (() => {
             y += 110;
         });
 
-        // 하단 마케팅 영역 (QR 포함)
         ctx.fillStyle = '#f8f9fa'; ctx.fillRect(0, 750, 600, 200);
-        try {
-            ctx.drawImage(qrImg, 50, 775, 150, 150);
-        } catch (e) {
-            console.error("Canvas Taint Error: External QR could not be drawn.");
-        }
+        try { ctx.drawImage(qrImg, 50, 775, 150, 150); } catch (e) {}
         
         ctx.fillStyle = '#2c3e50'; ctx.font = 'bold 22px sans-serif'; ctx.textAlign = 'left';
         ctx.fillText(state.lang === 'ko' ? '당신의 인사이트가 궁금하다면?' : 'Curious about your insight?', 220, 830);
@@ -230,7 +228,6 @@ const GIPPP_ENGINE = (() => {
         ctx.font = 'bold 16px sans-serif'; ctx.fillStyle = '#3498db';
         ctx.fillText('gippp-project.github.io', 220, 895);
 
-        // 다운로드 실행
         const link = document.createElement('a');
         link.download = `GIPPP_Result_${state.lang}.png`;
         link.href = canvas.toDataURL('image/png');
