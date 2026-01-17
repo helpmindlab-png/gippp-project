@@ -1,31 +1,25 @@
 {
-    "items": [
-        { "id": 1, "trait": "E", "direction": "+", "text": "Ich bin auf Partys oder bei Treffen oft derjenige, der das Gespräch anführt." },
-        { "id": 2, "trait": "A", "direction": "+", "text": "Ich kann mich gut in die Gefühle anderer hineinversetzen und sie trösten." },
-        { "id": 3, "trait": "C", "direction": "+", "text": "Bevor ich eine Aufgabe beginne, erstelle ich immer einen gründlichen Plan." },
-        { "id": 4, "trait": "N", "direction": "+", "text": "Ich mache mir oft Sorgen, selbst über Kleinigkeiten." },
-        { "id": 5, "trait": "O", "direction": "+", "text": "Ich genieße neue Ideen und philosophische Diskussionen." },
-        { "id": 6, "trait": "E", "direction": "-", "text": "In Gruppen von Unbekannten halte ich mich eher im Hintergrund." },
-        { "id": 7, "trait": "A", "direction": "-", "text": "Manchmal sind mir die Probleme anderer Menschen gleichgültig." },
-        { "id": 8, "trait": "C", "direction": "-", "text": "Ich lasse oft Dinge herumliegen und vergesse, sie wegzuräumen." },
-        { "id": 9, "trait": "N", "direction": "-", "text": "Ich bleibe meistens ruhig und lasse mich nicht so leicht aus der Fassung bringen." },
-        { "id": 10, "trait": "O", "direction": "-", "text": "Ich bevorzuge konkrete Fakten gegenüber abstrakten Konzepten." },
-        { "id": 11, "trait": "E", "direction": "+", "text": "Es fällt mir leicht, Gespräche mit Fremden zu beginnen." },
-        { "id": 12, "trait": "A", "direction": "+", "text": "Ich versuche immer, zuerst das Gute im Menschen zu sehen." },
-        { "id": 13, "trait": "C", "direction": "+", "text": "Ich gebe mein Bestes, um Termine und Fristen einzuhalten." },
-        { "id": 14, "trait": "N", "direction": "+", "text": "Meine Stimmung ändert sich oft und ich habe emotionale Schwankungen." },
-        { "id": 15, "trait": "O", "direction": "+", "text": "Ich kann tief in die Schönheit von Kunst oder Natur eintauchen." },
-        { "id": 16, "trait": "E", "direction": "-", "text": "Ich ziehe mich lieber zurück, wenn ich im Mittelpunkt der Aufmerksamkeit stehe." },
-        { "id": 17, "trait": "A", "direction": "-", "text": "Manchmal ist es mir wichtiger, meine Meinung durchzusetzen als die Gefühle anderer." },
-        { "id": 18, "trait": "C", "direction": "-", "text": "Ich neige dazu, Aufgaben aufzuschieben, anstatt sie sofort zu erledigen." },
-        { "id": 19, "trait": "N", "direction": "-", "text": "Auch in stressigen Situationen reagiere ich vergleichsweise gelassen." },
-        { "id": 20, "trait": "O", "direction": "-", "text": "Ich folge lieber bewährten Methoden als ständig Neues auszuprobieren." }
-    ],
-    "descriptions": {
-        "E": { "high": "Sie sind gesellig, aktiv und blühen im Kontakt mit anderen auf.", "low": "Sie sind nachdenklich, unabhängig und schätzen Ihre Zeit allein." },
-        "A": { "high": "Sie sind mitfühlend, kooperativ und schätzen soziale Harmonie.", "low": "Sie denken sachlich, unabhängig und bevorzugen logische Analysen." },
-        "C": { "high": "Sie sind pflichtbewusst, organisiert und verfolgen Ihre Ziele konsequent.", "low": "Sie sind flexibel, spontan und passen sich Situationen intuitiv an." },
-        "N": { "high": "Sie sind emotional sensibel und nehmen Risiken frühzeitig wahr.", "low": "Sie sind emotional stabil und bewahren auch unter Druck die Ruhe." },
-        "O": { "high": "Sie sind neugierig, kreativ und offen für neue Veränderungen.", "low": "Sie sind realistisch, praktisch orientiert und schätzen Traditionen." }
-    }
+  "items": [
+    { "id": 1, "trait": "E", "direction": "+", "text": "Ich stehe bei gesellschaftlichen Anlässen gerne im Mittelpunkt und führe Gespräche an." },
+    { "id": 2, "trait": "A", "direction": "+", "text": "Ich bemühe mich, Mitgefühl für die Gefühle anderer zu zeigen." },
+    { "id": 3, "trait": "C", "direction": "+", "text": "Ich erledige meine Aufgaben und Pflichten am liebsten sofort." },
+    { "id": 4, "trait": "N", "direction": "+", "text": "Ich erlebe gelegentlich Stimmungsschwankungen oder emotionale Instabilität." },
+    { "id": 5, "trait": "O", "direction": "+", "text": "Ich habe eine lebhafte Fantasie und setze mich gerne mit neuen Ideen auseinander." },
+    { "id": 6, "trait": "E", "direction": "-", "text": "In großen Gruppen verhalte ich mich oft eher ruhig und zurückhaltend." },
+    { "id": 7, "trait": "A", "direction": "-", "text": "Manchmal interessieren mich die Probleme anderer Menschen nicht besonders." },
+    { "id": 8, "trait": "C", "direction": "-", "text": "Ich vergesse oft, Dinge wieder an ihren vorgesehenen Platz zurückzustellen." },
+    { "id": 9, "trait": "N", "direction": "-", "text": "Ich bin die meiste Zeit entspannt und lasse mich nicht so leicht aus der Ruhe bringen." },
+    { "id": 10, "trait": "O", "direction": "-", "text": "Ich bevorzuge konkrete Fakten gegenüber abstrakten oder philosophischen Ideen." },
+    { "id": 11, "trait": "E", "direction": "+", "text": "Es fällt mir leicht, bei sozialen Veranstaltungen mit vielen verschiedenen Menschen zu sprechen." },
+    { "id": 12, "trait": "A", "direction": "+", "text": "Ich kann die Emotionen meiner Mitmenschen aufrichtig nachempfinden." },
+    { "id": 13, "trait": "C", "direction": "+", "text": "Ich lege Wert darauf, meine Umgebung und meine Arbeit gut zu organisieren." },
+    { "id": 14, "trait": "N", "direction": "+", "text": "Ich neige dazu, mich recht schnell gestresst oder besorgt zu fühlen." },
+    { "id": 15, "trait": "O", "direction": "-", "text": "Es fällt mir manchmal schwer, komplexe abstrakte Konzepte zu erfassen." },
+    { "id": 16, "trait": "E", "direction": "-", "text": "Ich bleibe lieber im Hintergrund, anstatt im Zentrum der Aufmerksamkeit zu stehen." },
+    { "id": 17, "trait": "A", "direction": "-", "text": "Ich interessiere mich nicht sonderlich für die persönlichen Angelegenheiten anderer." },
+    { "id": 18, "trait": "C", "direction": "-", "text": "Manchmal arbeite ich ungenau oder vernachlässige wichtige Details." },
+    { "id": 19, "trait": "N", "direction": "-", "text": "Ich fühle mich selten niedergeschlagen oder bedrückt." },
+    { "id": 20, "trait": "O", "direction": "-", "text": "Ich betrachte mich nicht als jemanden mit einer besonders kreativen Vorstellungskraft." }
+  ],
+  "descriptions": { "E": { "high": "Sie sind gesellig, aktiv und blühen im Kontakt mit anderen auf.", "low": "Sie sind nachdenklich, unabhängig und schätzen Ihre Zeit allein." }, "A": { "high": "Sie sind mitfühlend, kooperativ und schätzen soziale Harmonie.", "low": "Sie denken sachlich, unabhängig und bevorzugen logische Analysen." }, "C": { "high": "Sie sind pflichtbewusst, organisiert und verfolgen Ihre Ziele konsequent.", "low": "Sie sind flexibel, spontan und passen sich Situationen intuitiv an." }, "N": { "high": "Sie sind emotional sensibel und nehmen Risiken frühzeitig wahr.", "low": "Sie sind emotional stabil und bewahren auch unter Druck die Ruhe." }, "O": { "high": "Sie sind neugierig, kreativ und offen für neue Veränderungen.", "low": "Sie sind realistisch, praktisch orientiert und schätzen Traditionen." } }
 }
