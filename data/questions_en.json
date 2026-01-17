@@ -1,37 +1,25 @@
 {
-    "items": [
-        { "id": 1, "trait": "E", "direction": "+", "text": "I feel energized and comfortable when taking the lead in social gatherings.", "intent": "Social dominance and extraversion" },
-        { "id": 2, "trait": "A", "direction": "+", "text": "I tend to prioritize others' well-being and offer support when they are in need.", "intent": "Altruism and agreeableness" },
-        { "id": 3, "trait": "C", "direction": "+", "text": "I prefer to have a clear plan and follow through with tasks systematically.", "intent": "Orderliness and self-discipline" },
-        { "id": 4, "trait": "N", "direction": "+", "text": "I often find myself reflecting deeply on potential worries or setbacks.", "intent": "Emotional reactivity and neuroticism" },
-        { "id": 5, "trait": "O", "direction": "+", "text": "I am constantly seeking out new perspectives and complex intellectual challenges.", "intent": "Intellectual curiosity and openness" },
-        { "id": 6, "trait": "E", "direction": "-", "text": "I tend to keep in the background and stay quiet in large groups.", "intent": "Introversion" },
-        { "id": 7, "trait": "A", "direction": "-", "text": "I sometimes find it difficult to relate to other people's feelings.", "intent": "Low empathy" },
-        { "id": 8, "trait": "C", "direction": "-", "text": "I often leave my belongings scattered around and forget to tidy up.", "intent": "Low orderliness" },
-        { "id": 9, "trait": "N", "direction": "-", "text": "I remain calm and composed even in highly stressful situations.", "intent": "Emotional stability" },
-        { "id": 10, "trait": "O", "direction": "-", "text": "I prefer following established routines rather than trying new ways of doing things.", "intent": "Preference for routine" },
-        { "id": 11, "trait": "E", "direction": "+", "text": "I find it easy to start conversations with people I have just met.", "intent": "Social confidence" },
-        { "id": 12, "trait": "A", "direction": "+", "text": "I believe that most people have good intentions and deserve trust.", "intent": "Trust in others" },
-        { "id": 13, "trait": "C", "direction": "+", "text": "I make sure that all my responsibilities are handled with great care.", "intent": "Responsibility" },
-        { "id": 14, "trait": "N", "direction": "+", "text": "I experience frequent mood swings or changes in my emotional state.", "intent": "Mood volatility" },
-        { "id": 15, "trait": "O", "direction": "+", "text": "I am deeply moved by art, music, or the beauty of nature.", "intent": "Aesthetic sensitivity" },
-        { "id": 16, "trait": "E", "direction": "-", "text": "I often feel exhausted after spending too much time socializing.", "intent": "Social fatigue" },
-        { "id": 17, "trait": "A", "direction": "-", "text": "I am not afraid to voice my disagreement, even if it causes tension.", "intent": "Assertiveness over harmony" },
-        { "id": 18, "trait": "C", "direction": "-", "text": "I sometimes struggle to stay focused on a single task until it is finished.", "intent": "Procrastination" },
-        { "id": 19, "trait": "N", "direction": "-", "text": "I rarely dwell on past mistakes or worry about the future.", "intent": "Low anxiety" },
-        { "id": 20, "trait": "O", "direction": "-", "text": "I find abstract theories and philosophical discussions uninteresting.", "intent": "Practicality over abstraction" },
-        { "id": 21, "trait": "E", "direction": "+", "text": "I enjoy being the center of attention in a lively environment.", "intent": "Exhibitionism" },
-        { "id": 22, "trait": "A", "direction": "+", "text": "I feel a strong sense of satisfaction when I help someone in need.", "intent": "Altruism" },
-        { "id": 23, "trait": "C", "direction": "+", "text": "I like to keep my workspace and home very organized.", "intent": "Organization" },
-        { "id": 24, "trait": "N", "direction": "+", "text": "I am often self-critical and worry about how others perceive me.", "intent": "Self-consciousness" },
-        { "id": 25, "trait": "O", "direction": "+", "text": "I have a vivid imagination and enjoy exploring 'what if' scenarios.", "intent": "Imagination" }
-    ],
-    "descriptions": {
-        "E": { "high": "You are social, energetic, and thrive in the company of others.", "low": "You are reflective, independent, and value your quiet time." },
-        "A": { "high": "You are compassionate, cooperative, and value social harmony.", "low": "You are analytical, competitive, and prioritize objective truth." },
-        "C": { "high": "You are disciplined, organized, and highly reliable in your work.", "low": "You are flexible, spontaneous, and prefer to go with the flow." },
-        "N": { "high": "You are emotionally sensitive and highly aware of potential risks.", "low": "You are emotionally resilient and stay calm under pressure." },
-        "O": { "high": "You are curious, creative, and open to new and complex ideas.", "low": "You are practical, traditional, and prefer proven methods." }
-    }
+  "items": [
+    { "id": 1, "trait": "E", "direction": "+", "text": "I tend to be the life of the party and enjoy leading conversations." },
+    { "id": 2, "trait": "A", "direction": "+", "text": "I make an effort to sympathize with others' feelings." },
+    { "id": 3, "trait": "C", "direction": "+", "text": "I prefer to get chores and tasks done right away." },
+    { "id": 4, "trait": "N", "direction": "+", "text": "I experience frequent mood swings or emotional shifts." },
+    { "id": 5, "trait": "O", "direction": "+", "text": "I have a vivid imagination and enjoy exploring new ideas." },
+    { "id": 6, "trait": "E", "direction": "-", "text": "I often find myself staying quiet in large groups of people." },
+    { "id": 7, "trait": "A", "direction": "-", "text": "I am sometimes not very interested in other people's problems." },
+    { "id": 8, "trait": "C", "direction": "-", "text": "I often forget to put things back in their proper place." },
+    { "id": 9, "trait": "N", "direction": "-", "text": "I am relaxed most of the time and don't get upset easily." },
+    { "id": 10, "trait": "O", "direction": "-", "text": "I prefer concrete facts over abstract or philosophical ideas." },
+    { "id": 11, "trait": "E", "direction": "+", "text": "I find it easy to talk to many different people at social events." },
+    { "id": 12, "trait": "A", "direction": "+", "text": "I truly feel and understand the emotions of those around me." },
+    { "id": 13, "trait": "C", "direction": "+", "text": "I like to keep my surroundings and work well-organized." },
+    { "id": 14, "trait": "N", "direction": "+", "text": "I tend to get upset or stressed quite easily." },
+    { "id": 15, "trait": "O", "direction": "-", "text": "I sometimes find it difficult to grasp complex abstract concepts." },
+    { "id": 16, "trait": "E", "direction": "-", "text": "I prefer to keep in the background rather than being the center of attention." },
+    { "id": 17, "trait": "A", "direction": "-", "text": "I am not really interested in others' personal affairs." },
+    { "id": 18, "trait": "C", "direction": "-", "text": "I sometimes make a mess of things or struggle with details." },
+    { "id": 19, "trait": "N", "direction": "-", "text": "I seldom feel blue or downhearted." },
+    { "id": 20, "trait": "O", "direction": "-", "text": "I do not consider myself to have a particularly creative imagination." }
+  ],
+  "descriptions": { "E": { "high": "You are social, energetic, and thrive in the company of others.", "low": "You are reflective, independent, and value your quiet time." }, "A": { "high": "You are compassionate, cooperative, and value social harmony.", "low": "You are analytical, competitive, and prioritize objective truth." }, "C": { "high": "You are disciplined, organized, and highly reliable in your work.", "low": "You are flexible, spontaneous, and prefer to go with the flow." }, "N": { "high": "You are emotionally sensitive and highly aware of potential risks.", "low": "You are emotionally resilient and stay calm under pressure." }, "O": { "high": "You are curious, creative, and open to new and complex ideas.", "low": "You are practical, traditional, and prefer proven methods." } }
 }
-
