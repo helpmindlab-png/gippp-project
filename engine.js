@@ -1,6 +1,6 @@
 /**
- * [GIPPP] Global Insight Profiler Project - Core Engine v1.6
- * Focus: Viral Marketing (Image Generation), Revenue, Standalone
+ * [GIPPP] Global Insight Profiler Project - Core Engine v1.8
+ * Focus: URL Parameter Routing (Force Language), Stability, High Readability
  */
 
 const GIPPP_ENGINE = (() => {
@@ -10,7 +10,7 @@ const GIPPP_ENGINE = (() => {
         questions: [],
         descriptions: {},
         lang: 'en',
-        results: null // 이미지 생성을 위해 결과 저장
+        results: null
     };
 
     const ui = {
@@ -20,9 +20,21 @@ const GIPPP_ENGINE = (() => {
         mainContent: document.getElementById('main-content')
     };
 
+    /**
+     * 초기화: URL 파라미터(?lang=) 확인 후 언어 결정
+     */
     const init = async () => {
-        const userLang = navigator.language.substring(0, 2);
-        state.lang = (userLang === 'ko') ? 'ko' : 'en';
+        // 1. URL에서 lang 파라미터 추출 (예: ?lang=en)
+        const urlParams = new URLSearchParams(window.location.search);
+        const forcedLang = urlParams.get('lang');
+
+        if (forcedLang && ['ko', 'en'].includes(forcedLang)) {
+            state.lang = forcedLang;
+        } else {
+            // 2. 파라미터가 없으면 브라우저 언어 감지
+            const userLang = navigator.language.substring(0, 2);
+            state.lang = (userLang === 'ko') ? 'ko' : 'en';
+        }
         
         try {
             const response = await fetch(`./data/questions_${state.lang}.json`);
@@ -31,7 +43,7 @@ const GIPPP_ENGINE = (() => {
             state.descriptions = data.descriptions;
             renderQuestion();
         } catch (error) {
-            ui.questionText.innerText = "Data Load Error.";
+            ui.questionText.innerText = "Data Load Error. Please check JSON files.";
         }
     };
 
@@ -39,7 +51,11 @@ const GIPPP_ENGINE = (() => {
         if (!state.questions[state.currentIndex]) return;
         const q = state.questions[state.currentIndex];
         
-        ui.questionText.innerHTML = `<div style="font-size: 1.3rem; font-weight: bold; margin-bottom:20px;">${q.text}</div>`;
+        ui.questionText.innerHTML = `
+            <div style="font-size: 0.9rem; color: #3498db; margin-bottom: 5px;">Question ${state.currentIndex + 1} / ${state.questions.length}</div>
+            <div style="font-size: 1.3rem; font-weight: bold; line-height: 1.4;">${q.text}</div>
+        `;
+        
         ui.optionsGroup.innerHTML = '';
 
         const labels = state.lang === 'ko' 
@@ -49,13 +65,17 @@ const GIPPP_ENGINE = (() => {
         [1, 2, 3, 4, 5].forEach(score => {
             const btn = document.createElement('button');
             btn.className = 'opt-btn';
-            btn.style.cssText = "width:100%; padding:15px; margin:8px 0; font-size:1.1rem; cursor:pointer; border-radius:10px; border:1px solid #ddd; background:white;";
+            btn.style.cssText = "width:100%; padding:16px; margin:10px 0; font-size:1.1rem; cursor:pointer; border-radius:12px; border:1px solid #ddd; background:white;";
             btn.innerText = labels[score - 1];
             btn.onclick = () => {
                 const finalScore = (q.direction === "-") ? (6 - score) : score;
                 state.answers.push({ trait: q.trait, score: finalScore });
-                if (++state.currentIndex < state.questions.length) renderQuestion();
-                else showProcessing();
+                if (++state.currentIndex < state.questions.length) {
+                    renderQuestion();
+                    window.scrollTo(0, 0);
+                } else {
+                    showProcessing();
+                }
             };
             ui.optionsGroup.appendChild(btn);
         });
@@ -65,10 +85,11 @@ const GIPPP_ENGINE = (() => {
 
     const showProcessing = () => {
         ui.mainContent.innerHTML = `
-            <div style="padding: 40px 0; text-align: center;">
-                <h3 style="font-size: 1.4rem;">${state.lang === 'ko' ? '심리 프로파일 분석 중...' : 'Analyzing Profile...'}</h3>
-                <div id="ad-processing" style="margin:20px 0; min-height:100px; background:#f9f9f9; border:1px dashed #ccc; display:flex; align-items:center; justify-content:center;">
-                    <p style="font-size:0.8rem; color:#999;">ADVERTISEMENT</p>
+            <div style="padding: 50px 0; text-align: center;">
+                <div class="spinner" style="margin: 0 auto 20px;"></div>
+                <h3 style="font-size: 1.4rem;">${state.lang === 'ko' ? '정밀 프로파일 분석 중...' : 'Generating Deep Profile...'}</h3>
+                <div id="ad-processing" style="margin-top:30px; min-height:150px; background:#fdfdfd; border:1px dashed #ddd; display:flex; align-items:center; justify-content:center;">
+                    <p style="font-size:0.8rem; color:#bbb;">ADVERTISEMENT</p>
                 </div>
             </div>`;
         
@@ -77,7 +98,7 @@ const GIPPP_ENGINE = (() => {
 
     const renderFinalReport = () => {
         const scores = calculateScores();
-        state.results = scores; // 상태 저장
+        state.results = scores;
 
         const traits = {
             E: { ko: "외향성", en: "Extraversion" },
@@ -89,8 +110,9 @@ const GIPPP_ENGINE = (() => {
 
         let reportHtml = `
             <div class="result-card" style="text-align:left;">
-                <h2 style="text-align:center; color:#2c3e50;">${state.lang === 'ko' ? '인사이트 리포트' : 'Insight Report'}</h2>
-                <div id="ad-result-top" style="margin:15px 0; min-height:50px; background:#f9f9f9; text-align:center; border:1px dashed #eee; font-size:0.7rem; color:#ccc;">AD</div>
+                <h2 style="text-align:center; color:#2c3e50; border-bottom:3px solid #3498db; padding-bottom:15px;">
+                    ${state.lang === 'ko' ? '인사이트 리포트' : 'Insight Report'}
+                </h2>
         `;
 
         for (const [trait, data] of Object.entries(scores)) {
@@ -99,24 +121,24 @@ const GIPPP_ENGINE = (() => {
             const desc = percentage >= 50 ? state.descriptions[trait].high : state.descriptions[trait].low;
 
             reportHtml += `
-                <div style="margin-bottom: 20px;">
-                    <div style="display: flex; justify-content: space-between; font-weight: bold;">
+                <div style="margin-bottom: 25px;">
+                    <div style="display: flex; justify-content: space-between; font-weight: bold; font-size:1.1rem;">
                         <span>${traitName}</span><span>${percentage}%</span>
                     </div>
-                    <div style="width: 100%; height: 8px; background: #eee; border-radius: 4px; margin: 5px 0;">
-                        <div style="width: ${percentage}%; height: 100%; background: #3498db; border-radius: 4px;"></div>
+                    <div style="width: 100%; height: 12px; background: #eee; border-radius: 6px; margin: 8px 0; overflow:hidden;">
+                        <div style="width: ${percentage}%; height: 100%; background: linear-gradient(90deg, #3498db, #2ecc71); border-radius: 6px;"></div>
                     </div>
-                    <p style="font-size: 0.9rem; color: #555; line-height: 1.4;">${desc}</p>
+                    <p style="font-size: 0.95rem; color: #444; line-height: 1.6;">${desc}</p>
                 </div>`;
         }
 
         reportHtml += `
-                <div style="margin-top: 30px;">
-                    <button onclick="GIPPP_ENGINE.generateImage()" style="width:100%; padding:15px; background:#3498db; color:white; border:none; border-radius:8px; font-size:1.1rem; cursor:pointer; margin-bottom:10px; font-weight:bold;">
-                        📸 ${state.lang === 'ko' ? '결과 이미지로 저장/공유' : 'Save/Share as Image'}
+                <div style="margin-top: 35px;">
+                    <button onclick="GIPPP_ENGINE.generateImage()" style="width:100%; padding:18px; background:#3498db; color:white; border:none; border-radius:12px; font-size:1.1rem; cursor:pointer; margin-bottom:12px; font-weight:bold;">
+                        📸 ${state.lang === 'ko' ? '결과 이미지로 저장' : 'Save as Image'}
                     </button>
-                    <button onclick="location.reload()" style="width:100%; padding:12px; background:#95a5a6; color:white; border:none; border-radius:8px; font-size:1rem; cursor:pointer;">
-                        ${state.lang === 'ko' ? '새로고침 (데이터 파기)' : 'Restart (Purge Data)'}
+                    <button onclick="location.reload()" style="width:100%; padding:15px; background:#f8f9fa; color:#7f8c8d; border:1px solid #ddd; border-radius:12px; font-size:1rem; cursor:pointer;">
+                        ${state.lang === 'ko' ? '다시 테스트하기' : 'Retest'}
                     </button>
                 </div>
             </div>
@@ -124,6 +146,7 @@ const GIPPP_ENGINE = (() => {
         `;
 
         ui.mainContent.innerHTML = reportHtml;
+        window.scrollTo(0, 0);
     };
 
     const calculateScores = () => {
@@ -135,69 +158,30 @@ const GIPPP_ENGINE = (() => {
         }, {});
     };
 
-    /**
-     * 이미지 생성 엔진 (Canvas API)
-     */
     const generateImage = () => {
         const canvas = document.getElementById('resultCanvas');
         const ctx = canvas.getContext('2d');
-        
-        // 이미지 규격 (인스타그램/모바일 최적화)
-        canvas.width = 600;
-        canvas.height = 800;
-
-        // 1. 배경 그리기
-        ctx.fillStyle = '#ffffff';
-        ctx.fillRect(0, 0, canvas.width, canvas.height);
-        
-        // 상단 그라데이션 바
-        const grad = ctx.createLinearGradient(0, 0, 600, 0);
-        grad.addColorStop(0, '#3498db');
-        grad.addColorStop(1, '#2c3e50');
-        ctx.fillStyle = grad;
-        ctx.fillRect(0, 0, 600, 80);
-
-        // 2. 타이틀
-        ctx.fillStyle = '#ffffff';
-        ctx.font = 'bold 28px sans-serif';
-        ctx.textAlign = 'center';
+        canvas.width = 600; canvas.height = 800;
+        ctx.fillStyle = '#ffffff'; ctx.fillRect(0, 0, 600, 800);
+        ctx.fillStyle = '#3498db'; ctx.fillRect(0, 0, 600, 80);
+        ctx.fillStyle = '#ffffff'; ctx.font = 'bold 28px sans-serif'; ctx.textAlign = 'center';
         ctx.fillText('GIPPP Insight Report', 300, 50);
 
-        // 3. 데이터 시각화
         const traits = { E: "Extraversion", A: "Agreeableness", C: "Conscientiousness", N: "Neuroticism", O: "Openness" };
-        let yOffset = 180;
-
+        let y = 180;
         Object.entries(state.results).forEach(([trait, data]) => {
-            const percentage = Math.round((data.total / (data.count * 5)) * 100);
-            
-            // 라벨
-            ctx.fillStyle = '#2c3e50';
-            ctx.font = 'bold 20px sans-serif';
-            ctx.textAlign = 'left';
-            ctx.fillText(traits[trait], 50, yOffset);
-            ctx.textAlign = 'right';
-            ctx.fillText(`${percentage}%`, 550, yOffset);
-
-            // 막대 그래프
-            ctx.fillStyle = '#eee';
-            ctx.roundRect ? ctx.fillRoundedRect(50, yOffset + 15, 500, 15, 7) : ctx.fillRect(50, yOffset + 15, 500, 15);
-            ctx.fillStyle = '#3498db';
-            ctx.fillRect(50, yOffset + 15, (500 * percentage) / 100, 15);
-
-            yOffset += 100;
+            const p = Math.round((data.total / (data.count * 5)) * 100);
+            ctx.fillStyle = '#2c3e50'; ctx.font = 'bold 20px sans-serif'; ctx.textAlign = 'left';
+            ctx.fillText(traits[trait], 50, y);
+            ctx.textAlign = 'right'; ctx.fillText(`${p}%`, 550, y);
+            ctx.fillStyle = '#eee'; ctx.fillRect(50, y + 15, 500, 15);
+            ctx.fillStyle = '#3498db'; ctx.fillRect(50, y + 15, (500 * p) / 100, 15);
+            y += 100;
         });
 
-        // 4. 하단 브랜딩 및 URL
-        ctx.fillStyle = '#95a5a6';
-        ctx.font = '16px sans-serif';
-        ctx.textAlign = 'center';
-        ctx.fillText('Analyze your mind at: gippp-project.github.io', 300, 750);
-
-        // 5. 이미지 다운로드 실행
-        const dataURL = canvas.toDataURL('image/png');
         const link = document.createElement('a');
-        link.download = `GIPPP_Result_${Date.now()}.png`;
-        link.href = dataURL;
+        link.download = `GIPPP_Result.png`;
+        link.href = canvas.toDataURL();
         link.click();
     };
 
