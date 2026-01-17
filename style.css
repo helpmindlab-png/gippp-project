@@ -1,13 +1,23 @@
-/* 기존 스타일에 추가 */
-.trait-row { margin: 15px 0; text-align: left; }
-.bar-bg { width: 100%; height: 12px; background: #eee; border-radius: 6px; margin: 5px 0; position: relative; }
-.bar-fill { height: 100%; background: var(--accent); border-radius: 6px; transition: width 1s ease-in-out; }
-.result-card h2 { color: var(--primary); border-bottom: 2px solid var(--accent); padding-bottom: 10px; }
+body { 
+    font-size: 18px; /* 기본 폰트 크기 상향 */
+    line-height: 1.6;
+    background-color: #f0f2f5; /* 눈이 편한 연회색 배경 */
+}
 
-/* 결과 화면 시각화 보강 */
-.trait-row { margin-bottom: 20px; }
-.trait-label { display: flex; justify-content: space-between; margin-bottom: 5px; font-size: 0.9rem; }
-.bar-bg { width: 100%; height: 10px; background: #eee; border-radius: 5px; overflow: hidden; }
-.bar-fill { height: 100%; background: #3498db; transition: width 1.5s ease-out; }
-.processing-view { padding: 40px 0; }
-.security-footer { font-size: 0.7rem; color: #999; margin-top: 20px; }
+#app {
+    max-width: 600px; /* 가독성을 위해 폭 조절 */
+    padding: 30px;
+}
+
+.opt-btn {
+    font-size: 1.1rem;
+    padding: 15px;
+    margin: 10px 0;
+    font-weight: 500;
+    color: #333;
+}
+
+#question-text {
+    margin-bottom: 30px;
+    color: #1a1a1a;
+}
