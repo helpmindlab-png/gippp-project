@@ -1,101 +1,24 @@
-:root {
-    --primary: #3498db;
-    --secondary: #2c3e50;
-    --bg: #f0f2f5;
-    --card-bg: #ffffff;
-    --accent: #2ecc71;
-}
+:root { --primary: #3498db; --secondary: #2c3e50; --bg: #f0f2f5; --card-bg: #ffffff; }
+body { font-family: 'Segoe UI', sans-serif; background: var(--bg); margin: 0; display: flex; justify-content: center; align-items: center; min-height: 100vh; }
+#app { width: 95%; max-width: 600px; background: var(--card-bg); padding: 30px; border-radius: 25px; box-shadow: 0 15px 35px rgba(0,0,0,0.1); text-align: center; position: relative; }
 
-body {
-    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-    background-color: var(--bg);
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    color: var(--secondary);
-}
+/* 언어 선택기 스타일 */
+.lang-selector { position: absolute; top: 20px; right: 20px; }
+#lang-select { padding: 5px 10px; border-radius: 10px; border: 1px solid #ddd; font-size: 0.9rem; cursor: pointer; }
 
-#app {
-    width: 95%;
-    max-width: 600px;
-    background: var(--card-bg);
-    padding: 40px 30px;
-    border-radius: 25px;
-    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
-    text-align: center;
-    box-sizing: border-box;
-}
+header h1 { font-size: 2.2rem; margin: 10px 0 0 0; color: var(--primary); }
+#brand-desc { font-size: 1rem; color: #7f8c8d; margin-bottom: 20px; }
 
-header h1 { font-size: 2.5rem; margin: 0; color: var(--primary); letter-spacing: -1px; }
-#brand-desc { font-size: 1.1rem; color: #7f8c8d; margin-bottom: 20px; }
+#progress-bar { width: 100%; height: 8px; background: #eee; border-radius: 4px; margin-bottom: 25px; overflow: hidden; }
+#progress-fill { width: 0%; height: 100%; background: var(--primary); transition: width 0.4s ease; }
 
-#progress-bar {
-    width: 100%;
-    height: 10px;
-    background: #eee;
-    border-radius: 5px;
-    margin-bottom: 30px;
-    overflow: hidden;
-}
-#progress-fill {
-    width: 0%;
-    height: 100%;
-    background: linear-gradient(90deg, var(--primary), var(--accent));
-    transition: width 0.4s ease;
-}
+#question-container { min-height: 150px; display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px; }
+#question-text { font-size: 1.3rem; font-weight: bold; line-height: 1.5; word-break: keep-all; }
 
-#question-container {
-    min-height: 160px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin-bottom: 20px;
-}
+.opt-btn { width: 100%; padding: 16px; margin: 8px 0; font-size: 1.1rem; font-weight: 600; border: 2px solid #eee; border-radius: 12px; background: white; cursor: pointer; transition: 0.2s; }
+.opt-btn:hover { border-color: var(--primary); background: #f7fbff; }
 
-#question-text {
-    font-size: 1.4rem;
-    font-weight: bold;
-    line-height: 1.6;
-    word-break: keep-all;
-}
-
-.opt-btn {
-    width: 100%;
-    padding: 18px;
-    margin: 10px 0;
-    font-size: 1.2rem;
-    font-weight: 600;
-    border: 2px solid #eee;
-    border-radius: 15px;
-    background: white;
-    cursor: pointer;
-    transition: all 0.2s ease;
-}
-.opt-btn:hover {
-    border-color: var(--primary);
-    background-color: #f7fbff;
-    transform: translateY(-2px);
-}
-
-.security-note {
-    font-size: 0.9rem;
-    color: #95a5a6;
-    margin-top: 30px;
-    line-height: 1.4;
-}
-
-.spinner {
-    width: 50px;
-    height: 50px;
-    border: 5px solid #f3f3f3;
-    border-top: 5px solid var(--primary);
-    border-radius: 50%;
-    animation: spin 1s linear infinite;
-    margin: 20px auto;
-}
+.security-note { font-size: 0.85rem; color: #95a5a6; margin-top: 25px; }
+.spinner { width: 40px; height: 40px; border: 4px solid #f3f3f3; border-top: 4px solid var(--primary); border-radius: 50%; animation: spin 1s linear infinite; margin: 20px auto; }
 @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
-
-.result-card { text-align: left; animation: fadeIn 0.5s ease-out; }
-@keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+.result-card { text-align: left; }
