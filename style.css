@@ -3,3 +3,11 @@
 .bar-bg { width: 100%; height: 12px; background: #eee; border-radius: 6px; margin: 5px 0; position: relative; }
 .bar-fill { height: 100%; background: var(--accent); border-radius: 6px; transition: width 1s ease-in-out; }
 .result-card h2 { color: var(--primary); border-bottom: 2px solid var(--accent); padding-bottom: 10px; }
+
+/* 결과 화면 시각화 보강 */
+.trait-row { margin-bottom: 20px; }
+.trait-label { display: flex; justify-content: space-between; margin-bottom: 5px; font-size: 0.9rem; }
+.bar-bg { width: 100%; height: 10px; background: #eee; border-radius: 5px; overflow: hidden; }
+.bar-fill { height: 100%; background: #3498db; transition: width 1.5s ease-out; }
+.processing-view { padding: 40px 0; }
+.security-footer { font-size: 0.7rem; color: #999; margin-top: 20px; }
