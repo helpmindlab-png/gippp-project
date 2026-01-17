@@ -1,6 +1,6 @@
 /**
- * [GIPPP] Global Insight Profiler Project - Core Engine v1.4
- * Focus: Standalone Stability, High Readability, Zero-Persistence
+ * [GIPPP] Global Insight Profiler Project - Core Engine v1.5
+ * Focus: Revenue Optimization, Expert Curation, High Readability
  */
 
 const GIPPP_ENGINE = (() => {
@@ -8,9 +8,8 @@ const GIPPP_ENGINE = (() => {
         currentIndex: 0,
         answers: [],
         questions: [],
-        lang: 'en',
-        // 나중에 GA4 가입 후 ID만 넣으면 작동하도록 설계됨
-        gaMeasurementId: null 
+        descriptions: {},
+        lang: 'en'
     };
 
     const ui = {
@@ -20,33 +19,27 @@ const GIPPP_ENGINE = (() => {
         mainContent: document.getElementById('main-content')
     };
 
-    /**
-     * 초기화 및 데이터 로드
-     */
     const init = async () => {
         const userLang = navigator.language.substring(0, 2);
         state.lang = (userLang === 'ko') ? 'ko' : 'en';
         
         try {
-            // 내부망 환경을 고려하여 fetch 실패 시 기본 문항이라도 띄우도록 예외처리
             const response = await fetch(`./data/questions_${state.lang}.json`);
-            if (!response.ok) throw new Error('JSON Load Failed');
-            state.questions = await response.json();
+            const data = await response.json();
+            state.questions = data.items;
+            state.descriptions = data.descriptions;
             renderQuestion();
         } catch (error) {
-            console.error("Data load error:", error);
-            ui.questionText.innerText = "데이터 로드 실패. JSON 파일 경로를 확인하세요.";
+            ui.questionText.innerText = "Data Load Error.";
         }
     };
 
-    /**
-     * 질문 렌더링 (가독성 중심)
-     */
     const renderQuestion = () => {
         if (!state.questions[state.currentIndex]) return;
         const q = state.questions[state.currentIndex];
         
-        ui.questionText.innerHTML = `<span style="font-size: 1.2rem; font-weight: bold;">${q.text}</span>`;
+        // 가독성 강화: 큰 폰트 적용
+        ui.questionText.innerHTML = `<div style="font-size: 1.3rem; font-weight: bold; margin-bottom:20px;">${q.text}</div>`;
         ui.optionsGroup.innerHTML = '';
 
         const labels = state.lang === 'ko' 
@@ -56,13 +49,13 @@ const GIPPP_ENGINE = (() => {
         [1, 2, 3, 4, 5].forEach(score => {
             const btn = document.createElement('button');
             btn.className = 'opt-btn';
-            btn.style.fontSize = "1.1rem"; // 가독성을 위해 폰트 크기 상향
+            btn.style.cssText = "width:100%; padding:15px; margin:8px 0; font-size:1.1rem; cursor:pointer;";
             btn.innerText = labels[score - 1];
             btn.onclick = () => {
                 const finalScore = (q.direction === "-") ? (6 - score) : score;
                 state.answers.push({ trait: q.trait, score: finalScore });
                 if (++state.currentIndex < state.questions.length) renderQuestion();
-                else showResult();
+                else showProcessing();
             };
             ui.optionsGroup.appendChild(btn);
         });
@@ -70,16 +63,71 @@ const GIPPP_ENGINE = (() => {
         ui.progressFill.style.width = `${(state.currentIndex / state.questions.length) * 100}%`;
     };
 
-    /**
-     * 결과 계산 및 출력
-     */
-    const showResult = () => {
-        ui.mainContent.innerHTML = `<div class="processing-view"><h3>${state.lang === 'ko' ? '분석 리포트 생성 중...' : 'Generating Report...'}</h3></div>`;
+    const showProcessing = () => {
+        // 수익화 포인트: 결과 도출 전 전면 광고가 들어갈 자리
+        ui.mainContent.innerHTML = `
+            <div style="padding: 40px 0; text-align: center;">
+                <div class="spinner"></div>
+                <h3 style="font-size: 1.4rem;">${state.lang === 'ko' ? '심리 프로파일 분석 중...' : 'Analyzing Profile...'}</h3>
+                <p style="color: #666;">${state.lang === 'ko' ? '잠시만 기다려 주세요.' : 'Please wait a moment.'}</p>
+                <!-- AD SLOT: 결과 대기 중 광고 -->
+                <div id="ad-processing" style="margin-top:20px; min-height:100px; background:#f9f9f9; border:1px dashed #ccc;">
+                    <p style="font-size:0.8rem; color:#999; padding-top:40px;">ADVERTISEMENT</p>
+                </div>
+            </div>`;
         
-        setTimeout(() => {
-            const scores = calculateScores();
-            renderFinalReport(scores);
-        }, 2000);
+        setTimeout(renderFinalReport, 3500); // 광고 노출을 위해 3.5초 대기
+    };
+
+    const renderFinalReport = () => {
+        const scores = calculateScores();
+        const traits = {
+            E: { ko: "외향성", en: "Extraversion" },
+            A: { ko: "친화성", en: "Agreeableness" },
+            C: { ko: "성실성", en: "Conscientiousness" },
+            N: { ko: "신경증", en: "Neuroticism" },
+            O: { ko: "개방성", en: "Openness" }
+        };
+
+        let reportHtml = `
+            <div class="result-card" style="text-align:left;">
+                <h2 style="text-align:center; border-bottom:2px solid #3498db; padding-bottom:10px;">
+                    ${state.lang === 'ko' ? '인사이트 리포트' : 'Insight Report'}
+                </h2>
+                <!-- AD SLOT: 결과 상단 광고 -->
+                <div id="ad-result-top" style="margin:20px 0; min-height:50px; background:#f9f9f9; text-align:center; border:1px dashed #eee;">
+                    <span style="font-size:0.7rem; color:#ccc;">AD</span>
+                </div>
+        `;
+
+        for (const [trait, data] of Object.entries(scores)) {
+            const traitName = traits[trait][state.lang];
+            const percentage = Math.round((data.total / (data.count * 5)) * 100);
+            const desc = percentage >= 50 ? state.descriptions[trait].high : state.descriptions[trait].low;
+
+            reportHtml += `
+                <div style="margin-bottom: 25px;">
+                    <div style="display: flex; justify-content: space-between; font-weight: bold; font-size:1.1rem;">
+                        <span>${traitName}</span><span>${percentage}%</span>
+                    </div>
+                    <div style="width: 100%; height: 10px; background: #eee; border-radius: 5px; margin: 8px 0;">
+                        <div style="width: ${percentage}%; height: 100%; background: #3498db; border-radius: 5px;"></div>
+                    </div>
+                    <p style="font-size: 0.95rem; color: #444; line-height: 1.5; margin-top: 5px;">${desc}</p>
+                </div>`;
+        }
+
+        reportHtml += `
+                <!-- AD SLOT: 결과 하단 광고 -->
+                <div id="ad-result-bottom" style="margin:20px 0; min-height:100px; background:#f9f9f9; text-align:center; border:1px dashed #eee;">
+                    <span style="font-size:0.7rem; color:#ccc;">AD</span>
+                </div>
+                <button class="exit-btn" style="width:100%; padding:15px; background:#e74c3c; color:white; border:none; border-radius:8px; font-size:1.1rem; cursor:pointer;" onclick="location.reload()">
+                    ${state.lang === 'ko' ? '분석 종료 및 데이터 파기' : 'Exit & Purge Data'}
+                </button>
+            </div>`;
+
+        ui.mainContent.innerHTML = reportHtml;
     };
 
     const calculateScores = () => {
@@ -91,65 +139,7 @@ const GIPPP_ENGINE = (() => {
         }, {});
     };
 
-    const renderFinalReport = (scores) => {
-        const traits = {
-            E: { ko: "외향성", en: "Extraversion" },
-            A: { ko: "친화성", en: "Agreeableness" },
-            C: { ko: "성실성", en: "Conscientiousness" },
-            N: { ko: "신경증", en: "Neuroticism" },
-            O: { ko: "개방성", en: "Openness" }
-        };
-
-        let reportHtml = `<div class="result-card"><h2>${state.lang === 'ko' ? '인사이트 리포트' : 'Insight Report'}</h2>`;
-        
-        let resultDataForDownload = {}; // 마인드-로그용 데이터
-
-        for (const [trait, data] of Object.entries(scores)) {
-            const traitName = traits[trait][state.lang];
-            const percentage = Math.round((data.total / (data.count * 5)) * 100);
-            resultDataForDownload[traitName] = percentage + "%";
-
-            reportHtml += `
-                <div class="trait-row" style="margin: 15px 0;">
-                    <div style="display: flex; justify-content: space-between; font-weight: bold;">
-                        <span>${traitName}</span><span>${percentage}%</span>
-                    </div>
-                    <div style="width: 100%; height: 12px; background: #eee; border-radius: 6px; overflow: hidden;">
-                        <div style="width: ${percentage}%; height: 100%; background: #3498db;"></div>
-                    </div>
-                </div>`;
-        }
-
-        // 마인드-로그 다운로드 버튼 및 종료 버튼
-        reportHtml += `
-            <div style="margin-top: 25px;">
-                <button class="opt-btn" style="background: #2ecc71; color: white; border: none;" onclick="GIPPP_ENGINE.downloadLog(${JSON.stringify(resultDataForDownload)})">
-                    ${state.lang === 'ko' ? '결과 파일로 소장하기 (Mind-Log)' : 'Download Mind-Log'}
-                </button>
-                <button class="exit-btn" style="width: 100%;" onclick="location.reload()">
-                    ${state.lang === 'ko' ? '모든 데이터 파기 및 종료' : 'Purge & Exit'}
-                </button>
-            </div>
-            <p style="font-size: 0.8rem; color: #888; margin-top: 15px;">🔒 보안: 본 결과는 서버에 저장되지 않으며 종료 시 즉시 소멸됩니다.</p>
-        </div>`;
-
-        ui.mainContent.innerHTML = reportHtml;
-    };
-
-    /**
-     * 마인드-로그 다운로드 (운영 원칙: 데이터 소유권은 사용자에게)
-     */
-    const downloadLog = (data) => {
-        const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'text/plain' });
-        const url = URL.createObjectURL(blob);
-        const a = document.createElement('a');
-        a.href = url;
-        a.download = `GIPPP_Result_${new Date().getTime()}.txt`;
-        a.click();
-        URL.revokeObjectURL(url);
-    };
-
-    return { init, downloadLog };
+    return { init };
 })();
 
 document.addEventListener('DOMContentLoaded', GIPPP_ENGINE.init);
