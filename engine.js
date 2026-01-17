@@ -1,12 +1,22 @@
+/**
+ * [GIPPP] Global Insight Profiler Project - Core Engine v3.2
+ * Focus: ISO 639-1 Standard Language Codes, Neutral Ordering, Full Integration
+ */
+
 const GIPPP_ENGINE = (() => {
     let state = { currentIndex: 0, answers: [], questions: [], descriptions: {}, lang: 'en', results: null };
 
+    // ISO 알파벳 순서로 정의된 UI 문자열
     const uiStrings = {
-        ko: { desc: "글로벌 인사이트 프로파일러", security: "🔒 보안: 데이터 저장 안 함", processing: "분석 중...", wait: "잠시만 기다려 주세요.", saveImg: "📸 이미지 저장", retest: "다시 하기", reportTitle: "인사이트 리포트", recommendTitle: "💡 맞춤 추천", viewAmazon: "아마존 보기", qrNote: "QR코드를 스캔하여 테스트 시작", viralTitle: "당신의 인사이트가 궁금하다면?", viralSub: "QR코드를 스캔하여 테스트 시작", traits: { E: "외향성", A: "친화성", C: "성실성", N: "신경증", O: "개방성" }, labels: ["전혀 아니다", "아니다", "보통이다", "그렇다", "매우 그렇다"] },
+        de: { desc: "Globaler Insight-Profiler", security: "🔒 Sicherheit: Keine Datenspeicherung", processing: "Analysiere...", wait: "Bitte warten...", saveImg: "Bild speichern", retest: "Neu starten", reportTitle: "Insight-Bericht", recommendTitle: "💡 Empfohlen für Sie", viewAmazon: "Auf Amazon ansehen", qrNote: "QR-Code scannen zum Starten", viralTitle: "Neugierig auf Ihre Insights?", viralSub: "QR-Code scannen zum Starten", traits: { E: "Extraversion", A: "Verträglichkeit", C: "Gewissenhaftigkeit", N: "Neurotizismus", O: "Offenheit" }, labels: ["Stimme gar nicht zu", "Stimme nicht zu", "Neutral", "Stimme zu", "Stimme voll zu"] },
         en: { desc: "Global Insight Profiler", security: "🔒 Security: No data stored", processing: "Analyzing...", wait: "Please wait...", saveImg: "📸 Save Image", retest: "Retest", reportTitle: "Insight Report", recommendTitle: "💡 Recommended", viewAmazon: "View on Amazon", qrNote: "Scan QR to start test", viralTitle: "Curious about your insight?", viralSub: "Scan QR to start your test", traits: { E: "Extraversion", A: "Agreeableness", C: "Conscientiousness", N: "Neuroticism", O: "Openness" }, labels: ["Strongly Disagree", "Disagree", "Neutral", "Agree", "Strongly Agree"] },
         es: { desc: "Perfilador de Perspectiva Global", security: "🔒 Seguridad: Sin datos guardados", processing: "Analizando...", wait: "Por favor espere...", saveImg: "📸 Guardar Imagen", retest: "Reiniciar", reportTitle: "Informe de Perspectiva", recommendTitle: "💡 Recomendado", viewAmazon: "Ver en Amazon", qrNote: "Escanea para comenzar", viralTitle: "¿Curioso por tu intuición?", viralSub: "Escanea el QR para comenzar", traits: { E: "Extraversión", A: "Amabilidad", C: "Responsabilidad", N: "Neuroticismo", O: "Apertura" }, labels: ["Muy en desacuerdo", "En desacuerdo", "Neutral", "De acuerdo", "Muy de acuerdo"] },
-        jp: { desc: "グローバル・インサイト・プロファイラー", security: "🔒 セキュリティ: データ保存なし", processing: "分析中...", wait: "少々お待ちください...", saveImg: "📸 画像を保存", retest: "再テスト", reportTitle: "インサイトレポート", recommendTitle: "💡 おすすめ商品", viewAmazon: "Amazonで見る", qrNote: "QRコードをスキャンして開始", viralTitle: "あなたのインサイトが気になりますか？", viralSub: "QRコードをスキャンして開始", traits: { E: "外向性", A: "協調性", C: "誠実性", N: "神経症傾向", O: "開放性" }, labels: ["全くそう思わない", "そう思わない", "どちらともいえない", "そう思う", "強くそう思う"] },
-        vn: { desc: "Hệ thống Phân tích Tâm lý Toàn cầu", security: "🔒 Bảo mật: Không lưu trữ dữ liệu", processing: "Đang phân tích...", wait: "Vui lòng chờ...", saveImg: "📸 Lưu hình ảnh", retest: "Làm lại", reportTitle: "Báo cáo Tâm lý", recommendTitle: "💡 Gợi ý cho bạn", viewAmazon: "Xem trên Amazon", qrNote: "Quét mã QR để bắt đầu", viralTitle: "Bạn muốn biết tâm lý của mình?", viralSub: "Quét mã QR để bắt đầu", traits: { E: "Hướng ngoại", A: "Tận tâm", C: "Chu đáo", N: "Nhạy cảm", O: "Cởi mở" }, labels: ["Rất không đồng ý", "Không đồng ý", "Bình thường", "Đồng ý", "Rất đồng ý"] }
+        ja: { desc: "グローバル・インサイト・プロファイラー", security: "🔒 セキュリティ: データ保存なし", processing: "分析中...", wait: "少々お待ちください...", saveImg: "📸 画像を保存", retest: "再テスト", reportTitle: "インサイトレポート", recommendTitle: "💡 おすすめ商品", viewAmazon: "Amazonで見る", qrNote: "QRコードをスキャンして開始", viralTitle: "あなたのインサイトが気になりますか？", viralSub: "QRコードをスキャンして開始", traits: { E: "外向性", A: "協調性", C: "誠実性", N: "神経症傾向", O: "開放性" }, labels: ["全くそう思わない", "そう思わない", "どちらともいえない", "そう思う", "強くそう思う"] },
+        ko: { desc: "글로벌 인사이트 프로파일러", security: "🔒 보안: 데이터 저장 안 함", processing: "분석 중...", wait: "잠시만 기다려 주세요.", saveImg: "📸 이미지 저장", retest: "다시 하기", reportTitle: "인사이트 리포트", recommendTitle: "💡 맞춤 추천", viewAmazon: "아마존 보기", qrNote: "QR코드를 스캔하여 테스트 시작", viralTitle: "당신의 인사이트가 궁금하다면?", viralSub: "QR코드를 스캔하여 테스트 시작", traits: { E: "외향성", A: "친화성", C: "성실성", N: "신경증", O: "개방성" }, labels: ["전혀 아니다", "아니다", "보통이다", "그렇다", "매우 그렇다"] },
+        pt: { desc: "Perfilador de Insights Global", security: "🔒 Segurança: Sem armazenamento de dados", processing: "Analisando...", wait: "Por favor, aguarde...", saveImg: "📸 Salvar Imagem", retest: "Reiniciar", reportTitle: "Relatório de Insights", recommendTitle: "💡 Recomendado para você", viewAmazon: "Ver na Amazon", qrNote: "Escaneie o QR para começar", viralTitle: "Curioso sobre seu insight?", viralSub: "Escaneie o QR para começar", traits: { E: "Extroversão", A: "Amabilidade", C: "Conscienciosidade", N: "Neuroticismo", O: "Apertura" }, labels: ["Discordo totalmente", "Discordo", "Neutro", "Concordo", "Concordo totalmente"] },
+        ru: { desc: "Глобальный профилировщик инсайтов", security: "🔒 Безопасность: данные не сохраняются", processing: "Анализ...", wait: "Пожалуйста, подождите...", saveImg: "📸 Сохранить изображение", retest: "Пройти снова", reportTitle: "Отчет об инсайтах", recommendTitle: "💡 Рекомендовано для вас", viewAmazon: "Смотреть на Amazon", qrNote: "Сканируйте QR, чтобы начать", viralTitle: "Хотите узнать свои инсайты?", viralSub: "Сканируйте QR, чтобы начать", traits: { E: "Экстраверсия", A: "Доброжелательность", C: "Добросовестность", N: "Нейротизм", O: "Открытость" }, labels: ["Полностью не согласен", "Не согласен", "Нейтрально", "Согласен", "Полностью согласен"] },
+        vi: { desc: "Hệ thống Phân tích Tâm lý Toàn cầu", security: "🔒 Bảo mật: Không lưu trữ dữ liệu", processing: "Đang phân tích...", wait: "Vui lòng chờ...", saveImg: "📸 Lưu hình ảnh", retest: "Làm lại", reportTitle: "Báo cáo Tâm lý", recommendTitle: "💡 Gợi ý cho bạn", viewAmazon: "Xem trên Amazon", qrNote: "Quét mã QR để bắt đầu", viralTitle: "Bạn muốn biết tâm lý của mình?", viralSub: "Quét mã QR để bắt đầu", traits: { E: "Hướng ngoại", A: "Tận tâm", C: "Chu đáo", N: "Nhạy cảm", O: "Cởi mở" }, labels: ["Rất không đồng ý", "Không đồng ý", "Bình thường", "Đồng ý", "Rất đồng ý"] },
+        zh: { desc: "全球洞察剖析器", security: "🔒 安全：不存储任何数据", processing: "正在分析...", wait: "请稍等...", saveImg: "📸 保存结果图片", retest: "重新测试", reportTitle: "洞察报告", recommendTitle: "💡 为您推荐", viewAmazon: "在亚马逊查看", qrNote: "扫描二维码开始测试", viralTitle: "想了解你的内在洞察吗？", viralSub: "扫描二维码开始测试", traits: { E: "外向性", A: "宜人性", C: "尽责性", N: "情绪稳定性", O: "开放性" }, labels: ["极不同意", "不同意", "中立", "同意", "极同意"] }
     };
 
     const amazonProducts = { E: "party games", A: "gift sets", C: "planner", N: "meditation", O: "art supplies" };
@@ -14,11 +24,19 @@ const GIPPP_ENGINE = (() => {
 
     const init = async () => {
         const urlParams = new URLSearchParams(window.location.search);
-        state.lang = urlParams.get('lang') || (navigator.language.substring(0, 2) === 'ko' ? 'ko' : 'en');
+        let userLang = urlParams.get('lang') || navigator.language.substring(0, 2);
+        
+        // 표준 코드 매핑 (예외 처리)
+        if (userLang === 'jp') userLang = 'ja';
+        if (userLang === 'vn') userLang = 'vi';
+        
+        state.lang = uiStrings[userLang] ? userLang : 'en';
+        
         const s = uiStrings[state.lang];
         ui.brandDesc.innerText = s.desc;
         ui.securityNote.innerText = s.security;
         ui.langSelect.value = state.lang;
+        
         await loadData();
         const resData = urlParams.get('res');
         if (resData) decodeAndShowResult(resData); else renderQuestion();
@@ -115,7 +133,6 @@ const GIPPP_ENGINE = (() => {
             y += 100;
         });
 
-        // 하단 마케팅 영역 (QR + 문구 + 주소)
         ctx.fillStyle = '#f8f9fa'; ctx.fillRect(0, 750, 600, 200);
         if (qrImg && qrImg.complete) { ctx.drawImage(qrImg, 50, 775, 150, 150); }
         
