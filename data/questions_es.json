@@ -1,0 +1,31 @@
+{
+    "items": [
+        { "id": 1, "trait": "E", "direction": "+", "text": "Soy el alma de la fiesta y me gusta animar a los demás." },
+        { "id": 2, "trait": "A", "direction": "+", "text": "Siento mucha empatía por los sentimientos de los demás." },
+        { "id": 3, "trait": "C", "direction": "+", "text": "Siempre estoy preparado y soy muy organizado con mis tareas." },
+        { "id": 4, "trait": "N", "direction": "+", "text": "Me estreso con facilidad ante situaciones inesperadas." },
+        { "id": 5, "trait": "O", "direction": "+", "text": "Tengo una imaginación vívida y disfruto de nuevas ideas." },
+        { "id": 6, "trait": "E", "direction": "-", "text": "Suelo mantenerme en un segundo plano en las reuniones sociales." },
+        { "id": 7, "trait": "A", "direction": "-", "text": "A veces no me interesan mucho los problemas de los demás." },
+        { "id": 8, "trait": "C", "direction": "-", "text": "A menudo olvido poner las cosas en su lugar." },
+        { "id": 9, "trait": "N", "direction": "-", "text": "Rara vez me siento triste o deprimido." },
+        { "id": 10, "trait": "O", "direction": "-", "text": "Prefiero los hechos concretos a las ideas abstractas." },
+        { "id": 11, "trait": "E", "direction": "+", "text": "Me resulta fácil entablar conversación con desconocidos." },
+        { "id": 12, "trait": "A", "direction": "+", "text": "Creo que la mayoría de las personas tienen buenas intenciones." },
+        { "id": 13, "trait": "C", "direction": "+", "text": "Presto mucha atención a los detalles en todo lo que hago." },
+        { "id": 14, "trait": "N", "direction": "+", "text": "Cambio de humor con frecuencia." },
+        { "id": 15, "trait": "O", "direction": "+", "text": "Me fascinan las artes y la literatura." },
+        { "id": 16, "trait": "E", "direction": "-", "text": "Me siento agotado después de socializar mucho tiempo." },
+        { "id": 17, "trait": "A", "direction": "-", "text": "No me importa decir lo que pienso, aunque cause tensión." },
+        { "id": 18, "trait": "C", "direction": "-", "text": "A veces pospongo mis tareas hasta el último momento." },
+        { "id": 19, "trait": "N", "direction": "-", "text": "Mantengo la calma incluso bajo mucha presión." },
+        { "id": 20, "trait": "O", "direction": "-", "text": "Prefiero seguir una rutina establecida que probar cosas nuevas." }
+    ],
+    "descriptions": {
+        "E": { "high": "Eres una persona sociable y enérgica que brilla en compañía.", "low": "Eres reflexivo, independiente y valoras tu tiempo a solas." },
+        "A": { "high": "Eres compasivo, cooperativo y valoras la armonía social.", "low": "Eres analítico, competitivo y priorizas la verdad objetiva." },
+        "C": { "high": "Eres disciplinado, organizado y muy confiable en tu trabajo.", "low": "Eres flexible, espontáneo y prefieres dejarte llevar." },
+        "N": { "high": "Eres emocionalmente sensible y muy consciente de los riesgos.", "low": "Eres resiliente y mantienes la calma bajo presión." },
+        "O": { "high": "Eres curioso, creativo y abierto a ideas nuevas y complejas.", "low": "Eres práctico, tradicional y prefieres métodos probados." }
+    }
+}
