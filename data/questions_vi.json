@@ -1,31 +1,25 @@
 {
-    "items": [
-        { "id": 1, "trait": "E", "direction": "+", "text": "Tôi thường là người dẫn dắt câu chuyện trong các buổi tiệc." },
-        { "id": 2, "trait": "A", "direction": "+", "text": "Tôi dễ dàng đồng cảm và thích an ủi người khác." },
-        { "id": 3, "trait": "C", "direction": "+", "text": "Tôi luôn lập kế hoạch chi tiết trước khi bắt đầu công việc." },
-        { "id": 4, "trait": "N", "direction": "+", "text": "Tôi hay lo lắng về những việc nhỏ nhặt." },
-        { "id": 5, "trait": "O", "direction": "+", "text": "Tôi thích những ý tưởng mới và các cuộc thảo luận triết học." },
-        { "id": 6, "trait": "E", "direction": "-", "text": "Tôi ít nói khi ở giữa những người lạ." },
-        { "id": 7, "trait": "A", "direction": "-", "text": "Đôi khi tôi không quan tâm lắm đến vấn đề của người khác." },
-        { "id": 8, "trait": "C", "direction": "-", "text": "Tôi hay để đồ đạc bừa bãi và quên dọn dẹp." },
-        { "id": 9, "trait": "N", "direction": "-", "text": "Tôi giữ được bình tĩnh và ít khi bị dao động." },
-        { "id": 10, "trait": "O", "direction": "-", "text": "Tôi thích những thứ thực tế hơn là các ý tưởng trừu tượng." },
-        { "id": 11, "trait": "E", "direction": "+", "text": "Tôi thấy việc bắt chuyện với người lạ không quá khó khăn." },
-        { "id": 12, "trait": "A", "direction": "+", "text": "Tôi luôn cố gắng nhìn vào mặt tốt của mọi người." },
-        { "id": 13, "trait": "C", "direction": "+", "text": "Tôi luôn cố gắng hết sức để hoàn thành công việc đúng hạn." },
-        { "id": 14, "trait": "N", "direction": "+", "text": "Tâm trạng của tôi hay thay đổi thất thường." },
-        { "id": 15, "trait": "O", "direction": "+", "text": "Tôi dễ bị cuốn hút bởi vẻ đẹp của nghệ thuật và thiên nhiên." },
-        { "id": 16, "trait": "E", "direction": "-", "text": "Tôi muốn rút lui khi trở thành tâm điểm của sự chú ý." },
-        { "id": 17, "trait": "A", "direction": "-", "text": "Đôi khi tôi coi trọng ý kiến cá nhân hơn là cảm xúc của người khác." },
-        { "id": 18, "trait": "C", "direction": "-", "text": "Tôi có xu hướng trì hoãn công việc thay vì hoàn thành nó ngay." },
-        { "id": 19, "trait": "N", "direction": "-", "text": "Tôi giữ được bình tĩnh ngay cả khi chịu áp lực lớn." },
-        { "id": 20, "trait": "O", "direction": "-", "text": "Tôi thích làm theo những cách truyền thống hơn là thử cái mới." }
-    ],
-    "descriptions": {
-        "E": { "high": "Bạn là người hòa đồng, năng động và tỏa sáng khi ở bên người khác.", "low": "Bạn là người sâu sắc, độc lập và coi trọng thời gian riêng tư." },
-        "A": { "high": "Bạn là người nhân hậu, luôn quan tâm và coi trọng sự hòa hợp.", "low": "Bạn là người thực tế, thẳng thắn và ưu tiên tính khách quan." },
-        "C": { "high": "Bạn là người có trách nhiệm, kỷ luật và luôn kiên trì với mục tiêu.", "low": "Bạn là người linh hoạt, tự phát và thích ứng nhanh với thay đổi." },
-        "N": { "high": "Bạn là người nhạy cảm, tinh tế và có khả năng nhận biết rủi ro tốt.", "low": "Bạn là người kiên cường, ổn định và giữ được bình tĩnh dưới áp lực." },
-        "O": { "high": "Bạn là người tò mò, sáng tạo và luôn sẵn sàng cho những thay đổi.", "low": "Bạn là người thực tế, truyền thống và tin tưởng vào những phương pháp đã được kiểm chứng." }
-    }
+  "items": [
+    { "id": 1, "trait": "E", "direction": "+", "text": "Tôi thường là người khuấy động không khí và dẫn dắt câu chuyện trong các buổi tiệc." },
+    { "id": 2, "trait": "A", "direction": "+", "text": "Tôi luôn cố gắng thấu hiểu và đồng cảm với cảm xúc của người khác." },
+    { "id": 3, "trait": "C", "direction": "+", "text": "Tôi thích hoàn thành các công việc và nghĩa vụ của mình ngay lập tức." },
+    { "id": 4, "trait": "N", "direction": "+", "text": "Đôi khi tôi cảm thấy tâm trạng của mình thay đổi thất thường." },
+    { "id": 5, "trait": "O", "direction": "+", "text": "Tôi có trí tưởng tượng phong phú và thích khám phá những ý tưởng mới." },
+    { "id": 6, "trait": "E", "direction": "-", "text": "Tôi thường giữ im lặng khi ở trong những nhóm đông người." },
+    { "id": 7, "trait": "A", "direction": "-", "text": "Đôi khi tôi không quá bận tâm đến những vấn đề của người khác." },
+    { "id": 8, "trait": "C", "direction": "-", "text": "Tôi thường hay quên để đồ vật lại đúng vị trí của chúng." },
+    { "id": 9, "trait": "N", "direction": "-", "text": "Tôi cảm thấy thư thái trong hầu hết thời gian và không dễ bị kích động." },
+    { "id": 10, "trait": "O", "direction": "-", "text": "Tôi thích những sự thật cụ thể hơn là những ý tưởng trừu tượng hay triết học." },
+    { "id": 11, "trait": "E", "direction": "+", "text": "Tôi thấy việc trò chuyện với nhiều người khác nhau tại các sự kiện xã hội khá dễ dàng." },
+    { "id": 12, "trait": "A", "direction": "+", "text": "Tôi thực sự cảm nhận và thấu hiểu được cảm xúc của những người xung quanh." },
+    { "id": 13, "trait": "C", "direction": "+", "text": "Tôi thích giữ cho môi trường sống và công việc của mình luôn ngăn nắp." },
+    { "id": 14, "trait": "N", "direction": "+", "text": "Tôi có xu hướng dễ bị căng thẳng hoặc lo lắng trước các sự việc." },
+    { "id": 15, "trait": "O", "direction": "-", "text": "Đôi khi tôi thấy khó khăn trong việc nắm bắt các khái niệm trừu tượng phức tạp." },
+    { "id": 16, "trait": "E", "direction": "-", "text": "Tôi thích quan sát từ phía sau hơn là trở thành tâm điểm của sự chú ý." },
+    { "id": 17, "trait": "A", "direction": "-", "text": "Tôi thường không quá quan tâm đến những chuyện cá nhân của người khác." },
+    { "id": 18, "trait": "C", "direction": "-", "text": "Đôi khi tôi làm việc thiếu tỉ mỉ hoặc không hoàn thành tốt các chi tiết." },
+    { "id": 19, "trait": "N", "direction": "-", "text": "Tôi hiếm khi cảm thấy buồn bã hay nản lòng." },
+    { "id": 20, "trait": "O", "direction": "-", "text": "Tôi không nghĩ mình là người có trí tưởng tượng đặc biệt sáng tạo." }
+  ],
+  "descriptions": { "E": { "high": "Bạn là người hòa đồng, năng động và tỏa sáng khi ở bên người khác.", "low": "Bạn là người sâu sắc, độc lập và coi trọng thời gian riêng tư." }, "A": { "high": "Bạn là người nhân hậu, luôn quan tâm và coi trọng sự hòa hợp.", "low": "Bạn là người thực tế, thẳng thắn và ưu tiên tính khách quan." }, "C": { "high": "Bạn là người có trách nhiệm, kỷ luật và luôn kiên trì với mục tiêu.", "low": "Bạn là người linh hoạt, tự phát và thích ứng nhanh với thay đổi." }, "N": { "high": "Bạn là người nhạy cảm, tinh tế và có khả năng nhận biết rủi ro tốt.", "low": "Bạn là người kiên cường, ổn định và giữ được bình tĩnh dưới áp lực." }, "O": { "high": "Bạn là người tò mò, sáng tạo và luôn sẵn sàng cho những thay đổi.", "low": "Bạn là người thực tế, truyền thống và tin tưởng vào những phương pháp đã được kiểm chứng." } }
 }
