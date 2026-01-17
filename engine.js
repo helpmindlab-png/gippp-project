@@ -1,7 +1,6 @@
 /**
- * [GIPPP] Global Insight Profiler Project - Core Engine v2.5
- * Fixes: Korean Logic, Ad-Slot Restoration, UI Stability
- * Features: Amazon Recommendation, QR Offloading, Full Localization
+ * [Insight Profiler] Core Engine v2.5
+ * Principles: Zero-Persistence, Standalone, High Readability
  */
 
 const GIPPP_ENGINE = (() => {
@@ -68,8 +67,8 @@ const GIPPP_ENGINE = (() => {
         state.lang = (forcedLang && uiStrings[forcedLang]) ? forcedLang : (navigator.language.substring(0, 2) === 'ko' ? 'ko' : 'en');
 
         const strings = uiStrings[state.lang];
-        ui.brandDesc.innerText = strings.desc;
-        ui.securityNote.innerText = strings.security;
+        if(ui.brandDesc) ui.brandDesc.innerText = strings.desc;
+        if(ui.securityNote) ui.securityNote.innerText = strings.security;
 
         await loadData();
 
@@ -81,14 +80,18 @@ const GIPPP_ENGINE = (() => {
     const loadData = async () => {
         try {
             const response = await fetch(`./data/questions_${state.lang}.json`);
+            if (!response.ok) throw new Error("File not found");
             const data = await response.json();
             state.questions = data.items;
             state.descriptions = data.descriptions;
-        } catch (e) { ui.questionText.innerText = "Data Load Error."; }
+        } catch (e) { 
+            ui.questionText.innerText = "Data Load Error. Check JSON structure."; 
+            console.error(e);
+        }
     };
 
     const renderQuestion = () => {
-        if (!state.questions[state.currentIndex]) return;
+        if (!state.questions || !state.questions[state.currentIndex]) return;
         const q = state.questions[state.currentIndex];
         ui.questionText.innerHTML = `
             <div style="font-size: 1rem; color: #3498db; margin-bottom: 10px;">Question ${state.currentIndex + 1} / ${state.questions.length}</div>
@@ -119,15 +122,14 @@ const GIPPP_ENGINE = (() => {
                 <div class="spinner"></div>
                 <h3 style="font-size: 1.5rem;">${strings.processing}</h3>
                 <p style="color: #666;">${strings.wait}</p>
-                <!-- AD SLOT: 전면 광고 자리 -->
                 <div id="ad-processing" style="margin-top:30px; min-height:200px; background:#f9f9f9; border:1px dashed #ccc; display:flex; align-items:center; justify-content:center;">
-                    <p style="font-size:0.8rem; color:#999;">ADVERTISEMENT (Full Screen)</p>
+                    <p style="font-size:0.8rem; color:#999;">ADVERTISEMENT SLOT</p>
                 </div>
             </div>`;
         setTimeout(() => {
             state.results = calculateScores();
             renderFinalReport();
-        }, 4000);
+        }, 3500);
     };
 
     const calculateScores = () => {
@@ -154,9 +156,8 @@ const GIPPP_ENGINE = (() => {
         }
 
         let reportHtml = `
-            <div class="result-card" style="text-align:left;">
+            <div class="result-card">
                 <h2 style="text-align:center; color:#2c3e50; border-bottom:4px solid #3498db; padding-bottom:15px; font-size:1.8rem;">${strings.reportTitle}</h2>
-                <!-- AD SLOT: 결과 상단 광고 -->
                 <div id="ad-result-top" style="margin:15px 0; min-height:60px; background:#f9f9f9; text-align:center; border:1px dashed #eee; font-size:0.7rem; color:#ccc;">AD SLOT (TOP)</div>
         `;
 
@@ -178,7 +179,6 @@ const GIPPP_ENGINE = (() => {
                 <p style="font-size:1.1rem; font-weight:bold; margin-bottom:15px;">${product[state.lang]}</p>
                 <a href="https://www.amazon.com/s?k=${encodeURIComponent(product.keyword)}" target="_blank" style="display:inline-block; padding:12px 25px; background:#ff9900; color:white; text-decoration:none; border-radius:10px; font-weight:bold;">${strings.viewAmazon}</a>
             </div>
-            <!-- AD SLOT: 결과 하단 광고 -->
             <div id="ad-result-bottom" style="margin:20px 0; min-height:100px; background:#f9f9f9; text-align:center; border:1px dashed #eee; font-size:0.7rem; color:#ccc;">AD SLOT (BOTTOM)</div>
             <div style="text-align:center; margin: 30px 0; padding: 20px; background: #f0f7ff; border-radius: 20px; border: 2px solid #d0e3ff;">
                 <p style="font-size: 1rem; color: #0056b3; margin-bottom: 15px; font-weight:bold;">${strings.qrNote}</p>
@@ -215,7 +215,7 @@ const GIPPP_ENGINE = (() => {
         const ctx = canvas.getContext('2d');
         const strings = uiStrings[state.lang];
         const qrImg = document.getElementById('qrImage');
-        if (!qrImg.complete) return;
+        if (!qrImg || !qrImg.complete) return;
 
         canvas.width = 600; canvas.height = 950;
         ctx.fillStyle = '#ffffff'; ctx.fillRect(0, 0, 600, 950);
@@ -244,12 +244,12 @@ const GIPPP_ENGINE = (() => {
         ctx.fillText('gippp-project.github.io', 220, 895);
 
         const link = document.createElement('a');
-        link.download = `GIPPP_Result_${state.lang}.png`;
+        link.download = `Result_${state.lang}.png`;
         link.href = canvas.toDataURL('image/png');
         link.click();
     };
 
-    return { init, generateImage };
+    return { init };
 })();
 
 document.addEventListener('DOMContentLoaded', GIPPP_ENGINE.init);
