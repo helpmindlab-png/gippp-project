@@ -18,13 +18,14 @@
         { "id": 16, "trait": "E", "direction": "-", "text": "Tôi muốn rút lui khi trở thành tâm điểm của sự chú ý." },
         { "id": 17, "trait": "A", "direction": "-", "text": "Đôi khi tôi coi trọng ý kiến cá nhân hơn là cảm xúc của người khác." },
         { "id": 18, "trait": "C", "direction": "-", "text": "Tôi có xu hướng trì hoãn công việc thay vì hoàn thành nó ngay." },
+        { "id": 19, "trait": "N", "direction": "-", "text": "Tôi giữ được bình tĩnh ngay cả khi chịu áp lực lớn." },
         { "id": 20, "trait": "O", "direction": "-", "text": "Tôi thích làm theo những cách truyền thống hơn là thử cái mới." }
     ],
     "descriptions": {
         "E": { "high": "Bạn là người hòa đồng, năng động và tỏa sáng khi ở bên người khác.", "low": "Bạn là người sâu sắc, độc lập và coi trọng thời gian riêng tư." },
-        "A": { "high": "Bạn là người nhân hậu, luôn quan tâm và coi trọng sự hòa hợp." },
-        "C": { "high": "Bạn là người có trách nhiệm, kỷ luật và luôn kiên trì với mục tiêu." },
-        "N": { "high": "Bạn là người nhạy cảm, tinh tế và có khả năng nhận biết rủi ro tốt." },
-        "O": { "high": "Bạn là người tò mò, sáng tạo và luôn sẵn sàng cho những thay đổi." }
+        "A": { "high": "Bạn là người nhân hậu, luôn quan tâm và coi trọng sự hòa hợp.", "low": "Bạn là người thực tế, thẳng thắn và ưu tiên tính khách quan." },
+        "C": { "high": "Bạn là người có trách nhiệm, kỷ luật và luôn kiên trì với mục tiêu.", "low": "Bạn là người linh hoạt, tự phát và thích ứng nhanh với thay đổi." },
+        "N": { "high": "Bạn là người nhạy cảm, tinh tế và có khả năng nhận biết rủi ro tốt.", "low": "Bạn là người kiên cường, ổn định và giữ được bình tĩnh dưới áp lực." },
+        "O": { "high": "Bạn là người tò mò, sáng tạo và luôn sẵn sàng cho những thay đổi.", "low": "Bạn là người thực tế, truyền thống và tin tưởng vào những phương pháp đã được kiểm chứng." }
     }
 }
