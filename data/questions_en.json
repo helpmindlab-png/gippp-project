@@ -1,5 +1,27 @@
 [
-    { "id": 1, "text": "I enjoy starting conversations with new people.", "trait": "E" },
-    { "id": 2, "text": "I don't give up easily when facing difficult tasks.", "trait": "C" },
-    { "id": 3, "text": "I deeply empathize with others' feelings.", "trait": "A" }
+    { 
+        "id": 1, "trait": "E", "direction": "+", 
+        "text": "I feel energized and comfortable when taking the lead in social gatherings.",
+        "intent": "Social dominance and extraversion"
+    },
+    { 
+        "id": 2, "trait": "A", "direction": "+", 
+        "text": "I tend to prioritize others' well-being and offer support when they are in need.",
+        "intent": "Altruism and agreeableness"
+    },
+    { 
+        "id": 3, "trait": "C", "direction": "+", 
+        "text": "I prefer to have a clear plan and follow through with tasks systematically.",
+        "intent": "Orderliness and self-discipline"
+    },
+    { 
+        "id": 4, "trait": "N", "direction": "+", 
+        "text": "I often find myself reflecting deeply on potential worries or setbacks.",
+        "intent": "Emotional reactivity and neuroticism"
+    },
+    { 
+        "id": 5, "trait": "O", "direction": "+", 
+        "text": "I am constantly seeking out new perspectives and complex intellectual challenges.",
+        "intent": "Intellectual curiosity and openness"
+    }
 ]
