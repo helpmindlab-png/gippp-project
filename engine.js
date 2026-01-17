@@ -2,8 +2,26 @@ const GIPPP_ENGINE = (() => {
     let state = {
         currentIndex: 0,
         answers: [],
-        questions: [], // JSON에서 동적으로 로드됨
-        lang: 'en'     // 기본값
+        questions: [],
+        lang: 'en'
+    };
+
+    // 성격 특성 정의 (Big Five)
+    const traitsInfo = {
+        ko: {
+            E: "외향성 (Extraversion)",
+            A: "친화성 (Agreeableness)",
+            C: "성실성 (Conscientiousness)",
+            N: "신경증 (Neuroticism)",
+            O: "개방성 (Openness)"
+        },
+        en: {
+            E: "Extraversion",
+            A: "Agreeableness",
+            C: "Conscientiousness",
+            N: "Neuroticism",
+            O: "Openness"
+        }
     };
 
     const ui = {
@@ -13,29 +31,20 @@ const GIPPP_ENGINE = (() => {
         mainContent: document.getElementById('main-content')
     };
 
-    // 1. 언어 감지 및 JSON 로드
     const init = async () => {
-        const userLang = navigator.language.substring(0, 2); // 'ko', 'en' 등 추출
+        const userLang = navigator.language.substring(0, 2);
         state.lang = ['ko', 'en'].includes(userLang) ? userLang : 'en';
-        
         try {
             const response = await fetch(`./data/questions_${state.lang}.json`);
             state.questions = await response.json();
             render();
-        } catch (error) {
-            console.error("Data load failed:", error);
-            ui.questionText.innerText = "데이터를 불러오는 데 실패했습니다.";
-        }
+        } catch (e) { ui.questionText.innerText = "Error loading data."; }
     };
 
-    // 2. 질문 렌더링
     const render = () => {
-        if (state.questions.length === 0) return;
-        
         const q = state.questions[state.currentIndex];
         ui.questionText.innerText = q.text;
         ui.optionsGroup.innerHTML = '';
-
         const labels = state.lang === 'ko' 
             ? ["전혀 아니다", "아니다", "보통이다", "그렇다", "매우 그렇다"]
             : ["Strongly Disagree", "Disagree", "Neutral", "Agree", "Strongly Agree"];
@@ -44,42 +53,49 @@ const GIPPP_ENGINE = (() => {
             const btn = document.createElement('button');
             btn.className = 'opt-btn';
             btn.innerText = labels[score-1];
-            btn.onclick = () => handleAnswer(score);
+            btn.onclick = () => {
+                // 역채점 로직 적용
+                const finalScore = q.direction === "-" ? 6 - score : score;
+                state.answers.push({ trait: q.trait, score: finalScore });
+                
+                if (++state.currentIndex < state.questions.length) render();
+                else showResult();
+            };
             ui.optionsGroup.appendChild(btn);
         });
-
         ui.progressFill.style.width = `${(state.currentIndex / state.questions.length) * 100}%`;
     };
 
-    const handleAnswer = (score) => {
-        state.answers.push({ trait: state.questions[state.currentIndex].trait, score });
-        if (++state.currentIndex < state.questions.length) {
-            render();
-        } else {
-            showResult();
-        }
-    };
-
-    // 3. 결과 출력 (수익화 대기 시간 포함)
     const showResult = () => {
-        const loadingMsg = state.lang === 'ko' ? "분석 중..." : "Analyzing...";
-        ui.mainContent.innerHTML = `<h3>${loadingMsg}</h3>`;
+        ui.mainContent.innerHTML = `<h3>${state.lang === 'ko' ? '심리 프로파일 생성 중...' : 'Generating Profile...'}</h3>`;
         
         setTimeout(() => {
-            const title = state.lang === 'ko' ? "분석 결과" : "Analysis Result";
-            const exitTxt = state.lang === 'ko' ? "데이터 파기 및 종료" : "Purge Data & Exit";
+            // 1. 특성별 점수 합산
+            const scores = state.answers.reduce((acc, curr) => {
+                acc[curr.trait] = (acc[curr.trait] || 0) + curr.score;
+                return acc;
+            }, {});
+
+            // 2. 결과 리포트 생성
+            let reportHtml = `<div class="result-card"><h2>${state.lang === 'ko' ? '당신의 인사이트 리포트' : 'Your Insight Report'}</h2>`;
             
-            ui.mainContent.innerHTML = `
-                <div class="result-card">
-                    <h4>${title}</h4>
-                    <ul>${state.answers.map(a => `<li>${a.trait}: ${a.score}</li>`).join('')}</ul>
-                    <button class="exit-btn" onclick="location.reload()">${exitTxt}</button>
-                </div>`;
-        }, 2500);
+            for (const [trait, score] of Object.entries(scores)) {
+                const traitName = traitsInfo[state.lang][trait];
+                const percentage = (score / (state.answers.filter(a => a.trait === trait).length * 5)) * 100;
+                
+                reportHtml += `
+                    <div class="trait-row">
+                        <strong>${traitName}</strong>
+                        <div class="bar-bg"><div class="bar-fill" style="width: ${percentage}%"></div></div>
+                        <span>${Math.round(percentage)}%</span>
+                    </div>`;
+            }
+
+            reportHtml += `<button class="exit-btn" onclick="location.reload()">${state.lang === 'ko' ? '안전하게 종료' : 'Secure Exit'}</button></div>`;
+            ui.mainContent.innerHTML = reportHtml;
+        }, 3000);
     };
 
     return { init };
 })();
-
-// 엔진 가동
 GIPPP_ENGINE.init();
