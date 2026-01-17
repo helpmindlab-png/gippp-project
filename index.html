@@ -3,42 +3,80 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Insight Profiler | GIPPP</title>
+    
+    <!-- [SEO] 기본 메타 데이터 -->
+    <title>Insight Profiler | Global Psychology Project</title>
+    <meta name="description" content="Discover your inner self with GIPPP. Professional psychological analysis based on global IPIP datasets. No data stored, 100% secure.">
+    <meta name="keywords" content="Personality Test, Big Five, IPIP, Psychology, GIPPP, Insight">
+
+    <!-- [SNS] OpenGraph & Twitter Cards -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://your-username.github.io/gippp-project/">
+    <meta property="og:title" content="Insight Profiler: Who are you really?">
+    <meta property="og:description" content="Get professional psychological insights in 3 minutes. Your data is never stored.">
+    <meta property="og:image" content="https://your-username.github.io/gippp-project/assets/og-image.png">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- [SEO] 구조화 데이터 (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Insight Profiler",
+      "operatingSystem": "Any",
+      "applicationCategory": "PsychologyApplication",
+      "description": "Professional-grade personality analysis tool with zero-data persistence.",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+    }
+    </script>
+
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div id="app">
         <header>
+            <!-- [UX] 언어 선택 스위치 (ISO 알파벳 순 정렬) -->
             <div class="lang-selector">
                 <select id="lang-select" onchange="GIPPP_ENGINE.changeLanguage(this.value)">
-    <option value="ar">العربية (Arabic)</option> <!-- 알파벳 순서상 상단 배치 가능 -->
-    <option value="de">Deutsch</option>
-    <option value="en">English</option>
-    <option value="es">Español</option>
-    <option value="ja">日本語</option>
-    <option value="ko">한국어</option>
-    <option value="pt">Português</option>
-    <option value="ru">Русский</option>
-    <option value="vi">Tiếng Việt</option>
-    <option value="zh">中文</option>
-</select>
+                    <option value="ar">العربية (Arabic)</option>
+                    <option value="de">Deutsch</option>
+                    <option value="en">English</option>
+                    <option value="es">Español</option>
+                    <option value="ja">日本語</option>
+                    <option value="ko">한국어</option>
+                    <option value="pt">Português</option>
+                    <option value="ru">Русский</option>
+                    <option value="vi">Tiếng Việt</option>
+                    <option value="zh">中文</option>
+                </select>
             </div>
+
             <h1 id="brand">GIPPP</h1>
             <p id="brand-desc"></p>
-            <div id="progress-bar"><div id="progress-fill"></div></div>
+            
+            <!-- [UI] 프로그래스 바 -->
+            <div id="progress-bar">
+                <div id="progress-fill"></div>
+            </div>
         </header>
 
         <main id="main-content">
+            <!-- [UI] 질문 영역 (고정 높이로 버튼 밀림 방지) -->
             <div id="question-container">
-                <div id="question-text"></div>
+                <div id="question-text">Initializing Engine...</div>
             </div>
+            
+            <!-- [UI] 선택 버튼 영역 -->
             <div id="options-group"></div>
         </main>
 
         <footer>
+            <!-- [Security] 보안 안내 문구 -->
             <p id="security-note" class="security-note"></p>
         </footer>
     </div>
+
+    <!-- [Core] 핵심 엔진 로드 -->
     <script src="engine.js"></script>
 </body>
 </html>
