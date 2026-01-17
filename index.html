@@ -3,16 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Insight Profiler | Global Psychology Project</title>
-    <meta name="description" content="Professional personality analysis based on IPIP. No data stored.">
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="Insight Profiler: Who are you?">
+    <title>Insight Profiler | GIPPP</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div id="app">
         <header>
-            <!-- 언어 전환 스위치 -->
             <div class="lang-selector">
                 <select id="lang-select" onchange="GIPPP_ENGINE.changeLanguage(this.value)">
                     <option value="ko">한국어</option>
@@ -29,9 +25,9 @@
 
         <main id="main-content">
             <div id="question-container">
-                <p id="question-text">Initializing...</p>
-                <div id="options-group"></div>
+                <div id="question-text"></div>
             </div>
+            <div id="options-group"></div>
         </main>
 
         <footer>
