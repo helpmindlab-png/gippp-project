@@ -1,6 +1,7 @@
 /**
- * [GIPPP] Global Insight Profiler Project - Core Engine v2.4
- * Focus: Amazon Affiliate Slot, Trait-Based Recommendation, UI Stability
+ * [GIPPP] Global Insight Profiler Project - Core Engine v2.5
+ * Fixes: Korean Logic, Ad-Slot Restoration, UI Stability
+ * Features: Amazon Recommendation, QR Offloading, Full Localization
  */
 
 const GIPPP_ENGINE = (() => {
@@ -16,7 +17,7 @@ const GIPPP_ENGINE = (() => {
     const uiStrings = {
         ko: {
             desc: "글로벌 인사이트 프로파일러 프로젝트",
-            security: "🔒 보안 안내: 본 시스템은 데이터를 저장하지 않습니다.",
+            security: "🔒 보안 안내: 본 시스템은 데이터를 저장하지 않습니다. QR코드나 이미지를 통해 결과를 소장하세요.",
             loading: "데이터 엔진 로딩 중...",
             processing: "정밀 프로파일 분석 중...",
             wait: "데이터셋 대조를 위해 잠시만 기다려 주세요.",
@@ -30,7 +31,7 @@ const GIPPP_ENGINE = (() => {
         },
         en: {
             desc: "Global Insight Profiler Project",
-            security: "🔒 Security: No data stored on server.",
+            security: "🔒 Security: No data stored on server. Save results via QR or Image.",
             loading: "Loading data engine...",
             processing: "Generating Deep Profile...",
             wait: "Comparing with global datasets...",
@@ -44,7 +45,6 @@ const GIPPP_ENGINE = (() => {
         }
     };
 
-    // 성격 특성별 추천 상품 키워드 매핑
     const amazonProducts = {
         E: { ko: "사교성을 높여주는 파티 게임", en: "Party Games for Socializing", keyword: "party games" },
         A: { ko: "마음을 전하는 따뜻한 선물 세트", en: "Thoughtful Gift Sets", keyword: "gift sets" },
@@ -92,7 +92,7 @@ const GIPPP_ENGINE = (() => {
         const q = state.questions[state.currentIndex];
         ui.questionText.innerHTML = `
             <div style="font-size: 1rem; color: #3498db; margin-bottom: 10px;">Question ${state.currentIndex + 1} / ${state.questions.length}</div>
-            <div>${q.text}</div>
+            <div style="min-height: 80px; display: flex; align-items: center; justify-content: center;">${q.text}</div>
         `;
         ui.optionsGroup.innerHTML = '';
         const labels = state.lang === 'ko' ? ["전혀 아니다", "아니다", "보통이다", "그렇다", "매우 그렇다"] : ["Strongly Disagree", "Disagree", "Neutral", "Agree", "Strongly Agree"];
@@ -114,11 +114,20 @@ const GIPPP_ENGINE = (() => {
 
     const showProcessing = () => {
         const strings = uiStrings[state.lang];
-        ui.mainContent.innerHTML = `<div style="padding: 40px 0;"><div class="spinner"></div><h3 style="font-size: 1.5rem;">${strings.processing}</h3><p style="color: #666;">${strings.wait}</p></div>`;
+        ui.mainContent.innerHTML = `
+            <div style="padding: 40px 0;">
+                <div class="spinner"></div>
+                <h3 style="font-size: 1.5rem;">${strings.processing}</h3>
+                <p style="color: #666;">${strings.wait}</p>
+                <!-- AD SLOT: 전면 광고 자리 -->
+                <div id="ad-processing" style="margin-top:30px; min-height:200px; background:#f9f9f9; border:1px dashed #ccc; display:flex; align-items:center; justify-content:center;">
+                    <p style="font-size:0.8rem; color:#999;">ADVERTISEMENT (Full Screen)</p>
+                </div>
+            </div>`;
         setTimeout(() => {
             state.results = calculateScores();
             renderFinalReport();
-        }, 3000);
+        }, 4000);
     };
 
     const calculateScores = () => {
@@ -136,18 +145,20 @@ const GIPPP_ENGINE = (() => {
         const shareUrl = `${window.location.origin}${window.location.pathname}?lang=${state.lang}&res=${resCode}`;
         const qrImgUrl = `https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=${encodeURIComponent(shareUrl)}`;
 
-        // 가장 높은 점수의 특성 찾기 (추천용)
-        let maxTrait = 'O';
-        let maxScore = -1;
+        let maxTrait = 'O'; let maxScore = -1;
         const traitPercentages = {};
-
         for (const [trait, data] of Object.entries(state.results)) {
             const p = data.count === 20 ? data.total : Math.round((data.total / (data.count * 5)) * 100);
             traitPercentages[trait] = p;
             if (p > maxScore) { maxScore = p; maxTrait = trait; }
         }
 
-        let reportHtml = `<div class="result-card" style="text-align:left;"><h2 style="text-align:center; color:#2c3e50; border-bottom:4px solid #3498db; padding-bottom:15px; font-size:1.8rem;">${strings.reportTitle}</h2>`;
+        let reportHtml = `
+            <div class="result-card" style="text-align:left;">
+                <h2 style="text-align:center; color:#2c3e50; border-bottom:4px solid #3498db; padding-bottom:15px; font-size:1.8rem;">${strings.reportTitle}</h2>
+                <!-- AD SLOT: 결과 상단 광고 -->
+                <div id="ad-result-top" style="margin:15px 0; min-height:60px; background:#f9f9f9; text-align:center; border:1px dashed #eee; font-size:0.7rem; color:#ccc;">AD SLOT (TOP)</div>
+        `;
 
         for (const [trait, p] of Object.entries(traitPercentages)) {
             const traitName = strings.traits[trait];
@@ -160,23 +171,22 @@ const GIPPP_ENGINE = (() => {
                 </div>`;
         }
 
-        // [수익화] 아마존 추천 슬롯
         const product = amazonProducts[maxTrait];
         reportHtml += `
             <div style="margin: 30px 0; padding: 20px; background: #fff9e6; border-radius: 20px; border: 2px solid #ffcc00; text-align:center;">
                 <h4 style="margin:0 0 10px 0; color:#e67e22;">${strings.recommendTitle}</h4>
                 <p style="font-size:1.1rem; font-weight:bold; margin-bottom:15px;">${product[state.lang]}</p>
                 <a href="https://www.amazon.com/s?k=${encodeURIComponent(product.keyword)}" target="_blank" style="display:inline-block; padding:12px 25px; background:#ff9900; color:white; text-decoration:none; border-radius:10px; font-weight:bold;">${strings.viewAmazon}</a>
-            </div>`;
-
-        reportHtml += `
-                <div style="text-align:center; margin: 30px 0; padding: 20px; background: #f0f7ff; border-radius: 20px; border: 2px solid #d0e3ff;">
-                    <p style="font-size: 1rem; color: #0056b3; margin-bottom: 15px; font-weight:bold;">${strings.qrNote}</p>
-                    <img id="qrImage" src="${qrImgUrl}" crossorigin="anonymous" alt="QR Code" style="border: 8px solid white; width:150px; height:150px;">
-                </div>
-                <button onclick="GIPPP_ENGINE.generateImage()" style="width:100%; padding:20px; background:#3498db; color:white; border:none; border-radius:15px; font-size:1.3rem; cursor:pointer; margin-bottom:15px; font-weight:bold;">${strings.saveImg}</button>
-                <button onclick="location.href=window.location.pathname" style="width:100%; padding:15px; background:#f8f9fa; color:#7f8c8d; border:1px solid #ddd; border-radius:15px; font-size:1.1rem; cursor:pointer;">${strings.retest}</button>
-            </div><canvas id="resultCanvas" style="display:none;"></canvas>`;
+            </div>
+            <!-- AD SLOT: 결과 하단 광고 -->
+            <div id="ad-result-bottom" style="margin:20px 0; min-height:100px; background:#f9f9f9; text-align:center; border:1px dashed #eee; font-size:0.7rem; color:#ccc;">AD SLOT (BOTTOM)</div>
+            <div style="text-align:center; margin: 30px 0; padding: 20px; background: #f0f7ff; border-radius: 20px; border: 2px solid #d0e3ff;">
+                <p style="font-size: 1rem; color: #0056b3; margin-bottom: 15px; font-weight:bold;">${strings.qrNote}</p>
+                <img id="qrImage" src="${qrImgUrl}" crossorigin="anonymous" alt="QR Code" style="border: 8px solid white; width:150px; height:150px;">
+            </div>
+            <button onclick="GIPPP_ENGINE.generateImage()" style="width:100%; padding:20px; background:#3498db; color:white; border:none; border-radius:15px; font-size:1.3rem; cursor:pointer; margin-bottom:15px; font-weight:bold;">${strings.saveImg}</button>
+            <button onclick="location.href=window.location.pathname" style="width:100%; padding:15px; background:#f8f9fa; color:#7f8c8d; border:1px solid #ddd; border-radius:15px; font-size:1.1rem; cursor:pointer;">${strings.retest}</button>
+        </div><canvas id="resultCanvas" style="display:none;"></canvas>`;
 
         ui.mainContent.innerHTML = reportHtml;
         window.scrollTo(0, 0);
