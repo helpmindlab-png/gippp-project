@@ -1,0 +1,30 @@
+{
+  "items": [
+    { "id": 1, "trait": "L", "direction": "+", "text": "Was in meinem Leben passiert, hängt hauptsächlich von meinen eigenen Anstrengungen ab." },
+    { "id": 2, "trait": "L", "direction": "-", "text": "Ich glaube, dass Erfolg im Leben zu einem großen Teil eine Frage des Glücks ist." },
+    { "id": 3, "trait": "L", "direction": "+", "text": "Ich habe die Fähigkeit, Situationen so zu verändern, dass ich bekomme, was ich will." },
+    { "id": 4, "trait": "L", "direction": "-", "text": "Die Welt ist so komplex, dass es scheint, als ob mein Handeln keinen großen Unterschied macht." },
+    { "id": 5, "trait": "L", "direction": "+", "text": "Wenn ein Problem auftritt, fühle ich mich dafür verantwortlich, es zu lösen." },
+    { "id": 6, "trait": "L", "direction": "-", "text": "Manchmal habe ich das Gefühl, dass das Ergebnis bereits feststeht, egal wie sehr ich mich anstrenge." },
+    { "id": 7, "trait": "L", "direction": "+", "text": "Ich glaube, dass ich meine Zukunft selbst entwerfen und gestalten kann." },
+    { "id": 8, "trait": "L", "direction": "-", "text": "Schlechte Dinge, die mir passieren, sind meist auf Pech zurückzuführen, das ich nicht kontrollieren kann." },
+    { "id": 9, "trait": "L", "direction": "+", "text": "Jeder kann seine Ziele erreichen, wenn er hart genug arbeitet." },
+    { "id": 10, "trait": "L", "direction": "-", "text": "Wenn ich erfolgreiche Menschen sehe, scheint es eher an guten Gelegenheiten als an Talent zu liegen." },
+    { "id": 11, "trait": "L", "direction": "+", "text": "Ich bin es gewohnt, meine eigenen Emotionen und Handlungen selbst zu kontrollieren." },
+    { "id": 12, "trait": "L", "direction": "-", "text": "Es fällt mir schwer, wichtige Entscheidungen ohne die Hilfe anderer zu treffen." },
+    { "id": 13, "trait": "L", "direction": "+", "text": "Selbst wenn ich scheitere, suche ich selbst nach dem, was ich korrigieren muss." },
+    { "id": 14, "trait": "L", "direction": "-", "text": "Angesichts großer Strömungen wie Politik oder Wirtschaft erscheint die Anstrengung des Einzelnen sinnlos." },
+    { "id": 15, "trait": "L", "direction": "+", "text": "Ich bin davon überzeugt, dass ich der Herr meines eigenen Lebens bin." },
+    { "id": 16, "trait": "L", "direction": "-", "text": "Es ist beruhigender, das Leben fließen zu lassen, als alles zu planen." },
+    { "id": 17, "trait": "L", "direction": "+", "text": "Selbst in schwierigen Situationen finde ich etwas, das ich tun kann, und setze es um." },
+    { "id": 18, "trait": "L", "direction": "-", "text": "Manchmal habe ich das Gefühl, dass mein Leben von anderen Kräften als mir selbst gelenkt wird." },
+    { "id": 19, "trait": "L", "direction": "+", "text": "Ich akzeptiere die Tatsache, dass meine Entscheidungen meine Zukunft bestimmen, positiv." },
+    { "id": 20, "trait": "L", "direction": "-", "text": "Manchmal habe ich das Gefühl, dass die Welt nicht gerecht ist und Anstrengung ihre Grenzen hat." }
+  ],
+  "descriptions": {
+    "L": {
+      "high": "Sie haben eine starke Tendenz zur 'internalen Kontrollüberzeugung'. Sie sind ein proaktiver Typ, der glaubt, sein Leben selbst in die Hand nehmen und Ergebnisse durch Anstrengung verändern zu können.",
+      "low": "Sie haben eine starke Tendenz zur 'externalen Kontrollüberzeugung'. Sie respektieren das Umfeld und den Lauf des Glücks und finden Seelenfrieden, indem Sie sich an Situationen anpassen."
+    }
+  }
+}
