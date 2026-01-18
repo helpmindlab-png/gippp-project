@@ -1,11 +1,10 @@
 const GIPPP_ENGINE = (() => {
-    // 5대 원칙: 모든 데이터는 휘발성 메모리에서만 처리
     let state = { 
         testId: null, lang: 'en', currentIndex: 0, answers: [], 
         questions: [], descriptions: {}, traitNames: {}, ui: {}, results: null 
     };
 
-    // 테스트 카테고리 정의
+    // 테스트 기본 정보 (제목은 JSON에서 동적으로 가져옴)
     const testList = [
         { id: 'ocean', emoji: '🧬', tag: 'BEST', color: 'premium' },
         { id: 'dark', emoji: '🎭', tag: 'HOT', color: 'dark-mode' },
@@ -24,7 +23,8 @@ const GIPPP_ENGINE = (() => {
         langSelect: document.getElementById('lang-select'),
         brandDesc: document.getElementById('brand-desc'),
         securityNote: document.getElementById('security-note'),
-        midAd: document.getElementById('mid-ad')
+        midAd: document.getElementById('mid-ad'),
+        header: document.getElementById('main-header')
     };
 
     const init = async () => {
@@ -32,19 +32,19 @@ const GIPPP_ENGINE = (() => {
         state.testId = urlParams.get('test');
         state.lang = urlParams.get('lang') || navigator.language.substring(0, 2);
         
-        // 지원 언어 목록
         const langs = ['ko', 'en', 'ja', 'ar', 'es', 'zh', 'de', 'pt', 'ru', 'vi'];
         if (!langs.includes(state.lang)) state.lang = 'en';
 
         ui.langSelect.innerHTML = langs.map(l => `<option value="${l}" ${state.lang === l ? 'selected' : ''}>${l.toUpperCase()}</option>`).join('');
         document.documentElement.dir = (state.lang === 'ar') ? 'rtl' : 'ltr';
 
+        // [글로벌 배려] 대문을 그리기 전, 해당 언어의 UI 데이터를 먼저 로드함
+        await loadData();
+
         const resData = urlParams.get('res');
         if (resData) {
-            await loadData();
             decodeAndShowResult(resData);
         } else if (state.testId) {
-            await loadData();
             startTest();
         } else {
             renderWelcome();
@@ -53,50 +53,64 @@ const GIPPP_ENGINE = (() => {
 
     const loadData = async () => {
         try {
-            const r = await fetch(`./data/${state.testId || 'ocean'}/${state.lang}.json`);
+            // 대문일 때는 기본적으로 ocean의 언어 파일을 참조하여 UI 문구를 가져옴
+            const targetTest = state.testId || 'ocean';
+            const r = await fetch(`./data/${targetTest}/${state.lang}.json`);
+            if (!r.ok) throw new Error("JSON Load Failed");
             const d = await r.json();
             state.ui = d.ui;
-            state.questions = d.items;
-            state.descriptions = d.descriptions;
-            state.traitNames = d.traitNames;
+            state.questions = d.items || [];
+            state.descriptions = d.descriptions || {};
+            state.traitNames = d.traitNames || {};
             
-            ui.brandDesc.innerText = state.ui.desc;
-            ui.securityNote.innerText = state.ui.security;
+            ui.brandDesc.innerText = state.ui.desc || "Global Insight Profiler";
+            ui.securityNote.innerText = state.ui.security || "🔒 Secure & Anonymous";
         } catch (e) { 
-            console.error("Data Load Error");
-            // 기본 UI 문구 폴백 (데이터 로드 실패 시)
-            state.ui = { processing: "Analyzing...", reportTitle: "Insight Report", labels: ["N/A"] };
+            console.error("Data Load Error:", e);
+            // 로드 실패 시 최소한의 영어 UI 제공
+            state.ui = { 
+                desc: "Sensible Profiling", security: "🔒 No Data Stored",
+                processing: "Analyzing...", reportTitle: "Report",
+                testNames: { ocean: "Big Five", dark: "Villain Finder", loc: "Success Mindset", resilience: "Resilience", trust: "Social Trust" },
+                labels: ["Disagree", "No", "Neutral", "Yes", "Agree"]
+            };
         }
     };
 
     const renderWelcome = () => {
         ui.welcomeView.style.display = 'block';
+        ui.header.style.display = 'block';
         ui.testView.style.display = 'none';
+        
+        // [글로벌 배려] JSON에서 가져온 언어별 테스트 명칭(testNames)을 적용
         ui.testGrid.innerHTML = testList.map(t => `
             <div class="test-card ${t.color}" onclick="GIPPP_ENGINE.changeTest('${t.id}')">
                 ${t.tag ? `<div class="card-tag">${t.tag}</div>` : ''}
                 <span class="emoji">${t.emoji}</span>
-                <h3>${t.id.toUpperCase()}</h3>
-                <p>Global Profiling</p>
+                <h3>${state.ui.testNames[t.id] || t.id.toUpperCase()}</h3>
+                <p>${t.id.toUpperCase()} Profiling</p>
             </div>
         `).join('');
     };
 
     const startTest = () => {
         ui.welcomeView.style.display = 'none';
+        ui.header.style.display = 'none';
         ui.testView.style.display = 'block';
         renderQuestion();
     };
 
     const renderQuestion = () => {
+        if (!state.questions.length) return;
         const q = state.questions[state.currentIndex];
         ui.questionContainer.innerHTML = `<div class="q-text">${q.text}</div>`;
         ui.optionsGroup.innerHTML = '';
         
+        const labels = state.ui.labels;
         [1, 2, 3, 4, 5].forEach(score => {
             const btn = document.createElement('button');
             btn.className = 'opt-btn';
-            btn.innerText = state.ui.labels[score - 1];
+            btn.innerText = labels[score - 1];
             btn.onclick = () => {
                 state.answers.push({ trait: q.trait, score: q.direction === "-" ? 6 - score : score });
                 if (++state.currentIndex < state.questions.length) renderQuestion();
@@ -120,15 +134,6 @@ const GIPPP_ENGINE = (() => {
             acc[curr.trait].total += curr.score; acc[curr.trait].count += 1;
             return acc;
         }, {});
-        
-        // GA4 익명 데이터 전송
-        if (window.gtag) {
-            gtag('event', 'test_complete', {
-                'test_id': state.testId,
-                'lang': state.lang,
-                'res': Object.entries(state.results).map(([t, d]) => t + Math.round((d.total/(d.count*5))*100)).join('')
-            });
-        }
         renderFinalReport();
     };
 
@@ -143,16 +148,16 @@ const GIPPP_ENGINE = (() => {
         for (const [trait, data] of Object.entries(state.results)) {
             const p = Math.round((data.total / (data.count * 5)) * 100);
             if (p > maxScore) { maxScore = p; maxTrait = trait; }
+            const traitName = state.traitNames[trait] || trait;
             const desc = p >= 50 ? state.descriptions[trait].high : state.descriptions[trait].low;
             reportHtml += `
                 <div class="trait-row">
-                    <div class="trait-info"><strong>${state.traitNames[trait]}</strong> <span>${p}%</span></div>
+                    <div class="trait-info"><strong>${traitName}</strong> <span>${p}%</span></div>
                     <div class="bar-bg"><div class="bar-fill" style="width:${p}%"></div></div>
                     <p class="trait-desc">${desc}</p>
                 </div>`;
         }
 
-        // 아마존 어필리에이트 (JSON 내 키워드 활용)
         const amazonLink = `https://www.amazon.com/s?k=${state.ui.amazonKeywords[maxTrait] || 'psychology'}&tag=YOUR_TAG`;
 
         reportHtml += `
@@ -177,24 +182,16 @@ const GIPPP_ENGINE = (() => {
         const traits = Object.entries(state.results);
         
         canvas.width = 600; canvas.height = 850;
-
-        // 배경 (전문가용 다크 테마)
         ctx.fillStyle = '#0f172a'; ctx.fillRect(0, 0, 600, 850);
         ctx.fillStyle = '#1e293b'; ctx.fillRect(0, 0, 600, 160);
-        
-        // 헤더 라인
         ctx.strokeStyle = '#38bdf8'; ctx.lineWidth = 4;
         ctx.beginPath(); ctx.moveTo(0, 160); ctx.lineTo(600, 160); ctx.stroke();
-
-        // 타이틀
         ctx.fillStyle = '#ffffff'; ctx.font = 'bold 36px sans-serif'; ctx.textAlign = 'center';
         ctx.fillText(state.ui.reportTitle.toUpperCase(), 300, 75);
-        
         const sessionID = Math.random().toString(36).substring(2, 10).toUpperCase();
         ctx.fillStyle = '#38bdf8'; ctx.font = '14px monospace';
         ctx.fillText(`PROFILER ID: ${sessionID} // SECURE_SESSION_ACTIVE`, 300, 115);
 
-        // 지표 렌더링
         let y = 240;
         traits.forEach(([t, d]) => {
             const p = Math.round((d.total / (d.count * 5)) * 100);
@@ -216,7 +213,6 @@ const GIPPP_ENGINE = (() => {
             y += 95;
         });
 
-        // 푸터
         ctx.fillStyle = '#1e293b'; ctx.fillRect(0, 650, 600, 200);
         if (qrImg && qrImg.complete) {
             ctx.fillStyle = '#ffffff'; ctx.fillRect(50, 680, 140, 140);
