@@ -1,4 +1,26 @@
 {
+  "ui": {
+    "desc": "Der sensibelste Weg, Ihr inneres Selbst zu verstehen",
+    "security": "🔒 Sicherheit: Keine Datenspeicherung",
+    "testNames": {
+      "ocean": "Mein wahres Ich (Big Five)",
+      "dark": "Bösewicht-Finder",
+      "loc": "Erfolgs-Mindset",
+      "resilience": "Resilienz-Test",
+      "trust": "Beziehungs-Thermometer"
+    },
+    "processing": "Verhaltensmuster werden analysiert...",
+    "reportTitle": "Bösewicht-Profiling-Bericht",
+    "recommendTitle": "💡 Empfehlung für Sie",
+    "viewAmazon": "Empfohlene Produkte ansehen",
+    "saveImg": "📸 Bericht als Bild speichern",
+    "retest": "Test wiederholen",
+    "qrNote": "Scannen zum Speichern",
+    "viralTitle": "Neugierig auf Ihre Analyse?",
+    "viralSub": "QR-Code scannen, um zu starten",
+    "labels": ["Stimme gar nicht zu", "Stimme nicht zu", "Neutral", "Stimme zu", "Stimme voll zu"],
+    "amazonKeywords": { "N": "leadership books", "M": "strategy games", "P": "psychology books" }
+  },
   "traitNames": { "R": "Resilienz", "E": "Emotionsregulation" },
   "items": [
     { "id": 1, "trait": "R", "direction": "+", "text": "Nach Rückschlägen oder schwierigen Phasen finde ich meist schnell mein Gleichgewicht wieder." },
