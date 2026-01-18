@@ -1,4 +1,5 @@
 {
+  "traitNames": {"E": "Extroversão", "A": "Amabilidade", "C": "Conscienciosidade", "N": "Neuroticismo", "O": "Abertura"},
   "items": [
     { "id": 1, "trait": "E", "direction": "+", "text": "Costumo ser o centro das atenções em reuniões sociais e gosto de liderar conversas." },
     { "id": 2, "trait": "A", "direction": "+", "text": "Esforço-me para compreender e simpatizar com os sentimentos dos outros." },
