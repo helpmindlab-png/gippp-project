@@ -1,0 +1,30 @@
+{
+  "items": [
+    { "id": 1, "trait": "L", "direction": "+", "text": "Lo que me sucede en la vida depende principalmente de mis propios esfuerzos." },
+    { "id": 2, "trait": "L", "direction": "-", "text": "Creo que tener éxito en la vida es, en gran medida, una cuestión de suerte." },
+    { "id": 3, "trait": "L", "direction": "+", "text": "Tengo la capacidad de cambiar las situaciones para obtener lo que deseo." },
+    { "id": 4, "trait": "L", "direction": "-", "text": "El mundo es tan complejo que parece que lo que yo haga no marca una gran diferencia." },
+    { "id": 5, "trait": "L", "direction": "+", "text": "Cuando surge un problema, siento que es mi responsabilidad resolverlo." },
+    { "id": 6, "trait": "L", "direction": "-", "text": "A veces siento que, por mucho que me esfuerce, el resultado ya está decidido." },
+    { "id": 7, "trait": "L", "direction": "+", "text": "Creo que puedo diseñar y construir mi propio futuro." },
+    { "id": 8, "trait": "L", "direction": "-", "text": "Las cosas malas que me pasan suelen deberse a la mala suerte fuera de mi control." },
+    { "id": 9, "trait": "L", "direction": "+", "text": "Cualquiera puede alcanzar sus metas si se esfuerza lo suficiente." },
+    { "id": 10, "trait": "L", "direction": "-", "text": "Cuando veo a personas exitosas, parece que tuvieron buenas oportunidades más que talento." },
+    { "id": 11, "trait": "L", "direction": "+", "text": "Estoy acostumbrado a controlar mis propias emociones y acciones." },
+    { "id": 12, "trait": "L", "direction": "-", "text": "Me resulta difícil tomar decisiones importantes sin la ayuda de los demás." },
+    { "id": 13, "trait": "L", "direction": "+", "text": "Incluso si fracaso, busco por mí mismo qué debo corregir." },
+    { "id": 14, "trait": "L", "direction": "-", "text": "Frente a grandes corrientes como la política o la economía, el esfuerzo individual parece inútil." },
+    { "id": 15, "trait": "L", "direction": "+", "text": "Estoy convencido de que soy el dueño de mi propia vida." },
+    { "id": 16, "trait": "L", "direction": "-", "text": "Me siento más tranquilo dejando que la vida fluya en lugar de planificarlo todo." },
+    { "id": 17, "trait": "L", "direction": "+", "text": "Incluso en situaciones difíciles, encuentro algo que puedo hacer y lo ejecuto." },
+    { "id": 18, "trait": "L", "direction": "-", "text": "A veces siento que mi vida es dirigida por fuerzas ajenas a mí." },
+    { "id": 19, "trait": "L", "direction": "+", "text": "Acepto positivamente el hecho de que mis elecciones determinan mi futuro." },
+    { "id": 20, "trait": "L", "direction": "-", "text": "A veces siento que el mundo no es justo y que el esfuerzo tiene sus límites." }
+  ],
+  "descriptions": {
+    "L": {
+      "high": "Tienes una fuerte tendencia al 'Control Interno'. Eres del tipo proactivo que cree que puedes abrirte camino en la vida y cambiar los resultados mediante el esfuerzo.",
+      "low": "Tienes una fuerte tendencia al 'Control Externo'. Respetas el entorno y el flujo de la suerte, y eres del tipo que encuentra la paz mental adaptándose a las situaciones."
+    }
+  }
+}
