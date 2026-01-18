@@ -1,0 +1,19 @@
+{
+  "traitNames": { "R": "Khả năng phục hồi", "E": "Kiểm soát cảm xúc" },
+  "items": [
+    { "id": 1, "trait": "R", "direction": "+", "text": "Tôi thường lấy lại bình tĩnh và đứng dậy rất nhanh sau những khó khăn." },
+    { "id": 2, "trait": "E", "direction": "+", "text": "Tôi hiểu rõ bản thân đang cảm thấy như thế nào trong mọi tình huống." },
+    { "id": 3, "trait": "R", "direction": "-", "text": "Tôi dễ cảm thấy bối rối và bất lực khi gặp phải những vấn đề bất ngờ." },
+    { "id": 4, "trait": "E", "direction": "+", "text": "Tôi có thể điều tiết cảm xúc của mình một cách hiệu quả ngay cả khi căng thẳng." },
+    { "id": 5, "trait": "R", "direction": "+", "text": "Tôi coi thất bại là cơ hội để học hỏi và thử nghiệm những phương pháp mới." },
+    { "id": 6, "trait": "E", "direction": "-", "text": "Đôi khi tôi để cảm xúc dẫn dắt và nói ra những điều khiến mình hối hận sau đó." },
+    { "id": 7, "trait": "R", "direction": "-", "text": "Khi có chuyện không hay xảy ra, tôi mất rất nhiều thời gian để vượt qua nó." },
+    { "id": 8, "trait": "E", "direction": "+", "text": "Tôi có thể giữ bình tĩnh và sắp xếp thứ tự ưu tiên công việc dưới áp lực cao." },
+    { "id": 9, "trait": "R", "direction": "+", "text": "Tôi tin tưởng vào khả năng của mình và chắc chắn rằng mình sẽ giải quyết được vấn đề." },
+    { "id": 10, "trait": "E", "direction": "-", "text": "Tôi có xu hướng phản ứng quá nhạy cảm với tâm trạng hoặc phản ứng của người xung quanh." }
+  ],
+  "descriptions": {
+    "R": { "high": "Bạn sở hữu một 'tinh thần thép' không dễ dàng bị khuất phục trước thử thách.", "low": "Bạn là người có tâm hồn nhạy cảm, tinh tế và dễ bị tác động bởi môi trường xung quanh." },
+    "E": { "high": "Bạn làm chủ cảm xúc rất tốt, giữ được sự điềm tĩnh ngay cả trong những lúc biến động.", "low": "Bạn là người nhiệt huyết và sống thật với cảm xúc, đôi khi để cảm xúc cuốn đi." }
+  }
+}
