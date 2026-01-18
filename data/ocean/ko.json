@@ -19,11 +19,7 @@
     "viralTitle": "내 안의 빌런이 궁금하다면?",
     "viralSub": "QR코드를 스캔하여 테스트 시작",
     "labels": ["전혀 아니다", "아니다", "보통이다", "그렇다", "매우 그렇다"],
-    "amazonKeywords": { 
-      "N": "leadership books", 
-      "M": "strategy games", 
-      "P": "psychology books" 
-    }
+    "amazonKeywords": { "E": "party games", "A": "gift sets", "C": "planner", "N": "meditation", "O": "art supplies" }
   },
   "traitNames": {"E": "외향성", "A": "친화성", "C": "성실성", "N": "신경증", "O": "개방성"},
   "items": [
