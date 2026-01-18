@@ -1,4 +1,30 @@
 {
+  "ui": {
+    "desc": "The most sensible way to read your inner self",
+    "security": "🔒 Security: No data stored",
+    "testNames": {
+      "ocean": "My True Self (Big Five)",
+      "dark": "Villain Finder",
+      "loc": "Success Mindset",
+      "resilience": "Mental Resilience Test",
+      "trust": "Relationship Thermometer"
+    },
+    "processing": "Analyzing your behavioral patterns...",
+    "reportTitle": "Villain Profiling Report",
+    "recommendTitle": "💡 Recommended for You",
+    "viewAmazon": "View Recommended Products",
+    "saveImg": "📸 Save Report Image",
+    "retest": "Retest",
+    "qrNote": "Scan to save your result",
+    "viralTitle": "Curious about your insight?",
+    "viralSub": "Scan QR code to start the test",
+    "labels": ["Strongly Disagree", "Disagree", "Neutral", "Agree", "Strongly Agree"],
+    "amazonKeywords": { 
+      "N": "leadership books", 
+      "M": "strategy games", 
+      "P": "psychology books" 
+    }
+  },
   "traitNames": { "N": "Narcissism", "M": "Machiavellianism", "P": "Psychopathy" },
   "items": [
     { "id": 1, "trait": "N", "direction": "+", "text": "I tend to want others to admire me and recognize my special status." },
