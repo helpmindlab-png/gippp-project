@@ -1,0 +1,19 @@
+{
+  "traitNames": { "R": "Resiliencia", "E": "Regulación Emocional" },
+  "items": [
+    { "id": 1, "trait": "R", "direction": "+", "text": "Suelo recuperarme rápidamente después de un momento difícil o un contratiempo." },
+    { "id": 2, "trait": "E", "direction": "+", "text": "Tengo una comprensión clara de las emociones que estoy experimentando." },
+    { "id": 3, "trait": "R", "direction": "-", "text": "Me siento abrumado e impotente fácilmente cuando surgen problemas inesperados." },
+    { "id": 4, "trait": "E", "direction": "+", "text": "Puedo manejar mis emociones de manera efectiva incluso en situaciones estresantes." },
+    { "id": 5, "trait": "R", "direction": "+", "text": "Veo los fracasos como oportunidades para aprender y probar nuevos enfoques." },
+    { "id": 6, "trait": "E", "direction": "-", "text": "A veces dejo que mis emociones me dominen y digo cosas de las que me arrepiento." },
+    { "id": 7, "trait": "R", "direction": "-", "text": "Cuando algo malo sucede, me toma mucho tiempo superarlo." },
+    { "id": 8, "trait": "E", "direction": "+", "text": "Puedo mantener la calma y priorizar tareas incluso bajo una gran presión." },
+    { "id": 9, "trait": "R", "direction": "+", "text": "Confío en mi capacidad para resolver finalmente problemas difíciles." },
+    { "id": 10, "trait": "E", "direction": "-", "text": "Tiendo a reaccionar con demasiada fuerza a los estados de ánimo de quienes me rodean." }
+  ],
+  "descriptions": {
+    "R": { "high": "Posees una 'mente de acero' que no se quiebra ante los desafíos.", "low": "Eres una persona sensible y perceptiva que siente profundamente los cambios del entorno." },
+    "E": { "high": "Destacas en el autocontrol, manteniendo la paz interior incluso en tiempos turbulentos.", "low": "Eres apasionado y expresivo, a veces dejándote llevar por las olas de tus emociones." }
+  }
+}
