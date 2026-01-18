@@ -19,7 +19,7 @@
     "viralTitle": "想了解你的内在洞察吗？",
     "viralSub": "扫描二维码开始测试",
     "labels": ["极不同意", "不同意", "中立", "同意", "极同意"],
-    "amazonKeywords": { "N": "leadership books", "M": "strategy games", "P": "psychology books" }
+    "amazonKeywords": { "E": "party games", "A": "gift sets", "C": "planner", "N": "meditation", "O": "art supplies" }
   },
   "traitNames": {"E": "外向性", "A": "宜人性", "C": "尽责性", "N": "情绪稳定性", "O": "开放性"},
   "items": [
