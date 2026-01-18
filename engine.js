@@ -4,14 +4,18 @@ const GIPPP_ENGINE = (() => {
         questions: [], descriptions: {}, traitNames: {}, ui: {}, guide: {}, results: null 
     };
 
-    // [하드닝] 외부 데이터 없이도 작동하는 10개 국어 마스터 사전
+    // [하드닝] 10개 국어 마스터 사전 (JSON 로드 전 대문 즉시 렌더링용)
     const i18n = {
         ko: { desc: "당신을 읽어내는 가장 감각적인 방법", tests: { ocean: "나의 본캐 분석", dark: "내 안의 빌런 찾기", loc: "성공 마인드셋", resilience: "강철 멘탈 테스트", trust: "인간관계 온도계" }, sub: "Professional Analysis" },
         en: { desc: "The most sensible way to read you", tests: { ocean: "True Self (Big 5)", dark: "Villain Finder", loc: "Success Mindset", resilience: "Resilience Test", trust: "Social Trust" }, sub: "Professional Analysis" },
         ja: { desc: "あなたを読み解く最も感性的な方法", tests: { ocean: "本性分析", dark: "隠れたヴィラン", loc: "成功マインド", resilience: "メンタル診断", trust: "人間関係" }, sub: "Professional Analysis" },
         zh: { desc: "解读你最感性的方式", tests: { ocean: "大五人格", dark: "黑暗人格", loc: "成功心态", resilience: "心理韧性", trust: "人际关系" }, sub: "Professional Analysis" },
         es: { desc: "La forma más sensible de leerte", tests: { ocean: "Personalidad", dark: "Villano Interior", loc: "Mentalidad", resilience: "Resiliencia", trust: "Confianza" }, sub: "Professional Analysis" },
-        ar: { desc: "الطريقة الأكثر حساسية لقراءتك", tests: { ocean: "تحليل الشخصية", dark: "البحث عن الشرير", loc: "عقلية النجاح", resilience: "اختبار المرونة", trust: "مقياس العلاقات" }, sub: "Professional Analysis" }
+        ar: { desc: "الطريقة الأكثر حساسية لقراءتك", tests: { ocean: "تحليل الشخصية", dark: "البحث عن الشرير", loc: "عقلية النجاح", resilience: "اختبار المرونة", trust: "مقياس العلاقات" }, sub: "Professional Analysis" },
+        de: { desc: "Der sensibelste Weg, dich zu verstehen", tests: { ocean: "Big Five", dark: "Bösewicht-Finder", loc: "Erfolgs-Mindset", resilience: "Resilienz-Test", trust: "Vertrauen" }, sub: "Professional Analysis" },
+        pt: { desc: "A forma mais sensata de te ler", tests: { ocean: "Personalidade", dark: "Buscador de Vilões", loc: "Mentalidade", resilience: "Resiliência", trust: "Confiança" }, sub: "Professional Analysis" },
+        ru: { desc: "Самый разумный способ понять себя", tests: { ocean: "Личность", dark: "Поиск злодея", loc: "Успех", resilience: "Стойкость", trust: "Доверие" }, sub: "Professional Analysis" },
+        vi: { desc: "Cách nhạy bén nhất để hiểu bạn", tests: { ocean: "Tính cách", dark: "Tìm phản diện", loc: "Thành công", resilience: "Bản lĩnh", trust: "Tin tưởng" }, sub: "Professional Analysis" }
     };
 
     const testList = [
@@ -28,7 +32,8 @@ const GIPPP_ENGINE = (() => {
         progressFill: document.getElementById('progress-fill'),
         langSelect: document.getElementById('lang-select'),
         brandDesc: document.getElementById('brand-desc'),
-        midAd: document.getElementById('mid-ad')
+        midAd: document.getElementById('mid-ad'),
+        header: document.getElementById('main-header')
     };
 
     const init = async () => {
@@ -36,25 +41,27 @@ const GIPPP_ENGINE = (() => {
         state.testId = urlParams.get('test');
         state.lang = urlParams.get('lang') || navigator.language.substring(0, 2);
         
+        // 10개 국어 리스트 확보
         const langs = Object.keys(i18n);
         if (!langs.includes(state.lang)) state.lang = 'en';
 
+        // 언어 선택기 10개 국어 모두 생성
         ui.langSelect.innerHTML = langs.map(l => `<option value="${l}" ${state.lang === l ? 'selected' : ''}>${l.toUpperCase()}</option>`).join('');
         document.documentElement.dir = (state.lang === 'ar') ? 'rtl' : 'ltr';
 
-        // [하드닝] 대문은 내장 데이터로 즉시 렌더링 (지연 없음)
+        // 대문 기본 문구 즉시 설정
         const currentI18n = i18n[state.lang];
         ui.brandDesc.innerText = currentI18n.desc;
 
         const resData = urlParams.get('res');
         if (resData) {
-            await loadData(); // 결과 복원 시에만 데이터 로드
+            await loadData();
             decodeAndShowResult(resData);
         } else if (state.testId) {
-            await loadData(); // 테스트 시작 시에만 데이터 로드
+            await loadData();
             renderGuide(); 
         } else {
-            renderWelcome(); // 대문은 즉시 실행
+            renderWelcome();
         }
     };
 
@@ -77,6 +84,7 @@ const GIPPP_ENGINE = (() => {
 
     const renderWelcome = () => {
         ui.welcomeView.style.display = 'block';
+        ui.header.style.display = 'block';
         ui.testView.style.display = 'none';
         const currentI18n = i18n[state.lang];
         
@@ -91,13 +99,14 @@ const GIPPP_ENGINE = (() => {
 
     const renderGuide = () => {
         ui.welcomeView.style.display = 'none';
+        ui.header.style.display = 'none';
         ui.testView.style.display = 'block';
         ui.questionContainer.innerHTML = `
             <div class="guide-content" style="padding:20px; text-align:center;">
                 <h2 style="font-size:1.8rem; margin-bottom:10px;">${i18n[state.lang].tests[state.testId]}</h2>
                 <p style="color:#666; margin-bottom:25px;">${state.guide.purpose || ''}</p>
                 <div style="background:#f0f7ff; padding:25px; border-radius:20px; text-align:left; margin-bottom:25px;">
-                    <p>✨ ${state.guide.instruction || ''}</p>
+                    <p style="font-size:0.95rem;">✨ ${state.guide.instruction || ''}</p>
                     <p style="font-size:0.85rem; color:#888; border-top:1px solid #d0e0f0; margin-top:15px; padding-top:15px;">💡 ${state.guide.interpretation || ''}</p>
                 </div>
                 <button class="btn-main" style="width:100%; margin:0;" onclick="GIPPP_ENGINE.startTest()">${state.guide.startBtn || 'Start'}</button>
@@ -190,7 +199,7 @@ const GIPPP_ENGINE = (() => {
             else { ctx.textAlign = 'left'; ctx.fillText(state.traitNames[t] || t, 70, y); ctx.textAlign = 'right'; ctx.fillText(`${p}%`, 530, y); }
             ctx.fillStyle = '#f0f0f0'; ctx.fillRect(70, y + 15, 460, 18);
             ctx.fillStyle = '#3498db';
-            if (isRTL) ctx.fillRect(530 - (460 * p / 100), y + 15, (460 * p) / 100, 18);
+            if (isRTL) ctx.fillRect(530 - (460 * p / 100), y + 15, (480 * p) / 100, 18);
             else ctx.fillRect(70, y + 15, (460 * p) / 100, 18);
             y += 110;
         });
