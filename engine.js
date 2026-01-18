@@ -43,7 +43,7 @@ const GIPPP_ENGINE = (() => {
         if (resData) {
             decodeAndShowResult(resData);
         } else if (state.testId) {
-            renderGuide(); // [v5.5] 바로 시작하지 않고 가이드 화면 노출
+            renderGuide(); 
         } else {
             renderWelcome();
         }
@@ -55,7 +55,7 @@ const GIPPP_ENGINE = (() => {
             const r = await fetch(`./data/${targetTest}/${state.lang}.json`);
             const d = await r.json();
             state.ui = d.ui;
-            state.guide = d.guide || {}; // 가이드 데이터 로드
+            state.guide = d.guide || {};
             state.questions = d.items || [];
             state.descriptions = d.descriptions || {};
             state.traitNames = d.traitNames || {};
@@ -79,7 +79,6 @@ const GIPPP_ENGINE = (() => {
         `).join('');
     };
 
-    // [v5.5] 전문가 가이드 화면 렌더링
     const renderGuide = () => {
         ui.welcomeView.style.display = 'none';
         ui.header.style.display = 'none';
@@ -92,7 +91,7 @@ const GIPPP_ENGINE = (() => {
                 <p class="guide-purpose">${state.guide.purpose}</p>
                 <div class="guide-box">
                     <p>${state.guide.instruction}</p>
-                    <p class="guide-interpretation"><strong>해석 가이드:</strong> ${state.guide.interpretation}</p>
+                    <p class="guide-interpretation"><strong>전문가 가이드:</strong> ${state.guide.interpretation}</p>
                 </div>
                 <button class="btn-main" onclick="GIPPP_ENGINE.startTest()">${state.guide.startBtn || 'Start Analysis'}</button>
             </div>
@@ -147,7 +146,12 @@ const GIPPP_ENGINE = (() => {
         const qrImgUrl = `https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=${encodeURIComponent(shareUrl)}`;
         
         let maxTrait = '', maxScore = -1;
-        let reportHtml = `<div class="result-card"><h2>${state.ui.reportTitle}</h2>`;
+        let reportHtml = `
+            <div class="result-card">
+                <div class="ipip-badge">${state.guide.ipipId || 'IPIP-VERIFIED'}</div>
+                <div class="result-header">
+                    <h2>${state.ui.reportTitle}</h2>
+                </div>`;
         
         for (const [trait, data] of Object.entries(state.results)) {
             const p = Math.round((data.total / (data.count * 5)) * 100);
@@ -192,7 +196,7 @@ const GIPPP_ENGINE = (() => {
         ctx.fillText(state.ui.reportTitle.toUpperCase(), 300, 75);
         const sessionID = Math.random().toString(36).substring(2, 10).toUpperCase();
         ctx.fillStyle = '#38bdf8'; ctx.font = '14px monospace';
-        ctx.fillText(`PROFILER ID: ${sessionID} // SECURE_SESSION_ACTIVE`, 300, 115);
+        ctx.fillText(`IPIP ID: ${state.guide.ipipId || 'VERIFIED'} // ID: ${sessionID}`, 300, 115);
 
         let y = 240;
         traits.forEach(([t, d]) => {
