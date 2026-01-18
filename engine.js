@@ -4,6 +4,16 @@ const GIPPP_ENGINE = (() => {
         questions: [], descriptions: {}, traitNames: {}, ui: {}, guide: {}, results: null 
     };
 
+    // [하드닝] 외부 데이터 없이도 작동하는 10개 국어 마스터 사전
+    const i18n = {
+        ko: { desc: "당신을 읽어내는 가장 감각적인 방법", tests: { ocean: "나의 본캐 분석", dark: "내 안의 빌런 찾기", loc: "성공 마인드셋", resilience: "강철 멘탈 테스트", trust: "인간관계 온도계" }, sub: "Professional Analysis" },
+        en: { desc: "The most sensible way to read you", tests: { ocean: "True Self (Big 5)", dark: "Villain Finder", loc: "Success Mindset", resilience: "Resilience Test", trust: "Social Trust" }, sub: "Professional Analysis" },
+        ja: { desc: "あなたを読み解く最も感性的な方法", tests: { ocean: "本性分析", dark: "隠れたヴィラン", loc: "成功マインド", resilience: "メンタル診断", trust: "人間関係" }, sub: "Professional Analysis" },
+        zh: { desc: "解读你最感性的方式", tests: { ocean: "大五人格", dark: "黑暗人格", loc: "成功心态", resilience: "心理韧性", trust: "人际关系" }, sub: "Professional Analysis" },
+        es: { desc: "La forma más sensible de leerte", tests: { ocean: "Personalidad", dark: "Villano Interior", loc: "Mentalidad", resilience: "Resiliencia", trust: "Confianza" }, sub: "Professional Analysis" },
+        ar: { desc: "الطريقة الأكثر حساسية لقراءتك", tests: { ocean: "تحليل الشخصية", dark: "البحث عن الشرير", loc: "عقلية النجاح", resilience: "اختبار المرونة", trust: "مقياس العلاقات" }, sub: "Professional Analysis" }
+    };
+
     const testList = [
         { id: 'ocean', emoji: '🧬' }, { id: 'dark', emoji: '🎭' },
         { id: 'loc', emoji: '💰' }, { id: 'resilience', emoji: '🛡️' }, { id: 'trust', emoji: '🤝' }
@@ -18,8 +28,7 @@ const GIPPP_ENGINE = (() => {
         progressFill: document.getElementById('progress-fill'),
         langSelect: document.getElementById('lang-select'),
         brandDesc: document.getElementById('brand-desc'),
-        midAd: document.getElementById('mid-ad'),
-        header: document.getElementById('main-header')
+        midAd: document.getElementById('mid-ad')
     };
 
     const init = async () => {
@@ -27,21 +36,25 @@ const GIPPP_ENGINE = (() => {
         state.testId = urlParams.get('test');
         state.lang = urlParams.get('lang') || navigator.language.substring(0, 2);
         
-        const langs = ['ko', 'en', 'ja', 'ar', 'es', 'zh', 'de', 'pt', 'ru', 'vi'];
+        const langs = Object.keys(i18n);
         if (!langs.includes(state.lang)) state.lang = 'en';
 
         ui.langSelect.innerHTML = langs.map(l => `<option value="${l}" ${state.lang === l ? 'selected' : ''}>${l.toUpperCase()}</option>`).join('');
         document.documentElement.dir = (state.lang === 'ar') ? 'rtl' : 'ltr';
 
-        await loadData();
+        // [하드닝] 대문은 내장 데이터로 즉시 렌더링 (지연 없음)
+        const currentI18n = i18n[state.lang];
+        ui.brandDesc.innerText = currentI18n.desc;
 
         const resData = urlParams.get('res');
         if (resData) {
+            await loadData(); // 결과 복원 시에만 데이터 로드
             decodeAndShowResult(resData);
         } else if (state.testId) {
+            await loadData(); // 테스트 시작 시에만 데이터 로드
             renderGuide(); 
         } else {
-            renderWelcome();
+            renderWelcome(); // 대문은 즉시 실행
         }
     };
 
@@ -49,39 +62,43 @@ const GIPPP_ENGINE = (() => {
         try {
             const targetTest = state.testId || 'ocean';
             const r = await fetch(`./data/${targetTest}/${state.lang}.json`);
+            if (!r.ok) throw new Error("JSON missing");
             const d = await r.json();
             state.ui = d.ui;
             state.guide = d.guide || {};
             state.questions = d.items || [];
             state.descriptions = d.descriptions || {};
             state.traitNames = d.traitNames || {};
-            ui.brandDesc.innerText = state.ui.desc;
-        } catch (e) { console.error("Data Load Error"); }
+        } catch (e) { 
+            console.error("Data Load Error:", e);
+            state.ui = { processing: "Analyzing...", reportTitle: "Result", labels: ["-", "-", "Neutral", "-", "-"] };
+        }
     };
 
     const renderWelcome = () => {
         ui.welcomeView.style.display = 'block';
-        ui.header.style.display = 'block';
         ui.testView.style.display = 'none';
+        const currentI18n = i18n[state.lang];
+        
         ui.testGrid.innerHTML = testList.map(t => `
             <div class="test-card" onclick="GIPPP_ENGINE.changeTest('${t.id}')">
                 <span class="emoji">${t.emoji}</span>
-                <h3>${state.ui.testNames[t.id] || t.id.toUpperCase()}</h3>
+                <h3>${currentI18n.tests[t.id] || t.id.toUpperCase()}</h3>
+                <p>${currentI18n.sub}</p>
             </div>
         `).join('');
     };
 
     const renderGuide = () => {
         ui.welcomeView.style.display = 'none';
-        ui.header.style.display = 'none';
         ui.testView.style.display = 'block';
         ui.questionContainer.innerHTML = `
             <div class="guide-content" style="padding:20px; text-align:center;">
-                <h2 style="font-size:1.8rem; margin-bottom:10px;">${state.ui.testNames[state.testId]}</h2>
-                <p style="color:#666; margin-bottom:25px;">${state.guide.purpose}</p>
+                <h2 style="font-size:1.8rem; margin-bottom:10px;">${i18n[state.lang].tests[state.testId]}</h2>
+                <p style="color:#666; margin-bottom:25px;">${state.guide.purpose || ''}</p>
                 <div style="background:#f0f7ff; padding:25px; border-radius:20px; text-align:left; margin-bottom:25px;">
-                    <p style="font-size:0.95rem;">✨ ${state.guide.instruction}</p>
-                    <p style="font-size:0.85rem; color:#888; border-top:1px solid #d0e0f0; margin-top:15px; padding-top:15px;">💡 ${state.guide.interpretation}</p>
+                    <p>✨ ${state.guide.instruction || ''}</p>
+                    <p style="font-size:0.85rem; color:#888; border-top:1px solid #d0e0f0; margin-top:15px; padding-top:15px;">💡 ${state.guide.interpretation || ''}</p>
                 </div>
                 <button class="btn-main" style="width:100%; margin:0;" onclick="GIPPP_ENGINE.startTest()">${state.guide.startBtn || 'Start'}</button>
             </div>
@@ -93,12 +110,14 @@ const GIPPP_ENGINE = (() => {
 
     const renderQuestion = () => {
         const q = state.questions[state.currentIndex];
+        if (!q) return;
         ui.questionContainer.innerHTML = `<div class="q-text">${q.text}</div>`;
         ui.optionsGroup.innerHTML = '';
+        const labels = state.ui.labels || ["-", "-", "-", "-", "-"];
         [1, 2, 3, 4, 5].forEach(score => {
             const btn = document.createElement('button');
             btn.className = 'opt-btn';
-            btn.innerText = state.ui.labels[score - 1];
+            btn.innerText = labels[score - 1];
             btn.onclick = () => {
                 state.answers.push({ trait: q.trait, score: q.direction === "-" ? 6 - score : score });
                 if (++state.currentIndex < state.questions.length) renderQuestion();
@@ -131,37 +150,15 @@ const GIPPP_ENGINE = (() => {
         const qrImgUrl = `https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=${encodeURIComponent(shareUrl)}`;
         
         let maxTrait = '', maxScore = -1;
-        let reportHtml = `
-            <div class="result-card">
-                <div class="result-header"><h2>${state.ui.reportTitle}</h2></div>
-                <div class="result-body">`;
+        let reportHtml = `<div class="result-card"><div class="result-header"><h2>${state.ui.reportTitle}</h2></div><div class="result-body">`;
         
         for (const [trait, data] of Object.entries(state.results)) {
             const p = Math.round((data.total / (data.count * 5)) * 100);
             if (p > maxScore) { maxScore = p; maxTrait = trait; }
-            reportHtml += `
-                <div class="trait-row">
-                    <div class="trait-label"><span>${state.traitNames[trait]}</span> <span>${p}%</span></div>
-                    <div class="bar-bg"><div class="bar-fill" style="width:${p}%"></div></div>
-                    <p style="font-size:0.85rem; color:#666; margin-top:8px;">${p >= 50 ? state.descriptions[trait].high : state.descriptions[trait].low}</p>
-                </div>`;
+            reportHtml += `<div class="trait-row"><div class="trait-label"><span>${state.traitNames[trait] || trait}</span> <span>${p}%</span></div><div class="bar-bg"><div class="bar-fill" style="width:${p}%"></div></div><p style="font-size:0.85rem; color:#666; margin-top:8px;">${p >= 50 ? state.descriptions[trait].high : state.descriptions[trait].low}</p></div>`;
         }
 
-        reportHtml += `
-                    <div class="recommend-box">
-                        <h4>${state.ui.recommendTitle}</h4>
-                        <a href="https://www.amazon.com/s?k=${state.ui.amazonKeywords[maxTrait] || 'psychology'}" target="_blank" class="amazon-btn">${state.ui.viewAmazon}</a>
-                    </div>
-                    <div class="qr-section">
-                        <img id="qrImage" src="${qrImgUrl}" crossorigin="anonymous">
-                        <p class="qr-note">${state.ui.qrNote}</p>
-                    </div>
-                </div>
-                <button class="btn-main" onclick="GIPPP_ENGINE.generateImage()">${state.ui.saveImg}</button>
-                <button class="btn-sub" onclick="GIPPP_ENGINE.cleanExit()">${state.ui.retest}</button>
-                <p style="text-align:center; font-size:0.6rem; color:#ccc; padding-bottom:20px; opacity:0.5;">Verified by ${state.guide.ipipId || 'Standard'}</p>
-            </div>
-            <canvas id="resultCanvas" style="display:none;"></canvas>`;
+        reportHtml += `<div class="recommend-box"><h4>${state.ui.recommendTitle}</h4><a href="https://www.amazon.com/s?k=${state.ui.amazonKeywords[maxTrait] || 'psychology'}" target="_blank" class="amazon-btn">${state.ui.viewAmazon}</a></div><div class="qr-section"><img id="qrImage" src="${qrImgUrl}" crossorigin="anonymous"><p style="font-size:0.8rem; color:#999; margin-top:10px;">${state.ui.qrNote}</p></div></div><button class="btn-main" onclick="GIPPP_ENGINE.generateImage()">${state.ui.saveImg}</button><button class="btn-sub" onclick="GIPPP_ENGINE.cleanExit()">${state.ui.retest}</button></div><canvas id="resultCanvas" style="display:none;"></canvas>`;
         
         ui.testView.innerHTML = reportHtml;
         ui.testView.style.display = 'block';
@@ -180,49 +177,32 @@ const GIPPP_ENGINE = (() => {
         const qrImg = document.getElementById('qrImage');
         const isRTL = (state.lang === 'ar');
         const traits = Object.entries(state.results);
-        
         canvas.width = 600; canvas.height = 900;
         ctx.fillStyle = '#ffffff'; ctx.fillRect(0, 0, 600, 900);
         ctx.fillStyle = '#3498db'; ctx.fillRect(0, 0, 600, 120);
         ctx.fillStyle = '#ffffff'; ctx.font = 'bold 36px sans-serif'; ctx.textAlign = 'center';
         ctx.fillText(state.ui.reportTitle, 300, 75);
-        
         let y = 220;
         traits.forEach(([t, d]) => {
             const p = Math.round((d.total / (d.count * 5)) * 100);
-            const name = state.traitNames[t] || t;
             ctx.fillStyle = '#2c3e50'; ctx.font = 'bold 26px sans-serif';
-            if (isRTL) {
-                ctx.textAlign = 'right'; ctx.fillText(name, 530, y);
-                ctx.textAlign = 'left'; ctx.fillText(`${p}%`, 70, y);
-            } else {
-                ctx.textAlign = 'left'; ctx.fillText(name, 70, y);
-                ctx.textAlign = 'right'; ctx.fillText(`${p}%`, 530, y);
-            }
+            if (isRTL) { ctx.textAlign = 'right'; ctx.fillText(state.traitNames[t] || t, 530, y); ctx.textAlign = 'left'; ctx.fillText(`${p}%`, 70, y); }
+            else { ctx.textAlign = 'left'; ctx.fillText(state.traitNames[t] || t, 70, y); ctx.textAlign = 'right'; ctx.fillText(`${p}%`, 530, y); }
             ctx.fillStyle = '#f0f0f0'; ctx.fillRect(70, y + 15, 460, 18);
             ctx.fillStyle = '#3498db';
             if (isRTL) ctx.fillRect(530 - (460 * p / 100), y + 15, (460 * p) / 100, 18);
             else ctx.fillRect(70, y + 15, (460 * p) / 100, 18);
             y += 110;
         });
-
         ctx.fillStyle = '#f8f9fa'; ctx.fillRect(0, 700, 600, 200);
-        if (qrImg && qrImg.complete) {
-            ctx.fillStyle = '#ffffff'; ctx.fillRect(50, 725, 150, 150);
-            ctx.drawImage(qrImg, 60, 735, 130, 130);
-        }
+        if (qrImg && qrImg.complete) { ctx.fillStyle = '#ffffff'; ctx.fillRect(50, 725, 150, 150); ctx.drawImage(qrImg, 60, 735, 130, 130); }
         ctx.fillStyle = '#2c3e50'; ctx.font = 'bold 22px sans-serif'; ctx.textAlign = isRTL ? 'right' : 'left';
         const tx = isRTL ? 540 : 220;
         ctx.fillText(state.ui.viralTitle, tx, 780);
         ctx.fillStyle = '#7f8c8d'; ctx.font = '18px sans-serif';
         ctx.fillText(state.ui.viralSub, tx, 815);
-        ctx.fillStyle = '#3498db'; ctx.font = 'bold 16px sans-serif';
-        ctx.fillText('gippp.github.io', tx, 845);
-        
-        const link = document.createElement('a');
-        link.download = `GIPPP_Result.png`;
-        link.href = canvas.toDataURL('image/png');
-        link.click();
+        ctx.fillStyle = '#3498db'; ctx.font = 'bold 16px sans-serif'; ctx.fillText('gippp.github.io', tx, 845);
+        const link = document.createElement('a'); link.download = `GIPPP_Result.png`; link.href = canvas.toDataURL('image/png'); link.click();
     };
 
     const cleanExit = () => { 
