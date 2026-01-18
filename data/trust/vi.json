@@ -1,0 +1,19 @@
+{
+  "traitNames": { "T": "Lòng tin xã hội", "A": "Lòng vị tha" },
+  "items": [
+    { "id": 1, "trait": "T", "direction": "+", "text": "Tôi tin rằng hầu hết mọi người về cơ bản là trung thực và đáng tin cậy." },
+    { "id": 2, "trait": "A", "direction": "+", "text": "Tôi cảm thấy thôi thúc muốn giúp đỡ những người đang gặp hoàn cảnh khó khăn." },
+    { "id": 3, "trait": "T", "direction": "-", "text": "Tôi cảm thấy cần phải cẩn thận, nếu không người khác sẽ lợi dụng mình." },
+    { "id": 4, "trait": "A", "direction": "+", "text": "Tôi thấy việc dành thời gian và năng lượng để giúp đỡ người khác là rất xứng đáng." },
+    { "id": 5, "trait": "T", "direction": "+", "text": "Tôi cố gắng tiếp cận những người lạ với thiện chí và sự cởi mở." },
+    { "id": 6, "trait": "A", "direction": "-", "text": "Tôi nghĩ mình nên tập trung vào vấn đề của bản thân trước khi lo lắng cho người khác." },
+    { "id": 7, "trait": "T", "direction": "-", "text": "Tôi nghĩ hầu hết mọi người sẽ lừa dối người khác nếu điều đó có lợi cho họ." },
+    { "id": 8, "trait": "A", "direction": "+", "text": "Tôi tin rằng từ thiện và tình nguyện là yếu tố then chốt cho một xã hội tốt đẹp hơn." },
+    { "id": 9, "trait": "T", "direction": "+", "text": "Tôi tin tưởng rằng luật pháp và hệ thống trong xã hội đang vận hành công bằng." },
+    { "id": 10, "trait": "A", "direction": "-", "text": "Tôi không thích bỏ công sức vào những việc không mang lại lợi ích cá nhân." }
+  ],
+  "descriptions": {
+    "T": { "high": "Bạn có cái nhìn tích cực và xuất sắc trong việc xây dựng các mối quan hệ hợp tác.", "low": "Bạn là người thực tế với cái nhìn phản biện, giỏi quản trị rủi ro và bảo vệ bản thân." },
+    "A": { "high": "Bạn là một cá nhân giàu lòng nhân ái, mang lại giá trị to lớn cho cộng đồng.", "low": "Bạn là người thực dụng và độc lập, tập trung vào hiệu quả và mục tiêu cá nhân." }
+  }
+}
