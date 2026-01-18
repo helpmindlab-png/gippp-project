@@ -5,61 +5,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GIPPP | Global Insight Profiler</title>
     <link rel="stylesheet" href="style.css">
-    <!-- GA4 및 애드센스 코드는 승인 후 여기에 삽입 -->
 </head>
 <body>
     <div id="app">
         <nav class="global-nav">
-            <div class="live-status"><span class="dot"></span> Global Live</div>
-            <div class="lang-picker">
-                <select id="lang-select" onchange="GIPPP_ENGINE.changeLanguage(this.value)"></select>
+            <div class="nav-content">
+                <div class="live-status"><span class="dot"></span> Global Live Profiling</div>
+                <div class="lang-picker"><select id="lang-select" onchange="GIPPP_ENGINE.changeLanguage(this.value)"></select></div>
             </div>
         </nav>
 
-        <!-- [AD] 상단 광고 슬롯 -->
-        <div class="ad-slot top-banner">
-            <div class="ad-placeholder">ADVERTISEMENT</div>
-        </div>
-
-        <header id="main-header">
-            <h1 id="brand">GIPPP</h1>
-            <p id="brand-desc"></p>
-            <p id="security-note" class="security-badge"></p>
-        </header>
-
         <main id="main-content">
-            <!-- [대문 섹션] -->
+            <!-- [대문 섹션: Premium Lounge] -->
             <section id="welcome-view">
-                <div class="hero-banner">
-                    <h2>"진짜 당신은 누구인가요?"</h2>
-                    <p>전 세계 사용자들이 선택한 5가지 심리 프로파일링</p>
-                </div>
-                <div id="test-grid" class="test-grid">
-                    <!-- 엔진에서 동적 생성 -->
+                <header class="hero-section">
+                    <h1 id="brand">GIPPP</h1>
+                    <p id="brand-desc" class="hero-subtitle"></p>
+                </header>
+                
+                <div class="content-wrapper">
+                    <div class="ad-slot top-ad">ADVERTISEMENT</div>
+                    <div id="test-grid" class="test-grid"></div>
                 </div>
             </section>
 
             <!-- [테스트 및 결과 섹션] -->
             <section id="test-view" style="display:none;">
-                <div id="progress-bar"><div id="progress-fill"></div></div>
-                <div id="question-container"></div>
-                <div id="options-group"></div>
-                
-                <!-- [AD] 분석 중 노출될 중간 광고 -->
-                <div id="mid-ad" class="ad-slot mid-banner" style="display:none;">
-                    <div class="ad-placeholder">Analyzing your data...</div>
+                <div class="test-container">
+                    <div id="progress-bar"><div id="progress-fill"></div></div>
+                    <div id="question-container"></div>
+                    <div id="options-group"></div>
+                    <div id="mid-ad" class="ad-slot mid-ad" style="display:none;">ADVERTISEMENT</div>
                 </div>
             </section>
         </main>
 
-        <!-- [AD] 하단 고정 광고 -->
-        <div class="ad-slot bottom-banner">
-            <div class="ad-placeholder">ADVERTISEMENT</div>
-        </div>
-
-        <footer>
-            <div class="footer-links">
-                <span>© GIPPP Project | Anonymous & Secure</span>
+        <footer class="global-footer">
+            <div class="footer-content">
+                <div class="ad-slot bottom-ad">ADVERTISEMENT</div>
+                <p>© GIPPP Project | Anonymous & Secure Insight</p>
             </div>
         </footer>
     </div>
