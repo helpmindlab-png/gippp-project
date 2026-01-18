@@ -1,4 +1,5 @@
 {
+  "traitNames": {"E": "Extraversion", "A": "Verträglichkeit", "C": "Gewissenhaftigkeit", "N": "Neurotizismus", "O": "Offenheit"},
   "items": [
     { "id": 1, "trait": "E", "direction": "+", "text": "Ich stehe bei gesellschaftlichen Anlässen gerne im Mittelpunkt und führe Gespräche an." },
     { "id": 2, "trait": "A", "direction": "+", "text": "Ich bemühe mich, Mitgefühl für die Gefühle anderer zu zeigen." },
