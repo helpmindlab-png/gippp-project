@@ -1,52 +1,9 @@
-:root { --primary: #38bdf8; --dark: #0f172a; --slate: #1e293b; --text: #f8fafc; }
-body { font-family: -apple-system, sans-serif; background: #f1f5f9; margin: 0; color: var(--dark); }
-#app { max-width: 500px; margin: 0 auto; min-height: 100vh; background: #fff; display: flex; flex-direction: column; }
-
-/* Navigation & Header */
-.global-nav { display: flex; justify-content: space-between; padding: 15px; border-bottom: 1px solid #e2e8f0; }
-.live-status { color: #22c55e; font-size: 0.75rem; font-weight: bold; display: flex; align-items: center; gap: 5px; }
-.dot { width: 8px; height: 8px; background: #22c55e; border-radius: 50%; animation: blink 1.5s infinite; }
-@keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0.3; } }
-header { padding: 40px 20px; text-align: center; }
-#brand { font-size: 3rem; font-weight: 900; letter-spacing: -3px; margin: 0; }
-.security-badge { display: inline-block; font-size: 0.7rem; background: #f1f5f9; padding: 5px 12px; border-radius: 20px; margin-top: 10px; }
-
-/* Ad Slots */
-.ad-slot { background: #f8fafc; border: 1px dashed #cbd5e1; margin: 10px; display: flex; align-items: center; justify-content: center; color: #94a3b8; font-size: 0.7rem; }
-.top-banner { height: 60px; }
-.mid-banner { height: 250px; margin: 20px; }
-.bottom-banner { height: 100px; margin-top: auto; }
-
-/* Welcome View */
-.test-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; padding: 20px; }
-.test-card { background: #fff; border: 1px solid #e2e8f0; border-radius: 24px; padding: 25px 15px; text-align: center; cursor: pointer; transition: 0.3s; position: relative; }
-.test-card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
-.test-card.dark-mode { background: var(--dark); color: #fff; }
-.card-tag { position: absolute; top: 10px; left: 10px; background: #ef4444; color: #fff; font-size: 0.6rem; padding: 2px 8px; border-radius: 10px; }
-.emoji { font-size: 2.5rem; display: block; margin-bottom: 10px; }
-
-/* Test View */
-#progress-bar { height: 4px; background: #f1f5f9; }
-#progress-fill { height: 100%; background: var(--primary); transition: 0.3s; }
-#question-container { padding: 50px 25px; text-align: center; min-height: 150px; }
-.q-text { font-size: 1.4rem; font-weight: 700; line-height: 1.4; }
-#options-group { padding: 20px; display: flex; flex-direction: column; gap: 12px; }
-.opt-btn { padding: 20px; border-radius: 16px; border: 1px solid #e2e8f0; background: #fff; font-size: 1rem; cursor: pointer; transition: 0.2s; }
-.opt-btn:hover { border-color: var(--primary); background: #f0f9ff; }
-
-/* Result Card */
-.result-card { padding: 30px 20px; }
-.trait-row { margin-bottom: 25px; }
-.trait-info { display: flex; justify-content: space-between; margin-bottom: 8px; font-weight: bold; }
-.bar-bg { height: 12px; background: #f1f5f9; border-radius: 10px; overflow: hidden; }
-.bar-fill { height: 100%; background: var(--primary); }
-.trait-desc { font-size: 0.85rem; color: #64748b; margin-top: 8px; }
-.recommend-box { background: #fffbeb; border: 1px solid #fef3c7; padding: 20px; border-radius: 20px; text-align: center; margin: 30px 0; }
-.amazon-btn { display: inline-block; margin-top: 10px; color: #d97706; font-weight: bold; text-decoration: none; border: 2px solid #d97706; padding: 8px 20px; border-radius: 10px; }
-.qr-section { text-align: center; margin: 30px 0; }
-#qrImage { width: 130px; border: 8px solid #fff; box-shadow: 0 10px 25px rgba(0,0,0,0.1); }
-.btn-main { width: 100%; padding: 20px; background: var(--dark); color: #fff; border: none; border-radius: 18px; font-weight: bold; font-size: 1.1rem; cursor: pointer; }
-.btn-sub { width: 100%; padding: 15px; background: none; border: none; color: #94a3b8; cursor: pointer; margin-top: 10px; }
-
-.spinner { width: 40px; height: 40px; border: 4px solid #f1f5f9; border-top: 4px solid var(--primary); border-radius: 50%; animation: spin 1s linear infinite; margin: 20px auto; }
-@keyframes spin { 100% { transform: rotate(360deg); } }
+/* Guide View Styles */
+.guide-container { padding: 40px 20px; text-align: center; animation: fadeIn 0.5s ease; }
+.ipip-badge { display: inline-block; background: var(--primary); color: #fff; padding: 5px 15px; border-radius: 20px; font-size: 0.75rem; font-weight: bold; margin-bottom: 15px; }
+.guide-title { font-size: 1.8rem; margin-bottom: 20px; color: var(--dark); }
+.guide-purpose { font-size: 1rem; color: #64748b; margin-bottom: 30px; line-height: 1.6; }
+.guide-box { background: #f8fafc; border-radius: 20px; padding: 25px; margin-bottom: 35px; text-align: left; border: 1px solid #e2e8f0; }
+.guide-box p { margin-bottom: 15px; font-size: 0.95rem; color: #334155; }
+.guide-interpretation { border-top: 1px solid #e2e8f0; pt: 15px; font-size: 0.85rem !important; color: #64748b !important; }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
