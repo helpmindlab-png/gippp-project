@@ -1,4 +1,5 @@
 {
+  "traitNames": {"E": "Extraversión", "A": "Amabilidad", "C": "Responsabilidad", "N": "Neuroticismo", "O": "Apertura"},
   "items": [
     { "id": 1, "trait": "E", "direction": "+", "text": "Suelo ser el alma de las reuniones y disfruto liderar las conversaciones." },
     { "id": 2, "trait": "A", "direction": "+", "text": "Me esfuerzo por empatizar con los sentimientos de los demás." },
