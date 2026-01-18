@@ -1,10 +1,9 @@
 const GIPPP_ENGINE = (() => {
     let state = { 
         testId: null, lang: 'en', currentIndex: 0, answers: [], 
-        questions: [], descriptions: {}, traitNames: {}, ui: {}, results: null 
+        questions: [], descriptions: {}, traitNames: {}, ui: {}, guide: {}, results: null 
     };
 
-    // 테스트 기본 정보 (제목은 JSON에서 동적으로 가져옴)
     const testList = [
         { id: 'ocean', emoji: '🧬', tag: 'BEST', color: 'premium' },
         { id: 'dark', emoji: '🎭', tag: 'HOT', color: 'dark-mode' },
@@ -38,14 +37,13 @@ const GIPPP_ENGINE = (() => {
         ui.langSelect.innerHTML = langs.map(l => `<option value="${l}" ${state.lang === l ? 'selected' : ''}>${l.toUpperCase()}</option>`).join('');
         document.documentElement.dir = (state.lang === 'ar') ? 'rtl' : 'ltr';
 
-        // [글로벌 배려] 대문을 그리기 전, 해당 언어의 UI 데이터를 먼저 로드함
         await loadData();
 
         const resData = urlParams.get('res');
         if (resData) {
             decodeAndShowResult(resData);
         } else if (state.testId) {
-            startTest();
+            renderGuide(); // [v5.5] 바로 시작하지 않고 가이드 화면 노출
         } else {
             renderWelcome();
         }
@@ -53,36 +51,24 @@ const GIPPP_ENGINE = (() => {
 
     const loadData = async () => {
         try {
-            // 대문일 때는 기본적으로 ocean의 언어 파일을 참조하여 UI 문구를 가져옴
             const targetTest = state.testId || 'ocean';
             const r = await fetch(`./data/${targetTest}/${state.lang}.json`);
-            if (!r.ok) throw new Error("JSON Load Failed");
             const d = await r.json();
             state.ui = d.ui;
+            state.guide = d.guide || {}; // 가이드 데이터 로드
             state.questions = d.items || [];
             state.descriptions = d.descriptions || {};
             state.traitNames = d.traitNames || {};
             
-            ui.brandDesc.innerText = state.ui.desc || "Global Insight Profiler";
-            ui.securityNote.innerText = state.ui.security || "🔒 Secure & Anonymous";
-        } catch (e) { 
-            console.error("Data Load Error:", e);
-            // 로드 실패 시 최소한의 영어 UI 제공
-            state.ui = { 
-                desc: "Sensible Profiling", security: "🔒 No Data Stored",
-                processing: "Analyzing...", reportTitle: "Report",
-                testNames: { ocean: "Big Five", dark: "Villain Finder", loc: "Success Mindset", resilience: "Resilience", trust: "Social Trust" },
-                labels: ["Disagree", "No", "Neutral", "Yes", "Agree"]
-            };
-        }
+            ui.brandDesc.innerText = state.ui.desc;
+            ui.securityNote.innerText = state.ui.security;
+        } catch (e) { console.error("Data Load Error"); }
     };
 
     const renderWelcome = () => {
         ui.welcomeView.style.display = 'block';
         ui.header.style.display = 'block';
         ui.testView.style.display = 'none';
-        
-        // [글로벌 배려] JSON에서 가져온 언어별 테스트 명칭(testNames)을 적용
         ui.testGrid.innerHTML = testList.map(t => `
             <div class="test-card ${t.color}" onclick="GIPPP_ENGINE.changeTest('${t.id}')">
                 ${t.tag ? `<div class="card-tag">${t.tag}</div>` : ''}
@@ -93,24 +79,42 @@ const GIPPP_ENGINE = (() => {
         `).join('');
     };
 
-    const startTest = () => {
+    // [v5.5] 전문가 가이드 화면 렌더링
+    const renderGuide = () => {
         ui.welcomeView.style.display = 'none';
         ui.header.style.display = 'none';
+        ui.testView.style.display = 'block';
+        
+        ui.questionContainer.innerHTML = `
+            <div class="guide-container">
+                <div class="ipip-badge">${state.guide.ipipId || 'IPIP-STANDARD'}</div>
+                <h2 class="guide-title">${state.ui.testNames[state.testId]}</h2>
+                <p class="guide-purpose">${state.guide.purpose}</p>
+                <div class="guide-box">
+                    <p>${state.guide.instruction}</p>
+                    <p class="guide-interpretation"><strong>해석 가이드:</strong> ${state.guide.interpretation}</p>
+                </div>
+                <button class="btn-main" onclick="GIPPP_ENGINE.startTest()">${state.guide.startBtn || 'Start Analysis'}</button>
+            </div>
+        `;
+        ui.optionsGroup.innerHTML = '';
+    };
+
+    const startTest = () => {
+        ui.welcomeView.style.display = 'none';
         ui.testView.style.display = 'block';
         renderQuestion();
     };
 
     const renderQuestion = () => {
-        if (!state.questions.length) return;
         const q = state.questions[state.currentIndex];
         ui.questionContainer.innerHTML = `<div class="q-text">${q.text}</div>`;
         ui.optionsGroup.innerHTML = '';
         
-        const labels = state.ui.labels;
         [1, 2, 3, 4, 5].forEach(score => {
             const btn = document.createElement('button');
             btn.className = 'opt-btn';
-            btn.innerText = labels[score - 1];
+            btn.innerText = state.ui.labels[score - 1];
             btn.onclick = () => {
                 state.answers.push({ trait: q.trait, score: q.direction === "-" ? 6 - score : score });
                 if (++state.currentIndex < state.questions.length) renderQuestion();
@@ -148,13 +152,11 @@ const GIPPP_ENGINE = (() => {
         for (const [trait, data] of Object.entries(state.results)) {
             const p = Math.round((data.total / (data.count * 5)) * 100);
             if (p > maxScore) { maxScore = p; maxTrait = trait; }
-            const traitName = state.traitNames[trait] || trait;
-            const desc = p >= 50 ? state.descriptions[trait].high : state.descriptions[trait].low;
             reportHtml += `
                 <div class="trait-row">
-                    <div class="trait-info"><strong>${traitName}</strong> <span>${p}%</span></div>
+                    <div class="trait-info"><strong>${state.traitNames[trait]}</strong> <span>${p}%</span></div>
                     <div class="bar-bg"><div class="bar-fill" style="width:${p}%"></div></div>
-                    <p class="trait-desc">${desc}</p>
+                    <p class="trait-desc">${p >= 50 ? state.descriptions[trait].high : state.descriptions[trait].low}</p>
                 </div>`;
         }
 
@@ -243,6 +245,6 @@ const GIPPP_ENGINE = (() => {
     const changeLanguage = (l) => { const u = new URL(window.location.href); u.searchParams.set('lang', l); window.location.href = u.toString(); };
     const changeTest = (t) => { const u = new URL(window.location.href); u.searchParams.set('test', t); window.location.href = u.toString(); };
 
-    return { init, changeLanguage, changeTest, cleanExit, generateImage };
+    return { init, changeLanguage, changeTest, cleanExit, generateImage, startTest };
 })();
 document.addEventListener('DOMContentLoaded', GIPPP_ENGINE.init);
