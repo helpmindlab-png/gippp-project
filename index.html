@@ -3,36 +3,85 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Insight Profiler | GIPPP</title>
+    <title>GIPPP | Discover Your Inner Self</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div id="app">
         <header>
-            <div class="selectors">
+            <div class="top-nav">
+                <div class="live-status"><span class="dot"></span> Global Live</div>
                 <select id="lang-select" onchange="GIPPP_ENGINE.changeLanguage(this.value)">
-                    <option value="ar">العربية</option>
-                    <option value="de">Deutsch</option>
-                    <option value="en">English</option>
-                    <option value="es">Español</option>
-                    <option value="ja">日本語</option>
-                    <option value="ko" selected>한국어</option>
-                    <option value="pt">Português</option>
-                    <option value="ru">Русский</option>
-                    <option value="vi">Tiếng Việt</option>
-                    <option value="zh">中文</option>
+                    <!-- 10개 국어 옵션 -->
                 </select>
-                <select id="test-select" onchange="GIPPP_ENGINE.changeTest(this.value)"></select>
             </div>
             <h1 id="brand">GIPPP</h1>
-            <p id="brand-desc"></p>
-            <div id="progress-bar"><div id="progress-fill"></div></div>
+            <p id="brand-desc">당신을 읽어내는 가장 감각적인 방법</p>
         </header>
+
         <main id="main-content">
-            <div id="question-container"><div id="question-text">Initializing Engine...</div></div>
-            <div id="options-group"></div>
+            <!-- [대문 섹션] 철저히 흥미 위주 -->
+            <section id="welcome-view">
+                <div class="hero-banner">
+                    <div class="floating-icons">✨ 🧠 🔍 💎</div>
+                    <h2>"진짜 당신은 누구인가요?"</h2>
+                    <p>전 세계 사용자들이 선택한 5가지 정밀 프로파일링</p>
+                </div>
+
+                <div class="test-grid">
+                    <!-- 1. 성격 5요인: '본캐' 컨셉 -->
+                    <div class="test-card premium" onclick="GIPPP_ENGINE.changeTest('ocean')">
+                        <div class="card-tag">BEST</div>
+                        <div class="emoji">🧬</div>
+                        <h3>나의 본캐 분석</h3>
+                        <p>글로벌 표준 성격 리포트</p>
+                    </div>
+
+                    <!-- 2. 다크 트라이어드: '빌런' 컨셉 (가장 강력한 유입원) -->
+                    <div class="test-card dark-mode" onclick="GIPPP_ENGINE.changeTest('dark')">
+                        <div class="card-tag">HOT</div>
+                        <div class="emoji">🎭</div>
+                        <h3>내 안의 빌런 찾기</h3>
+                        <p>숨겨진 어두운 본능 분석</p>
+                    </div>
+
+                    <!-- 3. 성공 마인드셋: '부자' 컨셉 -->
+                    <div class="test-card" onclick="GIPPP_ENGINE.changeTest('loc')">
+                        <div class="emoji">💰</div>
+                        <h3>성공 마인드셋</h3>
+                        <p>나는 부자가 될 상인가?</p>
+                    </div>
+
+                    <!-- 4. 회복탄력성: '멘탈' 컨셉 -->
+                    <div class="test-card" onclick="GIPPP_ENGINE.changeTest('resilience')">
+                        <div class="emoji">🛡️</div>
+                        <h3>강철 멘탈 테스트</h3>
+                        <p>나의 유리멘탈 지수는?</p>
+                    </div>
+
+                    <!-- 5. 사회적 신뢰: '인간관계' 컨셉 -->
+                    <div class="test-card" onclick="GIPPP_ENGINE.changeTest('trust')">
+                        <div class="emoji">🤝</div>
+                        <h3>인간관계 온도계</h3>
+                        <p>나는 호구인가, 냉혈한인가?</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 테스트 진행 섹션 (평소 숨김) -->
+            <section id="test-view" style="display:none;">
+                <div id="progress-bar"><div id="progress-fill"></div></div>
+                <div id="question-container"></div>
+                <div id="options-group"></div>
+            </section>
         </main>
-        <footer><p id="security-note" class="security-note"></p></footer>
+
+        <footer>
+            <div class="footer-links">
+                <span>Privacy First</span> • <span>Global Standard</span>
+            </div>
+            <p id="security-note" class="security-note" style="opacity: 0.5; font-size: 0.7rem;"></p>
+        </footer>
     </div>
     <script src="engine.js"></script>
 </body>
