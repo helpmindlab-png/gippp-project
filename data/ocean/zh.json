@@ -1,4 +1,26 @@
 {
+  "ui": {
+    "desc": "解读内心最感性的方式",
+    "security": "🔒 安全：不存储任何数据",
+    "testNames": {
+      "ocean": "本性分析 (大五人格)",
+      "dark": "寻找内心的反派",
+      "loc": "成功心态测试",
+      "resilience": "心理韧性测试",
+      "trust": "人际关系温度计"
+    },
+    "processing": "正在分析您的行为模式...",
+    "reportTitle": "人格特质分析报告",
+    "recommendTitle": "💡 为您定制的建议",
+    "viewAmazon": "查看推荐商品",
+    "saveImg": "📸 保存报告图片",
+    "retest": "重新测试",
+    "qrNote": "扫码保存结果",
+    "viralTitle": "想了解你的内在洞察吗？",
+    "viralSub": "扫描二维码开始测试",
+    "labels": ["极不同意", "不同意", "中立", "同意", "极同意"],
+    "amazonKeywords": { "N": "leadership books", "M": "strategy games", "P": "psychology books" }
+  },
   "traitNames": {"E": "外向性", "A": "宜人性", "C": "尽责性", "N": "情绪稳定性", "O": "开放性"},
   "items": [
     { "id": 1, "trait": "E", "direction": "+", "text": "在社交场合中，我通常是活跃气氛并主导对话的人。" },
