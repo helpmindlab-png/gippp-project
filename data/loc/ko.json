@@ -1,4 +1,30 @@
 {
+  "ui": {
+    "desc": "내 안의 숨겨진 본능 분석",
+    "security": "🔒 보안: 데이터 저장 안 함",
+    "testNames": {
+      "ocean": "나의 본캐 분석",
+      "dark": "내 안의 빌런 찾기",
+      "loc": "성공 마인드셋",
+      "resilience": "강철 멘탈 테스트",
+      "trust": "인간관계 온도계"
+    },
+    "processing": "데이터 분석 중...",
+    "reportTitle": "빌런 프로파일링 리포트",
+    "recommendTitle": "💡 당신을 위한 맞춤 제안",
+    "viewAmazon": "추천 상품 보기",
+    "saveImg": "📸 리포트 이미지 저장",
+    "retest": "다시 하기",
+    "qrNote": "스캔하여 결과 소장하기",
+    "viralTitle": "내 안의 빌런이 궁금하다면?",
+    "viralSub": "QR코드를 스캔하여 테스트 시작",
+    "labels": ["전혀 아니다", "아니다", "보통이다", "그렇다", "매우 그렇다"],
+    "amazonKeywords": { 
+      "N": "leadership books", 
+      "M": "strategy games", 
+      "P": "psychology books" 
+    }
+  },
   "traitNames": {"L": "내적 통제 지수 (성공 마인드셋)"},
   "items": [
     { "id": 1, "trait": "L", "direction": "+", "text": "내 삶에서 일어나는 일들은 대부분 나 자신의 노력에 달려 있다." },
