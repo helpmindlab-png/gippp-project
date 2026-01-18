@@ -1,22 +1,24 @@
 const GIPPP_ENGINE = (() => {
+    // 기획자님이 주신 v3.9 상태 구조 그대로 유지
     let state = { testId: 'ocean', currentIndex: 0, answers: [], questions: [], descriptions: {}, traitNames: {}, lang: 'en', results: null };
 
+    // 기획자님이 주신 uiStrings 구조 그대로 유지 (테스트 명칭만 흥미 유발형으로 업데이트)
     const uiStrings = {
-        ar: { desc: "محلل البصيرة العالمي", security: "🔒 الأمان: لا يتم تخزين البيانات", processing: "جاري التحليل...", wait: "يرجى الانتظار...", saveImg: "حفظ الصورة", retest: "إعادة", reportTitle: "تقرير البصيرة", recommendTitle: "💡 مقترح لك", viewAmazon: "عرض على أمازون", qrNote: "امسح للحفظ", viralTitle: "هل أنت فضولي؟", viralSub: "امسح للبدء", labels: ["أرفض بشدة", "أرفض", "محايد", "أوافق", "أوافق بشدة"], tests: { ocean: "Big Five", loc: "Locus of Control", dark: "Dark Triad", trust: "Social Trust", resilience: "Resilience" } },
-        de: { desc: "Globaler Insight-Profiler", security: "🔒 Keine Datenspeicherung", processing: "Analyse...", wait: "Bitte warten...", saveImg: "Bild speichern", retest: "Neu starten", reportTitle: "Insight-Bericht", recommendTitle: "💡 Empfohlen", viewAmazon: "Auf Amazon", qrNote: "QR scannen", viralTitle: "Neugierig?", viralSub: "QR scannen", labels: ["Stimme gar nicht zu", "Stimme nicht zu", "Neutral", "Stimme zu", "Stimme voll zu"], tests: { ocean: "Big Five", loc: "Kontrollüberzeugung", dark: "Dark Triad", trust: "Soziales Vertrauen", resilience: "Resilienz" } },
-        en: { desc: "Global Insight Profiler", security: "🔒 Security: No data stored", processing: "Analyzing...", wait: "Please wait...", saveImg: "📸 Save Image", retest: "Retest", reportTitle: "Insight Report", recommendTitle: "💡 Recommended", viewAmazon: "View on Amazon", qrNote: "Scan to save", viralTitle: "Curious about your insight?", viralSub: "Scan QR to start", labels: ["Strongly Disagree", "Disagree", "Neutral", "Agree", "Strongly Agree"], tests: { ocean: "Big Five Personality", loc: "Locus of Control", dark: "Dark Triad", trust: "Social Trust", resilience: "Resilience Test" } },
-        es: { desc: "Perfilador de Perspectiva Global", security: "🔒 Sin datos guardados", processing: "Analizando...", wait: "Espere...", saveImg: "Guardar Imagen", retest: "Reiniciar", reportTitle: "Informe", recommendTitle: "💡 Recomendado", viewAmazon: "Ver en Amazon", qrNote: "Escanea", viralTitle: "¿Curioso?", viralSub: "Escanea el QR", labels: ["Muy en desacuerdo", "En desacuerdo", "Neutral", "De acuerdo", "Muy de acuerdo"], tests: { ocean: "Personalidad Big Five", loc: "Locus of Control", dark: "Tríada Oscura", trust: "Confianza Social", resilience: "Resiliencia" } },
-        ja: { desc: "グローバル・インサイト・プロファイラー", security: "🔒 데이터 저장 없음", processing: "分析中...", wait: "お待ちください...", saveImg: "画像を保存", retest: "再試行", reportTitle: "レポート", recommendTitle: "💡 おすすめ", viewAmazon: "Amazonで見る", qrNote: "スキャンして保存", viralTitle: "気になりますか？", viralSub: "QRで開始", labels: ["全くそう思わない", "そう思わない", "どちらともいえない", "そう思う", "強く思う"], tests: { ocean: "性格5因子診断", loc: "統制の所在", dark: "ダークトライアド", trust: "社会的信頼", resilience: "回復力テスト" } },
-        ko: { desc: "글로벌 인사이트 프로파일러", security: "🔒 보안: 데이터 저장 안 함", processing: "분석 중...", wait: "잠시만 기다려 주세요.", saveImg: "📸 이미지 저장", retest: "다시 하기", reportTitle: "인사이트 리포트", recommendTitle: "💡 맞춤 추천", viewAmazon: "아마존 보기", qrNote: "스캔하여 결과 소장", viralTitle: "당신의 인사이트가 궁금하다면?", viralSub: "QR코드를 스캔하여 테스트 시작", labels: ["전혀 아니다", "아니다", "보통이다", "그렇다", "매우 그렇다"], tests: { ocean: "나의 본캐 분석", loc: "성공 마인드셋", dark: "내 안의 빌런 찾기", trust: "인간관계 온도계", resilience: "강철 멘탈 테스트" } },
-        pt: { desc: "Perfilador de Insights Global", security: "🔒 Sem dados guardados", processing: "Analisando...", wait: "Aguarde...", saveImg: "Salvar Imagem", retest: "Reiniciar", reportTitle: "Relatório", recommendTitle: "💡 Recomendado", viewAmazon: "Ver na Amazon", qrNote: "Escaneie", viralTitle: "Curioso?", viralSub: "Escaneie o QR", labels: ["Discordo totalmente", "Discordo", "Neutro", "Concordo", "Concordo totalmente"], tests: { ocean: "Big Five", loc: "Locus de Controlo", dark: "Tríade Obscura", trust: "Confiança Social", resilience: "Resiliência" } },
-        ru: { desc: "Глобальный профилировщик", security: "🔒 Без сохранения данных", processing: "Анализ...", wait: "Подождите...", saveImg: "Сохранить", retest: "Заново", reportTitle: "Отчет", recommendTitle: "💡 Рекомендовано", viewAmazon: "На Amazon", qrNote: "Сканируйте", viralTitle: "Интересно?", viralSub: "Сканируйте QR", labels: ["Полностью не согласен", "Не согласен", "Нейтрально", "Согласен", "Полностью согласен"], tests: { ocean: "Большая пятерка", loc: "Локус контроля", dark: "Темная триада", trust: "Социальное доверие", resilience: "Жизнестойкость" } },
-        vi: { desc: "Hệ thống Phân tích Tâm lý", security: "🔒 Không lưu dữ liệu", processing: "Đang phân tích...", wait: "Chờ chút...", saveImg: "Lưu ảnh", retest: "Làm lại", reportTitle: "Báo cáo", recommendTitle: "💡 Gợi ý", viewAmazon: "Xem trên Amazon", qrNote: "Quét để lưu", viralTitle: "Bạn tò mò?", viralSub: "Quét QR để bắt đầu", labels: ["Rất không đồng ý", "Không đồng ý", "Bình thường", "Đồng ý", "Rất đồng ý"], tests: { ocean: "Tính cách Big Five", loc: "Kiểm soát tâm thế", dark: "Bộ ba đen tối", trust: "Lòng tin xã hội", resilience: "Khả năng phục hồi" } },
-        zh: { desc: "全球洞察剖析器", security: "🔒 不存储数据", processing: "分析中...", wait: "请稍等...", saveImg: "保存图片", retest: "重测", reportTitle: "报告", recommendTitle: "💡 推荐", viewAmazon: "亚马逊", qrNote: "扫描保存", viralTitle: "想了解吗？", viralSub: "扫码开始", labels: ["极不同意", "不同意", "中立", "同意", "极同意"], tests: { ocean: "大五人格测试", loc: "控制点测试", dark: "黑暗人格三联征", trust: "社会信任度", resilience: "心理韧性测试" } }
+        ar: { desc: "الطريقة الأكثر حساسية لقراءتك", security: "🔒 الأمان: لا يتم تخزين البيانات", processing: "جاري التحليل...", wait: "يرجى الانتظار...", saveImg: "حفظ الصورة", retest: "إعادة", reportTitle: "تقرير البصيرة", recommendTitle: "💡 مقترح لك", viewAmazon: "عرض على أمازون", qrNote: "امسح للحفظ", viralTitle: "هل أنت فضولي؟", viralSub: "امسح للبدء", labels: ["أرفض بشدة", "أرفض", "محايد", "أوافق", "أوافق بشدة"], tests: { ocean: "تحليل الشخصية", loc: "عقلية النجاح", dark: "البحث عن الشرير", trust: "مقياس العلاقات", resilience: "اختبار المرونة" } },
+        de: { desc: "Der sensibelste Weg, dich zu verstehen", security: "🔒 Keine Datenspeicherung", processing: "Analyse...", wait: "Bitte warten...", saveImg: "Bild speichern", retest: "Neu starten", reportTitle: "Insight-Bericht", recommendTitle: "💡 Empfohlen", viewAmazon: "Auf Amazon", qrNote: "QR scannen", viralTitle: "Neugierig?", viralSub: "QR scannen", labels: ["Stimme gar nicht zu", "Stimme nicht zu", "Neutral", "Stimme zu", "Stimme voll zu"], tests: { ocean: "Big Five", loc: "Erfolgs-Mindset", dark: "Bösewicht-Finder", trust: "Soziales Vertrauen", resilience: "Resilienz-Test" } },
+        en: { desc: "The most sensible way to read you", security: "🔒 Security: No data stored", processing: "Analyzing...", wait: "Please wait...", saveImg: "📸 Save Image", retest: "Retest", reportTitle: "Insight Report", recommendTitle: "💡 Recommended", viewAmazon: "View on Amazon", qrNote: "Scan to save", viralTitle: "Curious about your insight?", viralSub: "Scan QR to start", labels: ["Strongly Disagree", "Disagree", "Neutral", "Agree", "Strongly Agree"], tests: { ocean: "Big Five", loc: "Success Mindset", dark: "Villain Finder", trust: "Social Trust", resilience: "Resilience Test" } },
+        es: { desc: "La forma más sensible de leerte", security: "🔒 Sin datos guardados", processing: "Analizando...", wait: "Espere...", saveImg: "Guardar Imagen", retest: "Reiniciar", reportTitle: "Informe", recommendTitle: "💡 Recomendado", viewAmazon: "Ver en Amazon", qrNote: "Escanea", viralTitle: "¿Curioso?", viralSub: "Escanea el QR", labels: ["Muy en desacuerdo", "En desacuerdo", "Neutral", "De acuerdo", "Muy de acuerdo"], tests: { ocean: "Personalidad Big Five", loc: "Mentalidad de Éxito", dark: "Buscador de Villanos", trust: "Confianza Social", resilience: "Test de Resiliencia" } },
+        ja: { desc: "あなたを読み解く最も感性的な方法", security: "🔒 データ保存なし", processing: "分析中...", wait: "お待ちください...", saveImg: "画像を保存", retest: "再試行", reportTitle: "レポート", recommendTitle: "💡 おすすめ", viewAmazon: "Amazonで見る", qrNote: "スキャンして保存", viralTitle: "気になりますか？", viralSub: "QRで開始", labels: ["全くそう思わない", "そう思わない", "どちらともいえない", "そう思う", "強く思う"], tests: { ocean: "本性分析", loc: "成功マインド", dark: "隠れたヴィラン", trust: "人間関係温度計", resilience: "メンタル診断" } },
+        ko: { desc: "당신을 읽어내는 가장 감각적인 방법", security: "🔒 보안: 데이터 저장 안 함", processing: "분석 중...", wait: "잠시만 기다려 주세요.", saveImg: "📸 이미지 저장", retest: "다시 하기", reportTitle: "인사이트 리포트", recommendTitle: "💡 맞춤 추천", viewAmazon: "아마존 보기", qrNote: "스캔하여 결과 소장", viralTitle: "당신의 인사이트가 궁금하다면?", viralSub: "QR코드를 스캔하여 테스트 시작", labels: ["전혀 아니다", "아니다", "보통이다", "그렇다", "매우 그렇다"], tests: { ocean: "나의 본캐 분석", loc: "성공 마인드셋", dark: "내 안의 빌런 찾기", trust: "인간관계 온도계", resilience: "강철 멘탈 테스트" } },
+        pt: { desc: "A forma mais sensata de te ler", security: "🔒 Sem dados guardados", processing: "Analisando...", wait: "Aguarde...", saveImg: "Salvar Imagem", retest: "Reiniciar", reportTitle: "Relatório", recommendTitle: "💡 Recomendado", viewAmazon: "Ver na Amazon", qrNote: "Escaneie", viralTitle: "Curioso?", viralSub: "Escaneie o QR", labels: ["Discordo totalmente", "Discordo", "Neutro", "Concordo", "Concordo totalmente"], tests: { ocean: "Personalidade Big Five", loc: "Mentalidade de Sucesso", dark: "Buscador de Vilões", trust: "Confiança Social", resilience: "Teste de Resiliência" } },
+        ru: { desc: "Самый разумный способ понять себя", security: "🔒 Без сохранения данных", processing: "Анализ...", wait: "Подождите...", saveImg: "Сохранить", retest: "Заново", reportTitle: "Отчет", recommendTitle: "💡 Рекомендовано", viewAmazon: "На Amazon", qrNote: "Сканируйте", viralTitle: "Интересно?", viralSub: "Сканируйте QR", labels: ["Полностью не согласен", "Не согласен", "Нейтрально", "Согласен", "Полностью согласен"], tests: { ocean: "Большая пятерка", loc: "Локус контроля", dark: "Темная триада", trust: "Социальное доверие", resilience: "Жизнестойкость" } },
+        vi: { desc: "Cách nhạy bén nhất để hiểu bạn", security: "🔒 Không lưu dữ liệu", processing: "Đang phân tích...", wait: "Chờ chút...", saveImg: "Lưu ảnh", retest: "Làm lại", reportTitle: "Báo cáo", recommendTitle: "💡 Gợi ý", viewAmazon: "Xem trên Amazon", qrNote: "Quét để lưu", viralTitle: "Bạn tò mò?", viralSub: "Quét QR để bắt đầu", labels: ["Rất không đồng ý", "Không đồng ý", "Bình thường", "Đồng ý", "Rất đồng ý"], tests: { ocean: "Tính cách Big Five", loc: "Kiểm soát tâm thế", dark: "Bộ ba đen tối", trust: "Lòng tin xã hội", resilience: "Khả năng phục hồi" } },
+        zh: { desc: "解读你最感性的方式", security: "🔒 不存储数据", processing: "分析中...", wait: "请稍等...", saveImg: "保存图片", retest: "重测", reportTitle: "报告", recommendTitle: "💡 推荐", viewAmazon: "亚马逊", qrNote: "扫描保存", viralTitle: "想了解吗？", viralSub: "扫码开始", labels: ["极不同意", "不同意", "中立", "同意", "极同意"], tests: { ocean: "大五人格测试", loc: "控制点测试", dark: "黑暗人格三联征", trust: "社会信任度", resilience: "心理韧性测试" } }
     };
 
     const amazonProducts = { E: "party games", A: "gift sets", C: "planner", N: "meditation", O: "art supplies", L: "wealth mindset books", N_dark: "leadership books", M: "strategy games", P: "resilience books", T: "social capital books", R: "stress relief" };
     
-    // UI 요소 참조 (Welcome View 추가)
+    // UI 요소 참조 (v3.9 방식 유지 + View 제어용 추가)
     const ui = { 
         brandDesc: document.getElementById('brand-desc'), 
         securityNote: document.getElementById('security-note'), 
@@ -24,15 +26,15 @@ const GIPPP_ENGINE = (() => {
         optionsGroup: document.getElementById('options-group'), 
         progressFill: document.getElementById('progress-fill'), 
         mainContent: document.getElementById('main-content'), 
-        langSelect: document.getElementById('lang-select'), 
-        testSelect: document.getElementById('test-select'),
-        welcomeView: document.getElementById('welcome-view'), // 대문 섹션
-        testView: document.getElementById('test-view')       // 테스트 섹션
+        langSelect: document.getElementById('lang-select'),
+        welcomeView: document.getElementById('welcome-view'),
+        testView: document.getElementById('test-view'),
+        header: document.getElementById('main-header')
     };
 
     const init = async () => {
         const urlParams = new URLSearchParams(window.location.search);
-        state.testId = urlParams.get('test'); // 대문 모드를 위해 기본값 제거
+        state.testId = urlParams.get('test'); 
         let userLang = urlParams.get('lang') || navigator.language.substring(0, 2);
         if (userLang === 'jp') userLang = 'ja'; if (userLang === 'vn') userLang = 'vi';
         state.lang = uiStrings[userLang] ? userLang : 'en';
@@ -41,29 +43,28 @@ const GIPPP_ENGINE = (() => {
         const s = uiStrings[state.lang];
         ui.brandDesc.innerText = s.desc;
         ui.securityNote.innerText = s.security;
-        ui.langSelect.value = state.lang;
         
-        // 테스트 선택기 업데이트
-        if(ui.testSelect) {
-            ui.testSelect.innerHTML = Object.entries(s.tests).map(([id, name]) => `<option value="${id}" ${state.testId === id ? 'selected' : ''}>${name}</option>`).join('');
-        }
-
+        // 언어 선택기 동적 생성
+        ui.langSelect.innerHTML = Object.keys(uiStrings).map(l => `<option value="${l}" ${state.lang === l ? 'selected' : ''}>${l.toUpperCase()}</option>`).join('');
+        
         const resData = urlParams.get('res');
-        
-        // 뷰 전환 로직
+
+        // 뷰 전환 로직 (v3.9 로직을 방해하지 않음)
         if (resData) {
-            if(ui.welcomeView) ui.welcomeView.style.display = 'none';
-            if(ui.testView) ui.testView.style.display = 'block';
+            ui.welcomeView.style.display = 'none';
+            ui.header.style.display = 'none';
+            ui.testView.style.display = 'block';
             decodeAndShowResult(resData);
         } else if (state.testId) {
-            if(ui.welcomeView) ui.welcomeView.style.display = 'none';
-            if(ui.testView) ui.testView.style.display = 'block';
+            ui.welcomeView.style.display = 'none';
+            ui.header.style.display = 'none';
+            ui.testView.style.display = 'block';
             await loadData();
             renderQuestion();
         } else {
-            // 파라미터가 없으면 대문 노출
-            if(ui.welcomeView) ui.welcomeView.style.display = 'block';
-            if(ui.testView) ui.testView.style.display = 'none';
+            ui.welcomeView.style.display = 'block';
+            ui.header.style.display = 'block';
+            ui.testView.style.display = 'none';
         }
     };
 
@@ -84,6 +85,7 @@ const GIPPP_ENGINE = (() => {
         if (!state.questions[state.currentIndex]) return;
         const q = state.questions[state.currentIndex];
         const s = uiStrings[state.lang];
+        // v3.9의 렌더링 방식 그대로 복구
         ui.questionText.innerHTML = `<div>${q.text}</div>`;
         ui.optionsGroup.innerHTML = '';
         [1, 2, 3, 4, 5].forEach(score => {
@@ -101,7 +103,7 @@ const GIPPP_ENGINE = (() => {
 
     const showProcessing = () => {
         const s = uiStrings[state.lang];
-        ui.mainContent.innerHTML = `<div style="padding:40px 0;"><div class="spinner"></div><h3>${s.processing}</h3><p>${s.wait}</p><div class="ad-slot" style="height:250px;"></div></div>`;
+        ui.testView.innerHTML = `<div style="padding:40px 0;"><div class="spinner"></div><h3>${s.processing}</h3><p>${s.wait}</p><div class="ad-slot" style="height:250px;"></div></div>`;
         setTimeout(() => { state.results = calculateScores(); renderFinalReport(); }, 3000);
     };
 
@@ -129,7 +131,7 @@ const GIPPP_ENGINE = (() => {
         reportHtml += `<div style="text-align:center; margin-bottom:20px;"><img id="qrImage" src="${qrImgUrl}" crossorigin="anonymous" style="width:130px; border:6px solid white; box-shadow:0 4px 10px rgba(0,0,0,0.1);"></div>`;
         reportHtml += `<button onclick="GIPPP_ENGINE.generateImage()" style="width:100%; padding:18px; background:#3498db; color:white; border:none; border-radius:15px; font-weight:bold; font-size:1.1rem; cursor:pointer; margin-bottom:10px;">${s.saveImg}</button>`;
         reportHtml += `<button onclick="location.href=window.location.pathname" style="width:100%; padding:12px; background:#f8f9fa; color:#95a5a6; border:none; border-radius:15px; cursor:pointer;">${s.retest}</button></div><canvas id="resultCanvas" style="display:none;"></canvas>`;
-        ui.mainContent.innerHTML = reportHtml;
+        ui.testView.innerHTML = reportHtml;
     };
 
     const decodeAndShowResult = (c) => {
