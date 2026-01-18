@@ -1,14 +1,8 @@
 {
   "ui": {
-    "desc": "Cách nhạy bén nhất để thấu hiểu nội tâm bạn",
+    "desc": "Cách nhạy bén nhất để hiểu bạn",
     "security": "🔒 Bảo mật: Không lưu trữ dữ liệu",
-    "testNames": {
-      "ocean": "Bản sắc thực sự (Big Five)",
-      "dark": "Tìm kiếm phản diện trong bạn",
-      "loc": "Tư duy thành công",
-      "resilience": "Kiểm tra bản lĩnh",
-      "trust": "Thước đo mối quan hệ"
-    },
+    "testNames": { "ocean": "Tính cách", "dark": "Tìm phản diện", "loc": "Thành công", "resilience": "Bản lĩnh", "trust": "Tin tưởng" },
     "processing": "Đang phân tích hành vi của bạn...",
     "reportTitle": "Báo cáo hồ sơ phản diện",
     "recommendTitle": "💡 Gợi ý dành cho bạn",
@@ -16,29 +10,32 @@
     "saveImg": "📸 Lưu ảnh báo cáo",
     "retest": "Làm lại",
     "qrNote": "Quét để lưu kết quả",
-    "viralTitle": "Bạn tò mò về bản thân?",
+    "viralTitle": "Bạn tò mò về phản diện trong mình?",
     "viralSub": "Quét mã QR để bắt đầu",
     "labels": ["Rất không đồng ý", "Không đồng ý", "Bình thường", "Đồng ý", "Rất đồng ý"],
     "amazonKeywords": { "N": "leadership books", "M": "strategy games", "P": "psychology books" }
   },
-  "traitNames": { "N": "Ái kỷ (Tự tin cao)", "M": "Xảo thuật (Chiến lược)", "P": "Lạnh lùng (Quyết đoán)" },
+  "guide": {
+    "ipipId": "IPIP-D3-27",
+    "purpose": "Bài kiểm tra này đo lường 'Bộ ba đen tối' trong tính cách để phân tích các chiến lược xã hội và bản năng tiềm ẩn của bạn.",
+    "instruction": "Vui lòng đọc từng câu và chọn phương án mô tả đúng nhất về bạn. Câu trả lời trung thực sẽ dẫn đến kết quả chính xác hơn.",
+    "interpretation": "Kết quả bao gồm Ái kỷ, Xảo quyệt và Vô cảm. Những chỉ số này phản ánh chiến lược sinh tồn của bạn thay vì đánh giá đạo đức.",
+    "startBtn": "Bắt đầu phân tích"
+  },
+  "traitNames": { "N": "Ái kỷ", "M": "Xảo quyệt", "P": "Vô cảm" },
   "items": [
-    { "id": 1, "trait": "N", "direction": "+", "text": "Tôi cảm thấy mình xứng đáng nhận được sự tôn trọng đặc biệt từ mọi người." },
-    { "id": 2, "trait": "M", "direction": "+", "text": "Tôi có khả năng thuyết phục người khác để đạt được mục tiêu đề ra." },
-    { "id": 3, "trait": "P", "direction": "+", "text": "Tôi có thể giữ bình tĩnh và quyết đoán ngay cả trong tình huống khó khăn." },
-    { "id": 4, "trait": "N", "direction": "+", "text": "Tôi thích được mọi người chú ý và công nhận thành quả của mình." },
-    { "id": 5, "trait": "M", "direction": "+", "text": "Tôi biết cách sử dụng các mối quan hệ để công việc trôi chảy hơn." },
-    { "id": 6, "trait": "P", "direction": "+", "text": "Tôi không ngại đối mặt với rủi ro để thử thách bản thân." },
-    { "id": 7, "trait": "N", "direction": "-", "text": "Tôi thích sự khiêm tốn và không muốn mình quá nổi bật." },
-    { "id": 8, "trait": "M", "direction": "-", "text": "Tôi tin rằng sự chân thành là yếu tố quan trọng nhất trong hợp tác." },
-    { "id": 9, "trait": "P", "direction": "-", "text": "Tôi dễ dàng đồng cảm với những khó khăn của người xung quanh." },
-    { "id": 10, "trait": "N", "direction": "+", "text": "Tôi mong muốn trở thành người có tầm ảnh hưởng trong tổ chức." },
-    { "id": 11, "trait": "M", "direction": "+", "text": "Trong cạnh tranh, kết quả cuối cùng là thước đo quan trọng nhất." },
-    { "id": 12, "trait": "P", "direction": "+", "text": "Tôi thích những trải nghiệm mới lạ mang tính kích thích." }
+    { "id": 1, "trait": "N", "direction": "+", "text": "Tôi cảm thấy mình là một người đặc biệt và xứng đáng được đối xử tốt hơn những người khác." },
+    { "id": 2, "trait": "M", "direction": "+", "text": "Tôi có thể khéo léo thuyết phục hoặc thao túng người khác để đạt được mục tiêu của mình." },
+    { "id": 3, "trait": "P", "direction": "+", "text": "Tôi không cảm thấy quá đau lòng khi chứng kiến bất hạnh hay nỗi đau của người khác." },
+    { "id": 4, "trait": "N", "direction": "+", "text": "Tôi hoàn toàn tận hưởng những tình huống mà tôi nhận được sự chú ý và khen ngợi." },
+    { "id": 5, "trait": "M", "direction": "+", "text": "Tôi có xu hướng giữ những thông tin quan trọng cho riêng mình và sử dụng nó vào thời điểm có lợi." },
+    { "id": 6, "trait": "P", "direction": "+", "text": "Tôi cảm thấy phấn khích thay vì sợ hãi khi làm những việc mạo hiểm hoặc kích thích." },
+    { "id": 7, "trait": "N", "direction": "-", "text": "Tôi coi mình là một người bình thường và cố gắng hành động khiêm tốn." },
+    { "id": 8, "trait": "M", "direction": "-", "text": "Lừa dối ai đó để trục lợi cá nhân là điều không thể chấp nhận được về mặt đạo đức đối với tôi." }
   ],
   "descriptions": {
-    "N": { "high": "Bạn có sự tự tin mạnh mẽ và tố chất của một người dẫn dắt.", "low": "Bạn khiêm tốn và luôn coi trọng sự hòa hợp trong tập thể." },
-    "M": { "high": "Bạn có tư duy chiến lược và khả năng điều phối các mối quan hệ tốt.", "low": "Bạn coi trọng sự minh bạch và đạo đức trong mọi hành động." },
-    "P": { "high": "Bạn có bản lĩnh vững vàng và khả năng chịu áp lực tuyệt vời.", "low": "Bạn là người giàu lòng trắc ẩn và có kết nối cảm xúc sâu sắc." }
+    "N": { "high": "Bạn có sự tự tin cao và khả năng lãnh đạo mạnh mẽ, nhưng có thể hơi để tâm quá mức đến ý kiến của người khác.", "low": "Bạn khiêm tốn, có tinh thần hợp tác và coi trọng lợi ích chung." },
+    "M": { "high": "Bạn là người có chiến lược, định hướng mục tiêu rõ ràng và phán đoán tình huống nhanh nhạy.", "low": "Bạn coi trọng sự trung thực, giao tiếp minh bạch và tuân thủ các nguyên tắc." },
+    "P": { "high": "Bạn giữ được bình tĩnh trong khủng hoảng và thể hiện khả năng quyết định táo bạo.", "low": "Bạn có lòng trắc ẩn cao và luôn quan tâm sâu sắc đến cảm xúc của người khác." }
   }
 }
