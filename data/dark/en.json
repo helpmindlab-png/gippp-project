@@ -2,47 +2,33 @@
   "ui": {
     "desc": "The most sensible way to read your inner self",
     "security": "🔒 Security: No data stored",
-    "testNames": {
-      "ocean": "My True Self (Big Five)",
-      "dark": "Villain Finder",
-      "loc": "Success Mindset",
-      "resilience": "Mental Resilience Test",
-      "trust": "Relationship Thermometer"
-    },
-    "processing": "Analyzing your behavioral patterns...",
+    "testNames": { "ocean": "My True Self", "dark": "Villain Finder", "loc": "Success Mindset", "resilience": "Resilience Test", "trust": "Social Trust" },
+    "processing": "Analyzing patterns...",
     "reportTitle": "Villain Profiling Report",
     "recommendTitle": "💡 Recommended for You",
-    "viewAmazon": "View Recommended Products",
+    "viewAmazon": "View Products",
     "saveImg": "📸 Save Report Image",
     "retest": "Retest",
-    "qrNote": "Scan to save your result",
-    "viralTitle": "Curious about your insight?",
-    "viralSub": "Scan QR code to start the test",
+    "qrNote": "Scan to save",
+    "viralTitle": "Curious about your inner villain?",
+    "viralSub": "Scan QR to start villain profiling",
     "labels": ["Strongly Disagree", "Disagree", "Neutral", "Agree", "Strongly Agree"],
-    "amazonKeywords": { 
-      "N": "leadership books", 
-      "M": "strategy games", 
-      "P": "psychology books" 
-    }
+    "amazonKeywords": { "N": "leadership books", "M": "strategy games", "P": "psychology books" }
   },
   "traitNames": { "N": "Narcissism", "M": "Machiavellianism", "P": "Psychopathy" },
   "items": [
-    { "id": 1, "trait": "N", "direction": "+", "text": "I tend to want others to admire me and recognize my special status." },
-    { "id": 2, "trait": "M", "direction": "+", "text": "I tend to manipulate others to get my way when necessary." },
-    { "id": 3, "trait": "P", "direction": "+", "text": "I tend to be unconcerned with the morality of my actions." },
-    { "id": 4, "trait": "N", "direction": "+", "text": "I expect special favors from others because of who I am." },
-    { "id": 5, "trait": "M", "direction": "+", "text": "I have used deceit or social influence to get what I want." },
-    { "id": 6, "trait": "P", "direction": "+", "text": "I tend to be callous or insensitive to the needs of others." },
-    { "id": 7, "trait": "N", "direction": "-", "text": "I prefer to remain humble and don't need to be the center of attention." },
-    { "id": 8, "trait": "M", "direction": "-", "text": "I believe that honesty is the best policy, even if it slows down progress." },
-    { "id": 9, "trait": "P", "direction": "-", "text": "I am deeply moved by the emotions and hardships of others." },
-    { "id": 10, "trait": "N", "direction": "+", "text": "I aspire to hold a position of great power and influence." },
-    { "id": 11, "trait": "M", "direction": "+", "text": "I believe that the end justifies the means in competitive situations." },
-    { "id": 12, "trait": "P", "direction": "+", "text": "I enjoy taking risks even if they might have negative consequences." }
+    { "id": 1, "trait": "N", "direction": "+", "text": "I feel that I am a special person and deserve better treatment than others." },
+    { "id": 2, "trait": "M", "direction": "+", "text": "I can skillfully persuade or manipulate people to achieve my goals." },
+    { "id": 3, "trait": "P", "direction": "+", "text": "I do not feel significant emotional distress when I see the misfortune of others." },
+    { "id": 4, "trait": "N", "direction": "+", "text": "I thoroughly enjoy situations where I receive attention and praise." },
+    { "id": 5, "trait": "M", "direction": "+", "text": "I tend to keep important information to myself and use it at an advantageous moment." },
+    { "id": 6, "trait": "P", "direction": "+", "text": "I feel a thrill rather than fear when doing risky things." },
+    { "id": 7, "trait": "N", "direction": "-", "text": "I consider myself an ordinary person and try to act with humility." },
+    { "id": 8, "trait": "M", "direction": "-", "text": "Deceiving someone for personal gain is morally unacceptable to me." }
   ],
   "descriptions": {
-    "N": { "high": "You have high self-confidence and leadership potential.", "low": "You are modest and value collective success over personal glory." },
-    "M": { "high": "You are a strategic thinker who excels at navigating complex social dynamics.", "low": "You value transparency and ethical integrity in all interactions." },
-    "P": { "high": "You are emotionally resilient and can make tough decisions under pressure.", "low": "You are highly empathetic and value deep emotional connections." }
+    "N": { "high": "High self-confidence and strong leadership.", "low": "Humble and cooperative type." },
+    "M": { "high": "Strategic and goal-oriented achiever.", "low": "Values honest and transparent communication." },
+    "P": { "high": "Maintains composure and bold decision-making.", "low": "High empathy and deeply considerate." }
   }
 }
