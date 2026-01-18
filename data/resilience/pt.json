@@ -1,0 +1,19 @@
+{
+  "traitNames": { "R": "Resiliência", "E": "Regulação Emocional" },
+  "items": [
+    { "id": 1, "trait": "R", "direction": "+", "text": "Costumo recuperar o meu equilíbrio rapidamente após uma dificuldade ou revés." },
+    { "id": 2, "trait": "E", "direction": "+", "text": "Tenho uma compreensão clara das emoções que estou a sentir." },
+    { "id": 3, "trait": "R", "direction": "-", "text": "Sinto-me facilmente sobrecarregado e impotente quando surgem problemas inesperados." },
+    { "id": 4, "trait": "E", "direction": "+", "text": "Consigo gerir as minhas emoções de forma eficaz, mesmo em situações de stress." },
+    { "id": 5, "trait": "R", "direction": "+", "text": "Vejo os fracassos como oportunidades para aprender e tentar novas abordagens." },
+    { "id": 6, "trait": "E", "direction": "-", "text": "Às vezes deixo que as emoções me dominem e digo coisas de que me arrependo." },
+    { "id": 7, "trait": "R", "direction": "-", "text": "Quando algo mau acontece, demoro muito tempo a ultrapassar a situação." },
+    { "id": 8, "trait": "E", "direction": "+", "text": "Consigo manter a calma e priorizar tarefas mesmo sob forte pressão." },
+    { "id": 9, "trait": "R", "direction": "+", "text": "Estou confiante na minha capacidade de resolver problemas difíceis eventualmente." },
+    { "id": 10, "trait": "E", "direction": "-", "text": "Tendo a reagir com demasiada intensidade ao humor ou reações das pessoas ao meu redor." }
+  ],
+  "descriptions": {
+    "R": { "high": "Possui uma 'mente de aço' que não se quebra perante os desafios.", "low": "É uma pessoa sensível e percetiva que sente profundamente as mudanças do ambiente." },
+    "E": { "high": "Destaca-se no autocontrolo, mantendo a paz interior mesmo em tempos turbulentos.", "low": "É apaixonado e expressivo, deixando-se por vezes levar pelas ondas das suas emoções." }
+  }
+}
