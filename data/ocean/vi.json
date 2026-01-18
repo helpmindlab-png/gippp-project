@@ -1,4 +1,5 @@
 {
+  "traitNames": {"E": "Hướng ngoại", "A": "Tận tâm", "C": "Chu đáo", "N": "Nhạy cảm", "O": "Cởi mở"},
   "items": [
     { "id": 1, "trait": "E", "direction": "+", "text": "Tôi thường là người khuấy động không khí và dẫn dắt câu chuyện trong các buổi tiệc." },
     { "id": 2, "trait": "A", "direction": "+", "text": "Tôi luôn cố gắng thấu hiểu và đồng cảm với cảm xúc của người khác." },
