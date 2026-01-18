@@ -19,11 +19,7 @@
     "viralTitle": "あなたのインサイトが気になりますか？",
     "viralSub": "QRコードをスキャンしてテストを開始",
     "labels": ["全くそう思わない", "そう思わない", "どちらともいえない", "そう思う", "強く思う"],
-    "amazonKeywords": { 
-      "N": "自己啓発 本", 
-      "M": "戦略的思考 本", 
-      "P": "心理学 本" 
-    }
+    "amazonKeywords": { "E": "party games", "A": "gift sets", "C": "planner", "N": "meditation", "O": "art supplies"}
   },
   "traitNames": {"E": "外向性", "A": "協調性", "C": "誠実性", "N": "神経症傾向", "O": "開放性"},
   "items": [
