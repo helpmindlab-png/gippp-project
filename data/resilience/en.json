@@ -1,0 +1,19 @@
+{
+  "traitNames": { "R": "Resilience", "E": "Emotional Regulation" },
+  "items": [
+    { "id": 1, "trait": "R", "direction": "+", "text": "I tend to bounce back quickly after a hard time or a setback." },
+    { "id": 2, "trait": "E", "direction": "+", "text": "I have a clear understanding of the emotions I am experiencing." },
+    { "id": 3, "trait": "R", "direction": "-", "text": "I easily feel overwhelmed and helpless when unexpected problems arise." },
+    { "id": 4, "trait": "E", "direction": "+", "text": "I can manage my emotions effectively even in stressful situations." },
+    { "id": 5, "trait": "R", "direction": "+", "text": "I view failures as opportunities to learn and try new approaches." },
+    { "id": 6, "trait": "E", "direction": "-", "text": "I sometimes let my emotions get the better of me and say things I regret." },
+    { "id": 7, "trait": "R", "direction": "-", "text": "When something bad happens, it takes me a long time to get over it." },
+    { "id": 8, "trait": "E", "direction": "+", "text": "I can stay calm and prioritize tasks even under heavy pressure." },
+    { "id": 9, "trait": "R", "direction": "+", "text": "I am confident in my ability to eventually solve difficult problems." },
+    { "id": 10, "trait": "E", "direction": "-", "text": "I tend to react too strongly to the moods or opinions of people around me." }
+  ],
+  "descriptions": {
+    "R": { "high": "You possess a 'steel mindset' that remains unbroken by challenges.", "low": "You are a sensitive and perceptive individual who deeply feels environmental changes." },
+    "E": { "high": "You excel at self-mastery, maintaining inner peace even in turbulent times.", "low": "You are passionate and expressive, sometimes riding the waves of your emotions." }
+  }
+}
