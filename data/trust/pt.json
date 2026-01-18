@@ -1,0 +1,19 @@
+{
+  "traitNames": { "T": "Confiança Social", "A": "Altruísmo" },
+  "items": [
+    { "id": 1, "trait": "T", "direction": "+", "text": "Acredito que a maioria das pessoas é basicamente honesta e digna de confiança." },
+    { "id": 2, "trait": "A", "direction": "+", "text": "Sinto um forte desejo de ajudar pessoas que estão em situações difíceis." },
+    { "id": 3, "trait": "T", "direction": "-", "text": "Sinto que é preciso ter cuidado, caso contrário, as pessoas se aproveitarão de você." },
+    { "id": 4, "trait": "A", "direction": "+", "text": "Considero gratificante dedicar meu tempo e energia para ajudar os outros." },
+    { "id": 5, "trait": "T", "direction": "+", "text": "Tento abordar desconhecidos com boas intenções e mente aberta." },
+    { "id": 6, "trait": "A", "direction": "-", "text": "Acredito que devo focar nos meus próprios problemas antes de me preocupar com os outros." },
+    { "id": 7, "trait": "T", "direction": "-", "text": "Acho que a maioria das pessoas enganaria os outros se isso servisse aos seus interesses." },
+    { "id": 8, "trait": "A", "direction": "+", "text": "Acredito que a caridade e o voluntariado são vitais para uma sociedade melhor." },
+    { "id": 9, "trait": "T", "direction": "+", "text": "Confio que as leis e sistemas em nossa sociedade operam de forma justa." },
+    { "id": 10, "trait": "A", "direction": "-", "text": "Prefiro não investir esforço em tarefas que não oferecem recompensa pessoal." }
+  ],
+  "descriptions": {
+    "T": { "high": "Você tem uma visão positiva e é excelente em construir relacionamentos colaborativos.", "low": "Você é um realista com olhar crítico, habilidoso em gestão de riscos e autoproteção." },
+    "A": { "high": "Você é uma pessoa compassiva que agrega imenso valor à sua comunidade.", "low": "Você é pragmático e independente, focado em eficiência e objetivos pessoais." }
+  }
+}
