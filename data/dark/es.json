@@ -2,13 +2,7 @@
   "ui": {
     "desc": "La forma más sensible de leer tu interior",
     "security": "🔒 Seguridad: No se guardan datos",
-    "testNames": {
-      "ocean": "Mi Verdadero Yo (Big Five)",
-      "dark": "Buscador de Villanos",
-      "loc": "Mentalidad de Éxito",
-      "resilience": "Test de Resiliencia",
-      "trust": "Termómetro de Relaciones"
-    },
+    "testNames": { "ocean": "Personalidad", "dark": "Buscador de Villanos", "loc": "Mentalidad", "resilience": "Resiliencia", "trust": "Confianza" },
     "processing": "Analizando tus patrones de conducta...",
     "reportTitle": "Informe de Perfil de Villano",
     "recommendTitle": "💡 Recomendado para ti",
@@ -16,29 +10,32 @@
     "saveImg": "📸 Guardar imagen del informe",
     "retest": "Repetir test",
     "qrNote": "Escanea para guardar",
-    "viralTitle": "¿Curioso por tu resultado?",
+    "viralTitle": "¿Curioso por tu villano interior?",
     "viralSub": "Escanea el QR para empezar",
     "labels": ["Muy en desacuerdo", "En desacuerdo", "Neutral", "De acuerdo", "Muy de acuerdo"],
     "amazonKeywords": { "N": "leadership books", "M": "strategy games", "P": "psychology books" }
   },
+  "guide": {
+    "ipipId": "IPIP-D3-27",
+    "purpose": "Esta prueba mide la 'Tríada Oscura' de la personalidad para analizar sus estrategias sociales e instintos ocultos.",
+    "instruction": "Lea cada afirmación y seleccione la opción que mejor lo describa. Las respuestas honestas conducen a un perfil más preciso.",
+    "interpretation": "Los resultados consisten en Narcisismo, Maquiavelismo y Psicopatía. Estos indicadores reflejan sus estrategias de supervivencia en lugar de un juicio moral.",
+    "startBtn": "Iniciar Análisis"
+  },
   "traitNames": { "N": "Narcisismo", "M": "Maquiavelismo", "P": "Psicopatía" },
   "items": [
-    { "id": 1, "trait": "N", "direction": "+", "text": "Siento que merezco un trato especial por parte de los demás." },
-    { "id": 2, "trait": "M", "direction": "+", "text": "Tiendo a convencer a otros para lograr mis propios objetivos." },
-    { "id": 3, "trait": "P", "direction": "+", "text": "Puedo tomar decisiones difíciles sin que mis emociones me detengan." },
-    { "id": 4, "trait": "N", "direction": "+", "text": "Me agrada ser el centro de atención y recibir elogios." },
-    { "id": 5, "trait": "M", "direction": "+", "text": "A veces utilizo mi influencia social para obtener lo que deseo." },
-    { "id": 6, "trait": "P", "direction": "+", "text": "No me intimido fácilmente ante situaciones de riesgo." },
-    { "id": 7, "trait": "N", "direction": "-", "text": "Prefiero mantener la humildad y no busco destacar sobre los demás." },
-    { "id": 8, "trait": "M", "direction": "-", "text": "Creo que la honestidad es la base de cualquier relación duradera." },
-    { "id": 9, "trait": "P", "direction": "-", "text": "Me conmuevo profundamente ante el sufrimiento de otras personas." },
-    { "id": 10, "trait": "N", "direction": "+", "text": "Aspiro a alcanzar una posición de gran influencia y liderazgo." },
-    { "id": 11, "trait": "M", "direction": "+", "text": "En entornos competitivos, priorizo obtener resultados efectivos." },
-    { "id": 12, "trait": "P", "direction": "+", "text": "Me atraen los nuevos desafíos, incluso si implican cierta audacia." }
+    { "id": 1, "trait": "N", "direction": "+", "text": "Siento que soy una persona especial y merezco un mejor trato que los demás." },
+    { "id": 2, "trait": "M", "direction": "+", "text": "Puedo persuadir o manipular hábilmente a las personas para lograr mis objetivos." },
+    { "id": 3, "trait": "P", "direction": "+", "text": "No siento un malestar emocional significativo cuando veo la desgracia o el dolor de otros." },
+    { "id": 4, "trait": "N", "direction": "+", "text": "Disfruto plenamente de las situaciones en las que recibo atención y elogios." },
+    { "id": 5, "trait": "M", "direction": "+", "text": "Tiendo a guardarme la información importante y usarla en el momento oportuno." },
+    { "id": 6, "trait": "P", "direction": "+", "text": "Siento emoción en lugar de miedo al realizar actividades arriesgadas o estimulantes." },
+    { "id": 7, "trait": "N", "direction": "-", "text": "Me considero una persona común e intento actuar con humildad." },
+    { "id": 8, "trait": "M", "direction": "-", "text": "Engañar a alguien para beneficio personal es moralmente inaceptable para mí." }
   ],
   "descriptions": {
-    "N": { "high": "Posees una gran confianza en ti mismo y madera de líder.", "low": "Eres una persona modesta que valora el éxito colectivo." },
-    "M": { "high": "Tienes una mente estratégica capaz de gestionar situaciones complejas.", "low": "Valoras la transparencia y la integridad ética en tus actos." },
-    "P": { "high": "Destacas por tu fortaleza mental y capacidad de actuar bajo presión.", "low": "Eres una persona empática con una gran sensibilidad humana." }
+    "N": { "high": "Tienes mucha confianza y liderazgo, pero podrías ser demasiado consciente de la opinión ajena.", "low": "Eres humilde, cooperativo y valoras los intereses de la comunidad." },
+    "M": { "high": "Eres un estratega orientado a objetivos con un juicio situacional rápido.", "low": "Valoras la comunicación honesta y transparente y te adhieres a tus principios." },
+    "P": { "high": "Mantienes la compostura en las crisis y demuestras una audaz capacidad de decisión.", "low": "Tienes una gran empatía y eres profundamente considerado con los sentimientos de los demás." }
   }
 }
