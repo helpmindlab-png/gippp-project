@@ -1,0 +1,25 @@
+{
+  "items": [
+    { "id": 1, "trait": "E", "direction": "+", "text": "I tend to be the life of the party and enjoy leading conversations." },
+    { "id": 2, "trait": "A", "direction": "+", "text": "I make an effort to sympathize with others' feelings." },
+    { "id": 3, "trait": "C", "direction": "+", "text": "I prefer to get chores and tasks done right away." },
+    { "id": 4, "trait": "N", "direction": "+", "text": "I experience frequent mood swings or emotional shifts." },
+    { "id": 5, "trait": "O", "direction": "+", "text": "I have a vivid imagination and enjoy exploring new ideas." },
+    { "id": 6, "trait": "E", "direction": "-", "text": "I often find myself staying quiet in large groups of people." },
+    { "id": 7, "trait": "A", "direction": "-", "text": "I am sometimes not very interested in other people's problems." },
+    { "id": 8, "trait": "C", "direction": "-", "text": "I often forget to put things back in their proper place." },
+    { "id": 9, "trait": "N", "direction": "-", "text": "I am relaxed most of the time and don't get upset easily." },
+    { "id": 10, "trait": "O", "direction": "-", "text": "I prefer concrete facts over abstract or philosophical ideas." },
+    { "id": 11, "trait": "E", "direction": "+", "text": "I find it easy to talk to many different people at social events." },
+    { "id": 12, "trait": "A", "direction": "+", "text": "I truly feel and understand the emotions of those around me." },
+    { "id": 13, "trait": "C", "direction": "+", "text": "I like to keep my surroundings and work well-organized." },
+    { "id": 14, "trait": "N", "direction": "+", "text": "I tend to get upset or stressed quite easily." },
+    { "id": 15, "trait": "O", "direction": "-", "text": "I sometimes find it difficult to grasp complex abstract concepts." },
+    { "id": 16, "trait": "E", "direction": "-", "text": "I prefer to keep in the background rather than being the center of attention." },
+    { "id": 17, "trait": "A", "direction": "-", "text": "I am not really interested in others' personal affairs." },
+    { "id": 18, "trait": "C", "direction": "-", "text": "I sometimes make a mess of things or struggle with details." },
+    { "id": 19, "trait": "N", "direction": "-", "text": "I seldom feel blue or downhearted." },
+    { "id": 20, "trait": "O", "direction": "-", "text": "I do not consider myself to have a particularly creative imagination." }
+  ],
+  "descriptions": { "E": { "high": "You are social, energetic, and thrive in the company of others.", "low": "You are reflective, independent, and value your quiet time." }, "A": { "high": "You are compassionate, cooperative, and value social harmony.", "low": "You are analytical, competitive, and prioritize objective truth." }, "C": { "high": "You are disciplined, organized, and highly reliable in your work.", "low": "You are flexible, spontaneous, and prefer to go with the flow." }, "N": { "high": "You are emotionally sensitive and highly aware of potential risks.", "low": "You are emotionally resilient and stay calm under pressure." }, "O": { "high": "You are curious, creative, and open to new and complex ideas.", "low": "You are practical, traditional, and prefer proven methods." } }
+}

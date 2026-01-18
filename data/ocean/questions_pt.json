@@ -1,0 +1,25 @@
+{
+  "items": [
+    { "id": 1, "trait": "E", "direction": "+", "text": "Costumo ser o centro das atenções em reuniões sociais e gosto de liderar conversas." },
+    { "id": 2, "trait": "A", "direction": "+", "text": "Esforço-me para compreender e simpatizar com os sentimentos dos outros." },
+    { "id": 3, "trait": "C", "direction": "+", "text": "Prefiro realizar minhas tarefas e obrigações imediatamente." },
+    { "id": 4, "trait": "N", "direction": "+", "text": "Às vezes sinto mudanças frequentes no meu humor ou estado emocional." },
+    { "id": 5, "trait": "O", "direction": "+", "text": "Tenho uma imaginação fértil e gosto de explorar novas ideias." },
+    { "id": 6, "trait": "E", "direction": "-", "text": "Muitas vezes fico em silêncio quando estou em grandes grupos." },
+    { "id": 7, "trait": "A", "direction": "-", "text": "Às veces não me interesso muito pelos problemas de outras pessoas." },
+    { "id": 8, "trait": "C", "direction": "-", "text": "Frequentemente esqueço de colocar as coisas de volta no lugar certo." },
+    { "id": 9, "trait": "N", "direction": "-", "text": "Sinto-me relaxado na maior parte do tempo e não me irrito facilmente." },
+    { "id": 10, "trait": "O", "direction": "-", "text": "Prefiro factos concretos a ideias abstractas ou filosóficas." },
+    { "id": 11, "trait": "E", "direction": "+", "text": "Acho fácil conversar com pessoas diferentes em eventos sociais." },
+    { "id": 12, "trait": "A", "direction": "+", "text": "Sinto e compreendo genuinamente as emoções das pessoas ao meu redor." },
+    { "id": 13, "trait": "C", "direction": "+", "text": "Gosto de manter o meu ambiente e o meu trabalho bem organizados." },
+    { "id": 14, "trait": "N", "direction": "+", "text": "Tenho tendência a sentir-me stressado ou ansioso com facilidade." },
+    { "id": 15, "trait": "O", "direction": "-", "text": "Às vezes acho difícil compreender conceitos abstractos complexos." },
+    { "id": 16, "trait": "E", "direction": "-", "text": "Prefiro ficar em segundo plano em vez de ser o centro das atenções." },
+    { "id": 17, "trait": "A", "direction": "-", "text": "Não costumo ter muito interesse nos assuntos pessoais de terceiros." },
+    { "id": 18, "trait": "C", "direction": "-", "text": "Às vezes sou descuidado com detalhes ou não finalizo o que comecei." },
+    { "id": 19, "trait": "N", "direction": "-", "text": "Raramente me sinto desanimado ou triste." },
+    { "id": 20, "trait": "O", "direction": "-", "text": "Não me considero uma pessoa com uma imaginação particularmente criativa." }
+  ],
+  "descriptions": { "E": { "high": "Você é sociável, ativo e brilha em companhia de outras pessoas.", "low": "Você é reflexivo, independente e valoriza seu tempo sozinho." }, "A": { "high": "Você é compassivo, cooperativo e valoriza a harmonia social.", "low": "Você pensa de forma objetiva e lógica, priorizando a independência." }, "C": { "high": "Você é responsável, organizado e persegue seus objetivos com firmeza.", "low": "Você é flexível, espontâneo e adapta-se intuitivamente às situações." }, "N": { "high": "Você é emocionalmente sensível e percebe riscos precocemente.", "low": "Você é emocionalmente estável e mantém a calma sob pressão." }, "O": { "high": "Você é curioso, criativo e aberto a novas mudanças.", "low": "Você é realista, prático e valoriza a tradição e a experiência." } }
+}
