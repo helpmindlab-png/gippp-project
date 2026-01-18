@@ -1,0 +1,22 @@
+{
+  "traitNames": { "N": "Narcisismo", "M": "Maquiavelismo", "P": "Psicopatía" },
+  "items": [
+    { "id": 1, "trait": "N", "direction": "+", "text": "Siento que merezco un trato especial por parte de los demás." },
+    { "id": 2, "trait": "M", "direction": "+", "text": "Tiendo a convencer a otros para lograr mis propios objetivos." },
+    { "id": 3, "trait": "P", "direction": "+", "text": "Puedo tomar decisiones difíciles sin que mis emociones me detengan." },
+    { "id": 4, "trait": "N", "direction": "+", "text": "Me agrada ser el centro de atención y recibir elogios." },
+    { "id": 5, "trait": "M", "direction": "+", "text": "A veces utilizo mi influencia social para obtener lo que deseo." },
+    { "id": 6, "trait": "P", "direction": "+", "text": "No me intimido fácilmente ante situaciones de riesgo." },
+    { "id": 7, "trait": "N", "direction": "-", "text": "Prefiero mantener la humildad y no busco destacar sobre los demás." },
+    { "id": 8, "trait": "M", "direction": "-", "text": "Creo que la honestidad es la base de cualquier relación duradera." },
+    { "id": 9, "trait": "P", "direction": "-", "text": "Me conmuevo profundamente ante el sufrimiento de otras personas." },
+    { "id": 10, "trait": "N", "direction": "+", "text": "Aspiro a alcanzar una posición de gran influencia y liderazgo." },
+    { "id": 11, "trait": "M", "direction": "+", "text": "En entornos competitivos, priorizo obtener resultados efectivos." },
+    { "id": 12, "trait": "P", "direction": "+", "text": "Me atraen los nuevos desafíos, incluso si implican cierta audacia." }
+  ],
+  "descriptions": {
+    "N": { "high": "Posees una gran confianza en ti mismo y madera de líder.", "low": "Eres una persona modesta que valora el éxito colectivo." },
+    "M": { "high": "Tienes una mente estratégica capaz de gestionar situaciones complejas.", "low": "Valoras la transparencia y la integridad ética en tus actos." },
+    "P": { "high": "Destacas por tu fortaleza mental y capacidad de actuar bajo presión.", "low": "Eres una persona empática con una gran sensibilidad humana." }
+  }
+}
