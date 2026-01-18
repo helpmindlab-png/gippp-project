@@ -1,4 +1,5 @@
 {
+  "traitNames": {"L": "Kiểm soát nội tại"},
   "items": [
     { "id": 1, "trait": "L", "direction": "+", "text": "Những gì xảy ra trong cuộc sống của tôi chủ yếu phụ thuộc vào nỗ lực của chính tôi." },
     { "id": 2, "trait": "L", "direction": "-", "text": "Tôi nghĩ rằng việc thành công hay không trong cuộc sống phần lớn phụ thuộc vào vận may." },
