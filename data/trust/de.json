@@ -1,0 +1,19 @@
+{
+  "traitNames": { "T": "Soziales Vertrauen", "A": "Altruismus" },
+  "items": [
+    { "id": 1, "trait": "T", "direction": "+", "text": "Ich glaube, dass die meisten Menschen im Grunde ehrlich und vertrauenswürdig sind." },
+    { "id": 2, "trait": "A", "direction": "+", "text": "Ich verspüre den Drang, Menschen in schwierigen Situationen sofort zu helfen." },
+    { "id": 3, "trait": "T", "direction": "-", "text": "Ich habe das Gefühl, dass man vorsichtig sein muss, da man sonst ausnutzt wird." },
+    { "id": 4, "trait": "A", "direction": "+", "text": "Ich finde es bereichernd, Zeit und Energie in die Hilfe für andere zu investieren." },
+    { "id": 5, "trait": "T", "direction": "+", "text": "Ich versuche, Fremden mit guten Absichten und Offenheit zu begegnen." },
+    { "id": 6, "trait": "A", "direction": "-", "text": "Ich denke, ich sollte mich erst um meine Probleme kümmern, bevor ich anderen helfe." },
+    { "id": 7, "trait": "T", "direction": "-", "text": "Ich glaube, dass viele Menschen andere täuschen würden, wenn es ihrem Vorteil dient." },
+    { "id": 8, "trait": "A", "direction": "+", "text": "Ich bin überzeugt, dass Ehrenamt und Wohltätigkeit wichtig für die Gesellschaft sind." },
+    { "id": 9, "trait": "T", "direction": "+", "text": "Ich vertraue darauf, dass die Gesetze und Systeme in unserer Gesellschaft fair funktionieren." },
+    { "id": 10, "trait": "A", "direction": "-", "text": "Ich investiere ungern Mühe in Aufgaben, die keinen persönlichen Nutzen bringen." }
+  ],
+  "descriptions": {
+    "T": { "high": "Sie haben eine positive Einstellung und sind stark im Aufbau kooperativer Beziehungen.", "low": "Sie sind Realist mit kritischem Blick, geschickt in Risikomanagement und Selbstschutz." },
+    "A": { "high": "Sie sind ein mitfühlender Mensch, der einen großen Wert für die Gemeinschaft darstellt.", "low": "Sie sind pragmatisch und unabhängig, fokussiert auf Effizienz und eigene Ziele." }
+  }
+}
