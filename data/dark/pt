@@ -1,0 +1,22 @@
+{
+  "traitNames": { "N": "Narcisismo", "M": "Maquiavelismo", "P": "Psicopatia" },
+  "items": [
+    { "id": 1, "trait": "N", "direction": "+", "text": "Sinto que mereço um tratamento especial e reconhecimento pelo que sou." },
+    { "id": 2, "trait": "M", "direction": "+", "text": "Tenho facilidade em convencer os outros para alcançar meus objetivos." },
+    { "id": 3, "trait": "P", "direction": "+", "text": "Consigo tomar decisões difíceis sem me deixar levar pelas emoções." },
+    { "id": 4, "trait": "N", "direction": "+", "text": "Gosto de ser o centro das atenções e de ser admirado pelos outros." },
+    { "id": 5, "trait": "M", "direction": "+", "text": "Às vezes utilizo minha influência social para conseguir o que pretendo." },
+    { "id": 6, "trait": "P", "direction": "+", "text": "Não me sinto intimidado facilmente diante de situações de risco." },
+    { "id": 7, "trait": "N", "direction": "-", "text": "Prefiro manter a humildade e não sinto necessidade de me destacar." },
+    { "id": 8, "trait": "M", "direction": "-", "text": "Acredito que a honestidade é a base fundamental de qualquer relação." },
+    { "id": 9, "trait": "P", "direction": "-", "text": "Sinto uma empatia profunda pelas dificuldades e sentimentos alheios." },
+    { "id": 10, "trait": "N", "direction": "+", "text": "Aspiro alcançar uma posição de grande influência e liderança." },
+    { "id": 11, "trait": "M", "direction": "+", "text": "Em ambientes competitivos, foco na eficácia dos resultados obtidos." },
+    { "id": 12, "trait": "P", "direction": "+", "text": "Sinto-me atraído por novos desafios, mesmo que envolvam ousadia." }
+  ],
+  "descriptions": {
+    "N": { "high": "Você possui grande autoconfiança e potencial de liderança carismática.", "low": "Você é uma pessoa modesta que valoriza o sucesso do grupo." },
+    "M": { "high": "Você tem uma mente estratégica e habilidade para lidar com dinâmicas complexas.", "low": "Você valoriza a transparência e a integridade ética em suas ações." },
+    "P": { "high": "Você se destaca pela resiliência mental e capacidade de agir sob pressão.", "low": "Você é uma pessoa muito empática e com grande sensibilidade humana." }
+  }
+}
