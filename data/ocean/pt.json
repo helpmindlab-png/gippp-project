@@ -1,4 +1,26 @@
 {
+  "ui": {
+    "desc": "A forma mais sensata de ler o seu eu interior",
+    "security": "🔒 Segurança: Nenhum dado armazenado",
+    "testNames": {
+      "ocean": "Meu Verdadeiro Eu (Big Five)",
+      "dark": "Buscador de Vilões",
+      "loc": "Mentalidade de Sucesso",
+      "resilience": "Teste de Resiliência",
+      "trust": "Termômetro de Relações"
+    },
+    "processing": "Analisando seus padrões comportamentais...",
+    "reportTitle": "Relatório de Perfil de Vilão",
+    "recommendTitle": "💡 Recomendado para você",
+    "viewAmazon": "Ver produtos recomendados",
+    "saveImg": "📸 Salvar imagem do relatório",
+    "retest": "Reiniciar teste",
+    "qrNote": "Escaneie para salvar",
+    "viralTitle": "Curioso sobre o seu resultado?",
+    "viralSub": "Escaneie o QR para começar",
+    "labels": ["Discordo totalmente", "Discordo", "Neutro", "Concordo", "Concordo totalmente"],
+    "amazonKeywords": { "N": "leadership books", "M": "strategy games", "P": "psychology books" }
+  },
   "traitNames": {"E": "Extroversão", "A": "Amabilidade", "C": "Conscienciosidade", "N": "Neuroticismo", "O": "Abertura"},
   "items": [
     { "id": 1, "trait": "E", "direction": "+", "text": "Costumo ser o centro das atenções em reuniões sociais e gosto de liderar conversas." },
