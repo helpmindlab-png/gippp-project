@@ -1,4 +1,5 @@
 {
+  "traitNames": {"L": "Locus de Controlo Interno"},
   "items": [
     { "id": 1, "trait": "L", "direction": "+", "text": "O que acontece na minha vida depende principalmente dos meus próprios esforços." },
     { "id": 2, "trait": "L", "direction": "-", "text": "Acredito que ter sucesso na vida é, em grande parte, uma questão de sorte." },
