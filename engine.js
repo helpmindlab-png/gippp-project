@@ -4,7 +4,6 @@ const GIPPP_ENGINE = (() => {
         questions: [], descriptions: {}, traitNames: {}, ui: {}, guide: {}, results: null 
     };
 
-    // [하드닝] 10개 국어 마스터 사전 (JSON 로드 전 대문 즉시 렌더링용)
     const i18n = {
         ko: { desc: "당신을 읽어내는 가장 감각적인 방법", tests: { ocean: "나의 본캐 분석", dark: "내 안의 빌런 찾기", loc: "성공 마인드셋", resilience: "강철 멘탈 테스트", trust: "인간관계 온도계" }, sub: "Professional Analysis" },
         en: { desc: "The most sensible way to read you", tests: { ocean: "True Self (Big 5)", dark: "Villain Finder", loc: "Success Mindset", resilience: "Resilience Test", trust: "Social Trust" }, sub: "Professional Analysis" },
@@ -41,15 +40,12 @@ const GIPPP_ENGINE = (() => {
         state.testId = urlParams.get('test');
         state.lang = urlParams.get('lang') || navigator.language.substring(0, 2);
         
-        // 10개 국어 리스트 확보
         const langs = Object.keys(i18n);
         if (!langs.includes(state.lang)) state.lang = 'en';
 
-        // 언어 선택기 10개 국어 모두 생성
         ui.langSelect.innerHTML = langs.map(l => `<option value="${l}" ${state.lang === l ? 'selected' : ''}>${l.toUpperCase()}</option>`).join('');
         document.documentElement.dir = (state.lang === 'ar') ? 'rtl' : 'ltr';
 
-        // 대문 기본 문구 즉시 설정
         const currentI18n = i18n[state.lang];
         ui.brandDesc.innerText = currentI18n.desc;
 
@@ -59,7 +55,12 @@ const GIPPP_ENGINE = (() => {
             decodeAndShowResult(resData);
         } else if (state.testId) {
             await loadData();
-            renderGuide(); 
+            // [수정] 가이드 데이터가 있으면 가이드 노출, 없으면 즉시 설문 시작
+            if (state.guide && state.guide.purpose) {
+                renderGuide();
+            } else {
+                startTest();
+            }
         } else {
             renderWelcome();
         }
@@ -71,14 +72,14 @@ const GIPPP_ENGINE = (() => {
             const r = await fetch(`./data/${targetTest}/${state.lang}.json`);
             if (!r.ok) throw new Error("JSON missing");
             const d = await r.json();
-            state.ui = d.ui;
+            state.ui = d.ui || {};
             state.guide = d.guide || {};
             state.questions = d.items || [];
             state.descriptions = d.descriptions || {};
             state.traitNames = d.traitNames || {};
         } catch (e) { 
             console.error("Data Load Error:", e);
-            state.ui = { processing: "Analyzing...", reportTitle: "Result", labels: ["-", "-", "Neutral", "-", "-"] };
+            ui.questionContainer.innerHTML = "<h3>Data Load Error</h3><p>Please check if the JSON file exists in /data/ folder.</p>";
         }
     };
 
@@ -87,7 +88,6 @@ const GIPPP_ENGINE = (() => {
         ui.header.style.display = 'block';
         ui.testView.style.display = 'none';
         const currentI18n = i18n[state.lang];
-        
         ui.testGrid.innerHTML = testList.map(t => `
             <div class="test-card" onclick="GIPPP_ENGINE.changeTest('${t.id}')">
                 <span class="emoji">${t.emoji}</span>
@@ -115,11 +115,19 @@ const GIPPP_ENGINE = (() => {
         ui.optionsGroup.innerHTML = '';
     };
 
-    const startTest = () => { renderQuestion(); };
+    const startTest = () => {
+        ui.welcomeView.style.display = 'none';
+        ui.header.style.display = 'none';
+        ui.testView.style.display = 'block';
+        renderQuestion();
+    };
 
     const renderQuestion = () => {
+        if (!state.questions || state.questions.length === 0) {
+            ui.questionContainer.innerHTML = "<h3>No Questions Found</h3>";
+            return;
+        }
         const q = state.questions[state.currentIndex];
-        if (!q) return;
         ui.questionContainer.innerHTML = `<div class="q-text">${q.text}</div>`;
         ui.optionsGroup.innerHTML = '';
         const labels = state.ui.labels || ["-", "-", "-", "-", "-"];
@@ -138,7 +146,7 @@ const GIPPP_ENGINE = (() => {
     };
 
     const showProcessing = () => {
-        ui.questionContainer.innerHTML = `<div style="padding:40px 0;"><div class="spinner"></div><h3>${state.ui.processing}</h3></div>`;
+        ui.questionContainer.innerHTML = `<div style="padding:40px 0;"><div class="spinner"></div><h3>${state.ui.processing || 'Analyzing...'}</h3></div>`;
         ui.optionsGroup.innerHTML = '';
         ui.midAd.style.display = 'block';
         setTimeout(calculateAndRender, 3000);
@@ -159,15 +167,17 @@ const GIPPP_ENGINE = (() => {
         const qrImgUrl = `https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=${encodeURIComponent(shareUrl)}`;
         
         let maxTrait = '', maxScore = -1;
-        let reportHtml = `<div class="result-card"><div class="result-header"><h2>${state.ui.reportTitle}</h2></div><div class="result-body">`;
+        let reportHtml = `<div class="result-card"><div class="result-header"><h2>${state.ui.reportTitle || 'Result'}</h2></div><div class="result-body">`;
         
         for (const [trait, data] of Object.entries(state.results)) {
             const p = Math.round((data.total / (data.count * 5)) * 100);
             if (p > maxScore) { maxScore = p; maxTrait = trait; }
-            reportHtml += `<div class="trait-row"><div class="trait-label"><span>${state.traitNames[trait] || trait}</span> <span>${p}%</span></div><div class="bar-bg"><div class="bar-fill" style="width:${p}%"></div></div><p style="font-size:0.85rem; color:#666; margin-top:8px;">${p >= 50 ? state.descriptions[trait].high : state.descriptions[trait].low}</p></div>`;
+            const traitName = state.traitNames[trait] || trait;
+            const desc = state.descriptions[trait] ? (p >= 50 ? state.descriptions[trait].high : state.descriptions[trait].low) : "";
+            reportHtml += `<div class="trait-row"><div class="trait-label"><span>${traitName}</span> <span>${p}%</span></div><div class="bar-bg"><div class="bar-fill" style="width:${p}%"></div></div><p style="font-size:0.85rem; color:#666; margin-top:8px;">${desc}</p></div>`;
         }
 
-        reportHtml += `<div class="recommend-box"><h4>${state.ui.recommendTitle}</h4><a href="https://www.amazon.com/s?k=${state.ui.amazonKeywords[maxTrait] || 'psychology'}" target="_blank" class="amazon-btn">${state.ui.viewAmazon}</a></div><div class="qr-section"><img id="qrImage" src="${qrImgUrl}" crossorigin="anonymous"><p style="font-size:0.8rem; color:#999; margin-top:10px;">${state.ui.qrNote}</p></div></div><button class="btn-main" onclick="GIPPP_ENGINE.generateImage()">${state.ui.saveImg}</button><button class="btn-sub" onclick="GIPPP_ENGINE.cleanExit()">${state.ui.retest}</button></div><canvas id="resultCanvas" style="display:none;"></canvas>`;
+        reportHtml += `<div class="recommend-box"><h4>${state.ui.recommendTitle || 'Recommend'}</h4><a href="https://www.amazon.com/s?k=${state.ui.amazonKeywords ? state.ui.amazonKeywords[maxTrait] : 'psychology'}" target="_blank" class="amazon-btn">${state.ui.viewAmazon || 'View'}</a></div><div class="qr-section"><img id="qrImage" src="${qrImgUrl}" crossorigin="anonymous"><p style="font-size:0.8rem; color:#999; margin-top:10px;">${state.ui.qrNote || ''}</p></div></div><button class="btn-main" onclick="GIPPP_ENGINE.generateImage()">${state.ui.saveImg || 'Save'}</button><button class="btn-sub" onclick="GIPPP_ENGINE.cleanExit()">${state.ui.retest || 'Retest'}</button></div><canvas id="resultCanvas" style="display:none;"></canvas>`;
         
         ui.testView.innerHTML = reportHtml;
         ui.testView.style.display = 'block';
@@ -190,16 +200,17 @@ const GIPPP_ENGINE = (() => {
         ctx.fillStyle = '#ffffff'; ctx.fillRect(0, 0, 600, 900);
         ctx.fillStyle = '#3498db'; ctx.fillRect(0, 0, 600, 120);
         ctx.fillStyle = '#ffffff'; ctx.font = 'bold 36px sans-serif'; ctx.textAlign = 'center';
-        ctx.fillText(state.ui.reportTitle, 300, 75);
+        ctx.fillText(state.ui.reportTitle || 'Result', 300, 75);
         let y = 220;
         traits.forEach(([t, d]) => {
             const p = Math.round((d.total / (d.count * 5)) * 100);
             ctx.fillStyle = '#2c3e50'; ctx.font = 'bold 26px sans-serif';
-            if (isRTL) { ctx.textAlign = 'right'; ctx.fillText(state.traitNames[t] || t, 530, y); ctx.textAlign = 'left'; ctx.fillText(`${p}%`, 70, y); }
-            else { ctx.textAlign = 'left'; ctx.fillText(state.traitNames[t] || t, 70, y); ctx.textAlign = 'right'; ctx.fillText(`${p}%`, 530, y); }
+            const name = state.traitNames[t] || t;
+            if (isRTL) { ctx.textAlign = 'right'; ctx.fillText(name, 530, y); ctx.textAlign = 'left'; ctx.fillText(`${p}%`, 70, y); }
+            else { ctx.textAlign = 'left'; ctx.fillText(name, 70, y); ctx.textAlign = 'right'; ctx.fillText(`${p}%`, 530, y); }
             ctx.fillStyle = '#f0f0f0'; ctx.fillRect(70, y + 15, 460, 18);
             ctx.fillStyle = '#3498db';
-            if (isRTL) ctx.fillRect(530 - (460 * p / 100), y + 15, (480 * p) / 100, 18);
+            if (isRTL) ctx.fillRect(530 - (460 * p / 100), y + 15, (460 * p) / 100, 18);
             else ctx.fillRect(70, y + 15, (460 * p) / 100, 18);
             y += 110;
         });
@@ -207,9 +218,9 @@ const GIPPP_ENGINE = (() => {
         if (qrImg && qrImg.complete) { ctx.fillStyle = '#ffffff'; ctx.fillRect(50, 725, 150, 150); ctx.drawImage(qrImg, 60, 735, 130, 130); }
         ctx.fillStyle = '#2c3e50'; ctx.font = 'bold 22px sans-serif'; ctx.textAlign = isRTL ? 'right' : 'left';
         const tx = isRTL ? 540 : 220;
-        ctx.fillText(state.ui.viralTitle, tx, 780);
+        ctx.fillText(state.ui.viralTitle || '', tx, 780);
         ctx.fillStyle = '#7f8c8d'; ctx.font = '18px sans-serif';
-        ctx.fillText(state.ui.viralSub, tx, 815);
+        ctx.fillText(state.ui.viralSub || '', tx, 815);
         ctx.fillStyle = '#3498db'; ctx.font = 'bold 16px sans-serif'; ctx.fillText('gippp.github.io', tx, 845);
         const link = document.createElement('a'); link.download = `GIPPP_Result.png`; link.href = canvas.toDataURL('image/png'); link.click();
     };
