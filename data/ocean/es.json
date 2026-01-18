@@ -10,7 +10,7 @@
       "trust": "Termómetro de Relaciones"
     },
     "processing": "Analizando tus patrones de conducta...",
-    "reportTitle": "Informe de Perfil de Villano",
+    "reportTitle": "Informe de Personalidad Big Five",
     "recommendTitle": "💡 Recomendado para ti",
     "viewAmazon": "Ver productos recomendados",
     "saveImg": "📸 Guardar imagen del informe",
@@ -19,7 +19,7 @@
     "viralTitle": "¿Curioso por tu resultado?",
     "viralSub": "Escanea el QR para empezar",
     "labels": ["Muy en desacuerdo", "En desacuerdo", "Neutral", "De acuerdo", "Muy de acuerdo"],
-    "amazonKeywords": { "N": "leadership books", "M": "strategy games", "P": "psychology books" }
+    "amazonKeywords": { "E": "party games", "A": "gift sets", "C": "planner", "N": "meditation", "O": "art supplies" }
   },
   "traitNames": {"E": "Extraversión", "A": "Amabilidad", "C": "Responsabilidad", "N": "Neuroticismo", "O": "Apertura"},
   "items": [
