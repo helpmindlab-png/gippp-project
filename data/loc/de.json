@@ -1,4 +1,5 @@
 {
+  "traitNames": {"L": "Internale Kontrollüberzeugung"},
   "items": [
     { "id": 1, "trait": "L", "direction": "+", "text": "Was in meinem Leben passiert, hängt hauptsächlich von meinen eigenen Anstrengungen ab." },
     { "id": 2, "trait": "L", "direction": "-", "text": "Ich glaube, dass Erfolg im Leben zu einem großen Teil eine Frage des Glücks ist." },
