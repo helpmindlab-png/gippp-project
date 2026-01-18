@@ -1,0 +1,22 @@
+{
+  "traitNames": { "N": "Narzissmus", "M": "Machiavellismus", "P": "Psychopathie" },
+  "items": [
+    { "id": 1, "trait": "N", "direction": "+", "text": "Ich habe das Gefühl, dass mir aufgrund meiner Position eine besondere Behandlung zusteht." },
+    { "id": 2, "trait": "M", "direction": "+", "text": "Ich verstehe es, andere zu überzeugen, um meine Ziele effizient zu erreichen." },
+    { "id": 3, "trait": "P", "direction": "+", "text": "Ich kann schwierige Entscheidungen treffen, ohne mich von Emotionen leiten zu lassen." },
+    { "id": 4, "trait": "N", "direction": "+", "text": "Ich genieße es, im Mittelpunkt zu stehen und Anerkennung zu erhalten." },
+    { "id": 5, "trait": "M", "direction": "+", "text": "Ich nutze gelegentlich meinen sozialen Einfluss, um meine Absichten durchzusetzen." },
+    { "id": 6, "trait": "P", "direction": "+", "text": "Ich lasse mich von riskanten Situationen nicht so leicht einschüchtern." },
+    { "id": 7, "trait": "N", "direction": "-", "text": "Ich bleibe lieber bescheiden und dränge mich nicht in den Vordergrund." },
+    { "id": 8, "trait": "M", "direction": "-", "text": "Ich bin der Überzeugung, dass Ehrlichkeit die beste Grundlage für Erfolg ist." },
+    { "id": 9, "trait": "P", "direction": "-", "text": "Das Leid oder die Probleme anderer Menschen berühren mich sehr tief." },
+    { "id": 10, "trait": "N", "direction": "+", "text": "Ich strebe nach einer einflussreichen Position mit hoher Entscheidungsgewalt." },
+    { "id": 11, "trait": "M", "direction": "+", "text": "In Wettbewerbssituationen ist für mich das Erreichen des Ergebnisses entscheidend." },
+    { "id": 12, "trait": "P", "direction": "+", "text": "Ich reize gerne neue Herausforderungen aus, auch wenn sie mit Wagemut verbunden sind." }
+  ],
+  "descriptions": {
+    "N": { "high": "Sie besitzen ein starkes Selbstbewusstsein und natürliches Führungspotenzial.", "low": "Sie sind bescheiden und stellen den gemeinsamen Erfolg über persönliche Anerkennung." },
+    "M": { "high": "Sie denken strategisch und können komplexe soziale Gefüge sicher navigieren.", "low": "Sie legen großen Wert auf Transparenz und ethische Integrität." },
+    "P": { "high": "Sie zeichnen sich durch mentale Stärke und kühles Handeln in Krisenzeiten aus.", "low": "Sie sind sehr empathisch und besitzen ein hohes Maß an zwischenmenschlichem Verständnis." }
+  }
+}
