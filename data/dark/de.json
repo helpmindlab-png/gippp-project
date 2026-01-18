@@ -2,13 +2,7 @@
   "ui": {
     "desc": "Der sensibelste Weg, Ihr inneres Selbst zu verstehen",
     "security": "🔒 Sicherheit: Keine Datenspeicherung",
-    "testNames": {
-      "ocean": "Mein wahres Ich (Big Five)",
-      "dark": "Bösewicht-Finder",
-      "loc": "Erfolgs-Mindset",
-      "resilience": "Resilienz-Test",
-      "trust": "Beziehungs-Thermometer"
-    },
+    "testNames": { "ocean": "Big Five", "dark": "Bösewicht-Finder", "loc": "Erfolgs-Mindset", "resilience": "Resilienz", "trust": "Vertrauen" },
     "processing": "Verhaltensmuster werden analysiert...",
     "reportTitle": "Bösewicht-Profiling-Bericht",
     "recommendTitle": "💡 Empfehlung für Sie",
@@ -16,29 +10,32 @@
     "saveImg": "📸 Bericht als Bild speichern",
     "retest": "Test wiederholen",
     "qrNote": "Scannen zum Speichern",
-    "viralTitle": "Neugierig auf Ihre Analyse?",
+    "viralTitle": "Neugierig auf Ihren inneren Bösewicht?",
     "viralSub": "QR-Code scannen, um zu starten",
     "labels": ["Stimme gar nicht zu", "Stimme nicht zu", "Neutral", "Stimme zu", "Stimme voll zu"],
     "amazonKeywords": { "N": "leadership books", "M": "strategy games", "P": "psychology books" }
   },
+  "guide": {
+    "ipipId": "IPIP-D3-27",
+    "purpose": "Dieser Test misst die 'Dunkle Triade' der Persönlichkeit, um Ihre verborgenen sozialen Strategien und Instinkte zu analysieren.",
+    "instruction": "Bitte lesen Sie jede Aussage und wählen Sie die Option, die Sie am besten beschreibt. Ehrliche Antworten führen zu einem genaueren Profil.",
+    "interpretation": "Die Ergebnisse bestehen aus Narzissmus, Machiavellismus und Psychopathie. Diese Indikatoren spiegeln Ihre Überlebensstrategien wider, kein moralisches Urteil.",
+    "startBtn": "Analyse starten"
+  },
   "traitNames": { "N": "Narzissmus", "M": "Machiavellismus", "P": "Psychopathie" },
   "items": [
-    { "id": 1, "trait": "N", "direction": "+", "text": "Ich habe das Gefühl, dass mir aufgrund meiner Position eine besondere Behandlung zusteht." },
-    { "id": 2, "trait": "M", "direction": "+", "text": "Ich verstehe es, andere zu überzeugen, um meine Ziele effizient zu erreichen." },
-    { "id": 3, "trait": "P", "direction": "+", "text": "Ich kann schwierige Entscheidungen treffen, ohne mich von Emotionen leiten zu lassen." },
-    { "id": 4, "trait": "N", "direction": "+", "text": "Ich genieße es, im Mittelpunkt zu stehen und Anerkennung zu erhalten." },
-    { "id": 5, "trait": "M", "direction": "+", "text": "Ich nutze gelegentlich meinen sozialen Einfluss, um meine Absichten durchzusetzen." },
-    { "id": 6, "trait": "P", "direction": "+", "text": "Ich lasse mich von riskanten Situationen nicht so leicht einschüchtern." },
-    { "id": 7, "trait": "N", "direction": "-", "text": "Ich bleibe lieber bescheiden und dränge mich nicht in den Vordergrund." },
-    { "id": 8, "trait": "M", "direction": "-", "text": "Ich bin der Überzeugung, dass Ehrlichkeit die beste Grundlage für Erfolg ist." },
-    { "id": 9, "trait": "P", "direction": "-", "text": "Das Leid oder die Probleme anderer Menschen berühren mich sehr tief." },
-    { "id": 10, "trait": "N", "direction": "+", "text": "Ich strebe nach einer einflussreichen Position mit hoher Entscheidungsgewalt." },
-    { "id": 11, "trait": "M", "direction": "+", "text": "In Wettbewerbssituationen ist für mich das Erreichen des Ergebnisses entscheidend." },
-    { "id": 12, "trait": "P", "direction": "+", "text": "Ich reize gerne neue Herausforderungen aus, auch wenn sie mit Wagemut verbunden sind." }
+    { "id": 1, "trait": "N", "direction": "+", "text": "Ich habe das Gefühl, dass ich eine besondere Person bin und eine bessere Behandlung als andere verdiene." },
+    { "id": 2, "trait": "M", "direction": "+", "text": "Ich kann Menschen geschickt überzeugen oder manipulieren, um meine Ziele zu erreichen." },
+    { "id": 3, "trait": "P", "direction": "+", "text": "Ich empfinde kein nennenswertes emotionales Leid, wenn ich das Unglück oder den Schmerz anderer sehe." },
+    { "id": 4, "trait": "N", "direction": "+", "text": "Ich genieße Situationen, in denen ich Aufmerksamkeit und Lob erhalte, in vollen Zügen." },
+    { "id": 5, "trait": "M", "direction": "+", "text": "Ich neige dazu, wichtige Informationen für mich zu behalten und sie im richtigen Moment zu nutzen." },
+    { "id": 6, "trait": "P", "direction": "+", "text": "Ich empfinde eher Nervenkitzel als Angst, wenn ich riskante oder stimulierende Dinge tue." },
+    { "id": 7, "trait": "N", "direction": "-", "text": "Ich betrachte mich als gewöhnlichen Menschen und versuche, bescheiden zu handeln." },
+    { "id": 8, "trait": "M", "direction": "-", "text": "Jemanden zum persönlichen Vorteil zu täuschen, ist für mich moralisch inakzeptabel." }
   ],
   "descriptions": {
-    "N": { "high": "Sie besitzen ein starkes Selbstbewusstsein und natürliches Führungspotenzial.", "low": "Sie sind bescheiden und stellen den gemeinsamen Erfolg über persönliche Anerkennung." },
-    "M": { "high": "Sie denken strategisch und können komplexe soziale Gefüge sicher navigieren.", "low": "Sie legen großen Wert auf Transparenz und ethische Integrität." },
-    "P": { "high": "Sie zeichnen sich durch mentale Stärke und kühles Handeln in Krisenzeiten aus.", "low": "Sie sind sehr empathisch und besitzen ein hohes Maß an zwischenmenschlichem Verständnis." }
+    "N": { "high": "Sie haben ein hohes Selbstbewusstsein und eine starke Führungspersönlichkeit, achten aber vielleicht zu sehr auf die Meinung anderer.", "low": "Sie sind bescheiden, kooperativ und schätzen die Interessen der Gemeinschaft." },
+    "M": { "high": "Sie sind ein strategischer und zielorientierter Macher mit schnellem Urteilsvermögen.", "low": "Sie legen Wert auf ehrliche, transparente Kommunikation und halten sich an Prinzipien." },
+    "P": { "high": "Sie bewahren in Krisen die Ruhe und beweisen mutige Entscheidungsfähigkeit.", "low": "Sie besitzen eine hohe Empathie und nehmen Rücksicht auf die Gefühle anderer." }
   }
 }
