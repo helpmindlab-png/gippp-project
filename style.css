@@ -1,42 +1,72 @@
-/* 스텔스 대문을 위한 감각적 스타일링 */
-#welcome-view { animation: fadeIn 0.8s ease-out; }
-
-.hero-banner { padding: 30px 0; text-align: center; }
-.hero-banner h2 { font-size: 1.8rem; color: #2c3e50; margin-bottom: 10px; letter-spacing: -1px; }
-.hero-banner p { color: #7f8c8d; font-size: 0.9rem; }
-
-.test-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; padding: 10px; }
-
-.test-card {
-    background: #fff;
-    border-radius: 24px;
-    padding: 20px 15px;
-    text-align: center;
-    border: 1px solid #edf2f7;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.02);
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    position: relative;
-    overflow: hidden;
+:root {
+    --primary: #3498db;
+    --dark: #2c3e50;
+    --bg: #f8f9fa;
+    --card: #ffffff;
 }
 
-.test-card:hover { transform: translateY(-8px); box-shadow: 0 12px 20px rgba(0,0,0,0.08); }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background: var(--bg); margin: 0; color: var(--dark); line-height: 1.6; }
 
-/* 다크 트라이어드 카드 (빌런 컨셉) 강조 */
+#app { max-width: 500px; margin: 0 auto; min-height: 100vh; display: flex; flex-direction: column; background: #fff; box-shadow: 0 0 20px rgba(0,0,0,0.05); }
+
+/* Navigation */
+.global-nav { display: flex; justify-content: space-between; align-items: center; padding: 15px 20px; background: #fff; border-bottom: 1px solid #eee; }
+.live-status { font-size: 0.75rem; color: #27ae60; font-weight: bold; display: flex; align-items: center; gap: 5px; }
+.dot { width: 8px; height: 8px; background: #27ae60; border-radius: 50%; animation: blink 1.5s infinite; }
+@keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0.3; } }
+
+/* Header */
+header { padding: 40px 20px; text-align: center; }
+#brand { font-size: 2.5rem; font-weight: 900; margin: 0; letter-spacing: -2px; color: var(--dark); }
+#brand-desc { font-size: 0.9rem; color: #7f8c8d; margin: 10px 0; }
+.security-badge { display: inline-block; font-size: 0.7rem; background: #f1f2f6; padding: 4px 12px; border-radius: 20px; color: #2f3542; }
+
+/* Welcome View - Stealth Cards */
+.hero-banner { padding: 0 20px 20px; text-align: center; }
+.hero-banner h2 { font-size: 1.4rem; margin-bottom: 8px; }
+.test-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; padding: 20px; }
+.test-card { 
+    background: var(--card); border-radius: 20px; padding: 25px 15px; text-align: center;
+    border: 1px solid #f1f2f6; cursor: pointer; transition: all 0.3s ease; position: relative;
+}
+.test-card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
+.test-card.premium { border: 2px solid #3498db22; }
 .test-card.dark-mode { background: #2d3436; color: #fff; }
-.test-card.dark-mode p { color: #dfe6e9; }
-.test-card.dark-mode:hover { background: #000; }
+.test-card.dark-mode p { color: #bdc3c7; }
+.card-tag { position: absolute; top: 10px; left: 10px; font-size: 0.6rem; font-weight: bold; background: #ff7675; color: #fff; padding: 2px 6px; border-radius: 5px; }
+.emoji { font-size: 2rem; display: block; margin-bottom: 10px; }
+.test-card h3 { font-size: 0.95rem; margin: 5px 0; }
+.test-card p { font-size: 0.75rem; margin: 0; color: #7f8c8d; }
 
-.card-tag {
-    position: absolute; top: 10px; left: 10px;
-    font-size: 0.6rem; font-weight: bold; padding: 3px 8px;
-    border-radius: 10px; background: #ff7675; color: #fff;
+/* Test View */
+#progress-bar { height: 4px; background: #eee; width: 100%; }
+#progress-fill { height: 100%; background: var(--primary); width: 0%; transition: width 0.3s; }
+#question-container { padding: 60px 30px; text-align: center; min-height: 120px; }
+.q-text { font-size: 1.3rem; font-weight: 600; word-break: keep-all; }
+#options-group { padding: 20px; display: flex; flex-direction: column; gap: 10px; }
+.opt-btn { 
+    padding: 18px; border-radius: 15px; border: 1px solid #eee; background: #fff; 
+    font-size: 1rem; cursor: pointer; transition: all 0.2s; 
 }
+.opt-btn:hover { background: #f1f9ff; border-color: var(--primary); color: var(--primary); }
 
-.emoji { font-size: 2.2rem; margin-bottom: 10px; display: block; }
-.test-card h3 { font-size: 1rem; margin: 5px 0; }
-.test-card p { font-size: 0.75rem; margin: 0; }
+/* Result Card */
+.result-card { padding: 30px 20px; }
+.trait-row { margin-bottom: 25px; }
+.trait-info { display: flex; justify-content: space-between; margin-bottom: 8px; }
+.bar-bg { height: 12px; background: #eee; border-radius: 10px; overflow: hidden; }
+.bar-fill { height: 100%; background: var(--primary); }
+.trait-desc { font-size: 0.85rem; color: #636e72; margin-top: 8px; }
+.recommend-box { background: #fff9e6; padding: 20px; border-radius: 15px; text-align: center; margin: 30px 0; }
+.recommend-box a { color: #f39c12; font-weight: bold; text-decoration: none; }
+.qr-section { text-align: center; margin-bottom: 30px; }
+#qrImage { width: 120px; border: 5px solid #fff; box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
+.btn-main { width: 100%; padding: 20px; background: var(--dark); color: #fff; border: none; border-radius: 15px; font-weight: bold; cursor: pointer; margin-bottom: 10px; }
+.btn-sub { width: 100%; padding: 15px; background: none; color: #b2bec3; border: none; cursor: pointer; }
 
-/* 라이브 상태 표시 점 */
-.live-status { font-size: 0.7rem; color: #27ae60; font-weight: bold; display: flex; align-items: center; gap: 5px; }
-.dot { width: 6px; height: 6px; background: #27ae60; border-radius: 50%; animation: blink 1s infinite; }
-@keyframes blink { 0% { opacity: 1; } 50% { opacity: 0.3; } 100% { opacity: 1; } }
+/* Processing */
+.processing-view { text-align: center; padding: 100px 20px; }
+.spinner { width: 40px; height: 40px; border: 4px solid #f3f3f3; border-top: 4px solid var(--primary); border-radius: 50%; animation: spin 1s linear infinite; margin: 0 auto 20px; }
+@keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+
+footer { margin-top: auto; padding: 30px; text-align: center; font-size: 0.75rem; color: #b2bec3; }
