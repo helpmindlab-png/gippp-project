@@ -1,0 +1,22 @@
+{
+  "traitNames": { "N": "Ái kỷ (Tự tin cao)", "M": "Xảo thuật (Chiến lược)", "P": "Lạnh lùng (Quyết đoán)" },
+  "items": [
+    { "id": 1, "trait": "N", "direction": "+", "text": "Tôi cảm thấy mình xứng đáng nhận được sự tôn trọng đặc biệt từ mọi người." },
+    { "id": 2, "trait": "M", "direction": "+", "text": "Tôi có khả năng thuyết phục người khác để đạt được mục tiêu đề ra." },
+    { "id": 3, "trait": "P", "direction": "+", "text": "Tôi có thể giữ bình tĩnh và quyết đoán ngay cả trong tình huống khó khăn." },
+    { "id": 4, "trait": "N", "direction": "+", "text": "Tôi thích được mọi người chú ý và công nhận thành quả của mình." },
+    { "id": 5, "trait": "M", "direction": "+", "text": "Tôi biết cách sử dụng các mối quan hệ để công việc trôi chảy hơn." },
+    { "id": 6, "trait": "P", "direction": "+", "text": "Tôi không ngại đối mặt với rủi ro để thử thách bản thân." },
+    { "id": 7, "trait": "N", "direction": "-", "text": "Tôi thích sự khiêm tốn và không muốn mình quá nổi bật." },
+    { "id": 8, "trait": "M", "direction": "-", "text": "Tôi tin rằng sự chân thành là yếu tố quan trọng nhất trong hợp tác." },
+    { "id": 9, "trait": "P", "direction": "-", "text": "Tôi dễ dàng đồng cảm với những khó khăn của người xung quanh." },
+    { "id": 10, "trait": "N", "direction": "+", "text": "Tôi mong muốn trở thành người có tầm ảnh hưởng trong tổ chức." },
+    { "id": 11, "trait": "M", "direction": "+", "text": "Trong cạnh tranh, kết quả cuối cùng là thước đo quan trọng nhất." },
+    { "id": 12, "trait": "P", "direction": "+", "text": "Tôi thích những trải nghiệm mới lạ mang tính kích thích." }
+  ],
+  "descriptions": {
+    "N": { "high": "Bạn có sự tự tin mạnh mẽ và tố chất của một người dẫn dắt.", "low": "Bạn khiêm tốn và luôn coi trọng sự hòa hợp trong tập thể." },
+    "M": { "high": "Bạn có tư duy chiến lược và khả năng điều phối các mối quan hệ tốt.", "low": "Bạn coi trọng sự minh bạch và đạo đức trong mọi hành động." },
+    "P": { "high": "Bạn có bản lĩnh vững vàng và khả năng chịu áp lực tuyệt vời.", "low": "Bạn là người giàu lòng trắc ẩn và có kết nối cảm xúc sâu sắc." }
+  }
+}
