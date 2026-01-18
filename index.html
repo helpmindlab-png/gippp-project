@@ -5,16 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GIPPP | Global Insight Profiler</title>
     <link rel="stylesheet" href="style.css">
+    <!-- GA4 및 애드센스 코드는 승인 후 여기에 삽입 -->
 </head>
 <body>
     <div id="app">
-        <!-- 상단 네비게이션 -->
         <nav class="global-nav">
             <div class="live-status"><span class="dot"></span> Global Live</div>
             <div class="lang-picker">
                 <select id="lang-select" onchange="GIPPP_ENGINE.changeLanguage(this.value)"></select>
             </div>
         </nav>
+
+        <!-- [AD] 상단 광고 슬롯 -->
+        <div class="ad-slot top-banner">
+            <div class="ad-placeholder">ADVERTISEMENT</div>
+        </div>
 
         <header id="main-header">
             <h1 id="brand">GIPPP</h1>
@@ -23,43 +28,34 @@
         </header>
 
         <main id="main-content">
-            <!-- [대문 섹션: Stealth Welcome View] -->
+            <!-- [대문 섹션] -->
             <section id="welcome-view">
                 <div class="hero-banner">
                     <h2>"진짜 당신은 누구인가요?"</h2>
                     <p>전 세계 사용자들이 선택한 5가지 심리 프로파일링</p>
                 </div>
-                <div class="test-grid">
-                    <div class="test-card premium" onclick="GIPPP_ENGINE.changeTest('ocean')">
-                        <div class="card-tag">BEST</div><span class="emoji">🧬</span>
-                        <h3>나의 본캐 분석</h3><p>성격 5요인 리포트</p>
-                    </div>
-                    <div class="test-card dark-mode" onclick="GIPPP_ENGINE.changeTest('dark')">
-                        <div class="card-tag">HOT</div><span class="emoji">🎭</span>
-                        <h3>내 안의 빌런 찾기</h3><p>숨겨진 본능 분석</p>
-                    </div>
-                    <div class="test-card" onclick="GIPPP_ENGINE.changeTest('loc')">
-                        <span class="emoji">💰</span>
-                        <h3>성공 마인드셋</h3><p>부자가 될 상인가?</p>
-                    </div>
-                    <div class="test-card" onclick="GIPPP_ENGINE.changeTest('resilience')">
-                        <span class="emoji">🛡️</span>
-                        <h3>강철 멘탈 테스트</h3><p>유리멘탈 지수 측정</p>
-                    </div>
-                    <div class="test-card" onclick="GIPPP_ENGINE.changeTest('trust')">
-                        <span class="emoji">🤝</span>
-                        <h3>인간관계 온도계</h3><p>호구 vs 냉혈한</p>
-                    </div>
+                <div id="test-grid" class="test-grid">
+                    <!-- 엔진에서 동적 생성 -->
                 </div>
             </section>
 
             <!-- [테스트 및 결과 섹션] -->
             <section id="test-view" style="display:none;">
                 <div id="progress-bar"><div id="progress-fill"></div></div>
-                <div id="question-container"><div id="question-text"></div></div>
+                <div id="question-container"></div>
                 <div id="options-group"></div>
+                
+                <!-- [AD] 분석 중 노출될 중간 광고 -->
+                <div id="mid-ad" class="ad-slot mid-banner" style="display:none;">
+                    <div class="ad-placeholder">Analyzing your data...</div>
+                </div>
             </section>
         </main>
+
+        <!-- [AD] 하단 고정 광고 -->
+        <div class="ad-slot bottom-banner">
+            <div class="ad-placeholder">ADVERTISEMENT</div>
+        </div>
 
         <footer>
             <div class="footer-links">
