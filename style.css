@@ -1,51 +1,54 @@
-:root {
-    --primary: #4dabf7;
-    --bg: #f8f9fa;
-    --text-main: #212529;
-    --text-dim: #868e96;
-    --accent: #e7f5ff;
+:root { --primary: #3498db; --bg: #f4f7f9; --text: #2c3e50; --dim: #7f8c8d; --white: #ffffff; --max-width: 1000px; }
+body { font-family: 'Pretendard', -apple-system, sans-serif; background: var(--bg); margin: 0; color: var(--text); }
+
+/* Responsive Layout */
+#app { min-height: 100vh; display: flex; flex-direction: column; }
+.content-wrapper, .nav-content, .footer-content { max-width: var(--max-width); margin: 0 auto; width: 100%; padding: 0 20px; box-sizing: border-box; }
+
+/* Navigation */
+.global-nav { background: var(--white); border-bottom: 1px solid #eee; padding: 12px 0; position: sticky; top: 0; z-index: 100; }
+.nav-content { display: flex; justify-content: space-between; align-items: center; }
+.live-status { font-size: 0.75rem; color: #27ae60; font-weight: bold; display: flex; align-items: center; gap: 6px; }
+.dot { width: 7px; height: 7px; background: #27ae60; border-radius: 50%; animation: blink 1.5s infinite; }
+
+/* Hero Section */
+.hero-section { background: var(--primary); color: var(--white); padding: 60px 20px; text-align: center; }
+#brand { font-size: 3.5rem; font-weight: 900; letter-spacing: -3px; margin: 0; }
+.hero-subtitle { font-size: 1rem; opacity: 0.9; margin-top: 10px; }
+
+/* Test Grid (Desktop/Mobile Responsive) */
+.test-grid { 
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); 
+    gap: 20px; padding: 40px 0; 
 }
+.test-card { 
+    background: var(--white); border-radius: 24px; padding: 35px 20px; text-align: center; 
+    border: 1px solid #eee; cursor: pointer; transition: 0.3s; 
+}
+.test-card:hover { transform: translateY(-8px); box-shadow: 0 15px 30px rgba(0,0,0,0.05); border-color: var(--primary); }
+.emoji { font-size: 2.8rem; display: block; margin-bottom: 12px; }
+.test-card h3 { font-size: 1rem; margin: 0; font-weight: 700; }
 
-body { font-family: 'Pretendard', sans-serif; background: var(--bg); margin: 0; color: var(--text-main); }
-#app { max-width: 480px; margin: 0 auto; min-height: 100vh; background: #fff; box-shadow: 0 0 30px rgba(0,0,0,0.05); }
+/* Test Container */
+.test-container { max-width: 550px; margin: 40px auto; background: var(--white); border-radius: 24px; overflow: hidden; box-shadow: 0 10px 25px rgba(0,0,0,0.05); }
+#question-container { padding: 50px 30px; text-align: center; }
+.q-text { font-size: 1.3rem; font-weight: 700; line-height: 1.5; }
+#options-group { padding: 0 30px 40px; display: flex; flex-direction: column; gap: 10px; }
+.opt-btn { padding: 18px; border-radius: 15px; border: 1px solid #eee; background: #fff; font-size: 1rem; cursor: pointer; font-weight: 600; transition: 0.2s; }
+.opt-btn:hover { background: #ebf5ff; border-color: var(--primary); color: var(--primary); }
 
-/* 상단 네비 */
-.global-nav { display: flex; justify-content: space-between; padding: 15px 20px; align-items: center; border-bottom: 1px solid #eee; }
-.live-status { font-size: 0.7rem; color: #40c057; font-weight: bold; display: flex; align-items: center; gap: 5px; }
-.dot { width: 6px; height: 6px; background: #40c057; border-radius: 50%; animation: blink 1s infinite; }
-@keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0.2; } }
-
-/* 헤더 */
-header { padding: 30px 20px; text-align: center; }
-#brand { font-size: 2.5rem; font-weight: 900; color: var(--primary); letter-spacing: -2px; margin: 0; }
-
-/* 가이드 화면 */
-.guide-container { padding: 20px; text-align: center; }
-.guide-title { font-size: 1.5rem; font-weight: 800; margin-bottom: 10px; }
-.guide-box { background: var(--accent); border-radius: 20px; padding: 20px; text-align: left; margin-bottom: 30px; }
-.ipip-info { font-size: 0.7rem; color: var(--text-dim); text-align: center; margin-top: 20px; opacity: 0.5; }
-
-/* 질문 화면 */
-#progress-bar { height: 6px; background: #e9ecef; width: 100%; }
-#progress-fill { height: 100%; background: var(--primary); transition: width 0.3s ease; }
-#question-container { padding: 60px 25px; text-align: center; min-height: 100px; }
-.q-text { font-size: 1.3rem; font-weight: 700; line-height: 1.4; }
-#options-group { padding: 0 20px 40px; display: flex; flex-direction: column; gap: 10px; }
-.opt-btn { padding: 18px; border-radius: 15px; border: 1px solid #dee2e6; background: #fff; font-size: 1rem; cursor: pointer; font-weight: 600; }
-.opt-btn:hover { background: var(--accent); border-color: var(--primary); color: var(--primary); }
-
-/* 결과 카드 */
-.result-card { padding: 20px; }
-.card-inner { background: #fff; border-radius: 30px; padding: 30px 20px; border: 2px solid var(--accent); }
+/* Result Card */
+.result-header { background: var(--primary); color: #fff; padding: 30px; text-align: center; }
+.result-body { padding: 30px; }
 .trait-row { margin-bottom: 25px; }
-.trait-label { display: flex; justify-content: space-between; margin-bottom: 8px; font-weight: 700; }
-.bar-bg { height: 10px; background: #f1f3f5; border-radius: 10px; overflow: hidden; }
-.bar-fill { height: 100%; background: var(--primary); border-radius: 10px; }
-.trait-desc { font-size: 0.85rem; color: #495057; margin-top: 10px; line-height: 1.5; }
+.bar-bg { height: 10px; background: #f0f0f0; border-radius: 5px; margin: 8px 0; overflow: hidden; }
+.bar-fill { height: 100%; background: var(--primary); }
+.qr-section { text-align: center; margin: 30px 0; padding: 20px; background: #f8f9fa; border-radius: 15px; }
+#qrImage { width: 130px; border: 4px solid #fff; }
 
-.recommend-box { background: #fff9db; padding: 20px; border-radius: 20px; text-align: center; margin: 30px 0; }
-.qr-section { text-align: center; margin: 20px 0; }
-#qrImage { width: 120px; border: 4px solid var(--accent); border-radius: 10px; }
+.btn-main { width: calc(100% - 60px); margin: 0 30px 10px; padding: 18px; background: var(--primary); color: #fff; border: none; border-radius: 15px; font-weight: 800; cursor: pointer; }
+.btn-sub { width: 100%; padding: 10px; background: none; border: none; color: #999; cursor: pointer; font-size: 0.8rem; }
 
-.btn-main { width: 100%; padding: 20px; background: var(--primary); color: #fff; border: none; border-radius: 20px; font-weight: 800; font-size: 1.1rem; cursor: pointer; }
-.btn-sub { width: 100%; padding: 15px; background: none; border: none; color: var(--text-dim); cursor: pointer; }
+@keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0.2; } }
+@media (max-width: 600px) { .test-container { margin: 0; border-radius: 0; } }
