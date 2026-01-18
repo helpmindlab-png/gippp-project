@@ -74,7 +74,7 @@ const GIPPP_ENGINE = (() => {
                 ${t.tag ? `<div class="card-tag">${t.tag}</div>` : ''}
                 <span class="emoji">${t.emoji}</span>
                 <h3>${state.ui.testNames[t.id] || t.id.toUpperCase()}</h3>
-                <p>${t.id.toUpperCase()} Profiling</p>
+                <p>Character Analysis</p>
             </div>
         `).join('');
     };
@@ -86,14 +86,14 @@ const GIPPP_ENGINE = (() => {
         
         ui.questionContainer.innerHTML = `
             <div class="guide-container">
-                <div class="ipip-badge">${state.guide.ipipId || 'IPIP-STANDARD'}</div>
                 <h2 class="guide-title">${state.ui.testNames[state.testId]}</h2>
                 <p class="guide-purpose">${state.guide.purpose}</p>
                 <div class="guide-box">
-                    <p>${state.guide.instruction}</p>
-                    <p class="guide-interpretation"><strong>전문가 가이드:</strong> ${state.guide.interpretation}</p>
+                    <p>✨ ${state.guide.instruction}</p>
+                    <p>💡 ${state.guide.interpretation}</p>
                 </div>
-                <button class="btn-main" onclick="GIPPP_ENGINE.startTest()">${state.guide.startBtn || 'Start Analysis'}</button>
+                <button class="btn-main" onclick="GIPPP_ENGINE.startTest()">${state.guide.startBtn || '시작하기'}</button>
+                <p class="ipip-info">Based on ${state.guide.ipipId || 'Standard Method'}</p>
             </div>
         `;
         ui.optionsGroup.innerHTML = '';
@@ -148,17 +148,15 @@ const GIPPP_ENGINE = (() => {
         let maxTrait = '', maxScore = -1;
         let reportHtml = `
             <div class="result-card">
-                <div class="ipip-badge">${state.guide.ipipId || 'IPIP-VERIFIED'}</div>
-                <div class="result-header">
-                    <h2>${state.ui.reportTitle}</h2>
-                </div>`;
+                <div class="card-inner">
+                    <h2>${state.ui.reportTitle}</h2>`;
         
         for (const [trait, data] of Object.entries(state.results)) {
             const p = Math.round((data.total / (data.count * 5)) * 100);
             if (p > maxScore) { maxScore = p; maxTrait = trait; }
             reportHtml += `
                 <div class="trait-row">
-                    <div class="trait-info"><strong>${state.traitNames[trait]}</strong> <span>${p}%</span></div>
+                    <div class="trait-label"><span>${state.traitNames[trait]}</span> <span>${p}%</span></div>
                     <div class="bar-bg"><div class="bar-fill" style="width:${p}%"></div></div>
                     <p class="trait-desc">${p >= 50 ? state.descriptions[trait].high : state.descriptions[trait].low}</p>
                 </div>`;
@@ -167,13 +165,15 @@ const GIPPP_ENGINE = (() => {
         const amazonLink = `https://www.amazon.com/s?k=${state.ui.amazonKeywords[maxTrait] || 'psychology'}&tag=YOUR_TAG`;
 
         reportHtml += `
-            <div class="recommend-box">
-                <h4>${state.ui.recommendTitle}</h4>
-                <a href="${amazonLink}" target="_blank" class="amazon-btn">${state.ui.viewAmazon}</a>
-            </div>
-            <div class="qr-section"><img id="qrImage" src="${qrImgUrl}" crossorigin="anonymous"><p>${state.ui.qrNote}</p></div>
-            <button class="btn-main" onclick="GIPPP_ENGINE.generateImage()">${state.ui.saveImg}</button>
-            <button class="btn-sub" onclick="GIPPP_ENGINE.cleanExit()">${state.ui.retest}</button>
+                    <div class="recommend-box">
+                        <h4>${state.ui.recommendTitle}</h4>
+                        <a href="${amazonLink}" target="_blank" class="amazon-btn">${state.ui.viewAmazon}</a>
+                    </div>
+                    <div class="qr-section"><img id="qrImage" src="${qrImgUrl}" crossorigin="anonymous"><p>${state.ui.qrNote}</p></div>
+                    <button class="btn-main" onclick="GIPPP_ENGINE.generateImage()">${state.ui.saveImg}</button>
+                    <button class="btn-sub" onclick="GIPPP_ENGINE.cleanExit()">${state.ui.retest}</button>
+                    <p class="ipip-info" style="margin-top:20px;">Verified by ${state.guide.ipipId || 'Standard Method'}</p>
+                </div>
             <canvas id="resultCanvas" style="display:none;"></canvas>
         </div>`;
         
@@ -188,61 +188,47 @@ const GIPPP_ENGINE = (() => {
         const traits = Object.entries(state.results);
         
         canvas.width = 600; canvas.height = 850;
-        ctx.fillStyle = '#0f172a'; ctx.fillRect(0, 0, 600, 850);
-        ctx.fillStyle = '#1e293b'; ctx.fillRect(0, 0, 600, 160);
-        ctx.strokeStyle = '#38bdf8'; ctx.lineWidth = 4;
-        ctx.beginPath(); ctx.moveTo(0, 160); ctx.lineTo(600, 160); ctx.stroke();
-        ctx.fillStyle = '#ffffff'; ctx.font = 'bold 36px sans-serif'; ctx.textAlign = 'center';
-        ctx.fillText(state.ui.reportTitle.toUpperCase(), 300, 75);
-        const sessionID = Math.random().toString(36).substring(2, 10).toUpperCase();
-        ctx.fillStyle = '#38bdf8'; ctx.font = '14px monospace';
-        ctx.fillText(`IPIP ID: ${state.guide.ipipId || 'VERIFIED'} // ID: ${sessionID}`, 300, 115);
+        ctx.fillStyle = '#ffffff'; ctx.fillRect(0, 0, 600, 850);
+        
+        // 상단 둥근 배경
+        ctx.fillStyle = '#e7f5ff';
+        ctx.beginPath(); ctx.roundRect(20, 20, 560, 810, 40); ctx.fill();
 
-        let y = 240;
+        // 타이틀
+        ctx.fillStyle = '#4dabf7'; ctx.font = 'bold 32px sans-serif'; ctx.textAlign = 'center';
+        ctx.fillText(state.ui.reportTitle, 300, 100);
+        
+        let y = 200;
         traits.forEach(([t, d]) => {
             const p = Math.round((d.total / (d.count * 5)) * 100);
             const name = state.traitNames[t] || t;
-            ctx.fillStyle = '#f8fafc'; ctx.font = 'bold 22px sans-serif';
+            ctx.fillStyle = '#212529'; ctx.font = 'bold 24px sans-serif';
             if (isRTL) {
-                ctx.textAlign = 'right'; ctx.fillText(name, 540, y);
-                ctx.textAlign = 'left'; ctx.fillText(`${p}%`, 60, y);
+                ctx.textAlign = 'right'; ctx.fillText(name, 530, y);
+                ctx.textAlign = 'left'; ctx.fillText(`${p}%`, 70, y);
             } else {
-                ctx.textAlign = 'left'; ctx.fillText(name, 60, y);
-                ctx.textAlign = 'right'; ctx.fillText(`${p}%`, 540, y);
+                ctx.textAlign = 'left'; ctx.fillText(name, 70, y);
+                ctx.textAlign = 'right'; ctx.fillText(`${p}%`, 530, y);
             }
-            ctx.fillStyle = '#334155'; ctx.fillRect(60, y + 15, 480, 12);
-            const grad = ctx.createLinearGradient(60, 0, 540, 0);
-            grad.addColorStop(0, '#0ea5e9'); grad.addColorStop(1, '#38bdf8');
-            ctx.fillStyle = grad;
-            if (isRTL) ctx.fillRect(540 - (480 * p / 100), y + 15, (480 * p) / 100, 12);
-            else ctx.fillRect(60, y + 15, (480 * p) / 100, 12);
-            y += 95;
+            ctx.fillStyle = '#f1f3f5'; ctx.fillRect(70, y + 15, 460, 15);
+            ctx.fillStyle = '#4dabf7';
+            if (isRTL) ctx.fillRect(530 - (460 * p / 100), y + 15, (460 * p) / 100, 15);
+            else ctx.fillRect(70, y + 15, (460 * p) / 100, 15);
+            y += 100;
         });
 
-        ctx.fillStyle = '#1e293b'; ctx.fillRect(0, 650, 600, 200);
+        // 푸터 QR
         if (qrImg && qrImg.complete) {
-            ctx.fillStyle = '#ffffff'; ctx.fillRect(50, 680, 140, 140);
-            ctx.drawImage(qrImg, 60, 690, 120, 120);
+            ctx.fillStyle = '#ffffff'; ctx.fillRect(225, 630, 150, 150);
+            ctx.drawImage(qrImg, 235, 640, 130, 130);
         }
-        ctx.textAlign = isRTL ? 'right' : 'left';
-        const tx = isRTL ? 540 : 220;
-        ctx.fillStyle = '#ffffff'; ctx.font = 'bold 22px sans-serif';
-        ctx.fillText(state.ui.viralTitle, tx, 720);
-        ctx.fillStyle = '#94a3b8'; ctx.font = '16px sans-serif';
-        ctx.fillText(state.ui.viralSub, tx, 755);
-        ctx.fillStyle = '#38bdf8'; ctx.font = 'bold 18px sans-serif';
-        ctx.fillText('ANONYMOUS-INSIGHT.IO', tx, 790);
-
+        ctx.fillStyle = '#adb5bd'; ctx.font = '14px sans-serif'; ctx.textAlign = 'center';
+        ctx.fillText(state.ui.viralTitle, 300, 800);
+        
         const link = document.createElement('a');
-        link.download = `GIPPP_PROFILING_${sessionID}.png`;
+        link.download = `GIPPP_Card.png`;
         link.href = canvas.toDataURL('image/png');
         link.click();
-    };
-
-    const decodeAndShowResult = (c) => {
-        const s = {}; const m = c.match(/([A-Z])(\d+)/g);
-        if (m) m.forEach(x => { s[x[0]] = { total: parseInt(x.substring(1)), count: 20 }; });
-        state.results = s; renderFinalReport();
     };
 
     const cleanExit = () => { window.location.href = window.location.pathname; };
