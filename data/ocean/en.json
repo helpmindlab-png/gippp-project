@@ -19,11 +19,7 @@
     "viralTitle": "Curious about your insight?",
     "viralSub": "Scan QR code to start the test",
     "labels": ["Strongly Disagree", "Disagree", "Neutral", "Agree", "Strongly Agree"],
-    "amazonKeywords": { 
-      "N": "leadership books", 
-      "M": "strategy games", 
-      "P": "psychology books" 
-    }
+    "amazonKeywords": { "E": "party games", "A": "gift sets", "C": "planner", "N": "meditation", "O": "art supplies" }
   },
   "traitNames": {"E": "Extraversion", "A": "Agreeableness", "C": "Conscientiousness", "N": "Neuroticism", "O": "Openness"},
   "items": [
