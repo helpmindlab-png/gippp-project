@@ -1,5 +1,27 @@
 {
   "ui": {
+    "desc": "Cách nhạy bén nhất để thấu hiểu nội tâm bạn",
+    "security": "🔒 Bảo mật: Không lưu trữ dữ liệu",
+    "testNames": {
+      "ocean": "Bản sắc thực sự (Big Five)",
+      "dark": "Tìm kiếm phản diện trong bạn",
+      "loc": "Tư duy thành công",
+      "resilience": "Kiểm tra bản lĩnh",
+      "trust": "Thước đo mối quan hệ"
+    },
+    "processing": "Đang phân tích hành vi của bạn...",
+    "reportTitle": "Báo cáo hồ sơ phản diện",
+    "recommendTitle": "💡 Gợi ý dành cho bạn",
+    "viewAmazon": "Xem sản phẩm gợi ý",
+    "saveImg": "📸 Lưu ảnh báo cáo",
+    "retest": "Làm lại",
+    "qrNote": "Quét để lưu kết quả",
+    "viralTitle": "Bạn tò mò về bản thân?",
+    "viralSub": "Quét mã QR để bắt đầu",
+    "labels": ["Rất không đồng ý", "Không đồng ý", "Bình thường", "Đồng ý", "Rất đồng ý"],
+    "amazonKeywords": { "N": "leadership books", "M": "strategy games", "P": "psychology books" }
+  },
+  "ui": {
     "desc": "A forma mais sensata de ler o seu eu interior",
     "security": "🔒 Segurança: Nenhum dado armazenado",
     "testNames": {
