@@ -2,18 +2,25 @@
   "ui": {
     "desc": "The most sensible way to read your inner self",
     "security": "🔒 Security: No data stored",
-    "testNames": { "ocean": "My True Self", "dark": "Villain Finder", "loc": "Success Mindset", "resilience": "Resilience Test", "trust": "Social Trust" },
-    "processing": "Analyzing patterns...",
+    "testNames": { "ocean": "True Self (Big 5)", "dark": "Villain Finder", "loc": "Success Mindset", "resilience": "Resilience Test", "trust": "Social Trust" },
+    "processing": "Analyzing behavioral patterns...",
     "reportTitle": "Villain Profiling Report",
     "recommendTitle": "💡 Recommended for You",
     "viewAmazon": "View Products",
     "saveImg": "📸 Save Report Image",
     "retest": "Retest",
-    "qrNote": "Scan to save",
+    "qrNote": "Scan to save your result",
     "viralTitle": "Curious about your inner villain?",
-    "viralSub": "Scan QR to start villain profiling",
+    "viralSub": "Scan QR to start profiling",
     "labels": ["Strongly Disagree", "Disagree", "Neutral", "Agree", "Strongly Agree"],
     "amazonKeywords": { "N": "leadership books", "M": "strategy games", "P": "psychology books" }
+  },
+  "guide": {
+    "ipipId": "IPIP-D3-27",
+    "purpose": "This test measures the 'Dark Triad' of personality traits to analyze your hidden social strategies and instincts.",
+    "instruction": "Please read each statement and select the option that best describes you. Honest answers lead to more accurate profiling.",
+    "interpretation": "The results consist of Narcissism, Machiavellianism, and Psychopathy. These reflect your survival strategies rather than moral judgment.",
+    "startBtn": "Start Analysis"
   },
   "traitNames": { "N": "Narcissism", "M": "Machiavellianism", "P": "Psychopathy" },
   "items": [
@@ -22,13 +29,13 @@
     { "id": 3, "trait": "P", "direction": "+", "text": "I do not feel significant emotional distress when I see the misfortune of others." },
     { "id": 4, "trait": "N", "direction": "+", "text": "I thoroughly enjoy situations where I receive attention and praise." },
     { "id": 5, "trait": "M", "direction": "+", "text": "I tend to keep important information to myself and use it at an advantageous moment." },
-    { "id": 6, "trait": "P", "direction": "+", "text": "I feel a thrill rather than fear when doing risky things." },
+    { "id": 6, "trait": "P", "direction": "+", "text": "I feel a thrill rather than fear when doing risky or stimulating things." },
     { "id": 7, "trait": "N", "direction": "-", "text": "I consider myself an ordinary person and try to act with humility." },
     { "id": 8, "trait": "M", "direction": "-", "text": "Deceiving someone for personal gain is morally unacceptable to me." }
   ],
   "descriptions": {
-    "N": { "high": "High self-confidence and strong leadership.", "low": "Humble and cooperative type." },
-    "M": { "high": "Strategic and goal-oriented achiever.", "low": "Values honest and transparent communication." },
-    "P": { "high": "Maintains composure and bold decision-making.", "low": "High empathy and deeply considerate." }
+    "N": { "high": "High self-confidence and strong leadership, but may be conscious of others' opinions.", "low": "Humble, cooperative, and values the interests of the community." },
+    "M": { "high": "Strategic and goal-oriented achiever with quick situational judgment.", "low": "Values honest, transparent communication and adheres to principles." },
+    "P": { "high": "Maintains composure in crises and demonstrates bold decision-making.", "low": "High empathy and deeply considerate of others' feelings." }
   }
 }
