@@ -1,4 +1,5 @@
 {
+  "traitNames": {"L": "Internal Locus of Control"},
   "items": [
     { "id": 1, "trait": "L", "direction": "+", "text": "What happens to me is my own doing." },
     { "id": 2, "trait": "L", "direction": "-", "text": "Success is mostly a matter of luck." },
