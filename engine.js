@@ -1,210 +1,195 @@
 /**
- * GIPPP Core Engine v4.3 (Canvas Rendering & Layout Final Fix)
- * 5대 원칙 준수: Zero-Persistence, Client-Side, Clean-Exit
+ * GIPPP Core Engine v4.5 (v3.9 Stability + 5 Tests Integration)
+ * 5대 원칙 준수: Zero-Persistence, Client-Side, Clean-Exit, Expert Clarity
  */
 
 const GIPPP_ENGINE = (() => {
-    let state = {
-        testId: 'ocean', lang: 'ko', currentIndex: 0,
-        answers: [], questions: [], traitNames: {}, descriptions: {}, results: null
+    let state = { 
+        testId: 'ocean', currentIndex: 0, answers: [], questions: [], 
+        descriptions: {}, traitNames: {}, lang: 'en', results: null 
     };
 
     const uiStrings = {
-        ko: { brandDesc: "글로벌 심리 분석 프로파일러", security: "보안 안내: 데이터는 저장되지 않으며 종료 시 즉시 소거됩니다.", loading: "AI가 성향을 분석 중입니다...", restart: "다시 시작하기", download: "리포트 이미지 저장", tests: { ocean: "성격 5요인", loc: "성공 마인드셋", dark: "다크 트라이어드", trust: "사회적 신뢰도", resilience: "회복탄력성" } },
-        en: { brandDesc: "Global Psychological Profiler", security: "Security: Data is not stored and is erased immediately.", loading: "AI is analyzing your profile...", restart: "Restart Test", download: "Save Report Image", tests: { ocean: "Big Five", loc: "Success Mindset", dark: "Dark Triad", trust: "Social Trust", resilience: "Resilience" } },
-        ja: { brandDesc: "グローバル心理分析", security: "セキュリティ：データは保存されず、終了時に消去されます。", loading: "AIが分析しています...", restart: "最初から", download: "画像を保存", tests: { ocean: "性格5因子", loc: "成功マインド", dark: "ダークトライアド", trust: "社会的信頼", resilience: "回復力" } },
-        ar: { brandDesc: "محلل نفسي عالمي", security: "أمان: لا يتم حفظ بياناتك ويتم مسحها فور إغلاق المتصفح.", loading: "AI يقوم بالتحليل...", restart: "إعادة البدء", download: "حفظ التقرير", tests: { ocean: "الشخصية الخمسة", loc: "عقلية النجاح", dark: "الثلاثي المظلم", trust: "الثقة الاجتماعية", resilience: "المرونة" } }
+        ar: { desc: "محلل البصيرة العالمي", security: "🔒 الأمان: لا يتم تخزين البيانات", processing: "جاري التحليل...", wait: "يرجى الانتظار...", saveImg: "حفظ الصورة", retest: "إعادة", reportTitle: "تقرير البصيرة", recommendTitle: "💡 مقترح لك", viewAmazon: "عرض على أمازون", qrNote: "امسح للحفظ", viralTitle: "هل أنت فضولي؟", viralSub: "امسح للبدء", labels: ["أرفض بشدة", "أرفض", "محايد", "أوافق", "أوافق بشدة"], tests: { ocean: "Big Five", loc: "Locus of Control", dark: "Dark Triad", trust: "Social Trust", resilience: "Resilience" } },
+        de: { desc: "Globaler Insight-Profiler", security: "🔒 Keine Datenspeicherung", processing: "Analyse...", wait: "Bitte warten...", saveImg: "Bild speichern", retest: "Neu starten", reportTitle: "Insight-Bericht", recommendTitle: "💡 Empfohlen", viewAmazon: "Auf Amazon", qrNote: "QR scannen", viralTitle: "Neugierig?", viralSub: "QR scannen", labels: ["Stimme gar nicht zu", "Stimme nicht zu", "Neutral", "Stimme zu", "Stimme voll zu"], tests: { ocean: "Big Five", loc: "Kontrollüberzeugung", dark: "Dark Triad", trust: "Soziales Vertrauen", resilience: "Resilienz" } },
+        en: { desc: "Global Insight Profiler", security: "🔒 Security: No data stored", processing: "Analyzing...", wait: "Please wait...", saveImg: "📸 Save Image", retest: "Retest", reportTitle: "Insight Report", recommendTitle: "💡 Recommended", viewAmazon: "View on Amazon", qrNote: "Scan to save", viralTitle: "Curious about your insight?", viralSub: "Scan QR to start", labels: ["Strongly Disagree", "Disagree", "Neutral", "Agree", "Strongly Agree"], tests: { ocean: "Big Five Personality", loc: "Locus of Control", dark: "Dark Triad", trust: "Social Trust", resilience: "Resilience Test" } },
+        es: { desc: "Perfilador de Perspectiva Global", security: "🔒 Sin datos guardados", processing: "Analizando...", wait: "Espere...", saveImg: "Guardar Imagen", retest: "Reiniciar", reportTitle: "Informe", recommendTitle: "💡 Recomendado", viewAmazon: "Ver en Amazon", qrNote: "Escanea", viralTitle: "¿Curioso?", viralSub: "Escanea el QR", labels: ["Muy en desacuerdo", "En desacuerdo", "Neutral", "De acuerdo", "Muy de acuerdo"], tests: { ocean: "Personalidad Big Five", loc: "Locus de Control", dark: "Tríada Oscura", trust: "Confianza Social", resilience: "Resiliencia" } },
+        ja: { desc: "グローバル・インサイト・プロファイラー", security: "🔒 データ保存なし", processing: "分析中...", wait: "お待ちください...", saveImg: "画像を保存", retest: "再試行", reportTitle: "レポート", recommendTitle: "💡 おすすめ", viewAmazon: "Amazonで見る", qrNote: "スキャンして保存", viralTitle: "気になりますか？", viralSub: "QRで開始", labels: ["全くそう思わない", "そう思わない", "どちらともいえない", "そう思う", "強くそう思う"], tests: { ocean: "性格5因子診断", loc: "統制の所在", dark: "ダークトライアド", trust: "社会的信頼", resilience: "回復力テスト" } },
+        ko: { desc: "글로벌 인사이트 프로파일러", security: "🔒 보안: 데이터 저장 안 함", processing: "분석 중...", wait: "잠시만 기다려 주세요.", saveImg: "📸 이미지 저장", retest: "다시 하기", reportTitle: "인사이트 리포트", recommendTitle: "💡 맞춤 추천", viewAmazon: "아마존 보기", qrNote: "스캔하여 결과 소장", viralTitle: "당신의 인사이트가 궁금하다면?", viralSub: "QR코드를 스캔하여 테스트 시작", labels: ["전혀 아니다", "아니다", "보통이다", "그렇다", "매우 그렇다"], tests: { ocean: "성격 5요인 검사", loc: "성공 마인드셋", dark: "다크 트라이어드", trust: "사회적 신뢰도", resilience: "강철 멘탈 테스트" } },
+        pt: { desc: "Perfilador de Insights Global", security: "🔒 Sem dados guardados", processing: "Analisando...", wait: "Aguarde...", saveImg: "Salvar Imagem", retest: "Reiniciar", reportTitle: "Relatório", recommendTitle: "💡 Recomendado", viewAmazon: "Ver na Amazon", qrNote: "Escaneie", viralTitle: "Curioso?", viralSub: "Escaneie o QR", labels: ["Discordo totalmente", "Discordo", "Neutro", "Concordo", "Concordo totalmente"], tests: { ocean: "Big Five", loc: "Locus de Controlo", dark: "Tríade Obscura", trust: "Confiança Social", resilience: "Resiliência" } },
+        ru: { desc: "Глобальный профилировщик", security: "🔒 Без сохранения данных", processing: "Анализ...", wait: "Подождите...", saveImg: "Сохранить", retest: "Заново", reportTitle: "Отчет", recommendTitle: "💡 Рекомендовано", viewAmazon: "На Amazon", qrNote: "Сканируйте", viralTitle: "Интересно?", viralSub: "Сканируйте QR", labels: ["Полностью не согласен", "Не согласен", "Нейтрально", "Согласен", "Полностью согласен"], tests: { ocean: "Большая пятерка", loc: "Локус контроля", dark: "Темная триада", trust: "Социальное доверие", resilience: "Жизнестойкость" } },
+        vi: { desc: "Hệ thống Phân tích Tâm lý", security: "🔒 Không lưu dữ liệu", processing: "Đang phân tích...", wait: "Chờ chút...", saveImg: "Lưu ảnh", retest: "Làm lại", reportTitle: "Báo cáo", recommendTitle: "💡 Gợi ý", viewAmazon: "Xem trên Amazon", qrNote: "Quét để lưu", viralTitle: "Bạn tò mò?", viralSub: "Quét QR để bắt đầu", labels: ["Rất không đồng ý", "Không đồng ý", "Bình thường", "Đồng ý", "Rất đồng ý"], tests: { ocean: "Tính cách Big Five", loc: "Kiểm soát tâm thế", dark: "Bộ ba đen tối", trust: "Lòng tin xã hội", resilience: "Khả năng phục hồi" } },
+        zh: { desc: "全球洞察剖析器", security: "🔒 不存储数据", processing: "分析中...", wait: "请稍等...", saveImg: "保存图片", retest: "重测", reportTitle: "报告", recommendTitle: "💡 推荐", viewAmazon: "亚马逊", qrNote: "扫描保存", viralTitle: "想了解吗？", viralSub: "扫码开始", labels: ["极不同意", "不同意", "中立", "同意", "极同意"], tests: { ocean: "大五人格测试", loc: "控制点测试", dark: "黑暗人格三联征", trust: "社会信任度", resilience: "心理韧性测试" } }
+    };
+
+    const amazonProducts = { E: "party games", A: "gift sets", C: "planner", N: "meditation", O: "art supplies", L: "wealth mindset books", N_dark: "leadership books", M: "strategy games", P: "resilience books", T: "social capital books", R: "stress relief" };
+    
+    const ui = { 
+        brandDesc: document.getElementById('brand-desc'), 
+        securityNote: document.getElementById('security-note'), 
+        questionText: document.getElementById('question-text'), 
+        optionsGroup: document.getElementById('options-group'), 
+        progressFill: document.getElementById('progress-fill'), 
+        mainContent: document.getElementById('main-content'), 
+        langSelect: document.getElementById('lang-select'), 
+        testSelect: document.getElementById('test-select') 
     };
 
     const init = async () => {
-        const params = new URLSearchParams(window.location.search);
-        state.testId = params.get('test') || 'ocean';
-        state.lang = params.get('lang') || 'ko';
-        document.documentElement.lang = state.lang;
+        const urlParams = new URLSearchParams(window.location.search);
+        state.testId = urlParams.get('test') || 'ocean';
+        let userLang = urlParams.get('lang') || navigator.language.substring(0, 2);
+        if (userLang === 'jp') userLang = 'ja'; if (userLang === 'vn') userLang = 'vi';
+        state.lang = uiStrings[userLang] ? userLang : 'en';
+        
         document.documentElement.dir = (state.lang === 'ar') ? 'rtl' : 'ltr';
-        updateStaticUI();
-        await loadTestData();
-        renderQuestion();
+        const s = uiStrings[state.lang];
+        ui.brandDesc.innerText = s.desc;
+        ui.securityNote.innerText = s.security;
+        ui.langSelect.value = state.lang;
+        ui.testSelect.innerHTML = Object.entries(s.tests).map(([id, name]) => `<option value="${id}" ${state.testId === id ? 'selected' : ''}>${name}</option>`).join('');
+        
+        await loadData();
+        const resData = urlParams.get('res');
+        if (resData) decodeAndShowResult(resData); else renderQuestion();
     };
 
-    const loadTestData = async () => {
+    const changeLanguage = (l) => { const u = new URL(window.location.href); u.searchParams.set('lang', l); window.location.href = u.toString(); };
+    const changeTest = (t) => { const u = new URL(window.location.href); u.searchParams.set('test', t); u.searchParams.delete('res'); window.location.href = u.toString(); };
+
+    const loadData = async () => {
         try {
-            const response = await fetch(`./data/${state.testId}/${state.lang}.json`);
-            const data = await response.json();
-            state.questions = data.items;
-            state.traitNames = data.traitNames;
-            state.descriptions = data.descriptions;
-        } catch (e) { console.error(e); }
-    };
-
-    const updateStaticUI = () => {
-        const langUI = uiStrings[state.lang] || uiStrings['en'];
-        document.getElementById('brand-desc').innerText = langUI.brandDesc;
-        document.getElementById('security-note').innerText = langUI.security;
-        document.getElementById('lang-select').value = state.lang;
-        const testSelect = document.getElementById('test-select');
-        testSelect.innerHTML = '';
-        Object.keys(langUI.tests).forEach(key => {
-            const opt = document.createElement('option');
-            opt.value = key; opt.text = langUI.tests[key];
-            opt.selected = (key === state.testId);
-            testSelect.appendChild(opt);
-        });
+            const r = await fetch(`./data/${state.testId}/${state.lang}.json`);
+            const d = await r.json();
+            state.questions = d.items;
+            state.descriptions = d.descriptions;
+            state.traitNames = d.traitNames || {};
+        } catch (e) { ui.questionText.innerText = "Data Load Error."; }
     };
 
     const renderQuestion = () => {
+        if (!state.questions[state.currentIndex]) return;
         const q = state.questions[state.currentIndex];
-        const progress = ((state.currentIndex / state.questions.length) * 100);
-        document.getElementById('progress-fill').style.width = `${progress}%`;
-        document.getElementById('question-container').innerHTML = `<div id="question-text">${q.text}</div>`;
-        const optionsGroup = document.getElementById('options-group');
-        optionsGroup.innerHTML = '';
+        const s = uiStrings[state.lang];
+        ui.questionText.innerHTML = `<div>${q.text}</div>`;
+        ui.optionsGroup.innerHTML = '';
         [1, 2, 3, 4, 5].forEach(score => {
             const btn = document.createElement('button');
             btn.className = 'opt-btn';
-            btn.innerText = getLikertText(score, state.lang);
-            btn.onclick = () => handleAnswer(score);
-            optionsGroup.appendChild(btn);
+            btn.innerText = s.labels[score - 1];
+            btn.onclick = () => {
+                state.answers.push({ trait: q.trait, score: q.direction === "-" ? 6 - score : score });
+                if (++state.currentIndex < state.questions.length) renderQuestion(); else showProcessing();
+            };
+            ui.optionsGroup.appendChild(btn);
         });
-    };
-
-    const getLikertText = (score, lang) => {
-        const texts = {
-            ko: ["전혀 아니다", "아니다", "보통이다", "그렇다", "매우 그렇다"],
-            en: ["Strongly Disagree", "Disagree", "Neutral", "Agree", "Strongly Agree"],
-            ja: ["全く違う", "違う", "普通", "そう思う", "強く思う"],
-            ar: ["عارض بشدة", "عارض", "محايد", "وافق", "وافق بشدة"]
-        };
-        return (texts[lang] || texts['en'])[score - 1];
-    };
-
-    const handleAnswer = (score) => {
-        const q = state.questions[state.currentIndex];
-        state.answers.push({ trait: q.trait, score: (q.direction === '+') ? score : (6 - score) });
-        if (state.currentIndex < state.questions.length - 1) {
-            state.currentIndex++;
-            renderQuestion();
-        } else { showProcessing(); }
+        ui.progressFill.style.width = `${(state.currentIndex / state.questions.length) * 100}%`;
     };
 
     const showProcessing = () => {
-        const langUI = uiStrings[state.lang] || uiStrings['en'];
-        document.getElementById('main-content').innerHTML = `<div class="spinner"></div><p>${langUI.loading}</p>`;
-        setTimeout(() => { calculateResults(); }, 2000);
+        const s = uiStrings[state.lang];
+        ui.mainContent.innerHTML = `<div style="padding:40px 0;"><div class="spinner"></div><h3>${s.processing}</h3><p>${s.wait}</p><div class="ad-slot" style="height:250px;"></div></div>`;
+        setTimeout(() => { state.results = calculateScores(); renderFinalReport(); }, 3000);
     };
 
-    const calculateResults = () => {
-        const totals = {}, counts = {};
-        state.answers.forEach(ans => {
-            totals[ans.trait] = (totals[ans.trait] || 0) + ans.score;
-            counts[ans.trait] = (counts[ans.trait] || 0) + 1;
-        });
-        state.results = {};
-        Object.keys(totals).forEach(trait => { state.results[trait] = totals[trait] / counts[trait]; });
-        renderFinalReport();
-    };
+    const calculateScores = () => state.answers.reduce((acc, curr) => {
+        if (!acc[curr.trait]) acc[curr.trait] = { total: 0, count: 0 };
+        acc[curr.trait].total += curr.score; acc[curr.trait].count += 1;
+        return acc;
+    }, {});
 
     const renderFinalReport = () => {
-        const langUI = uiStrings[state.lang] || uiStrings['en'];
-        document.getElementById('main-content').innerHTML = `
-            <div class="result-card">
-                <canvas id="resultCanvas" style="width:100%; border-radius:15px; background:#fff;"></canvas>
-                <div id="text-results" style="margin-top:20px;"></div>
-                <button class="opt-btn" style="background:var(--primary); color:white;" onclick="GIPPP_ENGINE.generateImage()">${langUI.download}</button>
-                <button class="opt-btn" onclick="location.reload()">${langUI.restart}</button>
-            </div>
-        `;
-        drawResultCanvas();
+        const s = uiStrings[state.lang];
+        const resCode = Object.entries(state.results).map(([t, d]) => t + Math.round((d.total / (d.count * 5)) * 100)).join('');
+        const shareUrl = `${window.location.origin}${window.location.pathname}?test=${state.testId}&lang=${state.lang}&res=${resCode}`;
+        const qrImgUrl = `https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=${encodeURIComponent(shareUrl)}`;
         
-        let textHtml = "";
-        Object.keys(state.results).forEach(trait => {
-            const score = state.results[trait];
-            const level = score >= 3.5 ? 'high' : 'low';
-            textHtml += `<div style="margin-bottom:15px; padding:15px; background:#f8f9fa; border-radius:12px; text-align:left;">
-                <strong style="color:var(--primary);">${state.traitNames[trait]}</strong>
-                <p style="margin:5px 0 0 0; font-size:0.9rem;">${state.descriptions[trait][level]}</p>
+        let maxTrait = '', maxScore = -1;
+        let reportHtml = `<div class="result-card"><h2 style="text-align:center; color:#3498db; border-bottom:2px solid #3498db; padding-bottom:15px;">${s.reportTitle}</h2><div class="ad-slot" style="height:60px;"></div>`;
+        
+        for (const [trait, data] of Object.entries(state.results)) {
+            const p = Math.round((data.total / (data.count * 5)) * 100);
+            if (p > maxScore) { maxScore = p; maxTrait = trait; }
+            const traitDisplayName = state.traitNames[trait] || trait;
+            const level = p >= 50 ? 'high' : 'low';
+            
+            reportHtml += `<div style="margin-bottom:15px; text-align:left;">
+                <strong>${traitDisplayName} ${p}%</strong>
+                <div style="width:100%; height:10px; background:#f0f0f0; border-radius:6px; overflow:hidden; margin-top:5px;">
+                    <div style="width:${p}%; height:100%; background:#3498db;"></div>
+                </div>
+                <p style="font-size:0.9rem; color:#555; margin-top:5px;">${state.descriptions[trait][level]}</p>
             </div>`;
-        });
-        document.getElementById('text-results').innerHTML = textHtml;
+        }
+        
+        reportHtml += `<div style="background:#fff9e6; padding:15px; border-radius:15px; text-align:center; margin:20px 0; border:1px solid #ffeaa7;"><h4>${s.recommendTitle}</h4><a href="https://www.amazon.com/s?k=${amazonProducts[maxTrait] || 'psychology'}" target="_blank" style="color:#ff9900; font-weight:bold; text-decoration:none;">${s.viewAmazon}</a></div>`;
+        reportHtml += `<div style="text-align:center; margin-bottom:20px;"><img id="qrImage" src="${qrImgUrl}" crossorigin="anonymous" style="width:130px; border:6px solid white; box-shadow:0 4px 10px rgba(0,0,0,0.1);"></div>`;
+        reportHtml += `<button onclick="GIPPP_ENGINE.generateImage()" style="width:100%; padding:18px; background:#3498db; color:white; border:none; border-radius:15px; font-weight:bold; font-size:1.1rem; cursor:pointer; margin-bottom:10px;">${s.saveImg}</button>`;
+        reportHtml += `<button onclick="location.href=window.location.pathname + '?test=' + GIPPP_ENGINE.getTestId()" style="width:100%; padding:12px; background:#f8f9fa; color:#95a5a6; border:none; border-radius:15px; cursor:pointer;">${s.retest}</button></div><canvas id="resultCanvas" style="display:none;"></canvas>`;
+        
+        ui.mainContent.innerHTML = reportHtml;
     };
 
-    const drawResultCanvas = () => {
+    const decodeAndShowResult = (c) => {
+        const s = {}; const m = c.match(/([A-Z])(\d+)/g);
+        if (m) m.forEach(x => { s[x[0]] = { total: parseInt(x.substring(1)), count: 20 }; });
+        state.results = s; renderFinalReport();
+    };
+
+    const generateImage = () => {
         const canvas = document.getElementById('resultCanvas');
         const ctx = canvas.getContext('2d');
-        const traits = Object.keys(state.results);
+        const qrImg = document.getElementById('qrImage');
+        const s = uiStrings[state.lang];
+        const isRTL = (state.lang === 'ar');
         
-        canvas.width = 800;
-        canvas.height = 200 + (traits.length * 100); // 동적 높이 조절
-
-        // 1. 배경 흰색 칠하기
-        ctx.fillStyle = '#ffffff';
-        ctx.fillRect(0, 0, canvas.width, canvas.height);
-
-        // 2. 타이틀
-        ctx.fillStyle = '#2c3e50';
-        ctx.font = 'bold 40px Arial';
-        ctx.textAlign = 'center';
-        ctx.fillText(`GIPPP: ${uiStrings[state.lang].tests[state.testId]}`, 400, 80);
-
-        // 3. 그래프 그리기
-        const isRTL = state.lang === 'ar';
-        traits.forEach((trait, i) => {
-            const score = state.results[trait];
-            const y = 180 + (i * 90);
-            const barMaxW = 500;
-            const barW = (score / 5) * barMaxW;
-
-            // 지표명 (그래프 위쪽 배치)
-            ctx.fillStyle = '#34495e';
-            ctx.font = 'bold 24px Arial';
-            ctx.textAlign = isRTL ? 'right' : 'left';
-            ctx.fillText(state.traitNames[trait], isRTL ? 750 : 50, y - 15);
-
-            // 배경 바
-            ctx.fillStyle = '#f0f2f5';
-            ctx.fillRect(isRTL ? 750 - barMaxW : 50, y, barMaxW, 40);
-
-            // 점수 바
-            ctx.fillStyle = '#3498db';
-            ctx.fillRect(isRTL ? 750 - barW : 50, y, barW, 40);
+        const traits = Object.entries(state.results);
+        canvas.width = 600; 
+        canvas.height = 400 + (traits.length * 100); // 동적 높이 계산
+        
+        ctx.fillStyle = 'white'; ctx.fillRect(0, 0, canvas.width, canvas.height);
+        ctx.fillStyle = '#3498db'; ctx.fillRect(0, 0, canvas.width, 110);
+        ctx.fillStyle = 'white'; ctx.font = 'bold 34px sans-serif'; ctx.textAlign = 'center';
+        ctx.fillText(s.reportTitle, 300, 65);
+        
+        let y = 200;
+        traits.forEach(([t, d]) => {
+            const p = Math.round((d.total / (d.count * 5)) * 100);
+            const traitDisplayName = state.traitNames[t] || t;
+            ctx.fillStyle = '#2c3e50'; ctx.font = 'bold 24px sans-serif';
             
-            // 점수 텍스트
-            ctx.fillStyle = '#7f8c8d';
-            ctx.font = '20px Arial';
-            ctx.textAlign = isRTL ? 'left' : 'right';
-            ctx.fillText(`${(score * 20).toFixed(0)}%`, isRTL ? 50 : 750, y + 28);
+            if (isRTL) { 
+                ctx.textAlign = 'right'; ctx.fillText(traitDisplayName, 540, y); 
+                ctx.textAlign = 'left'; ctx.fillText(`${p}%`, 60, y); 
+                ctx.fillStyle = '#f0f0f0'; ctx.fillRect(60, y + 15, 480, 20); 
+                ctx.fillStyle = '#3498db'; ctx.fillRect(540 - (480 * p / 100), y + 15, (480 * p) / 100, 20); 
+            } else { 
+                ctx.textAlign = 'left'; ctx.fillText(traitDisplayName, 60, y); 
+                ctx.textAlign = 'right'; ctx.fillText(`${p}%`, 540, y); 
+                ctx.fillStyle = '#f0f0f0'; ctx.fillRect(60, y + 15, 480, 20); 
+                ctx.fillStyle = '#3498db'; ctx.fillRect(60, y + 15, (480 * p) / 100, 20); 
+            }
+            y += 100;
         });
-
-        // 4. 하단 푸터 (QR 및 브랜딩)
-        const footerY = canvas.height - 50;
-        ctx.fillStyle = '#bdc3c7';
-        ctx.font = '18px Arial';
-        ctx.textAlign = 'left';
-        ctx.fillText("Scan to test yourself", 50, footerY);
-        ctx.textAlign = 'right';
-        ctx.fillText("gippp.github.io", 750, footerY);
-
-        // QR 코드 영역 (이미지 로드 없이 직접 그림)
-        ctx.fillStyle = '#2c3e50';
-        ctx.fillRect(50, footerY - 110, 80, 80);
-        ctx.fillStyle = '#fff'; // QR 내부 패턴 흉내
-        ctx.fillRect(60, footerY - 100, 20, 20);
-        ctx.fillRect(100, footerY - 100, 20, 20);
-        ctx.fillRect(60, footerY - 60, 20, 20);
+        
+        const footerY = canvas.height - 200;
+        ctx.fillStyle = '#f8f9fa'; ctx.fillRect(0, footerY, 600, 200);
+        if (qrImg && qrImg.complete) { ctx.drawImage(qrImg, 50, footerY + 25, 150, 150); }
+        
+        ctx.fillStyle = '#2c3e50'; ctx.font = 'bold 22px sans-serif'; ctx.textAlign = isRTL ? 'right' : 'left';
+        const textX = isRTL ? 540 : 220;
+        ctx.fillText(s.viralTitle, textX, footerY + 75);
+        ctx.fillStyle = '#7f8c8d'; ctx.font = '18px sans-serif';
+        ctx.fillText(s.viralSub, textX, footerY + 110);
+        ctx.font = 'bold 16px sans-serif'; ctx.fillStyle = '#3498db';
+        ctx.fillText('gippp.github.io', textX, footerY + 140);
+        
+        const link = document.createElement('a'); 
+        link.download = `GIPPP_Report_${state.lang}.png`; 
+        link.href = canvas.toDataURL('image/png'); 
+        link.click();
     };
 
-    return {
-        init,
-        changeLanguage: (l) => { window.location.href = `?test=${state.testId}&lang=${l}`; },
-        changeTest: (t) => { window.location.href = `?test=${t}&lang=${state.lang}`; },
-        generateImage: () => {
-            const canvas = document.getElementById('resultCanvas');
-            const link = document.createElement('a');
-            link.download = `GIPPP_Result.png`;
-            link.href = canvas.toDataURL('image/png');
-            link.click();
-        }
-    };
+    return { init, changeLanguage, changeTest, generateImage, getTestId: () => state.testId };
 })();
-
 document.addEventListener('DOMContentLoaded', GIPPP_ENGINE.init);
