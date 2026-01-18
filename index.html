@@ -10,39 +10,29 @@
     <div id="app">
         <header>
             <div class="selectors">
-                <!-- 언어 선택기 -->
                 <select id="lang-select" onchange="GIPPP_ENGINE.changeLanguage(this.value)">
                     <option value="ar">العربية</option>
                     <option value="de">Deutsch</option>
                     <option value="en">English</option>
                     <option value="es">Español</option>
                     <option value="ja">日本語</option>
-                    <option value="ko">한국어</option>
+                    <option value="ko" selected>한국어</option>
                     <option value="pt">Português</option>
                     <option value="ru">Русский</option>
                     <option value="vi">Tiếng Việt</option>
                     <option value="zh">中文</option>
                 </select>
-                <!-- 설문지 선택기 -->
-                <select id="test-select" onchange="GIPPP_ENGINE.changeTest(this.value)">
-                    <!-- engine.js에서 동적으로 채워짐 -->
-                </select>
+                <select id="test-select" onchange="GIPPP_ENGINE.changeTest(this.value)"></select>
             </div>
             <h1 id="brand">GIPPP</h1>
             <p id="brand-desc"></p>
             <div id="progress-bar"><div id="progress-fill"></div></div>
         </header>
-
         <main id="main-content">
-            <div id="question-container">
-                <div id="question-text">Initializing Engine...</div>
-            </div>
+            <div id="question-container"><div id="question-text">Initializing Engine...</div></div>
             <div id="options-group"></div>
         </main>
-
-        <footer>
-            <p id="security-note" class="security-note"></p>
-        </footer>
+        <footer><p id="security-note" class="security-note"></p></footer>
     </div>
     <script src="engine.js"></script>
 </body>
