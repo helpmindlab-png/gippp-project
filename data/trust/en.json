@@ -1,0 +1,19 @@
+{
+  "traitNames": { "T": "Social Trust", "A": "Altruism" },
+  "items": [
+    { "id": 1, "trait": "T", "direction": "+", "text": "I believe that most people are basically honest and trustworthy." },
+    { "id": 2, "trait": "A", "direction": "+", "text": "I feel a strong urge to help people who are in difficult situations." },
+    { "id": 3, "trait": "T", "direction": "-", "text": "I feel that you have to be careful, or people will take advantage of you." },
+    { "id": 4, "trait": "A", "direction": "+", "text": "I find it rewarding to spend my time and energy helping others." },
+    { "id": 5, "trait": "T", "direction": "+", "text": "I try to approach strangers with good intentions and an open mind." },
+    { "id": 6, "trait": "A", "direction": "-", "text": "I believe I should focus on my own problems before worrying about others." },
+    { "id": 7, "trait": "T", "direction": "-", "text": "I think most people would deceive others if it served their self-interest." },
+    { "id": 8, "trait": "A", "direction": "+", "text": "I believe that charity and volunteering are vital for a better society." },
+    { "id": 9, "trait": "T", "direction": "+", "text": "I trust that the laws and systems in our society operate fairly." },
+    { "id": 10, "trait": "A", "direction": "-", "text": "I prefer not to invest effort into tasks that offer no personal reward." }
+  ],
+  "descriptions": {
+    "T": { "high": "You have a positive outlook and excel at building collaborative relationships.", "low": "You are a realist with a critical eye, skilled at risk management and self-protection." },
+    "A": { "high": "You are a compassionate individual who adds immense value to your community.", "low": "You are pragmatic and independent, focusing on efficiency and personal goals." }
+  }
+}
