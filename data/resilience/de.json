@@ -1,0 +1,19 @@
+{
+  "traitNames": { "R": "Resilienz", "E": "Emotionsregulation" },
+  "items": [
+    { "id": 1, "trait": "R", "direction": "+", "text": "Nach Rückschlägen oder schwierigen Phasen finde ich meist schnell mein Gleichgewicht wieder." },
+    { "id": 2, "trait": "E", "direction": "+", "text": "Ich habe ein klares Verständnis für die Emotionen, die ich gerade erlebe." },
+    { "id": 3, "trait": "R", "direction": "-", "text": "Bei unerwarteten Problemen fühle ich mich schnell überfordert und hilflos." },
+    { "id": 4, "trait": "E", "direction": "+", "text": "Ich kann meine Emotionen auch in stressigen Situationen effektiv steuern." },
+    { "id": 5, "trait": "R", "direction": "+", "text": "Ich betrachte Misserfolge als Chance, zu lernen und neue Wege auszuprobieren." },
+    { "id": 6, "trait": "E", "direction": "-", "text": "Manchmal lasse ich mich von meinen Gefühlen hinreißen und bereue später meine Worte." },
+    { "id": 7, "trait": "R", "direction": "-", "text": "Wenn etwas Schlechtes passiert, brauche ich lange, um darüber hinwegzukommen." },
+    { "id": 8, "trait": "E", "direction": "+", "text": "Ich kann auch unter starkem Druck ruhig bleiben und Prioritäten setzen." },
+    { "id": 9, "trait": "R", "direction": "+", "text": "Ich bin zuversichtlich, dass ich schwierige Probleme am Ende lösen kann." },
+    { "id": 10, "trait": "E", "direction": "-", "text": "Ich reagiere oft zu empfindlich auf die Stimmung oder Reaktionen meiner Mitmenschen." }
+  ],
+  "descriptions": {
+    "R": { "high": "Sie besitzen ein „stählernes Gemüt“, das an Herausforderungen nicht zerbricht.", "low": "Sie sind ein feinfühliger und wahrnehmungsstarker Mensch, der Umfeldveränderungen tief spürt." },
+    "E": { "high": "Sie sind meisterhaft in der Selbstbeherrschung und bewahren auch in Krisen innere Ruhe.", "low": "Sie sind leidenschaftlich und ausdrucksstark, wobei Sie manchmal von Ihren Gefühlen mitgerissen werden." }
+  }
+}
