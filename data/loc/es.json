@@ -1,4 +1,26 @@
 {
+  "ui": {
+    "desc": "La forma más sensible de leer tu interior",
+    "security": "🔒 Seguridad: No se guardan datos",
+    "testNames": {
+      "ocean": "Mi Verdadero Yo (Big Five)",
+      "dark": "Buscador de Villanos",
+      "loc": "Mentalidad de Éxito",
+      "resilience": "Test de Resiliencia",
+      "trust": "Termómetro de Relaciones"
+    },
+    "processing": "Analizando tus patrones de conducta...",
+    "reportTitle": "Informe de Perfil de Villano",
+    "recommendTitle": "💡 Recomendado para ti",
+    "viewAmazon": "Ver productos recomendados",
+    "saveImg": "📸 Guardar imagen del informe",
+    "retest": "Repetir test",
+    "qrNote": "Escanea para guardar",
+    "viralTitle": "¿Curioso por tu resultado?",
+    "viralSub": "Escanea el QR para empezar",
+    "labels": ["Muy en desacuerdo", "En desacuerdo", "Neutral", "De acuerdo", "Muy de acuerdo"],
+    "amazonKeywords": { "N": "leadership books", "M": "strategy games", "P": "psychology books" }
+  },
   "traitNames": {"L": "Locus de Control Interno"},
   "items": [
     { "id": 1, "trait": "L", "direction": "+", "text": "Lo que me sucede en la vida depende principalmente de mis propios esfuerzos." },
