@@ -1,0 +1,22 @@
+{
+  "traitNames": { "N": "Narcissism", "M": "Machiavellianism", "P": "Psychopathy" },
+  "items": [
+    { "id": 1, "trait": "N", "direction": "+", "text": "I tend to want others to admire me and recognize my special status." },
+    { "id": 2, "trait": "M", "direction": "+", "text": "I tend to manipulate others to get my way when necessary." },
+    { "id": 3, "trait": "P", "direction": "+", "text": "I tend to be unconcerned with the morality of my actions." },
+    { "id": 4, "trait": "N", "direction": "+", "text": "I expect special favors from others because of who I am." },
+    { "id": 5, "trait": "M", "direction": "+", "text": "I have used deceit or social influence to get what I want." },
+    { "id": 6, "trait": "P", "direction": "+", "text": "I tend to be callous or insensitive to the needs of others." },
+    { "id": 7, "trait": "N", "direction": "-", "text": "I prefer to remain humble and don't need to be the center of attention." },
+    { "id": 8, "trait": "M", "direction": "-", "text": "I believe that honesty is the best policy, even if it slows down progress." },
+    { "id": 9, "trait": "P", "direction": "-", "text": "I am deeply moved by the emotions and hardships of others." },
+    { "id": 10, "trait": "N", "direction": "+", "text": "I aspire to hold a position of great power and influence." },
+    { "id": 11, "trait": "M", "direction": "+", "text": "I believe that the end justifies the means in competitive situations." },
+    { "id": 12, "trait": "P", "direction": "+", "text": "I enjoy taking risks even if they might have negative consequences." }
+  ],
+  "descriptions": {
+    "N": { "high": "You have high self-confidence and leadership potential.", "low": "You are modest and value collective success over personal glory." },
+    "M": { "high": "You are a strategic thinker who excels at navigating complex social dynamics.", "low": "You value transparency and ethical integrity in all interactions." },
+    "P": { "high": "You are emotionally resilient and can make tough decisions under pressure.", "low": "You are highly empathetic and value deep emotional connections." }
+  }
+}
