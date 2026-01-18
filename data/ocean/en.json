@@ -1,4 +1,5 @@
 {
+  "traitNames": {"E": "Extraversion", "A": "Agreeableness", "C": "Conscientiousness", "N": "Neuroticism", "O": "Openness"},
   "items": [
     { "id": 1, "trait": "E", "direction": "+", "text": "I tend to be the life of the party and enjoy leading conversations." },
     { "id": 2, "trait": "A", "direction": "+", "text": "I make an effort to sympathize with others' feelings." },
