@@ -1,4 +1,5 @@
 {
+  "traitNames": {"L": "Kiểm soát nội tại"},
   "traitNames": {"L": "Locus de Controlo Interno"},
   "items": [
     { "id": 1, "trait": "L", "direction": "+", "text": "O que acontece na minha vida depende principalmente dos meus próprios esforços." },
