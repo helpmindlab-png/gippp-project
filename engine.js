@@ -40,6 +40,7 @@ const GIPPP_ENGINE = (() => {
         await loadData();
 
         const resData = urlParams.get('res');
+        // [핵심] 결과 데이터가 URL에 있으면 즉시 복원 화면으로 이동
         if (resData) {
             decodeAndShowResult(resData);
         } else if (state.testId) {
@@ -93,7 +94,7 @@ const GIPPP_ENGINE = (() => {
                     <p>💡 ${state.guide.interpretation}</p>
                 </div>
                 <button class="btn-main" onclick="GIPPP_ENGINE.startTest()">${state.guide.startBtn || '시작하기'}</button>
-                <p class="ipip-info">Based on ${state.guide.ipipId || 'Standard Method'}</p>
+                <p class="ipip-info">Method: ${state.guide.ipipId || 'Standard'}</p>
             </div>
         `;
         ui.optionsGroup.innerHTML = '';
@@ -141,6 +142,7 @@ const GIPPP_ENGINE = (() => {
     };
 
     const renderFinalReport = () => {
+        // [핵심] 결과값을 URL 파라미터용 문자열로 변환 (예: N70M85P50)
         const resCode = Object.entries(state.results).map(([t, d]) => t + Math.round((d.total/(d.count*5))*100)).join('');
         const shareUrl = `${window.location.origin}${window.location.pathname}?test=${state.testId}&lang=${state.lang}&res=${resCode}`;
         const qrImgUrl = `https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=${encodeURIComponent(shareUrl)}`;
@@ -169,15 +171,34 @@ const GIPPP_ENGINE = (() => {
                         <h4>${state.ui.recommendTitle}</h4>
                         <a href="${amazonLink}" target="_blank" class="amazon-btn">${state.ui.viewAmazon}</a>
                     </div>
-                    <div class="qr-section"><img id="qrImage" src="${qrImgUrl}" crossorigin="anonymous"><p>${state.ui.qrNote}</p></div>
+                    <div class="qr-section">
+                        <img id="qrImage" src="${qrImgUrl}" crossorigin="anonymous">
+                        <p>${state.ui.qrNote}</p>
+                    </div>
                     <button class="btn-main" onclick="GIPPP_ENGINE.generateImage()">${state.ui.saveImg}</button>
                     <button class="btn-sub" onclick="GIPPP_ENGINE.cleanExit()">${state.ui.retest}</button>
-                    <p class="ipip-info" style="margin-top:20px;">Verified by ${state.guide.ipipId || 'Standard Method'}</p>
+                    <p class="ipip-info" style="margin-top:20px; opacity:0.3;">Verified by ${state.guide.ipipId || 'Standard'}</p>
                 </div>
             <canvas id="resultCanvas" style="display:none;"></canvas>
         </div>`;
         
         ui.testView.innerHTML = reportHtml;
+        ui.testView.style.display = 'block';
+    };
+
+    // [핵심] URL 파라미터에서 결과를 추출하여 복원하는 로직
+    const decodeAndShowResult = (c) => {
+        const s = {}; 
+        const m = c.match(/([A-Z])(\d+)/g);
+        if (m) {
+            m.forEach(x => { 
+                const trait = x[0];
+                const score = parseInt(x.substring(1));
+                s[trait] = { total: score, count: 20 }; // 가중치 역산 (100점 만점 기준)
+            });
+        }
+        state.results = s; 
+        renderFinalReport();
     };
 
     const generateImage = () => {
@@ -187,14 +208,13 @@ const GIPPP_ENGINE = (() => {
         const isRTL = (state.lang === 'ar');
         const traits = Object.entries(state.results);
         
-        canvas.width = 600; canvas.height = 850;
-        ctx.fillStyle = '#ffffff'; ctx.fillRect(0, 0, 600, 850);
+        canvas.width = 600; canvas.height = 900;
+        ctx.fillStyle = '#ffffff'; ctx.fillRect(0, 0, 600, 900);
         
-        // 상단 둥근 배경
+        // 캐릭터 카드 배경
         ctx.fillStyle = '#e7f5ff';
-        ctx.beginPath(); ctx.roundRect(20, 20, 560, 810, 40); ctx.fill();
+        ctx.beginPath(); ctx.roundRect(20, 20, 560, 860, 40); ctx.fill();
 
-        // 타이틀
         ctx.fillStyle = '#4dabf7'; ctx.font = 'bold 32px sans-serif'; ctx.textAlign = 'center';
         ctx.fillText(state.ui.reportTitle, 300, 100);
         
@@ -217,16 +237,18 @@ const GIPPP_ENGINE = (() => {
             y += 100;
         });
 
-        // 푸터 QR
+        // QR 코드 삽입 (결과 복원용 URL 포함)
         if (qrImg && qrImg.complete) {
-            ctx.fillStyle = '#ffffff'; ctx.fillRect(225, 630, 150, 150);
-            ctx.drawImage(qrImg, 235, 640, 130, 130);
+            ctx.fillStyle = '#ffffff'; ctx.fillRect(225, 650, 150, 150);
+            ctx.drawImage(qrImg, 235, 660, 130, 130);
         }
         ctx.fillStyle = '#adb5bd'; ctx.font = '14px sans-serif'; ctx.textAlign = 'center';
-        ctx.fillText(state.ui.viralTitle, 300, 800);
+        ctx.fillText(state.ui.viralTitle, 300, 820);
+        ctx.font = 'bold 12px monospace';
+        ctx.fillText(`VERIFIED BY ${state.guide.ipipId || 'STANDARD'}`, 300, 850);
         
         const link = document.createElement('a');
-        link.download = `GIPPP_Card.png`;
+        link.download = `GIPPP_Result.png`;
         link.href = canvas.toDataURL('image/png');
         link.click();
     };
