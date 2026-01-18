@@ -3,32 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GIPPP</title>
+    <title>GIPPP | Global Insight Profiler</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div id="app">
-        <!-- 상단 네비게이션: 언어 선택기는 항상 최상단에 노출 -->
+        <!-- 상단 네비게이션 -->
         <nav class="global-nav">
             <div class="live-status"><span class="dot"></span> Global Live</div>
             <div class="lang-picker">
-                <select id="lang-select" onchange="GIPPP_ENGINE.changeLanguage(this.value)">
-                    <!-- 엔진에서 10개 국어 옵션을 동적으로 생성 -->
-                </select>
+                <select id="lang-select" onchange="GIPPP_ENGINE.changeLanguage(this.value)"></select>
             </div>
         </nav>
 
         <header id="main-header">
             <h1 id="brand">GIPPP</h1>
             <p id="brand-desc"></p>
+            <p id="security-note" class="security-badge"></p>
         </header>
 
         <main id="main-content">
-            <!-- [대문 섹션] -->
+            <!-- [대문 섹션: Stealth Welcome View] -->
             <section id="welcome-view">
                 <div class="hero-banner">
                     <h2>"진짜 당신은 누구인가요?"</h2>
-                    <p>전 세계 사용자들이 선택한 5가지 프로파일링</p>
+                    <p>전 세계 사용자들이 선택한 5가지 심리 프로파일링</p>
                 </div>
                 <div class="test-grid">
                     <div class="test-card premium" onclick="GIPPP_ENGINE.changeTest('ocean')">
@@ -54,7 +53,7 @@
                 </div>
             </section>
 
-            <!-- [테스트 섹션] -->
+            <!-- [테스트 및 결과 섹션] -->
             <section id="test-view" style="display:none;">
                 <div id="progress-bar"><div id="progress-fill"></div></div>
                 <div id="question-container"><div id="question-text"></div></div>
@@ -64,7 +63,7 @@
 
         <footer>
             <div class="footer-links">
-                <span>© GIPPP Project</span>
+                <span>© GIPPP Project | Anonymous & Secure</span>
             </div>
         </footer>
     </div>
