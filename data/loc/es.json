@@ -1,53 +1,55 @@
 {
   "ui": {
-    "desc": "La forma más sensible de leer tu interior",
-    "security": "🔒 Seguridad: No se guardan datos",
+    "desc": "Análisis del lugar del control",
+    "security": "🔒 Seguridad: Sin almacenamiento de datos",
     "testNames": {
-      "ocean": "Mi Verdadero Yo (Big Five)",
-      "dark": "Buscador de Villanos",
-      "loc": "Mentalidad de Éxito",
-      "resilience": "Test de Resiliencia",
-      "trust": "Termómetro de Relaciones"
+      "ocean": "Análisis de mi personalidad real",
+      "dark": "Encuentra al villano interior",
+      "loc": "Mentalidad de éxito",
+      "resilience": "Test de mentalidad de acero",
+      "trust": "Termómetro de relaciones humanas"
     },
-    "processing": "Analizando tus patrones de conducta...",
-    "reportTitle": "Informe de Perfil de Villano",
-    "recommendTitle": "💡 Recomendado para ti",
+    "processing": "Analizando datos...",
+    "reportTitle": "Informe de perfil del lugar del control",
+    "recommendTitle": "💡 Recomendaciones personalizadas para ti",
     "viewAmazon": "Ver productos recomendados",
     "saveImg": "📸 Guardar imagen del informe",
-    "retest": "Repetir test",
-    "qrNote": "Escanea para guardar",
-    "viralTitle": "¿Curioso por tu resultado?",
-    "viralSub": "Escanea el QR para empezar",
-    "labels": ["Muy en desacuerdo", "En desacuerdo", "Neutral", "De acuerdo", "Muy de acuerdo"],
-    "amazonKeywords": { "N": "leadership books", "M": "strategy games", "P": "psychology books" }
+    "retest": "Repetir",
+    "qrNote": "Escanea para guardar el resultado",
+    "viralTitle": "¿Quieres conocer tu mentalidad de éxito?",
+    "viralSub": "Escanea el código QR para iniciar el test",
+    "labels": ["Totalmente en desacuerdo", "En desacuerdo", "Neutral", "De acuerdo", "Totalmente de acuerdo"],
+    "amazonKeywords": {
+      "I": "libros de autoayuda desarrollo personal",
+      "E": "libros de psicología social"
+    }
   },
-  "traitNames": {"L": "Locus de Control Interno"},
+  "guide": {
+    "ipipId": "Rotter-LOC",
+    "purpose": "Este test mide tu 'lugar del control', es decir, si crees que los resultados de tu vida dependen de tu esfuerzo o de factores externos.",
+    "instruction": "Lee cada afirmación y selecciona la opción que mejor refleje tu forma habitual de pensar. Responder con sinceridad te proporcionará un perfil más preciso.",
+    "interpretation": "Los resultados se muestran como el índice de control interno. Un índice alto indica que crees firmemente en tu capacidad de controlar tu vida.",
+    "startBtn": "Iniciar análisis"
+  },
+  "traitNames": {
+    "L": "Índice de control interno"
+  },
   "items": [
-    { "id": 1, "trait": "L", "direction": "+", "text": "Lo que me sucede en la vida depende principalmente de mis propios esfuerzos." },
-    { "id": 2, "trait": "L", "direction": "-", "text": "Creo que tener éxito en la vida es, en gran medida, una cuestión de suerte." },
-    { "id": 3, "trait": "L", "direction": "+", "text": "Tengo la capacidad de cambiar las situaciones para obtener lo que deseo." },
-    { "id": 4, "trait": "L", "direction": "-", "text": "El mundo es tan complejo que parece que lo que yo haga no marca una gran diferencia." },
-    { "id": 5, "trait": "L", "direction": "+", "text": "Cuando surge un problema, siento que es mi responsabilidad resolverlo." },
-    { "id": 6, "trait": "L", "direction": "-", "text": "A veces siento que, por mucho que me esfuerce, el resultado ya está decidido." },
-    { "id": 7, "trait": "L", "direction": "+", "text": "Creo que puedo diseñar y construir mi propio futuro." },
-    { "id": 8, "trait": "L", "direction": "-", "text": "Las cosas malas que me pasan suelen deberse a la mala suerte fuera de mi control." },
-    { "id": 9, "trait": "L", "direction": "+", "text": "Cualquiera puede alcanzar sus metas si se esfuerza lo suficiente." },
-    { "id": 10, "trait": "L", "direction": "-", "text": "Cuando veo a personas exitosas, parece que tuvieron buenas oportunidades más que talento." },
-    { "id": 11, "trait": "L", "direction": "+", "text": "Estoy acostumbrado a controlar mis propias emociones y acciones." },
-    { "id": 12, "trait": "L", "direction": "-", "text": "Me resulta difícil tomar decisiones importantes sin la ayuda de los demás." },
-    { "id": 13, "trait": "L", "direction": "+", "text": "Incluso si fracaso, busco por mí mismo qué debo corregir." },
-    { "id": 14, "trait": "L", "direction": "-", "text": "Frente a grandes corrientes como la política o la economía, el esfuerzo individual parece inútil." },
-    { "id": 15, "trait": "L", "direction": "+", "text": "Estoy convencido de que soy el dueño de mi propia vida." },
-    { "id": 16, "trait": "L", "direction": "-", "text": "Me siento más tranquilo dejando que la vida fluya en lugar de planificarlo todo." },
-    { "id": 17, "trait": "L", "direction": "+", "text": "Incluso en situaciones difíciles, encuentro algo que puedo hacer y lo ejecuto." },
-    { "id": 18, "trait": "L", "direction": "-", "text": "A veces siento que mi vida es dirigida por fuerzas ajenas a mí." },
-    { "id": 19, "trait": "L", "direction": "+", "text": "Acepto positivamente el hecho de que mis elecciones determinan mi futuro." },
-    { "id": 20, "trait": "L", "direction": "-", "text": "A veces siento que el mundo no es justo y que el esfuerzo tiene sus límites." }
+    {"id": 1, "trait": "L", "direction": "+", "text": "Creo que mi éxito depende principalmente de mi esfuerzo y capacidad."},
+    {"id": 2, "trait": "L", "direction": "+", "text": "Cuando algo sale mal, analizo qué parte puedo mejorar en lugar de culpar a las circunstancias."},
+    {"id": 3, "trait": "L", "direction": "+", "text": "Creo que puedo alcanzar mis metas si planifico y trabajo de manera constante."},
+    {"id": 4, "trait": "L", "direction": "-", "text": "Siento que los acontecimientos importantes de mi vida están determinados principalmente por la suerte."},
+    {"id": 5, "trait": "L", "direction": "+", "text": "Tiendo a intentar resolver los problemas por mí mismo en lugar de esperar ayuda externa."},
+    {"id": 6, "trait": "L", "direction": "-", "text": "A menudo pienso que mis circunstancias están fuera de mi control."},
+    {"id": 7, "trait": "L", "direction": "+", "text": "Creo que trabajar duro es más importante que tener suerte para lograr el éxito."},
+    {"id": 8, "trait": "L", "direction": "-", "text": "Creo que el resultado de una situación suele estar determinado por factores fuera de mi control, como otras personas o el entorno."},
+    {"id": 9, "trait": "L", "direction": "+", "text": "Cuando tomo una decisión, confío en mi juicio y asumo la responsabilidad del resultado."},
+    {"id": 10, "trait": "L", "direction": "-", "text": "Creo que no puedo hacer mucho para cambiar mi situación actual."}
   ],
   "descriptions": {
     "L": {
-      "high": "Tienes una fuerte tendencia al 'Control Interno'. Eres del tipo proactivo que cree que puedes abrirte camino en la vida y cambiar los resultados mediante el esfuerzo.",
-      "low": "Tienes una fuerte tendencia al 'Control Externo'. Respetas el entorno y el flujo de la suerte, y eres del tipo que encuentra la paz mental adaptándose a las situaciones."
+      "high": "Tienes una fuerte creencia en tu capacidad de controlar tu vida y confías en tu voluntad y esfuerzo. Eres un agente proactivo de cambio.",
+      "low": "Tiendes a percibir que los resultados de la vida están determinados por factores externos. Puede ser útil fortalecer tu sentido de responsabilidad personal."
     }
   }
 }

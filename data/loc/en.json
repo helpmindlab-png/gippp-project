@@ -1,57 +1,110 @@
 {
   "ui": {
-    "desc": "The most sensible way to read your inner self",
-    "security": "🔒 Security: No data stored",
+    "desc": "Discover your success DNA",
+    "security": "🔒 Secure: No data stored",
     "testNames": {
-      "ocean": "My True Self (Big Five)",
-      "dark": "Villain Finder",
+      "ocean": "True Self Analysis",
+      "dark": "Inner Villain Detector",
       "loc": "Success Mindset",
-      "resilience": "Mental Resilience Test",
+      "resilience": "Mental Steel Test",
       "trust": "Relationship Thermometer"
     },
-    "processing": "Analyzing your behavioral patterns...",
-    "reportTitle": "Villain Profiling Report",
+    "processing": "Analyzing your profile...",
+    "reportTitle": "Success Mindset Analysis Report",
     "recommendTitle": "💡 Recommended for You",
-    "viewAmazon": "View Recommended Products",
+    "viewAmazon": "View Products",
     "saveImg": "📸 Save Report Image",
-    "retest": "Retest",
-    "qrNote": "Scan to save your result",
-    "viralTitle": "Curious about your insight?",
+    "retest": "Take Again",
+    "qrNote": "Scan to save your results",
+    "viralTitle": "Curious about your success DNA?",
     "viralSub": "Scan QR code to start the test",
-    "labels": ["Strongly Disagree", "Disagree", "Neutral", "Agree", "Strongly Agree"],
-    "amazonKeywords": { 
-      "N": "leadership books", 
-      "M": "strategy games", 
-      "P": "psychology books" 
+    "labels": [
+      "Strongly Disagree",
+      "Disagree",
+      "Neutral",
+      "Agree",
+      "Strongly Agree"
+    ],
+    "amazonKeywords": {
+      "L": "self-help success mindset books"
     }
   },
-  "traitNames": {"L": "Internal Locus of Control"},
+  "guide": {
+    "ipipId": "Rotter-LOC-20",
+    "purpose": "This assessment analyzes where you place the control of your life based on 'Locus of Control' theory. It measures the mindset of successful people.",
+    "instruction": "Read each statement and select the option that best matches your usual thoughts. The more honest you are, the more accurate your profile will be.",
+    "interpretation": "Results show Internal vs External control tendencies. Higher internal control indicates self-directedness and is associated with greater success probability.",
+    "startBtn": "Start Analysis"
+  },
+  "traitNames": {
+    "L": "Internal Control Index"
+  },
   "items": [
-    { "id": 1, "trait": "L", "direction": "+", "text": "What happens to me is my own doing." },
-    { "id": 2, "trait": "L", "direction": "-", "text": "Success is mostly a matter of luck." },
-    { "id": 3, "trait": "L", "direction": "+", "text": "I can pretty much determine what will happen in my life." },
-    { "id": 4, "trait": "L", "direction": "-", "text": "Many of the unhappy things in people's lives are partly due to bad luck." },
-    { "id": 5, "trait": "L", "direction": "+", "text": "When I make plans, I am almost certain that I can make them work." },
-    { "id": 6, "trait": "L", "direction": "-", "text": "Getting what I want has little or nothing to do with luck." },
-    { "id": 7, "trait": "L", "direction": "+", "text": "I am the master of my fate." },
-    { "id": 8, "trait": "L", "direction": "-", "text": "The world is run by a few people in power, and there is not much the little guy can do about it." },
-    { "id": 9, "trait": "L", "direction": "+", "text": "I can learn to do almost anything if I set my mind to it." },
-    { "id": 10, "trait": "L", "direction": "-", "text": "It is not always wise to plan too far ahead because many things turn out to be a matter of good or bad fortune." },
-    { "id": 11, "trait": "L", "direction": "+", "text": "My behavior is usually determined by my own conscious decisions." },
-    { "id": 12, "trait": "L", "direction": "-", "text": "I feel that I have little influence over the things that happen to me." },
-    { "id": 13, "trait": "L", "direction": "+", "text": "I am responsible for my own successes and failures." },
-    { "id": 14, "trait": "L", "direction": "-", "text": "Most people don't realize the extent to which their lives are controlled by accidental happenings." },
-    { "id": 15, "trait": "L", "direction": "+", "text": "I believe that I can control my own destiny." },
-    { "id": 16, "trait": "L", "direction": "-", "text": "There's no use in trying too hard since things will happen as they will anyway." },
-    { "id": 17, "trait": "L", "direction": "+", "text": "I can overcome most obstacles if I am determined enough." },
-    { "id": 18, "trait": "L", "direction": "-", "text": "I often feel that I have very little control over my life." },
-    { "id": 19, "trait": "L", "direction": "+", "text": "I am in control of my own emotions and actions." },
-    { "id": 20, "trait": "L", "direction": "-", "text": "Life is a game of chance." }
+    {
+      "id": 1,
+      "trait": "L",
+      "direction": "+",
+      "text": "Most of what happens in my life depends on my own efforts."
+    },
+    {
+      "id": 2,
+      "trait": "L",
+      "direction": "-",
+      "text": "I think success in life is largely determined by luck."
+    },
+    {
+      "id": 3,
+      "trait": "L",
+      "direction": "+",
+      "text": "I have enough ability to change situations to get what I want."
+    },
+    {
+      "id": 4,
+      "trait": "L",
+      "direction": "-",
+      "text": "The world is so complex that what I do doesn't make much difference."
+    },
+    {
+      "id": 5,
+      "trait": "L",
+      "direction": "+",
+      "text": "When a problem arises, I feel responsible for solving it."
+    },
+    {
+      "id": 6,
+      "trait": "L",
+      "direction": "-",
+      "text": "Sometimes I feel that outcomes are already predetermined no matter how hard I try."
+    },
+    {
+      "id": 7,
+      "trait": "L",
+      "direction": "+",
+      "text": "I believe I can design and create my own future."
+    },
+    {
+      "id": 8,
+      "trait": "L",
+      "direction": "-",
+      "text": "Bad things that happen to me are usually due to bad luck beyond my control."
+    },
+    {
+      "id": 9,
+      "trait": "L",
+      "direction": "+",
+      "text": "If you work hard enough, anyone can achieve their goals."
+    },
+    {
+      "id": 10,
+      "trait": "L",
+      "direction": "-",
+      "text": "Looking at successful people, it seems they had good opportunities rather than pure skill."
+    }
   ],
   "descriptions": {
     "L": {
-      "high": "You have a strong 'Internal Locus of Control.' You believe that you are responsible for your own success and have the power to shape your future.",
-      "low": "You have an 'External Locus of Control.' You tend to believe that external factors, such as luck or fate, play a significant role in your life."
+      "high": "You have a strong 'internal locus of control.' You pioneer your own life and believe you can change outcomes through effort—a proactive type with key elements of a success mindset.",
+      "low": "You have a strong 'external locus of control.' You respect environmental flows and luck, sometimes finding peace by adapting to situations. You value natural flow."
     }
   }
 }

@@ -1,53 +1,110 @@
 {
   "ui": {
-    "desc": "解读内心最感性的方式",
-    "security": "🔒 安全：不存储任何数据",
+    "desc": "发现你的成功DNA",
+    "security": "🔒 安全：不存储数据",
     "testNames": {
-      "ocean": "本性分析 (大五人格)",
-      "dark": "寻找内心的反派",
-      "loc": "成功心态测试",
-      "resilience": "心理韧性测试",
+      "ocean": "真我分析",
+      "dark": "内心反派探测器",
+      "loc": "成功心态",
+      "resilience": "钢铁意志测试",
       "trust": "人际关系温度计"
     },
-    "processing": "正在分析您的行为模式...",
-    "reportTitle": "人格特质分析报告",
-    "recommendTitle": "💡 为您定制的建议",
+    "processing": "数据分析中...",
+    "reportTitle": "成功心态分析报告",
+    "recommendTitle": "💡 为你推荐",
     "viewAmazon": "查看推荐商品",
     "saveImg": "📸 保存报告图片",
     "retest": "重新测试",
-    "qrNote": "扫码保存结果",
-    "viralTitle": "想了解你的内在洞察吗？",
+    "qrNote": "扫描保存结果",
+    "viralTitle": "想知道你的成功DNA吗？",
     "viralSub": "扫描二维码开始测试",
-    "labels": ["极不同意", "不同意", "中立", "同意", "极同意"],
-    "amazonKeywords": { "N": "leadership books", "M": "strategy games", "P": "psychology books" }
+    "labels": [
+      "极不同意",
+      "不同意",
+      "中立",
+      "同意",
+      "极同意"
+    ],
+    "amazonKeywords": {
+      "L": "自我提升成功心态书籍"
+    }
   },
-  "traitNames": {"L": "内控点指数"},
+  "guide": {
+    "ipipId": "Rotter-LOC-20",
+    "purpose": "本测试基于「控制点」理论，分析你将人生主导权置于何处。测量成功人士的思维方式。",
+    "instruction": "阅读每个陈述，选择最符合你平时想法的选项。越诚实，结果越准确。",
+    "interpretation": "结果显示内控 vs 外控倾向。内控越高，表明越自主，与更高成功概率相关。",
+    "startBtn": "开始分析"
+  },
+  "traitNames": {
+    "L": "内控指数"
+  },
   "items": [
-    { "id": 1, "trait": "L", "direction": "+", "text": "我生活中发生的事情主要取决于我自己的努力。" },
-    { "id": 2, "trait": "L", "direction": "-", "text": "我认为人生成功与否在很大程度上取决于运气。" },
-    { "id": 3, "trait": "L", "direction": "+", "text": "我有能力改变现状以获得我想要的东西。" },
-    { "id": 4, "trait": "L", "direction": "-", "text": "世界太复杂了，我觉得无论我做什么都没有太大区别。" },
-    { "id": 5, "trait": "L", "direction": "+", "text": "当出现问题时，我觉得我有责任去解决它。" },
-    { "id": 6, "trait": "L", "direction": "-", "text": "有时我觉得无论多么努力，结果似乎已经注定了。" },
-    { "id": 7, "trait": "L", "direction": "+", "text": "我相信我可以自己设计并创造我的未来。" },
-    { "id": 8, "trait": "L", "direction": "-", "text": "发生在我身上的坏事通常是因为我无法控制的厄运。" },
-    { "id": 9, "trait": "L", "direction": "+", "text": "只要努力，任何人都能实现自己的目标。" },
-    { "id": 10, "trait": "L", "direction": "-", "text": "看到成功的人，我觉得他们更多是遇到了好机会，而不是靠实力。" },
-    { "id": 11, "trait": "L", "direction": "+", "text": "我习惯于自我调节情绪和行为。" },
-    { "id": 12, "trait": "L", "direction": "-", "text": "如果没有周围人的帮助，我很难决定重要的事情。" },
-    { "id": 13, "trait": "L", "direction": "+", "text": "即使失败，我也会自己找出需要改进的地方。" },
-    { "id": 14, "trait": "L", "direction": "-", "text": "在政治或经济等大趋势面前，个人的努力显得微不足道。" },
-    { "id": 15, "trait": "L", "direction": "+", "text": "我确信我才是自己生活的主人。" },
-    { "id": 16, "trait": "L", "direction": "-", "text": "比起按计划行事，顺其自然让我感到更轻松。" },
-    { "id": 17, "trait": "L", "direction": "+", "text": "即使在困难的情况下，我也会找到我能做的事并付诸行动。" },
-    { "id": 18, "trait": "L", "direction": "-", "text": "有时我觉得我的生活是被某种我之外的力量牵引着的。" },
-    { "id": 19, "trait": "L", "direction": "+", "text": "我积极地接受“我的选择决定我的未来”这一事实。" },
-    { "id": 20, "trait": "L", "direction": "-", "text": "有时我觉得世界并不公平，努力也是有极限的。" }
+    {
+      "id": 1,
+      "trait": "L",
+      "direction": "+",
+      "text": "我生活中发生的事情大多取决于我自己的努力。"
+    },
+    {
+      "id": 2,
+      "trait": "L",
+      "direction": "-",
+      "text": "我认为人生成功与否很大程度上取决于运气。"
+    },
+    {
+      "id": 3,
+      "trait": "L",
+      "direction": "+",
+      "text": "我有足够的能力改变情况来获得我想要的东西。"
+    },
+    {
+      "id": 4,
+      "trait": "L",
+      "direction": "-",
+      "text": "世界太复杂了，我做什么都不会有太大区别。"
+    },
+    {
+      "id": 5,
+      "trait": "L",
+      "direction": "+",
+      "text": "当问题出现时，我觉得解决它的责任在我。"
+    },
+    {
+      "id": 6,
+      "trait": "L",
+      "direction": "-",
+      "text": "有时我觉得无论多努力，结果早已注定。"
+    },
+    {
+      "id": 7,
+      "trait": "L",
+      "direction": "+",
+      "text": "我相信我能设计和创造自己的未来。"
+    },
+    {
+      "id": 8,
+      "trait": "L",
+      "direction": "-",
+      "text": "发生在我身上的坏事通常是因为我无法控制的厄运。"
+    },
+    {
+      "id": 9,
+      "trait": "L",
+      "direction": "+",
+      "text": "如果足够努力，任何人都能实现自己的目标。"
+    },
+    {
+      "id": 10,
+      "trait": "L",
+      "direction": "-",
+      "text": "看成功的人，似乎他们是遇到了好机会而非纯靠实力。"
+    }
   ],
   "descriptions": {
     "L": {
-      "high": "你有很强的“内控型”倾向。你是一个积极主动的人，相信可以通过努力开拓人生并改变结果。",
-      "low": "你有较强的“外控型”倾向。你尊重环境和运气的流动，有时会通过顺应现状来寻求内心的平静。"
+      "high": "你有强烈的「内控」倾向。你开拓自己的人生，相信通过努力可以改变结果——是一种积极主动的类型，具备成功心态的核心要素。",
+      "low": "你有强烈的「外控」倾向。你尊重环境和运气的影响，有时通过适应情况来寻找内心平静。你重视自然流动。"
     }
   }
 }

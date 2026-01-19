@@ -1,53 +1,55 @@
 {
   "ui": {
-    "desc": "A forma mais sensata de ler o seu eu interior",
-    "security": "🔒 Segurança: Nenhum dado armazenado",
+    "desc": "Análise do locus de controle",
+    "security": "🔒 Segurança: Sem armazenamento de dados",
     "testNames": {
-      "ocean": "Meu Verdadeiro Eu (Big Five)",
-      "dark": "Buscador de Vilões",
-      "loc": "Mentalidade de Sucesso",
-      "resilience": "Teste de Resiliência",
-      "trust": "Termômetro de Relações"
+      "ocean": "Análise da minha personalidade real",
+      "dark": "Encontre o vilão interior",
+      "loc": "Mentalidade de sucesso",
+      "resilience": "Teste de mentalidade de aço",
+      "trust": "Termômetro de relações humanas"
     },
-    "processing": "Analisando seus padrões comportamentais...",
-    "reportTitle": "Relatório de Perfil de Vilão",
-    "recommendTitle": "💡 Recomendado para você",
+    "processing": "Analisando dados...",
+    "reportTitle": "Relatório de perfil do locus de controle",
+    "recommendTitle": "💡 Recomendações personalizadas para você",
     "viewAmazon": "Ver produtos recomendados",
     "saveImg": "📸 Salvar imagem do relatório",
-    "retest": "Reiniciar teste",
-    "qrNote": "Escaneie para salvar",
-    "viralTitle": "Curioso sobre o seu resultado?",
-    "viralSub": "Escaneie o QR para começar",
+    "retest": "Refazer",
+    "qrNote": "Escaneie para guardar o resultado",
+    "viralTitle": "Quer conhecer sua mentalidade de sucesso?",
+    "viralSub": "Escaneie o código QR para iniciar o teste",
     "labels": ["Discordo totalmente", "Discordo", "Neutro", "Concordo", "Concordo totalmente"],
-    "amazonKeywords": { "N": "leadership books", "M": "strategy games", "P": "psychology books" }
+    "amazonKeywords": {
+      "I": "livros autoajuda desenvolvimento pessoal",
+      "E": "livros psicologia social"
+    }
   },
-  "traitNames": {"L": "Locus de Controlo Interno"},
+  "guide": {
+    "ipipId": "Rotter-LOC",
+    "purpose": "Este teste mede seu 'locus de controle', ou seja, se você acredita que os resultados de sua vida dependem do seu esforço ou de fatores externos.",
+    "instruction": "Leia cada afirmação e selecione a opção que melhor reflete sua forma habitual de pensar. Responder com sinceridade proporcionará um perfil mais preciso.",
+    "interpretation": "Os resultados são mostrados como o índice de controle interno. Um índice alto indica que você acredita fortemente em sua capacidade de controlar sua vida.",
+    "startBtn": "Iniciar análise"
+  },
+  "traitNames": {
+    "L": "Índice de controle interno"
+  },
   "items": [
-    { "id": 1, "trait": "L", "direction": "+", "text": "O que acontece na minha vida depende principalmente dos meus próprios esforços." },
-    { "id": 2, "trait": "L", "direction": "-", "text": "Acredito que ter sucesso na vida é, em grande parte, uma questão de sorte." },
-    { "id": 3, "trait": "L", "direction": "+", "text": "Tenho a capacidade de mudar as situações para obter o que desejo." },
-    { "id": 4, "trait": "L", "direction": "-", "text": "O mundo é tão complexo que parece que o que eu faço não faz muita diferença." },
-    { "id": 5, "trait": "L", "direction": "+", "text": "Quando surge um problema, sinto que a responsabilidade de resolvê-lo é minha." },
-    { "id": 6, "trait": "L", "direction": "-", "text": "Às vezes sinto que, por mais que eu me esforce, o resultado já está decidido." },
-    { "id": 7, "trait": "L", "direction": "+", "text": "Acredito que posso projetar e construir o meu próprio futuro." },
-    { "id": 8, "trait": "L", "direction": "-", "text": "As coisas más que me acontecem costumam ser por azar fora do meu controlo." },
-    { "id": 9, "trait": "L", "direction": "+", "text": "Qualquer pessoa pode alcançar os seus objetivos se trabalhar arduamente." },
-    { "id": 10, "trait": "L", "direction": "-", "text": "Ao ver pessoas de sucesso, parece que tiveram boas oportunidades mais do que talento." },
-    { "id": 11, "trait": "L", "direction": "+", "text": "Estou habituado a controlar as minhas próprias emoções e ações." },
-    { "id": 12, "trait": "L", "direction": "-", "text": "Acho difícil tomar decisões importantes sem a ajuda dos outros." },
-    { "id": 13, "trait": "L", "direction": "+", "text": "Mesmo que falhe, procuro por mim mesmo o que devo corrigir." },
-    { "id": 14, "trait": "L", "direction": "-", "text": "Perante grandes correntes como a política ou a economia, o esforço individual parece inútil." },
-    { "id": 15, "trait": "L", "direction": "+", "text": "Estou convencido de que sou o dono da minha própria vida." },
-    { "id": 16, "trait": "L", "direction": "-", "text": "Sinto-me mais tranquilo deixando a vida fluir em vez de planear tudo." },
-    { "id": 17, "trait": "L", "direction": "+", "text": "Mesmo em situações difíceis, encontro algo que posso fazer e executo-o." },
-    { "id": 18, "trait": "L", "direction": "-", "text": "Às vezes sinto que a minha vida é conduzida por outras forças que não eu." },
-    { "id": 19, "trait": "L", "direction": "+", "text": "Aceito positivamente o facto de que as minhas escolhas determinam o meu futuro." },
-    { "id": 20, "trait": "L", "direction": "-", "text": "Às vezes sinto que o mundo não é justo e que o esforço tem limites." }
+    {"id": 1, "trait": "L", "direction": "+", "text": "Acredito que meu sucesso depende principalmente do meu esforço e capacidade."},
+    {"id": 2, "trait": "L", "direction": "+", "text": "Quando algo dá errado, analiso que parte posso melhorar em vez de culpar as circunstâncias."},
+    {"id": 3, "trait": "L", "direction": "+", "text": "Acredito que posso alcançar meus objetivos se planejar e trabalhar de forma constante."},
+    {"id": 4, "trait": "L", "direction": "-", "text": "Sinto que os acontecimentos importantes da minha vida são determinados principalmente pela sorte."},
+    {"id": 5, "trait": "L", "direction": "+", "text": "Tendo a tentar resolver os problemas por mim mesmo em vez de esperar ajuda externa."},
+    {"id": 6, "trait": "L", "direction": "-", "text": "Frequentemente penso que minhas circunstâncias estão fora do meu controle."},
+    {"id": 7, "trait": "L", "direction": "+", "text": "Acredito que trabalhar duro é mais importante do que ter sorte para alcançar o sucesso."},
+    {"id": 8, "trait": "L", "direction": "-", "text": "Acredito que o resultado de uma situação geralmente é determinado por fatores fora do meu controle, como outras pessoas ou o ambiente."},
+    {"id": 9, "trait": "L", "direction": "+", "text": "Quando tomo uma decisão, confio no meu julgamento e assumo a responsabilidade pelo resultado."},
+    {"id": 10, "trait": "L", "direction": "-", "text": "Acredito que não posso fazer muito para mudar minha situação atual."}
   ],
   "descriptions": {
     "L": {
-      "high": "Tem uma forte tendência para o 'Controlo Interno'. É do tipo proativo que acredita que pode abrir o seu próprio caminho na vida e mudar os resultados através do esforço.",
-      "low": "Tem uma forte tendência para o 'Controlo Externo'. Respeita o ambiente e o fluxo da sorte, e é do tipo que encontra a paz mental adaptando-se às situações."
+      "high": "Você tem uma forte crença em sua capacidade de controlar sua vida e confia em sua vontade e esforço. Você é um agente proativo de mudança.",
+      "low": "Você tende a perceber que os resultados da vida são determinados por fatores externos. Pode ser útil fortalecer seu senso de responsabilidade pessoal."
     }
   }
 }

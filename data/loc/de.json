@@ -1,53 +1,55 @@
 {
   "ui": {
-    "desc": "Der sensibelste Weg, Ihr inneres Selbst zu verstehen",
+    "desc": "Analyse des Kontrollzentrums",
     "security": "🔒 Sicherheit: Keine Datenspeicherung",
     "testNames": {
-      "ocean": "Mein wahres Ich (Big Five)",
-      "dark": "Bösewicht-Finder",
+      "ocean": "Analyse meiner wahren Persönlichkeit",
+      "dark": "Finde den Bösewicht in dir",
       "loc": "Erfolgs-Mindset",
-      "resilience": "Resilienz-Test",
-      "trust": "Beziehungs-Thermometer"
+      "resilience": "Stahl-Mentalitäts-Test",
+      "trust": "Thermometer menschlicher Beziehungen"
     },
-    "processing": "Verhaltensmuster werden analysiert...",
-    "reportTitle": "Bösewicht-Profiling-Bericht",
-    "recommendTitle": "💡 Empfehlung für Sie",
+    "processing": "Daten werden analysiert...",
+    "reportTitle": "Kontrollzentrum-Profilbericht",
+    "recommendTitle": "💡 Personalisierte Empfehlungen für Sie",
     "viewAmazon": "Empfohlene Produkte ansehen",
-    "saveImg": "📸 Bericht als Bild speichern",
-    "retest": "Test wiederholen",
-    "qrNote": "Scannen zum Speichern",
-    "viralTitle": "Neugierig auf Ihre Analyse?",
-    "viralSub": "QR-Code scannen, um zu starten",
-    "labels": ["Stimme gar nicht zu", "Stimme nicht zu", "Neutral", "Stimme zu", "Stimme voll zu"],
-    "amazonKeywords": { "N": "leadership books", "M": "strategy games", "P": "psychology books" }
+    "saveImg": "📸 Berichtsbild speichern",
+    "retest": "Wiederholen",
+    "qrNote": "Scannen, um Ergebnis zu speichern",
+    "viralTitle": "Möchten Sie Ihre Erfolgs-Mentalität kennenlernen?",
+    "viralSub": "QR-Code scannen, um Test zu starten",
+    "labels": ["Stimme überhaupt nicht zu", "Stimme nicht zu", "Neutral", "Stimme zu", "Stimme voll und ganz zu"],
+    "amazonKeywords": {
+      "I": "Selbsthilfe Bücher Deutsch",
+      "E": "Sozialpsychologie Bücher"
+    }
   },
-  "traitNames": {"L": "Internale Kontrollüberzeugung"},
+  "guide": {
+    "ipipId": "Rotter-LOC",
+    "purpose": "Dieser Test misst Ihr 'Kontrollzentrum', d.h. ob Sie glauben, dass die Ergebnisse Ihres Lebens von Ihrer Anstrengung oder von externen Faktoren abhängen.",
+    "instruction": "Lesen Sie jede Aussage und wählen Sie die Option, die Ihre gewöhnliche Denkweise am besten widerspiegelt. Ehrliche Antworten liefern ein genaueres Profil.",
+    "interpretation": "Die Ergebnisse werden als interner Kontrollindex angezeigt. Ein hoher Index zeigt an, dass Sie fest an Ihre Fähigkeit glauben, Ihr Leben zu kontrollieren.",
+    "startBtn": "Analyse starten"
+  },
+  "traitNames": {
+    "L": "Interner Kontrollindex"
+  },
   "items": [
-    { "id": 1, "trait": "L", "direction": "+", "text": "Was in meinem Leben passiert, hängt hauptsächlich von meinen eigenen Anstrengungen ab." },
-    { "id": 2, "trait": "L", "direction": "-", "text": "Ich glaube, dass Erfolg im Leben zu einem großen Teil eine Frage des Glücks ist." },
-    { "id": 3, "trait": "L", "direction": "+", "text": "Ich habe die Fähigkeit, Situationen so zu verändern, dass ich bekomme, was ich will." },
-    { "id": 4, "trait": "L", "direction": "-", "text": "Die Welt ist so komplex, dass es scheint, als ob mein Handeln keinen großen Unterschied macht." },
-    { "id": 5, "trait": "L", "direction": "+", "text": "Wenn ein Problem auftritt, fühle ich mich dafür verantwortlich, es zu lösen." },
-    { "id": 6, "trait": "L", "direction": "-", "text": "Manchmal habe ich das Gefühl, dass das Ergebnis bereits feststeht, egal wie sehr ich mich anstrenge." },
-    { "id": 7, "trait": "L", "direction": "+", "text": "Ich glaube, dass ich meine Zukunft selbst entwerfen und gestalten kann." },
-    { "id": 8, "trait": "L", "direction": "-", "text": "Schlechte Dinge, die mir passieren, sind meist auf Pech zurückzuführen, das ich nicht kontrollieren kann." },
-    { "id": 9, "trait": "L", "direction": "+", "text": "Jeder kann seine Ziele erreichen, wenn er hart genug arbeitet." },
-    { "id": 10, "trait": "L", "direction": "-", "text": "Wenn ich erfolgreiche Menschen sehe, scheint es eher an guten Gelegenheiten als an Talent zu liegen." },
-    { "id": 11, "trait": "L", "direction": "+", "text": "Ich bin es gewohnt, meine eigenen Emotionen und Handlungen selbst zu kontrollieren." },
-    { "id": 12, "trait": "L", "direction": "-", "text": "Es fällt mir schwer, wichtige Entscheidungen ohne die Hilfe anderer zu treffen." },
-    { "id": 13, "trait": "L", "direction": "+", "text": "Selbst wenn ich scheitere, suche ich selbst nach dem, was ich korrigieren muss." },
-    { "id": 14, "trait": "L", "direction": "-", "text": "Angesichts großer Strömungen wie Politik oder Wirtschaft erscheint die Anstrengung des Einzelnen sinnlos." },
-    { "id": 15, "trait": "L", "direction": "+", "text": "Ich bin davon überzeugt, dass ich der Herr meines eigenen Lebens bin." },
-    { "id": 16, "trait": "L", "direction": "-", "text": "Es ist beruhigender, das Leben fließen zu lassen, als alles zu planen." },
-    { "id": 17, "trait": "L", "direction": "+", "text": "Selbst in schwierigen Situationen finde ich etwas, das ich tun kann, und setze es um." },
-    { "id": 18, "trait": "L", "direction": "-", "text": "Manchmal habe ich das Gefühl, dass mein Leben von anderen Kräften als mir selbst gelenkt wird." },
-    { "id": 19, "trait": "L", "direction": "+", "text": "Ich akzeptiere die Tatsache, dass meine Entscheidungen meine Zukunft bestimmen, positiv." },
-    { "id": 20, "trait": "L", "direction": "-", "text": "Manchmal habe ich das Gefühl, dass die Welt nicht gerecht ist und Anstrengung ihre Grenzen hat." }
+    {"id": 1, "trait": "L", "direction": "+", "text": "Ich glaube, dass mein Erfolg hauptsächlich von meiner Anstrengung und Fähigkeit abhängt."},
+    {"id": 2, "trait": "L", "direction": "+", "text": "Wenn etwas schief geht, analysiere ich, welchen Teil ich verbessern kann, anstatt die Umstände zu beschuldigen."},
+    {"id": 3, "trait": "L", "direction": "+", "text": "Ich glaube, dass ich meine Ziele erreichen kann, wenn ich plane und beständig arbeite."},
+    {"id": 4, "trait": "L", "direction": "-", "text": "Ich habe das Gefühl, dass wichtige Ereignisse in meinem Leben hauptsächlich durch Glück bestimmt werden."},
+    {"id": 5, "trait": "L", "direction": "+", "text": "Ich neige dazu, Probleme selbst zu lösen, anstatt auf externe Hilfe zu warten."},
+    {"id": 6, "trait": "L", "direction": "-", "text": "Ich denke oft, dass meine Umstände außerhalb meiner Kontrolle liegen."},
+    {"id": 7, "trait": "L", "direction": "+", "text": "Ich glaube, dass harte Arbeit wichtiger ist als Glück, um Erfolg zu erzielen."},
+    {"id": 8, "trait": "L", "direction": "-", "text": "Ich glaube, dass das Ergebnis einer Situation normalerweise durch Faktoren außerhalb meiner Kontrolle bestimmt wird, wie andere Menschen oder die Umgebung."},
+    {"id": 9, "trait": "L", "direction": "+", "text": "Wenn ich eine Entscheidung treffe, vertraue ich meinem Urteil und übernehme die Verantwortung für das Ergebnis."},
+    {"id": 10, "trait": "L", "direction": "-", "text": "Ich glaube, dass ich nicht viel tun kann, um meine aktuelle Situation zu ändern."}
   ],
   "descriptions": {
     "L": {
-      "high": "Sie haben eine starke Tendenz zur 'internalen Kontrollüberzeugung'. Sie sind ein proaktiver Typ, der glaubt, sein Leben selbst in die Hand nehmen und Ergebnisse durch Anstrengung verändern zu können.",
-      "low": "Sie haben eine starke Tendenz zur 'externalen Kontrollüberzeugung'. Sie respektieren das Umfeld und den Lauf des Glücks und finden Seelenfrieden, indem Sie sich an Situationen anpassen."
+      "high": "Sie haben einen starken Glauben an Ihre Fähigkeit, Ihr Leben zu kontrollieren, und vertrauen auf Ihren Willen und Ihre Anstrengung. Sie sind ein proaktiver Agent des Wandels.",
+      "low": "Sie neigen dazu wahrzunehmen, dass die Ergebnisse des Lebens durch externe Faktoren bestimmt werden. Es kann hilfreich sein, Ihr Gefühl persönlicher Verantwortung zu stärken."
     }
   }
 }

@@ -1,52 +1,55 @@
 {
   "ui": {
-    "desc": "Cách nhạy bén nhất để thấu hiểu nội tâm bạn",
+    "desc": "Phân tích trung tâm kiểm soát",
     "security": "🔒 Bảo mật: Không lưu trữ dữ liệu",
     "testNames": {
-      "ocean": "Bản sắc thực sự (Big Five)",
-      "dark": "Tìm kiếm phản diện trong bạn",
+      "ocean": "Phân tích tính cách thật của tôi",
+      "dark": "Tìm kẻ phản diện bên trong",
       "loc": "Tư duy thành công",
-      "resilience": "Kiểm tra bản lĩnh",
-      "trust": "Thước đo mối quan hệ"
+      "resilience": "Bài kiểm tra tinh thần thép",
+      "trust": "Nhiệt kế quan hệ con người"
     },
-    "processing": "Đang phân tích hành vi của bạn...",
-    "reportTitle": "Báo cáo hồ sơ phản diện",
-    "recommendTitle": "💡 Gợi ý dành cho bạn",
-    "viewAmazon": "Xem sản phẩm gợi ý",
-    "saveImg": "📸 Lưu ảnh báo cáo",
+    "processing": "Đang phân tích dữ liệu...",
+    "reportTitle": "Báo cáo hồ sơ trung tâm kiểm soát",
+    "recommendTitle": "💡 Đề xuất được cá nhân hóa cho bạn",
+    "viewAmazon": "Xem sản phẩm được đề xuất",
+    "saveImg": "📸 Lưu hình ảnh báo cáo",
     "retest": "Làm lại",
     "qrNote": "Quét để lưu kết quả",
-    "viralTitle": "Bạn tò mò về bản thân?",
-    "viralSub": "Quét mã QR để bắt đầu",
-    "labels": ["Rất không đồng ý", "Không đồng ý", "Bình thường", "Đồng ý", "Rất đồng ý"],
-    "amazonKeywords": { "N": "leadership books", "M": "strategy games", "P": "psychology books" }
+    "viralTitle": "Bạn có muốn biết tư duy thành công của mình?",
+    "viralSub": "Quét mã QR để bắt đầu bài kiểm tra",
+    "labels": ["Hoàn toàn không đồng ý", "Không đồng ý", "Trung lập", "Đồng ý", "Hoàn toàn đồng ý"],
+    "amazonKeywords": {
+      "I": "sách phát triển bản thân",
+      "E": "sách tâm lý xã hội"
+    }
   },
-  "traitNames": {"L": "Kiểm soát nội tại"},
+  "guide": {
+    "ipipId": "Rotter-LOC",
+    "purpose": "Bài kiểm tra này đo lường 'trung tâm kiểm soát' của bạn, tức là bạn tin rằng kết quả cuộc sống của bạn phụ thuộc vào nỗ lực của bạn hay các yếu tố bên ngoài.",
+    "instruction": "Đọc mỗi khẳng định và chọn tùy chọn phản ánh tốt nhất cách suy nghĩ thông thường của bạn. Trả lời trung thực sẽ cung cấp hồ sơ chính xác hơn.",
+    "interpretation": "Kết quả được hiển thị dưới dạng chỉ số kiểm soát nội bộ. Chỉ số cao cho thấy bạn tin tưởng mạnh mẽ vào khả năng kiểm soát cuộc sống của mình.",
+    "startBtn": "Bắt đầu phân tích"
+  },
+  "traitNames": {
+    "L": "Chỉ số kiểm soát nội bộ"
+  },
   "items": [
-    { "id": 1, "trait": "L", "direction": "+", "text": "Những gì xảy ra trong cuộc sống của tôi chủ yếu phụ thuộc vào nỗ lực của chính tôi." },
-    { "id": 2, "trait": "L", "direction": "-", "text": "Tôi nghĩ rằng việc thành công hay không trong cuộc sống phần lớn phụ thuộc vào vận may." },
-    { "id": 3, "trait": "L", "direction": "+", "text": "Tôi có khả năng thay đổi tình huống để đạt được những gì mình muốn." },
-    { "id": 4, "trait": "L", "direction": "-", "text": "Thế giới quá phức tạp nên tôi cảm thấy dù mình có làm gì cũng không tạo ra sự khác biệt lớn." },
-    { "id": 5, "trait": "L", "direction": "+", "text": "Khi có vấn đề nảy sinh, tôi cảm thấy mình có trách nhiệm phải giải quyết nó." },
-    { "id": 6, "trait": "L", "direction": "-", "text": "Đôi khi tôi cảm thấy dù có cố gắng thế nào thì kết quả cũng đã được định sẵn." },
-    { "id": 7, "trait": "L", "direction": "+", "text": "Tôi tin rằng mình có thể tự thiết kế và tạo dựng tương lai của chính mình." },
-    { "id": 8, "trait": "L", "direction": "-", "text": "Những điều tồi tệ xảy ra với tôi thường là do sự không may nằm ngoài tầm kiểm soát của tôi." },
-    { "id": 9, "trait": "L", "direction": "+", "text": "Bất cứ ai cũng có thể đạt được mục tiêu của mình nếu họ nỗ lực hết mình." },
-    { "id": 10, "trait": "L", "direction": "-", "text": "Nhìn những người thành công, tôi thấy họ gặp được cơ hội tốt hơn là có năng lực." },
-    { "id": 11, "trait": "L", "direction": "+", "text": "Tôi đã quen với việc tự điều chỉnh cảm xúc và hành vi của chính mình." },
-    { "id": 12, "trait": "L", "direction": "-", "text": "Thật khó để quyết định những việc quan trọng nếu không có sự giúp đỡ của những người xung quanh." },
-    { "id": 13, "trait": "L", "direction": "+", "text": "Ngay cả khi thất bại, tôi vẫn tự mình tìm ra những gì cần phải sửa đổi." },
-    { "id": 14, "trait": "L", "direction": "-", "text": "Trước những dòng chảy lớn như chính trị hay kinh tế, nỗ lực của cá nhân có vẻ vô nghĩa." },
-    { "id": 15, "trait": "L", "direction": "+", "text": "Tôi tin chắc rằng mình chính là chủ nhân của cuộc đời mình." },
-    { "id": 16, "trait": "L", "direction": "-", "text": "Tôi cảm thấy thoải mái hơn khi để cuộc sống trôi theo tự nhiên thay vì lập kế hoạch cho mọi thứ." },
-    { "id": 17, "trait": "L", "direction": "+", "text": "Ngay cả trong những tình huống khó khăn, tôi vẫn tìm ra những gì mình có thể làm và thực hiện nó." },
-    { "id": 18, "trait": "L", "direction": "-", "text": "Đôi khi tôi cảm thấy cuộc đời mình đang bị dẫn dắt bởi một thế lực nào đó không phải là tôi." },
-    { "id": 20, "trait": "L", "direction": "-", "text": "Đôi khi tôi cảm thấy thế giới không công bằng và nỗ lực cũng có giới hạn." }
+    {"id": 1, "trait": "L", "direction": "+", "text": "Tôi tin rằng thành công của tôi chủ yếu phụ thuộc vào nỗ lực và khả năng của tôi."},
+    {"id": 2, "trait": "L", "direction": "+", "text": "Khi có điều gì đó không ổn, tôi phân tích phần nào tôi có thể cải thiện thay vì đổ lỗi cho hoàn cảnh."},
+    {"id": 3, "trait": "L", "direction": "+", "text": "Tôi tin rằng tôi có thể đạt được mục tiêu của mình nếu tôi lên kế hoạch và làm việc kiên định."},
+    {"id": 4, "trait": "L", "direction": "-", "text": "Tôi cảm thấy rằng các sự kiện quan trọng trong cuộc sống của tôi được xác định chủ yếu bởi may mắn."},
+    {"id": 5, "trait": "L", "direction": "+", "text": "Tôi có xu hướng cố gắng giải quyết vấn đề bằng chính mình thay vì chờ đợi sự giúp đỡ bên ngoài."},
+    {"id": 6, "trait": "L", "direction": "-", "text": "Tôi thường nghĩ rằng hoàn cảnh của tôi nằm ngoài tầm kiểm soát của tôi."},
+    {"id": 7, "trait": "L", "direction": "+", "text": "Tôi tin rằng làm việc chăm chỉ quan trọng hơn may mắn để đạt được thành công."},
+    {"id": 8, "trait": "L", "direction": "-", "text": "Tôi tin rằng kết quả của một tình huống thường được xác định bởi các yếu tố nằm ngoài tầm kiểm soát của tôi, chẳng hạn như người khác hoặc môi trường."},
+    {"id": 9, "trait": "L", "direction": "+", "text": "Khi tôi đưa ra quyết định, tôi tin tưởng vào phán đoán của mình và chịu trách nhiệm về kết quả."},
+    {"id": 10, "trait": "L", "direction": "-", "text": "Tôi tin rằng tôi không thể làm nhiều để thay đổi tình huống hiện tại của mình."}
   ],
   "descriptions": {
     "L": {
-      "high": "Bạn có xu hướng 'Kiểm soát nội tại' mạnh mẽ. Bạn là kiểu người chủ động, tin rằng mình có thể tự khai phá cuộc đời và thay đổi kết quả thông qua nỗ lực.",
-      "low": "Bạn có xu hướng 'Kiểm soát ngoại tại' khá mạnh. Bạn tôn trọng môi trường và sự vận hành của may mắn, đôi khi thuận theo hoàn cảnh để tìm thấy sự bình yên trong tâm hồn."
+      "high": "Bạn có niềm tin mạnh mẽ vào khả năng kiểm soát cuộc sống của mình và tin tưởng vào ý chí và nỗ lực của bạn. Bạn là một tác nhân thay đổi chủ động.",
+      "low": "Bạn có xu hướng nhận thức rằng kết quả cuộc sống được xác định bởi các yếu tố bên ngoài. Có thể hữu ích khi củng cố ý thức trách nhiệm cá nhân của bạn."
     }
   }
 }
