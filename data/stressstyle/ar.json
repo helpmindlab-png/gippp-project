@@ -1,0 +1,64 @@
+{
+  "meta": {
+    "id": "stressstyle",
+    "version": "1.0",
+    "author": "GIPPP Research Team",
+    "language": "ar",
+    "lastUpdated": "2026-01-19",
+    "direction": "rtl"
+  },
+  "ui": {
+    "testName": "STRESSSTYLE Test",
+    "description": "Psychological assessment",
+    "security": "🔒 Secure: No data stored",
+    "processing": "Analyzing...",
+    "reportTitle": "My STRESSSTYLE Profile",
+    "recommendTitle": "💡 Tips for You",
+    "actions": {
+      "viewAmazon": "📚 View Books",
+      "saveImg": "💾 Save Image",
+      "retest": "🔄 Retake",
+      "qrNote": "Share via QR"
+    },
+    "viral": {
+      "viralTitle": "What's your stressstyle?",
+      "viralSub": "Discover now!"
+    },
+    "labels": [
+      "Strongly Disagree",
+      "Disagree",
+      "Neutral",
+      "Agree",
+      "Strongly Agree"
+    ]
+  },
+  "items": [
+    {
+      "id": "STRESSSTYLE1",
+      "text": "Sample question 1 for stressstyle",
+      "reverse": false,
+      "trait": "A"
+    }
+  ],
+  "descriptions": {
+    "A": {
+      "label": "Type A",
+      "emoji": "🎯",
+      "high": "High score description",
+      "low": "Low score description",
+      "tips": "Practical advice"
+    }
+  },
+  "traitNames": {
+    "A": "Type A"
+  },
+  "amazonKeywords": {
+    "A": "stressstyle psychology"
+  },
+  "guide": {
+    "ipipId": "Custom-stressstyle-10",
+    "purpose": "Assess your stressstyle",
+    "instruction": "Answer honestly",
+    "interpretation": "Results show your traits"
+  }
+}
