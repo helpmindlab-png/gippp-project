@@ -1,48 +1,78 @@
 {
   "ui": {
-    "desc": "Der sensibelste Weg, Ihr inneres Selbst zu verstehen",
-    "security": "🔒 Sicherheit: Keine Datenspeicherung",
+    "desc": "Entdecke deine wahre Persönlichkeit",
+    "security": "🔒 Sicher: Keine Datenspeicherung",
     "testNames": {
-      "ocean": "Mein wahres Ich (Big Five)",
-      "dark": "Bösewicht-Finder",
+      "ocean": "Wahres Selbst Analyse",
+      "dark": "Innerer Bösewicht Detektor",
       "loc": "Erfolgs-Mindset",
-      "resilience": "Resilienz-Test",
-      "trust": "Beziehungs-Thermometer"
+      "resilience": "Mentale Stärke Test",
+      "trust": "Beziehungsthermometer"
     },
-    "processing": "Verhaltensmuster werden analysiert...",
-    "reportTitle": "Bösewicht-Profiling-Bericht",
-    "recommendTitle": "💡 Empfehlung für Sie",
-    "viewAmazon": "Empfohlene Produkte ansehen",
-    "saveImg": "📸 Bericht als Bild speichern",
-    "retest": "Test wiederholen",
-    "qrNote": "Scannen zum Speichern",
-    "viralTitle": "Neugierig auf Ihre Analyse?",
-    "viralSub": "QR-Code scannen, um zu starten",
-    "labels": ["Stimme gar nicht zu", "Stimme nicht zu", "Neutral", "Stimme zu", "Stimme voll zu"],
-    "amazonKeywords": { "N": "leadership books", "M": "strategy games", "P": "psychology books" }
+    "processing": "Daten werden analysiert...",
+    "reportTitle": "Big Five Persönlichkeitsbericht",
+    "recommendTitle": "💡 Für dich empfohlen",
+    "viewAmazon": "Produkte ansehen",
+    "saveImg": "📸 Berichtsbild speichern",
+    "retest": "Erneut testen",
+    "qrNote": "Scannen zum Speichern der Ergebnisse",
+    "viralTitle": "Neugierig auf deine wahre Persönlichkeit?",
+    "viralSub": "QR-Code scannen, um den Test zu starten",
+    "labels": ["Stimme überhaupt nicht zu", "Stimme nicht zu", "Neutral", "Stimme zu", "Stimme voll zu"],
+    "amazonKeywords": {
+      "O": "Kreativität Innovation Bücher",
+      "C": "Produktivität Organisation Tools",
+      "E": "Soziale Kompetenz Networking",
+      "A": "Emotionale Intelligenz Empathie",
+      "N": "Achtsamkeit Stressbewältigung"
+    }
   },
-  "traitNames": {"E": "Extraversion", "A": "Verträglichkeit", "C": "Gewissenhaftigkeit", "N": "Neurotizismus", "O": "Offenheit"},
+  "guide": {
+    "ipipId": "IPIP-NEO-50",
+    "purpose": "Diese Bewertung basiert auf der 'Big Five'-Theorie, dem Goldstandard der Psychologie, und analysiert deine Kernpersönlichkeitsmerkmale in fünf Dimensionen.",
+    "instruction": "Lies jede Aussage und wähle die Option, die am besten zu deinem üblichen Selbst passt. Je ehrlicher du bist, desto genauer wird dein Profil sein.",
+    "interpretation": "Die Ergebnisse bestehen aus Offenheit (Suche nach Neuem), Gewissenhaftigkeit (Verantwortung), Extraversion (Energie), Verträglichkeit (Empathie) und Neurotizismus (emotionale Stabilität). Diese enthüllen deine wesentliche Persönlichkeit.",
+    "startBtn": "Analyse starten"
+  },
+  "traitNames": {
+    "O": "Offenheit (Openness)",
+    "C": "Gewissenhaftigkeit (Conscientiousness)",
+    "E": "Extraversion (Extraversion)",
+    "A": "Verträglichkeit (Agreeableness)",
+    "N": "Neurotizismus (Neuroticism)"
+  },
   "items": [
-    { "id": 1, "trait": "E", "direction": "+", "text": "Ich stehe bei gesellschaftlichen Anlässen gerne im Mittelpunkt und führe Gespräche an." },
-    { "id": 2, "trait": "A", "direction": "+", "text": "Ich bemühe mich, Mitgefühl für die Gefühle anderer zu zeigen." },
-    { "id": 3, "trait": "C", "direction": "+", "text": "Ich erledige meine Aufgaben und Pflichten am liebsten sofort." },
-    { "id": 4, "trait": "N", "direction": "+", "text": "Ich erlebe gelegentlich Stimmungsschwankungen oder emotionale Instabilität." },
-    { "id": 5, "trait": "O", "direction": "+", "text": "Ich habe eine lebhafte Fantasie und setze mich gerne mit neuen Ideen auseinander." },
-    { "id": 6, "trait": "E", "direction": "-", "text": "In großen Gruppen verhalte ich mich oft eher ruhig und zurückhaltend." },
-    { "id": 7, "trait": "A", "direction": "-", "text": "Manchmal interessieren mich die Probleme anderer Menschen nicht besonders." },
-    { "id": 8, "trait": "C", "direction": "-", "text": "Ich vergesse oft, Dinge wieder an ihren vorgesehenen Platz zurückzustellen." },
-    { "id": 9, "trait": "N", "direction": "-", "text": "Ich bin die meiste Zeit entspannt und lasse mich nicht so leicht aus der Ruhe bringen." },
-    { "id": 10, "trait": "O", "direction": "-", "text": "Ich bevorzuge konkrete Fakten gegenüber abstrakten oder philosophischen Ideen." },
-    { "id": 11, "trait": "E", "direction": "+", "text": "Es fällt mir leicht, bei sozialen Veranstaltungen mit vielen verschiedenen Menschen zu sprechen." },
-    { "id": 12, "trait": "A", "direction": "+", "text": "Ich kann die Emotionen meiner Mitmenschen aufrichtig nachempfinden." },
-    { "id": 13, "trait": "C", "direction": "+", "text": "Ich lege Wert darauf, meine Umgebung und meine Arbeit gut zu organisieren." },
-    { "id": 14, "trait": "N", "direction": "+", "text": "Ich neige dazu, mich recht schnell gestresst oder besorgt zu fühlen." },
-    { "id": 15, "trait": "O", "direction": "-", "text": "Es fällt mir manchmal schwer, komplexe abstrakte Konzepte zu erfassen." },
-    { "id": 16, "trait": "E", "direction": "-", "text": "Ich bleibe lieber im Hintergrund, anstatt im Zentrum der Aufmerksamkeit zu stehen." },
-    { "id": 17, "trait": "A", "direction": "-", "text": "Ich interessiere mich nicht sonderlich für die persönlichen Angelegenheiten anderer." },
-    { "id": 18, "trait": "C", "direction": "-", "text": "Manchmal arbeite ich ungenau oder vernachlässige wichtige Details." },
-    { "id": 19, "trait": "N", "direction": "-", "text": "Ich fühle mich selten niedergeschlagen oder bedrückt." },
-    { "id": 20, "trait": "O", "direction": "-", "text": "Ich betrachte mich nicht als jemanden mit einer besonders kreativen Vorstellungskraft." }
+    {"id": 1, "trait": "O", "direction": "+", "text": "Ich genieße neue Ideen und kreative Ansätze."},
+    {"id": 2, "trait": "C", "direction": "+", "text": "Ich mache Pläne und führe sie systematisch aus."},
+    {"id": 3, "trait": "E", "direction": "+", "text": "Ich genieße es, mich zu unterhalten und mit Menschen zu sprechen."},
+    {"id": 4, "trait": "A", "direction": "+", "text": "Ich versuche, die Perspektiven anderer zu verstehen und zu berücksichtigen."},
+    {"id": 5, "trait": "N", "direction": "+", "text": "Ich mache mir viele Sorgen und fühle mich oft ängstlich."},
+    {"id": 6, "trait": "O", "direction": "-", "text": "Ich bevorzuge traditionelle und bewährte Methoden."},
+    {"id": 7, "trait": "C", "direction": "-", "text": "Ich handle spontan ohne zu planen."},
+    {"id": 8, "trait": "E", "direction": "-", "text": "Ich fühle mich wohler, wenn ich Zeit alleine verbringe."},
+    {"id": 9, "trait": "A", "direction": "-", "text": "Ich bin wettbewerbsorientiert und priorisiere meine eigenen Interessen."},
+    {"id": 10, "trait": "N", "direction": "-", "text": "Ich bin emotional stabil und gehe gut mit Stress um."}
   ],
-  "descriptions": { "E": { "high": "Sie sind gesellig, aktiv und blühen im Kontakt mit anderen auf.", "low": "Sie sind nachdenklich, unabhängig und schätzen Ihre Zeit allein." }, "A": { "high": "Sie sind mitfühlend, kooperativ und schätzen soziale Harmonie.", "low": "Sie denken sachlich, unabhängig und bevorzugen logische Analysen." }, "C": { "high": "Sie sind pflichtbewusst, organisiert und verfolgen Ihre Ziele konsequent.", "low": "Sie sind flexibel, spontan und passen sich Situationen intuitiv an." }, "N": { "high": "Sie sind emotional sensibel und nehmen Risiken frühzeitig wahr.", "low": "Sie sind emotional stabil und bewahren auch unter Druck die Ruhe." }, "O": { "high": "Sie sind neugierig, kreativ und offen für neue Veränderungen.", "low": "Sie sind realistisch, praktisch orientiert und schätzen Traditionen." } }
+  "descriptions": {
+    "O": {
+      "high": "Du bist neugierig, fantasievoll und suchst neue Erfahrungen. Du hast starke Interessen an Kunst, Philosophie und innovativen Ideen.",
+      "low": "Du bist praktisch, schätzt Tradition und bevorzugst stabile Methoden. Du vertraust auf realistische und bewährte Ansätze."
+    },
+    "C": {
+      "high": "Du bist organisiert, verantwortungsbewusst und zielorientiert. Du zeichnest dich darin aus, Pläne zu machen und sie bis zur Fertigstellung durchzuziehen.",
+      "low": "Du bist flexibel, freigeistig und gut im Improvisieren. Du passt dich ohne Starrheit an Situationen an."
+    },
+    "E": {
+      "high": "Du bist energiegeladen, gesellig und voller Vitalität. Du gewinnst Energie durch das Zusammensein mit Menschen und kommunizierst aktiv.",
+      "low": "Du bist ruhig, nachdenklich und schätzt deine innere Welt. Du lädst deine Energie durch Alleinzeit auf."
+    },
+    "A": {
+      "high": "Du bist kooperativ, empathisch und rücksichtsvoll gegenüber anderen. Du schätzt harmonische Beziehungen.",
+      "low": "Du bist unabhängig, wettbewerbsorientiert und durchsetzungsfähig. Du äußerst deine Meinungen klar."
+    },
+    "N": {
+      "high": "Du bist emotional sensibel und reagierst auf Stress. Du bist detailorientiert und berücksichtigst Risiken sorgfältig.",
+      "low": "Du bist emotional stabil und stressresistent. Du löst Probleme ruhig und gelassen."
+    }
+  }
 }

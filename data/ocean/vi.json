@@ -1,48 +1,134 @@
 {
   "ui": {
-    "desc": "Cách nhạy bén nhất để thấu hiểu nội tâm bạn",
-    "security": "🔒 Bảo mật: Không lưu trữ dữ liệu",
+    "desc": "Khám phá tính cách thật của bạn",
+    "security": "🔒 An toàn: Không lưu trữ dữ liệu",
     "testNames": {
-      "ocean": "Bản sắc thực sự (Big Five)",
-      "dark": "Tìm kiếm phản diện trong bạn",
+      "ocean": "Phân tích bản ngã thật",
+      "dark": "Máy dò phản diện nội tâm",
       "loc": "Tư duy thành công",
-      "resilience": "Kiểm tra bản lĩnh",
-      "trust": "Thước đo mối quan hệ"
+      "resilience": "Kiểm tra ý chí thép",
+      "trust": "Nhiệt kế quan hệ"
     },
-    "processing": "Đang phân tích hành vi của bạn...",
-    "reportTitle": "Báo cáo hồ sơ phản diện",
-    "recommendTitle": "💡 Gợi ý dành cho bạn",
-    "viewAmazon": "Xem sản phẩm gợi ý",
-    "saveImg": "📸 Lưu ảnh báo cáo",
+    "processing": "Đang phân tích dữ liệu...",
+    "reportTitle": "Báo cáo năm yếu tố lớn",
+    "recommendTitle": "💡 Đề xuất cho bạn",
+    "viewAmazon": "Xem sản phẩm",
+    "saveImg": "📸 Lưu hình ảnh báo cáo",
     "retest": "Làm lại",
     "qrNote": "Quét để lưu kết quả",
-    "viralTitle": "Bạn tò mò về bản thân?",
-    "viralSub": "Quét mã QR để bắt đầu",
-    "labels": ["Rất không đồng ý", "Không đồng ý", "Bình thường", "Đồng ý", "Rất đồng ý"],
-    "amazonKeywords": { "N": "leadership books", "M": "strategy games", "P": "psychology books" }
+    "viralTitle": "Tò mò về tính cách thật của bạn?",
+    "viralSub": "Quét mã QR để bắt đầu kiểm tra",
+    "labels": [
+      "Rất không đồng ý",
+      "Không đồng ý",
+      "Trung lập",
+      "Đồng ý",
+      "Rất đồng ý"
+    ],
+    "amazonKeywords": {
+      "O": "sách sáng tạo đổi mới",
+      "C": "công cụ năng suất tổ chức",
+      "E": "kỹ năng xã hội networking",
+      "A": "trí tuệ cảm xúc đồng cảm",
+      "N": "chánh niệm giảm căng thẳng"
+    }
   },
-  "traitNames": {"E": "Hướng ngoại", "A": "Tận tâm", "C": "Chu đáo", "N": "Nhạy cảm", "O": "Cởi mở"},
+  "guide": {
+    "ipipId": "IPIP-NEO-50",
+    "purpose": "Đánh giá này dựa trên lý thuyết 'Năm yếu tố lớn', tiêu chuẩn vàng của tâm lý học, phân tích các đặc điểm tính cách cốt lõi của bạn theo năm chiều kích.",
+    "instruction": "Đọc từng phát biểu và chọn lựa chọn phù hợp nhất với bản thân thường ngày của bạn. Càng trung thực, hồ sơ của bạn càng chính xác.",
+    "interpretation": "Kết quả bao gồm Cởi mở (tìm kiếm sự mới lạ), Tận tâm (trách nhiệm), Hướng ngoại (năng lượng), Dễ chịu (đồng cảm) và Bất ổn cảm xúc (sự ổn định cảm xúc). Những điều này tiết lộ tính cách cốt lõi của bạn.",
+    "startBtn": "Bắt đầu phân tích"
+  },
+  "traitNames": {
+    "O": "Cởi mở (Openness)",
+    "C": "Tận tâm (Conscientiousness)",
+    "E": "Hướng ngoại (Extraversion)",
+    "A": "Dễ chịu (Agreeableness)",
+    "N": "Bất ổn cảm xúc (Neuroticism)"
+  },
   "items": [
-    { "id": 1, "trait": "E", "direction": "+", "text": "Tôi thường là người khuấy động không khí và dẫn dắt câu chuyện trong các buổi tiệc." },
-    { "id": 2, "trait": "A", "direction": "+", "text": "Tôi luôn cố gắng thấu hiểu và đồng cảm với cảm xúc của người khác." },
-    { "id": 3, "trait": "C", "direction": "+", "text": "Tôi thích hoàn thành các công việc và nghĩa vụ của mình ngay lập tức." },
-    { "id": 4, "trait": "N", "direction": "+", "text": "Đôi khi tôi cảm thấy tâm trạng của mình thay đổi thất thường." },
-    { "id": 5, "trait": "O", "direction": "+", "text": "Tôi có trí tưởng tượng phong phú và thích khám phá những ý tưởng mới." },
-    { "id": 6, "trait": "E", "direction": "-", "text": "Tôi thường giữ im lặng khi ở trong những nhóm đông người." },
-    { "id": 7, "trait": "A", "direction": "-", "text": "Đôi khi tôi không quá bận tâm đến những vấn đề của người khác." },
-    { "id": 8, "trait": "C", "direction": "-", "text": "Tôi thường hay quên để đồ vật lại đúng vị trí của chúng." },
-    { "id": 9, "trait": "N", "direction": "-", "text": "Tôi cảm thấy thư thái trong hầu hết thời gian và không dễ bị kích động." },
-    { "id": 10, "trait": "O", "direction": "-", "text": "Tôi thích những sự thật cụ thể hơn là những ý tưởng trừu tượng hay triết học." },
-    { "id": 11, "trait": "E", "direction": "+", "text": "Tôi thấy việc trò chuyện với nhiều người khác nhau tại các sự kiện xã hội khá dễ dàng." },
-    { "id": 12, "trait": "A", "direction": "+", "text": "Tôi thực sự cảm nhận và thấu hiểu được cảm xúc của những người xung quanh." },
-    { "id": 13, "trait": "C", "direction": "+", "text": "Tôi thích giữ cho môi trường sống và công việc của mình luôn ngăn nắp." },
-    { "id": 14, "trait": "N", "direction": "+", "text": "Tôi có xu hướng dễ bị căng thẳng hoặc lo lắng trước các sự việc." },
-    { "id": 15, "trait": "O", "direction": "-", "text": "Đôi khi tôi thấy khó khăn trong việc nắm bắt các khái niệm trừu tượng phức tạp." },
-    { "id": 16, "trait": "E", "direction": "-", "text": "Tôi thích quan sát từ phía sau hơn là trở thành tâm điểm của sự chú ý." },
-    { "id": 17, "trait": "A", "direction": "-", "text": "Tôi thường không quá quan tâm đến những chuyện cá nhân của người khác." },
-    { "id": 18, "trait": "C", "direction": "-", "text": "Đôi khi tôi làm việc thiếu tỉ mỉ hoặc không hoàn thành tốt các chi tiết." },
-    { "id": 19, "trait": "N", "direction": "-", "text": "Tôi hiếm khi cảm thấy buồn bã hay nản lòng." },
-    { "id": 20, "trait": "O", "direction": "-", "text": "Tôi không nghĩ mình là người có trí tưởng tượng đặc biệt sáng tạo." }
+    {
+      "id": 1,
+      "trait": "O",
+      "direction": "+",
+      "text": "Tôi thích những ý tưởng mới và cách tiếp cận sáng tạo."
+    },
+    {
+      "id": 2,
+      "trait": "C",
+      "direction": "+",
+      "text": "Tôi lập kế hoạch và thực hiện chúng một cách có hệ thống."
+    },
+    {
+      "id": 3,
+      "trait": "E",
+      "direction": "+",
+      "text": "Tôi thích giao lưu và trò chuyện với mọi người."
+    },
+    {
+      "id": 4,
+      "trait": "A",
+      "direction": "+",
+      "text": "Tôi cố gắng hiểu và cân nhắc quan điểm của người khác."
+    },
+    {
+      "id": 5,
+      "trait": "N",
+      "direction": "+",
+      "text": "Tôi lo lắng nhiều và thường cảm thấy lo âu."
+    },
+    {
+      "id": 6,
+      "trait": "O",
+      "direction": "-",
+      "text": "Tôi thích các phương pháp truyền thống và đã được chứng minh."
+    },
+    {
+      "id": 7,
+      "trait": "C",
+      "direction": "-",
+      "text": "Tôi hành động tự phát mà không lập kế hoạch."
+    },
+    {
+      "id": 8,
+      "trait": "E",
+      "direction": "-",
+      "text": "Tôi cảm thấy thoải mái hơn khi dành thời gian một mình."
+    },
+    {
+      "id": 9,
+      "trait": "A",
+      "direction": "-",
+      "text": "Tôi cạnh tranh và ưu tiên lợi ích của riêng mình."
+    },
+    {
+      "id": 10,
+      "trait": "N",
+      "direction": "-",
+      "text": "Tôi ổn định về mặt cảm xúc và xử lý căng thẳng tốt."
+    }
   ],
-  "descriptions": { "E": { "high": "Bạn là người hòa đồng, năng động và tỏa sáng khi ở bên người khác.", "low": "Bạn là người sâu sắc, độc lập và coi trọng thời gian riêng tư." }, "A": { "high": "Bạn là người nhân hậu, luôn quan tâm và coi trọng sự hòa hợp.", "low": "Bạn là người thực tế, thẳng thắn và ưu tiên tính khách quan." }, "C": { "high": "Bạn là người có trách nhiệm, kỷ luật và luôn kiên trì với mục tiêu.", "low": "Bạn là người linh hoạt, tự phát và thích ứng nhanh với thay đổi." }, "N": { "high": "Bạn là người nhạy cảm, tinh tế và có khả năng nhận biết rủi ro tốt.", "low": "Bạn là người kiên cường, ổn định và giữ được bình tĩnh dưới áp lực." }, "O": { "high": "Bạn là người tò mò, sáng tạo và luôn sẵn sàng cho những thay đổi.", "low": "Bạn là người thực tế, truyền thống và tin tưởng vào những phương pháp đã được kiểm chứng." } }
+  "descriptions": {
+    "O": {
+      "high": "Bạn tò mò, giàu trí tưởng tượng và tìm kiếm trải nghiệm mới. Bạn có sở thích mạnh mẽ về nghệ thuật, triết học và ý tưởng sáng tạo.",
+      "low": "Bạn thực tế, coi trọng truyền thống và thích các phương pháp ổn định. Tin tưởng vào các cách tiếp cận thực tế và đã được kiểm chứng."
+    },
+    "C": {
+      "high": "Bạn có tổ chức, có trách nhiệm và hướng tới mục tiêu. Bạn xuất sắc trong việc lập kế hoạch và thực hiện chúng đến khi hoàn thành.",
+      "low": "Bạn linh hoạt, tự do và giỏi ứng biến. Thích nghi với các tình huống mà không cứng nhắc."
+    },
+    "E": {
+      "high": "Bạn tràn đầy năng lượng, hòa đồng và đầy sức sống. Thu được năng lượng từ việc ở cùng mọi người và giao tiếp tích cực.",
+      "low": "Bạn yên tĩnh, suy nghĩ sâu sắc và trân trọng thế giới nội tâm của mình. Nạp năng lượng qua thời gian một mình."
+    },
+    "A": {
+      "high": "Bạn hợp tác, đồng cảm và quan tâm đến người khác. Coi trọng các mối quan hệ hài hòa.",
+      "low": "Bạn độc lập, cạnh tranh và quyết đoán. Thể hiện ý kiến của bạn một cách rõ ràng."
+    },
+    "N": {
+      "high": "Bạn nhạy cảm về mặt cảm xúc và phản ứng với căng thẳng. Bạn chú ý đến chi tiết và cân nhắc rủi ro cẩn thận.",
+      "low": "Bạn ổn định về mặt cảm xúc và chống chịu căng thẳng. Giải quyết vấn đề một cách bình tĩnh và điềm đạm."
+    }
+  }
 }

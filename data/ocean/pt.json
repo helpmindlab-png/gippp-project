@@ -1,48 +1,134 @@
 {
   "ui": {
-    "desc": "A forma mais sensata de ler o seu eu interior",
-    "security": "🔒 Segurança: Nenhum dado armazenado",
+    "desc": "Descubra sua verdadeira personalidade",
+    "security": "🔒 Seguro: Nenhum dado armazenado",
     "testNames": {
-      "ocean": "Meu Verdadeiro Eu (Big Five)",
-      "dark": "Buscador de Vilões",
+      "ocean": "Análise do Eu Verdadeiro",
+      "dark": "Detector do Vilão Interior",
       "loc": "Mentalidade de Sucesso",
-      "resilience": "Teste de Resiliência",
-      "trust": "Termômetro de Relações"
+      "resilience": "Teste de Mentalidade de Aço",
+      "trust": "Termômetro de Relacionamentos"
     },
-    "processing": "Analisando seus padrões comportamentais...",
-    "reportTitle": "Relatório de Perfil de Vilão",
-    "recommendTitle": "💡 Recomendado para você",
-    "viewAmazon": "Ver produtos recomendados",
-    "saveImg": "📸 Salvar imagem do relatório",
-    "retest": "Reiniciar teste",
-    "qrNote": "Escaneie para salvar",
-    "viralTitle": "Curioso sobre o seu resultado?",
-    "viralSub": "Escaneie o QR para começar",
-    "labels": ["Discordo totalmente", "Discordo", "Neutro", "Concordo", "Concordo totalmente"],
-    "amazonKeywords": { "N": "leadership books", "M": "strategy games", "P": "psychology books" }
+    "processing": "Analisando dados...",
+    "reportTitle": "Relatório dos Cinco Grandes",
+    "recommendTitle": "💡 Recomendado para Você",
+    "viewAmazon": "Ver Produtos",
+    "saveImg": "📸 Salvar Imagem do Relatório",
+    "retest": "Fazer Novamente",
+    "qrNote": "Escaneie para salvar resultados",
+    "viralTitle": "Curioso sobre sua verdadeira personalidade?",
+    "viralSub": "Escaneie o código QR para começar o teste",
+    "labels": [
+      "Discordo totalmente",
+      "Discordo",
+      "Neutro",
+      "Concordo",
+      "Concordo totalmente"
+    ],
+    "amazonKeywords": {
+      "O": "livros criatividade inovação",
+      "C": "ferramentas produtividade organização",
+      "E": "habilidades sociais networking",
+      "A": "inteligência emocional empatia",
+      "N": "mindfulness alívio estresse"
+    }
   },
-  "traitNames": {"E": "Extroversão", "A": "Amabilidade", "C": "Conscienciosidade", "N": "Neuroticismo", "O": "Abertura"},
+  "guide": {
+    "ipipId": "IPIP-NEO-50",
+    "purpose": "Esta avaliação se baseia na teoria dos 'Cinco Grandes', o padrão ouro da psicologia, analisando seus traços de personalidade principais em cinco dimensões.",
+    "instruction": "Leia cada afirmação e selecione a opção que melhor corresponde ao seu eu habitual. Quanto mais honesto você for, mais preciso será seu perfil.",
+    "interpretation": "Os resultados consistem em Abertura (busca por novidade), Conscienciosidade (responsabilidade), Extroversão (energia), Amabilidade (empatia) e Neuroticismo (estabilidade emocional). Estes revelam sua personalidade essencial.",
+    "startBtn": "Iniciar Análise"
+  },
+  "traitNames": {
+    "O": "Abertura (Openness)",
+    "C": "Conscienciosidade (Conscientiousness)",
+    "E": "Extroversão (Extraversion)",
+    "A": "Amabilidade (Agreeableness)",
+    "N": "Neuroticismo (Neuroticism)"
+  },
   "items": [
-    { "id": 1, "trait": "E", "direction": "+", "text": "Costumo ser o centro das atenções em reuniões sociais e gosto de liderar conversas." },
-    { "id": 2, "trait": "A", "direction": "+", "text": "Esforço-me para compreender e simpatizar com os sentimentos dos outros." },
-    { "id": 3, "trait": "C", "direction": "+", "text": "Prefiro realizar minhas tarefas e obrigações imediatamente." },
-    { "id": 4, "trait": "N", "direction": "+", "text": "Às vezes sinto mudanças frequentes no meu humor ou estado emocional." },
-    { "id": 5, "trait": "O", "direction": "+", "text": "Tenho uma imaginação fértil e gosto de explorar novas ideias." },
-    { "id": 6, "trait": "E", "direction": "-", "text": "Muitas vezes fico em silêncio quando estou em grandes grupos." },
-    { "id": 7, "trait": "A", "direction": "-", "text": "Às veces não me interesso muito pelos problemas de outras pessoas." },
-    { "id": 8, "trait": "C", "direction": "-", "text": "Frequentemente esqueço de colocar as coisas de volta no lugar certo." },
-    { "id": 9, "trait": "N", "direction": "-", "text": "Sinto-me relaxado na maior parte do tempo e não me irrito facilmente." },
-    { "id": 10, "trait": "O", "direction": "-", "text": "Prefiro factos concretos a ideias abstractas ou filosóficas." },
-    { "id": 11, "trait": "E", "direction": "+", "text": "Acho fácil conversar com pessoas diferentes em eventos sociais." },
-    { "id": 12, "trait": "A", "direction": "+", "text": "Sinto e compreendo genuinamente as emoções das pessoas ao meu redor." },
-    { "id": 13, "trait": "C", "direction": "+", "text": "Gosto de manter o meu ambiente e o meu trabalho bem organizados." },
-    { "id": 14, "trait": "N", "direction": "+", "text": "Tenho tendência a sentir-me stressado ou ansioso com facilidade." },
-    { "id": 15, "trait": "O", "direction": "-", "text": "Às vezes acho difícil compreender conceitos abstractos complexos." },
-    { "id": 16, "trait": "E", "direction": "-", "text": "Prefiro ficar em segundo plano em vez de ser o centro das atenções." },
-    { "id": 17, "trait": "A", "direction": "-", "text": "Não costumo ter muito interesse nos assuntos pessoais de terceiros." },
-    { "id": 18, "trait": "C", "direction": "-", "text": "Às vezes sou descuidado com detalhes ou não finalizo o que comecei." },
-    { "id": 19, "trait": "N", "direction": "-", "text": "Raramente me sinto desanimado ou triste." },
-    { "id": 20, "trait": "O", "direction": "-", "text": "Não me considero uma pessoa com uma imaginação particularmente criativa." }
+    {
+      "id": 1,
+      "trait": "O",
+      "direction": "+",
+      "text": "Gosto de novas ideias e abordagens criativas."
+    },
+    {
+      "id": 2,
+      "trait": "C",
+      "direction": "+",
+      "text": "Faço planos e os executo sistematicamente."
+    },
+    {
+      "id": 3,
+      "trait": "E",
+      "direction": "+",
+      "text": "Gosto de socializar e conversar com as pessoas."
+    },
+    {
+      "id": 4,
+      "trait": "A",
+      "direction": "+",
+      "text": "Tento entender e considerar as perspectivas dos outros."
+    },
+    {
+      "id": 5,
+      "trait": "N",
+      "direction": "+",
+      "text": "Me preocupo muito e frequentemente me sinto ansioso."
+    },
+    {
+      "id": 6,
+      "trait": "O",
+      "direction": "-",
+      "text": "Prefiro métodos tradicionais e comprovados."
+    },
+    {
+      "id": 7,
+      "trait": "C",
+      "direction": "-",
+      "text": "Ajo espontaneamente sem planejar."
+    },
+    {
+      "id": 8,
+      "trait": "E",
+      "direction": "-",
+      "text": "Me sinto mais confortável passando tempo sozinho."
+    },
+    {
+      "id": 9,
+      "trait": "A",
+      "direction": "-",
+      "text": "Sou competitivo e priorizo meus próprios interesses."
+    },
+    {
+      "id": 10,
+      "trait": "N",
+      "direction": "-",
+      "text": "Sou emocionalmente estável e lido bem com o estresse."
+    }
   ],
-  "descriptions": { "E": { "high": "Você é sociável, ativo e brilha em companhia de outras pessoas.", "low": "Você é reflexivo, independente e valoriza seu tempo sozinho." }, "A": { "high": "Você é compassivo, cooperativo e valoriza a harmonia social.", "low": "Você pensa de forma objetiva e lógica, priorizando a independência." }, "C": { "high": "Você é responsável, organizado e persegue seus objetivos com firmeza.", "low": "Você é flexível, espontâneo e adapta-se intuitivamente às situações." }, "N": { "high": "Você é emocionalmente sensível e percebe riscos precocemente.", "low": "Você é emocionalmente estável e mantém a calma sob pressão." }, "O": { "high": "Você é curioso, criativo e aberto a novas mudanças.", "low": "Você é realista, prático e valoriza a tradição e a experiência." } }
+  "descriptions": {
+    "O": {
+      "high": "Você é curioso, imaginativo e busca novas experiências. Tem forte interesse em arte, filosofia e ideias inovadoras.",
+      "low": "Você é prático, valoriza a tradição e prefere métodos estáveis. Confia em abordagens realistas e comprovadas."
+    },
+    "C": {
+      "high": "Você é organizado, responsável e orientado a objetivos. Destaca-se em fazer planos e vê-los até a conclusão.",
+      "low": "Você é flexível, de espírito livre e bom em improvisar. Adapta-se a situações sem rigidez."
+    },
+    "E": {
+      "high": "Você é energético, sociável e cheio de vitalidade. Ganha energia estando com pessoas e se comunica ativamente.",
+      "low": "Você é quieto, reflexivo e valoriza seu mundo interior. Recarrega energia através de tempo a sós."
+    },
+    "A": {
+      "high": "Você é cooperativo, empático e considerado com os outros. Valoriza relacionamentos harmoniosos.",
+      "low": "Você é independente, competitivo e assertivo. Expressa suas opiniões claramente."
+    },
+    "N": {
+      "high": "Você é emocionalmente sensível e reativo ao estresse. É orientado a detalhes e considera riscos cuidadosamente.",
+      "low": "Você é emocionalmente estável e resistente ao estresse. Resolve problemas com calma e compostura."
+    }
+  }
 }
