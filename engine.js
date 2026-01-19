@@ -36,33 +36,42 @@ const GIPPP_ENGINE = (() => {
     };
 
     const init = async () => {
-        const urlParams = new URLSearchParams(window.location.search);
-        state.testId = urlParams.get('test');
-        state.lang = urlParams.get('lang') || navigator.language.substring(0, 2);
-        
-        const langs = Object.keys(i18n);
-        if (!langs.includes(state.lang)) state.lang = 'en';
+        try {
+            console.log("Initializing GIPPP_ENGINE..."); // 디버깅 로그: 초기화 시작 확인
+            const urlParams = new URLSearchParams(window.location.search);
+            state.testId = urlParams.get('test');
+            state.lang = urlParams.get('lang') || navigator.language.substring(0, 2);
+            
+            const langs = Object.keys(i18n);
+            if (!langs.includes(state.lang)) state.lang = 'en';
 
-        ui.langSelect.innerHTML = langs.map(l => `<option value="${l}" ${state.lang === l ? 'selected' : ''}>${l.toUpperCase()}</option>`).join('');
-        document.documentElement.dir = (state.lang === 'ar') ? 'rtl' : 'ltr';
+            ui.langSelect.innerHTML = langs.map(l => `<option value="${l}" ${state.lang === l ? 'selected' : ''}>${l.toUpperCase()}</option>`).join('');
+            document.documentElement.dir = (state.lang === 'ar') ? 'rtl' : 'ltr';
 
-        const currentI18n = i18n[state.lang];
-        ui.brandDesc.innerText = currentI18n.desc;
+            const currentI18n = i18n[state.lang];
+            console.log("Selected Language:", state.lang, "i18n Data:", currentI18n); // 디버깅 로그: 언어 데이터 확인
+            ui.brandDesc.innerText = currentI18n.desc;
 
-        const resData = urlParams.get('res');
-        if (resData) {
-            await loadData();
-            decodeAndShowResult(resData);
-        } else if (state.testId) {
-            await loadData();
-            // [수정] 가이드 데이터가 있으면 가이드 노출, 없으면 즉시 설문 시작
-            if (state.guide && state.guide.purpose) {
-                renderGuide();
+            const resData = urlParams.get('res');
+            if (resData) {
+                await loadData();
+                decodeAndShowResult(resData);
+            } else if (state.testId) {
+                await loadData();
+                // [수정] 가이드 데이터가 있으면 가이드 노출, 없으면 즉시 설문 시작
+                if (state.guide && state.guide.purpose) {
+                    renderGuide();
+                } else {
+                    startTest();
+                }
             } else {
-                startTest();
+                renderWelcome();
             }
-        } else {
-            renderWelcome();
+        } catch (e) { 
+            console.error("Init Error:", e); // 콘솔에 에러 출력
+            if (ui.testGrid) {
+                ui.testGrid.innerHTML = "<p>오류 발생: 페이지를 새로고침해 주세요. (콘솔 확인 필요)</p>"; // 사용자에게 에러 표시
+            }
         }
     };
 
@@ -84,17 +93,20 @@ const GIPPP_ENGINE = (() => {
     };
 
     const renderWelcome = () => {
+        console.log("Rendering Welcome..."); // 디버깅 로그: 렌더링 시작 확인
         ui.welcomeView.style.display = 'block';
         ui.header.style.display = 'block';
         ui.testView.style.display = 'none';
         const currentI18n = i18n[state.lang];
-        ui.testGrid.innerHTML = testList.map(t => `
+        const gridHtml = testList.map(t => `
             <div class="test-card" onclick="GIPPP_ENGINE.changeTest('${t.id}')">
                 <span class="emoji">${t.emoji}</span>
                 <h3>${currentI18n.tests[t.id] || t.id.toUpperCase()}</h3>
                 <p>${currentI18n.sub}</p>
             </div>
         `).join('');
+        console.log("Generated Test Grid HTML:", gridHtml); // 디버깅 로그: 생성된 HTML 확인
+        ui.testGrid.innerHTML = gridHtml;
     };
 
     const renderGuide = () => {
