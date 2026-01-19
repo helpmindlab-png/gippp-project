@@ -1,41 +1,54 @@
 {
   "ui": {
-    "desc": "Der sensibelste Weg, Ihr inneres Selbst zu verstehen",
+    "desc": "Sozialvertrauens-Analyse",
     "security": "🔒 Sicherheit: Keine Datenspeicherung",
     "testNames": {
-      "ocean": "Mein wahres Ich (Big Five)",
-      "dark": "Bösewicht-Finder",
+      "ocean": "Analyse meiner wahren Persönlichkeit",
+      "dark": "Finde den Bösewicht in dir",
       "loc": "Erfolgs-Mindset",
-      "resilience": "Resilienz-Test",
-      "trust": "Beziehungs-Thermometer"
+      "resilience": "Stahl-Mentalitäts-Test",
+      "trust": "Thermometer menschlicher Beziehungen"
     },
-    "processing": "Verhaltensmuster werden analysiert...",
-    "reportTitle": "Bösewicht-Profiling-Bericht",
-    "recommendTitle": "💡 Empfehlung für Sie",
+    "processing": "Daten werden analysiert...",
+    "reportTitle": "Sozialvertrauens-Profilbericht",
+    "recommendTitle": "💡 Personalisierte Empfehlungen für Sie",
     "viewAmazon": "Empfohlene Produkte ansehen",
-    "saveImg": "📸 Bericht als Bild speichern",
-    "retest": "Test wiederholen",
-    "qrNote": "Scannen zum Speichern",
-    "viralTitle": "Neugierig auf Ihre Analyse?",
-    "viralSub": "QR-Code scannen, um zu starten",
-    "labels": ["Stimme gar nicht zu", "Stimme nicht zu", "Neutral", "Stimme zu", "Stimme voll zu"],
-    "amazonKeywords": { "N": "leadership books", "M": "strategy games", "P": "psychology books" }
+    "saveImg": "📸 Berichtsbild speichern",
+    "retest": "Wiederholen",
+    "qrNote": "Scannen, um Ergebnis zu speichern",
+    "viralTitle": "Was ist Ihre Temperatur menschlicher Beziehungen?",
+    "viralSub": "QR-Code scannen, um Test zu starten",
+    "labels": ["Stimme überhaupt nicht zu", "Stimme nicht zu", "Neutral", "Stimme zu", "Stimme voll und ganz zu"],
+    "amazonKeywords": {
+      "T": "Sozialpsychologie Kommunikation Vertrauen Bücher"
+    }
   },
-  "traitNames": { "T": "Soziales Vertrauen", "A": "Altruismus" },
+  "guide": {
+    "ipipId": "GSS-Trust",
+    "purpose": "Dieser Test misst Ihr 'Sozialvertrauen', indem er Ihr Vertrauensniveau in andere und die Gesellschaft insgesamt analysiert.",
+    "instruction": "Lesen Sie jede Aussage und wählen Sie die Option, die Ihrer gewöhnlichen Denkweise am besten entspricht. Ehrliche Antworten liefern ein genaueres Profil.",
+    "interpretation": "Die Ergebnisse werden als Sozialvertrauens-Index angezeigt. Dies zeigt, wie offen und kooperativ Sie in Beziehungen mit anderen sind.",
+    "startBtn": "Analyse starten"
+  },
+  "traitNames": {
+    "T": "Sozialvertrauens-Index"
+  },
   "items": [
-    { "id": 1, "trait": "T", "direction": "+", "text": "Ich glaube, dass die meisten Menschen im Grunde ehrlich und vertrauenswürdig sind." },
-    { "id": 2, "trait": "A", "direction": "+", "text": "Ich verspüre den Drang, Menschen in schwierigen Situationen sofort zu helfen." },
-    { "id": 3, "trait": "T", "direction": "-", "text": "Ich habe das Gefühl, dass man vorsichtig sein muss, da man sonst ausnutzt wird." },
-    { "id": 4, "trait": "A", "direction": "+", "text": "Ich finde es bereichernd, Zeit und Energie in die Hilfe für andere zu investieren." },
-    { "id": 5, "trait": "T", "direction": "+", "text": "Ich versuche, Fremden mit guten Absichten und Offenheit zu begegnen." },
-    { "id": 6, "trait": "A", "direction": "-", "text": "Ich denke, ich sollte mich erst um meine Probleme kümmern, bevor ich anderen helfe." },
-    { "id": 7, "trait": "T", "direction": "-", "text": "Ich glaube, dass viele Menschen andere täuschen würden, wenn es ihrem Vorteil dient." },
-    { "id": 8, "trait": "A", "direction": "+", "text": "Ich bin überzeugt, dass Ehrenamt und Wohltätigkeit wichtig für die Gesellschaft sind." },
-    { "id": 9, "trait": "T", "direction": "+", "text": "Ich vertraue darauf, dass die Gesetze und Systeme in unserer Gesellschaft fair funktionieren." },
-    { "id": 10, "trait": "A", "direction": "-", "text": "Ich investiere ungern Mühe in Aufgaben, die keinen persönlichen Nutzen bringen." }
+    {"id": 1, "trait": "T", "direction": "+", "text": "Ich glaube, dass die meisten Menschen grundsätzlich gutmütig sind."},
+    {"id": 2, "trait": "T", "direction": "+", "text": "Ich kann einem Fremden, der um Hilfe bittet, bereitwillig helfen."},
+    {"id": 3, "trait": "T", "direction": "-", "text": "Ich denke, die meisten Menschen kümmern sich nur um ihre eigenen Interessen."},
+    {"id": 4, "trait": "T", "direction": "+", "text": "Ich zeige grundlegendes Vertrauen auch gegenüber Menschen, die ich zum ersten Mal treffe."},
+    {"id": 5, "trait": "T", "direction": "-", "text": "Ich muss immer auf der Hut sein, weil ich leicht von anderen getäuscht werden kann."},
+    {"id": 6, "trait": "T", "direction": "+", "text": "Ich glaube, dass Vertrauen unter Menschen am wichtigsten für eine gerechte Gesellschaft ist."},
+    {"id": 7, "trait": "T", "direction": "-", "text": "Ich denke, Wettbewerb liegt der menschlichen Natur näher als Zusammenarbeit."},
+    {"id": 8, "trait": "T", "direction": "+", "text": "Ich glaube, dass die Menschen um mich herum mir bereitwillig helfen werden, wenn ich in Schwierigkeiten bin."},
+    {"id": 9, "trait": "T", "direction": "-", "text": "Ich wurde viele Male verraten, nachdem ich Menschen vertraut habe, also bin ich jetzt vorsichtig."},
+    {"id": 10, "trait": "T", "direction": "+", "text": "Ich denke, dass Vertrauen in andere die Gesellschaft besser macht."}
   ],
   "descriptions": {
-    "T": { "high": "Sie haben eine positive Einstellung und sind stark im Aufbau kooperativer Beziehungen.", "low": "Sie sind Realist mit kritischem Blick, geschickt in Risikomanagement und Selbstschutz." },
-    "A": { "high": "Sie sind ein mitfühlender Mensch, der einen großen Wert für die Gemeinschaft darstellt.", "low": "Sie sind pragmatisch und unabhängig, fokussiert auf Effizienz und eigene Ziele." }
+    "T": {
+      "high": "Sie haben hohes Vertrauen in andere und neigen dazu, die Gesellschaft insgesamt positiv zu sehen. Sie bilden gut kooperative Beziehungen.",
+      "low": "Sie haben Vorsicht gegenüber anderen und benötigen Zeit, um Vertrauen aufzubauen. Vergangene Erfahrungen könnten Ihr aktuelles Vertrauensniveau beeinflusst haben."
+    }
   }
 }

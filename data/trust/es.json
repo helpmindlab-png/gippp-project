@@ -1,41 +1,54 @@
 {
   "ui": {
-    "desc": "La forma más sensible de leer tu interior",
-    "security": "🔒 Seguridad: No se guardan datos",
+    "desc": "Análisis de confianza social",
+    "security": "🔒 Seguridad: Sin almacenamiento de datos",
     "testNames": {
-      "ocean": "Mi Verdadero Yo (Big Five)",
-      "dark": "Buscador de Villanos",
-      "loc": "Mentalidad de Éxito",
-      "resilience": "Test de Resiliencia",
-      "trust": "Termómetro de Relaciones"
+      "ocean": "Análisis de mi personalidad real",
+      "dark": "Encuentra al villano interior",
+      "loc": "Mentalidad de éxito",
+      "resilience": "Test de mentalidad de acero",
+      "trust": "Termómetro de relaciones humanas"
     },
-    "processing": "Analizando tus patrones de conducta...",
-    "reportTitle": "Informe de Perfil de Villano",
-    "recommendTitle": "💡 Recomendado para ti",
+    "processing": "Analizando datos...",
+    "reportTitle": "Informe de perfil de confianza social",
+    "recommendTitle": "💡 Recomendaciones personalizadas para ti",
     "viewAmazon": "Ver productos recomendados",
     "saveImg": "📸 Guardar imagen del informe",
-    "retest": "Repetir test",
-    "qrNote": "Escanea para guardar",
-    "viralTitle": "¿Curioso por tu resultado?",
-    "viralSub": "Escanea el QR para empezar",
-    "labels": ["Muy en desacuerdo", "En desacuerdo", "Neutral", "De acuerdo", "Muy de acuerdo"],
-    "amazonKeywords": { "N": "leadership books", "M": "strategy games", "P": "psychology books" }
+    "retest": "Repetir",
+    "qrNote": "Escanea para guardar el resultado",
+    "viralTitle": "¿Cuál es tu temperatura de relaciones humanas?",
+    "viralSub": "Escanea el código QR para iniciar el test",
+    "labels": ["Totalmente en desacuerdo", "En desacuerdo", "Neutral", "De acuerdo", "Totalmente de acuerdo"],
+    "amazonKeywords": {
+      "T": "libros psicología social comunicación confianza"
+    }
   },
-  "traitNames": { "T": "Confianza Social", "A": "Altruismo" },
+  "guide": {
+    "ipipId": "GSS-Trust",
+    "purpose": "Este test mide tu 'confianza social', analizando tu nivel de confianza en los demás y la sociedad en general.",
+    "instruction": "Lee cada afirmación y selecciona la opción que mejor coincida con tu forma de pensar habitual. Las respuestas honestas proporcionarán un perfil más preciso.",
+    "interpretation": "Los resultados se muestran como un índice de confianza social. Esto muestra qué tan abierto y cooperativo eres en las relaciones con los demás.",
+    "startBtn": "Iniciar análisis"
+  },
+  "traitNames": {
+    "T": "Índice de confianza social"
+  },
   "items": [
-    { "id": 1, "trait": "T", "direction": "+", "text": "Creo que la mayoría de las personas son básicamente honestas y dignas de confianza." },
-    { "id": 2, "trait": "A", "direction": "+", "text": "Siento un fuerte deseo de ayudar a quienes se encuentran en situaciones difíciles." },
-    { "id": 3, "trait": "T", "direction": "-", "text": "Siento que hay que ser precavido, o de lo contrario los demás se aprovecharán de uno." },
-    { "id": 4, "trait": "A", "direction": "+", "text": "Me resulta gratificante dedicar mi tiempo y energía a ayudar a los demás." },
-    { "id": 5, "trait": "T", "direction": "+", "text": "Intento acercarme a los desconocidos con buenas intenciones y una mente abierta." },
-    { "id": 6, "trait": "A", "direction": "-", "text": "Creo que debo ocuparme de mis propios problemas antes de preocuparme por los ajenos." },
-    { "id": 7, "trait": "T", "direction": "-", "text": "Pienso que mucha gente engañaría a otros si eso sirviera a sus propios intereses." },
-    { "id": 8, "trait": "A", "direction": "+", "text": "Creo que la caridad y el voluntariado son vitales para una sociedad mejor." },
-    { "id": 9, "trait": "T", "direction": "+", "text": "Confío en que las leyes y sistemas de nuestra sociedad funcionan de manera justa." },
-    { "id": 10, "trait": "A", "direction": "-", "text": "Prefiero no invertir esfuerzo en tareas que no ofrecen ninguna recompensa personal." }
+    {"id": 1, "trait": "T", "direction": "+", "text": "Creo que la mayoría de las personas son fundamentalmente bien intencionadas."},
+    {"id": 2, "trait": "T", "direction": "+", "text": "Puedo ayudar de buena gana a un extraño que pida asistencia."},
+    {"id": 3, "trait": "T", "direction": "-", "text": "Creo que la mayoría de las personas solo cuidan sus propios intereses."},
+    {"id": 4, "trait": "T", "direction": "+", "text": "Muestro confianza básica incluso a personas que conozco por primera vez."},
+    {"id": 5, "trait": "T", "direction": "-", "text": "Siempre debo estar en guardia porque puedo ser fácilmente engañado por otros."},
+    {"id": 6, "trait": "T", "direction": "+", "text": "Creo que la confianza entre las personas es lo más importante para una sociedad justa."},
+    {"id": 7, "trait": "T", "direction": "-", "text": "Creo que la competencia está más cerca de la naturaleza humana que la cooperación."},
+    {"id": 8, "trait": "T", "direction": "+", "text": "Creo que las personas a mi alrededor me ayudarán de buena gana cuando esté en dificultades."},
+    {"id": 9, "trait": "T", "direction": "-", "text": "He sido traicionado muchas veces después de confiar en las personas, así que ahora soy cauteloso."},
+    {"id": 10, "trait": "T", "direction": "+", "text": "Creo que confiar en los demás hace que la sociedad sea mejor."}
   ],
   "descriptions": {
-    "T": { "high": "Tienes una visión positiva y destacas en la creación de relaciones colaborativas.", "low": "Eres un realista con ojo crítico, hábil en la gestión de riesgos y la autoprotección." },
-    "A": { "high": "Eres una persona compasiva que aporta un valor inmenso a su comunidad.", "low": "Eres pragmático e independiente, centrado en la eficiencia y en tus metas personales." }
+    "T": {
+      "high": "Tienes alta confianza en los demás y tiendes a ver la sociedad de manera positiva en general. Formas bien relaciones cooperativas.",
+      "low": "Tienes cautela hacia los demás y necesitas tiempo para construir confianza. Las experiencias pasadas pueden haber influido en tu nivel actual de confianza."
+    }
   }
 }

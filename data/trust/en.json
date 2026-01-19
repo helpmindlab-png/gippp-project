@@ -1,45 +1,54 @@
 {
   "ui": {
-    "desc": "The most sensible way to read your inner self",
-    "security": "🔒 Security: No data stored",
+    "desc": "Social Trust Analysis",
+    "security": "🔒 Security: No data storage",
     "testNames": {
-      "ocean": "My True Self (Big Five)",
-      "dark": "Villain Finder",
-      "loc": "Success Mindset",
-      "resilience": "Mental Resilience Test",
-      "trust": "Relationship Thermometer"
+      "ocean": "Analyze my real personality",
+      "dark": "Find the villain within",
+      "loc": "Success mindset",
+      "resilience": "Steel mentality test",
+      "trust": "Human relationship thermometer"
     },
-    "processing": "Analyzing your behavioral patterns...",
-    "reportTitle": "Villain Profiling Report",
-    "recommendTitle": "💡 Recommended for You",
-    "viewAmazon": "View Recommended Products",
-    "saveImg": "📸 Save Report Image",
-    "retest": "Retest",
-    "qrNote": "Scan to save your result",
-    "viralTitle": "Curious about your insight?",
-    "viralSub": "Scan QR code to start the test",
+    "processing": "Analyzing data...",
+    "reportTitle": "Social Trust Profiling Report",
+    "recommendTitle": "💡 Personalized recommendations for you",
+    "viewAmazon": "View recommended products",
+    "saveImg": "📸 Save report image",
+    "retest": "Retry",
+    "qrNote": "Scan to keep result",
+    "viralTitle": "What's your human relationship temperature?",
+    "viralSub": "Scan QR code to start test",
     "labels": ["Strongly Disagree", "Disagree", "Neutral", "Agree", "Strongly Agree"],
-    "amazonKeywords": { 
-      "N": "leadership books", 
-      "M": "strategy games", 
-      "P": "psychology books" 
+    "amazonKeywords": {
+      "T": "social psychology communication trust books"
     }
   },
-  "traitNames": { "T": "Social Trust", "A": "Altruism" },
+  "guide": {
+    "ipipId": "GSS-Trust",
+    "purpose": "This test measures your 'social trust', analyzing your level of trust in others and society as a whole.",
+    "instruction": "Read each statement and select the option that best matches your usual thinking. Honest answers will provide a more accurate profile.",
+    "interpretation": "Results are shown as a social trust index. This shows how open and cooperative you are in relationships with others.",
+    "startBtn": "Start analysis"
+  },
+  "traitNames": {
+    "T": "Social Trust Index"
+  },
   "items": [
-    { "id": 1, "trait": "T", "direction": "+", "text": "I believe that most people are basically honest and trustworthy." },
-    { "id": 2, "trait": "A", "direction": "+", "text": "I feel a strong urge to help people who are in difficult situations." },
-    { "id": 3, "trait": "T", "direction": "-", "text": "I feel that you have to be careful, or people will take advantage of you." },
-    { "id": 4, "trait": "A", "direction": "+", "text": "I find it rewarding to spend my time and energy helping others." },
-    { "id": 5, "trait": "T", "direction": "+", "text": "I try to approach strangers with good intentions and an open mind." },
-    { "id": 6, "trait": "A", "direction": "-", "text": "I believe I should focus on my own problems before worrying about others." },
-    { "id": 7, "trait": "T", "direction": "-", "text": "I think most people would deceive others if it served their self-interest." },
-    { "id": 8, "trait": "A", "direction": "+", "text": "I believe that charity and volunteering are vital for a better society." },
-    { "id": 9, "trait": "T", "direction": "+", "text": "I trust that the laws and systems in our society operate fairly." },
-    { "id": 10, "trait": "A", "direction": "-", "text": "I prefer not to invest effort into tasks that offer no personal reward." }
+    {"id": 1, "trait": "T", "direction": "+", "text": "I believe that most people are fundamentally good-willed."},
+    {"id": 2, "trait": "T", "direction": "+", "text": "I can willingly help a stranger who asks for assistance."},
+    {"id": 3, "trait": "T", "direction": "-", "text": "I think most people only look after their own interests."},
+    {"id": 4, "trait": "T", "direction": "+", "text": "I show basic trust even to people I meet for the first time."},
+    {"id": 5, "trait": "T", "direction": "-", "text": "I must always be on guard because I can be easily deceived by others."},
+    {"id": 6, "trait": "T", "direction": "+", "text": "I believe trust among people is most important for a fair society."},
+    {"id": 7, "trait": "T", "direction": "-", "text": "I think competition is closer to human nature than cooperation."},
+    {"id": 8, "trait": "T", "direction": "+", "text": "I believe people around me will willingly help when I'm in difficulty."},
+    {"id": 9, "trait": "T", "direction": "-", "text": "I've been betrayed many times after trusting people, so I'm now cautious."},
+    {"id": 10, "trait": "T", "direction": "+", "text": "I think trusting others makes society better."}
   ],
   "descriptions": {
-    "T": { "high": "You have a positive outlook and excel at building collaborative relationships.", "low": "You are a realist with a critical eye, skilled at risk management and self-protection." },
-    "A": { "high": "You are a compassionate individual who adds immense value to your community.", "low": "You are pragmatic and independent, focusing on efficiency and personal goals." }
+    "T": {
+      "high": "You have high trust in others and tend to view society positively overall. You form cooperative relationships well.",
+      "low": "You have caution toward others and need time to build trust. Past experiences may have influenced your current trust level."
+    }
   }
 }

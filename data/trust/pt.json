@@ -1,41 +1,54 @@
 {
   "ui": {
-    "desc": "A forma mais sensata de ler o seu eu interior",
-    "security": "🔒 Segurança: Nenhum dado armazenado",
+    "desc": "Análise de confiança social",
+    "security": "🔒 Segurança: Sem armazenamento de dados",
     "testNames": {
-      "ocean": "Meu Verdadeiro Eu (Big Five)",
-      "dark": "Buscador de Vilões",
-      "loc": "Mentalidade de Sucesso",
-      "resilience": "Teste de Resiliência",
-      "trust": "Termômetro de Relações"
+      "ocean": "Análise da minha personalidade real",
+      "dark": "Encontre o vilão interior",
+      "loc": "Mentalidade de sucesso",
+      "resilience": "Teste de mentalidade de aço",
+      "trust": "Termômetro de relações humanas"
     },
-    "processing": "Analisando seus padrões comportamentais...",
-    "reportTitle": "Relatório de Perfil de Vilão",
-    "recommendTitle": "💡 Recomendado para você",
+    "processing": "Analisando dados...",
+    "reportTitle": "Relatório de perfil de confiança social",
+    "recommendTitle": "💡 Recomendações personalizadas para você",
     "viewAmazon": "Ver produtos recomendados",
     "saveImg": "📸 Salvar imagem do relatório",
-    "retest": "Reiniciar teste",
-    "qrNote": "Escaneie para salvar",
-    "viralTitle": "Curioso sobre o seu resultado?",
-    "viralSub": "Escaneie o QR para começar",
+    "retest": "Refazer",
+    "qrNote": "Escaneie para guardar o resultado",
+    "viralTitle": "Qual é sua temperatura de relações humanas?",
+    "viralSub": "Escaneie o código QR para iniciar o teste",
     "labels": ["Discordo totalmente", "Discordo", "Neutro", "Concordo", "Concordo totalmente"],
-    "amazonKeywords": { "N": "leadership books", "M": "strategy games", "P": "psychology books" }
+    "amazonKeywords": {
+      "T": "livros psicologia social comunicação confiança"
+    }
   },
-  "traitNames": { "T": "Confiança Social", "A": "Altruísmo" },
+  "guide": {
+    "ipipId": "GSS-Trust",
+    "purpose": "Este teste mede sua 'confiança social', analisando seu nível de confiança nos outros e na sociedade como um todo.",
+    "instruction": "Leia cada afirmação e selecione a opção que melhor corresponde à sua forma habitual de pensar. Respostas honestas fornecerão um perfil mais preciso.",
+    "interpretation": "Os resultados são mostrados como um índice de confiança social. Isso mostra quão aberto e cooperativo você é nas relações com os outros.",
+    "startBtn": "Iniciar análise"
+  },
+  "traitNames": {
+    "T": "Índice de confiança social"
+  },
   "items": [
-    { "id": 1, "trait": "T", "direction": "+", "text": "Acredito que a maioria das pessoas é basicamente honesta e digna de confiança." },
-    { "id": 2, "trait": "A", "direction": "+", "text": "Sinto um forte desejo de ajudar pessoas que estão em situações difíceis." },
-    { "id": 3, "trait": "T", "direction": "-", "text": "Sinto que é preciso ter cuidado, caso contrário, as pessoas se aproveitarão de você." },
-    { "id": 4, "trait": "A", "direction": "+", "text": "Considero gratificante dedicar meu tempo e energia para ajudar os outros." },
-    { "id": 5, "trait": "T", "direction": "+", "text": "Tento abordar desconhecidos com boas intenções e mente aberta." },
-    { "id": 6, "trait": "A", "direction": "-", "text": "Acredito que devo focar nos meus próprios problemas antes de me preocupar com os outros." },
-    { "id": 7, "trait": "T", "direction": "-", "text": "Acho que a maioria das pessoas enganaria os outros se isso servisse aos seus interesses." },
-    { "id": 8, "trait": "A", "direction": "+", "text": "Acredito que a caridade e o voluntariado são vitais para uma sociedade melhor." },
-    { "id": 9, "trait": "T", "direction": "+", "text": "Confio que as leis e sistemas em nossa sociedade operam de forma justa." },
-    { "id": 10, "trait": "A", "direction": "-", "text": "Prefiro não investir esforço em tarefas que não oferecem recompensa pessoal." }
+    {"id": 1, "trait": "T", "direction": "+", "text": "Acredito que a maioria das pessoas é fundamentalmente bem-intencionada."},
+    {"id": 2, "trait": "T", "direction": "+", "text": "Posso ajudar de boa vontade um estranho que peça assistência."},
+    {"id": 3, "trait": "T", "direction": "-", "text": "Acho que a maioria das pessoas só cuida de seus próprios interesses."},
+    {"id": 4, "trait": "T", "direction": "+", "text": "Mostro confiança básica mesmo para pessoas que conheço pela primeira vez."},
+    {"id": 5, "trait": "T", "direction": "-", "text": "Devo sempre estar em guarda porque posso ser facilmente enganado por outros."},
+    {"id": 6, "trait": "T", "direction": "+", "text": "Acredito que a confiança entre as pessoas é o mais importante para uma sociedade justa."},
+    {"id": 7, "trait": "T", "direction": "-", "text": "Acho que a competição está mais próxima da natureza humana do que a cooperação."},
+    {"id": 8, "trait": "T", "direction": "+", "text": "Acredito que as pessoas ao meu redor me ajudarão de boa vontade quando eu estiver em dificuldades."},
+    {"id": 9, "trait": "T", "direction": "-", "text": "Fui traído muitas vezes depois de confiar nas pessoas, então agora sou cauteloso."},
+    {"id": 10, "trait": "T", "direction": "+", "text": "Acho que confiar nos outros torna a sociedade melhor."}
   ],
   "descriptions": {
-    "T": { "high": "Você tem uma visão positiva e é excelente em construir relacionamentos colaborativos.", "low": "Você é um realista com olhar crítico, habilidoso em gestão de riscos e autoproteção." },
-    "A": { "high": "Você é uma pessoa compassiva que agrega imenso valor à sua comunidade.", "low": "Você é pragmático e independente, focado em eficiência e objetivos pessoais." }
+    "T": {
+      "high": "Você tem alta confiança nos outros e tende a ver a sociedade de forma positiva em geral. Forma bem relações cooperativas.",
+      "low": "Você tem cautela em relação aos outros e precisa de tempo para construir confiança. Experiências passadas podem ter influenciado seu nível atual de confiança."
+    }
   }
 }

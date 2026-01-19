@@ -1,41 +1,54 @@
 {
   "ui": {
-    "desc": "Cách nhạy bén nhất để thấu hiểu nội tâm bạn",
+    "desc": "Phân tích lòng tin xã hội",
     "security": "🔒 Bảo mật: Không lưu trữ dữ liệu",
     "testNames": {
-      "ocean": "Bản sắc thực sự (Big Five)",
-      "dark": "Tìm kiếm phản diện trong bạn",
+      "ocean": "Phân tích tính cách thật của tôi",
+      "dark": "Tìm kẻ phản diện bên trong",
       "loc": "Tư duy thành công",
-      "resilience": "Kiểm tra bản lĩnh",
-      "trust": "Thước đo mối quan hệ"
+      "resilience": "Bài kiểm tra tinh thần thép",
+      "trust": "Nhiệt kế quan hệ con người"
     },
-    "processing": "Đang phân tích hành vi của bạn...",
-    "reportTitle": "Báo cáo hồ sơ phản diện",
-    "recommendTitle": "💡 Gợi ý dành cho bạn",
-    "viewAmazon": "Xem sản phẩm gợi ý",
-    "saveImg": "📸 Lưu ảnh báo cáo",
+    "processing": "Đang phân tích dữ liệu...",
+    "reportTitle": "Báo cáo hồ sơ lòng tin xã hội",
+    "recommendTitle": "💡 Đề xuất được cá nhân hóa cho bạn",
+    "viewAmazon": "Xem sản phẩm được đề xuất",
+    "saveImg": "📸 Lưu hình ảnh báo cáo",
     "retest": "Làm lại",
     "qrNote": "Quét để lưu kết quả",
-    "viralTitle": "Bạn tò mò về bản thân?",
-    "viralSub": "Quét mã QR để bắt đầu",
-    "labels": ["Rất không đồng ý", "Không đồng ý", "Bình thường", "Đồng ý", "Rất đồng ý"],
-    "amazonKeywords": { "N": "leadership books", "M": "strategy games", "P": "psychology books" }
+    "viralTitle": "Nhiệt độ quan hệ con người của bạn là gì?",
+    "viralSub": "Quét mã QR để bắt đầu bài kiểm tra",
+    "labels": ["Hoàn toàn không đồng ý", "Không đồng ý", "Trung lập", "Đồng ý", "Hoàn toàn đồng ý"],
+    "amazonKeywords": {
+      "T": "sách tâm lý xã hội giao tiếp lòng tin"
+    }
   },
-  "traitNames": { "T": "Lòng tin xã hội", "A": "Lòng vị tha" },
+  "guide": {
+    "ipipId": "GSS-Trust",
+    "purpose": "Bài kiểm tra này đo lường 'lòng tin xã hội' của bạn, phân tích mức độ tin tưởng của bạn đối với người khác và xã hội nói chung.",
+    "instruction": "Đọc mỗi khẳng định và chọn tùy chọn phù hợp nhất với cách suy nghĩ thông thường của bạn. Trả lời trung thực sẽ cung cấp hồ sơ chính xác hơn.",
+    "interpretation": "Kết quả được hiển thị dưới dạng chỉ số lòng tin xã hội. Điều này cho thấy bạn cởi mở và hợp tác như thế nào trong các mối quan hệ với người khác.",
+    "startBtn": "Bắt đầu phân tích"
+  },
+  "traitNames": {
+    "T": "Chỉ số lòng tin xã hội"
+  },
   "items": [
-    { "id": 1, "trait": "T", "direction": "+", "text": "Tôi tin rằng hầu hết mọi người về cơ bản là trung thực và đáng tin cậy." },
-    { "id": 2, "trait": "A", "direction": "+", "text": "Tôi cảm thấy thôi thúc muốn giúp đỡ những người đang gặp hoàn cảnh khó khăn." },
-    { "id": 3, "trait": "T", "direction": "-", "text": "Tôi cảm thấy cần phải cẩn thận, nếu không người khác sẽ lợi dụng mình." },
-    { "id": 4, "trait": "A", "direction": "+", "text": "Tôi thấy việc dành thời gian và năng lượng để giúp đỡ người khác là rất xứng đáng." },
-    { "id": 5, "trait": "T", "direction": "+", "text": "Tôi cố gắng tiếp cận những người lạ với thiện chí và sự cởi mở." },
-    { "id": 6, "trait": "A", "direction": "-", "text": "Tôi nghĩ mình nên tập trung vào vấn đề của bản thân trước khi lo lắng cho người khác." },
-    { "id": 7, "trait": "T", "direction": "-", "text": "Tôi nghĩ hầu hết mọi người sẽ lừa dối người khác nếu điều đó có lợi cho họ." },
-    { "id": 8, "trait": "A", "direction": "+", "text": "Tôi tin rằng từ thiện và tình nguyện là yếu tố then chốt cho một xã hội tốt đẹp hơn." },
-    { "id": 9, "trait": "T", "direction": "+", "text": "Tôi tin tưởng rằng luật pháp và hệ thống trong xã hội đang vận hành công bằng." },
-    { "id": 10, "trait": "A", "direction": "-", "text": "Tôi không thích bỏ công sức vào những việc không mang lại lợi ích cá nhân." }
+    {"id": 1, "trait": "T", "direction": "+", "text": "Tôi tin rằng hầu hết mọi người về cơ bản đều có thiện chí."},
+    {"id": 2, "trait": "T", "direction": "+", "text": "Tôi có thể sẵn lòng giúp đỡ một người lạ yêu cầu hỗ trợ."},
+    {"id": 3, "trait": "T", "direction": "-", "text": "Tôi nghĩ rằng hầu hết mọi người chỉ quan tâm đến lợi ích của riêng họ."},
+    {"id": 4, "trait": "T", "direction": "+", "text": "Tôi thể hiện sự tin tưởng cơ bản ngay cả với những người tôi gặp lần đầu tiên."},
+    {"id": 5, "trait": "T", "direction": "-", "text": "Tôi phải luôn cảnh giác vì tôi có thể dễ dàng bị người khác lừa dối."},
+    {"id": 6, "trait": "T", "direction": "+", "text": "Tôi tin rằng lòng tin giữa mọi người là quan trọng nhất đối với một xã hội công bằng."},
+    {"id": 7, "trait": "T", "direction": "-", "text": "Tôi nghĩ rằng cạnh tranh gần với bản chất con người hơn là hợp tác."},
+    {"id": 8, "trait": "T", "direction": "+", "text": "Tôi tin rằng những người xung quanh tôi sẽ sẵn lòng giúp đỡ khi tôi gặp khó khăn."},
+    {"id": 9, "trait": "T", "direction": "-", "text": "Tôi đã bị phản bội nhiều lần sau khi tin tưởng mọi người, vì vậy bây giờ tôi cẩn thận."},
+    {"id": 10, "trait": "T", "direction": "+", "text": "Tôi nghĩ rằng tin tưởng người khác làm cho xã hội tốt hơn."}
   ],
   "descriptions": {
-    "T": { "high": "Bạn có cái nhìn tích cực và xuất sắc trong việc xây dựng các mối quan hệ hợp tác.", "low": "Bạn là người thực tế với cái nhìn phản biện, giỏi quản trị rủi ro và bảo vệ bản thân." },
-    "A": { "high": "Bạn là một cá nhân giàu lòng nhân ái, mang lại giá trị to lớn cho cộng đồng.", "low": "Bạn là người thực dụng và độc lập, tập trung vào hiệu quả và mục tiêu cá nhân." }
+    "T": {
+      "high": "Bạn có lòng tin cao vào người khác và có xu hướng nhìn xã hội một cách tích cực nói chung. Bạn hình thành các mối quan hệ hợp tác tốt.",
+      "low": "Bạn có sự cảnh giác đối với người khác và cần thời gian để xây dựng lòng tin. Những trải nghiệm trong quá khứ có thể đã ảnh hưởng đến mức độ tin tưởng hiện tại của bạn."
+    }
   }
 }
