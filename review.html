@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GIPPP 검수 대시보드</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans KR", sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            overflow: hidden;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+        
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+        
+        header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+        
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            padding: 30px;
+            background: #f8f9fa;
+        }
+        
+        .stat-card {
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        
+        .stat-card .number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #667eea;
+            margin-bottom: 5px;
+        }
+        
+        .stat-card .label {
+            color: #6c757d;
+            font-size: 0.9rem;
+        }
+        
+        .content {
+            padding: 30px;
+        }
+        
+        .test-section {
+            margin-bottom: 40px;
+        }
+        
+        .test-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px;
+            padding: 20px;
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            border-radius: 12px;
+            color: white;
+        }
+        
+        .test-header .emoji {
+            font-size: 3rem;
+        }
+        
+        .test-header .info h2 {
+            font-size: 1.8rem;
+            margin-bottom: 5px;
+        }
+        
+        .test-header .info p {
+            opacity: 0.9;
+            font-size: 0.95rem;
+        }
+        
+        .lang-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 15px;
+        }
+        
+        .lang-card {
+            background: white;
+            border: 2px solid #e9ecef;
+            border-radius: 12px;
+            padding: 20px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            position: relative;
+        }
+        
+        .lang-card:hover {
+            border-color: #667eea;
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(102, 126, 234, 0.2);
+        }
+        
+        .lang-card.loading {
+            opacity: 0.6;
+            pointer-events: none;
+        }
+        
+        .lang-card .flag {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+        
+        .lang-card .lang-name {
+            font-weight: 600;
+            font-size: 1.1rem;
+            color: #212529;
+            margin-bottom: 5px;
+        }
+        
+        .lang-card .lang-code {
+            font-size: 0.85rem;
+            color: #6c757d;
+            margin-bottom: 10px;
+        }
+        
+        .lang-card .status {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            font-size: 0.85rem;
+            color: #28a745;
+        }
+        
+        .lang-card .status.error {
+            color: #dc3545;
+        }
+        
+        .lang-card .status::before {
+            content: "✓";
+            display: inline-block;
+            width: 18px;
+            height: 18px;
+            background: #28a745;
+            color: white;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 18px;
+            font-size: 12px;
+        }
+        
+        .lang-card .status.error::before {
+            content: "✗";
+            background: #dc3545;
+        }
+        
+        .lang-card .items-count {
+            font-size: 0.8rem;
+            color: #6c757d;
+            margin-top: 5px;
+        }
+        
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.8);
+            z-index: 1000;
+            overflow-y: auto;
+        }
+        
+        .modal.active {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        
+        .modal-content {
+            background: white;
+            border-radius: 16px;
+            max-width: 900px;
+            width: 100%;
+            max-height: 90vh;
+            overflow-y: auto;
+            position: relative;
+        }
+        
+        .modal-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 25px;
+            border-radius: 16px 16px 0 0;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+        
+        .modal-header h3 {
+            font-size: 1.5rem;
+            margin-bottom: 5px;
+        }
+        
+        .modal-header p {
+            opacity: 0.9;
+            font-size: 0.9rem;
+        }
+        
+        .modal-close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: rgba(255,255,255,0.2);
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        
+        .modal-close:hover {
+            background: rgba(255,255,255,0.3);
+        }
+        
+        .modal-body {
+            padding: 25px;
+        }
+        
+        .data-section {
+            margin-bottom: 25px;
+        }
+        
+        .data-section h4 {
+            color: #667eea;
+            margin-bottom: 15px;
+            font-size: 1.2rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .data-item {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            border-left: 4px solid #667eea;
+        }
+        
+        .data-item .label {
+            font-weight: 600;
+            color: #495057;
+            margin-bottom: 5px;
+        }
+        
+        .data-item .value {
+            color: #212529;
+            line-height: 1.6;
+        }
+        
+        .items-list {
+            display: grid;
+            gap: 10px;
+        }
+        
+        .item-card {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid #28a745;
+        }
+        
+        .item-card.negative {
+            border-left-color: #dc3545;
+        }
+        
+        .item-card .item-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 8px;
+        }
+        
+        .item-card .item-id {
+            font-weight: 600;
+            color: #667eea;
+        }
+        
+        .item-card .item-trait {
+            font-size: 0.85rem;
+            padding: 3px 8px;
+            background: white;
+            border-radius: 4px;
+            color: #6c757d;
+        }
+        
+        .item-card .item-text {
+            color: #212529;
+            line-height: 1.6;
+        }
+        
+        .test-link {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 12px 24px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: transform 0.3s;
+        }
+        
+        .test-link:hover {
+            transform: translateY(-2px);
+        }
+        
+        .loading-spinner {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border: 3px solid rgba(102, 126, 234, 0.3);
+            border-top-color: #667eea;
+            border-radius: 50%;
+            animation: spin 0.8s linear infinite;
+        }
+        
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+        
+        .traits-info {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 10px;
+        }
+        
+        .trait-badge {
+            padding: 6px 12px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🔍 GIPPP 검수 대시보드</h1>
+            <p>5개 테스트 × 10개 언어 = 50개 데이터 파일 검수</p>
+        </header>
+        
+        <div class="stats">
+            <div class="stat-card">
+                <div class="number">5</div>
+                <div class="label">테스트</div>
+            </div>
+            <div class="stat-card">
+                <div class="number">10</div>
+                <div class="label">언어</div>
+            </div>
+            <div class="stat-card">
+                <div class="number" id="total-files">50</div>
+                <div class="label">총 파일</div>
+            </div>
+            <div class="stat-card">
+                <div class="number" id="loaded-files">0</div>
+                <div class="label">로드 완료</div>
+            </div>
+        </div>
+        
+        <div class="content" id="content">
+            <!-- 테스트별 섹션이 동적으로 생성됩니다 -->
+        </div>
+    </div>
+    
+    <div class="modal" id="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button class="modal-close" onclick="closeModal()">×</button>
+                <h3 id="modal-title"></h3>
+                <p id="modal-subtitle"></p>
+            </div>
+            <div class="modal-body" id="modal-body">
+                <!-- 상세 데이터가 여기에 표시됩니다 -->
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const tests = [
+            { id: 'dark', emoji: '🎭', name: 'Dark Triad', nameKo: '다크 트라이어드', desc: 'IPIP-D3-27 - 어둠의 3요소' },
+            { id: 'ocean', emoji: '🧬', name: 'Big Five (OCEAN)', nameKo: '빅파이브', desc: 'IPIP-NEO-120 - 5대 성격 요소' },
+            { id: 'loc', emoji: '💰', name: 'Locus of Control', nameKo: '통제위치', desc: 'Rotter-LOC - 성공 마인드셋' },
+            { id: 'resilience', emoji: '🛡️', name: 'Resilience', nameKo: '회복탄력성', desc: 'CD-RISC-25 - 강철 멘탈' },
+            { id: 'trust', emoji: '🤝', name: 'Social Trust', nameKo: '사회적 신뢰', desc: 'GSS-Trust - 인간관계 온도' }
+        ];
+        
+        const languages = [
+            { code: 'ko', name: '한국어', flag: '🇰🇷' },
+            { code: 'en', name: 'English', flag: '🇺🇸' },
+            { code: 'ja', name: '日本語', flag: '🇯🇵' },
+            { code: 'zh', name: '中文', flag: '🇨🇳' },
+            { code: 'es', name: 'Español', flag: '🇪🇸' },
+            { code: 'ar', name: 'العربية', flag: '🇸🇦' },
+            { code: 'de', name: 'Deutsch', flag: '🇩🇪' },
+            { code: 'pt', name: 'Português', flag: '🇧🇷' },
+            { code: 'ru', name: 'Русский', flag: '🇷🇺' },
+            { code: 'vi', name: 'Tiếng Việt', flag: '🇻🇳' }
+        ];
+        
+        let loadedCount = 0;
+        let dataCache = {};
+        
+        function updateLoadedCount() {
+            document.getElementById('loaded-files').textContent = loadedCount;
+        }
+        
+        async function loadData(testId, langCode) {
+            const key = `${testId}-${langCode}`;
+            if (dataCache[key]) return dataCache[key];
+            
+            try {
+                const response = await fetch(`data/${testId}/${langCode}.json`);
+                if (!response.ok) throw new Error(`HTTP ${response.status}`);
+                const data = await response.json();
+                dataCache[key] = data;
+                loadedCount++;
+                updateLoadedCount();
+                return data;
+            } catch (error) {
+                console.error(`Failed to load ${key}:`, error);
+                throw error;
+            }
+        }
+        
+        function renderTestSections() {
+            const content = document.getElementById('content');
+            
+            tests.forEach(test => {
+                const section = document.createElement('div');
+                section.className = 'test-section';
+                section.id = `test-${test.id}`;
+                
+                const header = document.createElement('div');
+                header.className = 'test-header';
+                header.innerHTML = `
+                    <div class="emoji">${test.emoji}</div>
+                    <div class="info">
+                        <h2>${test.nameKo} (${test.name})</h2>
+                        <p>${test.desc}</p>
+                    </div>
+                `;
+                
+                const grid = document.createElement('div');
+                grid.className = 'lang-grid';
+                
+                languages.forEach(lang => {
+                    const card = document.createElement('div');
+                    card.className = 'lang-card loading';
+                    card.innerHTML = `
+                        <div class="flag">${lang.flag}</div>
+                        <div class="lang-name">${lang.name}</div>
+                        <div class="lang-code">${lang.code}</div>
+                        <div class="status">로딩 중... <span class="loading-spinner"></span></div>
+                        <div class="items-count"></div>
+                    `;
+                    
+                    // 데이터 로드
+                    loadData(test.id, lang.code)
+                        .then(data => {
+                            card.classList.remove('loading');
+                            const itemsCount = data.items ? data.items.length : 0;
+                            const traitsCount = data.traitNames ? Object.keys(data.traitNames).length : 0;
+                            
+                            card.querySelector('.status').className = 'status';
+                            card.querySelector('.status').innerHTML = `검증 완료`;
+                            card.querySelector('.items-count').textContent = `문항 ${itemsCount}개 · 지표 ${traitsCount}개`;
+                            
+                            card.onclick = () => showDetail(test, lang, data);
+                        })
+                        .catch(error => {
+                            card.classList.remove('loading');
+                            card.querySelector('.status').className = 'status error';
+                            card.querySelector('.status').innerHTML = `로드 실패`;
+                            card.querySelector('.items-count').textContent = error.message;
+                        });
+                    
+                    grid.appendChild(card);
+                });
+                
+                section.appendChild(header);
+                section.appendChild(grid);
+                content.appendChild(section);
+            });
+        }
+        
+        function showDetail(test, lang, data) {
+            const modal = document.getElementById('modal');
+            const modalTitle = document.getElementById('modal-title');
+            const modalSubtitle = document.getElementById('modal-subtitle');
+            const modalBody = document.getElementById('modal-body');
+            
+            modalTitle.textContent = `${test.emoji} ${test.nameKo} - ${lang.flag} ${lang.name}`;
+            modalSubtitle.textContent = `${test.id}/${lang.code}.json`;
+            
+            // UI 정보
+            let html = '<div class="data-section">';
+            html += '<h4>📱 UI 정보</h4>';
+            
+            if (data.ui) {
+                html += `<div class="data-item">
+                    <div class="label">설명 (desc)</div>
+                    <div class="value">${data.ui.desc || '-'}</div>
+                </div>`;
+                
+                html += `<div class="data-item">
+                    <div class="label">리포트 제목 (reportTitle)</div>
+                    <div class="value">${data.ui.reportTitle || '-'}</div>
+                </div>`;
+                
+                html += `<div class="data-item">
+                    <div class="label">바이럴 제목 (viralTitle)</div>
+                    <div class="value">${data.ui.viralTitle || '-'}</div>
+                </div>`;
+                
+                if (data.ui.labels && data.ui.labels.length > 0) {
+                    html += `<div class="data-item">
+                        <div class="label">응답 라벨 (${data.ui.labels.length}개)</div>
+                        <div class="value">${data.ui.labels.join(' / ')}</div>
+                    </div>`;
+                }
+            }
+            html += '</div>';
+            
+            // 가이드 정보
+            if (data.guide) {
+                html += '<div class="data-section">';
+                html += '<h4>📋 가이드</h4>';
+                
+                html += `<div class="data-item">
+                    <div class="label">IPIP ID</div>
+                    <div class="value">${data.guide.ipipId || '-'}</div>
+                </div>`;
+                
+                html += `<div class="data-item">
+                    <div class="label">목적 (purpose)</div>
+                    <div class="value">${data.guide.purpose || '-'}</div>
+                </div>`;
+                
+                html += `<div class="data-item">
+                    <div class="label">지침 (instruction)</div>
+                    <div class="value">${data.guide.instruction || '-'}</div>
+                </div>`;
+                
+                html += '</div>';
+            }
+            
+            // 지표 정보
+            if (data.traitNames) {
+                html += '<div class="data-section">';
+                html += '<h4>📊 지표 (Traits)</h4>';
+                html += '<div class="traits-info">';
+                for (const [key, value] of Object.entries(data.traitNames)) {
+                    html += `<div class="trait-badge">${key}: ${value}</div>`;
+                }
+                html += '</div></div>';
+            }
+            
+            // 문항 정보
+            if (data.items && data.items.length > 0) {
+                html += '<div class="data-section">';
+                html += `<h4>❓ 문항 (${data.items.length}개)</h4>`;
+                html += '<div class="items-list">';
+                
+                data.items.forEach(item => {
+                    const isPositive = item.direction === '+';
+                    html += `<div class="item-card ${isPositive ? '' : 'negative'}">
+                        <div class="item-header">
+                            <span class="item-id">문항 ${item.id}</span>
+                            <span class="item-trait">지표: ${item.trait} (${item.direction})</span>
+                        </div>
+                        <div class="item-text">${item.text}</div>
+                    </div>`;
+                });
+                
+                html += '</div></div>';
+            }
+            
+            // 설명 정보
+            if (data.descriptions) {
+                html += '<div class="data-section">';
+                html += '<h4>💬 결과 설명</h4>';
+                
+                for (const [trait, desc] of Object.entries(data.descriptions)) {
+                    if (desc.high) {
+                        html += `<div class="data-item">
+                            <div class="label">${trait} - 높음 (High)</div>
+                            <div class="value">${desc.high}</div>
+                        </div>`;
+                    }
+                    if (desc.low) {
+                        html += `<div class="data-item">
+                            <div class="label">${trait} - 낮음 (Low)</div>
+                            <div class="value">${desc.low}</div>
+                        </div>`;
+                    }
+                }
+                
+                html += '</div>';
+            }
+            
+            // 테스트 링크
+            html += `<a href="index.html?test=${test.id}&lang=${lang.code}" class="test-link" target="_blank">
+                🚀 실제 테스트 페이지에서 확인하기
+            </a>`;
+            
+            modalBody.innerHTML = html;
+            modal.classList.add('active');
+        }
+        
+        function closeModal() {
+            document.getElementById('modal').classList.remove('active');
+        }
+        
+        // ESC 키로 모달 닫기
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') closeModal();
+        });
+        
+        // 모달 외부 클릭시 닫기
+        document.getElementById('modal').addEventListener('click', (e) => {
+            if (e.target.id === 'modal') closeModal();
+        });
+        
+        // 초기화
+        renderTestSections();
+    </script>
+</body>
+</html>
