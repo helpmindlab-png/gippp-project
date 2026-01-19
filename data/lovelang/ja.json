@@ -1,0 +1,63 @@
+{
+  "meta": {
+    "id": "lovelang",
+    "version": "1.0",
+    "author": "GIPPP Research Team",
+    "language": "ja",
+    "lastUpdated": "2026-01-19"
+  },
+  "ui": {
+    "testName": "LOVELANG Test",
+    "description": "Psychological assessment",
+    "security": "🔒 Secure: No data stored",
+    "processing": "Analyzing...",
+    "reportTitle": "My LOVELANG Profile",
+    "recommendTitle": "💡 Tips for You",
+    "actions": {
+      "viewAmazon": "📚 View Books",
+      "saveImg": "💾 Save Image",
+      "retest": "🔄 Retake",
+      "qrNote": "Share via QR"
+    },
+    "viral": {
+      "viralTitle": "What's your lovelang?",
+      "viralSub": "Discover now!"
+    },
+    "labels": [
+      "Strongly Disagree",
+      "Disagree",
+      "Neutral",
+      "Agree",
+      "Strongly Agree"
+    ]
+  },
+  "items": [
+    {
+      "id": "LOVELANG1",
+      "text": "Sample question 1 for lovelang",
+      "reverse": false,
+      "trait": "A"
+    }
+  ],
+  "descriptions": {
+    "A": {
+      "label": "Type A",
+      "emoji": "🎯",
+      "high": "High score description",
+      "low": "Low score description",
+      "tips": "Practical advice"
+    }
+  },
+  "traitNames": {
+    "A": "Type A"
+  },
+  "amazonKeywords": {
+    "A": "lovelang psychology"
+  },
+  "guide": {
+    "ipipId": "Custom-lovelang-10",
+    "purpose": "Assess your lovelang",
+    "instruction": "Answer honestly",
+    "interpretation": "Results show your traits"
+  }
+}
