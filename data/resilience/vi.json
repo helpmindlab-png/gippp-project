@@ -1,63 +1,54 @@
 {
   "ui": {
-    "desc": "Cách nhạy bén nhất để thấu hiểu nội tâm bạn",
+    "desc": "Phân tích khả năng phục hồi",
     "security": "🔒 Bảo mật: Không lưu trữ dữ liệu",
     "testNames": {
-      "ocean": "Bản sắc thực sự (Big Five)",
-      "dark": "Tìm kiếm phản diện trong bạn",
+      "ocean": "Phân tích tính cách thật của tôi",
+      "dark": "Tìm kẻ phản diện bên trong",
       "loc": "Tư duy thành công",
-      "resilience": "Kiểm tra bản lĩnh",
-      "trust": "Thước đo mối quan hệ"
+      "resilience": "Bài kiểm tra tinh thần thép",
+      "trust": "Nhiệt kế quan hệ con người"
     },
-    "processing": "Đang phân tích hành vi của bạn...",
-    "reportTitle": "Báo cáo hồ sơ phản diện",
-    "recommendTitle": "💡 Gợi ý dành cho bạn",
-    "viewAmazon": "Xem sản phẩm gợi ý",
-    "saveImg": "📸 Lưu ảnh báo cáo",
+    "processing": "Đang phân tích dữ liệu...",
+    "reportTitle": "Báo cáo hồ sơ khả năng phục hồi",
+    "recommendTitle": "💡 Đề xuất được cá nhân hóa cho bạn",
+    "viewAmazon": "Xem sản phẩm được đề xuất",
+    "saveImg": "📸 Lưu hình ảnh báo cáo",
     "retest": "Làm lại",
     "qrNote": "Quét để lưu kết quả",
-    "viralTitle": "Bạn tò mò về bản thân?",
-    "viralSub": "Quét mã QR để bắt đầu",
-    "labels": ["Rất không đồng ý", "Không đồng ý", "Bình thường", "Đồng ý", "Rất đồng ý"],
-    "amazonKeywords": { "N": "leadership books", "M": "strategy games", "P": "psychology books" }
+    "viralTitle": "Bạn có muốn đo lường tinh thần thép của mình?",
+    "viralSub": "Quét mã QR để bắt đầu bài kiểm tra",
+    "labels": ["Hoàn toàn không đồng ý", "Không đồng ý", "Trung lập", "Đồng ý", "Hoàn toàn đồng ý"],
+    "amazonKeywords": {
+      "R": "sách sức mạnh tinh thần khả năng phục hồi"
+    }
   },
-  "ui": {
-    "desc": "A forma mais sensata de ler o seu eu interior",
-    "security": "🔒 Segurança: Nenhum dado armazenado",
-    "testNames": {
-      "ocean": "Meu Verdadeiro Eu (Big Five)",
-      "dark": "Buscador de Vilões",
-      "loc": "Mentalidade de Sucesso",
-      "resilience": "Teste de Resiliência",
-      "trust": "Termômetro de Relações"
-    },
-    "processing": "Analisando seus padrões comportamentais...",
-    "reportTitle": "Relatório de Perfil de Vilão",
-    "recommendTitle": "💡 Recomendado para você",
-    "viewAmazon": "Ver produtos recomendados",
-    "saveImg": "📸 Salvar imagem do relatório",
-    "retest": "Reiniciar teste",
-    "qrNote": "Escaneie para salvar",
-    "viralTitle": "Curioso sobre o seu resultado?",
-    "viralSub": "Escaneie o QR para começar",
-    "labels": ["Discordo totalmente", "Discordo", "Neutro", "Concordo", "Concordo totalmente"],
-    "amazonKeywords": { "N": "leadership books", "M": "strategy games", "P": "psychology books" }
+  "guide": {
+    "ipipId": "CD-RISC-25",
+    "purpose": "Bài kiểm tra này đo lường 'khả năng phục hồi' của bạn, phân tích bạn phục hồi và thích ứng nhanh như thế nào trong các tình huống nghịch cảnh và căng thẳng.",
+    "instruction": "Đọc mỗi khẳng định và chọn tùy chọn phù hợp nhất với cách suy nghĩ thông thường của bạn. Trả lời trung thực sẽ cung cấp hồ sơ chính xác hơn.",
+    "interpretation": "Kết quả được hiển thị dưới dạng chỉ số khả năng phục hồi. Điều này cho thấy bạn có thể đối phó và phát triển linh hoạt như thế nào trong các tình huống khủng hoảng.",
+    "startBtn": "Bắt đầu phân tích"
   },
-  "traitNames": { "R": "Khả năng phục hồi", "E": "Kiểm soát cảm xúc" },
+  "traitNames": {
+    "R": "Chỉ số khả năng phục hồi"
+  },
   "items": [
-    { "id": 1, "trait": "R", "direction": "+", "text": "Tôi thường lấy lại bình tĩnh và đứng dậy rất nhanh sau những khó khăn." },
-    { "id": 2, "trait": "E", "direction": "+", "text": "Tôi hiểu rõ bản thân đang cảm thấy như thế nào trong mọi tình huống." },
-    { "id": 3, "trait": "R", "direction": "-", "text": "Tôi dễ cảm thấy bối rối và bất lực khi gặp phải những vấn đề bất ngờ." },
-    { "id": 4, "trait": "E", "direction": "+", "text": "Tôi có thể điều tiết cảm xúc của mình một cách hiệu quả ngay cả khi căng thẳng." },
-    { "id": 5, "trait": "R", "direction": "+", "text": "Tôi coi thất bại là cơ hội để học hỏi và thử nghiệm những phương pháp mới." },
-    { "id": 6, "trait": "E", "direction": "-", "text": "Đôi khi tôi để cảm xúc dẫn dắt và nói ra những điều khiến mình hối hận sau đó." },
-    { "id": 7, "trait": "R", "direction": "-", "text": "Khi có chuyện không hay xảy ra, tôi mất rất nhiều thời gian để vượt qua nó." },
-    { "id": 8, "trait": "E", "direction": "+", "text": "Tôi có thể giữ bình tĩnh và sắp xếp thứ tự ưu tiên công việc dưới áp lực cao." },
-    { "id": 9, "trait": "R", "direction": "+", "text": "Tôi tin tưởng vào khả năng của mình và chắc chắn rằng mình sẽ giải quyết được vấn đề." },
-    { "id": 10, "trait": "E", "direction": "-", "text": "Tôi có xu hướng phản ứng quá nhạy cảm với tâm trạng hoặc phản ứng của người xung quanh." }
+    {"id": 1, "trait": "R", "direction": "+", "text": "Tôi có thể tiến về phía mục tiêu của mình ngay cả trong những tình huống khó khăn."},
+    {"id": 2, "trait": "R", "direction": "+", "text": "Khi bị căng thẳng, sự tập trung của tôi thực sự tăng lên."},
+    {"id": 3, "trait": "R", "direction": "+", "text": "Tôi phục hồi nhanh chóng sau thất bại và thử lại."},
+    {"id": 4, "trait": "R", "direction": "+", "text": "Trong các tình huống khủng hoảng, tôi cố gắng bình tĩnh tìm giải pháp."},
+    {"id": 5, "trait": "R", "direction": "+", "text": "Tôi chấp nhận và thích ứng với thay đổi một cách tích cực."},
+    {"id": 6, "trait": "R", "direction": "-", "text": "Khi các vấn đề bất ngờ xảy ra, tôi dễ hoảng sợ và sụp đổ."},
+    {"id": 7, "trait": "R", "direction": "+", "text": "Tôi tin rằng những trải nghiệm khó khăn làm cho tôi mạnh mẽ hơn."},
+    {"id": 8, "trait": "R", "direction": "-", "text": "Một khi tôi thất bại, tôi không có can đảm để thử lại."},
+    {"id": 9, "trait": "R", "direction": "+", "text": "Tôi tin vào điểm mạnh của mình và có thể sử dụng chúng."},
+    {"id": 10, "trait": "R", "direction": "+", "text": "Ngay cả trong những thời điểm khó khăn, tôi không mất hy vọng và tìm ra các khía cạnh tích cực."}
   ],
   "descriptions": {
-    "R": { "high": "Bạn sở hữu một 'tinh thần thép' không dễ dàng bị khuất phục trước thử thách.", "low": "Bạn là người có tâm hồn nhạy cảm, tinh tế và dễ bị tác động bởi môi trường xung quanh." },
-    "E": { "high": "Bạn làm chủ cảm xúc rất tốt, giữ được sự điềm tĩnh ngay cả trong những lúc biến động.", "low": "Bạn là người nhiệt huyết và sống thật với cảm xúc, đôi khi để cảm xúc cuốn đi." }
+    "R": {
+      "high": "Bạn có một tinh thần mạnh mẽ phục hồi nhanh chóng và phát triển ngay cả trong nghịch cảnh. Bạn xuất sắc trong việc biến khó khăn thành cơ hội.",
+      "low": "Có thể mất thời gian để phục hồi trong các tình huống căng thẳng hoặc thất bại. Đào tạo tăng cường tinh thần và thực hành tư duy tích cực có thể hữu ích."
+    }
   }
 }

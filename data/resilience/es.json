@@ -1,41 +1,54 @@
 {
   "ui": {
-    "desc": "La forma más sensible de leer tu interior",
-    "security": "🔒 Seguridad: No se guardan datos",
+    "desc": "Análisis de resiliencia",
+    "security": "🔒 Seguridad: Sin almacenamiento de datos",
     "testNames": {
-      "ocean": "Mi Verdadero Yo (Big Five)",
-      "dark": "Buscador de Villanos",
-      "loc": "Mentalidad de Éxito",
-      "resilience": "Test de Resiliencia",
-      "trust": "Termómetro de Relaciones"
+      "ocean": "Análisis de mi personalidad real",
+      "dark": "Encuentra al villano interior",
+      "loc": "Mentalidad de éxito",
+      "resilience": "Test de mentalidad de acero",
+      "trust": "Termómetro de relaciones humanas"
     },
-    "processing": "Analizando tus patrones de conducta...",
-    "reportTitle": "Informe de Perfil de Villano",
-    "recommendTitle": "💡 Recomendado para ti",
+    "processing": "Analizando datos...",
+    "reportTitle": "Informe de perfil de resiliencia",
+    "recommendTitle": "💡 Recomendaciones personalizadas para ti",
     "viewAmazon": "Ver productos recomendados",
     "saveImg": "📸 Guardar imagen del informe",
-    "retest": "Repetir test",
-    "qrNote": "Escanea para guardar",
-    "viralTitle": "¿Curioso por tu resultado?",
-    "viralSub": "Escanea el QR para empezar",
-    "labels": ["Muy en desacuerdo", "En desacuerdo", "Neutral", "De acuerdo", "Muy de acuerdo"],
-    "amazonKeywords": { "N": "leadership books", "M": "strategy games", "P": "psychology books" }
+    "retest": "Repetir",
+    "qrNote": "Escanea para guardar el resultado",
+    "viralTitle": "¿Quieres medir tu mentalidad de acero?",
+    "viralSub": "Escanea el código QR para iniciar el test",
+    "labels": ["Totalmente en desacuerdo", "En desacuerdo", "Neutral", "De acuerdo", "Totalmente de acuerdo"],
+    "amazonKeywords": {
+      "R": "libros fortaleza mental resiliencia"
+    }
   },
-  "traitNames": { "R": "Resiliencia", "E": "Regulación Emocional" },
+  "guide": {
+    "ipipId": "CD-RISC-25",
+    "purpose": "Este test mide tu 'resiliencia', analizando qué tan rápido te recuperas y te adaptas en situaciones adversas y estresantes.",
+    "instruction": "Lee cada afirmación y selecciona la opción que mejor coincida con tu forma de pensar habitual. Las respuestas honestas proporcionarán un perfil más preciso.",
+    "interpretation": "Los resultados se muestran como un índice de resiliencia. Esto muestra qué tan flexiblemente puedes enfrentar y crecer en situaciones de crisis.",
+    "startBtn": "Iniciar análisis"
+  },
+  "traitNames": {
+    "R": "Índice de resiliencia"
+  },
   "items": [
-    { "id": 1, "trait": "R", "direction": "+", "text": "Suelo recuperarme rápidamente después de un momento difícil o un contratiempo." },
-    { "id": 2, "trait": "E", "direction": "+", "text": "Tengo una comprensión clara de las emociones que estoy experimentando." },
-    { "id": 3, "trait": "R", "direction": "-", "text": "Me siento abrumado e impotente fácilmente cuando surgen problemas inesperados." },
-    { "id": 4, "trait": "E", "direction": "+", "text": "Puedo manejar mis emociones de manera efectiva incluso en situaciones estresantes." },
-    { "id": 5, "trait": "R", "direction": "+", "text": "Veo los fracasos como oportunidades para aprender y probar nuevos enfoques." },
-    { "id": 6, "trait": "E", "direction": "-", "text": "A veces dejo que mis emociones me dominen y digo cosas de las que me arrepiento." },
-    { "id": 7, "trait": "R", "direction": "-", "text": "Cuando algo malo sucede, me toma mucho tiempo superarlo." },
-    { "id": 8, "trait": "E", "direction": "+", "text": "Puedo mantener la calma y priorizar tareas incluso bajo una gran presión." },
-    { "id": 9, "trait": "R", "direction": "+", "text": "Confío en mi capacidad para resolver finalmente problemas difíciles." },
-    { "id": 10, "trait": "E", "direction": "-", "text": "Tiendo a reaccionar con demasiada fuerza a los estados de ánimo de quienes me rodean." }
+    {"id": 1, "trait": "R", "direction": "+", "text": "Puedo avanzar hacia mis metas incluso en situaciones difíciles."},
+    {"id": 2, "trait": "R", "direction": "+", "text": "Cuando estoy estresado, mi concentración en realidad aumenta."},
+    {"id": 3, "trait": "R", "direction": "+", "text": "Me recupero rápidamente del fracaso e intento de nuevo."},
+    {"id": 4, "trait": "R", "direction": "+", "text": "En situaciones de crisis, intento encontrar soluciones con calma."},
+    {"id": 5, "trait": "R", "direction": "+", "text": "Acepto y me adapto al cambio de manera positiva."},
+    {"id": 6, "trait": "R", "direction": "-", "text": "Cuando surgen problemas inesperados, me asusto fácilmente y me derrumbo."},
+    {"id": 7, "trait": "R", "direction": "+", "text": "Creo que las experiencias difíciles me hacen más fuerte."},
+    {"id": 8, "trait": "R", "direction": "-", "text": "Una vez que fallo, no tengo el coraje de intentar de nuevo."},
+    {"id": 9, "trait": "R", "direction": "+", "text": "Creo en mis propias fortalezas y puedo usarlas."},
+    {"id": 10, "trait": "R", "direction": "+", "text": "Incluso en tiempos difíciles, no pierdo la esperanza y encuentro aspectos positivos."}
   ],
   "descriptions": {
-    "R": { "high": "Posees una 'mente de acero' que no se quiebra ante los desafíos.", "low": "Eres una persona sensible y perceptiva que siente profundamente los cambios del entorno." },
-    "E": { "high": "Destacas en el autocontrol, manteniendo la paz interior incluso en tiempos turbulentos.", "low": "Eres apasionado y expresivo, a veces dejándote llevar por las olas de tus emociones." }
+    "R": {
+      "high": "Tienes una mentalidad fuerte que se recupera rápidamente y crece incluso en la adversidad. Eres excelente convirtiendo dificultades en oportunidades.",
+      "low": "Puede que te tome tiempo recuperarte en situaciones estresantes o de fracaso. El entrenamiento de fortalecimiento mental y la práctica del pensamiento positivo pueden ser útiles."
+    }
   }
 }

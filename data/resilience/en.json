@@ -1,45 +1,54 @@
 {
   "ui": {
-    "desc": "The most sensible way to read your inner self",
-    "security": "🔒 Security: No data stored",
+    "desc": "Resilience Analysis",
+    "security": "🔒 Security: No data storage",
     "testNames": {
-      "ocean": "My True Self (Big Five)",
-      "dark": "Villain Finder",
-      "loc": "Success Mindset",
-      "resilience": "Mental Resilience Test",
-      "trust": "Relationship Thermometer"
+      "ocean": "Analyze my real personality",
+      "dark": "Find the villain within",
+      "loc": "Success mindset",
+      "resilience": "Steel mentality test",
+      "trust": "Human relationship thermometer"
     },
-    "processing": "Analyzing your behavioral patterns...",
-    "reportTitle": "Villain Profiling Report",
-    "recommendTitle": "💡 Recommended for You",
-    "viewAmazon": "View Recommended Products",
-    "saveImg": "📸 Save Report Image",
-    "retest": "Retest",
-    "qrNote": "Scan to save your result",
-    "viralTitle": "Curious about your insight?",
-    "viralSub": "Scan QR code to start the test",
+    "processing": "Analyzing data...",
+    "reportTitle": "Resilience Profiling Report",
+    "recommendTitle": "💡 Personalized recommendations for you",
+    "viewAmazon": "View recommended products",
+    "saveImg": "📸 Save report image",
+    "retest": "Retry",
+    "qrNote": "Scan to keep result",
+    "viralTitle": "Want to measure your steel mentality?",
+    "viralSub": "Scan QR code to start test",
     "labels": ["Strongly Disagree", "Disagree", "Neutral", "Agree", "Strongly Agree"],
-    "amazonKeywords": { 
-      "N": "leadership books", 
-      "M": "strategy games", 
-      "P": "psychology books" 
+    "amazonKeywords": {
+      "R": "mental toughness resilience books"
     }
   },
-  "traitNames": { "R": "Resilience", "E": "Emotional Regulation" },
+  "guide": {
+    "ipipId": "CD-RISC-25",
+    "purpose": "This test measures your 'resilience', analyzing how quickly you recover and adapt in adversity and stressful situations.",
+    "instruction": "Read each statement and select the option that best matches your usual thinking. Honest answers will provide a more accurate profile.",
+    "interpretation": "Results are shown as a resilience index. This shows how flexibly you can cope and grow in crisis situations.",
+    "startBtn": "Start analysis"
+  },
+  "traitNames": {
+    "R": "Resilience Index"
+  },
   "items": [
-    { "id": 1, "trait": "R", "direction": "+", "text": "I tend to bounce back quickly after a hard time or a setback." },
-    { "id": 2, "trait": "E", "direction": "+", "text": "I have a clear understanding of the emotions I am experiencing." },
-    { "id": 3, "trait": "R", "direction": "-", "text": "I easily feel overwhelmed and helpless when unexpected problems arise." },
-    { "id": 4, "trait": "E", "direction": "+", "text": "I can manage my emotions effectively even in stressful situations." },
-    { "id": 5, "trait": "R", "direction": "+", "text": "I view failures as opportunities to learn and try new approaches." },
-    { "id": 6, "trait": "E", "direction": "-", "text": "I sometimes let my emotions get the better of me and say things I regret." },
-    { "id": 7, "trait": "R", "direction": "-", "text": "When something bad happens, it takes me a long time to get over it." },
-    { "id": 8, "trait": "E", "direction": "+", "text": "I can stay calm and prioritize tasks even under heavy pressure." },
-    { "id": 9, "trait": "R", "direction": "+", "text": "I am confident in my ability to eventually solve difficult problems." },
-    { "id": 10, "trait": "E", "direction": "-", "text": "I tend to react too strongly to the moods or opinions of people around me." }
+    {"id": 1, "trait": "R", "direction": "+", "text": "I can move toward my goals even in difficult situations."},
+    {"id": 2, "trait": "R", "direction": "+", "text": "When stressed, my concentration actually increases."},
+    {"id": 3, "trait": "R", "direction": "+", "text": "I recover quickly from failure and try again."},
+    {"id": 4, "trait": "R", "direction": "+", "text": "In crisis situations, I calmly try to find solutions."},
+    {"id": 5, "trait": "R", "direction": "+", "text": "I accept and adapt to change positively."},
+    {"id": 6, "trait": "R", "direction": "-", "text": "When unexpected problems arise, I easily panic and break down."},
+    {"id": 7, "trait": "R", "direction": "+", "text": "I believe difficult experiences make me stronger."},
+    {"id": 8, "trait": "R", "direction": "-", "text": "Once I fail, I don't have the courage to try again."},
+    {"id": 9, "trait": "R", "direction": "+", "text": "I believe in my own strengths and can use them."},
+    {"id": 10, "trait": "R", "direction": "+", "text": "Even in tough times, I don't lose hope and find positive aspects."}
   ],
   "descriptions": {
-    "R": { "high": "You possess a 'steel mindset' that remains unbroken by challenges.", "low": "You are a sensitive and perceptive individual who deeply feels environmental changes." },
-    "E": { "high": "You excel at self-mastery, maintaining inner peace even in turbulent times.", "low": "You are passionate and expressive, sometimes riding the waves of your emotions." }
+    "R": {
+      "high": "You have a strong mentality that recovers quickly and grows even in adversity. You excel at turning difficulties into opportunities.",
+      "low": "It may take time to recover in stressful or failure situations. Mental strengthening training and positive thinking practice can be helpful."
+    }
   }
 }

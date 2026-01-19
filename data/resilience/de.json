@@ -1,41 +1,54 @@
 {
   "ui": {
-    "desc": "Der sensibelste Weg, Ihr inneres Selbst zu verstehen",
+    "desc": "Resilienz-Analyse",
     "security": "🔒 Sicherheit: Keine Datenspeicherung",
     "testNames": {
-      "ocean": "Mein wahres Ich (Big Five)",
-      "dark": "Bösewicht-Finder",
+      "ocean": "Analyse meiner wahren Persönlichkeit",
+      "dark": "Finde den Bösewicht in dir",
       "loc": "Erfolgs-Mindset",
-      "resilience": "Resilienz-Test",
-      "trust": "Beziehungs-Thermometer"
+      "resilience": "Stahl-Mentalitäts-Test",
+      "trust": "Thermometer menschlicher Beziehungen"
     },
-    "processing": "Verhaltensmuster werden analysiert...",
-    "reportTitle": "Bösewicht-Profiling-Bericht",
-    "recommendTitle": "💡 Empfehlung für Sie",
+    "processing": "Daten werden analysiert...",
+    "reportTitle": "Resilienz-Profilbericht",
+    "recommendTitle": "💡 Personalisierte Empfehlungen für Sie",
     "viewAmazon": "Empfohlene Produkte ansehen",
-    "saveImg": "📸 Bericht als Bild speichern",
-    "retest": "Test wiederholen",
-    "qrNote": "Scannen zum Speichern",
-    "viralTitle": "Neugierig auf Ihre Analyse?",
-    "viralSub": "QR-Code scannen, um zu starten",
-    "labels": ["Stimme gar nicht zu", "Stimme nicht zu", "Neutral", "Stimme zu", "Stimme voll zu"],
-    "amazonKeywords": { "N": "leadership books", "M": "strategy games", "P": "psychology books" }
+    "saveImg": "📸 Berichtsbild speichern",
+    "retest": "Wiederholen",
+    "qrNote": "Scannen, um Ergebnis zu speichern",
+    "viralTitle": "Möchten Sie Ihre Stahl-Mentalität messen?",
+    "viralSub": "QR-Code scannen, um Test zu starten",
+    "labels": ["Stimme überhaupt nicht zu", "Stimme nicht zu", "Neutral", "Stimme zu", "Stimme voll und ganz zu"],
+    "amazonKeywords": {
+      "R": "mentale Stärke Resilienz Bücher"
+    }
   },
-  "traitNames": { "R": "Resilienz", "E": "Emotionsregulation" },
+  "guide": {
+    "ipipId": "CD-RISC-25",
+    "purpose": "Dieser Test misst Ihre 'Resilienz', indem er analysiert, wie schnell Sie sich in widrigen und stressigen Situationen erholen und anpassen.",
+    "instruction": "Lesen Sie jede Aussage und wählen Sie die Option, die Ihrer gewöhnlichen Denkweise am besten entspricht. Ehrliche Antworten liefern ein genaueres Profil.",
+    "interpretation": "Die Ergebnisse werden als Resilienz-Index angezeigt. Dies zeigt, wie flexibel Sie in Krisensituationen bewältigen und wachsen können.",
+    "startBtn": "Analyse starten"
+  },
+  "traitNames": {
+    "R": "Resilienz-Index"
+  },
   "items": [
-    { "id": 1, "trait": "R", "direction": "+", "text": "Nach Rückschlägen oder schwierigen Phasen finde ich meist schnell mein Gleichgewicht wieder." },
-    { "id": 2, "trait": "E", "direction": "+", "text": "Ich habe ein klares Verständnis für die Emotionen, die ich gerade erlebe." },
-    { "id": 3, "trait": "R", "direction": "-", "text": "Bei unerwarteten Problemen fühle ich mich schnell überfordert und hilflos." },
-    { "id": 4, "trait": "E", "direction": "+", "text": "Ich kann meine Emotionen auch in stressigen Situationen effektiv steuern." },
-    { "id": 5, "trait": "R", "direction": "+", "text": "Ich betrachte Misserfolge als Chance, zu lernen und neue Wege auszuprobieren." },
-    { "id": 6, "trait": "E", "direction": "-", "text": "Manchmal lasse ich mich von meinen Gefühlen hinreißen und bereue später meine Worte." },
-    { "id": 7, "trait": "R", "direction": "-", "text": "Wenn etwas Schlechtes passiert, brauche ich lange, um darüber hinwegzukommen." },
-    { "id": 8, "trait": "E", "direction": "+", "text": "Ich kann auch unter starkem Druck ruhig bleiben und Prioritäten setzen." },
-    { "id": 9, "trait": "R", "direction": "+", "text": "Ich bin zuversichtlich, dass ich schwierige Probleme am Ende lösen kann." },
-    { "id": 10, "trait": "E", "direction": "-", "text": "Ich reagiere oft zu empfindlich auf die Stimmung oder Reaktionen meiner Mitmenschen." }
+    {"id": 1, "trait": "R", "direction": "+", "text": "Ich kann auch in schwierigen Situationen auf meine Ziele hinarbeiten."},
+    {"id": 2, "trait": "R", "direction": "+", "text": "Wenn ich gestresst bin, erhöht sich meine Konzentration tatsächlich."},
+    {"id": 3, "trait": "R", "direction": "+", "text": "Ich erhole mich schnell von Misserfolgen und versuche es erneut."},
+    {"id": 4, "trait": "R", "direction": "+", "text": "In Krisensituationen versuche ich ruhig, Lösungen zu finden."},
+    {"id": 5, "trait": "R", "direction": "+", "text": "Ich akzeptiere Veränderungen positiv und passe mich an."},
+    {"id": 6, "trait": "R", "direction": "-", "text": "Wenn unerwartete Probleme auftreten, gerate ich leicht in Panik und breche zusammen."},
+    {"id": 7, "trait": "R", "direction": "+", "text": "Ich glaube, dass schwierige Erfahrungen mich stärker machen."},
+    {"id": 8, "trait": "R", "direction": "-", "text": "Sobald ich scheitere, habe ich nicht den Mut, es erneut zu versuchen."},
+    {"id": 9, "trait": "R", "direction": "+", "text": "Ich glaube an meine eigenen Stärken und kann sie nutzen."},
+    {"id": 10, "trait": "R", "direction": "+", "text": "Auch in schwierigen Zeiten verliere ich nicht die Hoffnung und finde positive Aspekte."}
   ],
   "descriptions": {
-    "R": { "high": "Sie besitzen ein „stählernes Gemüt“, das an Herausforderungen nicht zerbricht.", "low": "Sie sind ein feinfühliger und wahrnehmungsstarker Mensch, der Umfeldveränderungen tief spürt." },
-    "E": { "high": "Sie sind meisterhaft in der Selbstbeherrschung und bewahren auch in Krisen innere Ruhe.", "low": "Sie sind leidenschaftlich und ausdrucksstark, wobei Sie manchmal von Ihren Gefühlen mitgerissen werden." }
+    "R": {
+      "high": "Sie haben eine starke Mentalität, die sich auch in Widrigkeiten schnell erholt und wächst. Sie sind hervorragend darin, Schwierigkeiten in Chancen zu verwandeln.",
+      "low": "Es kann Zeit brauchen, sich in stressigen oder Versagenssituationen zu erholen. Mentales Stärkungstraining und Übung im positiven Denken können hilfreich sein."
+    }
   }
 }
