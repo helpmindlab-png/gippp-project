@@ -1,134 +1,148 @@
 {
+  "meta": {
+    "id": "stressstyle",
+    "version": "1.0",
+    "author": "GIPPP Research Team",
+    "language": "ko",
+    "lastUpdated": "2026-01-19"
+  },
   "ui": {
-    "desc": "STRESSSTYLE 테스트",
-    "security": "🔒 보안: 데이터 저장 안 함",
-    "testNames": {},
-    "processing": "데이터 분석 중...",
-    "reportTitle": "나의 STRESSSTYLE 프로필",
-    "recommendTitle": "💡 당신을 위한 커리어 조언",
-    "viewAmazon": "추천 도서 보기",
-    "saveImg": "📸 리포트 이미지 저장",
-    "retest": "다시 하기",
-    "qrNote": "스캔하여 결과 소장하기",
-    "viralTitle": "당신의 업무 스타일은?",
-    "viralSub": "QR코드를 스캔하여 테스트 시작",
+    "testName": "스트레스 대처 유형",
+    "description": "힘들 때 당신은 어떻게 대응하나요?",
+    "security": "🔒 안전: 데이터 저장 안 함",
+    "processing": "분석 중...",
+    "reportTitle": "나의 스트레스 대처법",
+    "recommendTitle": "🧘 건강한 스트레스 관리 팁",
+    "actions": {
+      "viewAmazon": "📚 스트레스 관리 도서",
+      "saveImg": "💾 결과 저장",
+      "retest": "🔄 다시 하기",
+      "qrNote": "친구와 공유하기"
+    },
+    "viral": {
+      "viralTitle": "스트레스 받을 때 당신은?",
+      "viralSub": "나의 대처 유형 확인하기!"
+    },
     "labels": [
       "전혀 아니다",
       "아니다",
       "보통이다",
       "그렇다",
       "매우 그렇다"
-    ],
-    "amazonKeywords": {
-      "I": "productivity",
-      "C": "teamwork",
-      "L": "leadership",
-      "S": "support"
-    }
-  },
-  "guide": {
-    "ipipId": "Custom-WorkStyle-10",
-    "purpose": "이 테스트는 당신의 업무 스타일과 협업 선호도를 파악하여 최적의 근무 환경과 역할을 찾도록 돕습니다.",
-    "instruction": "각 문항을 읽고 평소 업무 상황에서의 당신의 모습과 가장 일치하는 답을 선택하세요.",
-    "interpretation": "결과는 4가지 업무 스타일(독립형, 협업형, 리더형, 지원형) 점수로 표시됩니다.",
-    "startBtn": "분석 시작하기"
-  },
-  "traitNames": {
-    "I": "독립형",
-    "C": "협업형",
-    "L": "리더형",
-    "S": "지원형"
+    ]
   },
   "items": [
     {
-      "id": 1,
-      "trait": "I",
-      "direction": "+",
-      "text": "혼자 집중해서 일할 때 가장 생산적이다"
+      "id": "SS1",
+      "text": "스트레스 받으면 즉시 문제를 해결하려 한다",
+      "reverse": false,
+      "trait": "P"
     },
     {
-      "id": 2,
-      "trait": "C",
-      "direction": "+",
-      "text": "팀 회의에서 아이디어를 제안하는 것을 즐긴다"
+      "id": "SS2",
+      "text": "힘들 때 친구에게 전화해서 이야기한다",
+      "reverse": false,
+      "trait": "S"
     },
     {
-      "id": 3,
-      "trait": "L",
-      "direction": "+",
-      "text": "프로젝트를 주도하고 방향을 제시하는 것이 자연스럽다"
+      "id": "SS3",
+      "text": "운동이나 취미로 스트레스를 푼다",
+      "reverse": false,
+      "trait": "E"
     },
     {
-      "id": 4,
-      "trait": "S",
-      "direction": "+",
-      "text": "동료를 돕고 지원하는 역할이 편하다"
+      "id": "SS4",
+      "text": "스트레스를 피하고 나중에 생각한다",
+      "reverse": false,
+      "trait": "A"
     },
     {
-      "id": 5,
-      "trait": "C",
-      "direction": "+",
-      "text": "새로운 방법을 시도하고 실험하는 것을 좋아한다"
+      "id": "SS5",
+      "text": "계획을 세우고 단계별로 대응한다",
+      "reverse": false,
+      "trait": "P"
     },
     {
-      "id": 6,
-      "trait": "S",
-      "direction": "+",
-      "text": "명확한 지침과 절차가 있을 때 일하기 쉽다"
+      "id": "SS6",
+      "text": "누군가에게 위로받고 공감받고 싶다",
+      "reverse": false,
+      "trait": "S"
     },
     {
-      "id": 7,
-      "trait": "L",
-      "direction": "+",
-      "text": "마감 압박 속에서 더 집중이 잘 된다"
+      "id": "SS7",
+      "text": "영화, 게임, 쇼핑으로 기분 전환한다",
+      "reverse": false,
+      "trait": "E"
     },
     {
-      "id": 8,
-      "trait": "C",
-      "direction": "+",
-      "text": "여러 사람과 협업하면 에너지가 생긴다"
-    },
-    {
-      "id": 9,
-      "trait": "I",
-      "direction": "+",
-      "text": "업무 계획을 세우고 체계적으로 진행하는 것을 선호한다"
-    },
-    {
-      "id": 10,
-      "trait": "S",
-      "direction": "+",
-      "text": "동료들의 갈등을 중재하는 역할을 맡곤 한다"
+      "id": "SS8",
+      "text": "스트레스 상황 자체를 회피한다",
+      "reverse": false,
+      "trait": "A"
     }
   ],
   "descriptions": {
-    "I": {
-      "name": "독립형 Independent",
-      "emoji": "🎯",
-      "high": "혼자 집중해서 깊이 있는 작업을 할 때 최고의 성과를 냅니다.",
-      "low": "혼자보다는 팀과 함께할 때 더 잘 일합니다.",
-      "advice": "집중 시간을 확보하고 정기 체크인으로 고립을 방지하세요."
-    },
-    "C": {
-      "name": "협업형 Collaborative",
-      "emoji": "🤝",
-      "high": "팀과 함께 브레인스토밍하고 아이디어를 주고받을 때 빛을 발합니다.",
-      "low": "협업보다는 혼자 또는 소수와 일하는 것을 선호합니다.",
-      "advice": "정기 팀 미팅과 워크샵에 참여하세요."
-    },
-    "L": {
-      "name": "리더형 Leadership",
-      "emoji": "👑",
-      "high": "프로젝트를 주도하고 팀을 이끄는 것에 강점이 있습니다.",
-      "low": "리더보다는 팔로워 역할이 편합니다.",
-      "advice": "작은 프로젝트부터 리더십을 연습하세요."
+    "P": {
+      "label": "문제 해결형 (Problem-focused)",
+      "emoji": "🛠️",
+      "high": "스트레스의 원인을 직접 해결하려 합니다. 계획을 세우고, 행동하며, 적극적으로 상황을 변화시킵니다.",
+      "low": "문제 해결보다는 감정 조절이나 회피를 선호합니다.",
+      "tips": [
+        "강점: 효과적 문제 해결, 통제감",
+        "주의: 해결 불가능한 스트레스에는 무력",
+        "개선: 받아들임도 때로는 필요"
+      ]
     },
     "S": {
-      "name": "지원형 Supportive",
-      "emoji": "🛟",
-      "high": "동료를 돕고 지원하는 역할에서 만족감을 느낍니다.",
-      "low": "지원보다는 주도하거나 독립적으로 일하는 것을 선호합니다.",
-      "advice": "감정 노동 관리와 자기 돌봄이 중요합니다."
+      "label": "사회적 지지형 (Social Support)",
+      "emoji": "🤗",
+      "high": "힘들 때 사람들에게 의지합니다. 대화하고, 공감받고, 조언을 구하며 스트레스를 해소합니다.",
+      "low": "혼자 해결하는 것을 선호합니다.",
+      "tips": [
+        "강점: 정서적 안정, 관계 강화",
+        "주의: 과도한 의존",
+        "개선: 혼자만의 회복 시간도 필요"
+      ]
+    },
+    "E": {
+      "label": "정서 완화형 (Emotion-focused)",
+      "emoji": "🎨",
+      "high": "기분 전환과 감정 조절에 집중합니다. 운동, 취미, 명상 등으로 마음을 다스립니다.",
+      "low": "감정보다는 문제 해결에 집중합니다.",
+      "tips": [
+        "강점: 감정 조절, 회복력",
+        "주의: 문제 방치 가능성",
+        "개선: 근본 원인도 함께 다루기"
+      ]
+    },
+    "A": {
+      "label": "회피형 (Avoidant)",
+      "emoji": "🙈",
+      "high": "스트레스 상황을 피하고 미룹니다. 생각하지 않으려 하고, 부인하거나 잊으려 합니다.",
+      "low": "스트레스를 정면으로 대면합니다.",
+      "tips": [
+        "원인: 압도감, 대처 능력 부족",
+        "위험: 문제 악화, 만성 스트레스",
+        "개선: 작은 단계부터 직면하기, 전문가 도움"
+      ]
     }
+  },
+  "traitNames": {
+    "P": "문제 해결형",
+    "S": "사회적 지지형",
+    "E": "정서 완화형",
+    "A": "회피형"
+  },
+  "amazonKeywords": {
+    "P": "문제해결 자기계발",
+    "S": "공감 소통 관계",
+    "E": "명상 마음챙김 힐링",
+    "A": "불안 극복 심리치료"
+  },
+  "guide": {
+    "ipipId": "Custom-StressStyle-8",
+    "purpose": "당신의 스트레스 대처 방식을 파악하여 더 건강한 스트레스 관리 전략을 찾도록 돕습니다.",
+    "instruction": "힘들거나 스트레스 받을 때의 평소 행동을 떠올리며 답하세요.",
+    "interpretation": "4가지 유형(문제 해결형, 사회적 지지형, 정서 완화형, 회피형) 중 가장 높은 점수가 당신의 주된 대처 방식입니다. 상황에 맞게 여러 방식을 활용하는 것이 좋습니다."
   }
 }

@@ -7,57 +7,154 @@
     "lastUpdated": "2026-01-19"
   },
   "ui": {
-    "testName": "MONEYMIND Test",
-    "description": "Psychological assessment",
-    "security": "🔒 Secure: No data stored",
-    "processing": "Analyzing...",
-    "reportTitle": "My MONEYMIND Profile",
-    "recommendTitle": "💡 Tips for You",
+    "testName": "お金に対する態度",
+    "description": "あなたの金銭的態度を発見",
+    "security": "🔒 安全：データ保存なし",
+    "processing": "データ分析中...",
+    "reportTitle": "私のお金プロフィール",
+    "recommendTitle": "💰 건강한 재무 습관을 위한 조언",
     "actions": {
-      "viewAmazon": "📚 View Books",
-      "saveImg": "💾 Save Image",
-      "retest": "🔄 Retake",
-      "qrNote": "Share via QR"
+      "viewAmazon": "📚 おすすめの本を見る",
+      "saveImg": "💾 画像として保存",
+      "retest": "🔄 再テスト",
+      "qrNote": "친구와 비교해보세요!"
     },
     "viral": {
-      "viralTitle": "What's your moneymind?",
-      "viralSub": "Discover now!"
+      "viralTitle": "あなたのお金に対する考え方は？",
+      "viralSub": "今すぐテストを始めましょう！"
     },
     "labels": [
-      "Strongly Disagree",
-      "Disagree",
-      "Neutral",
-      "Agree",
-      "Strongly Agree"
+      "全く違う",
+      "違う",
+      "どちらでもない",
+      "そう思う",
+      "強くそう思う"
     ]
   },
   "items": [
     {
-      "id": "MONEYMIND1",
-      "text": "Sample question 1 for moneymind",
+      "id": "MM1",
+      "text": "매달 일정 금액을 저축하는 것이 최우선이다",
       "reverse": false,
-      "trait": "A"
+      "trait": "S"
+    },
+    {
+      "id": "MM2",
+      "text": "돈은 불리기 위해 투자해야 한다고 생각한다",
+      "reverse": false,
+      "trait": "I"
+    },
+    {
+      "id": "MM3",
+      "text": "좋은 경험과 물건을 위해 돈을 쓰는 것이 중요하다",
+      "reverse": false,
+      "trait": "C"
+    },
+    {
+      "id": "MM4",
+      "text": "돈을 쓸 때마다 죄책감을 느낀다",
+      "reverse": false,
+      "trait": "W"
+    },
+    {
+      "id": "MM5",
+      "text": "비상금과 노후 자금을 미리 준비한다",
+      "reverse": false,
+      "trait": "S"
+    },
+    {
+      "id": "MM6",
+      "text": "주식, 부동산 등 투자 공부를 한다",
+      "reverse": false,
+      "trait": "I"
+    },
+    {
+      "id": "MM7",
+      "text": "현재의 행복을 위해 돈을 쓰는 것이 당연하다",
+      "reverse": false,
+      "trait": "C"
+    },
+    {
+      "id": "MM8",
+      "text": "돈 이야기를 하는 것이 불편하다",
+      "reverse": false,
+      "trait": "W"
+    },
+    {
+      "id": "MM9",
+      "text": "가계부를 쓰고 예산을 관리한다",
+      "reverse": false,
+      "trait": "S"
+    },
+    {
+      "id": "MM10",
+      "text": "위험을 감수하더라도 높은 수익을 추구한다",
+      "reverse": false,
+      "trait": "I"
     }
   ],
   "descriptions": {
-    "A": {
-      "label": "Type A",
-      "emoji": "🎯",
-      "high": "High score description",
-      "low": "Low score description",
-      "tips": "Practical advice"
+    "S": {
+      "label": "저축형 (Saver)",
+      "emoji": "🐷",
+      "high": "안정과 보안을 중시합니다. 미래를 위해 꾸준히 저축하고, 충동구매를 피하며, 계획적으로 돈을 관리합니다.",
+      "low": "저축보다는 투자나 소비에 적극적입니다.",
+      "tips": [
+        "강점: 재무 안정성, 위기 대응력",
+        "주의: 과도한 절약으로 삶의 질 저하",
+        "개선: 자신을 위한 합리적 소비도 필요"
+      ]
+    },
+    "I": {
+      "label": "투자형 (Investor)",
+      "emoji": "📈",
+      "high": "돈을 불리는 것에 관심이 많습니다. 주식, 부동산, 사업 등 투자 기회를 찾고, 적극적으로 재테크를 공부합니다.",
+      "low": "투자보다는 저축이나 소비를 선호합니다.",
+      "tips": [
+        "강점: 자산 증식, 금융 지식",
+        "주의: 과도한 위험 감수",
+        "개선: 분산 투자와 리스크 관리"
+      ]
+    },
+    "C": {
+      "label": "소비형 (Consumer)",
+      "emoji": "🛍️",
+      "high": "현재의 행복과 경험을 중시합니다. 좋은 물건, 여행, 취미에 돈을 쓰는 것을 즐깁니다. \"욜로(YOLO)\" 성향입니다.",
+      "low": "소비보다는 저축이나 투자를 우선합니다.",
+      "tips": [
+        "강점: 삶의 만족도, 경험 축적",
+        "주의: 과소비와 빚",
+        "개선: 50/30/20 법칙(필수/소비/저축)"
+      ]
+    },
+    "W": {
+      "label": "걱정형 (Worrier)",
+      "emoji": "😰",
+      "high": "돈에 대한 불안감이 큽니다. 쓸 때마다 죄책감을 느끼고, 돈 이야기를 피하며, 재정 상황을 확인하는 것조차 두렵습니다.",
+      "low": "돈에 대해 편안하고 실용적인 태도를 가지고 있습니다.",
+      "tips": [
+        "원인: 어린 시절 경험, 재정 불안",
+        "개선: 재무 상담, 금융 교육",
+        "전략: 자동 저축/투자로 심리적 부담 감소"
+      ]
     }
   },
   "traitNames": {
-    "A": "Type A"
+    "S": "저축형",
+    "I": "투자형",
+    "C": "소비형",
+    "W": "걱정형"
   },
   "amazonKeywords": {
-    "A": "moneymind psychology"
+    "S": "절약 저축 재무관리",
+    "I": "투자 주식 부동산",
+    "C": "미니멀라이즘 합리적소비",
+    "W": "돈의 심리학 재테크"
   },
   "guide": {
-    "ipipId": "Custom-moneymind-10",
-    "purpose": "Assess your moneymind",
-    "instruction": "Answer honestly",
-    "interpretation": "Results show your traits"
+    "ipipId": "Custom-MoneyMindset-10",
+    "purpose": "당신의 돈에 대한 태도와 행동 패턴을 파악하여 건강한 재무 습관을 만들도록 돕습니다.",
+    "instruction": "평소 돈을 다루는 방식과 생각을 떠올리며 솔직하게 답하세요.",
+    "interpretation": "4가지 유형(저축형, 투자형, 소비형, 걱정형) 중 가장 높은 점수가 당신의 주된 금전 태도입니다. 균형 잡힌 재무 관리가 중요합니다."
   }
 }

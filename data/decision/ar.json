@@ -8,57 +8,142 @@
     "direction": "rtl"
   },
   "ui": {
-    "testName": "DECISION Test",
-    "description": "Psychological assessment",
-    "security": "🔒 Secure: No data stored",
-    "processing": "Analyzing...",
-    "reportTitle": "My DECISION Profile",
-    "recommendTitle": "💡 Tips for You",
+    "testName": "أسلوب اتخاذ القرار",
+    "description": "فهم نهج اتخاذ القرار الخاص بك",
+    "security": "🔒 آمن: لا يتم تخزين البيانات",
+    "processing": "تحليل البيانات...",
+    "reportTitle": "أسلوب قراري",
+    "recommendTitle": "💡 더 나은 결정을 위한 팁",
     "actions": {
-      "viewAmazon": "📚 View Books",
-      "saveImg": "💾 Save Image",
-      "retest": "🔄 Retake",
-      "qrNote": "Share via QR"
+      "viewAmazon": "📚 عرض الكتب الموصى بها",
+      "saveImg": "💾 حفظ كصورة",
+      "retest": "🔄 إعادة الاختبار",
+      "qrNote": "친구와 비교해보세요!"
     },
     "viral": {
-      "viralTitle": "What's your decision?",
-      "viralSub": "Discover now!"
+      "viralTitle": "كيف تتخذ القرارات؟",
+      "viralSub": "ابدأ الاختبار الآن!"
     },
     "labels": [
-      "Strongly Disagree",
-      "Disagree",
-      "Neutral",
-      "Agree",
-      "Strongly Agree"
+      "غير موافق بشدة",
+      "غير موافق",
+      "محايد",
+      "موافق",
+      "موافق بشدة"
     ]
   },
   "items": [
     {
-      "id": "DECISION1",
-      "text": "Sample question 1 for decision",
+      "id": "DS1",
+      "text": "중요한 결정을 내릴 때 데이터와 사실을 먼저 본다",
       "reverse": false,
       "trait": "A"
+    },
+    {
+      "id": "DS2",
+      "text": "직감이 \"이거다!\" 하면 바로 결정한다",
+      "reverse": false,
+      "trait": "I"
+    },
+    {
+      "id": "DS3",
+      "text": "다른 사람의 의견을 듣고 참고한다",
+      "reverse": false,
+      "trait": "D"
+    },
+    {
+      "id": "DS4",
+      "text": "결정을 미루고 최대한 늦게 선택한다",
+      "reverse": false,
+      "trait": "V"
+    },
+    {
+      "id": "DS5",
+      "text": "장단점 리스트를 작성해서 비교한다",
+      "reverse": false,
+      "trait": "A"
+    },
+    {
+      "id": "DS6",
+      "text": "결정 후에도 계속 고민하고 후회한다",
+      "reverse": false,
+      "trait": "V"
+    },
+    {
+      "id": "DS7",
+      "text": "경험과 감각으로 빠르게 판단한다",
+      "reverse": false,
+      "trait": "I"
+    },
+    {
+      "id": "DS8",
+      "text": "전문가나 주변 사람에게 조언을 구한다",
+      "reverse": false,
+      "trait": "D"
     }
   ],
   "descriptions": {
     "A": {
-      "label": "Type A",
-      "emoji": "🎯",
-      "high": "High score description",
-      "low": "Low score description",
-      "tips": "Practical advice"
+      "label": "분석형 (Analytical)",
+      "emoji": "📊",
+      "high": "데이터, 논리, 사실에 기반해 신중하게 결정합니다. 장단점을 꼼꼼히 따져보고, 객관적 근거를 중시합니다.",
+      "low": "분석보다는 직감이나 타인의 조언에 의존합니다.",
+      "tips": [
+        "강점: 실수가 적고 합리적인 선택",
+        "주의: 과도한 분석으로 결정 지연",
+        "개선: 80% 정보에서 결정하는 연습"
+      ]
+    },
+    "I": {
+      "label": "직관형 (Intuitive)",
+      "emoji": "⚡",
+      "high": "첫 느낌과 본능을 믿습니다. 빠르게 결정하고 행동으로 옮기며, 경험과 감각을 중시합니다.",
+      "low": "직감보다는 신중한 분석을 선호합니다.",
+      "tips": [
+        "강점: 빠른 결정, 기회 포착",
+        "주의: 충동적 선택 가능성",
+        "개선: 중요한 결정은 한 번 더 검토"
+      ]
+    },
+    "D": {
+      "label": "의존형 (Dependent)",
+      "emoji": "🤔",
+      "high": "다른 사람의 의견과 조언을 중요하게 여깁니다. 전문가나 경험자의 말을 참고하며, 혼자 결정하는 것을 부담스러워합니다.",
+      "low": "타인의 의견보다 스스로 결정하는 것을 선호합니다.",
+      "tips": [
+        "강점: 다양한 시각 반영",
+        "주의: 자기 의견 상실 위험",
+        "개선: 조언은 참고, 최종 결정은 스스로"
+      ]
+    },
+    "V": {
+      "label": "회피형 (Avoidant)",
+      "emoji": "😰",
+      "high": "결정을 미루고 선택을 피하려 합니다. 결정 후에도 계속 고민하고, 후회하는 경향이 있습니다.",
+      "low": "결정을 빠르게 내리고 앞으로 나아갑니다.",
+      "tips": [
+        "원인: 완벽주의, 실패 두려움",
+        "개선: 작은 결정부터 빠르게 연습",
+        "전략: 2분 규칙(2분 안에 결정 가능하면 즉시)"
+      ]
     }
   },
   "traitNames": {
-    "A": "Type A"
+    "A": "분석형",
+    "I": "직관형",
+    "D": "의존형",
+    "V": "회피형"
   },
   "amazonKeywords": {
-    "A": "decision psychology"
+    "A": "의사결정 논리적 사고",
+    "I": "직관 빠른 선택",
+    "D": "상담 코칭 자문",
+    "V": "우유부단 극복 자기계발"
   },
   "guide": {
-    "ipipId": "Custom-decision-10",
-    "purpose": "Assess your decision",
-    "instruction": "Answer honestly",
-    "interpretation": "Results show your traits"
+    "ipipId": "Custom-DecisionStyle-8",
+    "purpose": "당신의 의사결정 패턴을 파악하여 더 나은 선택을 할 수 있도록 돕습니다.",
+    "instruction": "평소 중요한 결정(진로, 구매, 관계 등)을 내릴 때의 모습을 떠올리며 답하세요.",
+    "interpretation": "4가지 스타일(분석형, 직관형, 의존형, 회피형) 중 가장 높은 점수가 당신의 주된 의사결정 방식입니다. 여러 스타일이 섞여 있을 수도 있습니다."
   }
 }

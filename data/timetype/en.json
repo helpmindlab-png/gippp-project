@@ -7,21 +7,21 @@
     "lastUpdated": "2026-01-19"
   },
   "ui": {
-    "testName": "TIMETYPE Test",
-    "description": "Psychological assessment",
+    "testName": "Time Management Type",
+    "description": "Discover your approach to time",
     "security": "🔒 Secure: No data stored",
-    "processing": "Analyzing...",
-    "reportTitle": "My TIMETYPE Profile",
-    "recommendTitle": "💡 Tips for You",
+    "processing": "Analyzing data...",
+    "reportTitle": "My Time Style",
+    "recommendTitle": "⏰ 생산성을 높이는 팁",
     "actions": {
-      "viewAmazon": "📚 View Books",
-      "saveImg": "💾 Save Image",
-      "retest": "🔄 Retake",
-      "qrNote": "Share via QR"
+      "viewAmazon": "📚 View Recommended Books",
+      "saveImg": "💾 Save as Image",
+      "retest": "🔄 Retake Test",
+      "qrNote": "동료와 비교해보세요!"
     },
     "viral": {
-      "viralTitle": "What's your timetype?",
-      "viralSub": "Discover now!"
+      "viralTitle": "How Do You Manage Time?",
+      "viralSub": "Start the test now!"
     },
     "labels": [
       "Strongly Disagree",
@@ -33,31 +33,116 @@
   },
   "items": [
     {
-      "id": "TIMETYPE1",
-      "text": "Sample question 1 for timetype",
+      "id": "TT1",
+      "text": "매일 아침 오늘 할 일 리스트를 작성한다",
       "reverse": false,
-      "trait": "A"
+      "trait": "P"
+    },
+    {
+      "id": "TT2",
+      "text": "마감 직전이 되어야 집중이 잘 된다",
+      "reverse": false,
+      "trait": "R"
+    },
+    {
+      "id": "TT3",
+      "text": "여러 일을 동시에 처리하는 것이 편하다",
+      "reverse": false,
+      "trait": "M"
+    },
+    {
+      "id": "TT4",
+      "text": "시간이 늘 부족하고 정신없이 지나간다",
+      "reverse": false,
+      "trait": "C"
+    },
+    {
+      "id": "TT5",
+      "text": "일정을 미리 계획하고 지키려 노력한다",
+      "reverse": false,
+      "trait": "P"
+    },
+    {
+      "id": "TT6",
+      "text": "급하지 않은 일은 계속 미루게 된다",
+      "reverse": false,
+      "trait": "R"
+    },
+    {
+      "id": "TT7",
+      "text": "메신저, SNS를 보다가 시간이 훅 지나간다",
+      "reverse": false,
+      "trait": "C"
+    },
+    {
+      "id": "TT8",
+      "text": "한 번에 하나씩 집중해서 끝내는 편이다",
+      "reverse": false,
+      "trait": "M"
     }
   ],
   "descriptions": {
-    "A": {
-      "label": "Type A",
-      "emoji": "🎯",
-      "high": "High score description",
-      "low": "Low score description",
-      "tips": "Practical advice"
+    "P": {
+      "label": "계획형 (Planner)",
+      "emoji": "📅",
+      "high": "시간을 체계적으로 관리합니다. 할 일 목록을 작성하고, 우선순위를 정하며, 계획대로 실행합니다.",
+      "low": "계획보다는 즉흥적으로 움직입니다.",
+      "tips": [
+        "강점: 생산성, 마감 준수",
+        "주의: 과도한 계획으로 유연성 상실",
+        "추천 도구: Notion, Todoist, Google Calendar"
+      ]
+    },
+    "R": {
+      "label": "막판 스퍼트형 (Reactive)",
+      "emoji": "⚡",
+      "high": "마감이 임박해야 집중력이 폭발합니다. 압박 속에서 최고의 성과를 냅니다. 미루기의 달인입니다.",
+      "low": "미리 준비하고 여유 있게 진행합니다.",
+      "tips": [
+        "강점: 압박 속 집중력",
+        "위험: 만성 스트레스, 품질 저하",
+        "개선: 인위적 마감 설정(실제보다 이틀 앞당기기)"
+      ]
+    },
+    "M": {
+      "label": "멀티태스킹형 (Multitasker)",
+      "emoji": "🎭",
+      "high": "여러 일을 동시에 처리합니다. 빠르게 전환하며 다양한 업무를 병행합니다.",
+      "low": "한 가지에 집중하는 것을 선호합니다.",
+      "tips": [
+        "주의: 멀티태스킹은 생산성 ↓ (연구 결과)",
+        "개선: 시간 블록킹(25분 집중 + 5분 휴식)",
+        "추천: 포모도로 기법"
+      ]
+    },
+    "C": {
+      "label": "혼돈형 (Chaotic)",
+      "emoji": "🌪️",
+      "high": "시간이 어떻게 가는지 모릅니다. 산만하고, 우선순위가 명확하지 않으며, 늘 시간에 쫓깁니다.",
+      "low": "시간을 효율적으로 관리합니다.",
+      "tips": [
+        "원인: 과부하, ADHD 경향, 명확한 목표 부재",
+        "개선: 시간 추적(RescueTime), 디지털 디톡스",
+        "전략: 하루 3가지만 집중하기"
+      ]
     }
   },
   "traitNames": {
-    "A": "Type A"
+    "P": "계획형",
+    "R": "막판 스퍼트형",
+    "M": "멀티태스킹형",
+    "C": "혼돈형"
   },
   "amazonKeywords": {
-    "A": "timetype psychology"
+    "P": "시간관리 생산성",
+    "R": "미루기 극복 습관",
+    "M": "딥워크 집중력",
+    "C": "정리정돈 미니멀리즘"
   },
   "guide": {
-    "ipipId": "Custom-timetype-10",
-    "purpose": "Assess your timetype",
-    "instruction": "Answer honestly",
-    "interpretation": "Results show your traits"
+    "ipipId": "Custom-TimeType-8",
+    "purpose": "당신의 시간 사용 패턴을 파악하여 생산성을 높이고 삶의 균형을 찾도록 돕습니다.",
+    "instruction": "평소 일이나 공부를 할 때의 시간 관리 방식을 떠올리며 답하세요.",
+    "interpretation": "4가지 유형(계획형, 막판 스퍼트형, 멀티태스킹형, 혼돈형) 중 가장 높은 점수가 당신의 시간 관리 스타일입니다."
   }
 }

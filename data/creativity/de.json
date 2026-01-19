@@ -7,57 +7,154 @@
     "lastUpdated": "2026-01-19"
   },
   "ui": {
-    "testName": "CREATIVITY Test",
-    "description": "Psychological assessment",
-    "security": "🔒 Secure: No data stored",
-    "processing": "Analyzing...",
-    "reportTitle": "My CREATIVITY Profile",
-    "recommendTitle": "💡 Tips for You",
+    "testName": "Kreativitätstyp",
+    "description": "Entdecken Sie Ihren kreativen Ansatz",
+    "security": "🔒 Sicher: Keine Datenspeicherung",
+    "processing": "Daten werden analysiert...",
+    "reportTitle": "Mein Kreativitätsprofil",
+    "recommendTitle": "💡 창의력을 키우는 방법",
     "actions": {
-      "viewAmazon": "📚 View Books",
-      "saveImg": "💾 Save Image",
-      "retest": "🔄 Retake",
-      "qrNote": "Share via QR"
+      "viewAmazon": "📚 Empfohlene Bücher ansehen",
+      "saveImg": "💾 Als Bild speichern",
+      "retest": "🔄 Test wiederholen",
+      "qrNote": "친구와 비교해보세요!"
     },
     "viral": {
-      "viralTitle": "What's your creativity?",
-      "viralSub": "Discover now!"
+      "viralTitle": "Was ist Ihr Kreativitätstyp?",
+      "viralSub": "Starten Sie jetzt den Test!"
     },
     "labels": [
-      "Strongly Disagree",
-      "Disagree",
+      "Stimme überhaupt nicht zu",
+      "Stimme nicht zu",
       "Neutral",
-      "Agree",
-      "Strongly Agree"
+      "Stimme zu",
+      "Stimme voll zu"
     ]
   },
   "items": [
     {
-      "id": "CREATIVITY1",
-      "text": "Sample question 1 for creativity",
+      "id": "CR1",
+      "text": "새로운 아이디어가 끊임없이 떠오른다",
+      "reverse": false,
+      "trait": "I"
+    },
+    {
+      "id": "CR2",
+      "text": "예술, 음악, 디자인에 끌린다",
+      "reverse": false,
+      "trait": "A"
+    },
+    {
+      "id": "CR3",
+      "text": "실험하고 시도해보는 것을 즐긴다",
+      "reverse": false,
+      "trait": "E"
+    },
+    {
+      "id": "CR4",
+      "text": "기존 것을 개선하고 최적화하는 것을 좋아한다",
+      "reverse": false,
+      "trait": "O"
+    },
+    {
+      "id": "CR5",
+      "text": "전혀 다른 분야를 연결해서 생각한다",
+      "reverse": false,
+      "trait": "I"
+    },
+    {
+      "id": "CR6",
+      "text": "감정과 감성을 표현하는 것이 중요하다",
+      "reverse": false,
+      "trait": "A"
+    },
+    {
+      "id": "CR7",
+      "text": "실패를 두려워하지 않고 계속 도전한다",
+      "reverse": false,
+      "trait": "E"
+    },
+    {
+      "id": "CR8",
+      "text": "체계적으로 분석하고 논리적으로 개선한다",
+      "reverse": false,
+      "trait": "O"
+    },
+    {
+      "id": "CR9",
+      "text": "\"왜?\"라는 질문을 자주 던진다",
+      "reverse": false,
+      "trait": "I"
+    },
+    {
+      "id": "CR10",
+      "text": "아름다움과 조화를 추구한다",
       "reverse": false,
       "trait": "A"
     }
   ],
   "descriptions": {
+    "I": {
+      "label": "혁신가형 (Innovator)",
+      "emoji": "🚀",
+      "high": "완전히 새로운 아이디어를 창조합니다. 기존 틀을 깨고, 다른 분야를 융합하며, 혁명적인 변화를 만듭니다.",
+      "low": "점진적 개선을 선호합니다.",
+      "tips": [
+        "강점: 획기적 아이디어, 비전",
+        "주의: 실행력 부족, 너무 앞서감",
+        "활용: 스타트업, R&D, 전략 기획"
+      ]
+    },
     "A": {
-      "label": "Type A",
-      "emoji": "🎯",
-      "high": "High score description",
-      "low": "Low score description",
-      "tips": "Practical advice"
+      "label": "예술가형 (Artist)",
+      "emoji": "🎨",
+      "high": "감성과 미적 표현에 뛰어납니다. 색, 형태, 소리, 이야기로 창의성을 발휘합니다.",
+      "low": "논리와 분석을 더 중시합니다.",
+      "tips": [
+        "강점: 감성 표현, 심미성",
+        "주의: 상업성 간과",
+        "활용: 디자인, 콘텐츠, 브랜딩"
+      ]
+    },
+    "E": {
+      "label": "실험가형 (Experimenter)",
+      "emoji": "🔬",
+      "high": "끊임없이 시도하고 테스트합니다. 실패를 학습으로 여기며, 반복 실험을 통해 답을 찾습니다.",
+      "low": "검증된 방법을 선호합니다.",
+      "tips": [
+        "강점: 빠른 학습, 적응력",
+        "주의: 일관성 부족",
+        "활용: 프로토타이핑, A/B 테스트, 린 스타트업"
+      ]
+    },
+    "O": {
+      "label": "최적화형 (Optimizer)",
+      "emoji": "⚙️",
+      "high": "기존 것을 분석하고 개선합니다. 효율을 높이고, 문제를 해결하며, 완벽을 추구합니다.",
+      "low": "개선보다는 새로운 창조를 선호합니다.",
+      "tips": [
+        "강점: 실용성, 완성도",
+        "주의: 혁신 부족",
+        "활용: 프로세스 개선, 품질 관리, 운영 최적화"
+      ]
     }
   },
   "traitNames": {
-    "A": "Type A"
+    "I": "혁신가형",
+    "A": "예술가형",
+    "E": "실험가형",
+    "O": "최적화형"
   },
   "amazonKeywords": {
-    "A": "creativity psychology"
+    "I": "창의적 사고 혁신",
+    "A": "예술 디자인 미학",
+    "E": "실험 프로토타입 린스타트업",
+    "O": "최적화 효율 시스템"
   },
   "guide": {
-    "ipipId": "Custom-creativity-10",
-    "purpose": "Assess your creativity",
-    "instruction": "Answer honestly",
-    "interpretation": "Results show your traits"
+    "ipipId": "Custom-Creativity-10",
+    "purpose": "당신의 창의성 발현 방식을 파악하여 강점을 극대화하고 적합한 분야를 찾도록 돕습니다.",
+    "instruction": "문제를 해결하거나 새로운 것을 만들 때의 당신의 방식을 떠올리며 답하세요.",
+    "interpretation": "4가지 유형(혁신가형, 예술가형, 실험가형, 최적화형) 중 가장 높은 점수가 당신의 주된 창의성 스타일입니다. 여러 유형을 결합하면 시너지가 생깁니다."
   }
 }

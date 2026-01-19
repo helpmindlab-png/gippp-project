@@ -7,57 +7,142 @@
     "lastUpdated": "2026-01-19"
   },
   "ui": {
-    "testName": "STRESSSTYLE Test",
-    "description": "Psychological assessment",
-    "security": "🔒 Secure: No data stored",
-    "processing": "Analyzing...",
-    "reportTitle": "My STRESSSTYLE Profile",
-    "recommendTitle": "💡 Tips for You",
+    "testName": "Stressbewältigungsstil",
+    "description": "Verstehen Sie, wie Sie mit Stress umgehen",
+    "security": "🔒 Sicher: Keine Datenspeicherung",
+    "processing": "Daten werden analysiert...",
+    "reportTitle": "Mein Stressmanagement",
+    "recommendTitle": "🧘 건강한 스트레스 관리 팁",
     "actions": {
-      "viewAmazon": "📚 View Books",
-      "saveImg": "💾 Save Image",
-      "retest": "🔄 Retake",
-      "qrNote": "Share via QR"
+      "viewAmazon": "📚 Empfohlene Bücher ansehen",
+      "saveImg": "💾 Als Bild speichern",
+      "retest": "🔄 Test wiederholen",
+      "qrNote": "친구와 공유하기"
     },
     "viral": {
-      "viralTitle": "What's your stressstyle?",
-      "viralSub": "Discover now!"
+      "viralTitle": "Wie gehen Sie mit Stress um?",
+      "viralSub": "Starten Sie jetzt den Test!"
     },
     "labels": [
-      "Strongly Disagree",
-      "Disagree",
+      "Stimme überhaupt nicht zu",
+      "Stimme nicht zu",
       "Neutral",
-      "Agree",
-      "Strongly Agree"
+      "Stimme zu",
+      "Stimme voll zu"
     ]
   },
   "items": [
     {
-      "id": "STRESSSTYLE1",
-      "text": "Sample question 1 for stressstyle",
+      "id": "SS1",
+      "text": "스트레스 받으면 즉시 문제를 해결하려 한다",
+      "reverse": false,
+      "trait": "P"
+    },
+    {
+      "id": "SS2",
+      "text": "힘들 때 친구에게 전화해서 이야기한다",
+      "reverse": false,
+      "trait": "S"
+    },
+    {
+      "id": "SS3",
+      "text": "운동이나 취미로 스트레스를 푼다",
+      "reverse": false,
+      "trait": "E"
+    },
+    {
+      "id": "SS4",
+      "text": "스트레스를 피하고 나중에 생각한다",
+      "reverse": false,
+      "trait": "A"
+    },
+    {
+      "id": "SS5",
+      "text": "계획을 세우고 단계별로 대응한다",
+      "reverse": false,
+      "trait": "P"
+    },
+    {
+      "id": "SS6",
+      "text": "누군가에게 위로받고 공감받고 싶다",
+      "reverse": false,
+      "trait": "S"
+    },
+    {
+      "id": "SS7",
+      "text": "영화, 게임, 쇼핑으로 기분 전환한다",
+      "reverse": false,
+      "trait": "E"
+    },
+    {
+      "id": "SS8",
+      "text": "스트레스 상황 자체를 회피한다",
       "reverse": false,
       "trait": "A"
     }
   ],
   "descriptions": {
+    "P": {
+      "label": "문제 해결형 (Problem-focused)",
+      "emoji": "🛠️",
+      "high": "스트레스의 원인을 직접 해결하려 합니다. 계획을 세우고, 행동하며, 적극적으로 상황을 변화시킵니다.",
+      "low": "문제 해결보다는 감정 조절이나 회피를 선호합니다.",
+      "tips": [
+        "강점: 효과적 문제 해결, 통제감",
+        "주의: 해결 불가능한 스트레스에는 무력",
+        "개선: 받아들임도 때로는 필요"
+      ]
+    },
+    "S": {
+      "label": "사회적 지지형 (Social Support)",
+      "emoji": "🤗",
+      "high": "힘들 때 사람들에게 의지합니다. 대화하고, 공감받고, 조언을 구하며 스트레스를 해소합니다.",
+      "low": "혼자 해결하는 것을 선호합니다.",
+      "tips": [
+        "강점: 정서적 안정, 관계 강화",
+        "주의: 과도한 의존",
+        "개선: 혼자만의 회복 시간도 필요"
+      ]
+    },
+    "E": {
+      "label": "정서 완화형 (Emotion-focused)",
+      "emoji": "🎨",
+      "high": "기분 전환과 감정 조절에 집중합니다. 운동, 취미, 명상 등으로 마음을 다스립니다.",
+      "low": "감정보다는 문제 해결에 집중합니다.",
+      "tips": [
+        "강점: 감정 조절, 회복력",
+        "주의: 문제 방치 가능성",
+        "개선: 근본 원인도 함께 다루기"
+      ]
+    },
     "A": {
-      "label": "Type A",
-      "emoji": "🎯",
-      "high": "High score description",
-      "low": "Low score description",
-      "tips": "Practical advice"
+      "label": "회피형 (Avoidant)",
+      "emoji": "🙈",
+      "high": "스트레스 상황을 피하고 미룹니다. 생각하지 않으려 하고, 부인하거나 잊으려 합니다.",
+      "low": "스트레스를 정면으로 대면합니다.",
+      "tips": [
+        "원인: 압도감, 대처 능력 부족",
+        "위험: 문제 악화, 만성 스트레스",
+        "개선: 작은 단계부터 직면하기, 전문가 도움"
+      ]
     }
   },
   "traitNames": {
-    "A": "Type A"
+    "P": "문제 해결형",
+    "S": "사회적 지지형",
+    "E": "정서 완화형",
+    "A": "회피형"
   },
   "amazonKeywords": {
-    "A": "stressstyle psychology"
+    "P": "문제해결 자기계발",
+    "S": "공감 소통 관계",
+    "E": "명상 마음챙김 힐링",
+    "A": "불안 극복 심리치료"
   },
   "guide": {
-    "ipipId": "Custom-stressstyle-10",
-    "purpose": "Assess your stressstyle",
-    "instruction": "Answer honestly",
-    "interpretation": "Results show your traits"
+    "ipipId": "Custom-StressStyle-8",
+    "purpose": "당신의 스트레스 대처 방식을 파악하여 더 건강한 스트레스 관리 전략을 찾도록 돕습니다.",
+    "instruction": "힘들거나 스트레스 받을 때의 평소 행동을 떠올리며 답하세요.",
+    "interpretation": "4가지 유형(문제 해결형, 사회적 지지형, 정서 완화형, 회피형) 중 가장 높은 점수가 당신의 주된 대처 방식입니다. 상황에 맞게 여러 방식을 활용하는 것이 좋습니다."
   }
 }

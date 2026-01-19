@@ -7,57 +7,155 @@
     "lastUpdated": "2026-01-19"
   },
   "ui": {
-    "testName": "LOVELANG Test",
-    "description": "Psychological assessment",
-    "security": "🔒 Secure: No data stored",
-    "processing": "Analyzing...",
-    "reportTitle": "My LOVELANG Profile",
-    "recommendTitle": "💡 Tips for You",
+    "testName": "Teste de Linguagens do Amor",
+    "description": "Descubra como você dá e recebe amor",
+    "security": "🔒 Seguro: Sem armazenamento de dados",
+    "processing": "Analisando dados...",
+    "reportTitle": "Minhas Linguagens do Amor",
+    "recommendTitle": "💕 Conselhos para Relacionamentos",
     "actions": {
-      "viewAmazon": "📚 View Books",
-      "saveImg": "💾 Save Image",
-      "retest": "🔄 Retake",
-      "qrNote": "Share via QR"
+      "viewAmazon": "📚 Livros de Relacionamentos",
+      "saveImg": "💾 Salvar como Imagem",
+      "retest": "🔄 Refazer Teste",
+      "qrNote": "Faça o teste com seu parceiro!"
     },
     "viral": {
-      "viralTitle": "What's your lovelang?",
-      "viralSub": "Discover now!"
+      "viralTitle": "Qual é a sua linguagem do amor?",
+      "viralSub": "Comece o teste agora!"
     },
     "labels": [
-      "Strongly Disagree",
-      "Disagree",
-      "Neutral",
-      "Agree",
-      "Strongly Agree"
+      "Discordo totalmente",
+      "Discordo",
+      "Neutro",
+      "Concordo",
+      "Concordo totalmente"
     ]
   },
   "items": [
     {
-      "id": "LOVELANG1",
-      "text": "Sample question 1 for lovelang",
+      "id": "LL1",
+      "text": "\"사랑해\"라는 말을 자주 듣고 싶다",
+      "reverse": false,
+      "trait": "W"
+    },
+    {
+      "id": "LL2",
+      "text": "함께 시간을 보내는 것이 가장 소중하다",
+      "reverse": false,
+      "trait": "Q"
+    },
+    {
+      "id": "LL3",
+      "text": "작은 선물이라도 받으면 정말 기쁘다",
+      "reverse": false,
+      "trait": "G"
+    },
+    {
+      "id": "LL4",
+      "text": "집안일을 도와주면 사랑받는다고 느낀다",
+      "reverse": false,
+      "trait": "A"
+    },
+    {
+      "id": "LL5",
+      "text": "포옹이나 스킨십이 중요하다",
+      "reverse": false,
+      "trait": "T"
+    },
+    {
+      "id": "LL6",
+      "text": "격려와 칭찬의 말이 큰 힘이 된다",
+      "reverse": false,
+      "trait": "W"
+    },
+    {
+      "id": "LL7",
+      "text": "깊은 대화를 나눌 때 가장 친밀감을 느낀다",
+      "reverse": false,
+      "trait": "Q"
+    },
+    {
+      "id": "LL8",
+      "text": "실질적인 도움을 주는 것이 진짜 사랑이다",
       "reverse": false,
       "trait": "A"
     }
   ],
   "descriptions": {
+    "W": {
+      "label": "긍정의 언어 (Words of Affirmation)",
+      "emoji": "💬",
+      "high": "\"사랑해\", \"잘했어\", \"고마워\" 같은 말이 당신에게 큰 힘이 됩니다. 진심 어린 칭찬과 격려가 사랑의 증거입니다.",
+      "low": "말보다는 행동이나 다른 방식으로 사랑을 느낍니다.",
+      "tips": [
+        "파트너에게: 자주 긍정적인 말을 해주세요",
+        "문자나 메모로 사랑 표현하기",
+        "비판보다는 칭찬과 격려로 소통"
+      ]
+    },
+    "Q": {
+      "label": "집중된 시간 (Quality Time)",
+      "emoji": "⏰",
+      "high": "함께 시간을 보내고, 온전히 집중해주는 것이 가장 큰 사랑입니다. 핸드폰 내려놓고 나만 바라봐주길 원합니다.",
+      "low": "함께 있는 시간보다 다른 방식의 사랑 표현을 선호합니다.",
+      "tips": [
+        "파트너에게: 주말에 둘만의 시간 확보",
+        "데이트 시 핸드폰 잠시 꺼두기",
+        "일상적 대화보다 깊은 대화 나누기"
+      ]
+    },
+    "G": {
+      "label": "선물 (Receiving Gifts)",
+      "emoji": "🎁",
+      "high": "선물은 사랑의 시각적 상징입니다. 가격보다는 마음과 정성이 담긴 선물을 소중히 여깁니다.",
+      "low": "선물보다는 다른 방식으로 사랑을 느낍니다.",
+      "tips": [
+        "파트너에게: 기념일뿐 아니라 평소에도 작은 선물",
+        "손편지나 DIY 선물도 좋음",
+        "여행지에서 가져온 기념품"
+      ]
+    },
     "A": {
-      "label": "Type A",
-      "emoji": "🎯",
-      "high": "High score description",
-      "low": "Low score description",
-      "tips": "Practical advice"
+      "label": "봉사 (Acts of Service)",
+      "emoji": "🤝",
+      "high": "\"내가 할게\"가 가장 감동적인 말입니다. 설거지, 청소, 심부름 등 실질적 도움이 사랑의 표현입니다.",
+      "low": "봉사보다는 다른 방식으로 사랑을 느낍니다.",
+      "tips": [
+        "파트너에게: 부탁하기 전에 먼저 도와주기",
+        "힘든 일을 대신 해주기",
+        "\"뭘 도와줄까?\" 자주 물어보기"
+      ]
+    },
+    "T": {
+      "label": "신체 접촉 (Physical Touch)",
+      "emoji": "🤗",
+      "high": "포옹, 손잡기, 어깨 토닥임 등 스킨십이 안정감과 사랑을 전달합니다. 가까이 있고 싶어 합니다.",
+      "low": "스킨십보다는 다른 방식으로 사랑을 느낍니다.",
+      "tips": [
+        "파트너에게: 자주 안아주고 손잡기",
+        "소파에서 함께 기대기",
+        "힘들 때 어깨 토닥이기"
+      ]
     }
   },
   "traitNames": {
-    "A": "Type A"
+    "W": "긍정의 언어",
+    "Q": "집중된 시간",
+    "G": "선물",
+    "A": "봉사",
+    "T": "신체 접촉"
   },
   "amazonKeywords": {
-    "A": "lovelang psychology"
+    "W": "사랑의 언어 게리 채프먼",
+    "Q": "연애 심리학 관계",
+    "G": "커플 선물 아이디어",
+    "A": "부부관계 소통",
+    "T": "애착 이론 심리학"
   },
   "guide": {
-    "ipipId": "Custom-lovelang-10",
-    "purpose": "Assess your lovelang",
-    "instruction": "Answer honestly",
-    "interpretation": "Results show your traits"
+    "ipipId": "Chapman-5LoveLanguages",
+    "purpose": "게리 채프먼의 '5가지 사랑의 언어' 이론을 기반으로 당신이 사랑을 주고받는 선호 방식을 파악합니다.",
+    "instruction": "각 문항을 읽고 연애 관계에서의 당신의 모습과 가장 일치하는 답을 선택하세요.",
+    "interpretation": "5가지 사랑의 언어(긍정의 언어, 집중된 시간, 선물, 봉사, 신체 접촉) 중 가장 높은 점수가 당신의 주된 사랑 언어입니다. 파트너와 함께 테스트하고 결과를 공유해보세요!"
   }
 }

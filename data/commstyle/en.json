@@ -7,21 +7,21 @@
     "lastUpdated": "2026-01-19"
   },
   "ui": {
-    "testName": "COMMSTYLE Test",
-    "description": "Psychological assessment",
+    "testName": "Communication Style",
+    "description": "Discover your communication patterns",
     "security": "🔒 Secure: No data stored",
-    "processing": "Analyzing...",
-    "reportTitle": "My COMMSTYLE Profile",
-    "recommendTitle": "💡 Tips for You",
+    "processing": "Analyzing data...",
+    "reportTitle": "My Communication Profile",
+    "recommendTitle": "💬 더 나은 소통을 위한 팁",
     "actions": {
-      "viewAmazon": "📚 View Books",
-      "saveImg": "💾 Save Image",
-      "retest": "🔄 Retake",
-      "qrNote": "Share via QR"
+      "viewAmazon": "📚 View Recommended Books",
+      "saveImg": "💾 Save as Image",
+      "retest": "🔄 Retake Test",
+      "qrNote": "동료와 함께 테스트해보세요!"
     },
     "viral": {
-      "viralTitle": "What's your commstyle?",
-      "viralSub": "Discover now!"
+      "viralTitle": "What's Your Communication Style?",
+      "viralSub": "Start the test now!"
     },
     "labels": [
       "Strongly Disagree",
@@ -33,31 +33,128 @@
   },
   "items": [
     {
-      "id": "COMMSTYLE1",
-      "text": "Sample question 1 for commstyle",
+      "id": "CS1",
+      "text": "회의에서 주로 말을 주도하고 방향을 제시한다",
       "reverse": false,
-      "trait": "A"
+      "trait": "D"
+    },
+    {
+      "id": "CS2",
+      "text": "이야기할 때 감정과 감탄을 많이 표현한다",
+      "reverse": false,
+      "trait": "I"
+    },
+    {
+      "id": "CS3",
+      "text": "다른 사람의 말을 끝까지 경청하고 공감한다",
+      "reverse": false,
+      "trait": "S"
+    },
+    {
+      "id": "CS4",
+      "text": "논리적이고 정확한 표현을 중요하게 여긴다",
+      "reverse": false,
+      "trait": "C"
+    },
+    {
+      "id": "CS5",
+      "text": "빠르게 결론을 내고 다음으로 넘어가고 싶어한다",
+      "reverse": false,
+      "trait": "D"
+    },
+    {
+      "id": "CS6",
+      "text": "농담과 유머로 분위기를 밝게 만든다",
+      "reverse": false,
+      "trait": "I"
+    },
+    {
+      "id": "CS7",
+      "text": "갈등을 피하고 조화를 유지하려 노력한다",
+      "reverse": false,
+      "trait": "S"
+    },
+    {
+      "id": "CS8",
+      "text": "대화 전 충분한 준비와 자료를 갖춘다",
+      "reverse": false,
+      "trait": "C"
+    },
+    {
+      "id": "CS9",
+      "text": "솔직하고 직설적으로 의견을 말한다",
+      "reverse": false,
+      "trait": "D"
+    },
+    {
+      "id": "CS10",
+      "text": "세부사항보다는 전체 그림과 비전을 이야기한다",
+      "reverse": false,
+      "trait": "I"
     }
   ],
   "descriptions": {
-    "A": {
-      "label": "Type A",
+    "D": {
+      "label": "주도형 (Dominance)",
       "emoji": "🎯",
-      "high": "High score description",
-      "low": "Low score description",
-      "tips": "Practical advice"
+      "high": "직설적이고 결과 중심적입니다. 빠르게 결정하고 주도하며, 효율을 중시합니다. 강한 추진력이 있습니다.",
+      "low": "주도보다는 협력과 지원을 선호합니다.",
+      "tips": [
+        "강점: 리더십, 빠른 결정",
+        "주의: 다른 사람 압도 가능",
+        "개선: 경청하고 다른 의견 존중하기"
+      ]
+    },
+    "I": {
+      "label": "표현형 (Influence)",
+      "emoji": "🌟",
+      "high": "열정적이고 사교적입니다. 감정 표현이 풍부하고, 사람들을 설득하고 동기부여하는 데 능숙합니다.",
+      "low": "표현보다는 조용히 듣고 분석하는 편입니다.",
+      "tips": [
+        "강점: 친화력, 설득력",
+        "주의: 세부사항 놓칠 수 있음",
+        "개선: 약속 지키기, 구체적 계획 세우기"
+      ]
+    },
+    "S": {
+      "label": "우호형 (Steadiness)",
+      "emoji": "🤝",
+      "high": "인내심이 많고 협조적입니다. 안정을 추구하고, 다른 사람의 말을 잘 들어줍니다. 팀의 조화를 중시합니다.",
+      "low": "우호보다는 주도나 분석을 선호합니다.",
+      "tips": [
+        "강점: 신뢰, 팀워크",
+        "주의: 자기 의견 표현 부족",
+        "개선: 필요할 때 단호하게 거절하기"
+      ]
+    },
+    "C": {
+      "label": "분석형 (Conscientiousness)",
+      "emoji": "📋",
+      "high": "정확하고 체계적입니다. 논리와 데이터를 중시하며, 신중하게 말을 선택합니다. 완벽을 추구합니다.",
+      "low": "분석보다는 감정과 직관으로 소통합니다.",
+      "tips": [
+        "강점: 정확성, 깊이",
+        "주의: 느린 의사결정, 감정 표현 부족",
+        "개선: 때로는 80% 정보로 결정하기"
+      ]
     }
   },
   "traitNames": {
-    "A": "Type A"
+    "D": "주도형",
+    "I": "표현형",
+    "S": "우호형",
+    "C": "분석형"
   },
   "amazonKeywords": {
-    "A": "commstyle psychology"
+    "D": "리더십 커뮤니케이션",
+    "I": "설득의 심리학",
+    "S": "경청 공감 소통",
+    "C": "논리적 사고 분석"
   },
   "guide": {
-    "ipipId": "Custom-commstyle-10",
-    "purpose": "Assess your commstyle",
-    "instruction": "Answer honestly",
-    "interpretation": "Results show your traits"
+    "ipipId": "DISC-Communication-10",
+    "purpose": "DISC 모델 기반으로 당신의 소통 스타일을 파악하여 대인관계와 업무 효율을 높입니다.",
+    "instruction": "직장이나 일상에서의 소통 방식을 떠올리며 솔직하게 답하세요.",
+    "interpretation": "4가지 유형(주도형, 표현형, 우호형, 분석형) 중 가장 높은 점수가 당신의 주된 소통 스타일입니다. 혼합형일 수도 있습니다."
   }
 }

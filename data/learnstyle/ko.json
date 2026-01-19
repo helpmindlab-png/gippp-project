@@ -1,134 +1,152 @@
 {
+  "meta": {
+    "id": "learnstyle",
+    "version": "1.0",
+    "author": "GIPPP Research Team",
+    "language": "ko",
+    "lastUpdated": "2026-01-19"
+  },
   "ui": {
-    "desc": "LEARNSTYLE 테스트",
-    "security": "🔒 보안: 데이터 저장 안 함",
-    "testNames": {},
-    "processing": "데이터 분석 중...",
-    "reportTitle": "나의 LEARNSTYLE 프로필",
-    "recommendTitle": "💡 당신을 위한 커리어 조언",
-    "viewAmazon": "추천 도서 보기",
-    "saveImg": "📸 리포트 이미지 저장",
-    "retest": "다시 하기",
-    "qrNote": "스캔하여 결과 소장하기",
-    "viralTitle": "당신의 업무 스타일은?",
-    "viralSub": "QR코드를 스캔하여 테스트 시작",
+    "testName": "학습 유형 테스트",
+    "description": "당신에게 맞는 공부 방법을 찾아보세요",
+    "security": "🔒 안전: 데이터 저장 안 함",
+    "processing": "분석 중...",
+    "reportTitle": "나의 학습 스타일",
+    "recommendTitle": "📚 효과적인 학습 전략",
+    "actions": {
+      "viewAmazon": "📚 학습법 관련 도서",
+      "saveImg": "💾 결과 저장",
+      "retest": "🔄 다시 하기",
+      "qrNote": "친구와 비교해보세요!"
+    },
+    "viral": {
+      "viralTitle": "당신의 학습 스타일은?",
+      "viralSub": "나에게 맞는 공부법 찾기!"
+    },
     "labels": [
       "전혀 아니다",
       "아니다",
       "보통이다",
       "그렇다",
       "매우 그렇다"
-    ],
-    "amazonKeywords": {
-      "I": "productivity",
-      "C": "teamwork",
-      "L": "leadership",
-      "S": "support"
-    }
-  },
-  "guide": {
-    "ipipId": "Custom-WorkStyle-10",
-    "purpose": "이 테스트는 당신의 업무 스타일과 협업 선호도를 파악하여 최적의 근무 환경과 역할을 찾도록 돕습니다.",
-    "instruction": "각 문항을 읽고 평소 업무 상황에서의 당신의 모습과 가장 일치하는 답을 선택하세요.",
-    "interpretation": "결과는 4가지 업무 스타일(독립형, 협업형, 리더형, 지원형) 점수로 표시됩니다.",
-    "startBtn": "분석 시작하기"
-  },
-  "traitNames": {
-    "I": "독립형",
-    "C": "협업형",
-    "L": "리더형",
-    "S": "지원형"
+    ]
   },
   "items": [
     {
-      "id": 1,
-      "trait": "I",
-      "direction": "+",
-      "text": "혼자 집중해서 일할 때 가장 생산적이다"
+      "id": "LS1",
+      "text": "그림, 도표, 영상을 보면서 배우는 게 좋다",
+      "reverse": false,
+      "trait": "V"
     },
     {
-      "id": 2,
-      "trait": "C",
-      "direction": "+",
-      "text": "팀 회의에서 아이디어를 제안하는 것을 즐긴다"
+      "id": "LS2",
+      "text": "강의를 듣거나 오디오북으로 공부하는 게 편하다",
+      "reverse": false,
+      "trait": "A"
     },
     {
-      "id": 3,
-      "trait": "L",
-      "direction": "+",
-      "text": "프로젝트를 주도하고 방향을 제시하는 것이 자연스럽다"
+      "id": "LS3",
+      "text": "직접 해보면서 배우는 것이 가장 효과적이다",
+      "reverse": false,
+      "trait": "K"
     },
     {
-      "id": 4,
-      "trait": "S",
-      "direction": "+",
-      "text": "동료를 돕고 지원하는 역할이 편하다"
+      "id": "LS4",
+      "text": "책을 읽고 요약 노트를 작성하는 걸 좋아한다",
+      "reverse": false,
+      "trait": "R"
     },
     {
-      "id": 5,
-      "trait": "C",
-      "direction": "+",
-      "text": "새로운 방법을 시도하고 실험하는 것을 좋아한다"
+      "id": "LS5",
+      "text": "색깔 펜으로 형광펜 치고 마인드맵을 그린다",
+      "reverse": false,
+      "trait": "V"
     },
     {
-      "id": 6,
-      "trait": "S",
-      "direction": "+",
-      "text": "명확한 지침과 절차가 있을 때 일하기 쉽다"
+      "id": "LS6",
+      "text": "스터디 그룹에서 토론하며 배우는 게 좋다",
+      "reverse": false,
+      "trait": "A"
     },
     {
-      "id": 7,
-      "trait": "L",
-      "direction": "+",
-      "text": "마감 압박 속에서 더 집중이 잘 된다"
+      "id": "LS7",
+      "text": "실험이나 프로젝트로 직접 만들어보는 걸 선호한다",
+      "reverse": false,
+      "trait": "K"
     },
     {
-      "id": 8,
-      "trait": "C",
-      "direction": "+",
-      "text": "여러 사람과 협업하면 에너지가 생긴다"
-    },
-    {
-      "id": 9,
-      "trait": "I",
-      "direction": "+",
-      "text": "업무 계획을 세우고 체계적으로 진행하는 것을 선호한다"
-    },
-    {
-      "id": 10,
-      "trait": "S",
-      "direction": "+",
-      "text": "동료들의 갈등을 중재하는 역할을 맡곤 한다"
+      "id": "LS8",
+      "text": "조용히 혼자 책 읽고 정리하는 시간이 필요하다",
+      "reverse": false,
+      "trait": "R"
     }
   ],
   "descriptions": {
-    "I": {
-      "name": "독립형 Independent",
-      "emoji": "🎯",
-      "high": "혼자 집중해서 깊이 있는 작업을 할 때 최고의 성과를 냅니다.",
-      "low": "혼자보다는 팀과 함께할 때 더 잘 일합니다.",
-      "advice": "집중 시간을 확보하고 정기 체크인으로 고립을 방지하세요."
+    "V": {
+      "label": "시각형 (Visual)",
+      "emoji": "👁️",
+      "high": "그림, 도표, 색상, 영상 등 시각 자료로 배울 때 가장 효과적입니다. 정보를 이미지화하여 기억합니다.",
+      "low": "시각보다는 다른 감각으로 배우는 것을 선호합니다.",
+      "tips": [
+        "추천 학습법: 마인드맵, 플래시카드, 유튜브 강의",
+        "색깔 펜으로 중요 부분 표시하기",
+        "다이어그램과 차트 활용",
+        "시각화 앱: Notion, Canva, Miro"
+      ]
     },
-    "C": {
-      "name": "협업형 Collaborative",
-      "emoji": "🤝",
-      "high": "팀과 함께 브레인스토밍하고 아이디어를 주고받을 때 빛을 발합니다.",
-      "low": "협업보다는 혼자 또는 소수와 일하는 것을 선호합니다.",
-      "advice": "정기 팀 미팅과 워크샵에 참여하세요."
+    "A": {
+      "label": "청각형 (Auditory)",
+      "emoji": "👂",
+      "high": "듣고 말하면서 배우는 것을 선호합니다. 강의, 토론, 오디오북이 효과적입니다.",
+      "low": "청각보다는 다른 방식으로 배우는 것을 선호합니다.",
+      "tips": [
+        "추천 학습법: 오디오북, 팟캐스트, 강의 녹음",
+        "소리 내어 읽고 설명하기",
+        "스터디 그룹 토론 참여",
+        "음성 메모 앱 활용"
+      ]
     },
-    "L": {
-      "name": "리더형 Leadership",
-      "emoji": "👑",
-      "high": "프로젝트를 주도하고 팀을 이끄는 것에 강점이 있습니다.",
-      "low": "리더보다는 팔로워 역할이 편합니다.",
-      "advice": "작은 프로젝트부터 리더십을 연습하세요."
+    "K": {
+      "label": "체감각형 (Kinesthetic)",
+      "emoji": "🤸",
+      "high": "직접 만지고 움직이며 배우는 것을 좋아합니다. 실습, 실험, 프로젝트 학습이 효과적입니다.",
+      "low": "체감각보다는 다른 방식으로 배우는 것을 선호합니다.",
+      "tips": [
+        "추천 학습법: 프로젝트 기반 학습, 실험, DIY",
+        "걸으면서 공부하기",
+        "손으로 직접 메모하기",
+        "실전 연습과 시뮬레이션"
+      ]
     },
-    "S": {
-      "name": "지원형 Supportive",
-      "emoji": "🛟",
-      "high": "동료를 돕고 지원하는 역할에서 만족감을 느낍니다.",
-      "low": "지원보다는 주도하거나 독립적으로 일하는 것을 선호합니다.",
-      "advice": "감정 노동 관리와 자기 돌봄이 중요합니다."
+    "R": {
+      "label": "독서-쓰기형 (Reading/Writing)",
+      "emoji": "📖",
+      "high": "책을 읽고 요약하며 배우는 것을 선호합니다. 텍스트 자료와 필기가 중요합니다.",
+      "low": "독서보다는 다른 방식으로 배우는 것을 선호합니다.",
+      "tips": [
+        "추천 학습법: 교과서, 논문, 블로그 읽기",
+        "요약 노트 작성하기",
+        "에세이와 리포트 쓰기",
+        "Notion, Obsidian으로 정리"
+      ]
     }
+  },
+  "traitNames": {
+    "V": "시각형",
+    "A": "청각형",
+    "K": "체감각형",
+    "R": "독서-쓰기형"
+  },
+  "amazonKeywords": {
+    "V": "비주얼씽킹 마인드맵",
+    "A": "오디오북 청취 학습",
+    "K": "실습 프로젝트 학습",
+    "R": "독서법 노트 필기"
+  },
+  "guide": {
+    "ipipId": "VARK-LearningStyle-8",
+    "purpose": "VARK 모델 기반으로 당신에게 가장 효과적인 학습 방식을 찾아줍니다.",
+    "instruction": "평소 공부하거나 새로운 것을 배울 때의 선호도를 생각하며 답하세요.",
+    "interpretation": "4가지 유형(시각형, 청각형, 체감각형, 독서-쓰기형) 중 가장 높은 점수가 당신의 주된 학습 스타일입니다. 여러 유형이 섞여 있을 수도 있습니다."
   }
 }
