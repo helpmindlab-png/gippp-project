@@ -1,41 +1,104 @@
 {
   "ui": {
-    "desc": "The most sensible way to read your inner self",
-    "security": "🔒 Security: No data stored",
-    "testNames": { "ocean": "True Self (Big 5)", "dark": "Villain Finder", "loc": "Success Mindset", "resilience": "Resilience Test", "trust": "Social Trust" },
-    "processing": "Analyzing behavioral patterns...",
-    "reportTitle": "Villain Profiling Report",
+    "desc": "Unveiling your hidden strategic nature",
+    "security": "🔒 Secure: No data stored",
+    "testNames": {
+      "ocean": "True Self Analysis",
+      "dark": "Inner Villain Detector",
+      "loc": "Success Mindset",
+      "resilience": "Mental Steel Test",
+      "trust": "Relationship Thermometer"
+    },
+    "processing": "Analyzing your profile...",
+    "reportTitle": "Dark Triad Profile Report",
     "recommendTitle": "💡 Recommended for You",
     "viewAmazon": "View Products",
     "saveImg": "📸 Save Report Image",
-    "retest": "Retest",
-    "qrNote": "Scan to save your result",
+    "retest": "Take Again",
+    "qrNote": "Scan to save your results",
     "viralTitle": "Curious about your inner villain?",
-    "viralSub": "Scan QR to start profiling",
+    "viralSub": "Scan QR code to start the test",
     "labels": ["Strongly Disagree", "Disagree", "Neutral", "Agree", "Strongly Agree"],
-    "amazonKeywords": { "N": "leadership books", "M": "strategy games", "P": "psychology books" }
+    "amazonKeywords": {
+      "N": "leadership development books",
+      "M": "strategic thinking games",
+      "P": "emotional intelligence psychology"
+    }
   },
   "guide": {
     "ipipId": "IPIP-D3-27",
-    "purpose": "This test measures the 'Dark Triad' of personality traits to analyze your hidden social strategies and instincts.",
-    "instruction": "Please read each statement and select the option that best describes you. Honest answers lead to more accurate profiling.",
-    "interpretation": "The results consist of Narcissism, Machiavellianism, and Psychopathy. These reflect your survival strategies rather than moral judgment.",
+    "purpose": "This assessment measures the 'Dark Triad' personality traits to analyze your hidden social strategies and instincts.",
+    "instruction": "Read each statement and select the option that best matches your usual thoughts. The more honest you are, the more accurate your profile will be.",
+    "interpretation": "Results consist of Narcissism (self-love), Machiavellianism (strategic manipulation), and Psychopathy (emotional detachment). This isn't about good or evil—it's about your survival strategies.",
     "startBtn": "Start Analysis"
   },
-  "traitNames": { "N": "Narcissism", "M": "Machiavellianism", "P": "Psychopathy" },
+  "traitNames": {
+    "N": "Narcissism",
+    "M": "Machiavellianism",
+    "P": "Psychopathy"
+  },
   "items": [
-    { "id": 1, "trait": "N", "direction": "+", "text": "I feel that I am a special person and deserve better treatment than others." },
-    { "id": 2, "trait": "M", "direction": "+", "text": "I can skillfully persuade or manipulate people to achieve my goals." },
-    { "id": 3, "trait": "P", "direction": "+", "text": "I do not feel significant emotional distress when I see the misfortune of others." },
-    { "id": 4, "trait": "N", "direction": "+", "text": "I thoroughly enjoy situations where I receive attention and praise." },
-    { "id": 5, "trait": "M", "direction": "+", "text": "I tend to keep important information to myself and use it at an advantageous moment." },
-    { "id": 6, "trait": "P", "direction": "+", "text": "I feel a thrill rather than fear when doing risky or stimulating things." },
-    { "id": 7, "trait": "N", "direction": "-", "text": "I consider myself an ordinary person and try to act with humility." },
-    { "id": 8, "trait": "M", "direction": "-", "text": "Deceiving someone for personal gain is morally unacceptable to me." }
+    {
+      "id": 1,
+      "trait": "N",
+      "direction": "+",
+      "text": "I feel I am a special person and deserve better treatment than others."
+    },
+    {
+      "id": 2,
+      "trait": "M",
+      "direction": "+",
+      "text": "To achieve my goals, I can skillfully persuade or manipulate people."
+    },
+    {
+      "id": 3,
+      "trait": "P",
+      "direction": "+",
+      "text": "I don't feel emotionally affected when I see others' misfortune or pain."
+    },
+    {
+      "id": 4,
+      "trait": "N",
+      "direction": "+",
+      "text": "I really enjoy being the center of attention and receiving praise from others."
+    },
+    {
+      "id": 5,
+      "trait": "M",
+      "direction": "+",
+      "text": "I tend to keep important information to myself and use it at advantageous moments."
+    },
+    {
+      "id": 6,
+      "trait": "P",
+      "direction": "+",
+      "text": "When doing dangerous or thrilling things, I feel excitement rather than fear."
+    },
+    {
+      "id": 7,
+      "trait": "N",
+      "direction": "-",
+      "text": "I see myself as just an ordinary person and try to act humbly."
+    },
+    {
+      "id": 8,
+      "trait": "M",
+      "direction": "-",
+      "text": "Deceiving someone for personal gain is morally absolutely unacceptable."
+    }
   ],
   "descriptions": {
-    "N": { "high": "High self-confidence and strong leadership, but may be conscious of others' opinions.", "low": "Humble, cooperative, and values the interests of the community." },
-    "M": { "high": "Strategic and goal-oriented achiever with quick situational judgment.", "low": "Values honest, transparent communication and adheres to principles." },
-    "P": { "high": "Maintains composure in crises and demonstrates bold decision-making.", "low": "High empathy and deeply considerate of others' feelings." }
+    "N": {
+      "high": "You have strong confidence and leadership qualities, though you may be overly conscious of others' perceptions.",
+      "low": "You are humble, cooperative, and prioritize the interests of the community."
+    },
+    "M": {
+      "high": "You are quick to assess situations, strategic, and goal-oriented—an ambitious type.",
+      "low": "You value honest and transparent communication and stick to your principles."
+    },
+    "P": {
+      "high": "You maintain composure in crisis situations and demonstrate bold decisiveness.",
+      "low": "You have excellent empathy and carefully consider others' feelings."
+    }
   }
 }

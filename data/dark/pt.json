@@ -1,41 +1,104 @@
 {
   "ui": {
-    "desc": "A forma mais sensata de ler o seu eu interior",
-    "security": "🔒 Segurança: Nenhum dado armazenado",
-    "testNames": { "ocean": "Personalidade", "dark": "Buscador de Vilões", "loc": "Mentalidade", "resilience": "Resiliência", "trust": "Confiança" },
-    "processing": "Analisando seus padrões comportamentais...",
-    "reportTitle": "Relatório de Perfil de Vilão",
-    "recommendTitle": "💡 Recomendado para você",
-    "viewAmazon": "Ver produtos recomendados",
-    "saveImg": "📸 Salvar imagem do relatório",
-    "retest": "Reiniciar teste",
-    "qrNote": "Escaneie para salvar",
-    "viralTitle": "Curioso sobre o seu vilão interior?",
-    "viralSub": "Escaneie o QR para começar",
+    "desc": "Revelando sua natureza oculta",
+    "security": "🔒 Seguro: Nenhum dado armazenado",
+    "testNames": {
+      "ocean": "Análise do Eu Verdadeiro",
+      "dark": "Detector do Vilão Interior",
+      "loc": "Mentalidade de Sucesso",
+      "resilience": "Teste de Mentalidade de Aço",
+      "trust": "Termômetro de Relacionamentos"
+    },
+    "processing": "Analisando dados...",
+    "reportTitle": "Relatório da Tríade Sombria",
+    "recommendTitle": "💡 Recomendado para Você",
+    "viewAmazon": "Ver Produtos",
+    "saveImg": "📸 Salvar Imagem do Relatório",
+    "retest": "Fazer Novamente",
+    "qrNote": "Escaneie para salvar resultados",
+    "viralTitle": "Curioso sobre seu vilão interior?",
+    "viralSub": "Escaneie o código QR para começar o teste",
     "labels": ["Discordo totalmente", "Discordo", "Neutro", "Concordo", "Concordo totalmente"],
-    "amazonKeywords": { "N": "leadership books", "M": "strategy games", "P": "psychology books" }
+    "amazonKeywords": {
+      "N": "livros de liderança",
+      "M": "jogos de estratégia",
+      "P": "livros de psicologia"
+    }
   },
   "guide": {
     "ipipId": "IPIP-D3-27",
-    "purpose": "Este teste mede a 'Tríada Sombria' da personalidade para analisar as suas estratégias sociais e instintos ocultos.",
-    "instruction": "Leia cada afirmação e selecione a opção que melhor o descreve. Respostas honestas levam a um perfil mais preciso.",
-    "interpretation": "Os resultados consistem em Narcisismo, Maquiavelismo e Psicopatia. Estes indicadores refletem as suas estratégias de sobrevivência, não um julgamento moral.",
+    "purpose": "Esta avaliação mede os traços de personalidade da 'Tríade Sombria' para analisar suas estratégias sociais ocultas e instintos.",
+    "instruction": "Leia cada afirmação e selecione a opção que melhor corresponde aos seus pensamentos habituais. Quanto mais honesto você for, mais preciso será seu perfil.",
+    "interpretation": "Os resultados consistem em Narcisismo (amor próprio), Maquiavelismo (manipulação estratégica) e Psicopatia (desapego emocional). Não é sobre bem ou mal - é sobre suas estratégias de sobrevivência.",
     "startBtn": "Iniciar Análise"
   },
-  "traitNames": { "N": "Narcisismo", "M": "Maquiavelismo", "P": "Psicopatia" },
+  "traitNames": {
+    "N": "Narcisismo",
+    "M": "Maquiavelismo",
+    "P": "Psicopatia"
+  },
   "items": [
-    { "id": 1, "trait": "N", "direction": "+", "text": "Sinto que sou uma pessoa especial e mereço um tratamento melhor do que os outros." },
-    { "id": 2, "trait": "M", "direction": "+", "text": "Consigo persuadir ou manipular habilmente as pessoas para atingir os meus objetivos." },
-    { "id": 3, "trait": "P", "direction": "+", "text": "Não sinto um sofrimento emocional significativo ao ver a infelicidade ou a dor de outros." },
-    { "id": 4, "trait": "N", "direction": "+", "text": "Gosto imenso de situações em que recebo atenção e elogios." },
-    { "id": 5, "trait": "M", "direction": "+", "text": "Tendo a guardar informações importantes para mim e a usá-las no momento oportuno." },
-    { "id": 6, "trait": "P", "direction": "+", "text": "Sinto excitação em vez de medo ao fazer coisas arriscadas ou estimulantes." },
-    { "id": 7, "trait": "N", "direction": "-", "text": "Considero-me uma pessoa comum e tento agir com humildade." },
-    { "id": 8, "trait": "M", "direction": "-", "text": "Enganar alguém para benefício pessoal é moralmente inaceitável para mim." }
+    {
+      "id": 1,
+      "trait": "N",
+      "direction": "+",
+      "text": "Sinto que sou uma pessoa especial e mereço melhor tratamento que os outros."
+    },
+    {
+      "id": 2,
+      "trait": "M",
+      "direction": "+",
+      "text": "Para alcançar meus objetivos, posso persuadir ou manipular pessoas habilmente."
+    },
+    {
+      "id": 3,
+      "trait": "P",
+      "direction": "+",
+      "text": "Não me sinto emocionalmente afetado quando vejo o infortúnio ou a dor de outros."
+    },
+    {
+      "id": 4,
+      "trait": "N",
+      "direction": "+",
+      "text": "Realmente gosto de ser o centro das atenções e receber elogios dos outros."
+    },
+    {
+      "id": 5,
+      "trait": "M",
+      "direction": "+",
+      "text": "Tendo a guardar informações importantes para mim e usá-las em momentos vantajosos."
+    },
+    {
+      "id": 6,
+      "trait": "P",
+      "direction": "+",
+      "text": "Ao fazer coisas perigosas ou emocionantes, sinto empolgação em vez de medo."
+    },
+    {
+      "id": 7,
+      "trait": "N",
+      "direction": "-",
+      "text": "Vejo-me como apenas uma pessoa comum e tento agir com humildade."
+    },
+    {
+      "id": 8,
+      "trait": "M",
+      "direction": "-",
+      "text": "Enganar alguém para obter ganho pessoal é moralmente absolutamente inaceitável."
+    }
   ],
   "descriptions": {
-    "N": { "high": "Você tem alta autoconfiança e liderança forte, mas pode estar excessivamente consciente da opinião alheia.", "low": "Você é humilde, cooperativo e valoriza os interesses da comunidade." },
-    "M": { "high": "Você é um estrategista focado em objetivos com rápido julgamento situacional.", "low": "Você valoriza a comunicação honesta e transparente e adere a princípios." },
-    "P": { "high": "Você mantém a compostura em crises e demonstra audaz capacidade de decisão.", "low": "Você tem alta empatia e é profundamente atencioso com os sentimentos dos outros." }
+    "N": {
+      "high": "Você tem forte confiança e qualidades de liderança, embora possa estar excessivamente consciente das percepções dos outros.",
+      "low": "Você é humilde, cooperativo e prioriza os interesses da comunidade."
+    },
+    "M": {
+      "high": "Você é rápido para avaliar situações, estratégico e orientado a objetivos - um tipo ambicioso.",
+      "low": "Você valoriza comunicação honesta e transparente e se atém aos seus princípios."
+    },
+    "P": {
+      "high": "Você mantém a compostura em situações de crise e demonstra decisão ousada.",
+      "low": "Você tem excelente empatia e considera cuidadosamente os sentimentos dos outros."
+    }
   }
 }
