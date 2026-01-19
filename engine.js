@@ -9,11 +9,24 @@ const GIPPP = {
     },
 
     tests: [
-        { id: 'ocean', emoji: '🧬', name: { ko: '나의 본캐 분석', en: 'Big Five' } },
+        // 기존 5개 툴
+        { id: 'ocean', emoji: '🧬', name: { ko: '나의 본캐 분석', en: 'Big Five Personality' } },
         { id: 'dark', emoji: '🎭', name: { ko: '내 안의 빌런 찾기', en: 'Dark Triad' } },
         { id: 'loc', emoji: '💰', name: { ko: '성공 마인드셋', en: 'Locus of Control' } },
-        { id: 'resilience', emoji: '🛡️', name: { ko: '강철 멘탈 테스트', en: 'Resilience' } },
-        { id: 'trust', emoji: '🤝', name: { ko: '인간관계 온도계', en: 'Social Trust' } }
+        { id: 'resilience', emoji: '🛡️', name: { ko: '강철 멘탈 테스트', en: 'Resilience Test' } },
+        { id: 'trust', emoji: '🤝', name: { ko: '인간관계 온도계', en: 'Social Trust' } },
+        
+        // 신규 10개 툴
+        { id: 'workstyle', emoji: '💼', name: { ko: '업무 스타일 분석', en: 'Work Style Assessment' } },
+        { id: 'lovelang', emoji: '💕', name: { ko: '사랑의 언어 테스트', en: 'Love Languages' } },
+        { id: 'decision', emoji: '🎯', name: { ko: '의사결정 스타일', en: 'Decision Style' } },
+        { id: 'commstyle', emoji: '💬', name: { ko: '소통 유형 테스트', en: 'Communication Style' } },
+        { id: 'learnstyle', emoji: '📚', name: { ko: '학습 스타일', en: 'Learning Style' } },
+        { id: 'moneymind', emoji: '💸', name: { ko: '금전 태도', en: 'Money Mindset' } },
+        { id: 'stressstyle', emoji: '😌', name: { ko: '스트레스 대처', en: 'Stress Coping' } },
+        { id: 'timetype', emoji: '⏰', name: { ko: '시간 관리 유형', en: 'Time Management' } },
+        { id: 'creativity', emoji: '🎨', name: { ko: '창의성 유형', en: 'Creativity Type' } },
+        { id: 'socialstyle', emoji: '🌟', name: { ko: '사교 스타일', en: 'Social Style' } }
     ],
 
     langs: ['ko', 'en', 'ja', 'zh', 'es', 'ar', 'de', 'pt', 'ru', 'vi'],
