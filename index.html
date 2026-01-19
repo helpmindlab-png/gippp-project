@@ -1,36 +1,37 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>GIPPP | Global Insight Profiler</title>
     <link rel="stylesheet" href="style.css">  <!-- 상대 경로 -->
-    <!-- AdSense 또는 GA4 스크립트는 여기서 동의 후 로드 -->
-    <!-- 예: <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX"></script> -->
+    <!-- AdSense 또는 GA4 스크립트는 여기서 동의 후 동적으로 로드 -->
     <style>
-        body { visibility: hidden; }
-        .loading { 
-            position: fixed; inset: 0; 
-            background: #f4f7f9; 
-            display: flex; align-items: center; justify-content: center; 
-            font-size: 1.2rem; color: #3498db; z-index: 9999; 
+        /* 기존 스타일과 충돌을 최소화하기 위한 최소 로더 스타일 */
+        .loading {
+            position: fixed; inset: 0;
+            background: #f4f7f9;
+            display:flex; align-items:center; justify-content:center;
+            font-size:1.1rem; color:#3498db; z-index:9999;
         }
+        .loading.hidden { display:none; }
     </style>
 </head>
 <body>
-    <div class="loading">로딩 중... 잠시만 기다려주세요</div>
+    <div class="loading" id="site-loader" role="status" aria-live="polite">로딩 중... 잠시만 기다려주세요</div>
 
-    <div id="app">
-        <nav class="global-nav">
+    <div id="app" style="visibility:visible;">
+        <nav class="global-nav" role="navigation">
             <div class="nav-content">
-                <div class="live-status"><span class="dot"></span> Global Live Profiling</div>
+                <div class="live-status" aria-hidden="false"><span class="dot" aria-hidden="true"></span> Global Live Profiling</div>
                 <div class="lang-picker">
-                    <select id="lang-select"></select>
+                    <label for="lang-select" class="sr-only">언어 선택</label>
+                    <select id="lang-select" aria-label="언어 선택"></select>
                 </div>
             </div>
         </nav>
 
-        <main id="main-content">
+        <main id="main-content" role="main">
             <!-- 대문 섹션 -->
             <section id="welcome-view">
                 <header class="hero-section">
@@ -38,38 +39,50 @@
                     <p id="brand-desc" class="hero-subtitle"></p>
                 </header>
                 <div class="content-wrapper">
-                    <div class="ad-slot top-ad">ADVERTISEMENT</div>
-                    <div id="test-grid" class="test-grid"></div>
+                    <div class="ad-slot top-ad" aria-hidden="true">ADVERTISEMENT</div>
+                    <div id="test-grid" class="test-grid" aria-live="polite" aria-label="테스트 목록"></div>
                 </div>
             </section>
 
             <!-- 테스트 및 결과 섹션 -->
             <section id="test-view" style="display:none;">
                 <div class="test-container">
-                    <div id="progress-bar"><div id="progress-fill"></div></div>
-                    <div id="question-container"></div>
-                    <div id="options-group"></div>
-                    <div id="mid-ad" class="ad-slot mid-ad" style="display:none;">ADVERTISEMENT</div>
+                    <div id="progress-bar" aria-hidden="true"><div id="progress-fill"></div></div>
+                    <div id="question-container" aria-live="polite"></div>
+                    <div id="options-group" class="options-group" role="group" aria-label="응답 옵션"></div>
+                    <div id="mid-ad" class="ad-slot mid-ad" style="display:none;" aria-hidden="true">ADVERTISEMENT</div>
                 </div>
             </section>
         </main>
 
-        <footer class="global-footer">
+        <footer class="global-footer" role="contentinfo">
             <div class="footer-content">
-                <div class="ad-slot bottom-ad">ADVERTISEMENT</div>
+                <div class="ad-slot bottom-ad" aria-hidden="true">ADVERTISEMENT</div>
                 <p>© GIPPP Project | Anonymous & Secure Insight</p>
             </div>
         </footer>
     </div>
 
-    <script src="engine.js"></script>  <!-- 상대 경로 -->
-
+    <!-- 엔진 스크립트 로드: onerror 핸들러 포함 -->
     <script>
-        // 로딩 화면 제거 (JS 완전 로드 후)
-        window.addEventListener('load', () => {
-            document.body.style.visibility = 'visible';
-            document.querySelector('.loading')?.remove();
-        });
+      function handleEngineError(){
+        const loader = document.getElementById('site-loader');
+        if(loader){
+          loader.classList.remove('hidden');
+          loader.textContent = '핵심 스크립트 로드에 실패했습니다. 네트워크 또는 engine.js 파일을 확인해 주세요.';
+        } else {
+          alert('핵심 스크립트 로드 실패: engine.js');
+        }
+      }
+
+      // 로더 타임아웃(네트워크 지연 대비)
+      window.addEventListener('load', () => {
+        const loader = document.getElementById('site-loader');
+        if(loader) loader.classList.add('hidden');
+      });
     </script>
+
+    <script src="engine.js" onerror="handleEngineError()"></script>
+
 </body>
 </html>
