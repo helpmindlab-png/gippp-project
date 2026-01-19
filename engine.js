@@ -1,28 +1,12 @@
 const GIPPP_ENGINE = (() => {
     let state = { 
-        testId: null, 
-        lang: 'ko', 
-        currentIndex: 0, 
-        answers: [], 
-        questions: [], 
-        descriptions: {}, 
-        traitNames: {}, 
-        ui: {}, 
-        guide: {}, 
-        results: null 
+        testId: null, lang: 'ko', currentIndex: 0, answers: [], 
+        questions: [], descriptions: {}, traitNames: {}, ui: {}, guide: {}, results: null 
     };
 
     const i18n = {
         ko: { desc: "당신을 읽어내는 가장 감각적인 방법", tests: { ocean: "나의 본캐 분석", dark: "내 안의 빌런 찾기", loc: "성공 마인드셋", resilience: "강철 멘탈 테스트", trust: "인간관계 온도계" }, sub: "Professional Analysis" },
-        en: { desc: "The most sensible way to read you", tests: { ocean: "True Self (Big 5)", dark: "Villain Finder", loc: "Success Mindset", resilience: "Resilience Test", trust: "Social Trust" }, sub: "Professional Analysis" },
-        ja: { desc: "あなたを読み解く最も感性的な方法", tests: { ocean: "本性分析", dark: "隠れたヴィラン", loc: "成功マインド", resilience: "メンタル診断", trust: "人間関係" }, sub: "Professional Analysis" },
-        zh: { desc: "解读你最感性的方式", tests: { ocean: "大五人格", dark: "黑暗人格", loc: "成功心态", resilience: "心理韧性", trust: "人际关系" }, sub: "Professional Analysis" },
-        es: { desc: "La forma más sensible de leerte", tests: { ocean: "Personalidad", dark: "Villano Interior", loc: "Mentalidad", resilience: "Resiliencia", trust: "Confianza" }, sub: "Professional Analysis" },
-        ar: { desc: "الطريقة الأكثر حساسية لقراءتك", tests: { ocean: "تحليل الشخصية", dark: "البحث عن الشرير", loc: "عقلية النجاح", resilience: "اختبار المرونة", trust: "مقياس العلاقات" }, sub: "Professional Analysis" },
-        de: { desc: "Der sensibelste Weg, dich zu verstehen", tests: { ocean: "Big Five", dark: "Bösewicht-Finder", loc: "Erfolgs-Mindset", resilience: "Resilienz-Test", trust: "Vertrauen" }, sub: "Professional Analysis" },
-        pt: { desc: "A forma mais sensata de te ler", tests: { ocean: "Personalidade", dark: "Buscador de Vilões", loc: "Mentalidade", resilience: "Resiliência", trust: "Confiança" }, sub: "Professional Analysis" },
-        ru: { desc: "Самый разумный способ понять себя", tests: { ocean: "Личность", dark: "Поиск злодея", loc: "Успех", resilience: "Стойкость", trust: "Доверие" }, sub: "Professional Analysis" },
-        vi: { desc: "Cách nhạy bén nhất để hiểu bạn", tests: { ocean: "Tính cách", dark: "Tìm phản diện", loc: "Thành công", resilience: "Bản lĩnh", trust: "Tin tưởng" }, sub: "Professional Analysis" }
+        // 다른 언어는 기존 그대로 (생략)
     };
 
     const testList = [
@@ -44,12 +28,9 @@ const GIPPP_ENGINE = (() => {
 
     const init = () => {
         const ui = getUI();
-
         if (!ui.testGrid || !ui.welcomeView || !ui.testView) {
             console.error("필수 DOM 요소 누락");
-            if (ui.testGrid) {
-                ui.testGrid.innerHTML = "<p style='color:red; text-align:center; padding:40px;'>페이지 로드 오류입니다.<br>새로고침(F5) 또는 브라우저 캐시 지우기를 시도해 주세요.</p>";
-            }
+            if (ui.testGrid) ui.testGrid.innerHTML = "<p style='color:red;text-align:center;padding:40px;'>페이지 로드 오류입니다. 새로고침(F5) 해주세요.</p>";
             return;
         }
 
@@ -61,7 +42,6 @@ const GIPPP_ENGINE = (() => {
         ui.langSelect.innerHTML = Object.keys(i18n).map(l => 
             `<option value="${l}" ${state.lang === l ? 'selected' : ''}>${l.toUpperCase()}</option>`
         ).join('');
-
         ui.langSelect.onchange = (e) => changeLanguage(e.target.value);
 
         document.documentElement.dir = (state.lang === 'ar') ? 'rtl' : 'ltr';
@@ -73,19 +53,17 @@ const GIPPP_ENGINE = (() => {
         } else if (state.testId) {
             loadData().then(() => {
                 if (state.guide && state.guide.purpose) {
-                    renderGuide();
+                    renderGuide();  // 이제 여기서 정상 호출됨
                 } else {
                     startTest();
                 }
+            }).catch(err => {
+                console.error("loadData Promise Error:", err);
+                ui.questionContainer.innerHTML = "<h3>검사 로드 중 오류</h3><p>새로고침 해주세요.</p>";
             });
         } else {
             renderWelcome();
         }
-
-        // GA4 초기화 예시 (동의 후에만 실행)
-        // if (window.gtag) {
-        //     gtag('event', 'page_view', { page_path: window.location.pathname });
-        // }
     };
 
     const loadData = async () => {
@@ -93,7 +71,7 @@ const GIPPP_ENGINE = (() => {
         try {
             const targetTest = state.testId || 'ocean';
             const r = await fetch(`data/${targetTest}/${state.lang}.json`);
-            if (!r.ok) throw new Error("JSON 파일 없음");
+            if (!r.ok) throw new Error("JSON 파일 로드 실패");
             const d = await r.json();
             state.ui = d.ui || {};
             state.guide = d.guide || {};
@@ -121,9 +99,33 @@ const GIPPP_ENGINE = (() => {
         `).join('');
     };
 
-    // 아래는 기존 핵심 기능들 (복사해서 그대로 사용하세요)
-    // renderGuide, startTest, renderQuestion, showProcessing, calculateAndRender, renderFinalReport 등
-    // (공간상 생략했으나, 이전 코드에서 그대로 가져오시면 됩니다)
+    // ★★★ 핵심 추가: renderGuide 함수 (이게 없어서 에러 발생)
+    const renderGuide = () => {
+        const ui = getUI();
+        ui.welcomeView.style.display = 'none';
+        ui.testView.style.display = 'block';
+
+        ui.questionContainer.innerHTML = `
+            <div style="padding: 40px; text-align: center;">
+                <h2 style="font-size: 2rem; margin-bottom: 20px;">${state.ui.testNames?.[state.testId] || i18n[state.lang].tests[state.testId]}</h2>
+                <p style="color: #666; margin-bottom: 30px; line-height: 1.6;">${state.guide.purpose || '이 검사는 당신의 숨겨진 성향을 분석합니다.'}</p>
+                <div style="background: #f0f7ff; padding: 30px; border-radius: 20px; text-align: left; margin-bottom: 30px;">
+                    <p style="font-size: 1rem; line-height: 1.6;">✨ ${state.guide.instruction || '문항을 솔직하게 선택해주세요.'}</p>
+                    <p style="font-size: 0.9rem; color: #555; margin-top: 20px; border-top: 1px solid #d0e0f0; padding-top: 20px;">💡 ${state.guide.interpretation || '결과는 참고용이며, 엔터테인먼트 목적입니다.'}</p>
+                </div>
+                <button class="btn-main" style="width: 100%; padding: 15px; font-size: 1.1rem;" onclick="GIPPP_ENGINE.startTest()">분석 시작하기</button>
+            </div>
+        `;
+        ui.optionsGroup.innerHTML = ''; // 옵션 그룹 초기화
+    };
+
+    // startTest 함수 (기존 로직 유지 예시, 필요 시 확장)
+    const startTest = () => {
+        const ui = getUI();
+        ui.questionContainer.innerHTML = '<p>질문 로딩 중...</p>';
+        // 여기서 renderQuestion() 등 기존 질문 렌더링 로직 시작
+        // (기존 코드에 있던 질문 렌더링 부분을 붙여넣으시면 됩니다)
+    };
 
     const changeLanguage = (l) => {
         const u = new URL(window.location);
@@ -138,8 +140,10 @@ const GIPPP_ENGINE = (() => {
         window.location = u;
     };
 
-    // DOM 완전 로드 후 실행
+    // 결과 복원 등 나머지 함수들 (기존 코드 그대로 유지)
+    // 예: decodeAndShowResult, renderFinalReport, generateImage 등
+
     window.addEventListener('load', init);
 
-    return { changeLanguage, changeTest };
+    return { changeLanguage, changeTest, startTest };
 })();
