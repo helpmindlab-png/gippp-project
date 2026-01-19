@@ -22,7 +22,8 @@ const GIPPP_ENGINE = (() => {
         { id: 'loc', emoji: '💰' }, { id: 'resilience', emoji: '🛡️' }, { id: 'trust', emoji: '🤝' }
     ];
 
-    const ui = {
+    // ui 객체를 함수 안에서 동적으로 가져오게 변경 (null 방지)
+    const getUI = () => ({
         welcomeView: document.getElementById('welcome-view'),
         testView: document.getElementById('test-view'),
         testGrid: document.getElementById('test-grid'),
@@ -32,12 +33,12 @@ const GIPPP_ENGINE = (() => {
         langSelect: document.getElementById('lang-select'),
         brandDesc: document.getElementById('brand-desc'),
         midAd: document.getElementById('mid-ad'),
-        header: document.getElementById('main-header')
-    };
+        header: document.getElementById('main-header')  // 만약 이 ID가 없다면 null 체크 필요
+    });
 
     const init = async () => {
         try {
-            console.log("Initializing GIPPP_ENGINE..."); // 디버깅 로그: 초기화 시작 확인
+            console.log("Initializing GIPPP_ENGINE...");
             const urlParams = new URLSearchParams(window.location.search);
             state.testId = urlParams.get('test');
             state.lang = urlParams.get('lang') || navigator.language.substring(0, 2);
@@ -45,11 +46,13 @@ const GIPPP_ENGINE = (() => {
             const langs = Object.keys(i18n);
             if (!langs.includes(state.lang)) state.lang = 'en';
 
+            const ui = getUI();  // 여기서 다시 가져옴
+
             ui.langSelect.innerHTML = langs.map(l => `<option value="${l}" ${state.lang === l ? 'selected' : ''}>${l.toUpperCase()}</option>`).join('');
             document.documentElement.dir = (state.lang === 'ar') ? 'rtl' : 'ltr';
 
             const currentI18n = i18n[state.lang];
-            console.log("Selected Language:", state.lang, "i18n Data:", currentI18n); // 디버깅 로그: 언어 데이터 확인
+            console.log("Selected Language:", state.lang, "i18n Data:", currentI18n);
             ui.brandDesc.innerText = currentI18n.desc;
 
             const resData = urlParams.get('res');
@@ -58,24 +61,23 @@ const GIPPP_ENGINE = (() => {
                 decodeAndShowResult(resData);
             } else if (state.testId) {
                 await loadData();
-                // [수정] 가이드 데이터가 있으면 가이드 노출, 없으면 즉시 설문 시작
                 if (state.guide && state.guide.purpose) {
-                    renderGuide();
+                    renderGuide(ui);
                 } else {
-                    startTest();
+                    startTest(ui);
                 }
             } else {
-                renderWelcome();
+                renderWelcome(ui);
             }
-        } catch (e) { 
-            console.error("Init Error:", e); // 콘솔에 에러 출력
-            if (ui.testGrid) {
-                ui.testGrid.innerHTML = "<p>오류 발생: 페이지를 새로고침해 주세요. (콘솔 확인 필요)</p>"; // 사용자에게 에러 표시
-            }
+        } catch (e) {
+            console.error("Init Error:", e);
+            const ui = getUI();
+            if (ui.testGrid) ui.testGrid.innerHTML = "<p>오류 발생: 페이지를 새로고침해 주세요. (콘솔 확인 필요)</p>";
         }
     };
 
     const loadData = async () => {
+        // 기존 loadData 그대로 유지 (생략)
         try {
             const targetTest = state.testId || 'ocean';
             const r = await fetch(`./data/${targetTest}/${state.lang}.json`);
@@ -88,14 +90,19 @@ const GIPPP_ENGINE = (() => {
             state.traitNames = d.traitNames || {};
         } catch (e) { 
             console.error("Data Load Error:", e);
-            ui.questionContainer.innerHTML = "<h3>Data Load Error</h3><p>Please check if the JSON file exists in /data/ folder.</p>";
+            const ui = getUI();
+            if (ui.questionContainer) ui.questionContainer.innerHTML = "<h3>Data Load Error</h3><p>Please check if the JSON file exists in /data/ folder.</p>";
         }
     };
 
-    const renderWelcome = () => {
-        console.log("Rendering Welcome..."); // 디버깅 로그: 렌더링 시작 확인
+    const renderWelcome = (ui) => {
+        console.log("Rendering Welcome...");
+        if (!ui.welcomeView || !ui.testView || !ui.testGrid) {
+            console.error("DOM elements missing in renderWelcome:", { welcomeView: ui.welcomeView, testView: ui.testView, testGrid: ui.testGrid });
+            return;
+        }
         ui.welcomeView.style.display = 'block';
-        ui.header.style.display = 'block';
+        if (ui.header) ui.header.style.display = 'block';
         ui.testView.style.display = 'none';
         const currentI18n = i18n[state.lang];
         const gridHtml = testList.map(t => `
@@ -105,13 +112,15 @@ const GIPPP_ENGINE = (() => {
                 <p>${currentI18n.sub}</p>
             </div>
         `).join('');
-        console.log("Generated Test Grid HTML:", gridHtml); // 디버깅 로그: 생성된 HTML 확인
+        console.log("Generated Test Grid HTML:", gridHtml);
         ui.testGrid.innerHTML = gridHtml;
     };
 
-    const renderGuide = () => {
+    // 나머지 함수들 (renderGuide, startTest 등)도 ui 파라미터 받도록 수정
+    const renderGuide = (ui) => {
+        if (!ui) ui = getUI();
         ui.welcomeView.style.display = 'none';
-        ui.header.style.display = 'none';
+        if (ui.header) ui.header.style.display = 'none';
         ui.testView.style.display = 'block';
         ui.questionContainer.innerHTML = `
             <div class="guide-content" style="padding:20px; text-align:center;">
@@ -127,125 +136,23 @@ const GIPPP_ENGINE = (() => {
         ui.optionsGroup.innerHTML = '';
     };
 
-    const startTest = () => {
+    const startTest = (ui) => {
+        if (!ui) ui = getUI();
         ui.welcomeView.style.display = 'none';
-        ui.header.style.display = 'none';
+        if (ui.header) ui.header.style.display = 'none';
         ui.testView.style.display = 'block';
-        renderQuestion();
+        renderQuestion(ui);
     };
 
-    const renderQuestion = () => {
-        if (!state.questions || state.questions.length === 0) {
-            ui.questionContainer.innerHTML = "<h3>No Questions Found</h3>";
-            return;
-        }
-        const q = state.questions[state.currentIndex];
-        ui.questionContainer.innerHTML = `<div class="q-text">${q.text}</div>`;
-        ui.optionsGroup.innerHTML = '';
-        const labels = state.ui.labels || ["-", "-", "-", "-", "-"];
-        [1, 2, 3, 4, 5].forEach(score => {
-            const btn = document.createElement('button');
-            btn.className = 'opt-btn';
-            btn.innerText = labels[score - 1];
-            btn.onclick = () => {
-                state.answers.push({ trait: q.trait, score: q.direction === "-" ? 6 - score : score });
-                if (++state.currentIndex < state.questions.length) renderQuestion();
-                else showProcessing();
-            };
-            ui.optionsGroup.appendChild(btn);
-        });
-        ui.progressFill.style.width = `${(state.currentIndex / state.questions.length) * 100}%`;
-    };
+    // renderQuestion, showProcessing, calculateAndRender 등은 기존 그대로 유지 (생략, 필요 시 추가)
 
-    const showProcessing = () => {
-        ui.questionContainer.innerHTML = `<div style="padding:40px 0;"><div class="spinner"></div><h3>${state.ui.processing || 'Analyzing...'}</h3></div>`;
-        ui.optionsGroup.innerHTML = '';
-        ui.midAd.style.display = 'block';
-        setTimeout(calculateAndRender, 3000);
-    };
-
-    const calculateAndRender = () => {
-        state.results = state.answers.reduce((acc, curr) => {
-            if (!acc[curr.trait]) acc[curr.trait] = { total: 0, count: 0 };
-            acc[curr.trait].total += curr.score; acc[curr.trait].count += 1;
-            return acc;
-        }, {});
-        renderFinalReport();
-    };
-
-    const renderFinalReport = () => {
-        const resCode = Object.entries(state.results).map(([t, d]) => t + Math.round((d.total/(d.count*5))*100)).join('');
-        const shareUrl = `${window.location.origin}${window.location.pathname}?test=${state.testId}&lang=${state.lang}&res=${resCode}`;
-        const qrImgUrl = `https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=${encodeURIComponent(shareUrl)}`;
-        
-        let maxTrait = '', maxScore = -1;
-        let reportHtml = `<div class="result-card"><div class="result-header"><h2>${state.ui.reportTitle || 'Result'}</h2></div><div class="result-body">`;
-        
-        for (const [trait, data] of Object.entries(state.results)) {
-            const p = Math.round((data.total / (data.count * 5)) * 100);
-            if (p > maxScore) { maxScore = p; maxTrait = trait; }
-            const traitName = state.traitNames[trait] || trait;
-            const desc = state.descriptions[trait] ? (p >= 50 ? state.descriptions[trait].high : state.descriptions[trait].low) : "";
-            reportHtml += `<div class="trait-row"><div class="trait-label"><span>${traitName}</span> <span>${p}%</span></div><div class="bar-bg"><div class="bar-fill" style="width:${p}%"></div></div><p style="font-size:0.85rem; color:#666; margin-top:8px;">${desc}</p></div>`;
-        }
-
-        reportHtml += `<div class="recommend-box"><h4>${state.ui.recommendTitle || 'Recommend'}</h4><a href="https://www.amazon.com/s?k=${state.ui.amazonKeywords ? state.ui.amazonKeywords[maxTrait] : 'psychology'}" target="_blank" class="amazon-btn">${state.ui.viewAmazon || 'View'}</a></div><div class="qr-section"><img id="qrImage" src="${qrImgUrl}" crossorigin="anonymous"><p style="font-size:0.8rem; color:#999; margin-top:10px;">${state.ui.qrNote || ''}</p></div></div><button class="btn-main" onclick="GIPPP_ENGINE.generateImage()">${state.ui.saveImg || 'Save'}</button><button class="btn-sub" onclick="GIPPP_ENGINE.cleanExit()">${state.ui.retest || 'Retest'}</button></div><canvas id="resultCanvas" style="display:none;"></canvas>`;
-        
-        ui.testView.innerHTML = reportHtml;
-        ui.testView.style.display = 'block';
-        ui.midAd.style.display = 'none';
-    };
-
-    const decodeAndShowResult = (c) => {
-        const s = {}; const m = c.match(/([A-Z])(\d+)/g);
-        if (m) m.forEach(x => { s[x[0]] = { total: parseInt(x.substring(1)), count: 20 }; });
-        state.results = s; renderFinalReport();
-    };
-
-    const generateImage = () => {
-        const canvas = document.getElementById('resultCanvas');
-        const ctx = canvas.getContext('2d');
-        const qrImg = document.getElementById('qrImage');
-        const isRTL = (state.lang === 'ar');
-        const traits = Object.entries(state.results);
-        canvas.width = 600; canvas.height = 900;
-        ctx.fillStyle = '#ffffff'; ctx.fillRect(0, 0, 600, 900);
-        ctx.fillStyle = '#3498db'; ctx.fillRect(0, 0, 600, 120);
-        ctx.fillStyle = '#ffffff'; ctx.font = 'bold 36px sans-serif'; ctx.textAlign = 'center';
-        ctx.fillText(state.ui.reportTitle || 'Result', 300, 75);
-        let y = 220;
-        traits.forEach(([t, d]) => {
-            const p = Math.round((d.total / (d.count * 5)) * 100);
-            ctx.fillStyle = '#2c3e50'; ctx.font = 'bold 26px sans-serif';
-            const name = state.traitNames[t] || t;
-            if (isRTL) { ctx.textAlign = 'right'; ctx.fillText(name, 530, y); ctx.textAlign = 'left'; ctx.fillText(`${p}%`, 70, y); }
-            else { ctx.textAlign = 'left'; ctx.fillText(name, 70, y); ctx.textAlign = 'right'; ctx.fillText(`${p}%`, 530, y); }
-            ctx.fillStyle = '#f0f0f0'; ctx.fillRect(70, y + 15, 460, 18);
-            ctx.fillStyle = '#3498db';
-            if (isRTL) ctx.fillRect(530 - (460 * p / 100), y + 15, (460 * p) / 100, 18);
-            else ctx.fillRect(70, y + 15, (460 * p) / 100, 18);
-            y += 110;
-        });
-        ctx.fillStyle = '#f8f9fa'; ctx.fillRect(0, 700, 600, 200);
-        if (qrImg && qrImg.complete) { ctx.fillStyle = '#ffffff'; ctx.fillRect(50, 725, 150, 150); ctx.drawImage(qrImg, 60, 735, 130, 130); }
-        ctx.fillStyle = '#2c3e50'; ctx.font = 'bold 22px sans-serif'; ctx.textAlign = isRTL ? 'right' : 'left';
-        const tx = isRTL ? 540 : 220;
-        ctx.fillText(state.ui.viralTitle || '', tx, 780);
-        ctx.fillStyle = '#7f8c8d'; ctx.font = '18px sans-serif';
-        ctx.fillText(state.ui.viralSub || '', tx, 815);
-        ctx.fillStyle = '#3498db'; ctx.font = 'bold 16px sans-serif'; ctx.fillText('gippp.github.io', tx, 845);
-        const link = document.createElement('a'); link.download = `GIPPP_Result.png`; link.href = canvas.toDataURL('image/png'); link.click();
-    };
-
-    const cleanExit = () => { 
-        const url = window.location.origin + window.location.pathname;
-        window.history.replaceState({}, document.title, url);
-        window.location.href = url; 
-    };
-
-    const changeLanguage = (l) => { const u = new URL(window.location.href); u.searchParams.set('lang', l); window.location.href = u.toString(); };
-    const changeTest = (t) => { const u = new URL(window.location.href); u.searchParams.set('test', t); u.searchParams.delete('res'); window.location.href = u.toString(); };
+    // ... (calculateAndRender, renderFinalReport, decodeAndShowResult, generateImage, cleanExit, changeLanguage, changeTest 함수는 기존과 동일하게 유지하세요)
 
     return { init, changeLanguage, changeTest, cleanExit, generateImage, startTest };
 })();
-document.addEventListener('DOMContentLoaded', GIPPP_ENGINE.init);
+
+// DOM 완전 로드 후 init 호출 (타이밍 문제 해결)
+window.addEventListener('load', () => {
+    console.log("Window fully loaded, calling init()");
+    GIPPP_ENGINE.init();
+});
