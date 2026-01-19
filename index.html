@@ -4,12 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GIPPP | Global Insight Profiler</title>
-    <link rel="stylesheet" href="/style.css">
-    <!-- Google AdSense & GA4 스크립트는 여기서 동의 후 로드 (추후 추가) -->
-    <!-- 예: <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXX"></script> -->
+    <link rel="stylesheet" href="style.css">  <!-- 상대 경로 -->
+    <!-- AdSense 또는 GA4 스크립트는 여기서 동의 후 로드 -->
+    <!-- 예: <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX"></script> -->
     <style>
-        body { visibility: hidden; } /* 로딩 완료 전 숨김 */
-        .loading { position: fixed; inset: 0; background: #f4f7f9; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; color: #3498db; z-index: 9999; }
+        body { visibility: hidden; }
+        .loading { 
+            position: fixed; inset: 0; 
+            background: #f4f7f9; 
+            display: flex; align-items: center; justify-content: center; 
+            font-size: 1.2rem; color: #3498db; z-index: 9999; 
+        }
     </style>
 </head>
 <body>
@@ -19,11 +24,14 @@
         <nav class="global-nav">
             <div class="nav-content">
                 <div class="live-status"><span class="dot"></span> Global Live Profiling</div>
-                <div class="lang-picker"><select id="lang-select"></select></div>
+                <div class="lang-picker">
+                    <select id="lang-select"></select>
+                </div>
             </div>
         </nav>
 
         <main id="main-content">
+            <!-- 대문 섹션 -->
             <section id="welcome-view">
                 <header class="hero-section">
                     <h1 id="brand">GIPPP</h1>
@@ -35,6 +43,7 @@
                 </div>
             </section>
 
+            <!-- 테스트 및 결과 섹션 -->
             <section id="test-view" style="display:none;">
                 <div class="test-container">
                     <div id="progress-bar"><div id="progress-fill"></div></div>
@@ -53,8 +62,10 @@
         </footer>
     </div>
 
-    <script src="/engine.js"></script>
+    <script src="engine.js"></script>  <!-- 상대 경로 -->
+
     <script>
+        // 로딩 화면 제거 (JS 완전 로드 후)
         window.addEventListener('load', () => {
             document.body.style.visibility = 'visible';
             document.querySelector('.loading')?.remove();
