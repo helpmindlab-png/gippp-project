@@ -1,0 +1,63 @@
+{
+  "meta": {
+    "id": "learnstyle",
+    "version": "1.0",
+    "author": "GIPPP Research Team",
+    "language": "en",
+    "lastUpdated": "2026-01-19"
+  },
+  "ui": {
+    "testName": "LEARNSTYLE Test",
+    "description": "Psychological assessment",
+    "security": "🔒 Secure: No data stored",
+    "processing": "Analyzing...",
+    "reportTitle": "My LEARNSTYLE Profile",
+    "recommendTitle": "💡 Tips for You",
+    "actions": {
+      "viewAmazon": "📚 View Books",
+      "saveImg": "💾 Save Image",
+      "retest": "🔄 Retake",
+      "qrNote": "Share via QR"
+    },
+    "viral": {
+      "viralTitle": "What's your learnstyle?",
+      "viralSub": "Discover now!"
+    },
+    "labels": [
+      "Strongly Disagree",
+      "Disagree",
+      "Neutral",
+      "Agree",
+      "Strongly Agree"
+    ]
+  },
+  "items": [
+    {
+      "id": "LEARNSTYLE1",
+      "text": "Sample question 1 for learnstyle",
+      "reverse": false,
+      "trait": "A"
+    }
+  ],
+  "descriptions": {
+    "A": {
+      "label": "Type A",
+      "emoji": "🎯",
+      "high": "High score description",
+      "low": "Low score description",
+      "tips": "Practical advice"
+    }
+  },
+  "traitNames": {
+    "A": "Type A"
+  },
+  "amazonKeywords": {
+    "A": "learnstyle psychology"
+  },
+  "guide": {
+    "ipipId": "Custom-learnstyle-10",
+    "purpose": "Assess your learnstyle",
+    "instruction": "Answer honestly",
+    "interpretation": "Results show your traits"
+  }
+}
