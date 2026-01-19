@@ -4,19 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GIPPP | Global Insight Profiler</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/style.css">  <!-- 절대 경로로 변경 (GitHub Pages 안전) -->
+    <style>
+        /* 임시 로딩 스타일 - 메인 콘텐츠 숨김 */
+        body { visibility: hidden; }
+        .loading { position: fixed; inset: 0; background: #f4f7f9; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; color: #3498db; z-index: 9999; }
+    </style>
 </head>
 <body>
+    <div class="loading">로딩 중... 잠시만 기다려주세요</div>
+
     <div id="app">
         <nav class="global-nav">
             <div class="nav-content">
                 <div class="live-status"><span class="dot"></span> Global Live Profiling</div>
-                <div class="lang-picker"><select id="lang-select" onchange="GIPPP_ENGINE.changeLanguage(this.value)"></select></div>
+                <div class="lang-picker">
+                    <select id="lang-select"></select>
+                </div>
             </div>
         </nav>
 
         <main id="main-content">
-            <!-- [대문 섹션] -->
+            <!-- 대문 섹션 -->
             <section id="welcome-view">
                 <header class="hero-section">
                     <h1 id="brand">GIPPP</h1>
@@ -24,13 +33,11 @@
                 </header>
                 <div class="content-wrapper">
                     <div class="ad-slot top-ad">ADVERTISEMENT</div>
-                    <div id="test-grid" class="test-grid">
-                        <!-- JS에서 즉시 생성됨 -->
-                    </div>
+                    <div id="test-grid" class="test-grid"></div>
                 </div>
             </section>
 
-            <!-- [테스트 및 결과 섹션] -->
+            <!-- 테스트 & 결과 섹션 -->
             <section id="test-view" style="display:none;">
                 <div class="test-container">
                     <div id="progress-bar"><div id="progress-fill"></div></div>
@@ -45,9 +52,18 @@
             <div class="footer-content">
                 <div class="ad-slot bottom-ad">ADVERTISEMENT</div>
                 <p>© GIPPP Project | Anonymous & Secure Insight</p>
+                <p><a href="/privacy.html" style="color:#999; font-size:0.8rem;">개인정보 처리방침</a></p>
             </div>
         </footer>
     </div>
-    <script src="engine.js"></script>
+
+    <script src="/engine.js"></script>  <!-- 절대 경로 -->
+    <script>
+        // 로딩 화면 숨기기 (JS 완전 로드 후)
+        window.addEventListener('load', () => {
+            document.body.style.visibility = 'visible';
+            document.querySelector('.loading')?.remove();
+        });
+    </script>
 </body>
 </html>
