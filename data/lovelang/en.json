@@ -9,74 +9,74 @@
   "ui": {
     "testName": "Love Languages Test",
     "description": "Discover how you give and receive love",
-    "security": "🔒 Secure: No data stored",
+    "security": "🔒 Security: No data stored",
     "processing": "Analyzing data...",
-    "reportTitle": "My Love Languages",
-    "recommendTitle": "💕 Relationship Advice",
+    "reportTitle": "나의 사랑의 언어",
+    "recommendTitle": "💕 관계를 위한 조언",
     "actions": {
-      "viewAmazon": "📚 Relationship Books",
-      "saveImg": "💾 Save as Image",
-      "retest": "🔄 Retake Test",
-      "qrNote": "Take the test with your partner!"
+      "viewAmazon": "📚 연애 심리 도서",
+      "saveImg": "💾 결과 저장",
+      "retest": "🔄 다시 하기",
+      "qrNote": "연인과 함께 테스트해보세요!"
     },
     "viral": {
-      "viralTitle": "What's Your Love Language?",
-      "viralSub": "Start the test now!"
+      "viralTitle": "당신의 사랑 언어는?",
+      "viralSub": "파트너와 함께 확인하세요!"
     },
     "labels": [
-      "Strongly Disagree",
-      "Disagree",
-      "Neutral",
-      "Agree",
-      "Strongly Agree"
+      "전혀 아니다",
+      "아니다",
+      "보통이다",
+      "그렇다",
+      "매우 그렇다"
     ]
   },
   "items": [
     {
       "id": "LL1",
-      "text": "\"사랑해\"라는 말을 자주 듣고 싶다",
+      "text": "I want to hear \"I love you\" often",
       "reverse": false,
       "trait": "W"
     },
     {
       "id": "LL2",
-      "text": "함께 시간을 보내는 것이 가장 소중하다",
+      "text": "Quality time together matters most to me",
       "reverse": false,
       "trait": "Q"
     },
     {
       "id": "LL3",
-      "text": "작은 선물이라도 받으면 정말 기쁘다",
+      "text": "Even small gifts make me really happy",
       "reverse": false,
       "trait": "G"
     },
     {
       "id": "LL4",
-      "text": "집안일을 도와주면 사랑받는다고 느낀다",
+      "text": "Physical affection makes me feel loved",
       "reverse": false,
       "trait": "A"
     },
     {
       "id": "LL5",
-      "text": "포옹이나 스킨십이 중요하다",
+      "text": "When someone does things for me, I feel loved",
       "reverse": false,
       "trait": "T"
     },
     {
       "id": "LL6",
-      "text": "격려와 칭찬의 말이 큰 힘이 된다",
+      "text": "Words of encouragement mean a lot to me",
       "reverse": false,
       "trait": "W"
     },
     {
       "id": "LL7",
-      "text": "깊은 대화를 나눌 때 가장 친밀감을 느낀다",
+      "text": "Undivided attention matters more than gifts",
       "reverse": false,
       "trait": "Q"
     },
     {
       "id": "LL8",
-      "text": "실질적인 도움을 주는 것이 진짜 사랑이다",
+      "text": "Actions speak louder than words when showing love",
       "reverse": false,
       "trait": "A"
     }

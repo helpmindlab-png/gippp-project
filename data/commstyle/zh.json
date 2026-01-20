@@ -7,88 +7,88 @@
     "lastUpdated": "2026-01-19"
   },
   "ui": {
-    "testName": "沟通风格",
-    "description": "发现您的沟通模式",
+    "testName": "沟通风格测试",
+    "description": "了解你与他人沟通的方式",
     "security": "🔒 安全：不存储数据",
-    "processing": "数据分析中...",
-    "reportTitle": "我的沟通档案",
+    "processing": "正在分析数据...",
+    "reportTitle": "나의 소통 스타일",
     "recommendTitle": "💬 더 나은 소통을 위한 팁",
     "actions": {
-      "viewAmazon": "📚 查看推荐书籍",
-      "saveImg": "💾 保存为图片",
-      "retest": "🔄 重新测试",
+      "viewAmazon": "📚 소통 관련 도서",
+      "saveImg": "💾 결과 저장",
+      "retest": "🔄 다시 하기",
       "qrNote": "동료와 함께 테스트해보세요!"
     },
     "viral": {
-      "viralTitle": "您的沟通风格是什么？",
-      "viralSub": "立即开始测试！"
+      "viralTitle": "당신의 소통 스타일은?",
+      "viralSub": "주도형? 표현형? 우호형? 분석형?"
     },
     "labels": [
-      "完全不同意",
-      "不同意",
-      "中立",
-      "同意",
-      "非常同意"
+      "전혀 아니다",
+      "아니다",
+      "보통이다",
+      "그렇다",
+      "매우 그렇다"
     ]
   },
   "items": [
     {
       "id": "CS1",
-      "text": "회의에서 주로 말을 주도하고 방향을 제시한다",
+      "text": "在会议中我通常会主导讨论并提出方向",
       "reverse": false,
       "trait": "D"
     },
     {
       "id": "CS2",
-      "text": "이야기할 때 감정과 감탄을 많이 표현한다",
+      "text": "我会体贴地说话，让对方感到舒适",
       "reverse": false,
       "trait": "I"
     },
     {
       "id": "CS3",
-      "text": "다른 사람의 말을 끝까지 경청하고 공감한다",
+      "text": "我用逻辑依据和数据来解释事情",
       "reverse": false,
       "trait": "S"
     },
     {
       "id": "CS4",
-      "text": "논리적이고 정확한 표현을 중요하게 여긴다",
+      "text": "说话时我会采用讲故事的方式",
       "reverse": false,
       "trait": "C"
     },
     {
       "id": "CS5",
-      "text": "빠르게 결론을 내고 다음으로 넘어가고 싶어한다",
+      "text": "我会简洁明确地只传达要点",
       "reverse": false,
       "trait": "D"
     },
     {
       "id": "CS6",
-      "text": "농담과 유머로 분위기를 밝게 만든다",
+      "text": "我会大量使用手势和面部表情",
       "reverse": false,
       "trait": "I"
     },
     {
       "id": "CS7",
-      "text": "갈등을 피하고 조화를 유지하려 노력한다",
+      "text": "我会认真倾听对方把话说完",
       "reverse": false,
       "trait": "S"
     },
     {
       "id": "CS8",
-      "text": "대화 전 충분한 준비와 자료를 갖춘다",
+      "text": "我喜欢辩论并用逻辑说服他人",
       "reverse": false,
       "trait": "C"
     },
     {
       "id": "CS9",
-      "text": "솔직하고 직설적으로 의견을 말한다",
+      "text": "比起直接冲突，我更倾向于委婉表达",
       "reverse": false,
       "trait": "D"
     },
     {
       "id": "CS10",
-      "text": "세부사항보다는 전체 그림과 비전을 이야기한다",
+      "text": "我会用幽默来营造轻松的氛围",
       "reverse": false,
       "trait": "I"
     }

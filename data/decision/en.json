@@ -8,75 +8,75 @@
   },
   "ui": {
     "testName": "Decision-Making Style",
-    "description": "Understand your decision-making approach",
-    "security": "🔒 Secure: No data stored",
+    "description": "Discover how you make important choices",
+    "security": "🔒 Security: No data stored",
     "processing": "Analyzing data...",
-    "reportTitle": "My Decision Style",
+    "reportTitle": "나의 의사결정 유형",
     "recommendTitle": "💡 더 나은 결정을 위한 팁",
     "actions": {
-      "viewAmazon": "📚 View Recommended Books",
-      "saveImg": "💾 Save as Image",
-      "retest": "🔄 Retake Test",
+      "viewAmazon": "📚 의사결정 관련 도서",
+      "saveImg": "💾 결과 저장",
+      "retest": "🔄 다시 하기",
       "qrNote": "친구와 비교해보세요!"
     },
     "viral": {
-      "viralTitle": "How Do You Make Decisions?",
-      "viralSub": "Start the test now!"
+      "viralTitle": "당신의 선택 스타일은?",
+      "viralSub": "직관형? 분석형? 지금 확인!"
     },
     "labels": [
-      "Strongly Disagree",
-      "Disagree",
-      "Neutral",
-      "Agree",
-      "Strongly Agree"
+      "전혀 아니다",
+      "아니다",
+      "보통이다",
+      "그렇다",
+      "매우 그렇다"
     ]
   },
   "items": [
     {
       "id": "DS1",
-      "text": "중요한 결정을 내릴 때 데이터와 사실을 먼저 본다",
+      "text": "I look at data and facts first when making big decisions",
       "reverse": false,
       "trait": "A"
     },
     {
       "id": "DS2",
-      "text": "직감이 \"이거다!\" 하면 바로 결정한다",
+      "text": "When my gut says \"this is it,\" I decide right away",
       "reverse": false,
       "trait": "I"
     },
     {
       "id": "DS3",
-      "text": "다른 사람의 의견을 듣고 참고한다",
+      "text": "I listen to others' opinions before deciding",
       "reverse": false,
       "trait": "D"
     },
     {
       "id": "DS4",
-      "text": "결정을 미루고 최대한 늦게 선택한다",
+      "text": "I tend to postpone decisions as long as possible",
       "reverse": false,
       "trait": "V"
     },
     {
       "id": "DS5",
-      "text": "장단점 리스트를 작성해서 비교한다",
+      "text": "I make pros and cons lists to compare options",
       "reverse": false,
       "trait": "A"
     },
     {
       "id": "DS6",
-      "text": "결정 후에도 계속 고민하고 후회한다",
+      "text": "I keep second-guessing myself after deciding",
       "reverse": false,
       "trait": "V"
     },
     {
       "id": "DS7",
-      "text": "경험과 감각으로 빠르게 판단한다",
+      "text": "I trust my experience and make quick judgments",
       "reverse": false,
       "trait": "I"
     },
     {
       "id": "DS8",
-      "text": "전문가나 주변 사람에게 조언을 구한다",
+      "text": "I seek advice from experts or people around me",
       "reverse": false,
       "trait": "D"
     }

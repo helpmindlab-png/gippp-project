@@ -7,76 +7,76 @@
     "lastUpdated": "2026-01-19"
   },
   "ui": {
-    "testName": "Phong cách ra quyết định",
-    "description": "Hiểu cách tiếp cận ra quyết định của bạn",
-    "security": "🔒 An toàn: Không lưu trữ dữ liệu",
+    "testName": "의사결정 스타일 테스트",
+    "description": "당신은 어떻게 선택하고 결정하나요?",
+    "security": "🔒 Bảo mật: Không lưu trữ dữ liệu",
     "processing": "Đang phân tích dữ liệu...",
-    "reportTitle": "Phong cách quyết định của tôi",
+    "reportTitle": "나의 의사결정 유형",
     "recommendTitle": "💡 더 나은 결정을 위한 팁",
     "actions": {
-      "viewAmazon": "📚 Xem sách được đề xuất",
-      "saveImg": "💾 Lưu dưới dạng hình ảnh",
-      "retest": "🔄 Làm lại bài kiểm tra",
+      "viewAmazon": "📚 의사결정 관련 도서",
+      "saveImg": "💾 결과 저장",
+      "retest": "🔄 다시 하기",
       "qrNote": "친구와 비교해보세요!"
     },
     "viral": {
-      "viralTitle": "Bạn ra quyết định như thế nào?",
-      "viralSub": "Bắt đầu bài kiểm tra ngay!"
+      "viralTitle": "당신의 선택 스타일은?",
+      "viralSub": "직관형? 분석형? 지금 확인!"
     },
     "labels": [
-      "Hoàn toàn không đồng ý",
-      "Không đồng ý",
-      "Trung lập",
-      "Đồng ý",
-      "Hoàn toàn đồng ý"
+      "전혀 아니다",
+      "아니다",
+      "보통이다",
+      "그렇다",
+      "매우 그렇다"
     ]
   },
   "items": [
     {
       "id": "DS1",
-      "text": "중요한 결정을 내릴 때 데이터와 사실을 먼저 본다",
+      "text": "Tôi xem xét dữ liệu và sự thật trước khi đưa ra quyết định quan trọng",
       "reverse": false,
       "trait": "A"
     },
     {
       "id": "DS2",
-      "text": "직감이 \"이거다!\" 하면 바로 결정한다",
+      "text": "Khi trực giác nói \"đây rồi!\", tôi quyết định ngay",
       "reverse": false,
       "trait": "I"
     },
     {
       "id": "DS3",
-      "text": "다른 사람의 의견을 듣고 참고한다",
+      "text": "Tôi lắng nghe ý kiến của người khác trước khi quyết định",
       "reverse": false,
       "trait": "D"
     },
     {
       "id": "DS4",
-      "text": "결정을 미루고 최대한 늦게 선택한다",
+      "text": "Tôi có xu hướng trì hoãn quyết định càng lâu càng tốt",
       "reverse": false,
       "trait": "V"
     },
     {
       "id": "DS5",
-      "text": "장단점 리스트를 작성해서 비교한다",
+      "text": "Tôi lập danh sách ưu nhược điểm để so sánh",
       "reverse": false,
       "trait": "A"
     },
     {
       "id": "DS6",
-      "text": "결정 후에도 계속 고민하고 후회한다",
+      "text": "Tôi tiếp tục nghi ngờ bản thân sau khi quyết định",
       "reverse": false,
       "trait": "V"
     },
     {
       "id": "DS7",
-      "text": "경험과 감각으로 빠르게 판단한다",
+      "text": "Tôi tin vào kinh nghiệm và đưa ra phán đoán nhanh",
       "reverse": false,
       "trait": "I"
     },
     {
       "id": "DS8",
-      "text": "전문가나 주변 사람에게 조언을 구한다",
+      "text": "Tôi tìm lời khuyên từ chuyên gia hoặc người xung quanh",
       "reverse": false,
       "trait": "D"
     }

@@ -7,88 +7,88 @@
     "lastUpdated": "2026-01-19"
   },
   "ui": {
-    "testName": "お金に対する態度",
-    "description": "あなたの金銭的態度を発見",
-    "security": "🔒 安全：データ保存なし",
+    "testName": "お金の価値観診断",
+    "description": "あなたのお金に対する考え方がわかる",
+    "security": "🔒 セキュリティ: データ保存なし",
     "processing": "データ分析中...",
-    "reportTitle": "私のお金プロフィール",
+    "reportTitle": "나의 머니 마인드셋",
     "recommendTitle": "💰 건강한 재무 습관을 위한 조언",
     "actions": {
-      "viewAmazon": "📚 おすすめの本を見る",
-      "saveImg": "💾 画像として保存",
-      "retest": "🔄 再テスト",
+      "viewAmazon": "📚 재테크 관련 도서",
+      "saveImg": "💾 결과 저장",
+      "retest": "🔄 다시 하기",
       "qrNote": "친구와 비교해보세요!"
     },
     "viral": {
-      "viralTitle": "あなたのお金に対する考え方は？",
-      "viralSub": "今すぐテストを始めましょう！"
+      "viralTitle": "당신의 금전 태도는?",
+      "viralSub": "저축형? 투자형? 소비형?"
     },
     "labels": [
-      "全く違う",
-      "違う",
-      "どちらでもない",
-      "そう思う",
-      "強くそう思う"
+      "전혀 아니다",
+      "아니다",
+      "보통이다",
+      "그렇다",
+      "매우 그렇다"
     ]
   },
   "items": [
     {
       "id": "MM1",
-      "text": "매달 일정 금액을 저축하는 것이 최우선이다",
+      "text": "貯蓄と投資を生活の最優先事項にしている",
       "reverse": false,
       "trait": "S"
     },
     {
       "id": "MM2",
-      "text": "돈은 불리기 위해 투자해야 한다고 생각한다",
+      "text": "今を楽しむためにお金を使うのは当然",
       "reverse": false,
       "trait": "I"
     },
     {
       "id": "MM3",
-      "text": "좋은 경험과 물건을 위해 돈을 쓰는 것이 중요하다",
+      "text": "長期的な資金計画を立てて実行する",
       "reverse": false,
       "trait": "C"
     },
     {
       "id": "MM4",
-      "text": "돈을 쓸 때마다 죄책감을 느낀다",
+      "text": "良さそうだと思ったら衝動買いする",
       "reverse": false,
       "trait": "W"
     },
     {
       "id": "MM5",
-      "text": "비상금과 노후 자금을 미리 준비한다",
+      "text": "安いからという理由より価値を重視する",
       "reverse": false,
       "trait": "S"
     },
     {
       "id": "MM6",
-      "text": "주식, 부동산 등 투자 공부를 한다",
+      "text": "セールや割引、クーポンを積極的に活用する",
       "reverse": false,
       "trait": "I"
     },
     {
       "id": "MM7",
-      "text": "현재의 행복을 위해 돈을 쓰는 것이 당연하다",
+      "text": "体験や思い出にお金を使うのは惜しくない",
       "reverse": false,
       "trait": "C"
     },
     {
       "id": "MM8",
-      "text": "돈 이야기를 하는 것이 불편하다",
+      "text": "形に残るものを買うのが満足できる",
       "reverse": false,
       "trait": "W"
     },
     {
       "id": "MM9",
-      "text": "가계부를 쓰고 예산을 관리한다",
+      "text": "目標金額と達成期限を決めている",
       "reverse": false,
       "trait": "S"
     },
     {
       "id": "MM10",
-      "text": "위험을 감수하더라도 높은 수익을 추구한다",
+      "text": "お金の話はストレスで避けたい",
       "reverse": false,
       "trait": "I"
     }

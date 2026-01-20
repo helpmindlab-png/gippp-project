@@ -7,76 +7,76 @@
     "lastUpdated": "2026-01-19"
   },
   "ui": {
-    "testName": "Bài kiểm tra ngôn ngữ tình yêu",
+    "testName": "Bài test Ngôn ngữ Tình yêu",
     "description": "Khám phá cách bạn cho và nhận tình yêu",
-    "security": "🔒 An toàn: Không lưu trữ dữ liệu",
+    "security": "🔒 Bảo mật: Không lưu trữ dữ liệu",
     "processing": "Đang phân tích dữ liệu...",
-    "reportTitle": "Ngôn ngữ tình yêu của tôi",
-    "recommendTitle": "💕 Lời khuyên về mối quan hệ",
+    "reportTitle": "나의 사랑의 언어",
+    "recommendTitle": "💕 관계를 위한 조언",
     "actions": {
-      "viewAmazon": "📚 Sách về mối quan hệ",
-      "saveImg": "💾 Lưu dưới dạng hình ảnh",
-      "retest": "🔄 Làm lại bài kiểm tra",
-      "qrNote": "Làm bài kiểm tra với người yêu của bạn!"
+      "viewAmazon": "📚 연애 심리 도서",
+      "saveImg": "💾 결과 저장",
+      "retest": "🔄 다시 하기",
+      "qrNote": "연인과 함께 테스트해보세요!"
     },
     "viral": {
-      "viralTitle": "Ngôn ngữ tình yêu của bạn là gì?",
-      "viralSub": "Bắt đầu bài kiểm tra ngay!"
+      "viralTitle": "당신의 사랑 언어는?",
+      "viralSub": "파트너와 함께 확인하세요!"
     },
     "labels": [
-      "Hoàn toàn không đồng ý",
-      "Không đồng ý",
-      "Trung lập",
-      "Đồng ý",
-      "Hoàn toàn đồng ý"
+      "전혀 아니다",
+      "아니다",
+      "보통이다",
+      "그렇다",
+      "매우 그렇다"
     ]
   },
   "items": [
     {
       "id": "LL1",
-      "text": "\"사랑해\"라는 말을 자주 듣고 싶다",
+      "text": "Tôi muốn thường xuyên nghe \"anh/em yêu em\"",
       "reverse": false,
       "trait": "W"
     },
     {
       "id": "LL2",
-      "text": "함께 시간을 보내는 것이 가장 소중하다",
+      "text": "Thời gian chất lượng bên nhau quan trọng nhất với tôi",
       "reverse": false,
       "trait": "Q"
     },
     {
       "id": "LL3",
-      "text": "작은 선물이라도 받으면 정말 기쁘다",
+      "text": "Ngay cả những món quà nhỏ cũng khiến tôi rất vui",
       "reverse": false,
       "trait": "G"
     },
     {
       "id": "LL4",
-      "text": "집안일을 도와주면 사랑받는다고 느낀다",
+      "text": "Những cử chỉ thân mật khiến tôi cảm thấy được yêu thương",
       "reverse": false,
       "trait": "A"
     },
     {
       "id": "LL5",
-      "text": "포옹이나 스킨십이 중요하다",
+      "text": "Tôi cảm thấy được yêu khi ai đó làm điều gì đó cho tôi",
       "reverse": false,
       "trait": "T"
     },
     {
       "id": "LL6",
-      "text": "격려와 칭찬의 말이 큰 힘이 된다",
+      "text": "Những lời động viên rất có ý nghĩa với tôi",
       "reverse": false,
       "trait": "W"
     },
     {
       "id": "LL7",
-      "text": "깊은 대화를 나눌 때 가장 친밀감을 느낀다",
+      "text": "Sự quan tâm trọn vẹn quan trọng hơn quà tặng",
       "reverse": false,
       "trait": "Q"
     },
     {
       "id": "LL8",
-      "text": "실질적인 도움을 주는 것이 진짜 사랑이다",
+      "text": "Hành động nói rõ hơn lời nói trong việc thể hiện tình yêu",
       "reverse": false,
       "trait": "A"
     }

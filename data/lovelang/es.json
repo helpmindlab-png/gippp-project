@@ -9,74 +9,74 @@
   "ui": {
     "testName": "Test de Lenguajes del Amor",
     "description": "Descubre cómo das y recibes amor",
-    "security": "🔒 Seguro: Sin almacenamiento de datos",
+    "security": "🔒 Seguridad: No se almacenan datos",
     "processing": "Analizando datos...",
-    "reportTitle": "Mis Lenguajes del Amor",
-    "recommendTitle": "💕 Consejos para Relaciones",
+    "reportTitle": "나의 사랑의 언어",
+    "recommendTitle": "💕 관계를 위한 조언",
     "actions": {
-      "viewAmazon": "📚 Libros de Relaciones",
-      "saveImg": "💾 Guardar como Imagen",
-      "retest": "🔄 Repetir Test",
-      "qrNote": "¡Haz el test con tu pareja!"
+      "viewAmazon": "📚 연애 심리 도서",
+      "saveImg": "💾 결과 저장",
+      "retest": "🔄 다시 하기",
+      "qrNote": "연인과 함께 테스트해보세요!"
     },
     "viral": {
-      "viralTitle": "¿Cuál es tu lenguaje del amor?",
-      "viralSub": "¡Comienza el test ahora!"
+      "viralTitle": "당신의 사랑 언어는?",
+      "viralSub": "파트너와 함께 확인하세요!"
     },
     "labels": [
-      "Totalmente en desacuerdo",
-      "En desacuerdo",
-      "Neutral",
-      "De acuerdo",
-      "Totalmente de acuerdo"
+      "전혀 아니다",
+      "아니다",
+      "보통이다",
+      "그렇다",
+      "매우 그렇다"
     ]
   },
   "items": [
     {
       "id": "LL1",
-      "text": "\"사랑해\"라는 말을 자주 듣고 싶다",
+      "text": "Quiero escuchar \"te amo\" con frecuencia",
       "reverse": false,
       "trait": "W"
     },
     {
       "id": "LL2",
-      "text": "함께 시간을 보내는 것이 가장 소중하다",
+      "text": "El tiempo de calidad juntos es lo más importante para mí",
       "reverse": false,
       "trait": "Q"
     },
     {
       "id": "LL3",
-      "text": "작은 선물이라도 받으면 정말 기쁘다",
+      "text": "Incluso los pequeños regalos me hacen muy feliz",
       "reverse": false,
       "trait": "G"
     },
     {
       "id": "LL4",
-      "text": "집안일을 도와주면 사랑받는다고 느낀다",
+      "text": "El afecto físico me hace sentir amado/a",
       "reverse": false,
       "trait": "A"
     },
     {
       "id": "LL5",
-      "text": "포옹이나 스킨십이 중요하다",
+      "text": "Me siento amado/a cuando alguien hace cosas por mí",
       "reverse": false,
       "trait": "T"
     },
     {
       "id": "LL6",
-      "text": "격려와 칭찬의 말이 큰 힘이 된다",
+      "text": "Las palabras de aliento significan mucho para mí",
       "reverse": false,
       "trait": "W"
     },
     {
       "id": "LL7",
-      "text": "깊은 대화를 나눌 때 가장 친밀감을 느낀다",
+      "text": "La atención exclusiva importa más que los regalos",
       "reverse": false,
       "trait": "Q"
     },
     {
       "id": "LL8",
-      "text": "실질적인 도움을 주는 것이 진짜 사랑이다",
+      "text": "Los hechos hablan más que las palabras al demostrar amor",
       "reverse": false,
       "trait": "A"
     }

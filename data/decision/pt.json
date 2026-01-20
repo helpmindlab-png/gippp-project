@@ -7,76 +7,76 @@
     "lastUpdated": "2026-01-19"
   },
   "ui": {
-    "testName": "Estilo de Tomada de Decisão",
-    "description": "Entenda sua abordagem de tomada de decisão",
-    "security": "🔒 Seguro: Sem armazenamento de dados",
+    "testName": "의사결정 스타일 테스트",
+    "description": "당신은 어떻게 선택하고 결정하나요?",
+    "security": "🔒 Segurança: Nenhum dado armazenado",
     "processing": "Analisando dados...",
-    "reportTitle": "Meu Estilo de Decisão",
+    "reportTitle": "나의 의사결정 유형",
     "recommendTitle": "💡 더 나은 결정을 위한 팁",
     "actions": {
-      "viewAmazon": "📚 Ver Livros Recomendados",
-      "saveImg": "💾 Salvar como Imagem",
-      "retest": "🔄 Refazer Teste",
+      "viewAmazon": "📚 의사결정 관련 도서",
+      "saveImg": "💾 결과 저장",
+      "retest": "🔄 다시 하기",
       "qrNote": "친구와 비교해보세요!"
     },
     "viral": {
-      "viralTitle": "Como você toma decisões?",
-      "viralSub": "Comece o teste agora!"
+      "viralTitle": "당신의 선택 스타일은?",
+      "viralSub": "직관형? 분석형? 지금 확인!"
     },
     "labels": [
-      "Discordo totalmente",
-      "Discordo",
-      "Neutro",
-      "Concordo",
-      "Concordo totalmente"
+      "전혀 아니다",
+      "아니다",
+      "보통이다",
+      "그렇다",
+      "매우 그렇다"
     ]
   },
   "items": [
     {
       "id": "DS1",
-      "text": "중요한 결정을 내릴 때 데이터와 사실을 먼저 본다",
+      "text": "Olho para dados e fatos primeiro ao tomar decisões importantes",
       "reverse": false,
       "trait": "A"
     },
     {
       "id": "DS2",
-      "text": "직감이 \"이거다!\" 하면 바로 결정한다",
+      "text": "Quando minha intuição diz \"é isso!\", decido imediatamente",
       "reverse": false,
       "trait": "I"
     },
     {
       "id": "DS3",
-      "text": "다른 사람의 의견을 듣고 참고한다",
+      "text": "Escuto opiniões dos outros antes de decidir",
       "reverse": false,
       "trait": "D"
     },
     {
       "id": "DS4",
-      "text": "결정을 미루고 최대한 늦게 선택한다",
+      "text": "Tendo a adiar decisões o máximo possível",
       "reverse": false,
       "trait": "V"
     },
     {
       "id": "DS5",
-      "text": "장단점 리스트를 작성해서 비교한다",
+      "text": "Faço listas de prós e contras para comparar opções",
       "reverse": false,
       "trait": "A"
     },
     {
       "id": "DS6",
-      "text": "결정 후에도 계속 고민하고 후회한다",
+      "text": "Continuo duvidando depois de decidir",
       "reverse": false,
       "trait": "V"
     },
     {
       "id": "DS7",
-      "text": "경험과 감각으로 빠르게 판단한다",
+      "text": "Confio na minha experiência e faço julgamentos rápidos",
       "reverse": false,
       "trait": "I"
     },
     {
       "id": "DS8",
-      "text": "전문가나 주변 사람에게 조언을 구한다",
+      "text": "Busco conselho de especialistas ou pessoas próximas",
       "reverse": false,
       "trait": "D"
     }

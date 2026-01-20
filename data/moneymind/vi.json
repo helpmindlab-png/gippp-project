@@ -7,88 +7,88 @@
     "lastUpdated": "2026-01-19"
   },
   "ui": {
-    "testName": "Tư duy tiền bạc",
-    "description": "Khám phá thái độ tài chính của bạn",
-    "security": "🔒 An toàn: Không lưu trữ dữ liệu",
+    "testName": "금전 태도 테스트",
+    "description": "당신의 돈에 대한 생각과 습관을 알아보세요",
+    "security": "🔒 Bảo mật: Không lưu trữ dữ liệu",
     "processing": "Đang phân tích dữ liệu...",
-    "reportTitle": "Hồ sơ tài chính của tôi",
+    "reportTitle": "나의 머니 마인드셋",
     "recommendTitle": "💰 건강한 재무 습관을 위한 조언",
     "actions": {
-      "viewAmazon": "📚 Xem sách được đề xuất",
-      "saveImg": "💾 Lưu dưới dạng hình ảnh",
-      "retest": "🔄 Làm lại bài kiểm tra",
+      "viewAmazon": "📚 재테크 관련 도서",
+      "saveImg": "💾 결과 저장",
+      "retest": "🔄 다시 하기",
       "qrNote": "친구와 비교해보세요!"
     },
     "viral": {
-      "viralTitle": "Tư duy tiền bạc của bạn là gì?",
-      "viralSub": "Bắt đầu bài kiểm tra ngay!"
+      "viralTitle": "당신의 금전 태도는?",
+      "viralSub": "저축형? 투자형? 소비형?"
     },
     "labels": [
-      "Hoàn toàn không đồng ý",
-      "Không đồng ý",
-      "Trung lập",
-      "Đồng ý",
-      "Hoàn toàn đồng ý"
+      "전혀 아니다",
+      "아니다",
+      "보통이다",
+      "그렇다",
+      "매우 그렇다"
     ]
   },
   "items": [
     {
       "id": "MM1",
-      "text": "매달 일정 금액을 저축하는 것이 최우선이다",
+      "text": "Tiết kiệm và đầu tư là ưu tiên hàng đầu của tôi",
       "reverse": false,
       "trait": "S"
     },
     {
       "id": "MM2",
-      "text": "돈은 불리기 위해 투자해야 한다고 생각한다",
+      "text": "Chi tiền bây giờ là cách tôi tìm thấy hạnh phúc",
       "reverse": false,
       "trait": "I"
     },
     {
       "id": "MM3",
-      "text": "좋은 경험과 물건을 위해 돈을 쓰는 것이 중요하다",
+      "text": "Tôi lập và tuân theo kế hoạch tài chính dài hạn",
       "reverse": false,
       "trait": "C"
     },
     {
       "id": "MM4",
-      "text": "돈을 쓸 때마다 죄책감을 느낀다",
+      "text": "Nếu thứ gì đó trông tốt, tôi mua theo cảm tính",
       "reverse": false,
       "trait": "W"
     },
     {
       "id": "MM5",
-      "text": "비상금과 노후 자금을 미리 준비한다",
+      "text": "Tôi tập trung vào giá trị thay vì mua rẻ",
       "reverse": false,
       "trait": "S"
     },
     {
       "id": "MM6",
-      "text": "주식, 부동산 등 투자 공부를 한다",
+      "text": "Tôi tích cực sử dụng giảm giá, khuyến mãi và phiếu giảm giá",
       "reverse": false,
       "trait": "I"
     },
     {
       "id": "MM7",
-      "text": "현재의 행복을 위해 돈을 쓰는 것이 당연하다",
+      "text": "Chi tiền cho trải nghiệm và kỷ niệm là xứng đáng",
       "reverse": false,
       "trait": "C"
     },
     {
       "id": "MM8",
-      "text": "돈 이야기를 하는 것이 불편하다",
+      "text": "Mua những món đồ hữu hình mang lại sự hài lòng cho tôi",
       "reverse": false,
       "trait": "W"
     },
     {
       "id": "MM9",
-      "text": "가계부를 쓰고 예산을 관리한다",
+      "text": "Tôi đặt mục tiêu tài chính cụ thể với thời hạn",
       "reverse": false,
       "trait": "S"
     },
     {
       "id": "MM10",
-      "text": "위험을 감수하더라도 높은 수익을 추구한다",
+      "text": "Nói về tiền bạc khiến tôi căng thẳng",
       "reverse": false,
       "trait": "I"
     }

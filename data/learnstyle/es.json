@@ -7,76 +7,76 @@
     "lastUpdated": "2026-01-19"
   },
   "ui": {
-    "testName": "Estilo de Aprendizaje",
-    "description": "Comprende cómo aprendes mejor",
-    "security": "🔒 Seguro: Sin almacenamiento de datos",
+    "testName": "학습 유형 테스트",
+    "description": "당신에게 맞는 공부 방법을 찾아보세요",
+    "security": "🔒 Seguridad: No se almacenan datos",
     "processing": "Analizando datos...",
-    "reportTitle": "Mi Perfil de Aprendizaje",
+    "reportTitle": "나의 학습 스타일",
     "recommendTitle": "📚 효과적인 학습 전략",
     "actions": {
-      "viewAmazon": "📚 Ver Libros Recomendados",
-      "saveImg": "💾 Guardar como Imagen",
-      "retest": "🔄 Repetir Test",
+      "viewAmazon": "📚 학습법 관련 도서",
+      "saveImg": "💾 결과 저장",
+      "retest": "🔄 다시 하기",
       "qrNote": "친구와 비교해보세요!"
     },
     "viral": {
-      "viralTitle": "¿Cómo aprendes?",
-      "viralSub": "¡Comienza el test ahora!"
+      "viralTitle": "당신의 학습 스타일은?",
+      "viralSub": "나에게 맞는 공부법 찾기!"
     },
     "labels": [
-      "Totalmente en desacuerdo",
-      "En desacuerdo",
-      "Neutral",
-      "De acuerdo",
-      "Totalmente de acuerdo"
+      "전혀 아니다",
+      "아니다",
+      "보통이다",
+      "그렇다",
+      "매우 그렇다"
     ]
   },
   "items": [
     {
       "id": "LS1",
-      "text": "그림, 도표, 영상을 보면서 배우는 게 좋다",
+      "text": "Aprendo mejor con imágenes, diagramas y videos",
       "reverse": false,
       "trait": "V"
     },
     {
       "id": "LS2",
-      "text": "강의를 듣거나 오디오북으로 공부하는 게 편하다",
+      "text": "Aprender escuchando explicaciones funciona bien para mí",
       "reverse": false,
       "trait": "A"
     },
     {
       "id": "LS3",
-      "text": "직접 해보면서 배우는 것이 가장 효과적이다",
+      "text": "Aprendo tocando y manipulando cosas con las manos",
       "reverse": false,
       "trait": "K"
     },
     {
       "id": "LS4",
-      "text": "책을 읽고 요약 노트를 작성하는 걸 좋아한다",
+      "text": "Estudio mejor solo en un lugar tranquilo",
       "reverse": false,
       "trait": "R"
     },
     {
       "id": "LS5",
-      "text": "색깔 펜으로 형광펜 치고 마인드맵을 그린다",
+      "text": "Aprendo bien a través de la discusión con amigos",
       "reverse": false,
       "trait": "V"
     },
     {
       "id": "LS6",
-      "text": "스터디 그룹에서 토론하며 배우는 게 좋다",
+      "text": "Estudio la teoría primero, luego practico",
       "reverse": false,
       "trait": "A"
     },
     {
       "id": "LS7",
-      "text": "실험이나 프로젝트로 직접 만들어보는 걸 선호한다",
+      "text": "Pruebo las cosas primero, luego entiendo los principios",
       "reverse": false,
       "trait": "K"
     },
     {
       "id": "LS8",
-      "text": "조용히 혼자 책 읽고 정리하는 시간이 필요하다",
+      "text": "Tomar notas y organizar me ayuda a recordar",
       "reverse": false,
       "trait": "R"
     }

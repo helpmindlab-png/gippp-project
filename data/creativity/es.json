@@ -7,88 +7,88 @@
     "lastUpdated": "2026-01-19"
   },
   "ui": {
-    "testName": "Tipo de Creatividad",
-    "description": "Descubre tu enfoque creativo",
-    "security": "🔒 Seguro: Sin almacenamiento de datos",
+    "testName": "창의성 유형 테스트",
+    "description": "당신의 창의적 사고 방식을 알아보세요",
+    "security": "🔒 Seguridad: No se almacenan datos",
     "processing": "Analizando datos...",
-    "reportTitle": "Mi Perfil de Creatividad",
+    "reportTitle": "나의 창의성 프로필",
     "recommendTitle": "💡 창의력을 키우는 방법",
     "actions": {
-      "viewAmazon": "📚 Ver Libros Recomendados",
-      "saveImg": "💾 Guardar como Imagen",
-      "retest": "🔄 Repetir Test",
+      "viewAmazon": "📚 창의성 관련 도서",
+      "saveImg": "💾 결과 저장",
+      "retest": "🔄 다시 하기",
       "qrNote": "친구와 비교해보세요!"
     },
     "viral": {
-      "viralTitle": "¿Cuál es tu tipo de creatividad?",
-      "viralSub": "¡Comienza el test ahora!"
+      "viralTitle": "당신의 창의성 유형은?",
+      "viralSub": "혁신가? 예술가? 실험가?"
     },
     "labels": [
-      "Totalmente en desacuerdo",
-      "En desacuerdo",
-      "Neutral",
-      "De acuerdo",
-      "Totalmente de acuerdo"
+      "전혀 아니다",
+      "아니다",
+      "보통이다",
+      "그렇다",
+      "매우 그렇다"
     ]
   },
   "items": [
     {
       "id": "CR1",
-      "text": "새로운 아이디어가 끊임없이 떠오른다",
+      "text": "Se me ocurren nuevas ideas varias veces al día",
       "reverse": false,
       "trait": "I"
     },
     {
       "id": "CR2",
-      "text": "예술, 음악, 디자인에 끌린다",
+      "text": "Disfruto actividades artísticas como dibujar, música o escribir",
       "reverse": false,
       "trait": "A"
     },
     {
       "id": "CR3",
-      "text": "실험하고 시도해보는 것을 즐긴다",
+      "text": "Encuentro formas de resolver problemas de manera diferente a otros",
       "reverse": false,
       "trait": "E"
     },
     {
       "id": "CR4",
-      "text": "기존 것을 개선하고 최적화하는 것을 좋아한다",
+      "text": "A menudo imagino mundos o visualizo el futuro",
       "reverse": false,
       "trait": "O"
     },
     {
       "id": "CR5",
-      "text": "전혀 다른 분야를 연결해서 생각한다",
+      "text": "Prefiero la libertad sobre reglas y marcos",
       "reverse": false,
       "trait": "I"
     },
     {
       "id": "CR6",
-      "text": "감정과 감성을 표현하는 것이 중요하다",
+      "text": "Las sesiones de lluvia de ideas e ideas son divertidas para mí",
       "reverse": false,
       "trait": "A"
     },
     {
       "id": "CR7",
-      "text": "실패를 두려워하지 않고 계속 도전한다",
+      "text": "Miro las cosas desde múltiples perspectivas",
       "reverse": false,
       "trait": "E"
     },
     {
       "id": "CR8",
-      "text": "체계적으로 분석하고 논리적으로 개선한다",
+      "text": "Soy más feliz cuando creo algo nuevo",
       "reverse": false,
       "trait": "O"
     },
     {
       "id": "CR9",
-      "text": "\"왜?\"라는 질문을 자주 던진다",
+      "text": "Trato de mejorar o transformar métodos existentes",
       "reverse": false,
       "trait": "I"
     },
     {
       "id": "CR10",
-      "text": "아름다움과 조화를 추구한다",
+      "text": "Soy curioso/a y ansioso/a por aprender varias cosas",
       "reverse": false,
       "trait": "A"
     }

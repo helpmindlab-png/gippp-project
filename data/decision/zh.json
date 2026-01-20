@@ -7,76 +7,76 @@
     "lastUpdated": "2026-01-19"
   },
   "ui": {
-    "testName": "决策风格",
-    "description": "了解您的决策方法",
+    "testName": "决策风格测试",
+    "description": "了解你如何做重要决定",
     "security": "🔒 安全：不存储数据",
-    "processing": "数据分析中...",
-    "reportTitle": "我的决策风格",
+    "processing": "正在分析数据...",
+    "reportTitle": "나의 의사결정 유형",
     "recommendTitle": "💡 더 나은 결정을 위한 팁",
     "actions": {
-      "viewAmazon": "📚 查看推荐书籍",
-      "saveImg": "💾 保存为图片",
-      "retest": "🔄 重新测试",
+      "viewAmazon": "📚 의사결정 관련 도서",
+      "saveImg": "💾 결과 저장",
+      "retest": "🔄 다시 하기",
       "qrNote": "친구와 비교해보세요!"
     },
     "viral": {
-      "viralTitle": "您如何做决定？",
-      "viralSub": "立即开始测试！"
+      "viralTitle": "당신의 선택 스타일은?",
+      "viralSub": "직관형? 분석형? 지금 확인!"
     },
     "labels": [
-      "完全不同意",
-      "不同意",
-      "中立",
-      "同意",
-      "非常同意"
+      "전혀 아니다",
+      "아니다",
+      "보통이다",
+      "그렇다",
+      "매우 그렇다"
     ]
   },
   "items": [
     {
       "id": "DS1",
-      "text": "중요한 결정을 내릴 때 데이터와 사실을 먼저 본다",
+      "text": "做重要决定时，我会先看数据和事实",
       "reverse": false,
       "trait": "A"
     },
     {
       "id": "DS2",
-      "text": "직감이 \"이거다!\" 하면 바로 결정한다",
+      "text": "当直觉告诉我\"就是这个\"时，我会立即决定",
       "reverse": false,
       "trait": "I"
     },
     {
       "id": "DS3",
-      "text": "다른 사람의 의견을 듣고 참고한다",
+      "text": "我会听取他人的意见作为参考",
       "reverse": false,
       "trait": "D"
     },
     {
       "id": "DS4",
-      "text": "결정을 미루고 최대한 늦게 선택한다",
+      "text": "我倾向于尽可能推迟做决定",
       "reverse": false,
       "trait": "V"
     },
     {
       "id": "DS5",
-      "text": "장단점 리스트를 작성해서 비교한다",
+      "text": "我会列出优缺点清单进行比较",
       "reverse": false,
       "trait": "A"
     },
     {
       "id": "DS6",
-      "text": "결정 후에도 계속 고민하고 후회한다",
+      "text": "决定之后我还是会不断纠结和后悔",
       "reverse": false,
       "trait": "V"
     },
     {
       "id": "DS7",
-      "text": "경험과 감각으로 빠르게 판단한다",
+      "text": "我凭经验和感觉快速做判断",
       "reverse": false,
       "trait": "I"
     },
     {
       "id": "DS8",
-      "text": "전문가나 주변 사람에게 조언을 구한다",
+      "text": "我会向专家或身边的人寻求建议",
       "reverse": false,
       "trait": "D"
     }

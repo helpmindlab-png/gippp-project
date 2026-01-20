@@ -7,76 +7,76 @@
     "lastUpdated": "2026-01-19"
   },
   "ui": {
-    "testName": "学習スタイル",
-    "description": "最適な学習方法を理解する",
-    "security": "🔒 安全：データ保存なし",
+    "testName": "学習スタイル診断",
+    "description": "あなたに合った学び方がわかる",
+    "security": "🔒 セキュリティ: データ保存なし",
     "processing": "データ分析中...",
-    "reportTitle": "私の学習プロフィール",
+    "reportTitle": "나의 학습 스타일",
     "recommendTitle": "📚 효과적인 학습 전략",
     "actions": {
-      "viewAmazon": "📚 おすすめの本を見る",
-      "saveImg": "💾 画像として保存",
-      "retest": "🔄 再テスト",
+      "viewAmazon": "📚 학습법 관련 도서",
+      "saveImg": "💾 결과 저장",
+      "retest": "🔄 다시 하기",
       "qrNote": "친구와 비교해보세요!"
     },
     "viral": {
-      "viralTitle": "どう学びますか？",
-      "viralSub": "今すぐテストを始めましょう！"
+      "viralTitle": "당신의 학습 스타일은?",
+      "viralSub": "나에게 맞는 공부법 찾기!"
     },
     "labels": [
-      "全く違う",
-      "違う",
-      "どちらでもない",
-      "そう思う",
-      "強くそう思う"
+      "전혀 아니다",
+      "아니다",
+      "보통이다",
+      "그렇다",
+      "매우 그렇다"
     ]
   },
   "items": [
     {
       "id": "LS1",
-      "text": "그림, 도표, 영상을 보면서 배우는 게 좋다",
+      "text": "図、グラフ、映像で学ぶときが最も理解しやすい",
       "reverse": false,
       "trait": "V"
     },
     {
       "id": "LS2",
-      "text": "강의를 듣거나 오디오북으로 공부하는 게 편하다",
+      "text": "説明を聞きながら学ぶのが効果的",
       "reverse": false,
       "trait": "A"
     },
     {
       "id": "LS3",
-      "text": "직접 해보면서 배우는 것이 가장 효과적이다",
+      "text": "実際に触って操作しながら学ぶ",
       "reverse": false,
       "trait": "K"
     },
     {
       "id": "LS4",
-      "text": "책을 읽고 요약 노트를 작성하는 걸 좋아한다",
+      "text": "一人で静かな場所で集中して勉強する",
       "reverse": false,
       "trait": "R"
     },
     {
       "id": "LS5",
-      "text": "색깔 펜으로 형광펜 치고 마인드맵을 그린다",
+      "text": "友達と一緒に議論しながら学ぶのが良い",
       "reverse": false,
       "trait": "V"
     },
     {
       "id": "LS6",
-      "text": "스터디 그룹에서 토론하며 배우는 게 좋다",
+      "text": "理論を先に学んでから実践する",
       "reverse": false,
       "trait": "A"
     },
     {
       "id": "LS7",
-      "text": "실험이나 프로젝트로 직접 만들어보는 걸 선호한다",
+      "text": "まず試してみてから原理を理解する",
       "reverse": false,
       "trait": "K"
     },
     {
       "id": "LS8",
-      "text": "조용히 혼자 책 읽고 정리하는 시간이 필요하다",
+      "text": "ノートを取りながら整理すると覚えやすい",
       "reverse": false,
       "trait": "R"
     }

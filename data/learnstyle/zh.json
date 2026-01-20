@@ -7,76 +7,76 @@
     "lastUpdated": "2026-01-19"
   },
   "ui": {
-    "testName": "学习风格",
-    "description": "了解您最佳的学习方式",
+    "testName": "学习风格测试",
+    "description": "发现最适合你的学习方式",
     "security": "🔒 安全：不存储数据",
-    "processing": "数据分析中...",
-    "reportTitle": "我的学习档案",
+    "processing": "正在分析数据...",
+    "reportTitle": "나의 학습 스타일",
     "recommendTitle": "📚 효과적인 학습 전략",
     "actions": {
-      "viewAmazon": "📚 查看推荐书籍",
-      "saveImg": "💾 保存为图片",
-      "retest": "🔄 重新测试",
+      "viewAmazon": "📚 학습법 관련 도서",
+      "saveImg": "💾 결과 저장",
+      "retest": "🔄 다시 하기",
       "qrNote": "친구와 비교해보세요!"
     },
     "viral": {
-      "viralTitle": "您如何学习？",
-      "viralSub": "立即开始测试！"
+      "viralTitle": "당신의 학습 스타일은?",
+      "viralSub": "나에게 맞는 공부법 찾기!"
     },
     "labels": [
-      "完全不同意",
-      "不同意",
-      "中立",
-      "同意",
-      "非常同意"
+      "전혀 아니다",
+      "아니다",
+      "보통이다",
+      "그렇다",
+      "매우 그렇다"
     ]
   },
   "items": [
     {
       "id": "LS1",
-      "text": "그림, 도표, 영상을 보면서 배우는 게 좋다",
+      "text": "用图片、图表和视频学习时理解得最好",
       "reverse": false,
       "trait": "V"
     },
     {
       "id": "LS2",
-      "text": "강의를 듣거나 오디오북으로 공부하는 게 편하다",
+      "text": "边听讲解边学习对我很有效",
       "reverse": false,
       "trait": "A"
     },
     {
       "id": "LS3",
-      "text": "직접 해보면서 배우는 것이 가장 효과적이다",
+      "text": "我通过实际操作来学习",
       "reverse": false,
       "trait": "K"
     },
     {
       "id": "LS4",
-      "text": "책을 읽고 요약 노트를 작성하는 걸 좋아한다",
+      "text": "我在安静的地方独自学习效果最好",
       "reverse": false,
       "trait": "R"
     },
     {
       "id": "LS5",
-      "text": "색깔 펜으로 형광펜 치고 마인드맵을 그린다",
+      "text": "和朋友一起讨论学习对我很有帮助",
       "reverse": false,
       "trait": "V"
     },
     {
       "id": "LS6",
-      "text": "스터디 그룹에서 토론하며 배우는 게 좋다",
+      "text": "我先学习理论，然后再实践",
       "reverse": false,
       "trait": "A"
     },
     {
       "id": "LS7",
-      "text": "실험이나 프로젝트로 직접 만들어보는 걸 선호한다",
+      "text": "我先动手尝试，然后理解原理",
       "reverse": false,
       "trait": "K"
     },
     {
       "id": "LS8",
-      "text": "조용히 혼자 책 읽고 정리하는 시간이 필요하다",
+      "text": "做笔记和整理有助于我记忆",
       "reverse": false,
       "trait": "R"
     }

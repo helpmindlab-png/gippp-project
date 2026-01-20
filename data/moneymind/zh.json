@@ -7,88 +7,88 @@
     "lastUpdated": "2026-01-19"
   },
   "ui": {
-    "testName": "金钱观念",
-    "description": "发现您的财务态度",
+    "testName": "金钱观测试",
+    "description": "了解你与金钱的关系",
     "security": "🔒 安全：不存储数据",
-    "processing": "数据分析中...",
-    "reportTitle": "我的金钱档案",
+    "processing": "正在分析数据...",
+    "reportTitle": "나의 머니 마인드셋",
     "recommendTitle": "💰 건강한 재무 습관을 위한 조언",
     "actions": {
-      "viewAmazon": "📚 查看推荐书籍",
-      "saveImg": "💾 保存为图片",
-      "retest": "🔄 重新测试",
+      "viewAmazon": "📚 재테크 관련 도서",
+      "saveImg": "💾 결과 저장",
+      "retest": "🔄 다시 하기",
       "qrNote": "친구와 비교해보세요!"
     },
     "viral": {
-      "viralTitle": "您的金钱观念是什么？",
-      "viralSub": "立即开始测试！"
+      "viralTitle": "당신의 금전 태도는?",
+      "viralSub": "저축형? 투자형? 소비형?"
     },
     "labels": [
-      "完全不同意",
-      "不同意",
-      "中立",
-      "同意",
-      "非常同意"
+      "전혀 아니다",
+      "아니다",
+      "보통이다",
+      "그렇다",
+      "매우 그렇다"
     ]
   },
   "items": [
     {
       "id": "MM1",
-      "text": "매달 일정 금액을 저축하는 것이 최우선이다",
+      "text": "储蓄和投资是我生活中的首要任务",
       "reverse": false,
       "trait": "S"
     },
     {
       "id": "MM2",
-      "text": "돈은 불리기 위해 투자해야 한다고 생각한다",
+      "text": "现在花钱享受才是幸福",
       "reverse": false,
       "trait": "I"
     },
     {
       "id": "MM3",
-      "text": "좋은 경험과 물건을 위해 돈을 쓰는 것이 중요하다",
+      "text": "我会制定并执行长期财务计划",
       "reverse": false,
       "trait": "C"
     },
     {
       "id": "MM4",
-      "text": "돈을 쓸 때마다 죄책감을 느낀다",
+      "text": "看到喜欢的就会冲动购买",
       "reverse": false,
       "trait": "W"
     },
     {
       "id": "MM5",
-      "text": "비상금과 노후 자금을 미리 준비한다",
+      "text": "比起便宜，我更看重价值",
       "reverse": false,
       "trait": "S"
     },
     {
       "id": "MM6",
-      "text": "주식, 부동산 등 투자 공부를 한다",
+      "text": "我会积极利用折扣、促销和优惠券",
       "reverse": false,
       "trait": "I"
     },
     {
       "id": "MM7",
-      "text": "현재의 행복을 위해 돈을 쓰는 것이 당연하다",
+      "text": "在体验和回忆上花钱很值得",
       "reverse": false,
       "trait": "C"
     },
     {
       "id": "MM8",
-      "text": "돈 이야기를 하는 것이 불편하다",
+      "text": "购买看得见摸得着的物品让我满足",
       "reverse": false,
       "trait": "W"
     },
     {
       "id": "MM9",
-      "text": "가계부를 쓰고 예산을 관리한다",
+      "text": "我会设定明确的财务目标和期限",
       "reverse": false,
       "trait": "S"
     },
     {
       "id": "MM10",
-      "text": "위험을 감수하더라도 높은 수익을 추구한다",
+      "text": "谈论金钱让我感到压力，想要回避",
       "reverse": false,
       "trait": "I"
     }

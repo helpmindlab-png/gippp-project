@@ -7,88 +7,88 @@
     "lastUpdated": "2026-01-19"
   },
   "ui": {
-    "testName": "Estilo de Comunicación",
-    "description": "Descubre tus patrones de comunicación",
-    "security": "🔒 Seguro: Sin almacenamiento de datos",
+    "testName": "소통 유형 테스트",
+    "description": "당신의 커뮤니케이션 스타일을 알아보세요",
+    "security": "🔒 Seguridad: No se almacenan datos",
     "processing": "Analizando datos...",
-    "reportTitle": "Mi Perfil de Comunicación",
+    "reportTitle": "나의 소통 스타일",
     "recommendTitle": "💬 더 나은 소통을 위한 팁",
     "actions": {
-      "viewAmazon": "📚 Ver Libros Recomendados",
-      "saveImg": "💾 Guardar como Imagen",
-      "retest": "🔄 Repetir Test",
+      "viewAmazon": "📚 소통 관련 도서",
+      "saveImg": "💾 결과 저장",
+      "retest": "🔄 다시 하기",
       "qrNote": "동료와 함께 테스트해보세요!"
     },
     "viral": {
-      "viralTitle": "¿Cuál es tu estilo de comunicación?",
-      "viralSub": "¡Comienza el test ahora!"
+      "viralTitle": "당신의 소통 스타일은?",
+      "viralSub": "주도형? 표현형? 우호형? 분석형?"
     },
     "labels": [
-      "Totalmente en desacuerdo",
-      "En desacuerdo",
-      "Neutral",
-      "De acuerdo",
-      "Totalmente de acuerdo"
+      "전혀 아니다",
+      "아니다",
+      "보통이다",
+      "그렇다",
+      "매우 그렇다"
     ]
   },
   "items": [
     {
       "id": "CS1",
-      "text": "회의에서 주로 말을 주도하고 방향을 제시한다",
+      "text": "Tiendo a liderar las discusiones y sugerir direcciones en reuniones",
       "reverse": false,
       "trait": "D"
     },
     {
       "id": "CS2",
-      "text": "이야기할 때 감정과 감탄을 많이 표현한다",
+      "text": "Hablo de manera que los demás se sientan cómodos",
       "reverse": false,
       "trait": "I"
     },
     {
       "id": "CS3",
-      "text": "다른 사람의 말을 끝까지 경청하고 공감한다",
+      "text": "Explico las cosas con razonamiento lógico y datos",
       "reverse": false,
       "trait": "S"
     },
     {
       "id": "CS4",
-      "text": "논리적이고 정확한 표현을 중요하게 여긴다",
+      "text": "Uso narrativas al comunicar",
       "reverse": false,
       "trait": "C"
     },
     {
       "id": "CS5",
-      "text": "빠르게 결론을 내고 다음으로 넘어가고 싶어한다",
+      "text": "Comunico los puntos principales de manera concisa y clara",
       "reverse": false,
       "trait": "D"
     },
     {
       "id": "CS6",
-      "text": "농담과 유머로 분위기를 밝게 만든다",
+      "text": "Uso gestos y expresiones faciales abundantemente",
       "reverse": false,
       "trait": "I"
     },
     {
       "id": "CS7",
-      "text": "갈등을 피하고 조화를 유지하려 노력한다",
+      "text": "Escucho atentamente hasta que otros terminen de hablar",
       "reverse": false,
       "trait": "S"
     },
     {
       "id": "CS8",
-      "text": "대화 전 충분한 준비와 자료를 갖춘다",
+      "text": "Disfruto los debates y persuado con lógica",
       "reverse": false,
       "trait": "C"
     },
     {
       "id": "CS9",
-      "text": "솔직하고 직설적으로 의견을 말한다",
+      "text": "Expreso las cosas indirectamente en lugar de confrontar directamente",
       "reverse": false,
       "trait": "D"
     },
     {
       "id": "CS10",
-      "text": "세부사항보다는 전체 그림과 비전을 이야기한다",
+      "text": "Uso humor para crear un ambiente relajado",
       "reverse": false,
       "trait": "I"
     }

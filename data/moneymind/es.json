@@ -7,88 +7,88 @@
     "lastUpdated": "2026-01-19"
   },
   "ui": {
-    "testName": "Mentalidad Financiera",
-    "description": "Descubre tus actitudes financieras",
-    "security": "🔒 Seguro: Sin almacenamiento de datos",
+    "testName": "금전 태도 테스트",
+    "description": "당신의 돈에 대한 생각과 습관을 알아보세요",
+    "security": "🔒 Seguridad: No se almacenan datos",
     "processing": "Analizando datos...",
-    "reportTitle": "Mi Perfil Financiero",
+    "reportTitle": "나의 머니 마인드셋",
     "recommendTitle": "💰 건강한 재무 습관을 위한 조언",
     "actions": {
-      "viewAmazon": "📚 Ver Libros Recomendados",
-      "saveImg": "💾 Guardar como Imagen",
-      "retest": "🔄 Repetir Test",
+      "viewAmazon": "📚 재테크 관련 도서",
+      "saveImg": "💾 결과 저장",
+      "retest": "🔄 다시 하기",
       "qrNote": "친구와 비교해보세요!"
     },
     "viral": {
-      "viralTitle": "¿Cuál es tu mentalidad financiera?",
-      "viralSub": "¡Comienza el test ahora!"
+      "viralTitle": "당신의 금전 태도는?",
+      "viralSub": "저축형? 투자형? 소비형?"
     },
     "labels": [
-      "Totalmente en desacuerdo",
-      "En desacuerdo",
-      "Neutral",
-      "De acuerdo",
-      "Totalmente de acuerdo"
+      "전혀 아니다",
+      "아니다",
+      "보통이다",
+      "그렇다",
+      "매우 그렇다"
     ]
   },
   "items": [
     {
       "id": "MM1",
-      "text": "매달 일정 금액을 저축하는 것이 최우선이다",
+      "text": "Ahorrar e invertir son mis principales prioridades",
       "reverse": false,
       "trait": "S"
     },
     {
       "id": "MM2",
-      "text": "돈은 불리기 위해 투자해야 한다고 생각한다",
+      "text": "Gastar dinero ahora es como encuentro la felicidad",
       "reverse": false,
       "trait": "I"
     },
     {
       "id": "MM3",
-      "text": "좋은 경험과 물건을 위해 돈을 쓰는 것이 중요하다",
+      "text": "Hago y sigo planes financieros a largo plazo",
       "reverse": false,
       "trait": "C"
     },
     {
       "id": "MM4",
-      "text": "돈을 쓸 때마다 죄책감을 느낀다",
+      "text": "Si algo se ve bien, lo compro por impulso",
       "reverse": false,
       "trait": "W"
     },
     {
       "id": "MM5",
-      "text": "비상금과 노후 자금을 미리 준비한다",
+      "text": "Me enfoco en el valor en lugar de comprar barato",
       "reverse": false,
       "trait": "S"
     },
     {
       "id": "MM6",
-      "text": "주식, 부동산 등 투자 공부를 한다",
+      "text": "Uso activamente descuentos, ventas y cupones",
       "reverse": false,
       "trait": "I"
     },
     {
       "id": "MM7",
-      "text": "현재의 행복을 위해 돈을 쓰는 것이 당연하다",
+      "text": "Vale la pena gastar en experiencias y recuerdos",
       "reverse": false,
       "trait": "C"
     },
     {
       "id": "MM8",
-      "text": "돈 이야기를 하는 것이 불편하다",
+      "text": "Comprar artículos tangibles me da satisfacción",
       "reverse": false,
       "trait": "W"
     },
     {
       "id": "MM9",
-      "text": "가계부를 쓰고 예산을 관리한다",
+      "text": "Establezco metas financieras específicas con plazos",
       "reverse": false,
       "trait": "S"
     },
     {
       "id": "MM10",
-      "text": "위험을 감수하더라도 높은 수익을 추구한다",
+      "text": "Hablar de dinero me estresa",
       "reverse": false,
       "trait": "I"
     }

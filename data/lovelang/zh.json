@@ -8,75 +8,75 @@
   },
   "ui": {
     "testName": "爱的语言测试",
-    "description": "了解您表达和接受爱的方式",
+    "description": "发现你表达和接受爱的方式",
     "security": "🔒 安全：不存储数据",
-    "processing": "数据分析中...",
-    "reportTitle": "我的爱的语言",
-    "recommendTitle": "💕 关系建议",
+    "processing": "正在分析数据...",
+    "reportTitle": "나의 사랑의 언어",
+    "recommendTitle": "💕 관계를 위한 조언",
     "actions": {
-      "viewAmazon": "📚 恋爱心理书籍",
-      "saveImg": "💾 保存为图片",
-      "retest": "🔄 重新测试",
-      "qrNote": "与伴侣一起测试！"
+      "viewAmazon": "📚 연애 심리 도서",
+      "saveImg": "💾 결과 저장",
+      "retest": "🔄 다시 하기",
+      "qrNote": "연인과 함께 테스트해보세요!"
     },
     "viral": {
-      "viralTitle": "您的爱的语言是什么？",
-      "viralSub": "立即开始测试！"
+      "viralTitle": "당신의 사랑 언어는?",
+      "viralSub": "파트너와 함께 확인하세요!"
     },
     "labels": [
-      "完全不同意",
-      "不同意",
-      "中立",
-      "同意",
-      "非常同意"
+      "전혀 아니다",
+      "아니다",
+      "보통이다",
+      "그렇다",
+      "매우 그렇다"
     ]
   },
   "items": [
     {
       "id": "LL1",
-      "text": "\"사랑해\"라는 말을 자주 듣고 싶다",
+      "text": "我想常常听到\"我爱你\"这句话",
       "reverse": false,
       "trait": "W"
     },
     {
       "id": "LL2",
-      "text": "함께 시간을 보내는 것이 가장 소중하다",
+      "text": "一起度过的时光对我来说最重要",
       "reverse": false,
       "trait": "Q"
     },
     {
       "id": "LL3",
-      "text": "작은 선물이라도 받으면 정말 기쁘다",
+      "text": "收到小礼物也会让我很开心",
       "reverse": false,
       "trait": "G"
     },
     {
       "id": "LL4",
-      "text": "집안일을 도와주면 사랑받는다고 느낀다",
+      "text": "拥抱等身体接触让我感受到爱",
       "reverse": false,
       "trait": "A"
     },
     {
       "id": "LL5",
-      "text": "포옹이나 스킨십이 중요하다",
+      "text": "当有人为我做事时，我感到被爱",
       "reverse": false,
       "trait": "T"
     },
     {
       "id": "LL6",
-      "text": "격려와 칭찬의 말이 큰 힘이 된다",
+      "text": "鼓励和赞美的话对我意义重大",
       "reverse": false,
       "trait": "W"
     },
     {
       "id": "LL7",
-      "text": "깊은 대화를 나눌 때 가장 친밀감을 느낀다",
+      "text": "比起礼物，专注的陪伴更重要",
       "reverse": false,
       "trait": "Q"
     },
     {
       "id": "LL8",
-      "text": "실질적인 도움을 주는 것이 진짜 사랑이다",
+      "text": "用行动表达爱意比语言更有力",
       "reverse": false,
       "trait": "A"
     }

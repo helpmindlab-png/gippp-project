@@ -7,88 +7,88 @@
     "lastUpdated": "2026-01-19"
   },
   "ui": {
-    "testName": "コミュニケーションスタイル",
-    "description": "あなたのコミュニケーションパターンを発見",
-    "security": "🔒 安全：データ保存なし",
+    "testName": "コミュニケーションスタイル診断",
+    "description": "あなたの伝え方・話し方の特徴がわかる",
+    "security": "🔒 セキュリティ: データ保存なし",
     "processing": "データ分析中...",
-    "reportTitle": "私のコミュニケーションプロフィール",
+    "reportTitle": "나의 소통 스타일",
     "recommendTitle": "💬 더 나은 소통을 위한 팁",
     "actions": {
-      "viewAmazon": "📚 おすすめの本を見る",
-      "saveImg": "💾 画像として保存",
-      "retest": "🔄 再テスト",
+      "viewAmazon": "📚 소통 관련 도서",
+      "saveImg": "💾 결과 저장",
+      "retest": "🔄 다시 하기",
       "qrNote": "동료와 함께 테스트해보세요!"
     },
     "viral": {
-      "viralTitle": "あなたのコミュニケーションスタイルは？",
-      "viralSub": "今すぐテストを始めましょう！"
+      "viralTitle": "당신의 소통 스타일은?",
+      "viralSub": "주도형? 표현형? 우호형? 분석형?"
     },
     "labels": [
-      "全く違う",
-      "違う",
-      "どちらでもない",
-      "そう思う",
-      "強くそう思う"
+      "전혀 아니다",
+      "아니다",
+      "보통이다",
+      "그렇다",
+      "매우 그렇다"
     ]
   },
   "items": [
     {
       "id": "CS1",
-      "text": "회의에서 주로 말을 주도하고 방향을 제시한다",
+      "text": "会議では話をリードして方向性を示すことが多い",
       "reverse": false,
       "trait": "D"
     },
     {
       "id": "CS2",
-      "text": "이야기할 때 감정과 감탄을 많이 표현한다",
+      "text": "相手が心地よく感じるように配慮して話す",
       "reverse": false,
       "trait": "I"
     },
     {
       "id": "CS3",
-      "text": "다른 사람의 말을 끝까지 경청하고 공감한다",
+      "text": "論理的な根拠やデータを使って説明する",
       "reverse": false,
       "trait": "S"
     },
     {
       "id": "CS4",
-      "text": "논리적이고 정확한 표현을 중요하게 여긴다",
+      "text": "話すときストーリーテリングの手法を使う",
       "reverse": false,
       "trait": "C"
     },
     {
       "id": "CS5",
-      "text": "빠르게 결론을 내고 다음으로 넘어가고 싶어한다",
+      "text": "簡潔明瞭に要点だけを伝える",
       "reverse": false,
       "trait": "D"
     },
     {
       "id": "CS6",
-      "text": "농담과 유머로 분위기를 밝게 만든다",
+      "text": "ジェスチャーや表情を豊かに使う",
       "reverse": false,
       "trait": "I"
     },
     {
       "id": "CS7",
-      "text": "갈등을 피하고 조화를 유지하려 노력한다",
+      "text": "相手の話を最後まで丁寧に聞く",
       "reverse": false,
       "trait": "S"
     },
     {
       "id": "CS8",
-      "text": "대화 전 충분한 준비와 자료를 갖춘다",
+      "text": "議論や討論が好きで論理的に説得する",
       "reverse": false,
       "trait": "C"
     },
     {
       "id": "CS9",
-      "text": "솔직하고 직설적으로 의견을 말한다",
+      "text": "直接的な衝突より婉曲的に表現する",
       "reverse": false,
       "trait": "D"
     },
     {
       "id": "CS10",
-      "text": "세부사항보다는 전체 그림과 비전을 이야기한다",
+      "text": "ユーモアを交えて和やかな雰囲気を作る",
       "reverse": false,
       "trait": "I"
     }

@@ -7,88 +7,88 @@
     "lastUpdated": "2026-01-19"
   },
   "ui": {
-    "testName": "創造性タイプ",
-    "description": "あなたの創造的アプローチを発見",
-    "security": "🔒 安全：データ保存なし",
+    "testName": "創造性タイプ診断",
+    "description": "あなたの創造性の特徴がわかる",
+    "security": "🔒 セキュリティ: データ保存なし",
     "processing": "データ分析中...",
-    "reportTitle": "私の創造性プロフィール",
+    "reportTitle": "나의 창의성 프로필",
     "recommendTitle": "💡 창의력을 키우는 방법",
     "actions": {
-      "viewAmazon": "📚 おすすめの本を見る",
-      "saveImg": "💾 画像として保存",
-      "retest": "🔄 再テスト",
+      "viewAmazon": "📚 창의성 관련 도서",
+      "saveImg": "💾 결과 저장",
+      "retest": "🔄 다시 하기",
       "qrNote": "친구와 비교해보세요!"
     },
     "viral": {
-      "viralTitle": "あなたの創造性タイプは？",
-      "viralSub": "今すぐテストを始めましょう！"
+      "viralTitle": "당신의 창의성 유형은?",
+      "viralSub": "혁신가? 예술가? 실험가?"
     },
     "labels": [
-      "全く違う",
-      "違う",
-      "どちらでもない",
-      "そう思う",
-      "強くそう思う"
+      "전혀 아니다",
+      "아니다",
+      "보통이다",
+      "그렇다",
+      "매우 그렇다"
     ]
   },
   "items": [
     {
       "id": "CR1",
-      "text": "새로운 아이디어가 끊임없이 떠오른다",
+      "text": "1日に何度も新しいアイデアが浮かぶ",
       "reverse": false,
       "trait": "I"
     },
     {
       "id": "CR2",
-      "text": "예술, 음악, 디자인에 끌린다",
+      "text": "絵を描いたり音楽を作ったり文章を書くのが好き",
       "reverse": false,
       "trait": "A"
     },
     {
       "id": "CR3",
-      "text": "실험하고 시도해보는 것을 즐긴다",
+      "text": "問題を他の人と違う方法で解決する",
       "reverse": false,
       "trait": "E"
     },
     {
       "id": "CR4",
-      "text": "기존 것을 개선하고 최적화하는 것을 좋아한다",
+      "text": "架空の世界や未来をよく想像する",
       "reverse": false,
       "trait": "O"
     },
     {
       "id": "CR5",
-      "text": "전혀 다른 분야를 연결해서 생각한다",
+      "text": "ルールや枠組みより自由なやり方が好き",
       "reverse": false,
       "trait": "I"
     },
     {
       "id": "CR6",
-      "text": "감정과 감성을 표현하는 것이 중요하다",
+      "text": "ブレインストーミングやアイデア会議が楽しい",
       "reverse": false,
       "trait": "A"
     },
     {
       "id": "CR7",
-      "text": "실패를 두려워하지 않고 계속 도전한다",
+      "text": "一つのことを様々な角度から見る",
       "reverse": false,
       "trait": "E"
     },
     {
       "id": "CR8",
-      "text": "체계적으로 분석하고 논리적으로 개선한다",
+      "text": "何か新しいものを作っているときが一番幸せ",
       "reverse": false,
       "trait": "O"
     },
     {
       "id": "CR9",
-      "text": "\"왜?\"라는 질문을 자주 던진다",
+      "text": "既存のやり方を改善したり変えようとする",
       "reverse": false,
       "trait": "I"
     },
     {
       "id": "CR10",
-      "text": "아름다움과 조화를 추구한다",
+      "text": "気になることが多くて色々なことを学びたがる",
       "reverse": false,
       "trait": "A"
     }

@@ -7,88 +7,88 @@
     "lastUpdated": "2026-01-19"
   },
   "ui": {
-    "testName": "Loại sáng tạo",
-    "description": "Khám phá cách tiếp cận sáng tạo của bạn",
-    "security": "🔒 An toàn: Không lưu trữ dữ liệu",
+    "testName": "창의성 유형 테스트",
+    "description": "당신의 창의적 사고 방식을 알아보세요",
+    "security": "🔒 Bảo mật: Không lưu trữ dữ liệu",
     "processing": "Đang phân tích dữ liệu...",
-    "reportTitle": "Hồ sơ sáng tạo của tôi",
+    "reportTitle": "나의 창의성 프로필",
     "recommendTitle": "💡 창의력을 키우는 방법",
     "actions": {
-      "viewAmazon": "📚 Xem sách được đề xuất",
-      "saveImg": "💾 Lưu dưới dạng hình ảnh",
-      "retest": "🔄 Làm lại bài kiểm tra",
+      "viewAmazon": "📚 창의성 관련 도서",
+      "saveImg": "💾 결과 저장",
+      "retest": "🔄 다시 하기",
       "qrNote": "친구와 비교해보세요!"
     },
     "viral": {
-      "viralTitle": "Loại sáng tạo của bạn là gì?",
-      "viralSub": "Bắt đầu bài kiểm tra ngay!"
+      "viralTitle": "당신의 창의성 유형은?",
+      "viralSub": "혁신가? 예술가? 실험가?"
     },
     "labels": [
-      "Hoàn toàn không đồng ý",
-      "Không đồng ý",
-      "Trung lập",
-      "Đồng ý",
-      "Hoàn toàn đồng ý"
+      "전혀 아니다",
+      "아니다",
+      "보통이다",
+      "그렇다",
+      "매우 그렇다"
     ]
   },
   "items": [
     {
       "id": "CR1",
-      "text": "새로운 아이디어가 끊임없이 떠오른다",
+      "text": "Ý tưởng mới đến với tôi nhiều lần trong ngày",
       "reverse": false,
       "trait": "I"
     },
     {
       "id": "CR2",
-      "text": "예술, 음악, 디자인에 끌린다",
+      "text": "Tôi thích các hoạt động nghệ thuật như vẽ, âm nhạc hoặc viết lách",
       "reverse": false,
       "trait": "A"
     },
     {
       "id": "CR3",
-      "text": "실험하고 시도해보는 것을 즐긴다",
+      "text": "Tôi tìm cách giải quyết vấn đề khác với người khác",
       "reverse": false,
       "trait": "E"
     },
     {
       "id": "CR4",
-      "text": "기존 것을 개선하고 최적화하는 것을 좋아한다",
+      "text": "Tôi thường tưởng tượng thế giới hoặc hình dung tương lai",
       "reverse": false,
       "trait": "O"
     },
     {
       "id": "CR5",
-      "text": "전혀 다른 분야를 연결해서 생각한다",
+      "text": "Tôi thích tự do hơn quy tắc và khuôn khổ",
       "reverse": false,
       "trait": "I"
     },
     {
       "id": "CR6",
-      "text": "감정과 감성을 표현하는 것이 중요하다",
+      "text": "Các buổi brainstorming và ý tưởng thú vị với tôi",
       "reverse": false,
       "trait": "A"
     },
     {
       "id": "CR7",
-      "text": "실패를 두려워하지 않고 계속 도전한다",
+      "text": "Tôi nhìn mọi thứ từ nhiều góc độ",
       "reverse": false,
       "trait": "E"
     },
     {
       "id": "CR8",
-      "text": "체계적으로 분석하고 논리적으로 개선한다",
+      "text": "Tôi hạnh phúc nhất khi tạo ra điều gì đó mới",
       "reverse": false,
       "trait": "O"
     },
     {
       "id": "CR9",
-      "text": "\"왜?\"라는 질문을 자주 던진다",
+      "text": "Tôi cố gắng cải thiện hoặc biến đổi các phương pháp hiện có",
       "reverse": false,
       "trait": "I"
     },
     {
       "id": "CR10",
-      "text": "아름다움과 조화를 추구한다",
+      "text": "Tôi tò mò và háo hức học hỏi nhiều thứ",
       "reverse": false,
       "trait": "A"
     }
