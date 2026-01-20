@@ -7,76 +7,76 @@
     "lastUpdated": "2026-01-19"
   },
   "ui": {
-    "testName": "ストレス対処法",
-    "description": "ストレスへの対処方法を理解",
-    "security": "🔒 安全：データ保存なし",
+    "testName": "ストレス対処スタイル診断",
+    "description": "あなたのストレス解消法がわかる",
+    "security": "🔒 セキュリティ: データ保存なし",
     "processing": "データ分析中...",
-    "reportTitle": "私のストレス管理",
+    "reportTitle": "나의 스트레스 대처법",
     "recommendTitle": "🧘 건강한 스트레스 관리 팁",
     "actions": {
-      "viewAmazon": "📚 おすすめの本を見る",
-      "saveImg": "💾 画像として保存",
-      "retest": "🔄 再テスト",
+      "viewAmazon": "📚 스트레스 관리 도서",
+      "saveImg": "💾 결과 저장",
+      "retest": "🔄 다시 하기",
       "qrNote": "친구와 공유하기"
     },
     "viral": {
-      "viralTitle": "どうストレスに対処しますか？",
-      "viralSub": "今すぐテストを始めましょう！"
+      "viralTitle": "스트레스 받을 때 당신은?",
+      "viralSub": "나의 대처 유형 확인하기!"
     },
     "labels": [
-      "全く違う",
-      "違う",
-      "どちらでもない",
-      "そう思う",
-      "強くそう思う"
+      "전혀 아니다",
+      "아니다",
+      "보통이다",
+      "그렇다",
+      "매우 그렇다"
     ]
   },
   "items": [
     {
       "id": "SS1",
-      "text": "스트레스 받으면 즉시 문제를 해결하려 한다",
+      "text": "汗をかいて運動するとストレスが解消される",
       "reverse": false,
       "trait": "P"
     },
     {
       "id": "SS2",
-      "text": "힘들 때 친구에게 전화해서 이야기한다",
+      "text": "友達や家族に話して発散する",
       "reverse": false,
       "trait": "S"
     },
     {
       "id": "SS3",
-      "text": "운동이나 취미로 스트레스를 푼다",
+      "text": "一人の時間を持って心を整理する",
       "reverse": false,
       "trait": "E"
     },
     {
       "id": "SS4",
-      "text": "스트레스를 피하고 나중에 생각한다",
+      "text": "原因を探してすぐに問題を解決する",
       "reverse": false,
       "trait": "A"
     },
     {
       "id": "SS5",
-      "text": "계획을 세우고 단계별로 대응한다",
+      "text": "ストレスになる状況自体を避ける",
       "reverse": false,
       "trait": "P"
     },
     {
       "id": "SS6",
-      "text": "누군가에게 위로받고 공감받고 싶다",
+      "text": "瞑想やヨガ、呼吸法で心を落ち着かせる",
       "reverse": false,
       "trait": "S"
     },
     {
       "id": "SS7",
-      "text": "영화, 게임, 쇼핑으로 기분 전환한다",
+      "text": "趣味や好きなことに没頭する",
       "reverse": false,
       "trait": "E"
     },
     {
       "id": "SS8",
-      "text": "스트레스 상황 자체를 회피한다",
+      "text": "ぐっすり眠るとストレスが消える",
       "reverse": false,
       "trait": "A"
     }

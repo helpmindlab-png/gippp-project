@@ -7,76 +7,76 @@
     "lastUpdated": "2026-01-19"
   },
   "ui": {
-    "testName": "Stressbewältigungsstil",
-    "description": "Verstehen Sie, wie Sie mit Stress umgehen",
-    "security": "🔒 Sicher: Keine Datenspeicherung",
+    "testName": "스트레스 대처 유형",
+    "description": "힘들 때 당신은 어떻게 대응하나요?",
+    "security": "🔒 Sicherheit: Keine Datenspeicherung",
     "processing": "Daten werden analysiert...",
-    "reportTitle": "Mein Stressmanagement",
+    "reportTitle": "나의 스트레스 대처법",
     "recommendTitle": "🧘 건강한 스트레스 관리 팁",
     "actions": {
-      "viewAmazon": "📚 Empfohlene Bücher ansehen",
-      "saveImg": "💾 Als Bild speichern",
-      "retest": "🔄 Test wiederholen",
+      "viewAmazon": "📚 스트레스 관리 도서",
+      "saveImg": "💾 결과 저장",
+      "retest": "🔄 다시 하기",
       "qrNote": "친구와 공유하기"
     },
     "viral": {
-      "viralTitle": "Wie gehen Sie mit Stress um?",
-      "viralSub": "Starten Sie jetzt den Test!"
+      "viralTitle": "스트레스 받을 때 당신은?",
+      "viralSub": "나의 대처 유형 확인하기!"
     },
     "labels": [
-      "Stimme überhaupt nicht zu",
-      "Stimme nicht zu",
-      "Neutral",
-      "Stimme zu",
-      "Stimme voll zu"
+      "전혀 아니다",
+      "아니다",
+      "보통이다",
+      "그렇다",
+      "매우 그렇다"
     ]
   },
   "items": [
     {
       "id": "SS1",
-      "text": "스트레스 받으면 즉시 문제를 해결하려 한다",
+      "text": "Bewegung und Schwitzen lindert meinen Stress",
       "reverse": false,
       "trait": "P"
     },
     {
       "id": "SS2",
-      "text": "힘들 때 친구에게 전화해서 이야기한다",
+      "text": "Ich bewältige Stress, indem ich mit Freunden oder Familie spreche",
       "reverse": false,
       "trait": "S"
     },
     {
       "id": "SS3",
-      "text": "운동이나 취미로 스트레스를 푼다",
+      "text": "Ich verarbeite Stress mit Zeit für mich allein",
       "reverse": false,
       "trait": "E"
     },
     {
       "id": "SS4",
-      "text": "스트레스를 피하고 나중에 생각한다",
+      "text": "Ich finde die Ursache und löse Probleme sofort",
       "reverse": false,
       "trait": "A"
     },
     {
       "id": "SS5",
-      "text": "계획을 세우고 단계별로 대응한다",
+      "text": "Ich vermeide stressige Situationen vollständig",
       "reverse": false,
       "trait": "P"
     },
     {
       "id": "SS6",
-      "text": "누군가에게 위로받고 공감받고 싶다",
+      "text": "Ich finde Ruhe durch Meditation, Yoga oder Atmung",
       "reverse": false,
       "trait": "S"
     },
     {
       "id": "SS7",
-      "text": "영화, 게임, 쇼핑으로 기분 전환한다",
+      "text": "Ich vertiefe mich in Hobbys oder Lieblingsaktivitäten",
       "reverse": false,
       "trait": "E"
     },
     {
       "id": "SS8",
-      "text": "스트레스 상황 자체를 회피한다",
+      "text": "Ein guter Schlaf lässt meinen Stress verschwinden",
       "reverse": false,
       "trait": "A"
     }

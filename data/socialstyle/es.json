@@ -7,88 +7,88 @@
     "lastUpdated": "2026-01-19"
   },
   "ui": {
-    "testName": "Estilo Social",
-    "description": "Comprende tus patrones de interacción social",
-    "security": "🔒 Seguro: Sin almacenamiento de datos",
+    "testName": "사교 스타일 테스트",
+    "description": "당신의 사회적 관계 스타일을 알아보세요",
+    "security": "🔒 Seguridad: No se almacenan datos",
     "processing": "Analizando datos...",
-    "reportTitle": "Mi Perfil Social",
+    "reportTitle": "나의 사교 프로필",
     "recommendTitle": "🎭 더 나은 관계를 위한 조언",
     "actions": {
-      "viewAmazon": "📚 Ver Libros Recomendados",
-      "saveImg": "💾 Guardar como Imagen",
-      "retest": "🔄 Repetir Test",
+      "viewAmazon": "📚 인간관계 관련 도서",
+      "saveImg": "💾 결과 저장",
+      "retest": "🔄 다시 하기",
       "qrNote": "친구와 함께 테스트하기!"
     },
     "viral": {
-      "viralTitle": "¿Cuál es tu estilo social?",
-      "viralSub": "¡Comienza el test ahora!"
+      "viralTitle": "당신의 사교 스타일은?",
+      "viralSub": "나비형? 선택형? 관찰형?"
     },
     "labels": [
-      "Totalmente en desacuerdo",
-      "En desacuerdo",
-      "Neutral",
-      "De acuerdo",
-      "Totalmente de acuerdo"
+      "전혀 아니다",
+      "아니다",
+      "보통이다",
+      "그렇다",
+      "매우 그렇다"
     ]
   },
   "items": [
     {
       "id": "SC1",
-      "text": "파티나 모임에서 먼저 말을 건다",
+      "text": "Estar con personas me energiza",
       "reverse": false,
       "trait": "B"
     },
     {
       "id": "SC2",
-      "text": "소수의 친한 친구와 깊은 관계를 선호한다",
+      "text": "Las reuniones pequeñas se sienten más cómodas que las grandes",
       "reverse": false,
       "trait": "S"
     },
     {
       "id": "SC3",
-      "text": "사람들과 어울리는 것보다 혼자가 편하다",
+      "text": "Me acerco a extraños e inicio conversaciones",
       "reverse": false,
       "trait": "O"
     },
     {
       "id": "SC4",
-      "text": "다양한 사람들과 폭넓게 교류한다",
+      "text": "Prefiero conversaciones profundas sobre charla trivial",
       "reverse": false,
       "trait": "B"
     },
     {
       "id": "SC5",
-      "text": "친구를 사귈 때 신중하게 선택한다",
+      "text": "Disfruto asistir a fiestas, eventos y reuniones",
       "reverse": false,
       "trait": "S"
     },
     {
       "id": "SC6",
-      "text": "모임에서 구석에서 관찰하는 편이다",
+      "text": "Necesito tiempo a solas después de estar con personas",
       "reverse": false,
       "trait": "O"
     },
     {
       "id": "SC7",
-      "text": "낯선 사람과도 금방 친해진다",
+      "text": "Me involucro activamente incluso en entornos desconocidos",
       "reverse": false,
       "trait": "B"
     },
     {
       "id": "SC8",
-      "text": "얕은 대화보다 의미 있는 대화를 원한다",
+      "text": "Observo en silencio y hablo solo cuando es necesario",
       "reverse": false,
       "trait": "S"
     },
     {
       "id": "SC9",
-      "text": "사회적 상황이 피곤하고 에너지가 소진된다",
+      "text": "Disfruto hacer networking con personas diversas",
       "reverse": false,
       "trait": "O"
     },
     {
       "id": "SC10",
-      "text": "친구 소개팅이나 네트워킹을 즐긴다",
+      "text": "Mantengo algunas relaciones profundas a largo plazo",
       "reverse": false,
       "trait": "B"
     }

@@ -7,88 +7,88 @@
     "lastUpdated": "2026-01-19"
   },
   "ui": {
-    "testName": "Phong cách xã hội",
-    "description": "Hiểu các mẫu tương tác xã hội của bạn",
-    "security": "🔒 An toàn: Không lưu trữ dữ liệu",
+    "testName": "사교 스타일 테스트",
+    "description": "당신의 사회적 관계 스타일을 알아보세요",
+    "security": "🔒 Bảo mật: Không lưu trữ dữ liệu",
     "processing": "Đang phân tích dữ liệu...",
-    "reportTitle": "Hồ sơ xã hội của tôi",
+    "reportTitle": "나의 사교 프로필",
     "recommendTitle": "🎭 더 나은 관계를 위한 조언",
     "actions": {
-      "viewAmazon": "📚 Xem sách được đề xuất",
-      "saveImg": "💾 Lưu dưới dạng hình ảnh",
-      "retest": "🔄 Làm lại bài kiểm tra",
+      "viewAmazon": "📚 인간관계 관련 도서",
+      "saveImg": "💾 결과 저장",
+      "retest": "🔄 다시 하기",
       "qrNote": "친구와 함께 테스트하기!"
     },
     "viral": {
-      "viralTitle": "Phong cách xã hội của bạn là gì?",
-      "viralSub": "Bắt đầu bài kiểm tra ngay!"
+      "viralTitle": "당신의 사교 스타일은?",
+      "viralSub": "나비형? 선택형? 관찰형?"
     },
     "labels": [
-      "Hoàn toàn không đồng ý",
-      "Không đồng ý",
-      "Trung lập",
-      "Đồng ý",
-      "Hoàn toàn đồng ý"
+      "전혀 아니다",
+      "아니다",
+      "보통이다",
+      "그렇다",
+      "매우 그렇다"
     ]
   },
   "items": [
     {
       "id": "SC1",
-      "text": "파티나 모임에서 먼저 말을 건다",
+      "text": "Ở bên mọi người khiến tôi tràn đầy năng lượng",
       "reverse": false,
       "trait": "B"
     },
     {
       "id": "SC2",
-      "text": "소수의 친한 친구와 깊은 관계를 선호한다",
+      "text": "Các buổi tụ tập nhỏ thoải mái hơn các buổi lớn",
       "reverse": false,
       "trait": "S"
     },
     {
       "id": "SC3",
-      "text": "사람들과 어울리는 것보다 혼자가 편하다",
+      "text": "Tôi tiếp cận người lạ và bắt đầu trò chuyện",
       "reverse": false,
       "trait": "O"
     },
     {
       "id": "SC4",
-      "text": "다양한 사람들과 폭넓게 교류한다",
+      "text": "Tôi thích những cuộc trò chuyện sâu hơn là trò chuyện phiếm",
       "reverse": false,
       "trait": "B"
     },
     {
       "id": "SC5",
-      "text": "친구를 사귈 때 신중하게 선택한다",
+      "text": "Tôi thích tham dự tiệc tùng, sự kiện và buổi gặp gỡ",
       "reverse": false,
       "trait": "S"
     },
     {
       "id": "SC6",
-      "text": "모임에서 구석에서 관찰하는 편이다",
+      "text": "Tôi cần thời gian một mình sau khi ở bên mọi người",
       "reverse": false,
       "trait": "O"
     },
     {
       "id": "SC7",
-      "text": "낯선 사람과도 금방 친해진다",
+      "text": "Tôi tích cực tham gia ngay cả trong môi trường xa lạ",
       "reverse": false,
       "trait": "B"
     },
     {
       "id": "SC8",
-      "text": "얕은 대화보다 의미 있는 대화를 원한다",
+      "text": "Tôi quan sát lặng lẽ và chỉ nói khi cần thiết",
       "reverse": false,
       "trait": "S"
     },
     {
       "id": "SC9",
-      "text": "사회적 상황이 피곤하고 에너지가 소진된다",
+      "text": "Tôi thích kết nối với nhiều người khác nhau",
       "reverse": false,
       "trait": "O"
     },
     {
       "id": "SC10",
-      "text": "친구 소개팅이나 네트워킹을 즐긴다",
+      "text": "Tôi duy trì một vài mối quan hệ sâu sắc lâu dài",
       "reverse": false,
       "trait": "B"
     }

@@ -7,76 +7,76 @@
     "lastUpdated": "2026-01-19"
   },
   "ui": {
-    "testName": "Phong cách đối phó căng thẳng",
-    "description": "Hiểu cách bạn xử lý căng thẳng",
-    "security": "🔒 An toàn: Không lưu trữ dữ liệu",
+    "testName": "스트레스 대처 유형",
+    "description": "힘들 때 당신은 어떻게 대응하나요?",
+    "security": "🔒 Bảo mật: Không lưu trữ dữ liệu",
     "processing": "Đang phân tích dữ liệu...",
-    "reportTitle": "Quản lý căng thẳng của tôi",
+    "reportTitle": "나의 스트레스 대처법",
     "recommendTitle": "🧘 건강한 스트레스 관리 팁",
     "actions": {
-      "viewAmazon": "📚 Xem sách được đề xuất",
-      "saveImg": "💾 Lưu dưới dạng hình ảnh",
-      "retest": "🔄 Làm lại bài kiểm tra",
+      "viewAmazon": "📚 스트레스 관리 도서",
+      "saveImg": "💾 결과 저장",
+      "retest": "🔄 다시 하기",
       "qrNote": "친구와 공유하기"
     },
     "viral": {
-      "viralTitle": "Bạn xử lý căng thẳng như thế nào?",
-      "viralSub": "Bắt đầu bài kiểm tra ngay!"
+      "viralTitle": "스트레스 받을 때 당신은?",
+      "viralSub": "나의 대처 유형 확인하기!"
     },
     "labels": [
-      "Hoàn toàn không đồng ý",
-      "Không đồng ý",
-      "Trung lập",
-      "Đồng ý",
-      "Hoàn toàn đồng ý"
+      "전혀 아니다",
+      "아니다",
+      "보통이다",
+      "그렇다",
+      "매우 그렇다"
     ]
   },
   "items": [
     {
       "id": "SS1",
-      "text": "스트레스 받으면 즉시 문제를 해결하려 한다",
+      "text": "Tập thể dục và đổ mồ hôi giảm căng thẳng của tôi",
       "reverse": false,
       "trait": "P"
     },
     {
       "id": "SS2",
-      "text": "힘들 때 친구에게 전화해서 이야기한다",
+      "text": "Tôi đối phó bằng cách nói chuyện với bạn bè hoặc gia đình",
       "reverse": false,
       "trait": "S"
     },
     {
       "id": "SS3",
-      "text": "운동이나 취미로 스트레스를 푼다",
+      "text": "Tôi xử lý căng thẳng với thời gian một mình",
       "reverse": false,
       "trait": "E"
     },
     {
       "id": "SS4",
-      "text": "스트레스를 피하고 나중에 생각한다",
+      "text": "Tôi tìm nguyên nhân và giải quyết vấn đề ngay lập tức",
       "reverse": false,
       "trait": "A"
     },
     {
       "id": "SS5",
-      "text": "계획을 세우고 단계별로 대응한다",
+      "text": "Tôi hoàn toàn tránh các tình huống căng thẳng",
       "reverse": false,
       "trait": "P"
     },
     {
       "id": "SS6",
-      "text": "누군가에게 위로받고 공감받고 싶다",
+      "text": "Tôi tìm thấy sự bình tĩnh qua thiền, yoga hoặc hơi thở",
       "reverse": false,
       "trait": "S"
     },
     {
       "id": "SS7",
-      "text": "영화, 게임, 쇼핑으로 기분 전환한다",
+      "text": "Tôi đắm mình vào sở thích hoặc hoạt động yêu thích",
       "reverse": false,
       "trait": "E"
     },
     {
       "id": "SS8",
-      "text": "스트레스 상황 자체를 회피한다",
+      "text": "Một giấc ngủ ngon khiến căng thẳng của tôi biến mất",
       "reverse": false,
       "trait": "A"
     }

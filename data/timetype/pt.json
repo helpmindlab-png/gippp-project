@@ -7,76 +7,76 @@
     "lastUpdated": "2026-01-19"
   },
   "ui": {
-    "testName": "Tipo de Gestão do Tempo",
-    "description": "Descubra sua abordagem ao tempo",
-    "security": "🔒 Seguro: Sem armazenamento de dados",
+    "testName": "시간 관리 유형 테스트",
+    "description": "당신은 시간을 어떻게 사용하나요?",
+    "security": "🔒 Segurança: Nenhum dado armazenado",
     "processing": "Analisando dados...",
-    "reportTitle": "Meu Estilo de Tempo",
+    "reportTitle": "나의 시간 관리 스타일",
     "recommendTitle": "⏰ 생산성을 높이는 팁",
     "actions": {
-      "viewAmazon": "📚 Ver Livros Recomendados",
-      "saveImg": "💾 Salvar como Imagem",
-      "retest": "🔄 Refazer Teste",
+      "viewAmazon": "📚 시간관리 관련 도서",
+      "saveImg": "💾 결과 저장",
+      "retest": "🔄 다시 하기",
       "qrNote": "동료와 비교해보세요!"
     },
     "viral": {
-      "viralTitle": "Como você gerencia o tempo?",
-      "viralSub": "Comece o teste agora!"
+      "viralTitle": "당신의 시간 관리 유형은?",
+      "viralSub": "계획형? 즉흥형? 확인하기!"
     },
     "labels": [
-      "Discordo totalmente",
-      "Discordo",
-      "Neutro",
-      "Concordo",
-      "Concordo totalmente"
+      "전혀 아니다",
+      "아니다",
+      "보통이다",
+      "그렇다",
+      "매우 그렇다"
     ]
   },
   "items": [
     {
       "id": "TT1",
-      "text": "매일 아침 오늘 할 일 리스트를 작성한다",
+      "text": "Acordar cedo parece natural e confortável",
       "reverse": false,
       "trait": "P"
     },
     {
       "id": "TT2",
-      "text": "마감 직전이 되어야 집중이 잘 된다",
+      "text": "Estou mais focado/a e criativo/a tarde da noite",
       "reverse": false,
       "trait": "R"
     },
     {
       "id": "TT3",
-      "text": "여러 일을 동시에 처리하는 것이 편하다",
+      "text": "Planejo minha agenda ao minuto",
       "reverse": false,
       "trait": "M"
     },
     {
       "id": "TT4",
-      "text": "시간이 늘 부족하고 정신없이 지나간다",
+      "text": "Me sinto confortável me movendo espontaneamente sem planos",
       "reverse": false,
       "trait": "C"
     },
     {
       "id": "TT5",
-      "text": "일정을 미리 계획하고 지키려 노력한다",
+      "text": "Nunca perco compromissos agendados",
       "reverse": false,
       "trait": "P"
     },
     {
       "id": "TT6",
-      "text": "급하지 않은 일은 계속 미루게 된다",
+      "text": "Uso o tempo tranquilamente sem pressa",
       "reverse": false,
       "trait": "R"
     },
     {
       "id": "TT7",
-      "text": "메신저, SNS를 보다가 시간이 훅 지나간다",
+      "text": "Estou acostumado/a a lidar com várias coisas de uma vez",
       "reverse": false,
       "trait": "C"
     },
     {
       "id": "TT8",
-      "text": "한 번에 하나씩 집중해서 끝내는 편이다",
+      "text": "Foco em terminar uma coisa de cada vez",
       "reverse": false,
       "trait": "M"
     }

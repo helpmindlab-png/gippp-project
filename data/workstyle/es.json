@@ -7,88 +7,88 @@
     "lastUpdated": "2026-01-19"
   },
   "ui": {
-    "testName": "Evaluación del Estilo de Trabajo",
+    "testName": "Evaluación de Estilo de Trabajo",
     "description": "Descubre tu enfoque laboral y preferencias de colaboración",
-    "security": "🔒 Seguro: Sin almacenamiento de datos",
+    "security": "🔒 Seguridad: No se almacenan datos",
     "processing": "Analizando datos...",
-    "reportTitle": "Mi Perfil de Estilo de Trabajo",
+    "reportTitle": "나의 업무 스타일 리포트",
     "recommendTitle": "💡 당신을 위한 커리어 조언",
     "actions": {
-      "viewAmazon": "📚 Ver Libros Recomendados",
-      "saveImg": "💾 Guardar como Imagen",
-      "retest": "🔄 Repetir Test",
+      "viewAmazon": "📚 추천 도서 보기",
+      "saveImg": "💾 이미지로 저장",
+      "retest": "🔄 다시 테스트",
       "qrNote": "QR로 친구와 공유하기"
     },
     "viral": {
-      "viralTitle": "¿Cuál es tu estilo de trabajo?",
-      "viralSub": "¡Comienza el test ahora!"
+      "viralTitle": "당신의 업무 스타일은?",
+      "viralSub": "지금 바로 확인하세요!"
     },
     "labels": [
-      "Totalmente en desacuerdo",
-      "En desacuerdo",
-      "Neutral",
-      "De acuerdo",
-      "Totalmente de acuerdo"
+      "전혀 아니다",
+      "아니다",
+      "보통이다",
+      "그렇다",
+      "매우 그렇다"
     ]
   },
   "items": [
     {
       "id": "WS1",
-      "text": "혼자 집중해서 일할 때 가장 생산적이다",
+      "text": "Soy más productivo/a trabajando solo/a con concentración",
       "reverse": false,
       "trait": "I"
     },
     {
       "id": "WS2",
-      "text": "팀 회의에서 아이디어를 제안하는 것을 즐긴다",
+      "text": "Disfruto proponer ideas en reuniones de equipo",
       "reverse": false,
       "trait": "C"
     },
     {
       "id": "WS3",
-      "text": "프로젝트를 주도하고 방향을 제시하는 것이 자연스럽다",
+      "text": "Liderar proyectos y marcar dirección me resulta natural",
       "reverse": false,
       "trait": "L"
     },
     {
       "id": "WS4",
-      "text": "동료를 돕고 지원하는 역할이 편하다",
+      "text": "Me siento cómodo/a apoyando y ayudando a colegas",
       "reverse": false,
       "trait": "S"
     },
     {
       "id": "WS5",
-      "text": "새로운 방법을 시도하고 실험하는 것을 좋아한다",
+      "text": "Me gusta probar nuevos enfoques y experimentar",
       "reverse": false,
       "trait": "C"
     },
     {
       "id": "WS6",
-      "text": "명확한 지침과 절차가 있을 때 일하기 쉽다",
+      "text": "Las directrices y procedimientos claros facilitan el trabajo",
       "reverse": false,
       "trait": "S"
     },
     {
       "id": "WS7",
-      "text": "마감 압박 속에서 더 집중이 잘 된다",
+      "text": "La presión de los plazos me ayuda a concentrarme mejor",
       "reverse": false,
       "trait": "L"
     },
     {
       "id": "WS8",
-      "text": "여러 사람과 협업하면 에너지가 생긴다",
+      "text": "Prefiero tareas estructuradas sobre las abiertas",
       "reverse": false,
       "trait": "C"
     },
     {
       "id": "WS9",
-      "text": "업무 계획을 세우고 체계적으로 진행하는 것을 선호한다",
+      "text": "La libertad creativa en el trabajo es importante para mí",
       "reverse": false,
       "trait": "I"
     },
     {
       "id": "WS10",
-      "text": "동료들의 갈등을 중재하는 역할을 맡곤 한다",
+      "text": "La colaboración me energiza más que el trabajo en solitario",
       "reverse": false,
       "trait": "S"
     }

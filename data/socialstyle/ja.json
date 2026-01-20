@@ -7,88 +7,88 @@
     "lastUpdated": "2026-01-19"
   },
   "ui": {
-    "testName": "社交スタイル",
-    "description": "あなたの社会的交流パターンを理解",
-    "security": "🔒 安全：データ保存なし",
+    "testName": "社交スタイル診断",
+    "description": "あなたの人付き合いのスタイルがわかる",
+    "security": "🔒 セキュリティ: データ保存なし",
     "processing": "データ分析中...",
-    "reportTitle": "私の社交プロフィール",
+    "reportTitle": "나의 사교 프로필",
     "recommendTitle": "🎭 더 나은 관계를 위한 조언",
     "actions": {
-      "viewAmazon": "📚 おすすめの本を見る",
-      "saveImg": "💾 画像として保存",
-      "retest": "🔄 再テスト",
+      "viewAmazon": "📚 인간관계 관련 도서",
+      "saveImg": "💾 결과 저장",
+      "retest": "🔄 다시 하기",
       "qrNote": "친구와 함께 테스트하기!"
     },
     "viral": {
-      "viralTitle": "あなたの社交スタイルは？",
-      "viralSub": "今すぐテストを始めましょう！"
+      "viralTitle": "당신의 사교 스타일은?",
+      "viralSub": "나비형? 선택형? 관찰형?"
     },
     "labels": [
-      "全く違う",
-      "違う",
-      "どちらでもない",
-      "そう思う",
-      "強くそう思う"
+      "전혀 아니다",
+      "아니다",
+      "보통이다",
+      "그렇다",
+      "매우 그렇다"
     ]
   },
   "items": [
     {
       "id": "SC1",
-      "text": "파티나 모임에서 먼저 말을 건다",
+      "text": "人と一緒にいるとエネルギーが湧いてくる",
       "reverse": false,
       "trait": "B"
     },
     {
       "id": "SC2",
-      "text": "소수의 친한 친구와 깊은 관계를 선호한다",
+      "text": "大人数より少人数の集まりの方が心地よい",
       "reverse": false,
       "trait": "S"
     },
     {
       "id": "SC3",
-      "text": "사람들과 어울리는 것보다 혼자가 편하다",
+      "text": "初対面の人にも自分から声をかける",
       "reverse": false,
       "trait": "O"
     },
     {
       "id": "SC4",
-      "text": "다양한 사람들과 폭넓게 교류한다",
+      "text": "軽い雑談より深い話がしたい",
       "reverse": false,
       "trait": "B"
     },
     {
       "id": "SC5",
-      "text": "친구를 사귈 때 신중하게 선택한다",
+      "text": "パーティーやイベント、集まりに参加するのが楽しい",
       "reverse": false,
       "trait": "S"
     },
     {
       "id": "SC6",
-      "text": "모임에서 구석에서 관찰하는 편이다",
+      "text": "人と過ごした後は一人の時間が必要",
       "reverse": false,
       "trait": "O"
     },
     {
       "id": "SC7",
-      "text": "낯선 사람과도 금방 친해진다",
+      "text": "初めての場所でも積極的に話す",
       "reverse": false,
       "trait": "B"
     },
     {
       "id": "SC8",
-      "text": "얕은 대화보다 의미 있는 대화를 원한다",
+      "text": "静かに観察して必要なときだけ話す",
       "reverse": false,
       "trait": "S"
     },
     {
       "id": "SC9",
-      "text": "사회적 상황이 피곤하고 에너지가 소진된다",
+      "text": "色々な人とつながりを作るのが好き",
       "reverse": false,
       "trait": "O"
     },
     {
       "id": "SC10",
-      "text": "친구 소개팅이나 네트워킹을 즐긴다",
+      "text": "少数の深い関係を長く続ける方",
       "reverse": false,
       "trait": "B"
     }

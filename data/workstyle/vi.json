@@ -7,88 +7,88 @@
     "lastUpdated": "2026-01-19"
   },
   "ui": {
-    "testName": "Đánh giá phong cách làm việc",
-    "description": "Khám phá cách tiếp cận công việc và sở thích hợp tác của bạn",
-    "security": "🔒 An toàn: Không lưu trữ dữ liệu",
+    "testName": "Đánh giá Phong cách Làm việc",
+    "description": "Khám phá cách tiếp cận công việc và sở thích cộng tác",
+    "security": "🔒 Bảo mật: Không lưu trữ dữ liệu",
     "processing": "Đang phân tích dữ liệu...",
-    "reportTitle": "Hồ sơ phong cách làm việc của tôi",
+    "reportTitle": "나의 업무 스타일 리포트",
     "recommendTitle": "💡 당신을 위한 커리어 조언",
     "actions": {
-      "viewAmazon": "📚 Xem sách được đề xuất",
-      "saveImg": "💾 Lưu dưới dạng hình ảnh",
-      "retest": "🔄 Làm lại bài kiểm tra",
+      "viewAmazon": "📚 추천 도서 보기",
+      "saveImg": "💾 이미지로 저장",
+      "retest": "🔄 다시 테스트",
       "qrNote": "QR로 친구와 공유하기"
     },
     "viral": {
-      "viralTitle": "Phong cách làm việc của bạn là gì?",
-      "viralSub": "Bắt đầu bài kiểm tra ngay!"
+      "viralTitle": "당신의 업무 스타일은?",
+      "viralSub": "지금 바로 확인하세요!"
     },
     "labels": [
-      "Hoàn toàn không đồng ý",
-      "Không đồng ý",
-      "Trung lập",
-      "Đồng ý",
-      "Hoàn toàn đồng ý"
+      "전혀 아니다",
+      "아니다",
+      "보통이다",
+      "그렇다",
+      "매우 그렇다"
     ]
   },
   "items": [
     {
       "id": "WS1",
-      "text": "혼자 집중해서 일할 때 가장 생산적이다",
+      "text": "Tôi làm việc hiệu quả nhất khi tập trung một mình",
       "reverse": false,
       "trait": "I"
     },
     {
       "id": "WS2",
-      "text": "팀 회의에서 아이디어를 제안하는 것을 즐긴다",
+      "text": "Tôi thích đề xuất ý tưởng trong các cuộc họp nhóm",
       "reverse": false,
       "trait": "C"
     },
     {
       "id": "WS3",
-      "text": "프로젝트를 주도하고 방향을 제시하는 것이 자연스럽다",
+      "text": "Dẫn dắt dự án và định hướng là điều tự nhiên với tôi",
       "reverse": false,
       "trait": "L"
     },
     {
       "id": "WS4",
-      "text": "동료를 돕고 지원하는 역할이 편하다",
+      "text": "Tôi cảm thấy thoải mái khi hỗ trợ và giúp đỡ đồng nghiệp",
       "reverse": false,
       "trait": "S"
     },
     {
       "id": "WS5",
-      "text": "새로운 방법을 시도하고 실험하는 것을 좋아한다",
+      "text": "Tôi thích thử các phương pháp mới và thử nghiệm",
       "reverse": false,
       "trait": "C"
     },
     {
       "id": "WS6",
-      "text": "명확한 지침과 절차가 있을 때 일하기 쉽다",
+      "text": "Hướng dẫn và quy trình rõ ràng giúp công việc dễ dàng hơn",
       "reverse": false,
       "trait": "S"
     },
     {
       "id": "WS7",
-      "text": "마감 압박 속에서 더 집중이 잘 된다",
+      "text": "Áp lực deadline giúp tôi tập trung tốt hơn",
       "reverse": false,
       "trait": "L"
     },
     {
       "id": "WS8",
-      "text": "여러 사람과 협업하면 에너지가 생긴다",
+      "text": "Tôi thích nhiệm vụ có cấu trúc hơn nhiệm vụ mở",
       "reverse": false,
       "trait": "C"
     },
     {
       "id": "WS9",
-      "text": "업무 계획을 세우고 체계적으로 진행하는 것을 선호한다",
+      "text": "Tự do sáng tạo trong công việc quan trọng với tôi",
       "reverse": false,
       "trait": "I"
     },
     {
       "id": "WS10",
-      "text": "동료들의 갈등을 중재하는 역할을 맡곤 한다",
+      "text": "Cộng tác cho tôi năng lượng hơn làm việc một mình",
       "reverse": false,
       "trait": "S"
     }

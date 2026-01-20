@@ -7,76 +7,76 @@
     "lastUpdated": "2026-01-19"
   },
   "ui": {
-    "testName": "压力应对方式",
-    "description": "了解您如何处理压力",
+    "testName": "压力应对风格测试",
+    "description": "了解你如何应对压力",
     "security": "🔒 安全：不存储数据",
-    "processing": "数据分析中...",
-    "reportTitle": "我的压力管理",
+    "processing": "正在分析数据...",
+    "reportTitle": "나의 스트레스 대처법",
     "recommendTitle": "🧘 건강한 스트레스 관리 팁",
     "actions": {
-      "viewAmazon": "📚 查看推荐书籍",
-      "saveImg": "💾 保存为图片",
-      "retest": "🔄 重新测试",
+      "viewAmazon": "📚 스트레스 관리 도서",
+      "saveImg": "💾 결과 저장",
+      "retest": "🔄 다시 하기",
       "qrNote": "친구와 공유하기"
     },
     "viral": {
-      "viralTitle": "您如何应对压力？",
-      "viralSub": "立即开始测试！"
+      "viralTitle": "스트레스 받을 때 당신은?",
+      "viralSub": "나의 대처 유형 확인하기!"
     },
     "labels": [
-      "完全不同意",
-      "不同意",
-      "中立",
-      "同意",
-      "非常同意"
+      "전혀 아니다",
+      "아니다",
+      "보통이다",
+      "그렇다",
+      "매우 그렇다"
     ]
   },
   "items": [
     {
       "id": "SS1",
-      "text": "스트레스 받으면 즉시 문제를 해결하려 한다",
+      "text": "流汗运动能缓解我的压力",
       "reverse": false,
       "trait": "P"
     },
     {
       "id": "SS2",
-      "text": "힘들 때 친구에게 전화해서 이야기한다",
+      "text": "我通过向朋友或家人倾诉来应对",
       "reverse": false,
       "trait": "S"
     },
     {
       "id": "SS3",
-      "text": "운동이나 취미로 스트레스를 푼다",
+      "text": "我用独处的时间来调整心情",
       "reverse": false,
       "trait": "E"
     },
     {
       "id": "SS4",
-      "text": "스트레스를 피하고 나중에 생각한다",
+      "text": "我会找到原因并立即解决问题",
       "reverse": false,
       "trait": "A"
     },
     {
       "id": "SS5",
-      "text": "계획을 세우고 단계별로 대응한다",
+      "text": "我会完全避开产生压力的情况",
       "reverse": false,
       "trait": "P"
     },
     {
       "id": "SS6",
-      "text": "누군가에게 위로받고 공감받고 싶다",
+      "text": "我通过冥想、瑜伽或呼吸法来平静",
       "reverse": false,
       "trait": "S"
     },
     {
       "id": "SS7",
-      "text": "영화, 게임, 쇼핑으로 기분 전환한다",
+      "text": "我会沉浸在爱好或喜欢的事情中",
       "reverse": false,
       "trait": "E"
     },
     {
       "id": "SS8",
-      "text": "스트레스 상황 자체를 회피한다",
+      "text": "睡个好觉压力就消失了",
       "reverse": false,
       "trait": "A"
     }

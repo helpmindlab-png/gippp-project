@@ -7,76 +7,76 @@
     "lastUpdated": "2026-01-19"
   },
   "ui": {
-    "testName": "Estilo de Manejo del Estrés",
-    "description": "Comprende cómo manejas el estrés",
-    "security": "🔒 Seguro: Sin almacenamiento de datos",
+    "testName": "스트레스 대처 유형",
+    "description": "힘들 때 당신은 어떻게 대응하나요?",
+    "security": "🔒 Seguridad: No se almacenan datos",
     "processing": "Analizando datos...",
-    "reportTitle": "Mi Gestión del Estrés",
+    "reportTitle": "나의 스트레스 대처법",
     "recommendTitle": "🧘 건강한 스트레스 관리 팁",
     "actions": {
-      "viewAmazon": "📚 Ver Libros Recomendados",
-      "saveImg": "💾 Guardar como Imagen",
-      "retest": "🔄 Repetir Test",
+      "viewAmazon": "📚 스트레스 관리 도서",
+      "saveImg": "💾 결과 저장",
+      "retest": "🔄 다시 하기",
       "qrNote": "친구와 공유하기"
     },
     "viral": {
-      "viralTitle": "¿Cómo manejas el estrés?",
-      "viralSub": "¡Comienza el test ahora!"
+      "viralTitle": "스트레스 받을 때 당신은?",
+      "viralSub": "나의 대처 유형 확인하기!"
     },
     "labels": [
-      "Totalmente en desacuerdo",
-      "En desacuerdo",
-      "Neutral",
-      "De acuerdo",
-      "Totalmente de acuerdo"
+      "전혀 아니다",
+      "아니다",
+      "보통이다",
+      "그렇다",
+      "매우 그렇다"
     ]
   },
   "items": [
     {
       "id": "SS1",
-      "text": "스트레스 받으면 즉시 문제를 해결하려 한다",
+      "text": "El ejercicio y sudar alivia mi estrés",
       "reverse": false,
       "trait": "P"
     },
     {
       "id": "SS2",
-      "text": "힘들 때 친구에게 전화해서 이야기한다",
+      "text": "Manejo el estrés hablando con amigos o familia",
       "reverse": false,
       "trait": "S"
     },
     {
       "id": "SS3",
-      "text": "운동이나 취미로 스트레스를 푼다",
+      "text": "Proceso el estrés con tiempo a solas",
       "reverse": false,
       "trait": "E"
     },
     {
       "id": "SS4",
-      "text": "스트레스를 피하고 나중에 생각한다",
+      "text": "Encuentro la causa y resuelvo problemas inmediatamente",
       "reverse": false,
       "trait": "A"
     },
     {
       "id": "SS5",
-      "text": "계획을 세우고 단계별로 대응한다",
+      "text": "Evito completamente las situaciones estresantes",
       "reverse": false,
       "trait": "P"
     },
     {
       "id": "SS6",
-      "text": "누군가에게 위로받고 공감받고 싶다",
+      "text": "Encuentro calma a través de la meditación, yoga o respiración",
       "reverse": false,
       "trait": "S"
     },
     {
       "id": "SS7",
-      "text": "영화, 게임, 쇼핑으로 기분 전환한다",
+      "text": "Me sumerjo en pasatiempos o actividades favoritas",
       "reverse": false,
       "trait": "E"
     },
     {
       "id": "SS8",
-      "text": "스트레스 상황 자체를 회피한다",
+      "text": "Un buen sueño hace desaparecer mi estrés",
       "reverse": false,
       "trait": "A"
     }

@@ -7,76 +7,76 @@
     "lastUpdated": "2026-01-19"
   },
   "ui": {
-    "testName": "Loại quản lý thời gian",
-    "description": "Khám phá cách tiếp cận thời gian của bạn",
-    "security": "🔒 An toàn: Không lưu trữ dữ liệu",
+    "testName": "시간 관리 유형 테스트",
+    "description": "당신은 시간을 어떻게 사용하나요?",
+    "security": "🔒 Bảo mật: Không lưu trữ dữ liệu",
     "processing": "Đang phân tích dữ liệu...",
-    "reportTitle": "Phong cách thời gian của tôi",
+    "reportTitle": "나의 시간 관리 스타일",
     "recommendTitle": "⏰ 생산성을 높이는 팁",
     "actions": {
-      "viewAmazon": "📚 Xem sách được đề xuất",
-      "saveImg": "💾 Lưu dưới dạng hình ảnh",
-      "retest": "🔄 Làm lại bài kiểm tra",
+      "viewAmazon": "📚 시간관리 관련 도서",
+      "saveImg": "💾 결과 저장",
+      "retest": "🔄 다시 하기",
       "qrNote": "동료와 비교해보세요!"
     },
     "viral": {
-      "viralTitle": "Bạn quản lý thời gian như thế nào?",
-      "viralSub": "Bắt đầu bài kiểm tra ngay!"
+      "viralTitle": "당신의 시간 관리 유형은?",
+      "viralSub": "계획형? 즉흥형? 확인하기!"
     },
     "labels": [
-      "Hoàn toàn không đồng ý",
-      "Không đồng ý",
-      "Trung lập",
-      "Đồng ý",
-      "Hoàn toàn đồng ý"
+      "전혀 아니다",
+      "아니다",
+      "보통이다",
+      "그렇다",
+      "매우 그렇다"
     ]
   },
   "items": [
     {
       "id": "TT1",
-      "text": "매일 아침 오늘 할 일 리스트를 작성한다",
+      "text": "Thức dậy sớm cảm thấy tự nhiên và thoải mái",
       "reverse": false,
       "trait": "P"
     },
     {
       "id": "TT2",
-      "text": "마감 직전이 되어야 집중이 잘 된다",
+      "text": "Tôi tập trung và sáng tạo nhất vào đêm muộn",
       "reverse": false,
       "trait": "R"
     },
     {
       "id": "TT3",
-      "text": "여러 일을 동시에 처리하는 것이 편하다",
+      "text": "Tôi lên kế hoạch từng phút cho lịch trình",
       "reverse": false,
       "trait": "M"
     },
     {
       "id": "TT4",
-      "text": "시간이 늘 부족하고 정신없이 지나간다",
+      "text": "Tôi cảm thấy thoải mái hành động tự phát không có kế hoạch",
       "reverse": false,
       "trait": "C"
     },
     {
       "id": "TT5",
-      "text": "일정을 미리 계획하고 지키려 노력한다",
+      "text": "Tôi không bao giờ bỏ lỡ các cuộc hẹn đã định",
       "reverse": false,
       "trait": "P"
     },
     {
       "id": "TT6",
-      "text": "급하지 않은 일은 계속 미루게 된다",
+      "text": "Tôi sử dụng thời gian thong thả không vội vàng",
       "reverse": false,
       "trait": "R"
     },
     {
       "id": "TT7",
-      "text": "메신저, SNS를 보다가 시간이 훅 지나간다",
+      "text": "Tôi quen với việc xử lý nhiều việc cùng lúc",
       "reverse": false,
       "trait": "C"
     },
     {
       "id": "TT8",
-      "text": "한 번에 하나씩 집중해서 끝내는 편이다",
+      "text": "Tôi tập trung hoàn thành từng việc một",
       "reverse": false,
       "trait": "M"
     }

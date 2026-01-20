@@ -7,76 +7,76 @@
     "lastUpdated": "2026-01-19"
   },
   "ui": {
-    "testName": "時間管理タイプ",
-    "description": "時間への取り組み方を発見",
-    "security": "🔒 安全：データ保存なし",
+    "testName": "時間管理タイプ診断",
+    "description": "あなたの時間の使い方がわかる",
+    "security": "🔒 セキュリティ: データ保存なし",
     "processing": "データ分析中...",
-    "reportTitle": "私の時間スタイル",
+    "reportTitle": "나의 시간 관리 스타일",
     "recommendTitle": "⏰ 생산성을 높이는 팁",
     "actions": {
-      "viewAmazon": "📚 おすすめの本を見る",
-      "saveImg": "💾 画像として保存",
-      "retest": "🔄 再テスト",
+      "viewAmazon": "📚 시간관리 관련 도서",
+      "saveImg": "💾 결과 저장",
+      "retest": "🔄 다시 하기",
       "qrNote": "동료와 비교해보세요!"
     },
     "viral": {
-      "viralTitle": "どう時間を管理しますか？",
-      "viralSub": "今すぐテストを始めましょう！"
+      "viralTitle": "당신의 시간 관리 유형은?",
+      "viralSub": "계획형? 즉흥형? 확인하기!"
     },
     "labels": [
-      "全く違う",
-      "違う",
-      "どちらでもない",
-      "そう思う",
-      "強くそう思う"
+      "전혀 아니다",
+      "아니다",
+      "보통이다",
+      "그렇다",
+      "매우 그렇다"
     ]
   },
   "items": [
     {
       "id": "TT1",
-      "text": "매일 아침 오늘 할 일 리스트를 작성한다",
+      "text": "朝早く起きるのが自然で楽",
       "reverse": false,
       "trait": "P"
     },
     {
       "id": "TT2",
-      "text": "마감 직전이 되어야 집중이 잘 된다",
+      "text": "夜遅く作業するときが最も集中力と創造力が高まる",
       "reverse": false,
       "trait": "R"
     },
     {
       "id": "TT3",
-      "text": "여러 일을 동시에 처리하는 것이 편하다",
+      "text": "スケジュールを分単位で計画して守る",
       "reverse": false,
       "trait": "M"
     },
     {
       "id": "TT4",
-      "text": "시간이 늘 부족하고 정신없이 지나간다",
+      "text": "計画なしで即興的に動く方が楽",
       "reverse": false,
       "trait": "C"
     },
     {
       "id": "TT5",
-      "text": "일정을 미리 계획하고 지키려 노력한다",
+      "text": "約束の時間は絶対に守る",
       "reverse": false,
       "trait": "P"
     },
     {
       "id": "TT6",
-      "text": "급하지 않은 일은 계속 미루게 된다",
+      "text": "ゆったりと時間を使い、焦らない",
       "reverse": false,
       "trait": "R"
     },
     {
       "id": "TT7",
-      "text": "메신저, SNS를 보다가 시간이 훅 지나간다",
+      "text": "複数のことを同時に進めるのが得意",
       "reverse": false,
       "trait": "C"
     },
     {
       "id": "TT8",
-      "text": "한 번에 하나씩 집중해서 끝내는 편이다",
+      "text": "一度に一つのことに集中して終わらせる",
       "reverse": false,
       "trait": "M"
     }
