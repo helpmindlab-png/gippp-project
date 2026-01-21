@@ -1,0 +1,274 @@
+{
+  "meta": {
+    "id": "attachment-style",
+    "order": 2,
+    "version": "1.0",
+    "language": "es",
+    "rtl": false,
+    "author": "GIPPP Research Team",
+    "lastUpdated": "2026-01-21",
+    "category": "Prueba de Alto Impacto",
+    "itemCount": 24
+  },
+  "ui": {
+    "testName": "¿Cuál es tu estilo de apego?",
+    "description": "Descubre tu patrón de apego en las relaciones y el romance",
+    "security": "🔒 Seguridad: Tus datos no se almacenan",
+    "processing": "Analizando tu estilo de apego...",
+    "reportTitle": "Tu Reporte de Estilo de Apego",
+    "careerTitle": "💡 Consejos para Entender Relaciones",
+    "actions": {
+      "report": "Ver Reporte",
+      "viewAmazon": "Libros Recomendados",
+      "saveImg": "Guardar como Imagen",
+      "retest": "Repetir Prueba",
+      "qrNote": "Compartir con Amigos por QR"
+    },
+    "viral": {
+      "title": "¿Cuál es tu estilo de apego?",
+      "subtitle": "¡Compara con amigos y profundiza en tus relaciones!"
+    },
+    "labels": [
+      "Totalmente en desacuerdo",
+      "En desacuerdo",
+      "Neutral",
+      "De acuerdo",
+      "Totalmente de acuerdo"
+    ],
+    "amazonKeywords": {
+      "SECURE": "apego, psicología relacional, romance, parejas, relaciones seguras",
+      "ANXIOUS": "apego ansioso, ansiedad relacional, psicología de citas, regulación emocional",
+      "AVOIDANT": "apego evitativo, distancia emocional, patrones relacionales, expresión emocional"
+    }
+  },
+  "guide": {
+    "ipipId": "IPIP-AS-24",
+    "purpose": "Esta prueba te ayuda a entender tus patrones de apego en relaciones íntimas. Es una herramienta de autoconocimiento, no una evaluación diagnóstica.",
+    "instruction": "Lee cada una de las 24 afirmaciones y señala en una escala de 5 puntos cuánto tus sentimientos y comportamientos en relaciones coinciden con cada afirmación.",
+    "interpretation": "Seguro: Te sientes cómodo y confiado en relaciones, balanceando intimidad e independencia | Ansioso: Buscas seguridad del pareja y eres sensible al rechazo | Evitativo: Encuentras difícil expresar emociones y mantienes distancia emocional",
+    "startBtn": "Comenzar Prueba"
+  },
+  "traitNames": {
+    "SECURE": "Apego Seguro",
+    "ANXIOUS": "Apego Ansioso",
+    "AVOIDANT": "Apego Evitativo"
+  },
+  "descriptions": {
+    "SECURE": {
+      "emoji": "💚",
+      "name": "Apego Seguro",
+      "detail": "Te sientes seguro y cómodo en relaciones. Confías en tu pareja y equilibras intimidad con independencia. Manejas conflictos de forma madura.",
+      "tip": "💡 Mantén tus patrones relacionales saludables y profundiza los vínculos a través del diálogo regular con tu pareja."
+    },
+    "ANXIOUS": {
+      "emoji": "🧡",
+      "name": "Apego Ansioso",
+      "detail": "Buscas atención de tu pareja y temes significativamente al rechazo. Frecuentemente te preocupa qué piensa y necesitas confirmación.",
+      "tip": "💡 Comunica tus sentimientos claramente, pero evita medir tu valor por las acciones de tu pareja."
+    },
+    "AVOIDANT": {
+      "emoji": "💙",
+      "name": "Apego Evitativo",
+      "detail": "Encuentras desafiante expresar emociones y eres cauteloso con la intimidad. Valoras la independencia pero puedes crear distancia.",
+      "tip": "💡 Practica compartir emociones gradualmente con tu pareja y reconoce que la vulnerabilidad es fortaleza."
+    }
+  },
+  "items": [
+    {
+      "id": "AS1",
+      "text": "Frecuentemente necesito confirmar que mi pareja me ama.",
+      "trait": "ANXIOUS",
+      "reverse": false
+    },
+    {
+      "id": "AS2",
+      "text": "A medida que las relaciones se profundizan, me siento incómodo.",
+      "trait": "AVOIDANT",
+      "reverse": false
+    },
+    {
+      "id": "AS3",
+      "text": "Me siento ansioso cuando estoy separado de mi pareja.",
+      "trait": "ANXIOUS",
+      "reverse": false
+    },
+    {
+      "id": "AS4",
+      "text": "Tengo impulsos de escapar durante momentos íntimos.",
+      "trait": "AVOIDANT",
+      "reverse": false
+    },
+    {
+      "id": "AS5",
+      "text": "Temo que nos separemos cuando discutimos.",
+      "trait": "ANXIOUS",
+      "reverse": false
+    },
+    {
+      "id": "AS6",
+      "text": "Expresar emociones se siente natural para mí.",
+      "trait": "SECURE",
+      "reverse": false
+    },
+    {
+      "id": "AS7",
+      "text": "Me siento frustrado cuando mi pareja está ocupada.",
+      "trait": "ANXIOUS",
+      "reverse": false
+    },
+    {
+      "id": "AS8",
+      "text": "Mantener la independencia en relaciones es importante para mí.",
+      "trait": "AVOIDANT",
+      "reverse": false
+    },
+    {
+      "id": "AS9",
+      "text": "Escucho a mi pareja y puedo comprometerme.",
+      "trait": "SECURE",
+      "reverse": false
+    },
+    {
+      "id": "AS10",
+      "text": "Frecuentemente me preocupa el abandono.",
+      "trait": "ANXIOUS",
+      "reverse": false
+    },
+    {
+      "id": "AS11",
+      "text": "Me siento cómodo y seguro en mi relación.",
+      "trait": "SECURE",
+      "reverse": false
+    },
+    {
+      "id": "AS12",
+      "text": "Compartir emociones con mi pareja es difícil.",
+      "trait": "AVOIDANT",
+      "reverse": false
+    },
+    {
+      "id": "AS13",
+      "text": "Respuestas lentas de mi pareja me ponen ansioso.",
+      "trait": "ANXIOUS",
+      "reverse": false
+    },
+    {
+      "id": "AS14",
+      "text": "Necesito tiempo significativo a solas.",
+      "trait": "AVOIDANT",
+      "reverse": false
+    },
+    {
+      "id": "AS15",
+      "text": "Manejo problemas relacionales con calma.",
+      "trait": "SECURE",
+      "reverse": false
+    },
+    {
+      "id": "AS16",
+      "text": "Quiero contactar a mi pareja frecuentemente.",
+      "trait": "ANXIOUS",
+      "reverse": false
+    },
+    {
+      "id": "AS17",
+      "text": "Expresar sentimientos se siente incómodo y difícil.",
+      "trait": "AVOIDANT",
+      "reverse": false
+    },
+    {
+      "id": "AS18",
+      "text": "Confío y puedo depender de mi pareja.",
+      "trait": "SECURE",
+      "reverse": false
+    },
+    {
+      "id": "AS19",
+      "text": "Me preocupa mi relación frecuentemente.",
+      "trait": "ANXIOUS",
+      "reverse": false
+    },
+    {
+      "id": "AS20",
+      "text": "No quiero que mi pareja me conozca completamente.",
+      "trait": "AVOIDANT",
+      "reverse": false
+    },
+    {
+      "id": "AS21",
+      "text": "Confío en nuestra relación incluso durante conflictos.",
+      "trait": "SECURE",
+      "reverse": false
+    },
+    {
+      "id": "AS22",
+      "text": "La distancia emocional con mi pareja se siente segura.",
+      "trait": "AVOIDANT",
+      "reverse": false
+    },
+    {
+      "id": "AS23",
+      "text": "Quiero pasar mucho tiempo con mi pareja.",
+      "trait": "ANXIOUS",
+      "reverse": false
+    },
+    {
+      "id": "AS24",
+      "text": "El apoyo de mi pareja es mi base de seguridad.",
+      "trait": "SECURE",
+      "reverse": false
+    }
+  ],
+  "results": {
+    "ranges": [
+      {
+        "min": 24,
+        "max": 48,
+        "level": "Seguro Dominante",
+        "emoji": "💚",
+        "description": "Eres estable y cómodo en relaciones. Confías en tu pareja y compartes intimidad con seguridad.",
+        "recommendation": [
+          "Mantén tus patrones relacionales saludables",
+          "Ayuda a tu pareja a entender sus necesidades de apego",
+          "Usa tu estabilidad para manejar conflictos sabiamente"
+        ]
+      },
+      {
+        "min": 49,
+        "max": 72,
+        "level": "Patrón Mixto",
+        "emoji": "💛",
+        "description": "Muestras patrones de apego variados según las circunstancias. El estrés puede desencadenar ansiedad mientras la comodidad revela estabilidad.",
+        "recommendation": [
+          "Observa y entiende tus patrones emocionales",
+          "Aclara expectativas a través de diálogo abierto",
+          "Maneja el estrés para mantener estabilidad relacional"
+        ]
+      },
+      {
+        "min": 73,
+        "max": 96,
+        "level": "Ansioso Dominante",
+        "emoji": "🧡",
+        "description": "Frecuentemente buscas seguridad de tu pareja y temes el rechazo. Puedes volverse pegajoso u obsesionado con la relación.",
+        "recommendation": [
+          "Separa tu valor propio de las acciones de tu pareja",
+          "Desarrolla independencia y autoconfianza gradualmente",
+          "Elige conscientemente confiar cuando surge ansiedad"
+        ]
+      },
+      {
+        "min": 97,
+        "max": 120,
+        "level": "Evitativo Dominante",
+        "emoji": "💙",
+        "description": "Encuentras difícil expresar emociones y prefieres mantener distancia. Valoras independencia pero puedes crear brechas en intimidad.",
+        "recommendation": [
+          "Abre gradualmente tu corazón a tu pareja",
+          "Practica expresar sentimientos más libremente",
+          "Comprende que la vulnerabilidad construye fortaleza"
+        ]
+      }
+    ]
+  }
+}
