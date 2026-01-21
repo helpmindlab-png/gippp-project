@@ -1,0 +1,267 @@
+{
+  "meta": {
+    "id": "selfesteem",
+    "order": 1,
+    "version": "1.0",
+    "language": "de",
+    "rtl": false,
+    "author": "GIPPP Research Team",
+    "lastUpdated": "2026-01-21",
+    "category": "Hochvirales Test",
+    "itemCount": 20
+  },
+  "ui": {
+    "testName": "Wie ist dein Selbstwertgefühl?",
+    "description": "Psychologischer Test zur Messung von Selbstvertrauen und Selbstwertgefühl",
+    "security": "🔒 Sicherheit: Deine Daten werden nicht gespeichert",
+    "processing": "Dein Selbstwertgefühl wird analysiert...",
+    "reportTitle": "Dein Selbstwertgefühl-Bericht",
+    "careerTitle": "💡 Tipps für dich",
+    "actions": {
+      "report": "Bericht ansehen",
+      "viewAmazon": "Empfohlene Bücher",
+      "saveImg": "Als Bild speichern",
+      "retest": "Test wiederholen",
+      "qrNote": "Mit Freunden per QR-Code teilen"
+    },
+    "viral": {
+      "title": "Was ist dein Selbstwertgefühl-Score?",
+      "subtitle": "Finde es jetzt heraus und vergleiche dich mit deinen Freunden!"
+    },
+    "labels": [
+      "Stimme überhaupt nicht zu",
+      "Stimme nicht zu",
+      "Neutral",
+      "Stimme zu",
+      "Stimme voll zu"
+    ],
+    "amazonKeywords": {
+      "HIGH": "Selbstwertgefühl, Selbstvertrauen, Psychologie, Persönlichkeitsentwicklung, Selbstvertrauen aufbauen",
+      "MEDIUM": "Psychologischer Test, Selbsterkenntnis, Wachstumspsychologie",
+      "LOW": "Selbstwertgefühl wiederherstellen, Traumaheilung, psychologische Beratung, Selbstverachtung überwinden"
+    }
+  },
+  "guide": {
+    "ipipId": "IPIP-SE-20",
+    "purpose": "Dieser Test misst, wie du dich selbst bewertest und akzeptierst. Selbstwertgefühl ist ein grundlegendes psychologisches Merkmal für Erfolg, Glück und gesunde Beziehungen.",
+    "instruction": "Lies jede der 20 Aussagen unten und gib deine Zustimmung oder Ablehnung auf einer 5-er Skala an. Es gibt keine richtigen oder falschen Antworten. Deine ehrlichen Antworten führen zu den genauesten Ergebnissen.",
+    "interpretation": "Hohes Selbstwertgefühl: Du siehst dich positiv und stellst dich Herausforderungen | Mittleres Selbstwertgefühl: Dein Vertrauen variiert je nach Situation und du hast ein ausgewogenes Selbstbild | Niedriges Selbstwertgefühl: Du neigst dazu, dich negativ zu sehen und könntest von persönlicher Entwicklung profitieren",
+    "startBtn": "Test starten"
+  },
+  "traitNames": {
+    "SE": "Allgemeines Selbstwertgefühl",
+    "CONF": "Selbstvertrauen",
+    "WORTH": "Selbstwert"
+  },
+  "descriptions": {
+    "SE": {
+      "emoji": "😊",
+      "name": "Allgemeines Selbstwertgefühl",
+      "detail": "Der Grad, in dem du dich positiv bewertest und an deine Fähigkeiten glaubst. Höhere Werte deuten auf größere Widerstandskraft nach Misserfolg und mehr Engagement bei neuen Herausforderungen hin.",
+      "tip": "💡 Wenn du täglich deine kleinen Erfolge anerkennst, wächst dein Selbstwertgefühl schrittweise."
+    },
+    "CONF": {
+      "emoji": "💪",
+      "name": "Selbstvertrauen",
+      "detail": "Dein Glaube an deine Fähigkeiten und deine Gewissheit, mit Situationen umgehen zu können. Dies ist ein Schlüsselfaktor für sozialen und beruflichen Erfolg.",
+      "tip": "💡 Wiederholte kleine Erfolge bauen auf natürliche Weise dauerhaftes Vertrauen auf."
+    },
+    "WORTH": {
+      "emoji": "✨",
+      "name": "Selbstwert",
+      "detail": "Der Grad, in dem du dich als inhärent wertvoll ohne Bedingungen erkennst. Das bedeutet, deine Wertigkeit unabhängig von fremden Urteilen zu spüren.",
+      "tip": "💡 Dich selbst so zu akzeptieren, wie du bist, statt Perfektion anzustreben, ist für Wachstum wesentlich."
+    }
+  },
+  "items": [
+    {
+      "id": "SE1",
+      "text": "Ich habe eine positive Sicht auf mich selbst.",
+      "trait": "SE",
+      "reverse": false
+    },
+    {
+      "id": "SE2",
+      "text": "Wenn ich bei etwas scheitere, verliere ich leicht das Vertrauen.",
+      "trait": "SE",
+      "reverse": true
+    },
+    {
+      "id": "SE3",
+      "text": "Ich vertraue auf meine Fähigkeiten.",
+      "trait": "CONF",
+      "reverse": false
+    },
+    {
+      "id": "SE4",
+      "text": "Ich glaube, dass ich so fähig bin wie die meisten anderen Menschen.",
+      "trait": "CONF",
+      "reverse": false
+    },
+    {
+      "id": "SE5",
+      "text": "Ich respektiere mich selbst.",
+      "trait": "WORTH",
+      "reverse": false
+    },
+    {
+      "id": "SE6",
+      "text": "Ich denke, ich bin ein unzulänglicher Mensch.",
+      "trait": "WORTH",
+      "reverse": true
+    },
+    {
+      "id": "SE7",
+      "text": "Bei neuen Herausforderungen glaube ich, dass ich Erfolg haben werde.",
+      "trait": "CONF",
+      "reverse": false
+    },
+    {
+      "id": "SE8",
+      "text": "Die Meinung anderer über mich beeinflusst mein Verhalten stark.",
+      "trait": "WORTH",
+      "reverse": true
+    },
+    {
+      "id": "SE9",
+      "text": "Ich verstehe meine Stärken und Schwächen ausgewogen.",
+      "trait": "SE",
+      "reverse": false
+    },
+    {
+      "id": "SE10",
+      "text": "Wenn ich scheitere, lerne ich daraus und versuche es erneut.",
+      "trait": "CONF",
+      "reverse": false
+    },
+    {
+      "id": "SE11",
+      "text": "Ich bereue normalerweise meine Entscheidungen.",
+      "trait": "SE",
+      "reverse": true
+    },
+    {
+      "id": "SE12",
+      "text": "Ich kann meine Meinung selbstbewusst ausdrücken.",
+      "trait": "CONF",
+      "reverse": false
+    },
+    {
+      "id": "SE13",
+      "text": "Ich akzeptiere mich, wie ich bin.",
+      "trait": "WORTH",
+      "reverse": false
+    },
+    {
+      "id": "SE14",
+      "text": "Ich werde leicht von Kritik verletzt.",
+      "trait": "SE",
+      "reverse": true
+    },
+    {
+      "id": "SE15",
+      "text": "Ich fühle mich anderen Menschen gegenüber unterlegen.",
+      "trait": "WORTH",
+      "reverse": true
+    },
+    {
+      "id": "SE16",
+      "text": "Ich glaube, ich kann das erreichen, was ich mir vornehme.",
+      "trait": "CONF",
+      "reverse": false
+    },
+    {
+      "id": "SE17",
+      "text": "Ich habe Angst vor dem Scheitern.",
+      "trait": "SE",
+      "reverse": true
+    },
+    {
+      "id": "SE18",
+      "text": "Ich glaube, mein Wert hängt von der Bewertung anderer ab.",
+      "trait": "WORTH",
+      "reverse": true
+    },
+    {
+      "id": "SE19",
+      "text": "Ich liebe mich selbst.",
+      "trait": "WORTH",
+      "reverse": false
+    },
+    {
+      "id": "SE20",
+      "text": "Ich kann auch in schwierigen Situationen die Ruhe bewahren.",
+      "trait": "CONF",
+      "reverse": false
+    }
+  ],
+  "results": {
+    "ranges": [
+      {
+        "min": 20,
+        "max": 40,
+        "level": "Sehr niedrig",
+        "emoji": "😔",
+        "description": "Du bewertest dich selbst derzeit sehr negativ. Du fällst es dir schwer, an deine Fähigkeiten zu glauben und wirst leicht durch Kritik verletzt.",
+        "recommendation": [
+          "Erwäge, mit einem Fachleute für psychische Gesundheit zu sprechen",
+          "Schaffe bewusst kleine Erfolgserlebnisse",
+          "Ersetze negativen Selbstdialog durch realistische positive Gedanken",
+          "Identifiziere und dokumentiere deine Stärken"
+        ]
+      },
+      {
+        "min": 41,
+        "max": 60,
+        "level": "Niedrig",
+        "emoji": "😐",
+        "description": "Dein Selbstwertgefühl ist eher niedrig. Du neigst dazu, deine Fähigkeiten zu unterschätzen und zögerst vor neuen Herausforderungen.",
+        "recommendation": [
+          "Übe, deine Erfolge anzuerkennen",
+          "Distanziere dich von ständigem Vergleich und Wettbewerb",
+          "Verbring Zeit mit unterstützenden und ermutigenden Menschen",
+          "Sag dir selbst, was du einem guten Freund sagen würdest"
+        ]
+      },
+      {
+        "min": 61,
+        "max": 80,
+        "level": "Ausgewogen",
+        "emoji": "😊",
+        "description": "Dein Selbstwertgefühl ist ausgewogen. Du siehst dich positiv und erkennst gleichzeitig Wachstumsmöglichkeiten. Du behältst angemessenes Vertrauen in den meisten Situationen.",
+        "recommendation": [
+          "Bewahre deine positive Einstellung",
+          "Übe, dir selbst bei Herausforderungen zu vertrauen",
+          "Betrachte Rückschläge als Lernmöglichkeiten",
+          "Teile deine Erfahrungen mit anderen"
+        ]
+      },
+      {
+        "min": 81,
+        "max": 95,
+        "level": "Hoch",
+        "emoji": "😄",
+        "description": "Du hast ein gesundes Selbstwertgefühl. Du vertraust auf deine Fähigkeiten und stellst dich Herausforderungen selbstbewusst. Du erholt dich gut von Fehlschlägen.",
+        "recommendation": [
+          "Nutze deine Stärken mehr in deinem Alltag",
+          "Setze ehrgeizige Ziele und verfolge sie",
+          "Teile dein Vertrauen und deine Ermutigung mit anderen",
+          "Entwickle weiterhin eine Wachstumsmentalität"
+        ]
+      },
+      {
+        "min": 96,
+        "max": 100,
+        "level": "Sehr hoch",
+        "emoji": "🚀",
+        "description": "Du hast ein sehr hohes Selbstwertgefühl. Du siehst dich extrem positiv und stellst dich jeder Herausforderung voller Vertrauen.",
+        "recommendation": [
+          "Achte darauf, dass Vertrauen nicht in Arroganz umschlägt",
+          "Schätze und respektiere auch die Sichtweisen anderer",
+          "Halte ein Gleichgewicht zwischen Selbstvertrauen und Demut",
+          "Nutze deine Stärken, um andere zu helfen und zu inspirieren"
+        ]
+      }
+    ]
+  }
+}
