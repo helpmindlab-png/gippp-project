@@ -1,0 +1,274 @@
+{
+  "meta": {
+    "id": "attachment-style",
+    "order": 2,
+    "version": "1.0",
+    "language": "en",
+    "rtl": false,
+    "author": "GIPPP Research Team",
+    "lastUpdated": "2026-01-21",
+    "category": "Highly Viral Test",
+    "itemCount": 24
+  },
+  "ui": {
+    "testName": "What's Your Attachment Style?",
+    "description": "Discover your attachment pattern in relationships and romance",
+    "security": "🔒 Privacy: Your data is not stored",
+    "processing": "Analyzing your attachment style...",
+    "reportTitle": "Your Attachment Style Report",
+    "careerTitle": "💡 Advice for Relationship Understanding",
+    "actions": {
+      "report": "View Report",
+      "viewAmazon": "Recommended Books",
+      "saveImg": "Save as Image",
+      "retest": "Retake Test",
+      "qrNote": "Share with Friends via QR"
+    },
+    "viral": {
+      "title": "What's Your Attachment Style?",
+      "subtitle": "Compare with friends and start understanding relationships!"
+    },
+    "labels": [
+      "Strongly Disagree",
+      "Disagree",
+      "Neutral",
+      "Agree",
+      "Strongly Agree"
+    ],
+    "amazonKeywords": {
+      "SECURE": "attachment style, relationship psychology, romance, couples, secure relationships",
+      "ANXIOUS": "anxious attachment, relationship anxiety, dating psychology, emotional regulation",
+      "AVOIDANT": "avoidant attachment, emotional distance, relationship patterns, emotional expression"
+    }
+  },
+  "guide": {
+    "ipipId": "IPIP-AS-24",
+    "purpose": "This test helps you understand your attachment patterns in intimate relationships. This is a self-awareness tool only, not a diagnostic assessment.",
+    "instruction": "Read each of the 24 statements below and indicate how much your feelings and behaviors in relationships match each statement on a 5-point scale.",
+    "interpretation": "Secure: You feel comfortable and trusting in relationships, balancing intimacy and independence | Anxious: You seek partner reassurance and are sensitive to rejection | Avoidant: You find emotional expression difficult and maintain emotional distance in relationships",
+    "startBtn": "Start Test"
+  },
+  "traitNames": {
+    "SECURE": "Secure Attachment",
+    "ANXIOUS": "Anxious Attachment",
+    "AVOIDANT": "Avoidant Attachment"
+  },
+  "descriptions": {
+    "SECURE": {
+      "emoji": "💚",
+      "name": "Secure Attachment",
+      "detail": "You feel confident and comfortable in relationships. You trust your partner and balance intimacy with independence. You handle conflict maturely.",
+      "tip": "💡 Maintain your relational stability and deepen bonds through regular, open communication with your partner."
+    },
+    "ANXIOUS": {
+      "emoji": "🧡",
+      "name": "Anxious Attachment",
+      "detail": "You seek your partner's attention and fear rejection significantly. You frequently wonder about their thoughts and need reassurance.",
+      "tip": "💡 Communicate your feelings clearly, but avoid measuring your worth by your partner's actions or moods."
+    },
+    "AVOIDANT": {
+      "emoji": "💙",
+      "name": "Avoidant Attachment",
+      "detail": "You find emotional expression challenging and feel cautious about intimacy. You value independence but may create distance in relationships.",
+      "tip": "💡 Practice gradually sharing emotions with your partner and recognize that vulnerability is a form of strength."
+    }
+  },
+  "items": [
+    {
+      "id": "AS1",
+      "text": "I frequently need reassurance that my partner loves me.",
+      "trait": "ANXIOUS",
+      "reverse": false
+    },
+    {
+      "id": "AS2",
+      "text": "As relationships deepen, I feel uncomfortable.",
+      "trait": "AVOIDANT",
+      "reverse": false
+    },
+    {
+      "id": "AS3",
+      "text": "I feel anxious when separated from my partner.",
+      "trait": "ANXIOUS",
+      "reverse": false
+    },
+    {
+      "id": "AS4",
+      "text": "I have urges to escape during intimate moments.",
+      "trait": "AVOIDANT",
+      "reverse": false
+    },
+    {
+      "id": "AS5",
+      "text": "I fear breaking up when we argue.",
+      "trait": "ANXIOUS",
+      "reverse": false
+    },
+    {
+      "id": "AS6",
+      "text": "Expressing emotions feels natural to me.",
+      "trait": "SECURE",
+      "reverse": false
+    },
+    {
+      "id": "AS7",
+      "text": "I feel frustrated when my partner is busy.",
+      "trait": "ANXIOUS",
+      "reverse": false
+    },
+    {
+      "id": "AS8",
+      "text": "Maintaining independence in relationships matters to me.",
+      "trait": "AVOIDANT",
+      "reverse": false
+    },
+    {
+      "id": "AS9",
+      "text": "I listen to my partner and can compromise.",
+      "trait": "SECURE",
+      "reverse": false
+    },
+    {
+      "id": "AS10",
+      "text": "I frequently worry about abandonment.",
+      "trait": "ANXIOUS",
+      "reverse": false
+    },
+    {
+      "id": "AS11",
+      "text": "I feel comfortable and secure in my relationship.",
+      "trait": "SECURE",
+      "reverse": false
+    },
+    {
+      "id": "AS12",
+      "text": "Sharing emotions with my partner is difficult.",
+      "trait": "AVOIDANT",
+      "reverse": false
+    },
+    {
+      "id": "AS13",
+      "text": "Delayed responses from my partner make me anxious.",
+      "trait": "ANXIOUS",
+      "reverse": false
+    },
+    {
+      "id": "AS14",
+      "text": "I need significant alone time.",
+      "trait": "AVOIDANT",
+      "reverse": false
+    },
+    {
+      "id": "AS15",
+      "text": "I handle relationship problems calmly.",
+      "trait": "SECURE",
+      "reverse": false
+    },
+    {
+      "id": "AS16",
+      "text": "I want to contact my partner frequently.",
+      "trait": "ANXIOUS",
+      "reverse": false
+    },
+    {
+      "id": "AS17",
+      "text": "Expressing feelings feels awkward and hard.",
+      "trait": "AVOIDANT",
+      "reverse": false
+    },
+    {
+      "id": "AS18",
+      "text": "I trust and can depend on my partner.",
+      "trait": "SECURE",
+      "reverse": false
+    },
+    {
+      "id": "AS19",
+      "text": "I worry about my relationship often.",
+      "trait": "ANXIOUS",
+      "reverse": false
+    },
+    {
+      "id": "AS20",
+      "text": "I don't want my partner to fully know me.",
+      "trait": "AVOIDANT",
+      "reverse": false
+    },
+    {
+      "id": "AS21",
+      "text": "I trust our relationship even during conflict.",
+      "trait": "SECURE",
+      "reverse": false
+    },
+    {
+      "id": "AS22",
+      "text": "Emotional distance with my partner feels safe.",
+      "trait": "AVOIDANT",
+      "reverse": false
+    },
+    {
+      "id": "AS23",
+      "text": "I want to spend lots of time with my partner.",
+      "trait": "ANXIOUS",
+      "reverse": false
+    },
+    {
+      "id": "AS24",
+      "text": "My partner's support is my foundation of security.",
+      "trait": "SECURE",
+      "reverse": false
+    }
+  ],
+  "results": {
+    "ranges": [
+      {
+        "min": 24,
+        "max": 48,
+        "level": "Secure Dominant",
+        "emoji": "💚",
+        "description": "You are stable and comfortable in relationships. You trust your partner and confidently share intimacy.",
+        "recommendation": [
+          "Maintain your healthy relational patterns",
+          "Help your partner understand their attachment needs",
+          "Use your stability to wisely handle conflicts"
+        ]
+      },
+      {
+        "min": 49,
+        "max": 72,
+        "level": "Mixed Pattern",
+        "emoji": "💛",
+        "description": "You display varying attachment patterns depending on circumstances. Stress may trigger anxiety while comfort reveals stability.",
+        "recommendation": [
+          "Observe and understand your emotional patterns",
+          "Clarify expectations through open dialogue with your partner",
+          "Manage stress to maintain relational stability"
+        ]
+      },
+      {
+        "min": 73,
+        "max": 96,
+        "level": "Anxious Dominant",
+        "emoji": "🧡",
+        "description": "You frequently seek partner reassurance and fear rejection. You may sometimes become clingy or overly focused on the relationship.",
+        "recommendation": [
+          "Separate your self-worth from your partner's actions",
+          "Build independence and self-confidence gradually",
+          "Consciously choose trust when anxiety arises"
+        ]
+      },
+      {
+        "min": 97,
+        "max": 120,
+        "level": "Avoidant Dominant",
+        "emoji": "💙",
+        "description": "You find emotional expression challenging and prefer distance. You value independence but may create gaps in intimacy.",
+        "recommendation": [
+          "Gradually open up emotionally to your partner",
+          "Practice expressing feelings more freely",
+          "Understand that vulnerability builds strength"
+        ]
+      }
+    ]
+  }
+}
