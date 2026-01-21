@@ -1,0 +1,274 @@
+{
+  "meta": {
+    "id": "attachment-style",
+    "order": 2,
+    "version": "1.0",
+    "language": "ko",
+    "rtl": false,
+    "author": "GIPPP Research Team",
+    "lastUpdated": "2026-01-21",
+    "category": "초고인기 테스트",
+    "itemCount": 24
+  },
+  "ui": {
+    "testName": "당신의 애착유형은?",
+    "description": "연애와 관계에서 당신의 애착 패턴을 알아보는 테스트",
+    "security": "🔒 보안: 데이터 저장 안 함",
+    "processing": "당신의 애착 스타일을 분석 중...",
+    "reportTitle": "나의 애착유형 리포트",
+    "careerTitle": "💡 관계 이해를 위한 조언",
+    "actions": {
+      "report": "리포트 보기",
+      "viewAmazon": "추천 도서 보기",
+      "saveImg": "이미지로 저장",
+      "retest": "다시 하기",
+      "qrNote": "QR로 친구와 공유하기"
+    },
+    "viral": {
+      "title": "당신은 어떤 애착유형?",
+      "subtitle": "친구와 비교해보세요. 관계 이해의 시작입니다!"
+    },
+    "labels": [
+      "전혀 아니다",
+      "아니다",
+      "보통이다",
+      "그렇다",
+      "매우 그렇다"
+    ],
+    "amazonKeywords": {
+      "SECURE": "애착, 관계심리, 연애, 커플, 안정적인관계",
+      "ANXIOUS": "불안애착, 관계불안, 연애심리, 감정조절",
+      "AVOIDANT": "회피애착, 거리두기, 관계패턴, 감정표현"
+    }
+  },
+  "guide": {
+    "ipipId": "IPIP-AS-24",
+    "purpose": "이 테스트는 친밀한 관계에서 당신의 애착 패턴을 이해하는 데 도움을 줍니다. 본 테스트는 자기이해 도구일 뿐 진단이 아닙니다.",
+    "instruction": "다음 24개 문항을 읽고 당신의 관계에서 느끼는 감정과 행동이 얼마나 일치하는지 5점 척도로 선택하세요.",
+    "interpretation": "안정형: 관계에서 편안함과 신뢰를 느끼며 친밀함과 독립성을 잘 균형잡습니다 | 불안형: 파트너의 관심을 확보하고 싶어 하며 거절에 민감합니다 | 회피형: 감정 표현을 어려워하고 가까워지는 것을 경계합니다",
+    "startBtn": "시작하기"
+  },
+  "traitNames": {
+    "SECURE": "안정형 애착",
+    "ANXIOUS": "불안형 애착",
+    "AVOIDANT": "회피형 애착"
+  },
+  "descriptions": {
+    "SECURE": {
+      "emoji": "💚",
+      "name": "안정형 애착",
+      "detail": "관계에서 자신감 있고 편안함을 느끼는 유형입니다. 파트너를 신뢰하고 독립적이면서도 친밀함을 누립니다. 갈등도 성숙하게 대처합니다.",
+      "tip": "💡 현재의 관계 안정성을 유지하며, 파트너와 정기적인 대화를 통해 더욱 깊은 유대감을 만드세요."
+    },
+    "ANXIOUS": {
+      "emoji": "🧡",
+      "name": "불안형 애착",
+      "detail": "관계에서 파트너의 관심을 원하고 거절을 크게 두려워하는 유형입니다. 자주 상대방의 생각을 궁금해하며, 확신이 필요합니다.",
+      "tip": "💡 자신의 감정을 명확히 소통하되, 파트너의 행동을 자신의 가치로 판단하지 않도록 의식하세요."
+    },
+    "AVOIDANT": {
+      "emoji": "💙",
+      "name": "회피형 애착",
+      "detail": "감정을 드러내기 어렵고 가까워지는 것에 경계심을 가지는 유형입니다. 독립성을 중시하지만 때론 파트너와의 거리가 벌어질 수 있습니다.",
+      "tip": "💡 파트너와 감정을 천천히 나누는 연습을 하고, 취약함이 강함임을 아세요."
+    }
+  },
+  "items": [
+    {
+      "id": "AS1",
+      "text": "파트너가 나를 사랑하는지 자주 확인하고 싶다.",
+      "trait": "ANXIOUS",
+      "reverse": false
+    },
+    {
+      "id": "AS2",
+      "text": "관계가 깊어질수록 불편함을 느낀다.",
+      "trait": "AVOIDANT",
+      "reverse": false
+    },
+    {
+      "id": "AS3",
+      "text": "파트너와 떨어져 있을 때 불안해진다.",
+      "trait": "ANXIOUS",
+      "reverse": false
+    },
+    {
+      "id": "AS4",
+      "text": "친밀한 순간에 도망치고 싶은 충동이 생긴다.",
+      "trait": "AVOIDANT",
+      "reverse": false
+    },
+    {
+      "id": "AS5",
+      "text": "파트너와 다투면 헤어질까봐 두렵다.",
+      "trait": "ANXIOUS",
+      "reverse": false
+    },
+    {
+      "id": "AS6",
+      "text": "감정을 표현하는 것이 자연스럽다.",
+      "trait": "SECURE",
+      "reverse": false
+    },
+    {
+      "id": "AS7",
+      "text": "파트너가 바빠 보일 때 답답함을 느낀다.",
+      "trait": "ANXIOUS",
+      "reverse": false
+    },
+    {
+      "id": "AS8",
+      "text": "관계에서 독립성을 유지하는 것이 중요하다.",
+      "trait": "AVOIDANT",
+      "reverse": false
+    },
+    {
+      "id": "AS9",
+      "text": "파트너의 의견에 귀를 기울이고 타협할 수 있다.",
+      "trait": "SECURE",
+      "reverse": false
+    },
+    {
+      "id": "AS10",
+      "text": "파트너에게 버림받을까봐 자주 생각한다.",
+      "trait": "ANXIOUS",
+      "reverse": false
+    },
+    {
+      "id": "AS11",
+      "text": "관계가 편하고 안정적이라고 느낀다.",
+      "trait": "SECURE",
+      "reverse": false
+    },
+    {
+      "id": "AS12",
+      "text": "파트너와 감정을 나누기가 어렵다.",
+      "trait": "AVOIDANT",
+      "reverse": false
+    },
+    {
+      "id": "AS13",
+      "text": "파트너의 답장이 늦으면 불안해진다.",
+      "trait": "ANXIOUS",
+      "reverse": false
+    },
+    {
+      "id": "AS14",
+      "text": "혼자만의 시간이 매우 필요하다.",
+      "trait": "AVOIDANT",
+      "reverse": false
+    },
+    {
+      "id": "AS15",
+      "text": "파트너와 문제가 생겨도 차분하게 대처할 수 있다.",
+      "trait": "SECURE",
+      "reverse": false
+    },
+    {
+      "id": "AS16",
+      "text": "파트너에게 자주 연락하고 싶은 욕구가 있다.",
+      "trait": "ANXIOUS",
+      "reverse": false
+    },
+    {
+      "id": "AS17",
+      "text": "감정 표현이 어색하고 어렵다.",
+      "trait": "AVOIDANT",
+      "reverse": false
+    },
+    {
+      "id": "AS18",
+      "text": "파트너를 신뢰하고 의존할 수 있다.",
+      "trait": "SECURE",
+      "reverse": false
+    },
+    {
+      "id": "AS19",
+      "text": "관계에 대해 자주 걱정한다.",
+      "trait": "ANXIOUS",
+      "reverse": false
+    },
+    {
+      "id": "AS20",
+      "text": "파트너가 날 완전히 알길 원하지 않는다.",
+      "trait": "AVOIDANT",
+      "reverse": false
+    },
+    {
+      "id": "AS21",
+      "text": "갈등 상황에서도 우리 관계를 믿는다.",
+      "trait": "SECURE",
+      "reverse": false
+    },
+    {
+      "id": "AS22",
+      "text": "파트너와의 거리감이 편하다.",
+      "trait": "AVOIDANT",
+      "reverse": false
+    },
+    {
+      "id": "AS23",
+      "text": "파트너와 시간을 많이 보내고 싶다.",
+      "trait": "ANXIOUS",
+      "reverse": false
+    },
+    {
+      "id": "AS24",
+      "text": "파트너의 지지가 내 안정감의 기초다.",
+      "trait": "SECURE",
+      "reverse": false
+    }
+  ],
+  "results": {
+    "ranges": [
+      {
+        "min": 24,
+        "max": 48,
+        "level": "안정형 우세",
+        "emoji": "💚",
+        "description": "당신은 관계에서 안정적이고 편안한 유형입니다. 파트너를 신뢰하며 자신감 있게 친밀함을 나눕니다.",
+        "recommendation": [
+          "현재의 관계 패턴을 소중히 유지하세요",
+          "파트너의 감정 패턴 이해에 도움을 주세요",
+          "건강한 모델로서 갈등을 현명하게 중재하세요"
+        ]
+      },
+      {
+        "min": 49,
+        "max": 72,
+        "level": "혼합형",
+        "emoji": "💛",
+        "description": "당신은 상황에 따라 다양한 애착 패턴을 보입니다. 스트레스 상황에서는 불안함이, 편안할 때는 안정성이 더 드러날 수 있습니다.",
+        "recommendation": [
+          "자신의 감정 패턴을 관찰하고 이해하세요",
+          "파트너와 열린 대화를 통해 기대를 명확히 하세요",
+          "스트레스 관리로 더 안정적인 모습을 유지하세요"
+        ]
+      },
+      {
+        "min": 73,
+        "max": 96,
+        "level": "불안형 우세",
+        "emoji": "🧡",
+        "description": "당신은 관계에서 파트너의 관심과 확인을 자주 원합니다. 거절을 크게 두려워하며 때론 집착적일 수 있습니다.",
+        "recommendation": [
+          "파트너의 행동을 자신의 가치와 분리하세요",
+          "자신감과 독립성을 서서히 키우세요",
+          "불안감이 느껴질 때 신뢰를 의식적으로 선택하세요"
+        ]
+      },
+      {
+        "min": 97,
+        "max": 120,
+        "level": "회피형 우세",
+        "emoji": "💙",
+        "description": "당신은 감정 표현을 어려워하고 거리를 유지하려는 경향이 있습니다. 독립성을 중시하지만 파트너와의 친밀함이 줄어들 수 있습니다.",
+        "recommendation": [
+          "천천히 파트너에게 마음을 열어보세요",
+          "감정 표현의 연습으로 소통을 늘리세요",
+          "취약함이 강함임을 깨닫고 신뢰를 시도하세요"
+        ]
+      }
+    ]
+  }
+}
