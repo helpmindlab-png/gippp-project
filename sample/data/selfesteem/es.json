@@ -1,0 +1,267 @@
+{
+  "meta": {
+    "id": "selfesteem",
+    "order": 1,
+    "version": "1.0",
+    "language": "es",
+    "rtl": false,
+    "author": "GIPPP Research Team",
+    "lastUpdated": "2026-01-21",
+    "category": "Prueba de Alto Impacto",
+    "itemCount": 20
+  },
+  "ui": {
+    "testName": "¿Cuál es tu nivel de autoestima?",
+    "description": "Prueba psicológica para medir tu confianza y autovalía",
+    "security": "🔒 Seguridad: Tus datos no se almacenan",
+    "processing": "Analizando tu autoestima...",
+    "reportTitle": "Tu Reporte de Autoestima",
+    "careerTitle": "💡 Consejos para ti",
+    "actions": {
+      "report": "Ver Reporte",
+      "viewAmazon": "Libros Recomendados",
+      "saveImg": "Guardar como Imagen",
+      "retest": "Repetir Prueba",
+      "qrNote": "Compartir con Amigos por QR"
+    },
+    "viral": {
+      "title": "¿Cuál es tu puntuación de autoestima?",
+      "subtitle": "¡Descúbrelo ahora y compáralo con tus amigos!"
+    },
+    "labels": [
+      "Totalmente en desacuerdo",
+      "En desacuerdo",
+      "Neutral",
+      "De acuerdo",
+      "Totalmente de acuerdo"
+    ],
+    "amazonKeywords": {
+      "HIGH": "autoestima, confianza, psicología, desarrollo personal, cómo aumentar la confianza",
+      "MEDIUM": "prueba psicológica, autoconocimiento, psicología del crecimiento",
+      "LOW": "recuperación de autoestima, sanación de traumas, terapia psicológica, superar la autocrítica"
+    }
+  },
+  "guide": {
+    "ipipId": "IPIP-SE-20",
+    "purpose": "Esta prueba mide cómo te evalúas y aceptas a ti mismo. La autoestima es un rasgo psicológico fundamental para el éxito, la felicidad y las relaciones saludables.",
+    "instruction": "Lee cada una de las 20 afirmaciones a continuación e indica tu nivel de acuerdo o desacuerdo en una escala de 5 puntos. No hay respuestas correctas o incorrectas. Tus respuestas honestas proporcionarán los resultados más precisos.",
+    "interpretation": "Autoestima alta: Te ves a ti mismo positivamente y abrazas los desafíos | Autoestima moderada: Tu confianza varía según la situación y tienes una autoimagen equilibrada | Autoestima baja: Tienes tendencia a verte negativamente y podrías beneficiarte del desarrollo personal",
+    "startBtn": "Comenzar Prueba"
+  },
+  "traitNames": {
+    "SE": "Autoestima General",
+    "CONF": "Confianza",
+    "WORTH": "Autovalía"
+  },
+  "descriptions": {
+    "SE": {
+      "emoji": "😊",
+      "name": "Autoestima General",
+      "detail": "El grado en que te evalúas positivamente y crees en tus habilidades. Puntuaciones más altas indican mayor resiliencia después del fracaso y un mayor involucramiento en nuevos desafíos.",
+      "tip": "💡 Reconocer diariamente tus pequeños logros aumenta gradualmente tu autoestima."
+    },
+    "CONF": {
+      "emoji": "💪",
+      "name": "Confianza",
+      "detail": "Tu creencia en tus capacidades y certeza de poder manejar situaciones. Es un factor clave en el éxito social y profesional.",
+      "tip": "💡 Las pequeñas victorias repetidas construyen naturalmente una confianza duradera."
+    },
+    "WORTH": {
+      "emoji": "✨",
+      "name": "Autovalía",
+      "detail": "El grado en que te reconoces como una persona inherentemente valiosa sin condiciones. Significa sentir tu valor independientemente de los juicios de otros.",
+      "tip": "💡 Aceptarte tal como eres, en lugar de buscar la perfección, es esencial para el crecimiento."
+    }
+  },
+  "items": [
+    {
+      "id": "SE1",
+      "text": "Tengo una visión positiva de mí mismo.",
+      "trait": "SE",
+      "reverse": false
+    },
+    {
+      "id": "SE2",
+      "text": "Cuando fracaso en algo, pierdo fácilmente la confianza.",
+      "trait": "SE",
+      "reverse": true
+    },
+    {
+      "id": "SE3",
+      "text": "Confío en mis habilidades.",
+      "trait": "CONF",
+      "reverse": false
+    },
+    {
+      "id": "SE4",
+      "text": "Creo que soy tan capaz como la mayoría de las otras personas.",
+      "trait": "CONF",
+      "reverse": false
+    },
+    {
+      "id": "SE5",
+      "text": "Me respeto a mí mismo.",
+      "trait": "WORTH",
+      "reverse": false
+    },
+    {
+      "id": "SE6",
+      "text": "Pienso que soy una persona inadecuada.",
+      "trait": "WORTH",
+      "reverse": true
+    },
+    {
+      "id": "SE7",
+      "text": "Ante nuevos desafíos, creo que puedo tener éxito.",
+      "trait": "CONF",
+      "reverse": false
+    },
+    {
+      "id": "SE8",
+      "text": "Lo que otros piensan de mí influye mucho en mi comportamiento.",
+      "trait": "WORTH",
+      "reverse": true
+    },
+    {
+      "id": "SE9",
+      "text": "Entiendo bien mis fortalezas y debilidades.",
+      "trait": "SE",
+      "reverse": false
+    },
+    {
+      "id": "SE10",
+      "text": "Cuando fracaso, aprendo de ello e intento nuevamente.",
+      "trait": "CONF",
+      "reverse": false
+    },
+    {
+      "id": "SE11",
+      "text": "Generalmente me arrepiento de mis decisiones.",
+      "trait": "SE",
+      "reverse": true
+    },
+    {
+      "id": "SE12",
+      "text": "Puedo expresar mis opiniones con confianza.",
+      "trait": "CONF",
+      "reverse": false
+    },
+    {
+      "id": "SE13",
+      "text": "Me acepto tal como soy.",
+      "trait": "WORTH",
+      "reverse": false
+    },
+    {
+      "id": "SE14",
+      "text": "Me duele fácilmente la crítica.",
+      "trait": "SE",
+      "reverse": true
+    },
+    {
+      "id": "SE15",
+      "text": "Me siento inferior comparado con otras personas.",
+      "trait": "WORTH",
+      "reverse": true
+    },
+    {
+      "id": "SE16",
+      "text": "Creo que puedo lograr las cosas que me propongo.",
+      "trait": "CONF",
+      "reverse": false
+    },
+    {
+      "id": "SE17",
+      "text": "Me da miedo fracasar.",
+      "trait": "SE",
+      "reverse": true
+    },
+    {
+      "id": "SE18",
+      "text": "Creo que mi valor depende de la evaluación de otros.",
+      "trait": "WORTH",
+      "reverse": true
+    },
+    {
+      "id": "SE19",
+      "text": "Me amo a mí mismo.",
+      "trait": "WORTH",
+      "reverse": false
+    },
+    {
+      "id": "SE20",
+      "text": "Puedo mantenerme tranquilo incluso en situaciones difíciles.",
+      "trait": "CONF",
+      "reverse": false
+    }
+  ],
+  "results": {
+    "ranges": [
+      {
+        "min": 20,
+        "max": 40,
+        "level": "Muy Baja",
+        "emoji": "😔",
+        "description": "En este momento te estás evaluando de manera muy negativa. Te cuesta creer en tus habilidades y te hieres fácilmente ante críticas.",
+        "recommendation": [
+          "Considera hablar con un profesional de salud mental",
+          "Crea intencionalmente pequeñas experiencias de éxito",
+          "Desafía el diálogo interno negativo con pensamientos realistas",
+          "Identifica y registra tus fortalezas"
+        ]
+      },
+      {
+        "min": 41,
+        "max": 60,
+        "level": "Baja",
+        "emoji": "😐",
+        "description": "Tu autoestima es relativamente baja. Tienes tendencia a subestimar tus habilidades y dudas ante nuevos desafíos.",
+        "recommendation": [
+          "Practica reconocer tus logros",
+          "Aléjate de la comparación y competencia constante",
+          "Pasa tiempo con personas que te apoyan y animan",
+          "Dite a ti mismo lo que dirías a un buen amigo"
+        ]
+      },
+      {
+        "min": 61,
+        "max": 80,
+        "level": "Moderada",
+        "emoji": "😊",
+        "description": "Tu autoestima es equilibrada. Te ves positivamente mientras reconoces áreas de crecimiento. Mantienes confianza apropiada en la mayoría de situaciones.",
+        "recommendation": [
+          "Mantén tu actitud positiva actual",
+          "Practica confiar en ti ante desafíos",
+          "Mira los reveses como oportunidades de aprendizaje",
+          "Comparte tus experiencias con otros"
+        ]
+      },
+      {
+        "min": 81,
+        "max": 95,
+        "level": "Alta",
+        "emoji": "😄",
+        "description": "Tienes una autoestima saludable. Crees en tus habilidades y afrontas desafíos con confianza. Te recuperas bien del fracaso.",
+        "recommendation": [
+          "Aprovecha más tus fortalezas en tu vida diaria",
+          "Establece objetivos ambiciosos y persiguelos",
+          "Comparte tu confianza y aliento con otros",
+          "Continúa cultivando una mentalidad de crecimiento"
+        ]
+      },
+      {
+        "min": 96,
+        "max": 100,
+        "level": "Muy Alta",
+        "emoji": "🚀",
+        "description": "Tienes una autoestima muy alta. Te ves de manera extremadamente positiva y afrontas cualquier desafío con seguridad.",
+        "recommendation": [
+          "Ten cuidado de que la confianza no se convierta en arrogancia",
+          "Valora y respeta las perspectivas de otros también",
+          "Mantén el equilibrio entre seguridad y humildad",
+          "Usa tus fortalezas para ayudar e inspirar a los demás"
+        ]
+      }
+    ]
+  }
+}
