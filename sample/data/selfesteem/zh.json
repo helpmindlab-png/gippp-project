@@ -1,0 +1,267 @@
+{
+  "meta": {
+    "id": "selfesteem",
+    "order": 1,
+    "version": "1.0",
+    "language": "zh",
+    "rtl": false,
+    "author": "GIPPP Research Team",
+    "lastUpdated": "2026-01-21",
+    "category": "超人气测试",
+    "itemCount": 20
+  },
+  "ui": {
+    "testName": "你的自尊心水平是多少？",
+    "description": "测量自信和自我价值观的心理学测试",
+    "security": "🔒 安全保障：数据不被保存",
+    "processing": "正在分析你的自尊心...",
+    "reportTitle": "我的自尊心报告",
+    "careerTitle": "💡 给你的建议",
+    "actions": {
+      "report": "查看报告",
+      "viewAmazon": "推荐书籍",
+      "saveImg": "保存为图像",
+      "retest": "重新测试",
+      "qrNote": "通过二维码与朋友分享"
+    },
+    "viral": {
+      "title": "你的自尊心得分是多少？",
+      "subtitle": "现在就查看并与朋友比较！"
+    },
+    "labels": [
+      "完全不同意",
+      "不同意",
+      "中立",
+      "同意",
+      "非常同意"
+    ],
+    "amazonKeywords": {
+      "HIGH": "自尊心，自信，心理学，自我完善，建立自信",
+      "MEDIUM": "心理测试，自我认识，个人成长",
+      "LOW": "自尊心恢复，心理创伤治疗，心理咨询，克服自我厌恶"
+    }
+  },
+  "guide": {
+    "ipipId": "IPIP-SE-20",
+    "purpose": "这个测试测量了你如何评估和接纳自己。自尊心是成功、幸福和健康人际关系的心理基础。",
+    "instruction": "请阅读下面的20个陈述句，并在5点量表上指出你同意或不同意的程度。没有正确或错误的答案。你的诚实回答会给出最准确的结果。",
+    "interpretation": "高自尊心：你对自己有积极的看法，拥抱挑战 | 中等自尊心：你的自信根据情况变化，具有均衡的自我认识 | 低自尊心：你倾向于消极地看待自己，可能需要进行自我发展工作",
+    "startBtn": "开始测试"
+  },
+  "traitNames": {
+    "SE": "自尊心",
+    "CONF": "自信",
+    "WORTH": "自我价值"
+  },
+  "descriptions": {
+    "SE": {
+      "emoji": "😊",
+      "name": "整体自尊心",
+      "detail": "你积极地评估自己并相信自己能力的程度。得分越高，你在失败后的恢复力越强，对新挑战的参与度越高。",
+      "tip": "💡 每天承认小的成就可以逐步提高你的自尊心。"
+    },
+    "CONF": {
+      "emoji": "💪",
+      "name": "自信",
+      "detail": "你相信自己的能力和处理各种情况的确定性。这是社交成功和职业成就的关键因素。",
+      "tip": "💡 反复的小成功可以自然地建立持久的自信。"
+    },
+    "WORTH": {
+      "emoji": "✨",
+      "name": "自我价值",
+      "detail": "你无条件地将自己视为有价值的人的程度。这意味着感受到独立于他人判断的自我价值。",
+      "tip": "💡 接受自己原本的样子，而不是追求完美，是个人成长的关键。"
+    }
+  },
+  "items": [
+    {
+      "id": "SE1",
+      "text": "我对自己有积极的看法。",
+      "trait": "SE",
+      "reverse": false
+    },
+    {
+      "id": "SE2",
+      "text": "当我失败时，我很容易失去自信。",
+      "trait": "SE",
+      "reverse": true
+    },
+    {
+      "id": "SE3",
+      "text": "我对自己的能力有信心。",
+      "trait": "CONF",
+      "reverse": false
+    },
+    {
+      "id": "SE4",
+      "text": "我认为自己和大多数人一样有能力。",
+      "trait": "CONF",
+      "reverse": false
+    },
+    {
+      "id": "SE5",
+      "text": "我尊重自己。",
+      "trait": "WORTH",
+      "reverse": false
+    },
+    {
+      "id": "SE6",
+      "text": "我认为自己是一个不足的人。",
+      "trait": "WORTH",
+      "reverse": true
+    },
+    {
+      "id": "SE7",
+      "text": "面对新的挑战，我相信自己能成功。",
+      "trait": "CONF",
+      "reverse": false
+    },
+    {
+      "id": "SE8",
+      "text": "他人的看法大大影响了我的行为。",
+      "trait": "WORTH",
+      "reverse": true
+    },
+    {
+      "id": "SE9",
+      "text": "我均衡地理解自己的优点和缺点。",
+      "trait": "SE",
+      "reverse": false
+    },
+    {
+      "id": "SE10",
+      "text": "失败时，我会从中学习并重新尝试。",
+      "trait": "CONF",
+      "reverse": false
+    },
+    {
+      "id": "SE11",
+      "text": "我通常后悔我的决定。",
+      "trait": "SE",
+      "reverse": true
+    },
+    {
+      "id": "SE12",
+      "text": "我可以自信地表达我的意见。",
+      "trait": "CONF",
+      "reverse": false
+    },
+    {
+      "id": "SE13",
+      "text": "我接受原本的自己。",
+      "trait": "WORTH",
+      "reverse": false
+    },
+    {
+      "id": "SE14",
+      "text": "被批评时，我很容易受伤。",
+      "trait": "SE",
+      "reverse": true
+    },
+    {
+      "id": "SE15",
+      "text": "与他人相比，我感到不如。",
+      "trait": "WORTH",
+      "reverse": true
+    },
+    {
+      "id": "SE16",
+      "text": "我相信我能完成我决心要做的事。",
+      "trait": "CONF",
+      "reverse": false
+    },
+    {
+      "id": "SE17",
+      "text": "我害怕失败。",
+      "trait": "SE",
+      "reverse": true
+    },
+    {
+      "id": "SE18",
+      "text": "我认为自己的价值取决于他人的评价。",
+      "trait": "WORTH",
+      "reverse": true
+    },
+    {
+      "id": "SE19",
+      "text": "我爱我自己。",
+      "trait": "WORTH",
+      "reverse": false
+    },
+    {
+      "id": "SE20",
+      "text": "即使在困难的情况下，我也能保持冷静。",
+      "trait": "CONF",
+      "reverse": false
+    }
+  ],
+  "results": {
+    "ranges": [
+      {
+        "min": 20,
+        "max": 40,
+        "level": "非常低",
+        "emoji": "😔",
+        "description": "你现在对自己的评价非常消极。你很难相信自己的能力，很容易被批评所伤害。",
+        "recommendation": [
+          "考虑与心理健康专业人士交流",
+          "有意地创造小的成功体验",
+          "用现实的积极想法来应对消极的自我对话",
+          "找出并记录你的优点"
+        ]
+      },
+      {
+        "min": 41,
+        "max": 60,
+        "level": "低",
+        "emoji": "😐",
+        "description": "你的自尊心偏低。你倾向于低估自己的能力，在新挑战面前会犹豫。",
+        "recommendation": [
+          "练习承认你的成就",
+          "远离持续的比较和竞争",
+          "与鼓励和支持你的人在一起",
+          "练习对自己说出你会对好友说的话"
+        ]
+      },
+      {
+        "min": 61,
+        "max": 80,
+        "level": "适中",
+        "emoji": "😊",
+        "description": "你的自尊心保持平衡。你对自己有积极的看法，同时也认识到成长空间。在大多数情况下，你保持适当的自信。",
+        "recommendation": [
+          "保持你现在的积极心态",
+          "在挑战中练习相信自己",
+          "将挫折视为学习机会",
+          "与他人分享你的经验"
+        ]
+      },
+      {
+        "min": 81,
+        "max": 95,
+        "level": "高",
+        "emoji": "😄",
+        "description": "你有健康的自尊心。你相信自己的能力，自信地面对挑战。你在失败后能很好地恢复。",
+        "recommendation": [
+          "在日常生活中更多地利用你的优点",
+          "为自己设定宏大的目标并追求它们",
+          "与他人分享你的信心和鼓励",
+          "继续培养成长心态"
+        ]
+      },
+      {
+        "min": 96,
+        "max": 100,
+        "level": "非常高",
+        "emoji": "🚀",
+        "description": "你有非常高的自尊心。你对自己的评价极其积极，对任何挑战都充满信心。",
+        "recommendation": [
+          "注意自信不要变成傲慢",
+          "尊重和重视他人的观点",
+          "在自信和谦虚之间保持平衡",
+          "用你的优点帮助和激励身边的人"
+        ]
+      }
+    ]
+  }
+}
