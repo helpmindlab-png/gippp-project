@@ -1,0 +1,274 @@
+{
+  "meta": {
+    "id": "attachment-style",
+    "order": 2,
+    "version": "1.0",
+    "language": "vi",
+    "rtl": false,
+    "author": "GIPPP Research Team",
+    "lastUpdated": "2026-01-21",
+    "category": "Bài kiểm tra có tính lan rộng cao",
+    "itemCount": 24
+  },
+  "ui": {
+    "testName": "Phong cách gắn kết của bạn là gì?",
+    "description": "Khám phá mô hình gắn kết của bạn trong các mối quan hệ và tình yêu",
+    "security": "🔒 Bảo mật: Dữ liệu của bạn không được lưu trữ",
+    "processing": "Đang phân tích phong cách gắn kết của bạn...",
+    "reportTitle": "Báo cáo Phong cách Gắn kết của Bạn",
+    "careerTitle": "💡 Lời khuyên để Hiểu Mối quan hệ",
+    "actions": {
+      "report": "Xem báo cáo",
+      "viewAmazon": "Sách được đề xuất",
+      "saveImg": "Lưu dưới dạng hình ảnh",
+      "retest": "Làm lại bài kiểm tra",
+      "qrNote": "Chia sẻ với bạn bè qua QR"
+    },
+    "viral": {
+      "title": "Phong cách gắn kết của bạn là gì?",
+      "subtitle": "So sánh với bạn bè và sâu sắc hơn nữa!"
+    },
+    "labels": [
+      "Hoàn toàn không đồng ý",
+      "Không đồng ý",
+      "Trung lập",
+      "Đồng ý",
+      "Hoàn toàn đồng ý"
+    ],
+    "amazonKeywords": {
+      "SECURE": "gắn kết, tâm lý học mối quan hệ, tình yêu, cặp đôi, các mối quan hệ an toàn",
+      "ANXIOUS": "gắn kết lo lắng, lo lắng mối quan hệ, tâm lý hẹn hò, điều chỉnh cảm xúc",
+      "AVOIDANT": "gắn kết tránh, khoảng cách cảm xúc, các mô hình mối quan hệ, biểu hiện cảm xúc"
+    }
+  },
+  "guide": {
+    "ipipId": "IPIP-AS-24",
+    "purpose": "Bài kiểm tra này giúp bạn hiểu các mô hình gắn kết của mình trong các mối quan hệ thân thiết. Đây là một công cụ tự hiểu biết chứ không phải đánh giá chẩn đoán.",
+    "instruction": "Hãy đọc mỗi câu trong 24 câu dưới đây và chỉ ra trên thang điểm 5 mức độ cảm xúc và hành vi của bạn trong các mối quan hệ tương ứng với mỗi câu.",
+    "interpretation": "An toàn: Bạn cảm thấy thoải mái và tin tưởng trong các mối quan hệ, cân bằng giữa thân mật và độc lập | Lo lắng: Bạn tìm kiếm đảm bảo từ bạn tình và nhạy cảm với sự từ chối | Tránh: Bạn thấy biểu hiện cảm xúc khó khăn và giữ khoảng cách cảm xúc",
+    "startBtn": "Bắt đầu bài kiểm tra"
+  },
+  "traitNames": {
+    "SECURE": "Gắn kết An toàn",
+    "ANXIOUS": "Gắn kết Lo lắng",
+    "AVOIDANT": "Gắn kết Tránh"
+  },
+  "descriptions": {
+    "SECURE": {
+      "emoji": "💚",
+      "name": "Gắn kết An toàn",
+      "detail": "Bạn cảm thấy tự tin và thoải mái trong các mối quan hệ. Bạn tin tưởng bạn tình và cân bằng thân mật với độc lập. Bạn xử lý xung đột một cách trưởng thành.",
+      "tip": "💡 Hãy duy trì các mô hình quan hệ lành mạnh của bạn và làm sâu sắc các mối liên kết thông qua đối thoại mở thường xuyên với bạn tình."
+    },
+    "ANXIOUS": {
+      "emoji": "🧡",
+      "name": "Gắn kết Lo lắng",
+      "detail": "Bạn tìm kiếm sự chú ý của bạn tình và rất sợ bị từ chối. Bạn thường lo lắng về điều anh ấy/cô ấy nghĩ và cần được an tâm.",
+      "tip": "💡 Hãy bộc lộ cảm xúc của bạn một cách rõ ràng, nhưng tránh đo lường giá trị của bạn bằng hành động của bạn tình."
+    },
+    "AVOIDANT": {
+      "emoji": "💙",
+      "name": "Gắn kết Tránh",
+      "detail": "Bạn thấy biểu hiện cảm xúc khó khăn và thận trọng với thân mật. Bạn trân trọng độc lập nhưng có thể tạo khoảng cách.",
+      "tip": "💡 Hãy tập luyện chia sẻ cảm xúc từng chút một với bạn tình và nhận biết rằng độ dễ tổn thương là một hình thức sức mạnh."
+    }
+  },
+  "items": [
+    {
+      "id": "AS1",
+      "text": "Tôi thường xuyên cần xác nhận rằng bạn tình yêu tôi.",
+      "trait": "ANXIOUS",
+      "reverse": false
+    },
+    {
+      "id": "AS2",
+      "text": "Khi mối quan hệ sâu hơn, tôi cảm thấy không thoải mái.",
+      "trait": "AVOIDANT",
+      "reverse": false
+    },
+    {
+      "id": "AS3",
+      "text": "Tôi cảm thấy lo lắng khi tách biệt với bạn tình.",
+      "trait": "ANXIOUS",
+      "reverse": false
+    },
+    {
+      "id": "AS4",
+      "text": "Tôi có động lực trốn chạy trong những khoảnh khắc thân mật.",
+      "trait": "AVOIDANT",
+      "reverse": false
+    },
+    {
+      "id": "AS5",
+      "text": "Tôi sợ rằng chúng ta sẽ chia tay khi chúng ta cãi nhau.",
+      "trait": "ANXIOUS",
+      "reverse": false
+    },
+    {
+      "id": "AS6",
+      "text": "Biểu hiện cảm xúc cảm thấy tự nhiên với tôi.",
+      "trait": "SECURE",
+      "reverse": false
+    },
+    {
+      "id": "AS7",
+      "text": "Tôi cảm thấy thất vọng khi bạn tình bận.",
+      "trait": "ANXIOUS",
+      "reverse": false
+    },
+    {
+      "id": "AS8",
+      "text": "Duy trì độc lập trong các mối quan hệ rất quan trọng với tôi.",
+      "trait": "AVOIDANT",
+      "reverse": false
+    },
+    {
+      "id": "AS9",
+      "text": "Tôi lắng nghe bạn tình và có thể thỏa hiệp.",
+      "trait": "SECURE",
+      "reverse": false
+    },
+    {
+      "id": "AS10",
+      "text": "Tôi thường lo lắng về việc bị bỏ rơi.",
+      "trait": "ANXIOUS",
+      "reverse": false
+    },
+    {
+      "id": "AS11",
+      "text": "Tôi cảm thấy thoải mái và an toàn trong mối quan hệ của mình.",
+      "trait": "SECURE",
+      "reverse": false
+    },
+    {
+      "id": "AS12",
+      "text": "Chia sẻ cảm xúc với bạn tình rất khó đối với tôi.",
+      "trait": "AVOIDANT",
+      "reverse": false
+    },
+    {
+      "id": "AS13",
+      "text": "Phản hồi chậm từ bạn tình khiến tôi lo lắng.",
+      "trait": "ANXIOUS",
+      "reverse": false
+    },
+    {
+      "id": "AS14",
+      "text": "Tôi cần rất nhiều thời gian một mình.",
+      "trait": "AVOIDANT",
+      "reverse": false
+    },
+    {
+      "id": "AS15",
+      "text": "Tôi bình tĩnh xử lý các vấn đề trong mối quan hệ.",
+      "trait": "SECURE",
+      "reverse": false
+    },
+    {
+      "id": "AS16",
+      "text": "Tôi muốn liên lạc với bạn tình thường xuyên.",
+      "trait": "ANXIOUS",
+      "reverse": false
+    },
+    {
+      "id": "AS17",
+      "text": "Biểu hiện cảm xúc cảm thấy lạc lõm và khó khăn.",
+      "trait": "AVOIDANT",
+      "reverse": false
+    },
+    {
+      "id": "AS18",
+      "text": "Tôi tin tưởng bạn tình và có thể phụ thuộc vào anh ấy/cô ấy.",
+      "trait": "SECURE",
+      "reverse": false
+    },
+    {
+      "id": "AS19",
+      "text": "Tôi thường lo lắng về mối quan hệ của mình.",
+      "trait": "ANXIOUS",
+      "reverse": false
+    },
+    {
+      "id": "AS20",
+      "text": "Tôi không muốn bạn tình biết tôi hoàn toàn.",
+      "trait": "AVOIDANT",
+      "reverse": false
+    },
+    {
+      "id": "AS21",
+      "text": "Tôi tin tưởng mối quan hệ của chúng ta ngay cả trong xung đột.",
+      "trait": "SECURE",
+      "reverse": false
+    },
+    {
+      "id": "AS22",
+      "text": "Khoảng cách cảm xúc với bạn tình cảm thấy an toàn.",
+      "trait": "AVOIDANT",
+      "reverse": false
+    },
+    {
+      "id": "AS23",
+      "text": "Tôi muốn dành nhiều thời gian với bạn tình.",
+      "trait": "ANXIOUS",
+      "reverse": false
+    },
+    {
+      "id": "AS24",
+      "text": "Sự hỗ trợ của bạn tình là nền tảng an toàn của tôi.",
+      "trait": "SECURE",
+      "reverse": false
+    }
+  ],
+  "results": {
+    "ranges": [
+      {
+        "min": 24,
+        "max": 48,
+        "level": "An toàn Chiếm ưu thế",
+        "emoji": "💚",
+        "description": "Bạn ổn định và thoải mái trong các mối quan hệ. Bạn tin tưởng bạn tình và chia sẻ thân mật một cách tự tin.",
+        "recommendation": [
+          "Hãy duy trì các mô hình mối quan hệ lành mạnh của bạn",
+          "Giúp bạn tình hiểu nhu cầu gắn kết của họ",
+          "Hãy sử dụng sự ổn định của bạn để xử lý các xung đột một cách khôn ngoan"
+        ]
+      },
+      {
+        "min": 49,
+        "max": 72,
+        "level": "Mô hình Hỗn hợp",
+        "emoji": "💛",
+        "description": "Bạn thể hiện các mô hình gắn kết khác nhau tùy theo hoàn cảnh. Căng thẳng có thể gây ra lo lắng trong khi sự thoải mái tiết lộ sự ổn định.",
+        "recommendation": [
+          "Quan sát và hiểu các mô hình cảm xúc của bạn",
+          "Làm rõ kỳ vọng thông qua đối thoại mở",
+          "Quản lý căng thẳng để duy trì ổn định mối quan hệ"
+        ]
+      },
+      {
+        "min": 73,
+        "max": 96,
+        "level": "Lo lắng Chiếm ưu thế",
+        "emoji": "🧡",
+        "description": "Bạn thường xuyên tìm kiếm sự an tâm từ bạn tình và sợ bị từ chối. Bạn có thể trở nên dính mắc hoặc quá tập trung vào mối quan hệ.",
+        "recommendation": [
+          "Tách giá trị bản thân của bạn khỏi hành động của bạn tình",
+          "Phát triển độc lập và tự tin từng chút một",
+          "Có ý thức chọn tin tưởng khi lo lắng xuất hiện"
+        ]
+      },
+      {
+        "min": 97,
+        "max": 120,
+        "level": "Tránh Chiếm ưu thế",
+        "emoji": "💙",
+        "description": "Bạn thấy biểu hiện cảm xúc khó khăn và thích giữ khoảng cách. Bạn trân trọng độc lập nhưng có thể tạo khoảng cách trong thân mật.",
+        "recommendation": [
+          "Từng chút một mở lòng với bạn tình",
+          "Tập luyện biểu hiện cảm xúc tự do hơn",
+          "Hiểu rằng độ dễ tổn thương xây dựng sức mạnh"
+        ]
+      }
+    ]
+  }
+}
