@@ -1,0 +1,267 @@
+{
+  "meta": {
+    "id": "selfesteem",
+    "order": 1,
+    "version": "1.0",
+    "language": "en",
+    "rtl": false,
+    "author": "GIPPP Research Team",
+    "lastUpdated": "2026-01-21",
+    "category": "Highly Viral Test",
+    "itemCount": 20
+  },
+  "ui": {
+    "testName": "What's Your Self-Esteem Level?",
+    "description": "Measure your confidence and self-worth with this quick psychological test",
+    "security": "🔒 Privacy: Your data is not stored",
+    "processing": "Analyzing your self-esteem...",
+    "reportTitle": "Your Self-Esteem Report",
+    "careerTitle": "💡 Advice for You",
+    "actions": {
+      "report": "View Report",
+      "viewAmazon": "Recommended Books",
+      "saveImg": "Save as Image",
+      "retest": "Retake Test",
+      "qrNote": "Share with Friends via QR"
+    },
+    "viral": {
+      "title": "What's Your Self-Esteem Score?",
+      "subtitle": "Find out now and compare with your friends!"
+    },
+    "labels": [
+      "Strongly Disagree",
+      "Disagree",
+      "Neutral",
+      "Agree",
+      "Strongly Agree"
+    ],
+    "amazonKeywords": {
+      "HIGH": "self-esteem, confidence, psychology, personal development, how to build confidence",
+      "MEDIUM": "psychology test, self-understanding, personal growth",
+      "LOW": "recovering self-esteem, healing trauma, therapy, overcoming self-hate"
+    }
+  },
+  "guide": {
+    "ipipId": "IPIP-SE-20",
+    "purpose": "This test measures how you evaluate and accept yourself. Self-esteem is a foundational psychological trait for success, happiness, and healthy relationships.",
+    "instruction": "Read each of the 20 statements below and indicate how much you agree or disagree on a 5-point scale. There are no right or wrong answers. Your honest responses will give the most accurate results.",
+    "interpretation": "High self-esteem: You view yourself positively and embrace challenges | Moderate self-esteem: Your confidence varies by situation, and you have a balanced self-awareness | Low self-esteem: You tend to view yourself negatively and may benefit from self-development work",
+    "startBtn": "Start Test"
+  },
+  "traitNames": {
+    "SE": "Self-Esteem",
+    "CONF": "Confidence",
+    "WORTH": "Self-Worth"
+  },
+  "descriptions": {
+    "SE": {
+      "emoji": "😊",
+      "name": "Overall Self-Esteem",
+      "detail": "The degree to which you evaluate yourself positively and believe in your abilities. Higher scores indicate greater resilience after failure and more active engagement with new challenges.",
+      "tip": "💡 Building a daily habit of acknowledging small achievements gradually increases your self-esteem."
+    },
+    "CONF": {
+      "emoji": "💪",
+      "name": "Confidence",
+      "detail": "Your belief in your capabilities and certainty in handling situations. This is a key factor in social success and professional achievement.",
+      "tip": "💡 Repeated small victories naturally build lasting confidence."
+    },
+    "WORTH": {
+      "emoji": "✨",
+      "name": "Self-Worth",
+      "detail": "The degree to which you recognize yourself as inherently valuable without conditions. This means feeling your worth independent of others' judgments.",
+      "tip": "💡 Accepting yourself as you are, rather than pursuing perfection, is essential for growth."
+    }
+  },
+  "items": [
+    {
+      "id": "SE1",
+      "text": "I have a positive view of myself.",
+      "trait": "SE",
+      "reverse": false
+    },
+    {
+      "id": "SE2",
+      "text": "When I fail at something, I lose confidence easily.",
+      "trait": "SE",
+      "reverse": true
+    },
+    {
+      "id": "SE3",
+      "text": "I am confident in my abilities.",
+      "trait": "CONF",
+      "reverse": false
+    },
+    {
+      "id": "SE4",
+      "text": "I believe I am as capable as most other people.",
+      "trait": "CONF",
+      "reverse": false
+    },
+    {
+      "id": "SE5",
+      "text": "I respect myself.",
+      "trait": "WORTH",
+      "reverse": false
+    },
+    {
+      "id": "SE6",
+      "text": "I think I am an inadequate person.",
+      "trait": "WORTH",
+      "reverse": true
+    },
+    {
+      "id": "SE7",
+      "text": "When facing new challenges, I believe I can succeed.",
+      "trait": "CONF",
+      "reverse": false
+    },
+    {
+      "id": "SE8",
+      "text": "Others' opinions greatly influence how I behave.",
+      "trait": "WORTH",
+      "reverse": true
+    },
+    {
+      "id": "SE9",
+      "text": "I have a balanced understanding of my strengths and weaknesses.",
+      "trait": "SE",
+      "reverse": false
+    },
+    {
+      "id": "SE10",
+      "text": "When I fail, I learn from it and try again.",
+      "trait": "CONF",
+      "reverse": false
+    },
+    {
+      "id": "SE11",
+      "text": "I usually regret my decisions.",
+      "trait": "SE",
+      "reverse": true
+    },
+    {
+      "id": "SE12",
+      "text": "I can express my opinions confidently.",
+      "trait": "CONF",
+      "reverse": false
+    },
+    {
+      "id": "SE13",
+      "text": "I accept myself as I am.",
+      "trait": "WORTH",
+      "reverse": false
+    },
+    {
+      "id": "SE14",
+      "text": "I am easily hurt by criticism.",
+      "trait": "SE",
+      "reverse": true
+    },
+    {
+      "id": "SE15",
+      "text": "I feel inferior compared to other people.",
+      "trait": "WORTH",
+      "reverse": true
+    },
+    {
+      "id": "SE16",
+      "text": "I believe I can accomplish things I set out to do.",
+      "trait": "CONF",
+      "reverse": false
+    },
+    {
+      "id": "SE17",
+      "text": "I fear failure.",
+      "trait": "SE",
+      "reverse": true
+    },
+    {
+      "id": "SE18",
+      "text": "I think my worth depends on others' evaluation of me.",
+      "trait": "WORTH",
+      "reverse": true
+    },
+    {
+      "id": "SE19",
+      "text": "I love myself.",
+      "trait": "WORTH",
+      "reverse": false
+    },
+    {
+      "id": "SE20",
+      "text": "I can remain composed even in difficult situations.",
+      "trait": "CONF",
+      "reverse": false
+    }
+  ],
+  "results": {
+    "ranges": [
+      {
+        "min": 20,
+        "max": 40,
+        "level": "Very Low",
+        "emoji": "😔",
+        "description": "You are viewing yourself very negatively right now. You struggle to believe in your abilities and are easily hurt by criticism.",
+        "recommendation": [
+          "Consider speaking with a mental health professional",
+          "Intentionally create small success experiences",
+          "Challenge negative self-talk with realistic positive thoughts",
+          "Identify and document your strengths"
+        ]
+      },
+      {
+        "min": 41,
+        "max": 60,
+        "level": "Low",
+        "emoji": "😐",
+        "description": "Your self-esteem is on the lower side. You tend to underestimate your abilities and hesitate before new challenges.",
+        "recommendation": [
+          "Practice acknowledging your accomplishments",
+          "Step away from constant comparison and competition",
+          "Spend time with people who encourage and support you",
+          "Practice saying to yourself what you'd say to a good friend"
+        ]
+      },
+      {
+        "min": 61,
+        "max": 80,
+        "level": "Moderate",
+        "emoji": "😊",
+        "description": "Your self-esteem is well-balanced. You view yourself positively while still recognizing areas for growth. You maintain appropriate confidence in most situations.",
+        "recommendation": [
+          "Keep up your positive mindset",
+          "Practice trusting yourself even when facing challenges",
+          "View setbacks as learning opportunities",
+          "Share your experiences with others"
+        ]
+      },
+      {
+        "min": 81,
+        "max": 95,
+        "level": "High",
+        "emoji": "😄",
+        "description": "You have healthy self-esteem. You believe in your abilities and face challenges confidently. You bounce back well from failure.",
+        "recommendation": [
+          "Leverage your strengths more in your daily life",
+          "Set ambitious goals and pursue them",
+          "Share your confidence and encouragement with others",
+          "Continue cultivating a growth mindset"
+        ]
+      },
+      {
+        "min": 96,
+        "max": 100,
+        "level": "Very High",
+        "emoji": "🚀",
+        "description": "You have very high self-esteem. You view yourself extremely positively and face any challenge with confidence.",
+        "recommendation": [
+          "Be mindful that confidence doesn't tip into arrogance",
+          "Value and respect others' perspectives as well",
+          "Maintain balance between self-assurance and humility",
+          "Use your strengths to help and inspire those around you"
+        ]
+      }
+    ]
+  }
+}
