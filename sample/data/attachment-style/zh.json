@@ -1,0 +1,274 @@
+{
+  "meta": {
+    "id": "attachment-style",
+    "order": 2,
+    "version": "1.0",
+    "language": "zh",
+    "rtl": false,
+    "author": "GIPPP Research Team",
+    "lastUpdated": "2026-01-21",
+    "category": "超人气测试",
+    "itemCount": 24
+  },
+  "ui": {
+    "testName": "你的依恋风格是什么？",
+    "description": "发现你在关系和爱情中的依恋模式",
+    "security": "🔒 安全保障：数据不被保存",
+    "processing": "正在分析你的依恋风格...",
+    "reportTitle": "我的依恋风格报告",
+    "careerTitle": "💡 关系理解建议",
+    "actions": {
+      "report": "查看报告",
+      "viewAmazon": "推荐书籍",
+      "saveImg": "保存为图像",
+      "retest": "重新测试",
+      "qrNote": "通过二维码与朋友分享"
+    },
+    "viral": {
+      "title": "你是哪种依恋风格？",
+      "subtitle": "与朋友比较，深化对关系的理解！"
+    },
+    "labels": [
+      "完全不同意",
+      "不同意",
+      "中立",
+      "同意",
+      "非常同意"
+    ],
+    "amazonKeywords": {
+      "SECURE": "依恋，关系心理，爱情，情侣，稳定关系",
+      "ANXIOUS": "焦虑型依恋，关系焦虑，约会心理，情绪调节",
+      "AVOIDANT": "回避型依恋，感情距离，关系模式，情感表达"
+    }
+  },
+  "guide": {
+    "ipipId": "IPIP-AS-24",
+    "purpose": "这个测试帮助你理解在亲密关系中的依恋模式。这是一个自我理解工具，不是诊断性评估。",
+    "instruction": "阅读以下24个陈述，并在5点量表上指出你在关系中的感受和行为与各个陈述的匹配程度。",
+    "interpretation": "安全型：你在关系中感到舒适和信任，平衡亲密和独立 | 焦虑型：你寻求伴侣的安心，对拒绝很敏感 | 回避型：你难以表达情感，倾向于在关系中保持情感距离",
+    "startBtn": "开始测试"
+  },
+  "traitNames": {
+    "SECURE": "安全型依恋",
+    "ANXIOUS": "焦虑型依恋",
+    "AVOIDANT": "回避型依恋"
+  },
+  "descriptions": {
+    "SECURE": {
+      "emoji": "💚",
+      "name": "安全型依恋",
+      "detail": "你在关系中感到自信和舒适。你信任伴侣，同时保持亲密和独立的平衡。你成熟地处理冲突。",
+      "tip": "💡 保持当前的关系稳定性，通过与伴侣的定期沟通来加深纽带。"
+    },
+    "ANXIOUS": {
+      "emoji": "🧡",
+      "name": "焦虑型依恋",
+      "detail": "你在关系中寻求伴侣的关注，并显著害怕拒绝。你经常想知道他们的想法，需要安心。",
+      "tip": "💡 清楚地表达你的感受，但避免用伴侣的行为来衡量自己的价值。"
+    },
+    "AVOIDANT": {
+      "emoji": "💙",
+      "name": "回避型依恋",
+      "detail": "你发现情感表达有挑战性，并对亲密感觉谨慎。你重视独立，但可能会在关系中制造距离。",
+      "tip": "💡 练习逐步与伴侣分享情感，认识到脆弱是力量的形式。"
+    }
+  },
+  "items": [
+    {
+      "id": "AS1",
+      "text": "我经常想确认伴侣爱不爱我。",
+      "trait": "ANXIOUS",
+      "reverse": false
+    },
+    {
+      "id": "AS2",
+      "text": "当关系深化时，我感到不适。",
+      "trait": "AVOIDANT",
+      "reverse": false
+    },
+    {
+      "id": "AS3",
+      "text": "与伴侣分离时我感到焦虑。",
+      "trait": "ANXIOUS",
+      "reverse": false
+    },
+    {
+      "id": "AS4",
+      "text": "在亲密时刻我有逃离的冲动。",
+      "trait": "AVOIDANT",
+      "reverse": false
+    },
+    {
+      "id": "AS5",
+      "text": "与伴侣争执时我害怕分手。",
+      "trait": "ANXIOUS",
+      "reverse": false
+    },
+    {
+      "id": "AS6",
+      "text": "表达情感对我来说很自然。",
+      "trait": "SECURE",
+      "reverse": false
+    },
+    {
+      "id": "AS7",
+      "text": "伴侣显得忙碌时我感到沮丧。",
+      "trait": "ANXIOUS",
+      "reverse": false
+    },
+    {
+      "id": "AS8",
+      "text": "在关系中保持独立对我很重要。",
+      "trait": "AVOIDANT",
+      "reverse": false
+    },
+    {
+      "id": "AS9",
+      "text": "我倾听伴侣并能够妥协。",
+      "trait": "SECURE",
+      "reverse": false
+    },
+    {
+      "id": "AS10",
+      "text": "我经常担心被遗弃。",
+      "trait": "ANXIOUS",
+      "reverse": false
+    },
+    {
+      "id": "AS11",
+      "text": "我在关系中感到舒适和安全。",
+      "trait": "SECURE",
+      "reverse": false
+    },
+    {
+      "id": "AS12",
+      "text": "与伴侣分享情感对我很困难。",
+      "trait": "AVOIDANT",
+      "reverse": false
+    },
+    {
+      "id": "AS13",
+      "text": "伴侣的延迟回应使我焦虑。",
+      "trait": "ANXIOUS",
+      "reverse": false
+    },
+    {
+      "id": "AS14",
+      "text": "我需要大量的独处时间。",
+      "trait": "AVOIDANT",
+      "reverse": false
+    },
+    {
+      "id": "AS15",
+      "text": "我冷静地处理关系问题。",
+      "trait": "SECURE",
+      "reverse": false
+    },
+    {
+      "id": "AS16",
+      "text": "我想频繁联系伴侣。",
+      "trait": "ANXIOUS",
+      "reverse": false
+    },
+    {
+      "id": "AS17",
+      "text": "表达感受对我来说不自然。",
+      "trait": "AVOIDANT",
+      "reverse": false
+    },
+    {
+      "id": "AS18",
+      "text": "我信任并依赖伴侣。",
+      "trait": "SECURE",
+      "reverse": false
+    },
+    {
+      "id": "AS19",
+      "text": "我经常担心我的关系。",
+      "trait": "ANXIOUS",
+      "reverse": false
+    },
+    {
+      "id": "AS20",
+      "text": "我不想让伴侣完全了解我。",
+      "trait": "AVOIDANT",
+      "reverse": false
+    },
+    {
+      "id": "AS21",
+      "text": "即使冲突时我也信任我们的关系。",
+      "trait": "SECURE",
+      "reverse": false
+    },
+    {
+      "id": "AS22",
+      "text": "与伴侣的情感距离使我感到安全。",
+      "trait": "AVOIDANT",
+      "reverse": false
+    },
+    {
+      "id": "AS23",
+      "text": "我想花很多时间和伴侣在一起。",
+      "trait": "ANXIOUS",
+      "reverse": false
+    },
+    {
+      "id": "AS24",
+      "text": "伴侣的支持是我安全感的基础。",
+      "trait": "SECURE",
+      "reverse": false
+    }
+  ],
+  "results": {
+    "ranges": [
+      {
+        "min": 24,
+        "max": 48,
+        "level": "安全型主导",
+        "emoji": "💚",
+        "description": "你在关系中很稳定和舒适。你信任伴侣，并自信地分享亲密。",
+        "recommendation": [
+          "保持你健康的关系模式",
+          "帮助伴侣理解他们的依恋需求",
+          "用你的稳定来明智地处理冲突"
+        ]
+      },
+      {
+        "min": 49,
+        "max": 72,
+        "level": "混合模式",
+        "emoji": "💛",
+        "description": "你根据情况显示不同的依恋模式。压力可能会引发焦虑，而舒适会显示稳定性。",
+        "recommendation": [
+          "观察并理解你的情感模式",
+          "通过与伴侣的开放对话澄清期望",
+          "通过压力管理保持关系稳定"
+        ]
+      },
+      {
+        "min": 73,
+        "max": 96,
+        "level": "焦虑型主导",
+        "emoji": "🧡",
+        "description": "你经常寻求伴侣的安心并害怕拒绝。你有时可能变得粘人或过度关注关系。",
+        "recommendation": [
+          "将自己的价值与伴侣的行为分开",
+          "逐步建立独立性和自信",
+          "焦虑出现时有意识地选择信任"
+        ]
+      },
+      {
+        "min": 97,
+        "max": 120,
+        "level": "回避型主导",
+        "emoji": "💙",
+        "description": "你发现情感表达很有挑战性并倾向于保持距离。你重视独立但可能会在关系中制造间隙。",
+        "recommendation": [
+          "逐步向伴侣敞开心扉",
+          "练习更自由地表达感受",
+          "理解脆弱是力量的根源"
+        ]
+      }
+    ]
+  }
+}
