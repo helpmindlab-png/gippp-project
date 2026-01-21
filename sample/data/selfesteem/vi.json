@@ -1,0 +1,267 @@
+{
+  "meta": {
+    "id": "selfesteem",
+    "order": 1,
+    "version": "1.0",
+    "language": "vi",
+    "rtl": false,
+    "author": "GIPPP Research Team",
+    "lastUpdated": "2026-01-21",
+    "category": "Bài kiểm tra có tính lan rộng cao",
+    "itemCount": 20
+  },
+  "ui": {
+    "testName": "Mức tự trọng của bạn là bao nhiêu?",
+    "description": "Bài kiểm tra tâm lý để đo lường sự tự tin và giá trị bản thân của bạn",
+    "security": "🔒 Bảo mật: Dữ liệu của bạn không được lưu trữ",
+    "processing": "Đang phân tích mức tự trọng của bạn...",
+    "reportTitle": "Báo cáo tự trọng của bạn",
+    "careerTitle": "💡 Lời khuyên cho bạn",
+    "actions": {
+      "report": "Xem báo cáo",
+      "viewAmazon": "Sách được đề xuất",
+      "saveImg": "Lưu dưới dạng hình ảnh",
+      "retest": "Làm lại bài kiểm tra",
+      "qrNote": "Chia sẻ với bạn bè qua QR"
+    },
+    "viral": {
+      "title": "Điểm tự trọng của bạn là bao nhiêu?",
+      "subtitle": "Khám phá ngay và so sánh với bạn bè!"
+    },
+    "labels": [
+      "Hoàn toàn không đồng ý",
+      "Không đồng ý",
+      "Trung lập",
+      "Đồng ý",
+      "Hoàn toàn đồng ý"
+    ],
+    "amazonKeywords": {
+      "HIGH": "tự trọng, tự tin, tâm lý học, phát triển cá nhân, cách xây dựng tự tin",
+      "MEDIUM": "bài kiểm tra tâm lý, tự nhận thức, tâm lý học sự phát triển",
+      "LOW": "khôi phục tự trọng, chữa lành chấn thương, liệu pháp tâm lý, vượt qua tự ghét"
+    }
+  },
+  "guide": {
+    "ipipId": "IPIP-SE-20",
+    "purpose": "Bài kiểm tra này đo lường cách bạn đánh giá và chấp nhận bản thân. Tự trọng là một đặc điểm tâm lý cơ bản để thành công, hạnh phúc và các mối quan hệ lành mạnh.",
+    "instruction": "Hãy đọc từng câu trong 20 câu dưới đây và chỉ ra mức độ đồng ý hoặc không đồng ý của bạn trên thang điểm 5 điểm. Không có câu trả lời đúng hay sai. Câu trả lời trung thực của bạn sẽ cho kết quả chính xác nhất.",
+    "interpretation": "Tự trọng cao: Bạn nhìn thấy bản thân một cách tích cực và đón nhận những thử thách | Tự trọng vừa phải: Sự tự tin của bạn thay đổi tùy theo tình huống và bạn có sự tự nhận thức cân bằng | Tự trọng thấp: Bạn có xu hướng nhìn thấy bản thân một cách tiêu cực và có thể hưởng lợi từ phát triển cá nhân",
+    "startBtn": "Bắt đầu bài kiểm tra"
+  },
+  "traitNames": {
+    "SE": "Tự trọng chung",
+    "CONF": "Tự tin",
+    "WORTH": "Giá trị bản thân"
+  },
+  "descriptions": {
+    "SE": {
+      "emoji": "😊",
+      "name": "Tự trọng chung",
+      "detail": "Mức độ bạn đánh giá bản thân một cách tích cực và tin tưởng vào khả năng của mình. Điểm số cao hơn cho thấy khả năng phục hồi lớn hơn sau thất bại và sự tham gia nhiều hơn vào những thử thách mới.",
+      "tip": "💡 Thừa nhận những thành tích nhỏ của bạn hàng ngày sẽ dần nâng cao mức tự trọng của bạn."
+    },
+    "CONF": {
+      "emoji": "💪",
+      "name": "Tự tin",
+      "detail": "Niềm tin của bạn vào khả năng của mình và sự chắc chắn rằng bạn có thể đối phó với những tình huống. Đây là một yếu tố chính trong thành công xã hội và nghề nghiệp.",
+      "tip": "💡 Những chiến thắng nhỏ lặp đi lặp lại một cách tự nhiên xây dựng sự tự tin lâu dài."
+    },
+    "WORTH": {
+      "emoji": "✨",
+      "name": "Giá trị bản thân",
+      "detail": "Mức độ bạn công nhận bản thân là một người có giá trị vốn có mà không có điều kiện. Điều này có nghĩa là cảm nhận giá trị của bạn độc lập với những phán xét của người khác.",
+      "tip": "💡 Chấp nhận bản thân như bạn là, thay vì theo đuổi sự hoàn hảo, là điều cần thiết để phát triển."
+    }
+  },
+  "items": [
+    {
+      "id": "SE1",
+      "text": "Tôi nhìn thấy bản thân mình một cách tích cực.",
+      "trait": "SE",
+      "reverse": false
+    },
+    {
+      "id": "SE2",
+      "text": "Khi tôi thất bại trong điều gì đó, tôi dễ dàng mất tự tin.",
+      "trait": "SE",
+      "reverse": true
+    },
+    {
+      "id": "SE3",
+      "text": "Tôi tự tin vào khả năng của mình.",
+      "trait": "CONF",
+      "reverse": false
+    },
+    {
+      "id": "SE4",
+      "text": "Tôi tin rằng tôi có khả năng như hầu hết những người khác.",
+      "trait": "CONF",
+      "reverse": false
+    },
+    {
+      "id": "SE5",
+      "text": "Tôi tôn trọng bản thân mình.",
+      "trait": "WORTH",
+      "reverse": false
+    },
+    {
+      "id": "SE6",
+      "text": "Tôi nghĩ rằng tôi là một người không đủ.",
+      "trait": "WORTH",
+      "reverse": true
+    },
+    {
+      "id": "SE7",
+      "text": "Khi đối mặt với những thử thách mới, tôi tin rằng tôi sẽ thành công.",
+      "trait": "CONF",
+      "reverse": false
+    },
+    {
+      "id": "SE8",
+      "text": "Ý kiến của người khác ảnh hưởng lớn đến hành vi của tôi.",
+      "trait": "WORTH",
+      "reverse": true
+    },
+    {
+      "id": "SE9",
+      "text": "Tôi hiểu rõ những điểm mạnh và điểm yếu của mình.",
+      "trait": "SE",
+      "reverse": false
+    },
+    {
+      "id": "SE10",
+      "text": "Khi tôi thất bại, tôi học hỏi từ đó và cố gắng lại.",
+      "trait": "CONF",
+      "reverse": false
+    },
+    {
+      "id": "SE11",
+      "text": "Tôi thường hối tiếc về những quyết định của mình.",
+      "trait": "SE",
+      "reverse": true
+    },
+    {
+      "id": "SE12",
+      "text": "Tôi có thể bày tỏ ý kiến của mình một cách tự tin.",
+      "trait": "CONF",
+      "reverse": false
+    },
+    {
+      "id": "SE13",
+      "text": "Tôi chấp nhận bản thân mình như tôi là.",
+      "trait": "WORTH",
+      "reverse": false
+    },
+    {
+      "id": "SE14",
+      "text": "Tôi dễ dàng bị tổn thương bởi những lời chỉ trích.",
+      "trait": "SE",
+      "reverse": true
+    },
+    {
+      "id": "SE15",
+      "text": "Tôi cảm thấy kém cỏi khi so sánh với những người khác.",
+      "trait": "WORTH",
+      "reverse": true
+    },
+    {
+      "id": "SE16",
+      "text": "Tôi tin rằng tôi có thể đạt được những điều tôi đặt ra.",
+      "trait": "CONF",
+      "reverse": false
+    },
+    {
+      "id": "SE17",
+      "text": "Tôi sợ thất bại.",
+      "trait": "SE",
+      "reverse": true
+    },
+    {
+      "id": "SE18",
+      "text": "Tôi nghĩ rằng giá trị của tôi phụ thuộc vào đánh giá của người khác.",
+      "trait": "WORTH",
+      "reverse": true
+    },
+    {
+      "id": "SE19",
+      "text": "Tôi yêu bản thân mình.",
+      "trait": "WORTH",
+      "reverse": false
+    },
+    {
+      "id": "SE20",
+      "text": "Tôi có thể giữ bình tĩnh ngay cả trong những tình huống khó khăn.",
+      "trait": "CONF",
+      "reverse": false
+    }
+  ],
+  "results": {
+    "ranges": [
+      {
+        "min": 20,
+        "max": 40,
+        "level": "Rất thấp",
+        "emoji": "😔",
+        "description": "Bạn đang đánh giá bản thân một cách rất tiêu cực ngay bây giờ. Bạn khó có thể tin vào khả năng của mình và dễ dàng bị tổn thương bởi những lời chỉ trích.",
+        "recommendation": [
+          "Hãy cân nhắc việc nói chuyện với một chuyên gia sức khỏe tâm thần",
+          "Có ý định tạo ra những trải nghiệm thành công nhỏ",
+          "Thách thức đối thoại nội tâm tiêu cực bằng những suy nghĩ tích cực thực tế",
+          "Xác định và ghi lại những điểm mạnh của bạn"
+        ]
+      },
+      {
+        "min": 41,
+        "max": 60,
+        "level": "Thấp",
+        "emoji": "😐",
+        "description": "Mức tự trọng của bạn tương đối thấp. Bạn có xu hướng đánh giá thấp khả năng của mình và do dự trước những thử thách mới.",
+        "recommendation": [
+          "Thực hành thừa nhận những thành tích của bạn",
+          "Tránh xa việc so sánh và cạnh tranh liên tục",
+          "Dành thời gian với những người hỗ trợ và khuyến khích bạn",
+          "Nói với bản thân những gì bạn sẽ nói với một người bạn thân thiết"
+        ]
+      },
+      {
+        "min": 61,
+        "max": 80,
+        "level": "Trung bình",
+        "emoji": "😊",
+        "description": "Mức tự trọng của bạn được cân bằng. Bạn nhìn thấy bản thân một cách tích cực đồng thời công nhận các cơ hội phát triển. Bạn duy trì sự tự tin thích hợp trong hầu hết các tình huống.",
+        "recommendation": [
+          "Hãy duy trì thái độ tích cực của bạn hiện tại",
+          "Thực hành tin tưởng vào bản thân khi đối mặt với những thử thách",
+          "Nhìn các thất bại như những cơ hội học hỏi",
+          "Chia sẻ kinh nghiệm của bạn với người khác"
+        ]
+      },
+      {
+        "min": 81,
+        "max": 95,
+        "level": "Cao",
+        "emoji": "😄",
+        "description": "Bạn có một mức tự trọng lành mạnh. Bạn tin vào khả năng của mình và tự tin đối mặt với những thử thách. Bạn phục hồi tốt sau các thất bại.",
+        "recommendation": [
+          "Tận dụng các điểm mạnh của bạn nhiều hơn trong cuộc sống hàng ngày",
+          "Đặt ra những mục tiêu đầy tham vọng và theo đuổi chúng",
+          "Chia sẻ sự tự tin và sự khuyến khích của bạn với người khác",
+          "Tiếp tục phát triển một tư duy tăng trưởng"
+        ]
+      },
+      {
+        "min": 96,
+        "max": 100,
+        "level": "Rất cao",
+        "emoji": "🚀",
+        "description": "Bạn có một mức tự trọng rất cao. Bạn nhìn thấy bản thân một cách cực kỳ tích cực và tự tin đối mặt với bất kỳ thử thách nào.",
+        "recommendation": [
+          "Hãy cẩn thận để sự tự tin không trở thành kiêu ngạo",
+          "Cũng hãy đánh giá cao và tôn trọng những quan điểm của người khác",
+          "Duy trì sự cân bằng giữa tự tin và khiêm tốn",
+          "Sử dụng các điểm mạnh của bạn để giúp đỡ và truyền cảm hứng cho những người xung quanh"
+        ]
+      }
+    ]
+  }
+}
