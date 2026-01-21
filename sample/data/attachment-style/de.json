@@ -1,0 +1,274 @@
+{
+  "meta": {
+    "id": "attachment-style",
+    "order": 2,
+    "version": "1.0",
+    "language": "de",
+    "rtl": false,
+    "author": "GIPPP Research Team",
+    "lastUpdated": "2026-01-21",
+    "category": "Hochvirales Test",
+    "itemCount": 24
+  },
+  "ui": {
+    "testName": "Was ist dein Bindungsstil?",
+    "description": "Entdecke dein Bindungsmuster in Beziehungen und Liebe",
+    "security": "🔒 Sicherheit: Deine Daten werden nicht gespeichert",
+    "processing": "Dein Bindungsstil wird analysiert...",
+    "reportTitle": "Dein Bindungsstil-Bericht",
+    "careerTitle": "💡 Tipps zum Verständnis von Beziehungen",
+    "actions": {
+      "report": "Bericht ansehen",
+      "viewAmazon": "Empfohlene Bücher",
+      "saveImg": "Als Bild speichern",
+      "retest": "Test wiederholen",
+      "qrNote": "Mit Freunden per QR-Code teilen"
+    },
+    "viral": {
+      "title": "Was ist dein Bindungsstil?",
+      "subtitle": "Vergleiche mit Freunden und vertiefte dein Verständnis von Beziehungen!"
+    },
+    "labels": [
+      "Stimme überhaupt nicht zu",
+      "Stimme nicht zu",
+      "Neutral",
+      "Stimme zu",
+      "Stimme voll zu"
+    ],
+    "amazonKeywords": {
+      "SECURE": "Bindungsstil, Beziehungspsychologie, Liebe, Paare, sichere Beziehungen",
+      "ANXIOUS": "Ängstliche Bindung, Beziehungsangst, Dating-Psychologie, emotionale Regulation",
+      "AVOIDANT": "Vermeidende Bindung, emotionale Distanz, Beziehungsmuster, emotionale Ausdrucksweise"
+    }
+  },
+  "guide": {
+    "ipipId": "IPIP-AS-24",
+    "purpose": "Dieser Test hilft dir, deine Bindungsmuster in intimen Beziehungen zu verstehen. Dies ist ein Selbsterkenntnistool, keine diagnostische Bewertung.",
+    "instruction": "Lies jede der 24 Aussagen unten und gib auf einer 5er-Skala an, wie sehr deine Gefühle und Verhaltensweisen in Beziehungen mit jeder Aussage übereinstimmen.",
+    "interpretation": "Sicher: Du fühlst dich wohl und vertraust in Beziehungen, balancierst Nähe und Unabhängigkeit | Ängstlich: Du suchst Beruhigung vom Partner und reagierst sensibel auf Ablehnung | Vermeidend: Du findest emotionale Ausdrucksweise schwierig und hältst emotionale Distanz",
+    "startBtn": "Test starten"
+  },
+  "traitNames": {
+    "SECURE": "Sichere Bindung",
+    "ANXIOUS": "Ängstliche Bindung",
+    "AVOIDANT": "Vermeidende Bindung"
+  },
+  "descriptions": {
+    "SECURE": {
+      "emoji": "💚",
+      "name": "Sichere Bindung",
+      "detail": "Du fühlst dich selbstbewusst und wohl in Beziehungen. Du vertraust deinem Partner und balancierst Nähe mit Unabhängigkeit. Du gehst mit Konflikten reif um.",
+      "tip": "💡 Bewahre deine gesunden Beziehungsmuster und vertiefe Bindungen durch regelmäßige offene Gespräche mit deinem Partner."
+    },
+    "ANXIOUS": {
+      "emoji": "🧡",
+      "name": "Ängstliche Bindung",
+      "detail": "Du suchst nach Aufmerksamkeit deines Partners und fürchtest Ablehnung erheblich. Du fragst dich häufig, was er denkt, und brauchst Beruhigung.",
+      "tip": "💡 Drücke deine Gefühle klar aus, aber miss deinen Wert nicht an deines Partners Handlungen."
+    },
+    "AVOIDANT": {
+      "emoji": "💙",
+      "name": "Vermeidende Bindung",
+      "detail": "Du findest emotionale Ausdrucksweise herausfordernd und bist vorsichtig mit Nähe. Du schätzt Unabhängigkeit, könntest aber Distanz schaffen.",
+      "tip": "💡 Übe, deine Gefühle schrittweise mit deinem Partner zu teilen, und erkenne, dass Verletzlichkeit Stärke ist."
+    }
+  },
+  "items": [
+    {
+      "id": "AS1",
+      "text": "Ich brauche häufig die Gewissheit, dass mein Partner mich liebt.",
+      "trait": "ANXIOUS",
+      "reverse": false
+    },
+    {
+      "id": "AS2",
+      "text": "Je tiefer eine Beziehung wird, desto unbehaglicher fühle ich mich.",
+      "trait": "AVOIDANT",
+      "reverse": false
+    },
+    {
+      "id": "AS3",
+      "text": "Ich fühle mich ängstlich, wenn ich von meinem Partner getrennt bin.",
+      "trait": "ANXIOUS",
+      "reverse": false
+    },
+    {
+      "id": "AS4",
+      "text": "Ich habe den Drang zu fliehen, wenn wir uns nahekommen.",
+      "trait": "AVOIDANT",
+      "reverse": false
+    },
+    {
+      "id": "AS5",
+      "text": "Ich fürchte eine Trennung, wenn wir streiten.",
+      "trait": "ANXIOUS",
+      "reverse": false
+    },
+    {
+      "id": "AS6",
+      "text": "Gefühle auszudrücken fühlt sich für mich natürlich an.",
+      "trait": "SECURE",
+      "reverse": false
+    },
+    {
+      "id": "AS7",
+      "text": "Ich fühle mich frustriert, wenn mein Partner beschäftigt ist.",
+      "trait": "ANXIOUS",
+      "reverse": false
+    },
+    {
+      "id": "AS8",
+      "text": "Unabhängigkeit in Beziehungen ist mir wichtig.",
+      "trait": "AVOIDANT",
+      "reverse": false
+    },
+    {
+      "id": "AS9",
+      "text": "Ich kann meinem Partner zuhören und kann mich einigen.",
+      "trait": "SECURE",
+      "reverse": false
+    },
+    {
+      "id": "AS10",
+      "text": "Ich fürchte mich oft vor Verlassenheit.",
+      "trait": "ANXIOUS",
+      "reverse": false
+    },
+    {
+      "id": "AS11",
+      "text": "Ich fühle mich in meiner Beziehung wohl und sicher.",
+      "trait": "SECURE",
+      "reverse": false
+    },
+    {
+      "id": "AS12",
+      "text": "Es ist schwer für mich, Gefühle mit meinem Partner zu teilen.",
+      "trait": "AVOIDANT",
+      "reverse": false
+    },
+    {
+      "id": "AS13",
+      "text": "Verzögerte Antworten von meinem Partner machen mich ängstlich.",
+      "trait": "ANXIOUS",
+      "reverse": false
+    },
+    {
+      "id": "AS14",
+      "text": "Ich brauche viel Zeit für mich allein.",
+      "trait": "AVOIDANT",
+      "reverse": false
+    },
+    {
+      "id": "AS15",
+      "text": "Ich kann Beziehungsprobleme ruhig bewältigen.",
+      "trait": "SECURE",
+      "reverse": false
+    },
+    {
+      "id": "AS16",
+      "text": "Ich möchte meinen Partner häufig kontaktieren.",
+      "trait": "ANXIOUS",
+      "reverse": false
+    },
+    {
+      "id": "AS17",
+      "text": "Gefühle auszudrücken fühlt sich unbeholfen und schwierig an.",
+      "trait": "AVOIDANT",
+      "reverse": false
+    },
+    {
+      "id": "AS18",
+      "text": "Ich vertraue meinem Partner und kann mich auf ihn verlassen.",
+      "trait": "SECURE",
+      "reverse": false
+    },
+    {
+      "id": "AS19",
+      "text": "Ich mache mir oft Sorgen um meine Beziehung.",
+      "trait": "ANXIOUS",
+      "reverse": false
+    },
+    {
+      "id": "AS20",
+      "text": "Ich möchte nicht, dass mein Partner mich ganz kennt.",
+      "trait": "AVOIDANT",
+      "reverse": false
+    },
+    {
+      "id": "AS21",
+      "text": "Ich vertraue unserer Beziehung auch während Konflikten.",
+      "trait": "SECURE",
+      "reverse": false
+    },
+    {
+      "id": "AS22",
+      "text": "Emotionale Distanz zu meinem Partner fühlt sich sicher an.",
+      "trait": "AVOIDANT",
+      "reverse": false
+    },
+    {
+      "id": "AS23",
+      "text": "Ich möchte viel Zeit mit meinem Partner verbringen.",
+      "trait": "ANXIOUS",
+      "reverse": false
+    },
+    {
+      "id": "AS24",
+      "text": "Die Unterstützung meines Partners ist meine Sicherheitsbasis.",
+      "trait": "SECURE",
+      "reverse": false
+    }
+  ],
+  "results": {
+    "ranges": [
+      {
+        "min": 24,
+        "max": 48,
+        "level": "Sicher dominant",
+        "emoji": "💚",
+        "description": "Du bist stabil und wohl in Beziehungen. Du vertraust deinem Partner und teilst Nähe selbstsicher.",
+        "recommendation": [
+          "Bewahre deine gesunden Beziehungsmuster",
+          "Hilf deinem Partner, seine Bindungsbedürfnisse zu verstehen",
+          "Nutze deine Stabilität, um Konflikte weise zu bewältigen"
+        ]
+      },
+      {
+        "min": 49,
+        "max": 72,
+        "level": "Gemischtes Muster",
+        "emoji": "💛",
+        "description": "Du zeigst je nach Umständen unterschiedliche Bindungsmuster. Stress kann Angst auslösen, während Komfort Stabilität offenbart.",
+        "recommendation": [
+          "Beobachte und verstehe deine emotionalen Muster",
+          "Kläre Erwartungen durch offene Gespräche",
+          "Verwalte Stress, um Beziehungsstabilität zu bewahren"
+        ]
+      },
+      {
+        "min": 73,
+        "max": 96,
+        "level": "Ängstlich dominant",
+        "emoji": "🧡",
+        "description": "Du suchst häufig nach Beruhigung durch deinen Partner und fürchtest Ablehnung. Du könntest anhänglich oder überengagiert werden.",
+        "recommendation": [
+          "Trenne deinen Eigenwert von deines Partners Handlungen",
+          "Entwickle Unabhängigkeit und Selbstvertrauen schrittweise",
+          "Wähle bewusst Vertrauen, wenn Angst auftritt"
+        ]
+      },
+      {
+        "min": 97,
+        "max": 120,
+        "level": "Vermeidend dominant",
+        "emoji": "💙",
+        "description": "Du findest emotionale Ausdrucksweise schwierig und bevorzugst Distanz. Du schätzt Unabhängigkeit, könntest aber Lücken in der Nähe schaffen.",
+        "recommendation": [
+          "Öffne dein Herz schrittweise für deinen Partner",
+          "Übe, Gefühle freier auszudrücken",
+          "Erkenne, dass Verletzlichkeit Stärke aufbaut"
+        ]
+      }
+    ]
+  }
+}
