@@ -1,0 +1,287 @@
+{
+  "meta": {
+    "id": "relationship-greenflag-redflag",
+    "order": 4,
+    "version": "1.0",
+    "language": "en",
+    "rtl": false,
+    "author": "GIPPP Research Team",
+    "lastUpdated": "2026-01-21",
+    "category": "Highly Viral Test",
+    "itemCount": 25
+  },
+  "ui": {
+    "testName": "Is Your Relationship Healthy?",
+    "description": "Identify the green and red flags in your relationship",
+    "security": "🔒 Privacy: Your data is not stored",
+    "processing": "Analyzing your relationship signals...",
+    "reportTitle": "Your Relationship Health Report",
+    "careerTitle": "💡 Relationship Assessment",
+    "actions": {
+      "report": "View Report",
+      "viewAmazon": "Recommended Books",
+      "saveImg": "Save as Image",
+      "retest": "Retake Test",
+      "qrNote": "Share with Friends via QR"
+    },
+    "viral": {
+      "title": "How Healthy Is Your Relationship?",
+      "subtitle": "Check the green and red flags together!"
+    },
+    "labels": [
+      "Strongly Disagree",
+      "Disagree",
+      "Neutral",
+      "Agree",
+      "Strongly Agree"
+    ],
+    "amazonKeywords": {
+      "GREENFLAG": "healthy relationships, good signs, relationship improvement",
+      "REDFLAG": "relationship warning signs, toxic relationships, relationship issues",
+      "COMMUNICATION": "communication, dialogue, open-minded",
+      "RESPECT": "respect, boundaries, trust",
+      "GROWTH": "growth, development, change"
+    }
+  },
+  "guide": {
+    "ipipId": "IPIP-GF-25",
+    "purpose": "This test helps you identify healthy and concerning patterns in your relationship. This is a self-awareness tool only, not professional counseling.",
+    "instruction": "Read each of the 25 statements and rate your agreement based on your current or past relationship experience on a 5-point scale. Honesty is most helpful.",
+    "interpretation": "High score: Your relationship shows healthy signs | Moderate score: Your relationship has both positive and negative patterns | Low score: Your relationship shows concerning warning signs",
+    "startBtn": "Start Test"
+  },
+  "traitNames": {
+    "GREENFLAG": "Green Flags",
+    "REDFLAG": "Red Flags",
+    "COMMUNICATION": "Communication",
+    "RESPECT": "Respect & Trust",
+    "GROWTH": "Mutual Growth"
+  },
+  "descriptions": {
+    "GREENFLAG": {
+      "emoji": "🟢",
+      "name": "Green Flags",
+      "detail": "Your partner respects you, is honest, and listens to your opinions. You build a future together and grow as individuals.",
+      "tip": "💡 Cherish these signs and continue nurturing them."
+    },
+    "REDFLAG": {
+      "emoji": "🚩",
+      "name": "Red Flags",
+      "detail": "Your partner manipulates you, lies, or dismisses your feelings. The relationship may be one-sided or repeatedly harmful.",
+      "tip": "💡 If you see many of these signs, professional support is strongly recommended."
+    },
+    "COMMUNICATION": {
+      "emoji": "💬",
+      "name": "Communication",
+      "detail": "Whether you and your partner can calmly discuss difficult topics. Open communication is the foundation of healthy relationships.",
+      "tip": "💡 Regular genuine conversations deepen mutual understanding."
+    },
+    "RESPECT": {
+      "emoji": "🤝",
+      "name": "Respect & Trust",
+      "detail": "Whether your partner honors your boundaries, respects your friends/family, and values your personal space and autonomy.",
+      "tip": "💡 Respect is the most basic element of any relationship."
+    },
+    "GROWTH": {
+      "emoji": "🌱",
+      "name": "Mutual Growth",
+      "detail": "Whether you and your partner grow together and support each other's dreams and goals.",
+      "tip": "💡 Relationships that grow together deepen over time."
+    }
+  },
+  "items": [
+    {
+      "id": "GF1",
+      "text": "My partner genuinely listens to my opinions.",
+      "trait": "COMMUNICATION",
+      "reverse": false
+    },
+    {
+      "id": "GF2",
+      "text": "My partner respects my boundaries and decisions.",
+      "trait": "RESPECT",
+      "reverse": false
+    },
+    {
+      "id": "GF3",
+      "text": "I can discuss any topic honestly with my partner.",
+      "trait": "COMMUNICATION",
+      "reverse": false
+    },
+    {
+      "id": "GF4",
+      "text": "My partner respects my friends and family.",
+      "trait": "RESPECT",
+      "reverse": false
+    },
+    {
+      "id": "GF5",
+      "text": "We plan for the future and share dreams together.",
+      "trait": "GROWTH",
+      "reverse": false
+    },
+    {
+      "id": "GF6",
+      "text": "My partner respects my personal space and independence.",
+      "trait": "RESPECT",
+      "reverse": false
+    },
+    {
+      "id": "GF7",
+      "text": "I feel confident and supported with my partner.",
+      "trait": "GROWTH",
+      "reverse": false
+    },
+    {
+      "id": "GF8",
+      "text": "My partner accepts mistakes and problem-solves together.",
+      "trait": "COMMUNICATION",
+      "reverse": false
+    },
+    {
+      "id": "GF9",
+      "text": "My partner encourages and supports my goals.",
+      "trait": "GROWTH",
+      "reverse": false
+    },
+    {
+      "id": "GF10",
+      "text": "I completely trust my partner.",
+      "trait": "RESPECT",
+      "reverse": false
+    },
+    {
+      "id": "RF1",
+      "text": "My partner dismisses or minimizes my feelings.",
+      "trait": "REDFLAG",
+      "reverse": false
+    },
+    {
+      "id": "RF2",
+      "text": "My partner frequently lies to me.",
+      "trait": "REDFLAG",
+      "reverse": false
+    },
+    {
+      "id": "RF3",
+      "text": "My partner tries to control my behavior.",
+      "trait": "REDFLAG",
+      "reverse": false
+    },
+    {
+      "id": "RF4",
+      "text": "My partner becomes verbally abusive when angry.",
+      "trait": "REDFLAG",
+      "reverse": false
+    },
+    {
+      "id": "RF5",
+      "text": "Our relationship feels one-sided.",
+      "trait": "REDFLAG",
+      "reverse": false
+    },
+    {
+      "id": "RF6",
+      "text": "My partner speaks negatively about my friends or family.",
+      "trait": "REDFLAG",
+      "reverse": false
+    },
+    {
+      "id": "RF7",
+      "text": "My partner refuses to acknowledge their mistakes.",
+      "trait": "REDFLAG",
+      "reverse": false
+    },
+    {
+      "id": "RF8",
+      "text": "I feel anxious or unsafe around my partner.",
+      "trait": "REDFLAG",
+      "reverse": false
+    },
+    {
+      "id": "RF9",
+      "text": "My partner restricts my personal time and independence.",
+      "trait": "REDFLAG",
+      "reverse": false
+    },
+    {
+      "id": "RF10",
+      "text": "My partner discourages my personal growth.",
+      "trait": "REDFLAG",
+      "reverse": false
+    },
+    {
+      "id": "GF11",
+      "text": "We find solutions together even in difficult times.",
+      "trait": "COMMUNICATION",
+      "reverse": false
+    },
+    {
+      "id": "GF12",
+      "text": "My partner accepts me as I am.",
+      "trait": "RESPECT",
+      "reverse": false
+    },
+    {
+      "id": "GF13",
+      "text": "Our relationship nurtures mutual growth.",
+      "trait": "GROWTH",
+      "reverse": false
+    },
+    {
+      "id": "GF14",
+      "text": "We laugh and enjoy time together.",
+      "trait": "COMMUNICATION",
+      "reverse": false
+    },
+    {
+      "id": "GF15",
+      "text": "I feel optimistic about our future together.",
+      "trait": "GROWTH",
+      "reverse": false
+    }
+  ],
+  "results": {
+    "ranges": [
+      {
+        "min": 25,
+        "max": 50,
+        "level": "Many Warning Signs",
+        "emoji": "🚩",
+        "description": "Your relationship shows many concerning patterns. This relationship may be harmful to you.",
+        "recommendation": [
+          "Talk to trusted friends or family about your situation",
+          "Professional counseling is strongly recommended",
+          "Prioritize your safety and well-being",
+          "Consider whether leaving the relationship is necessary"
+        ]
+      },
+      {
+        "min": 51,
+        "max": 75,
+        "level": "Mixed Signals",
+        "emoji": "⚠️",
+        "description": "Your relationship has both positive and negative patterns. There are areas for improvement but also hopeful signs.",
+        "recommendation": [
+          "Have honest conversations with your partner about the relationship",
+          "Discuss specific areas that need improvement together",
+          "Consider couples counseling if needed",
+          "Work together to create positive change"
+        ]
+      },
+      {
+        "min": 76,
+        "max": 100,
+        "level": "Healthy Relationship",
+        "emoji": "🟢",
+        "description": "Your relationship shows many healthy signs. Respect, trust, and mutual growth are present.",
+        "recommendation": [
+          "Maintain the positive relationship patterns you've built",
+          "Continue developing communication and understanding",
+          "Keep building your future together",
+          "Small efforts toward improvement are always valuable"
+        ]
+      }
+    ]
+  }
+}
