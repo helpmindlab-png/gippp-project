@@ -1,0 +1,264 @@
+{
+  "meta": {
+    "id": "dating-style",
+    "version": "1.0",
+    "language": "de",
+    "rtl": false,
+    "lastUpdated": "2026-01-22",
+    "itemCount": 25,
+    "traitCount": 4
+  },
+  "ui": {
+    "testName": "Was ist Ihr Dating-Stil?",
+    "description": "Eine 25-teilige Bewertung, die Ihren echten Ansatz zu Romantik und Beziehungen offenbart",
+    "security": "Ihre Antworten werden nicht gespeichert.",
+    "processing": "Analysiere Ihren Dating-Stil...",
+    "reportTitle": "Ihr Dating-Stil-Profil",
+    "actions": {
+      "restart": "Erneut versuchen",
+      "share": "Teilen",
+      "save": "Speichern"
+    },
+    "labels": ["Stimme überhaupt nicht zu", "Stimme nicht zu", "Neutral", "Stimme zu", "Stimme vollkommen zu"]
+  },
+  "guide": {
+    "ipipId": "IPIP-DS-25 (Dating-Stil-Bewertung, basierend auf Big Five)",
+    "purpose": "Diese Bewertung hilft Ihnen, Ihren Dating-Ansatz und Beziehungsmuster zu verstehen. Sie ist nur zur Selbsterkenntnis und keine diagnostische Methode.",
+    "instruction": "Beantworten Sie basierend auf den letzten 2-4 Wochen ehrlich, inwieweit jede Aussage auf Sie zutrifft.",
+    "interpretation": "Höhere Werte deuten auf stärkere Tendenzen in diesem Merkmal hin, während niedrigere Werte auf schwächere Tendenzen hindeuten.",
+    "startBtn": "Bewertung starten"
+  },
+  "traitNames": {
+    "AC": "Aktive Verfolgung",
+    "CA": "Vorsichtiger Ansatz",
+    "IE": "Unabhängiger Ausdruck",
+    "RE": "Beziehungszentriert"
+  },
+  "descriptions": {
+    "AC": {
+      "emoji": "🔥",
+      "name": "Aktive Verfolgung",
+      "detail": "Sie suchen aktiv nach Partnern und drücken Interesse offen aus. Sie fühlen sich bei neuen romantischen Begegnungen wohl und teilen Ihre Gefühle frei.",
+      "tip": "Höhere Werte bedeuten, dass Sie aktiv Beziehungen beginnen; niedrigere Werte bedeuten, dass Sie auf Signale anderer warten."
+    },
+    "CA": {
+      "emoji": "🤔",
+      "name": "Vorsichtiger Ansatz",
+      "detail": "Sie bewerten potenzielle Partner sorgfältig und schätzen tiefe Verbindungen. Sie bevorzugen, jemanden vollständig zu verstehen, bevor Sie sich emotional engagieren.",
+      "tip": "Höhere Werte deuten auf Überlegung und Vorsicht hin; niedrigere Werte deuten auf Spontaneität und emotionale Unmittelbarkeit hin."
+    },
+    "IE": {
+      "emoji": "🗣️",
+      "name": "Unabhängiger Ausdruck",
+      "detail": "Sie drücken Ihre Gefühle und Bedürfnisse klar aus und schätzen persönliche Freiheit. Sie bewahren Unabhängigkeit auch innerhalb von Beziehungen.",
+      "tip": "Höhere Werte bedeuten, dass Sie Grenzen setzen und Autonomie bewahren; niedrigere Werte bedeuten, dass Sie sich den Bedürfnissen Ihres Partners anpassen."
+    },
+    "RE": {
+      "emoji": "💕",
+      "name": "Beziehungszentriert",
+      "detail": "Sie priorisieren die Bedürfnisse und Emotionen Ihres Partners. Sie streben nach tiefem Vertrauen und zeigen starkes Engagement in Beziehungen.",
+      "tip": "Höhere Werte deuten auf tiefes emotionales Engagement hin; niedrigere Werte deuten auf Bevorzugung von emotionaler Distanz hin."
+    }
+  },
+  "items": [
+    {
+      "id": "AC_001",
+      "text": "Wenn ich jemanden treffe, zu dem ich mich hingezogen fühle, ergreife ich die Initiative, ihn zu kontaktieren.",
+      "trait": "AC",
+      "reverse": false
+    },
+    {
+      "id": "AC_002",
+      "text": "Ich genieße es, neue Menschen kennenzulernen und romantische Möglichkeiten zu erkunden.",
+      "trait": "AC",
+      "reverse": false
+    },
+    {
+      "id": "AC_003",
+      "text": "Ich drücke jemandem, an dem ich interessiert bin, direkt meine Gefühle aus.",
+      "trait": "AC",
+      "reverse": false
+    },
+    {
+      "id": "AC_004",
+      "text": "Ich fühle mich ängstlich bei der Idee, eine neue romantische Beziehung anzufangen.",
+      "trait": "AC",
+      "reverse": true
+    },
+    {
+      "id": "AC_005",
+      "text": "Ich bevorzuge es, darauf zu warten, dass die andere Person Interesse zeigt.",
+      "trait": "AC",
+      "reverse": true
+    },
+    {
+      "id": "AC_006",
+      "text": "Ich neige dazu, meine Gefühle zu verbergen, wenn ich romantisches Interesse habe.",
+      "trait": "AC",
+      "reverse": true
+    },
+    {
+      "id": "AC_007",
+      "text": "Ich versuche aktiv, Chancen zur Einleitung neuer Beziehungen nicht zu verpassen.",
+      "trait": "AC",
+      "reverse": false
+    },
+    {
+      "id": "CA_001",
+      "text": "Ich überdenke es sorgfältig, bevor ich eine Beziehung mit jemandem Neuem anfange.",
+      "trait": "CA",
+      "reverse": false
+    },
+    {
+      "id": "CA_002",
+      "text": "Ich warte darauf, den wahren Charakter einer Person zu verstehen, bevor ich tiefere Gefühle offenbare.",
+      "trait": "CA",
+      "reverse": false
+    },
+    {
+      "id": "CA_003",
+      "text": "Ich bewerte gründlich meine Kompatibilität mit einem potenziellen Partner.",
+      "trait": "CA",
+      "reverse": false
+    },
+    {
+      "id": "CA_004",
+      "text": "Ich neige dazu, mich bei einem ersten Date schnell zu verlieben.",
+      "trait": "CA",
+      "reverse": true
+    },
+    {
+      "id": "CA_005",
+      "text": "Ich treffe romantische Entscheidungen auf der Grundlage emotionaler Impulse.",
+      "trait": "CA",
+      "reverse": true
+    },
+    {
+      "id": "CA_006",
+      "text": "Ich verliere schnell das Interesse, wenn ich Mängel bei jemandem bemerke.",
+      "trait": "CA",
+      "reverse": true
+    },
+    {
+      "id": "IE_001",
+      "text": "Ich brauche ausreichend persönliche Zeit und Raum, auch in einer Beziehung.",
+      "trait": "IE",
+      "reverse": false
+    },
+    {
+      "id": "IE_002",
+      "text": "Ich drücke meine Gedanken und Bedürfnisse in romantischen Beziehungen klar aus.",
+      "trait": "IE",
+      "reverse": false
+    },
+    {
+      "id": "IE_003",
+      "text": "Ich bevorzuge es, meine Unabhängigkeit zu bewahren, anstatt von meinem Partner abhängig zu sein.",
+      "trait": "IE",
+      "reverse": false
+    },
+    {
+      "id": "IE_004",
+      "text": "Ich bin bereit, meine Pläne und Träume für meinen Partner aufzugeben.",
+      "trait": "IE",
+      "reverse": true
+    },
+    {
+      "id": "IE_005",
+      "text": "Ich verberge häufig meine Meinung, um die Vorlieben meines Partners zu erfüllen.",
+      "trait": "IE",
+      "reverse": true
+    },
+    {
+      "id": "IE_006",
+      "text": "Ich verspüre das Bedürfnis, die Handlungen und Entscheidungen meines Partners zu kontrollieren.",
+      "trait": "IE",
+      "reverse": true
+    },
+    {
+      "id": "RE_001",
+      "text": "Ich bin sensibel für den emotionalen Zustand meines Partners.",
+      "trait": "RE",
+      "reverse": false
+    },
+    {
+      "id": "RE_002",
+      "text": "Ich kümmere mich um meinen Partner und priorisiere sein Wohlergehen.",
+      "trait": "RE",
+      "reverse": false
+    },
+    {
+      "id": "RE_003",
+      "text": "Ich schätze tiefe und bedeutungsvolle Verbindungen mit meinem Partner.",
+      "trait": "RE",
+      "reverse": false
+    },
+    {
+      "id": "RE_004",
+      "text": "Ich bemerke Veränderungen in den Gefühlen meines Partners nicht leicht.",
+      "trait": "RE",
+      "reverse": true
+    },
+    {
+      "id": "RE_005",
+      "text": "Ich bevorzuge es, in meinen Beziehungen emotionale Distanz zu bewahren.",
+      "trait": "RE",
+      "reverse": true
+    },
+    {
+      "id": "RE_006",
+      "text": "Ich fühle mich häufig einsam in meinen romantischen Beziehungen.",
+      "trait": "RE",
+      "reverse": true
+    }
+  ],
+  "results": {
+    "ranges": [
+      {
+        "min": 25,
+        "max": 50,
+        "level": "VERY_LOW",
+        "emoji": "🌙",
+        "title": "Sehr niedrig",
+        "description": "Dieses Merkmal ist in Ihrem Ansatz sehr schwach.",
+        "recommendation": "Verstehen Sie Ihre aktuellen Muster und üben Sie, sich bei Bedarf anzupassen."
+      },
+      {
+        "min": 51,
+        "max": 75,
+        "level": "LOW",
+        "emoji": "⭐",
+        "title": "Niedrig",
+        "description": "Dieses Merkmal ist relativ schwach.",
+        "recommendation": "Respektieren Sie Ihre natürlichen Tendenzen und entwickeln Sie Flexibilität, wenn erforderlich."
+      },
+      {
+        "min": 76,
+        "max": 100,
+        "level": "MEDIUM",
+        "emoji": "💫",
+        "title": "Durchschnittlich",
+        "description": "Dieses Merkmal ist ausgewogen.",
+        "recommendation": "Behalten Sie Ihren ausgewogenen Ansatz bei."
+      },
+      {
+        "min": 101,
+        "max": 125,
+        "level": "HIGH",
+        "emoji": "✨",
+        "title": "Hoch",
+        "description": "Dieses Merkmal ist bemerkenswert stark.",
+        "recommendation": "Nutzen Sie Ihre Stärke mit Bedacht und achten Sie auf Ungleichgewichte."
+      },
+      {
+        "min": 126,
+        "max": 150,
+        "level": "VERY_HIGH",
+        "emoji": "💖",
+        "title": "Sehr hoch",
+        "description": "Dieses Merkmal ist sehr stark.",
+        "recommendation": "Kanalisieren Sie Ihre Stärke positiv und arbeiten Sie auf Gleichgewicht hin."
+      }
+    ]
+  }
+}
