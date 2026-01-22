@@ -1,0 +1,287 @@
+{
+  "meta": {
+    "id": "relationship-greenflag-redflag",
+    "order": 4,
+    "version": "1.0",
+    "language": "de",
+    "rtl": false,
+    "author": "GIPPP Research Team",
+    "lastUpdated": "2026-01-21",
+    "category": "Hochvirales Test",
+    "itemCount": 25
+  },
+  "ui": {
+    "testName": "Ist deine Beziehung gesund?",
+    "description": "Identifiziere die grünen und roten Flaggen in deiner Beziehung",
+    "security": "🔒 Sicherheit: Deine Daten werden nicht gespeichert",
+    "processing": "Deine Beziehungssignale werden analysiert...",
+    "reportTitle": "Dein Beziehungsgesundheitsbericht",
+    "careerTitle": "💡 Beziehungsbewertung",
+    "actions": {
+      "report": "Bericht ansehen",
+      "viewAmazon": "Empfohlene Bücher",
+      "saveImg": "Als Bild speichern",
+      "retest": "Test wiederholen",
+      "qrNote": "Mit Freunden per QR-Code teilen"
+    },
+    "viral": {
+      "title": "Wie gesund ist deine Beziehung?",
+      "subtitle": "Überprüfe grüne und rote Flaggen zusammen!"
+    },
+    "labels": [
+      "Stimme überhaupt nicht zu",
+      "Stimme nicht zu",
+      "Neutral",
+      "Stimme zu",
+      "Stimme voll zu"
+    ],
+    "amazonKeywords": {
+      "GREENFLAG": "gesunde Beziehungen, gute Zeichen, Beziehungsverbesserung",
+      "REDFLAG": "Beziehungswarnzeichen, toxische Beziehungen, Beziehungsprobleme",
+      "COMMUNICATION": "Kommunikation, Dialog, Offenheit",
+      "RESPECT": "Respekt, Grenzen, Vertrauen",
+      "GROWTH": "Wachstum, Entwicklung, Veränderung"
+    }
+  },
+  "guide": {
+    "ipipId": "IPIP-GF-25",
+    "purpose": "Dieser Test hilft dir, gesunde und besorgniserregende Muster in deiner Beziehung zu erkennen. Dies ist ein Selbsterkenntnistool, keine professionelle Beratung.",
+    "instruction": "Lies jede der 25 Aussagen und bewerte deine Zustimmung basierend auf deiner aktuellen oder früheren Beziehungserfahrung auf einer 5er-Skala. Ehrlichkeit ist am nützlichsten.",
+    "interpretation": "Hohe Punktzahl: Deine Beziehung zeigt gesunde Zeichen | Mittlere Punktzahl: Deine Beziehung hat positive und negative Muster | Niedrige Punktzahl: Deine Beziehung zeigt besorgniserregende Warnzeichen",
+    "startBtn": "Test starten"
+  },
+  "traitNames": {
+    "GREENFLAG": "Grüne Flaggen",
+    "REDFLAG": "Rote Flaggen",
+    "COMMUNICATION": "Kommunikation",
+    "RESPECT": "Respekt & Vertrauen",
+    "GROWTH": "Gegenseitiges Wachstum"
+  },
+  "descriptions": {
+    "GREENFLAG": {
+      "emoji": "🟢",
+      "name": "Grüne Flaggen",
+      "detail": "Dein Partner respektiert dich, ist ehrlich und hört deine Meinungen an. Ihr baut gemeinsam eine Zukunft auf und wachst als Individuen.",
+      "tip": "💡 Schätze diese Zeichen und pflege sie weiterhin."
+    },
+    "REDFLAG": {
+      "emoji": "🚩",
+      "name": "Rote Flaggen",
+      "detail": "Dein Partner manipuliert dich, lügt oder ignoriert deine Gefühle. Die Beziehung kann einseitig oder wiederholt schädlich sein.",
+      "tip": "💡 Wenn du viele dieser Zeichen siehst, wird professionelle Unterstützung empfohlen."
+    },
+    "COMMUNICATION": {
+      "emoji": "💬",
+      "name": "Kommunikation",
+      "detail": "Ob du und dein Partner schwierige Themen ruhig diskutieren können. Offene Kommunikation ist die Grundlage gesunder Beziehungen.",
+      "tip": "💡 Regelmäßige authentische Gespräche vertiefen gegenseitiges Verständnis."
+    },
+    "RESPECT": {
+      "emoji": "🤝",
+      "name": "Respekt & Vertrauen",
+      "detail": "Ob dein Partner deine Grenzen beachtet, deine Freunde/Familie respektiert und deinen persönlichen Raum und deine Autonomie schätzt.",
+      "tip": "💡 Respekt ist das grundlegendste Element jeder Beziehung."
+    },
+    "GROWTH": {
+      "emoji": "🌱",
+      "name": "Gegenseitiges Wachstum",
+      "detail": "Ob du und dein Partner gemeinsam wachsen und euch gegenseitig bei Träumen und Zielen unterstützt.",
+      "tip": "💡 Beziehungen, die zusammen wachsen, vertiefen sich mit der Zeit."
+    }
+  },
+  "items": [
+    {
+      "id": "GF1",
+      "text": "Mein Partner hört wirklich auf meine Meinungen.",
+      "trait": "COMMUNICATION",
+      "reverse": false
+    },
+    {
+      "id": "GF2",
+      "text": "Mein Partner respektiert meine Grenzen und Entscheidungen.",
+      "trait": "RESPECT",
+      "reverse": false
+    },
+    {
+      "id": "GF3",
+      "text": "Ich kann mit meinem Partner ehrlich über jedes Thema sprechen.",
+      "trait": "COMMUNICATION",
+      "reverse": false
+    },
+    {
+      "id": "GF4",
+      "text": "Mein Partner respektiert meine Freunde und Familie.",
+      "trait": "RESPECT",
+      "reverse": false
+    },
+    {
+      "id": "GF5",
+      "text": "Wir planen die Zukunft und teilen Träume zusammen.",
+      "trait": "GROWTH",
+      "reverse": false
+    },
+    {
+      "id": "GF6",
+      "text": "Mein Partner respektiert meinen persönlichen Raum und meine Unabhängigkeit.",
+      "trait": "RESPECT",
+      "reverse": false
+    },
+    {
+      "id": "GF7",
+      "text": "Ich fühle mich mit meinem Partner selbstsicher und unterstützt.",
+      "trait": "GROWTH",
+      "reverse": false
+    },
+    {
+      "id": "GF8",
+      "text": "Mein Partner akzeptiert Fehler und löst Probleme gemeinsam.",
+      "trait": "COMMUNICATION",
+      "reverse": false
+    },
+    {
+      "id": "GF9",
+      "text": "Mein Partner ermutigt und unterstützt meine Ziele.",
+      "trait": "GROWTH",
+      "reverse": false
+    },
+    {
+      "id": "GF10",
+      "text": "Ich vertraue meinem Partner vollständig.",
+      "trait": "RESPECT",
+      "reverse": false
+    },
+    {
+      "id": "RF1",
+      "text": "Mein Partner ignoriert oder verharmlost meine Gefühle.",
+      "trait": "REDFLAG",
+      "reverse": false
+    },
+    {
+      "id": "RF2",
+      "text": "Mein Partner lügt mich häufig an.",
+      "trait": "REDFLAG",
+      "reverse": false
+    },
+    {
+      "id": "RF3",
+      "text": "Mein Partner versucht, mein Verhalten zu kontrollieren.",
+      "trait": "REDFLAG",
+      "reverse": false
+    },
+    {
+      "id": "RF4",
+      "text": "Mein Partner wird verbal missbräuchlich, wenn er wütend ist.",
+      "trait": "REDFLAG",
+      "reverse": false
+    },
+    {
+      "id": "RF5",
+      "text": "Unsere Beziehung fühlt sich einseitig an.",
+      "trait": "REDFLAG",
+      "reverse": false
+    },
+    {
+      "id": "RF6",
+      "text": "Mein Partner spricht negativ über meine Freunde oder Familie.",
+      "trait": "REDFLAG",
+      "reverse": false
+    },
+    {
+      "id": "RF7",
+      "text": "Mein Partner weigert sich, seine Fehler zu erkennen.",
+      "trait": "REDFLAG",
+      "reverse": false
+    },
+    {
+      "id": "RF8",
+      "text": "Ich fühle mich bei meinem Partner ängstlich oder unsicher.",
+      "trait": "REDFLAG",
+      "reverse": false
+    },
+    {
+      "id": "RF9",
+      "text": "Mein Partner schränkt meine persönliche Zeit und Unabhängigkeit ein.",
+      "trait": "REDFLAG",
+      "reverse": false
+    },
+    {
+      "id": "RF10",
+      "text": "Mein Partner entmutig mein persönliches Wachstum.",
+      "trait": "REDFLAG",
+      "reverse": false
+    },
+    {
+      "id": "GF11",
+      "text": "Wir finden Lösungen auch in schwierigen Zeiten.",
+      "trait": "COMMUNICATION",
+      "reverse": false
+    },
+    {
+      "id": "GF12",
+      "text": "Mein Partner akzeptiert mich, wie ich bin.",
+      "trait": "RESPECT",
+      "reverse": false
+    },
+    {
+      "id": "GF13",
+      "text": "Unsere Beziehung nährt gegenseitiges Wachstum.",
+      "trait": "GROWTH",
+      "reverse": false
+    },
+    {
+      "id": "GF14",
+      "text": "Wir lachen und genießen Zeit zusammen.",
+      "trait": "COMMUNICATION",
+      "reverse": false
+    },
+    {
+      "id": "GF15",
+      "text": "Ich bin optimistisch über unsere gemeinsame Zukunft.",
+      "trait": "GROWTH",
+      "reverse": false
+    }
+  ],
+  "results": {
+    "ranges": [
+      {
+        "min": 25,
+        "max": 50,
+        "level": "Viele Warnzeichen",
+        "emoji": "🚩",
+        "description": "Deine Beziehung zeigt viele besorgniserregende Muster. Diese Beziehung könnte dir Schaden zufügen.",
+        "recommendation": [
+          "Sprich mit vertrauenswürdigen Freunden oder Familie über deine Situation",
+          "Professionelle Beratung wird stark empfohlen",
+          "Priorisiere deine Sicherheit und dein Wohlbefinden",
+          "Erwäge, die Beziehung zu beenden, wenn nötig"
+        ]
+      },
+      {
+        "min": 51,
+        "max": 75,
+        "level": "Gemischte Signale",
+        "emoji": "⚠️",
+        "description": "Deine Beziehung hat positive und negative Muster. Es gibt Verbesserungsbereiche, aber auch hoffnungsvolle Zeichen.",
+        "recommendation": [
+          "Führe ehrliche Gespräche mit deinem Partner über die Beziehung",
+          "Diskutiert spezifische Verbesserungsbereiche",
+          "Erwägt bei Bedarf Paartherapie",
+          "Arbeitet zusammen, um positive Veränderungen zu schaffen"
+        ]
+      },
+      {
+        "min": 76,
+        "max": 100,
+        "level": "Gesunde Beziehung",
+        "emoji": "🟢",
+        "description": "Deine Beziehung zeigt viele gesunde Zeichen. Es gibt Respekt, Vertrauen und gegenseitiges Wachstum.",
+        "recommendation": [
+          "Behalte die positiven Beziehungsmuster bei, die du aufgebaut hast",
+          "Entwickle weiterhin Kommunikation und Verständnis",
+          "Baut weiterhin eure Zukunft zusammen auf",
+          "Kleine Verbesserungsanstrengungen sind immer wertvoll"
+        ]
+      }
+    ]
+  }
+}
