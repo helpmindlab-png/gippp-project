@@ -1,0 +1,264 @@
+{
+  "meta": {
+    "id": "dating-style",
+    "version": "1.0",
+    "language": "vi",
+    "rtl": false,
+    "lastUpdated": "2026-01-22",
+    "itemCount": 25,
+    "traitCount": 4
+  },
+  "ui": {
+    "testName": "Phong cách hẹn hò của bạn là gì?",
+    "description": "Một bài đánh giá 25 câu hỏi tiết lộ cách tiếp cận thực của bạn đối với tình yêu và các mối quan hệ",
+    "security": "Các câu trả lời của bạn sẽ không được lưu.",
+    "processing": "Đang phân tích phong cách hẹn hò của bạn...",
+    "reportTitle": "Hồ sơ phong cách hẹn hò của bạn",
+    "actions": {
+      "restart": "Làm lại",
+      "share": "Chia sẻ",
+      "save": "Lưu"
+    },
+    "labels": ["Hoàn toàn không đồng ý", "Không đồng ý", "Trung lập", "Đồng ý", "Hoàn toàn đồng ý"]
+  },
+  "guide": {
+    "ipipId": "IPIP-DS-25 (Đánh giá phong cách hẹn hò, dựa trên Big Five)",
+    "purpose": "Bài đánh giá này giúp bạn hiểu rõ cách tiếp cận hẹn hò và mô hình quan hệ của mình. Nó chỉ dành cho tự nhận thức và không phải là công cụ chẩn đoán.",
+    "instruction": "Dựa vào 2-4 tuần vừa qua, hãy trả lời thành thực về mức độ mỗi câu nói áp dụng cho bạn.",
+    "interpretation": "Điểm số càng cao cho thấy xu hướng càng mạnh trong đặc điểm đó, điểm số càng thấp cho thấy xu hướng càng yếu.",
+    "startBtn": "Bắt đầu đánh giá"
+  },
+  "traitNames": {
+    "AC": "Theo Đuổi Tích Cực",
+    "CA": "Tiếp Cận Cẩn Thận",
+    "IE": "Biểu Hiện Độc Lập",
+    "RE": "Hướng Tâm Quan Hệ"
+  },
+  "descriptions": {
+    "AC": {
+      "emoji": "🔥",
+      "name": "Theo Đuổi Tích Cực",
+      "detail": "Bạn chủ động tìm kiếm bạn đời và bộc lộ sự quan tâm một cách cởi mở. Bạn thấy thoải mái trong các cuộc gặp gỡ lãng mạn mới và chia sẻ cảm xúc của mình tự do.",
+      "tip": "Điểm số cao hơn có nghĩa là bạn chủ động bắt đầu mối quan hệ; điểm số thấp hơn có nghĩa là bạn thích chờ đợi tín hiệu từ người khác."
+    },
+    "CA": {
+      "emoji": "🤔",
+      "name": "Tiếp Cận Cẩn Thận",
+      "detail": "Bạn đánh giá cẩn thận các bạn đời tiềm năng và trân trọng các liên kết sâu sắc. Bạn thích hiểu ai đó một cách toàn diện trước khi cam kết về mặt cảm xúc.",
+      "tip": "Điểm số cao hơn cho thấy sự suy tư và thận trọng; điểm số thấp hơn cho thấy sự tự phát và tức thì về mặt cảm xúc."
+    },
+    "IE": {
+      "emoji": "🗣️",
+      "name": "Biểu Hiện Độc Lập",
+      "detail": "Bạn bộc lộ rõ ràng cảm xúc và nhu cầu của mình trong khi trân trọng tự do cá nhân. Bạn duy trì độc lập thậm chí trong các mối quan hệ.",
+      "tip": "Điểm số cao hơn có nghĩa là bạn khẳng định ranh giới và duy trì tự chủ; điểm số thấp hơn có nghĩa là bạn thích nghi với nhu cầu của bạn đời."
+    },
+    "RE": {
+      "emoji": "💕",
+      "name": "Hướng Tâm Quan Hệ",
+      "detail": "Bạn ưu tiên nhu cầu và cảm xúc của bạn đời. Bạn tìm kiếm sự thân mật sâu sắc và thể hiện cam kết mạnh mẽ trong các mối quan hệ.",
+      "tip": "Điểm số cao hơn cho thấy sự tham gia cảm xúc sâu sắc; điểm số thấp hơn cho thấy sở thích về khoảng cách cảm xúc."
+    }
+  },
+  "items": [
+    {
+      "id": "AC_001",
+      "text": "Khi gặp ai đó tôi thích, tôi chủ động liên lạc.",
+      "trait": "AC",
+      "reverse": false
+    },
+    {
+      "id": "AC_002",
+      "text": "Tôi thích gặp gỡ những người mới và khám phá các khả năng lãng mạn.",
+      "trait": "AC",
+      "reverse": false
+    },
+    {
+      "id": "AC_003",
+      "text": "Tôi bộc lộ trực tiếp cảm xúc của mình với ai đó tôi quan tâm.",
+      "trait": "AC",
+      "reverse": false
+    },
+    {
+      "id": "AC_004",
+      "text": "Tôi cảm thấy lo lắng về việc bắt đầu những mối quan hệ lãng mạn mới.",
+      "trait": "AC",
+      "reverse": true
+    },
+    {
+      "id": "AC_005",
+      "text": "Tôi thích chờ đợi người kia bộc lộ sự quan tâm.",
+      "trait": "AC",
+      "reverse": true
+    },
+    {
+      "id": "AC_006",
+      "text": "Tôi có xu hướng giấu cảm xúc khi có sự quan tâm lãng mạn.",
+      "trait": "AC",
+      "reverse": true
+    },
+    {
+      "id": "AC_007",
+      "text": "Tôi chủ động cố gắng không bỏ lỡ cơ hội bắt đầu các mối quan hệ mới.",
+      "trait": "AC",
+      "reverse": false
+    },
+    {
+      "id": "CA_001",
+      "text": "Tôi suy nghĩ cẩn thận trước khi bắt đầu mối quan hệ với ai đó mới.",
+      "trait": "CA",
+      "reverse": false
+    },
+    {
+      "id": "CA_002",
+      "text": "Tôi chờ đợi hiểu được tính cách thực sự của ai đó trước khi bộc lộ cảm xúc sâu sắc.",
+      "trait": "CA",
+      "reverse": false
+    },
+    {
+      "id": "CA_003",
+      "text": "Tôi đánh giá cẩn thận sự tương thích của tôi với bạn đời tiềm năng.",
+      "trait": "CA",
+      "reverse": false
+    },
+    {
+      "id": "CA_004",
+      "text": "Tôi có xu hướng yêu ai đó một cách nhanh chóng trong lần gặp đầu tiên.",
+      "trait": "CA",
+      "reverse": true
+    },
+    {
+      "id": "CA_005",
+      "text": "Tôi đưa ra quyết định về mối quan hệ dựa trên xung động cảm xúc.",
+      "trait": "CA",
+      "reverse": true
+    },
+    {
+      "id": "CA_006",
+      "text": "Tôi nhanh chóng mất hứng thú nếu nhận thấy những khiếm khuyết ở ai đó.",
+      "trait": "CA",
+      "reverse": true
+    },
+    {
+      "id": "IE_001",
+      "text": "Tôi cần có đủ thời gian cá nhân và không gian ngay cả khi có quan hệ.",
+      "trait": "IE",
+      "reverse": false
+    },
+    {
+      "id": "IE_002",
+      "text": "Tôi bộc lộ rõ ràng suy nghĩ và nhu cầu của mình trong các mối quan hệ lãng mạn.",
+      "trait": "IE",
+      "reverse": false
+    },
+    {
+      "id": "IE_003",
+      "text": "Tôi thích duy trì độc lập hơn là phụ thuộc vào bạn đời.",
+      "trait": "IE",
+      "reverse": false
+    },
+    {
+      "id": "IE_004",
+      "text": "Tôi sẵn sàng hy sinh những kế hoạch và giấc mơ của mình vì bạn đời.",
+      "trait": "IE",
+      "reverse": true
+    },
+    {
+      "id": "IE_005",
+      "text": "Tôi thường giấu ý kiến để phục vụ sở thích của bạn đời.",
+      "trait": "IE",
+      "reverse": true
+    },
+    {
+      "id": "IE_006",
+      "text": "Tôi cảm thấy cần thiết phải kiểm soát hành động và quyết định của bạn đời.",
+      "trait": "IE",
+      "reverse": true
+    },
+    {
+      "id": "RE_001",
+      "text": "Tôi nhạy cảm với tình trạng cảm xúc của bạn đời.",
+      "trait": "RE",
+      "reverse": false
+    },
+    {
+      "id": "RE_002",
+      "text": "Tôi ưu tiên chăm sóc bạn đời và hạnh phúc của họ.",
+      "trait": "RE",
+      "reverse": false
+    },
+    {
+      "id": "RE_003",
+      "text": "Tôi trân trọng sâu sắc mối liên kết thân mật và có ý nghĩa với bạn đời.",
+      "trait": "RE",
+      "reverse": false
+    },
+    {
+      "id": "RE_004",
+      "text": "Tôi không dễ nhận thấy những thay đổi về cảm xúc của bạn đời.",
+      "trait": "RE",
+      "reverse": true
+    },
+    {
+      "id": "RE_005",
+      "text": "Tôi thích duy trì khoảng cách cảm xúc trong các mối quan hệ.",
+      "trait": "RE",
+      "reverse": true
+    },
+    {
+      "id": "RE_006",
+      "text": "Tôi thường cảm thấy cô đơn trong các mối quan hệ lãng mạn của mình.",
+      "trait": "RE",
+      "reverse": true
+    }
+  ],
+  "results": {
+    "ranges": [
+      {
+        "min": 25,
+        "max": 50,
+        "level": "VERY_LOW",
+        "emoji": "🌙",
+        "title": "Rất thấp",
+        "description": "Đặc điểm này rất yếu trong cách tiếp cận của bạn.",
+        "recommendation": "Hiểu rõ các mô hình hiện tại của bạn và luyện tập điều chỉnh khi cần thiết."
+      },
+      {
+        "min": 51,
+        "max": 75,
+        "level": "LOW",
+        "emoji": "⭐",
+        "title": "Thấp",
+        "description": "Đặc điểm này tương đối yếu.",
+        "recommendation": "Tôn trọng các xu hướng tự nhiên của bạn trong khi phát triển tính linh hoạt khi thích hợp."
+      },
+      {
+        "min": 76,
+        "max": 100,
+        "level": "MEDIUM",
+        "emoji": "💫",
+        "title": "Vừa phải",
+        "description": "Đặc điểm này cân bằng.",
+        "recommendation": "Giữ cách tiếp cận cân bằng của bạn."
+      },
+      {
+        "min": 101,
+        "max": 125,
+        "level": "HIGH",
+        "emoji": "✨",
+        "title": "Cao",
+        "description": "Đặc điểm này khá mạnh.",
+        "recommendation": "Sử dụng sức mạnh của bạn một cách khôn ngoan, chú ý đến sự mất cân bằng."
+      },
+      {
+        "min": 126,
+        "max": 150,
+        "level": "VERY_HIGH",
+        "emoji": "💖",
+        "title": "Rất cao",
+        "description": "Đặc điểm này rất mạnh.",
+        "recommendation": "Hướng sức mạnh của bạn một cách tích cực và làm việc để đạt được sự cân bằng."
+      }
+    ]
+  }
+}
