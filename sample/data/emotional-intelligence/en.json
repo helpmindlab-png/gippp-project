@@ -1,0 +1,288 @@
+{
+  "meta": {
+    "id": "emotional-intelligence",
+    "version": "1.0",
+    "language": "en",
+    "rtl": false,
+    "lastUpdated": "2026-01-22",
+    "itemCount": 28,
+    "traitCount": 4
+  },
+  "ui": {
+    "testName": "What's Your Emotional Intelligence Level?",
+    "description": "A 28-item assessment measuring emotional awareness, regulation, empathy, and relationship skills",
+    "security": "Your responses are not saved.",
+    "processing": "Analyzing your emotional intelligence profile...",
+    "reportTitle": "Your Emotional Intelligence Profile",
+    "actions": {
+      "restart": "Retake",
+      "share": "Share",
+      "save": "Save"
+    },
+    "labels": ["Strongly Disagree", "Disagree", "Neutral", "Agree", "Strongly Agree"]
+  },
+  "guide": {
+    "ipipId": "IPIP-EI-28 (Emotional Intelligence Assessment, based on Mayer-Salovey-Caruso Model)",
+    "purpose": "This assessment helps you understand your emotional intelligence level. It is for self-awareness only and not a diagnostic tool.",
+    "instruction": "Based on the last 2-4 weeks, honestly answer how much each statement applies to you.",
+    "interpretation": "Higher scores indicate higher emotional intelligence, while lower scores indicate lower emotional intelligence tendencies.",
+    "startBtn": "Start Assessment"
+  },
+  "traitNames": {
+    "SA": "Self-Awareness",
+    "SR": "Self-Regulation",
+    "EM": "Empathy",
+    "RM": "Relationship Management"
+  },
+  "descriptions": {
+    "SA": {
+      "emoji": "🔍",
+      "name": "Self-Awareness",
+      "detail": "Your ability to recognize and understand your own emotions. You accurately identify your emotional state and understand how it affects your behavior.",
+      "tip": "Regularly observe your emotions and try to find patterns in what situations trigger certain feelings."
+    },
+    "SR": {
+      "emoji": "⚖️",
+      "name": "Self-Regulation",
+      "detail": "Your ability to manage and control your emotions in a healthy way. You don't get overwhelmed by negative emotions and respond in a balanced manner.",
+      "tip": "When emotions surge, pause and take a breath, or redirect your focus to another activity."
+    },
+    "EM": {
+      "emoji": "❤️",
+      "name": "Empathy",
+      "detail": "Your ability to understand others' emotions and perspectives. You can think from their viewpoint and recognize their feelings.",
+      "tip": "During conversations, pay attention to facial expressions, tone of voice, and body language."
+    },
+    "RM": {
+      "emoji": "🤝",
+      "name": "Relationship Management",
+      "detail": "Your ability to manage relationships effectively. You use emotional skills to create positive interactions with others.",
+      "tip": "In conflicts, try to acknowledge both the other person's and your own emotions in your communication."
+    }
+  },
+  "items": [
+    {
+      "id": "SA_001",
+      "text": "I clearly understand what emotional state I'm in right now.",
+      "trait": "SA",
+      "reverse": false
+    },
+    {
+      "id": "SA_002",
+      "text": "I can identify the causes of my emotions.",
+      "trait": "SA",
+      "reverse": false
+    },
+    {
+      "id": "SA_003",
+      "text": "I understand how my emotions affect my behavior.",
+      "trait": "SA",
+      "reverse": false
+    },
+    {
+      "id": "SA_004",
+      "text": "I know what situations cause me stress.",
+      "trait": "SA",
+      "reverse": false
+    },
+    {
+      "id": "SA_005",
+      "text": "I don't notice changes in my emotional state.",
+      "trait": "SA",
+      "reverse": true
+    },
+    {
+      "id": "SA_006",
+      "text": "I understand my strengths and weaknesses from an emotional perspective.",
+      "trait": "SA",
+      "reverse": false
+    },
+    {
+      "id": "SA_007",
+      "text": "I rarely reflect on my emotions.",
+      "trait": "SA",
+      "reverse": true
+    },
+    {
+      "id": "SR_001",
+      "text": "I can stay calm even when angry.",
+      "trait": "SR",
+      "reverse": false
+    },
+    {
+      "id": "SR_002",
+      "text": "I recover quickly from negative emotions.",
+      "trait": "SR",
+      "reverse": false
+    },
+    {
+      "id": "SR_003",
+      "text": "I don't act impulsively when emotions are high.",
+      "trait": "SR",
+      "reverse": false
+    },
+    {
+      "id": "SR_004",
+      "text": "I can manage stress in a healthy way.",
+      "trait": "SR",
+      "reverse": false
+    },
+    {
+      "id": "SR_005",
+      "text": "I struggle to control myself when emotionally overwhelmed.",
+      "trait": "SR",
+      "reverse": true
+    },
+    {
+      "id": "SR_006",
+      "text": "When I make mistakes, I learn from them rather than blame myself.",
+      "trait": "SR",
+      "reverse": false
+    },
+    {
+      "id": "SR_007",
+      "text": "I try to maintain a positive attitude even in difficult situations.",
+      "trait": "SR",
+      "reverse": false
+    },
+    {
+      "id": "EM_001",
+      "text": "I can detect changes in others' emotions.",
+      "trait": "EM",
+      "reverse": false
+    },
+    {
+      "id": "EM_002",
+      "text": "I can understand someone's feelings without them saying anything.",
+      "trait": "EM",
+      "reverse": false
+    },
+    {
+      "id": "EM_003",
+      "text": "I try to see things from others' perspectives.",
+      "trait": "EM",
+      "reverse": false
+    },
+    {
+      "id": "EM_004",
+      "text": "I tend to disregard others' emotions.",
+      "trait": "EM",
+      "reverse": true
+    },
+    {
+      "id": "EM_005",
+      "text": "I can comfort others when they are sad or struggling.",
+      "trait": "EM",
+      "reverse": false
+    },
+    {
+      "id": "EM_006",
+      "text": "I struggle to empathize with others' pain.",
+      "trait": "EM",
+      "reverse": true
+    },
+    {
+      "id": "EM_007",
+      "text": "I try to understand different viewpoints.",
+      "trait": "EM",
+      "reverse": false
+    },
+    {
+      "id": "RM_001",
+      "text": "I handle conflicts calmly and constructively.",
+      "trait": "RM",
+      "reverse": false
+    },
+    {
+      "id": "RM_002",
+      "text": "I work to build trust in my relationships.",
+      "trait": "RM",
+      "reverse": false
+    },
+    {
+      "id": "RM_003",
+      "text": "I communicate effectively and listen well.",
+      "trait": "RM",
+      "reverse": false
+    },
+    {
+      "id": "RM_004",
+      "text": "I can motivate others.",
+      "trait": "RM",
+      "reverse": false
+    },
+    {
+      "id": "RM_005",
+      "text": "I respect others when we have different opinions.",
+      "trait": "RM",
+      "reverse": false
+    },
+    {
+      "id": "RM_006",
+      "text": "I frequently experience conflict in my relationships.",
+      "trait": "RM",
+      "reverse": true
+    },
+    {
+      "id": "RM_007",
+      "text": "I understand others' needs and adjust my behavior accordingly.",
+      "trait": "RM",
+      "reverse": false
+    },
+    {
+      "id": "RM_008",
+      "text": "I contribute to creating a positive atmosphere in groups.",
+      "trait": "RM",
+      "reverse": false
+    }
+  ],
+  "results": {
+    "ranges": [
+      {
+        "min": 28,
+        "max": 56,
+        "level": "VERY_LOW",
+        "emoji": "🌙",
+        "title": "Very Low",
+        "description": "Your emotional intelligence is very low. You struggle to recognize and manage emotions in yourself and others.",
+        "recommendation": "Try keeping an emotion journal or practicing meditation to observe your feelings more frequently. Working on active listening skills will also help."
+      },
+      {
+        "min": 57,
+        "max": 85,
+        "level": "LOW",
+        "emoji": "⭐",
+        "title": "Low",
+        "description": "Your emotional intelligence is relatively low. You have room for improvement in emotional awareness and management.",
+        "recommendation": "Record your emotional reactions and practice considering others' perspectives. Learning emotion regulation techniques can be beneficial."
+      },
+      {
+        "min": 86,
+        "max": 114,
+        "level": "MEDIUM",
+        "emoji": "💫",
+        "title": "Moderate",
+        "description": "Your emotional intelligence is at a moderate level. You have basic skills in recognizing and managing emotions.",
+        "recommendation": "Continue building on your foundation by deepening your understanding of your own and others' emotions."
+      },
+      {
+        "min": 115,
+        "max": 142,
+        "level": "HIGH",
+        "emoji": "✨",
+        "title": "High",
+        "description": "Your emotional intelligence is high. You understand your emotions well and build effective relationships with others.",
+        "recommendation": "Maintain your strengths and consider mentoring others in emotional awareness and regulation."
+      },
+      {
+        "min": 143,
+        "max": 170,
+        "level": "VERY_HIGH",
+        "emoji": "💖",
+        "title": "Very High",
+        "description": "Your emotional intelligence is very high. You deeply understand emotions in yourself and others and manage them effectively.",
+        "recommendation": "Use your high emotional intelligence to help others develop their emotional skills and awareness."
+      }
+    ]
+  }
+}
