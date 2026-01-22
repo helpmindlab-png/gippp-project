@@ -1,0 +1,264 @@
+{
+  "meta": {
+    "id": "dating-style",
+    "version": "1.0",
+    "language": "es",
+    "rtl": false,
+    "lastUpdated": "2026-01-22",
+    "itemCount": 25,
+    "traitCount": 4
+  },
+  "ui": {
+    "testName": "¿Cuál es tu estilo de citas?",
+    "description": "Una evaluación de 25 preguntas que revela tu verdadero enfoque del romance y las relaciones",
+    "security": "Tus respuestas no se guardan.",
+    "processing": "Analizando tu estilo de citas...",
+    "reportTitle": "Tu Perfil de Estilo de Citas",
+    "actions": {
+      "restart": "Reintentar",
+      "share": "Compartir",
+      "save": "Guardar"
+    },
+    "labels": ["Muy en desacuerdo", "En desacuerdo", "Neutral", "De acuerdo", "Muy de acuerdo"]
+  },
+  "guide": {
+    "ipipId": "IPIP-DS-25 (Evaluación de Estilo de Citas, basado en Big Five)",
+    "purpose": "Esta evaluación te ayuda a entender tu enfoque de citas y patrones de relación. Es solo para autoconocimiento y no es una herramienta de diagnóstico.",
+    "instruction": "Basándote en las últimas 2-4 semanas, responde honestamente qué tanto aplica cada afirmación a ti.",
+    "interpretation": "Puntuaciones más altas indican tendencias más fuertes en ese rasgo, mientras que puntuaciones más bajas indican tendencias más débiles.",
+    "startBtn": "Comenzar Evaluación"
+  },
+  "traitNames": {
+    "AC": "Persecución Activa",
+    "CA": "Enfoque Cauteloso",
+    "IE": "Expresión Independiente",
+    "RE": "Centrado en la Relación"
+  },
+  "descriptions": {
+    "AC": {
+      "emoji": "🔥",
+      "name": "Persecución Activa",
+      "detail": "Buscas activamente parejas y expresas interés abiertamente. Te sientes cómodo en nuevos encuentros románticos y compartes tus sentimientos fácilmente.",
+      "tip": "Puntuaciones más altas significan que inicias conexiones activamente; puntuaciones más bajas significan que prefieres esperar las señales de otros."
+    },
+    "CA": {
+      "emoji": "🤔",
+      "name": "Enfoque Cauteloso",
+      "detail": "Evalúas cuidadosamente a parejas potenciales y valoras conexiones profundas. Prefieres comprender a alguien completamente antes de comprometerte emocionalmente.",
+      "tip": "Puntuaciones más altas indican reflexión y cuidado; puntuaciones más bajas indican espontaneidad e inmediatez emocional."
+    },
+    "IE": {
+      "emoji": "🗣️",
+      "name": "Expresión Independiente",
+      "detail": "Expresas claramente tus sentimientos y necesidades mientras valoras la libertad personal. Mantienes independencia incluso dentro de relaciones.",
+      "tip": "Puntuaciones más altas significan que asiertas límites y mantienes autonomía; puntuaciones más bajas significan que acomodas las necesidades de tu pareja."
+    },
+    "RE": {
+      "emoji": "💕",
+      "name": "Centrado en la Relación",
+      "detail": "Priorizas las necesidades y emociones de tu pareja. Buscas intimidad profunda y muestras fuerte compromiso en relaciones.",
+      "tip": "Puntuaciones más altas indican participación emocional profunda; puntuaciones más bajas indican preferencia por distancia emocional."
+    }
+  },
+  "items": [
+    {
+      "id": "AC_001",
+      "text": "Cuando conozco a alguien que me atrae, yo tomo la iniciativa de contactarlo.",
+      "trait": "AC",
+      "reverse": false
+    },
+    {
+      "id": "AC_002",
+      "text": "Me encanta conocer gente nueva y explorar posibilidades románticas.",
+      "trait": "AC",
+      "reverse": false
+    },
+    {
+      "id": "AC_003",
+      "text": "Expreso directamente mis sentimientos a alguien que me interesa.",
+      "trait": "AC",
+      "reverse": false
+    },
+    {
+      "id": "AC_004",
+      "text": "Me siento ansioso sobre comenzar nuevas relaciones románticas.",
+      "trait": "AC",
+      "reverse": true
+    },
+    {
+      "id": "AC_005",
+      "text": "Prefiero esperar a que la otra persona muestre interés.",
+      "trait": "AC",
+      "reverse": true
+    },
+    {
+      "id": "AC_006",
+      "text": "Tiendo a ocultar mis sentimientos cuando tengo interés romántico.",
+      "trait": "AC",
+      "reverse": true
+    },
+    {
+      "id": "AC_007",
+      "text": "Intento activamente no perder oportunidades para comenzar nuevas relaciones.",
+      "trait": "AC",
+      "reverse": false
+    },
+    {
+      "id": "CA_001",
+      "text": "Considero cuidadosamente antes de comenzar una relación con alguien nuevo.",
+      "trait": "CA",
+      "reverse": false
+    },
+    {
+      "id": "CA_002",
+      "text": "Espero a entender el verdadero carácter de alguien antes de revelar sentimientos profundos.",
+      "trait": "CA",
+      "reverse": false
+    },
+    {
+      "id": "CA_003",
+      "text": "Evalúo minuciosamente la compatibilidad con una pareja potencial.",
+      "trait": "CA",
+      "reverse": false
+    },
+    {
+      "id": "CA_004",
+      "text": "Tiendo a enamorarme rápidamente en una primera cita.",
+      "trait": "CA",
+      "reverse": true
+    },
+    {
+      "id": "CA_005",
+      "text": "Tomo decisiones románticas basadas en impulsos emocionales.",
+      "trait": "CA",
+      "reverse": true
+    },
+    {
+      "id": "CA_006",
+      "text": "Pierdo interés rápidamente si noto defectos en alguien que estoy conociendo.",
+      "trait": "CA",
+      "reverse": true
+    },
+    {
+      "id": "IE_001",
+      "text": "Necesito suficiente tiempo personal y espacio incluso en una relación.",
+      "trait": "IE",
+      "reverse": false
+    },
+    {
+      "id": "IE_002",
+      "text": "Expreso claramente mis pensamientos y necesidades en relaciones románticas.",
+      "trait": "IE",
+      "reverse": false
+    },
+    {
+      "id": "IE_003",
+      "text": "Prefiero mantener mi independencia en lugar de depender de mi pareja.",
+      "trait": "IE",
+      "reverse": false
+    },
+    {
+      "id": "IE_004",
+      "text": "Estoy dispuesto a sacrificar mis planes y sueños por mi pareja.",
+      "trait": "IE",
+      "reverse": true
+    },
+    {
+      "id": "IE_005",
+      "text": "Frecuentemente oculto mis opiniones para acomodar las preferencias de mi pareja.",
+      "trait": "IE",
+      "reverse": true
+    },
+    {
+      "id": "IE_006",
+      "text": "Siento la necesidad de controlar las acciones y decisiones de mi pareja.",
+      "trait": "IE",
+      "reverse": true
+    },
+    {
+      "id": "RE_001",
+      "text": "Soy sensible al estado emocional de mi pareja.",
+      "trait": "RE",
+      "reverse": false
+    },
+    {
+      "id": "RE_002",
+      "text": "Priorizo el cuidado de mi pareja y su felicidad.",
+      "trait": "RE",
+      "reverse": false
+    },
+    {
+      "id": "RE_003",
+      "text": "Valoro profundamente la conexión íntima y significativa con mi pareja.",
+      "trait": "RE",
+      "reverse": false
+    },
+    {
+      "id": "RE_004",
+      "text": "No noto fácilmente los cambios en las emociones de mi pareja.",
+      "trait": "RE",
+      "reverse": true
+    },
+    {
+      "id": "RE_005",
+      "text": "Prefiero mantener distancia emocional en mis relaciones.",
+      "trait": "RE",
+      "reverse": true
+    },
+    {
+      "id": "RE_006",
+      "text": "Frecuentemente me siento solo en mis relaciones románticas.",
+      "trait": "RE",
+      "reverse": true
+    }
+  ],
+  "results": {
+    "ranges": [
+      {
+        "min": 25,
+        "max": 50,
+        "level": "VERY_LOW",
+        "emoji": "🌙",
+        "title": "Muy Bajo",
+        "description": "Este rasgo es muy débil en tu enfoque.",
+        "recommendation": "Entiende tus patrones actuales y practica ajustarte cuando sea necesario."
+      },
+      {
+        "min": 51,
+        "max": 75,
+        "level": "LOW",
+        "emoji": "⭐",
+        "title": "Bajo",
+        "description": "Este rasgo es moderadamente débil.",
+        "recommendation": "Respeta tus tendencias naturales mientras desarrollas flexibilidad cuando la situación lo requiera."
+      },
+      {
+        "min": 76,
+        "max": 100,
+        "level": "MEDIUM",
+        "emoji": "💫",
+        "title": "Moderado",
+        "description": "Este rasgo es equilibrado.",
+        "recommendation": "Mantén tu enfoque equilibrado."
+      },
+      {
+        "min": 101,
+        "max": 125,
+        "level": "HIGH",
+        "emoji": "✨",
+        "title": "Alto",
+        "description": "Este rasgo es notablemente fuerte.",
+        "recommendation": "Utiliza tu fortaleza sabiamente mientras observas los desequilibrios."
+      },
+      {
+        "min": 126,
+        "max": 150,
+        "level": "VERY_HIGH",
+        "emoji": "💖",
+        "title": "Muy Alto",
+        "description": "Este rasgo es muy fuerte.",
+        "recommendation": "Canaliza tu fortaleza positivamente y trabaja hacia el equilibrio."
+      }
+    ]
+  }
+}
