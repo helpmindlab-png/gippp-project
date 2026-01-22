@@ -1,0 +1,284 @@
+{
+  "meta": {
+    "id": "love-languages-plus",
+    "order": 3,
+    "version": "1.0",
+    "language": "de",
+    "rtl": false,
+    "author": "GIPPP Research Team",
+    "lastUpdated": "2026-01-21",
+    "category": "Hochvirales Test",
+    "itemCount": 25
+  },
+  "ui": {
+    "testName": "Was ist deine Liebessprache?",
+    "description": "Entdecke welche der 5 Arten der Liebe dir am meisten bedeutet",
+    "security": "🔒 Sicherheit: Deine Daten werden nicht gespeichert",
+    "processing": "Deine Liebessprache wird analysiert...",
+    "reportTitle": "Dein Liebessprache-Bericht",
+    "careerTitle": "💡 Dein Liebesstil-Leitfaden",
+    "actions": {
+      "report": "Bericht ansehen",
+      "viewAmazon": "Empfohlene Bücher",
+      "saveImg": "Als Bild speichern",
+      "retest": "Test wiederholen",
+      "qrNote": "Mit Freunden per QR-Code teilen"
+    },
+    "viral": {
+      "title": "Was ist deine Liebessprache?",
+      "subtitle": "Versuch es mit deinem Partner und vertiefe eure Verbindung!"
+    },
+    "labels": [
+      "Stimme überhaupt nicht zu",
+      "Stimme nicht zu",
+      "Neutral",
+      "Stimme zu",
+      "Stimme voll zu"
+    ],
+    "amazonKeywords": {
+      "WORDS": "Worte der Bestätigung, Komplimente, Ermutigung, emotionale Kommunikation",
+      "TIME": "gemeinsame Zeit, Aufmerksamkeit, Dates",
+      "GIFTS": "Geschenke, durchdachte Präsente, Dankbarkeit",
+      "SERVICE": "Liebesdienste, Hilfe, Unterstützung",
+      "TOUCH": "körperlicher Kontakt, Zuneigung, Umarmungen"
+    }
+  },
+  "guide": {
+    "ipipId": "IPIP-LL-25",
+    "purpose": "Dieser Test hilft dir, deine bevorzugte Art, Liebe und Zuneigung zu geben und zu empfangen, zu verstehen. Dies ist ein Selbsterkenntnistool, keine diagnostische Bewertung.",
+    "instruction": "Lies jede der 25 Aussagen und bewerte auf einer 5er-Skala, wie sehr du mit jeder Aussage übereinstimmst. Überlege, welche Liebesausdrucksweise dein Herz am meisten bewegt.",
+    "interpretation": "Worte: Du fühlst dich durch Komplimente und Ermutigung geliebt | Zeit: Qualitätmomente zusammen sind dir am wichtigsten | Geschenke: Durchdachte Geschenke bedeuten dir viel | Dienste: Taten sprechen lauter als Worte | Berührung: Körperliche Nähe macht dich glücklich",
+    "startBtn": "Test starten"
+  },
+  "traitNames": {
+    "WORDS": "Worte der Bestätigung",
+    "TIME": "Gemeinsame Zeit",
+    "GIFTS": "Geschenke Empfangen",
+    "SERVICE": "Liebesdienste",
+    "TOUCH": "Körperlicher Kontakt"
+  },
+  "descriptions": {
+    "WORDS": {
+      "emoji": "💬",
+      "name": "Worte der Bestätigung",
+      "detail": "Du fühlst dich durch Komplimente, Ermutigung und dankbare Worte geliebt. Ein nettes Wort von deinem Partner erhellt deinen ganzen Tag.",
+      "tip": "💡 Drücke deinem Partner regelmäßig aus, was du an ihm schätzt."
+    },
+    "TIME": {
+      "emoji": "⏰",
+      "name": "Gemeinsame Zeit",
+      "detail": "Qualitätsmomente mit deinem Partner sind dir das Liebste. Echte Unterhaltung und gemeinsame Erlebnisse sind dein größter Schatz.",
+      "tip": "💡 Schaffe regelmäßig Momente, in denen ihr eure Handys weglegt und tiefe Gespräche führt."
+    },
+    "GIFTS": {
+      "emoji": "🎁",
+      "name": "Geschenke",
+      "detail": "Du fühlst dich durch durchdachte Geschenke geliebt. Sie sind nicht nur Gegenstände, sondern Beweis, wie sehr dein Partner dich schätzt.",
+      "tip": "💡 Kleine, überlegte Geschenke können bedeutungsvoller sein als teure."
+    },
+    "SERVICE": {
+      "emoji": "🤝",
+      "name": "Liebesdienste",
+      "detail": "Du fühlst dich durch die Taten deines Partners geliebt. Wenn er dir in schwierigen Zeiten hilft, spürst du echte Fürsorge.",
+      "tip": "💡 Erkenne die Bedürfnisse deines Partners und hilf, bevor er danach fragt."
+    },
+    "TOUCH": {
+      "emoji": "🤗",
+      "name": "Körperlicher Kontakt",
+      "detail": "Du fühlst dich durch Umarmungen, Händchenhalten und körperliche Nähe geliebt. Körperliche Nähe ist deine emotionale Grundlage.",
+      "tip": "💡 Zögere nicht, dein Bedürfnis nach körperlichem Kontakt auszudrücken."
+    }
+  },
+  "items": [
+    {
+      "id": "LL1",
+      "text": "Ich fühle mich gut, wenn mein Partner mich lobt.",
+      "trait": "WORDS",
+      "reverse": false
+    },
+    {
+      "id": "LL2",
+      "text": "Qualitätszeit mit meinem Partner macht mich am glücklichsten.",
+      "trait": "TIME",
+      "reverse": false
+    },
+    {
+      "id": "LL3",
+      "text": "Geschenke von meinem Partner sind tief bedeutungsvoll für mich.",
+      "trait": "GIFTS",
+      "reverse": false
+    },
+    {
+      "id": "LL4",
+      "text": "Ich fühle mich geliebt, wenn mein Partner mir in schwierigen Zeiten hilft.",
+      "trait": "SERVICE",
+      "reverse": false
+    },
+    {
+      "id": "LL5",
+      "text": "Körperliche Zuneigung mit meinem Partner tröstet mich.",
+      "trait": "TOUCH",
+      "reverse": false
+    },
+    {
+      "id": "LL6",
+      "text": "Die Dankbarkeit meines Partners wärmt mein Herz.",
+      "trait": "WORDS",
+      "reverse": false
+    },
+    {
+      "id": "LL7",
+      "text": "Sinnvolle Unterhaltungen sind mir am teuersten.",
+      "trait": "TIME",
+      "reverse": false
+    },
+    {
+      "id": "LL8",
+      "text": "Ich freue mich sehr über ein durchdachtes Geschenk.",
+      "trait": "GIFTS",
+      "reverse": false
+    },
+    {
+      "id": "LL9",
+      "text": "Ich fühle mich umsorgt, wenn mein Partner meine Bedürfnisse erfüllt.",
+      "trait": "SERVICE",
+      "reverse": false
+    },
+    {
+      "id": "LL10",
+      "text": "Umarmungen und Händchenhalten sind mir sehr wichtig.",
+      "trait": "TOUCH",
+      "reverse": false
+    },
+    {
+      "id": "LL11",
+      "text": "Ich bin am glücklichsten, wenn mein Partner meine Bemühungen würdigt.",
+      "trait": "WORDS",
+      "reverse": false
+    },
+    {
+      "id": "LL12",
+      "text": "Aktivitäten mit meinem Partner sind mir am wichtigsten.",
+      "trait": "TIME",
+      "reverse": false
+    },
+    {
+      "id": "LL13",
+      "text": "Ich bewahre die Geschenke meines Partners sorgfältig auf.",
+      "trait": "GIFTS",
+      "reverse": false
+    },
+    {
+      "id": "LL14",
+      "text": "Ich bin gerührt, wenn mein Partner sich für mich opfert.",
+      "trait": "SERVICE",
+      "reverse": false
+    },
+    {
+      "id": "LL15",
+      "text": "Körperliche Nähe ist für mich essentiell.",
+      "trait": "TOUCH",
+      "reverse": false
+    },
+    {
+      "id": "LL16",
+      "text": "Die Ermutigung meines Partners verwandelt meinen Tag.",
+      "trait": "WORDS",
+      "reverse": false
+    },
+    {
+      "id": "LL17",
+      "text": "Mit meinem Partner ist mir nichts anderes wichtig.",
+      "trait": "TIME",
+      "reverse": false
+    },
+    {
+      "id": "LL18",
+      "text": "Ich freue mich auch über kleine, durchdachte Geschenke.",
+      "trait": "GIFTS",
+      "reverse": false
+    },
+    {
+      "id": "LL19",
+      "text": "Ich fühle mich geliebt, wenn mein Partner Dinge für mich tut.",
+      "trait": "SERVICE",
+      "reverse": false
+    },
+    {
+      "id": "LL20",
+      "text": "Ohne die Berührung meines Partners fühle ich mich getrennt.",
+      "trait": "TOUCH",
+      "reverse": false
+    },
+    {
+      "id": "LL21",
+      "text": "Positives Feedback hilft mir zu wachsen.",
+      "trait": "WORDS",
+      "reverse": false
+    },
+    {
+      "id": "LL22",
+      "text": "Ich möchte neue Dinge mit meinem Partner erleben.",
+      "trait": "TIME",
+      "reverse": false
+    },
+    {
+      "id": "LL23",
+      "text": "Der Gedanke hinter einem Geschenk ist mir wichtiger als sein Wert.",
+      "trait": "GIFTS",
+      "reverse": false
+    },
+    {
+      "id": "LL24",
+      "text": "Ich bin am glücklichsten, wenn mein Partner meine Last erleichtert.",
+      "trait": "SERVICE",
+      "reverse": false
+    },
+    {
+      "id": "LL25",
+      "text": "Ohne die Berührung meines Partners fehlt mir emotionale Stabilität.",
+      "trait": "TOUCH",
+      "reverse": false
+    }
+  ],
+  "results": {
+    "ranges": [
+      {
+        "min": 25,
+        "max": 45,
+        "level": "Ausgewogen",
+        "emoji": "⚖️",
+        "description": "Du schätzt alle fünf Liebessprachen gleichermaßen. Du bist flexibel und kannst Liebe auf mehrere Arten geben und empfangen.",
+        "recommendation": [
+          "Teile deine primären Liebessprachen mit deinem Partner",
+          "Liebe auf verschiedene Weise auszudrücken bereichert deine Beziehung",
+          "Erkenne, dass dein Partner Liebe anders zeigen kann"
+        ]
+      },
+      {
+        "min": 46,
+        "max": 65,
+        "level": "1-2 Primäre Sprachen",
+        "emoji": "🎯",
+        "description": "Du bevorzugst 1-2 spezifische Liebessprachen. Wenn sie so ausgedrückt werden, fühlst du dich tiefer geliebt.",
+        "recommendation": [
+          "Teile deine primären Liebessprachen deutlich mit",
+          "Wenn sie sich überschneiden, entsteht tiefe Verbindung",
+          "Lerne und respektiere auch die Liebessprachen deines Partners"
+        ]
+      },
+      {
+        "min": 66,
+        "max": 85,
+        "level": "1 Sprache Starke Vorliebe",
+        "emoji": "💫",
+        "description": "Du hast eine starke Vorliebe für eine spezifische Liebessprache. Dies ist deine stärkste emotionale Verbindung.",
+        "recommendation": [
+          "Hilf deinem Partner deine primäre Liebessprache zu verstehen",
+          "Klare Kommunikation verhindert Missverständnisse",
+          "Erkunde allmählich den Wert anderer Liebessprachen"
+        ]
+      }
+    ]
+  }
+}
