@@ -1,0 +1,287 @@
+{
+  "meta": {
+    "id": "relationship-greenflag-redflag",
+    "order": 4,
+    "version": "1.0",
+    "language": "ja",
+    "rtl": false,
+    "author": "GIPPP Research Team",
+    "lastUpdated": "2026-01-21",
+    "category": "大人気テスト",
+    "itemCount": 25
+  },
+  "ui": {
+    "testName": "あなたの関係は大丈夫ですか？",
+    "description": "あなたの関係における肯定的な兆候と懸念される兆候を特定する",
+    "security": "🔒 セキュリティ：データは保存されません",
+    "processing": "あなたの関係信号を分析中...",
+    "reportTitle": "あなたの関係健康リポート",
+    "careerTitle": "💡 関係評価",
+    "actions": {
+      "report": "レポートを見る",
+      "viewAmazon": "おすすめの本",
+      "saveImg": "画像で保存",
+      "retest": "もう一度テストする",
+      "qrNote": "QRで友人と共有"
+    },
+    "viral": {
+      "title": "あなたの関係はどのくらい健全ですか？",
+      "subtitle": "グリーンとレッドフラグを一緒に確認してください！"
+    },
+    "labels": [
+      "全く当てはまらない",
+      "当てはまらない",
+      "普通",
+      "当てはまる",
+      "とても当てはまる"
+    ],
+    "amazonKeywords": {
+      "GREENFLAG": "健全な関係，良い兆候，関係改善",
+      "REDFLAG": "関係警告信号，有害な関係，関係の問題",
+      "COMMUNICATION": "コミュニケーション，対話，オープンな姿勢",
+      "RESPECT": "尊重，境界，信頼",
+      "GROWTH": "成長，発展，変化"
+    }
+  },
+  "guide": {
+    "ipipId": "IPIP-GF-25",
+    "purpose": "このテストは、あなたの関係における健全で懸念される兆候を特定するのに役立ちます。これは自己理解のためのツールであり、プロのカウンセリングではありません。",
+    "instruction": "以下の25の陳述を読み、あなたの現在または過去の関係経験に基づいて5点スケールで同意度を評価してください。誠実さが最も役に立ちます。",
+    "interpretation": "高スコア：あなたの関係は健全な兆候を示しています | 中程度のスコア：あなたの関係はポジティブとネガティブのパターンの両方があります | 低スコア：あなたの関係は懸念される警告信号を示しています",
+    "startBtn": "テストを始める"
+  },
+  "traitNames": {
+    "GREENFLAG": "グリーンフラグ",
+    "REDFLAG": "レッドフラグ",
+    "COMMUNICATION": "コミュニケーション",
+    "RESPECT": "尊重と信頼",
+    "GROWTH": "相互成長"
+  },
+  "descriptions": {
+    "GREENFLAG": {
+      "emoji": "🟢",
+      "name": "グリーンフラグ",
+      "detail": "あなたのパートナーはあなたを尊重し、正直で、あなたの意見に耳を傾けます。一緒に未来を構築し、個人として成長します。",
+      "tip": "💡 これらの兆候を大切にし、育み続けてください。"
+    },
+    "REDFLAG": {
+      "emoji": "🚩",
+      "name": "レッドフラグ",
+      "detail": "あなたのパートナーはあなたを操作し、嘘をつき、またはあなたの感情を無視します。関係は一方的であるか、繰り返し有害である可能性があります。",
+      "tip": "💡 これらの兆候が多く見られる場合、プロサポートを強く勧めます。"
+    },
+    "COMMUNICATION": {
+      "emoji": "💬",
+      "name": "コミュニケーション",
+      "detail": "あなたとあなたのパートナーが難しいトピックを穏やかに議論できるかどうか。オープンなコミュニケーションは健全な関係の基盤です。",
+      "tip": "💡 定期的な本物の会話は相互理解を深めます。"
+    },
+    "RESPECT": {
+      "emoji": "🤝",
+      "name": "尊重と信頼",
+      "detail": "パートナーがあなたの境界を尊重し、友人/家族を尊重し、個人的スペースと自律性を大切にするかどうか。",
+      "tip": "💡 尊重は関係の最も基本的な要素です。"
+    },
+    "GROWTH": {
+      "emoji": "🌱",
+      "name": "相互成長",
+      "detail": "あなたとあなたのパートナーが一緒に成長し、お互いの夢と目標をサポートするかどうか。",
+      "tip": "💡 一緒に成長する関係は時間とともに深くなります。"
+    }
+  },
+  "items": [
+    {
+      "id": "GF1",
+      "text": "パートナーは本気で私の意見に耳を傾ける。",
+      "trait": "COMMUNICATION",
+      "reverse": false
+    },
+    {
+      "id": "GF2",
+      "text": "パートナーは私の境界を尊重する。",
+      "trait": "RESPECT",
+      "reverse": false
+    },
+    {
+      "id": "GF3",
+      "text": "パートナーとはどんなトピックについても正直に議論できる。",
+      "trait": "COMMUNICATION",
+      "reverse": false
+    },
+    {
+      "id": "GF4",
+      "text": "パートナーは私の友人や家族を尊重する。",
+      "trait": "RESPECT",
+      "reverse": false
+    },
+    {
+      "id": "GF5",
+      "text": "私たちは一緒に未来を計画し、夢を共有する。",
+      "trait": "GROWTH",
+      "reverse": false
+    },
+    {
+      "id": "GF6",
+      "text": "パートナーは私の個人的なスペースと独立性を尊重する。",
+      "trait": "RESPECT",
+      "reverse": false
+    },
+    {
+      "id": "GF7",
+      "text": "パートナーと一緒に、自信とサポートを感じる。",
+      "trait": "GROWTH",
+      "reverse": false
+    },
+    {
+      "id": "GF8",
+      "text": "パートナーは間違いを受け入れ、一緒に問題を解決する。",
+      "trait": "COMMUNICATION",
+      "reverse": false
+    },
+    {
+      "id": "GF9",
+      "text": "パートナーは私のゴールを応援し、励ましてくれる。",
+      "trait": "GROWTH",
+      "reverse": false
+    },
+    {
+      "id": "GF10",
+      "text": "パートナーを完全に信頼している。",
+      "trait": "RESPECT",
+      "reverse": false
+    },
+    {
+      "id": "RF1",
+      "text": "パートナーは私の感情を無視または軽視する。",
+      "trait": "REDFLAG",
+      "reverse": false
+    },
+    {
+      "id": "RF2",
+      "text": "パートナーはよく私に嘘をつく。",
+      "trait": "REDFLAG",
+      "reverse": false
+    },
+    {
+      "id": "RF3",
+      "text": "パートナーは私の行動をコントロールしようとする。",
+      "trait": "REDFLAG",
+      "reverse": false
+    },
+    {
+      "id": "RF4",
+      "text": "パートナーは怒るときに口汚く罵る。",
+      "trait": "REDFLAG",
+      "reverse": false
+    },
+    {
+      "id": "RF5",
+      "text": "私たちの関係は一方的である。",
+      "trait": "REDFLAG",
+      "reverse": false
+    },
+    {
+      "id": "RF6",
+      "text": "パートナーは私の友人や家族について悪く言う。",
+      "trait": "REDFLAG",
+      "reverse": false
+    },
+    {
+      "id": "RF7",
+      "text": "パートナーは自分の間違いを認めない。",
+      "trait": "REDFLAG",
+      "reverse": false
+    },
+    {
+      "id": "RF8",
+      "text": "パートナーの近くにいるとき不安を感じる。",
+      "trait": "REDFLAG",
+      "reverse": false
+    },
+    {
+      "id": "RF9",
+      "text": "パートナーは私の個人的な時間と独立性を制限する。",
+      "trait": "REDFLAG",
+      "reverse": false
+    },
+    {
+      "id": "RF10",
+      "text": "パートナーは私の個人的な成長を阻止する。",
+      "trait": "REDFLAG",
+      "reverse": false
+    },
+    {
+      "id": "GF11",
+      "text": "困難な状況でも私たちは解決策を見つける。",
+      "trait": "COMMUNICATION",
+      "reverse": false
+    },
+    {
+      "id": "GF12",
+      "text": "パートナーはあるがままの私を受け入れる。",
+      "trait": "RESPECT",
+      "reverse": false
+    },
+    {
+      "id": "GF13",
+      "text": "私たちの関係は相互成長を育みます。",
+      "trait": "GROWTH",
+      "reverse": false
+    },
+    {
+      "id": "GF14",
+      "text": "一緒に笑い、楽しい時間を過ごす。",
+      "trait": "COMMUNICATION",
+      "reverse": false
+    },
+    {
+      "id": "GF15",
+      "text": "私たちの未来について楽観的に感じる。",
+      "trait": "GROWTH",
+      "reverse": false
+    }
+  ],
+  "results": {
+    "ranges": [
+      {
+        "min": 25,
+        "max": 50,
+        "level": "警告信号が多い",
+        "emoji": "🚩",
+        "description": "あなたの関係は多くの懸念される兆候を示しています。この関係はあなたに有害である可能性があります。",
+        "recommendation": [
+          "信頼できる友人や家族に状況について話してください",
+          "プロのカウンセリングを強く推奨します",
+          "あなたの安全と幸福を優先してください",
+          "関係を離れることが必要かどうか検討してください"
+        ]
+      },
+      {
+        "min": 51,
+        "max": 75,
+        "level": "混合信号",
+        "emoji": "⚠️",
+        "description": "あなたの関係はポジティブとネガティブの両方のパターンを持っています。改善の余地がありますが、希望的な兆候もあります。",
+        "recommendation": [
+          "関係についてパートナーと正直に会話してください",
+          "改善が必要な特定の領域について議論してください",
+          "必要に応じてカップルカウンセリングを検討してください",
+          "一緒にポジティブな変化を作り出してください"
+        ]
+      },
+      {
+        "min": 76,
+        "max": 100,
+        "level": "健全な関係",
+        "emoji": "🟢",
+        "description": "あなたの関係は多くの健全な兆候を示しています。尊重、信頼、相互成長が存在します。",
+        "recommendation": [
+          "あなたが築いたポジティブな関係パターンを維持してください",
+          "コミュニケーションと理解を継続して発展させてください",
+          "一緒に未来を構築し続けてください",
+          "改善に向けた小さな努力は常に価値があります"
+        ]
+      }
+    ]
+  }
+}
