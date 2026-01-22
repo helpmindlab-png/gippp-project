@@ -1,0 +1,288 @@
+{
+  "meta": {
+    "id": "emotional-intelligence",
+    "version": "1.0",
+    "language": "vi",
+    "rtl": false,
+    "lastUpdated": "2026-01-22",
+    "itemCount": 28,
+    "traitCount": 4
+  },
+  "ui": {
+    "testName": "Mức độ trí tuệ cảm xúc của bạn là gì?",
+    "description": "Một bài đánh giá 28 câu hỏi đo lường nhận thức cảm xúc, tự điều chỉnh, đồng cảm và kỹ năng quản lý quan hệ",
+    "security": "Các câu trả lời của bạn sẽ không được lưu.",
+    "processing": "Đang phân tích hồ sơ trí tuệ cảm xúc của bạn...",
+    "reportTitle": "Hồ sơ trí tuệ cảm xúc của bạn",
+    "actions": {
+      "restart": "Làm lại",
+      "share": "Chia sẻ",
+      "save": "Lưu"
+    },
+    "labels": ["Hoàn toàn không đồng ý", "Không đồng ý", "Trung lập", "Đồng ý", "Hoàn toàn đồng ý"]
+  },
+  "guide": {
+    "ipipId": "IPIP-EI-28 (Đánh giá Trí tuệ Cảm xúc, dựa trên Mô hình Mayer-Salovey-Caruso)",
+    "purpose": "Bài đánh giá này giúp bạn hiểu rõ mức độ trí tuệ cảm xúc của mình. Nó chỉ dành cho tự nhận thức và không phải là công cụ chẩn đoán.",
+    "instruction": "Dựa vào 2-4 tuần vừa qua, hãy trả lời thành thực về mức độ mỗi câu nói áp dụng cho bạn.",
+    "interpretation": "Điểm số càng cao cho thấy trí tuệ cảm xúc càng cao, điểm số càng thấp cho thấy trí tuệ cảm xúc càng thấp.",
+    "startBtn": "Bắt đầu đánh giá"
+  },
+  "traitNames": {
+    "SA": "Tự Nhận Thức",
+    "SR": "Tự Điều Chỉnh",
+    "EM": "Đồng Cảm",
+    "RM": "Quản Lý Quan Hệ"
+  },
+  "descriptions": {
+    "SA": {
+      "emoji": "🔍",
+      "name": "Tự Nhận Thức (Self-Awareness)",
+      "detail": "Khả năng của bạn nhận ra và hiểu cảm xúc của chính mình. Bạn xác định chính xác tình trạng cảm xúc của mình và hiểu cách nó ảnh hưởng đến hành vi.",
+      "tip": "Quan sát thường xuyên cảm xúc của bạn và cố gắng tìm ra những mô hình trong những tình huống kích hoạt các cảm xúc nhất định."
+    },
+    "SR": {
+      "emoji": "⚖️",
+      "name": "Tự Điều Chỉnh (Self-Regulation)",
+      "detail": "Khả năng của bạn quản lý và kiểm soát cảm xúc của mình một cách lành mạnh. Bạn không bị cảm xúc tiêu cực áp đảo và phản ứng một cách cân bằng.",
+      "tip": "Khi cảm xúc tăng cao, hãy dừng lại, hít thở sâu hoặc chuyển hướng chú ý của bạn sang một hoạt động khác."
+    },
+    "EM": {
+      "emoji": "❤️",
+      "name": "Đồng Cảm (Empathy)",
+      "detail": "Khả năng của bạn hiểu cảm xúc và quan điểm của người khác. Bạn có thể suy nghĩ từ quan điểm của họ và công nhận cảm xúc của họ.",
+      "tip": "Trong các cuộc trò chuyện, hãy chú ý đến biểu cảm mặt, giọng nói và ngôn ngữ cơ thể."
+    },
+    "RM": {
+      "emoji": "🤝",
+      "name": "Quản Lý Quan Hệ (Relationship Management)",
+      "detail": "Khả năng của bạn quản lý các mối quan hệ một cách hiệu quả. Bạn sử dụng kỹ năng cảm xúc để tạo ra các tương tác tích cực với những người khác.",
+      "tip": "Trong xung đột, cố gắng công nhận cả cảm xúc của người kia và cảm xúc của bạn trong giao tiếp."
+    }
+  },
+  "items": [
+    {
+      "id": "SA_001",
+      "text": "Tôi rõ ràng hiểu tôi đang ở trong tình trạng cảm xúc nào ngay bây giờ.",
+      "trait": "SA",
+      "reverse": false
+    },
+    {
+      "id": "SA_002",
+      "text": "Tôi có thể xác định nguyên nhân của cảm xúc của mình.",
+      "trait": "SA",
+      "reverse": false
+    },
+    {
+      "id": "SA_003",
+      "text": "Tôi hiểu cảm xúc của tôi ảnh hưởng đến hành vi như thế nào.",
+      "trait": "SA",
+      "reverse": false
+    },
+    {
+      "id": "SA_004",
+      "text": "Tôi biết những tình huống nào gây căng thẳng cho tôi.",
+      "trait": "SA",
+      "reverse": false
+    },
+    {
+      "id": "SA_005",
+      "text": "Tôi không nhận thấy những thay đổi trong tình trạng cảm xúc của tôi.",
+      "trait": "SA",
+      "reverse": true
+    },
+    {
+      "id": "SA_006",
+      "text": "Tôi hiểu những điểm mạnh và điểm yếu của mình từ góc độ cảm xúc.",
+      "trait": "SA",
+      "reverse": false
+    },
+    {
+      "id": "SA_007",
+      "text": "Tôi hiếm khi suy ngẫm về cảm xúc của mình.",
+      "trait": "SA",
+      "reverse": true
+    },
+    {
+      "id": "SR_001",
+      "text": "Tôi có thể giữ bình tĩnh ngay cả khi tức giận.",
+      "trait": "SR",
+      "reverse": false
+    },
+    {
+      "id": "SR_002",
+      "text": "Tôi phục hồi nhanh chóng từ cảm xúc tiêu cực.",
+      "trait": "SR",
+      "reverse": false
+    },
+    {
+      "id": "SR_003",
+      "text": "Tôi không hành động xung động khi cảm xúc cao.",
+      "trait": "SR",
+      "reverse": false
+    },
+    {
+      "id": "SR_004",
+      "text": "Tôi có thể quản lý căng thẳng một cách lành mạnh.",
+      "trait": "SR",
+      "reverse": false
+    },
+    {
+      "id": "SR_005",
+      "text": "Tôi khó kiểm soát bản thân khi bị choáng váng về cảm xúc.",
+      "trait": "SR",
+      "reverse": true
+    },
+    {
+      "id": "SR_006",
+      "text": "Khi tôi mắc lỗi, tôi học hỏi từ nó thay vì tự trách mình.",
+      "trait": "SR",
+      "reverse": false
+    },
+    {
+      "id": "SR_007",
+      "text": "Tôi cố gắng duy trì thái độ tích cực ngay cả trong những tình huống khó khăn.",
+      "trait": "SR",
+      "reverse": false
+    },
+    {
+      "id": "EM_001",
+      "text": "Tôi có thể phát hiện những thay đổi trong cảm xúc của người khác.",
+      "trait": "EM",
+      "reverse": false
+    },
+    {
+      "id": "EM_002",
+      "text": "Tôi có thể hiểu cảm xúc của ai đó mà không cần họ nói bất cứ điều gì.",
+      "trait": "EM",
+      "reverse": false
+    },
+    {
+      "id": "EM_003",
+      "text": "Tôi cố gắng nhìn những thứ từ quan điểm của người khác.",
+      "trait": "EM",
+      "reverse": false
+    },
+    {
+      "id": "EM_004",
+      "text": "Tôi có xu hướng bỏ qua cảm xúc của người khác.",
+      "trait": "EM",
+      "reverse": true
+    },
+    {
+      "id": "EM_005",
+      "text": "Tôi có thể an ủi người khác khi họ buồn hoặc đang chịu đựng.",
+      "trait": "EM",
+      "reverse": false
+    },
+    {
+      "id": "EM_006",
+      "text": "Tôi khó đồng cảm với nỗi đau của người khác.",
+      "trait": "EM",
+      "reverse": true
+    },
+    {
+      "id": "EM_007",
+      "text": "Tôi cố gắng hiểu những quan điểm khác nhau.",
+      "trait": "EM",
+      "reverse": false
+    },
+    {
+      "id": "RM_001",
+      "text": "Tôi xử lý xung đột một cách bình tĩnh và xây dựng.",
+      "trait": "RM",
+      "reverse": false
+    },
+    {
+      "id": "RM_002",
+      "text": "Tôi làm việc để xây dựng sự tin tưởng trong các mối quan hệ của mình.",
+      "trait": "RM",
+      "reverse": false
+    },
+    {
+      "id": "RM_003",
+      "text": "Tôi có thể giao tiếp hiệu quả và lắng nghe tốt.",
+      "trait": "RM",
+      "reverse": false
+    },
+    {
+      "id": "RM_004",
+      "text": "Tôi có thể thúc đẩy người khác.",
+      "trait": "RM",
+      "reverse": false
+    },
+    {
+      "id": "RM_005",
+      "text": "Tôi tôn trọng những người khác khi chúng tôi có ý kiến khác nhau.",
+      "trait": "RM",
+      "reverse": false
+    },
+    {
+      "id": "RM_006",
+      "text": "Tôi thường xuyên gặp xung đột trong các mối quan hệ của mình.",
+      "trait": "RM",
+      "reverse": true
+    },
+    {
+      "id": "RM_007",
+      "text": "Tôi hiểu nhu cầu của người khác và điều chỉnh hành vi của mình cho phù hợp.",
+      "trait": "RM",
+      "reverse": false
+    },
+    {
+      "id": "RM_008",
+      "text": "Tôi đóng góp vào việc tạo ra bầu không khí tích cực trong các nhóm.",
+      "trait": "RM",
+      "reverse": false
+    }
+  ],
+  "results": {
+    "ranges": [
+      {
+        "min": 28,
+        "max": 56,
+        "level": "VERY_LOW",
+        "emoji": "🌙",
+        "title": "Rất thấp",
+        "description": "Trí tuệ cảm xúc của bạn rất thấp. Bạn gặp khó khăn trong việc nhận ra và quản lý cảm xúc ở bản thân và người khác.",
+        "recommendation": "Hãy cố gắng giữ nhật ký cảm xúc hoặc thực hành thiền định để quan sát cảm xúc của bạn thường xuyên hơn. Làm việc trên các kỹ năng lắng nghe tích cực cũng sẽ giúp ích."
+      },
+      {
+        "min": 57,
+        "max": 85,
+        "level": "LOW",
+        "emoji": "⭐",
+        "title": "Thấp",
+        "description": "Trí tuệ cảm xúc của bạn tương đối thấp. Có rất nhiều chỗ để cải thiện trong nhận thức và quản lý cảm xúc.",
+        "recommendation": "Ghi lại phản ứng cảm xúc của bạn và thực hành nhìn từ quan điểm của người khác. Học các kỹ thuật điều chỉnh cảm xúc có thể hữu ích."
+      },
+      {
+        "min": 86,
+        "max": 114,
+        "level": "MEDIUM",
+        "emoji": "💫",
+        "title": "Vừa phải",
+        "description": "Trí tuệ cảm xúc của bạn ở mức vừa phải. Bạn có các kỹ năng cơ bản trong việc nhận ra và quản lý cảm xúc.",
+        "recommendation": "Tiếp tục phát triển bằng cách sâu sắc hơn hiểu biết của bạn về cảm xúc của chính mình và của người khác."
+      },
+      {
+        "min": 115,
+        "max": 142,
+        "level": "HIGH",
+        "emoji": "✨",
+        "title": "Cao",
+        "description": "Trí tuệ cảm xúc của bạn cao. Bạn hiểu rõ cảm xúc của mình và xây dựng các mối quan hệ hiệu quả với những người khác.",
+        "recommendation": "Duy trì những điểm mạnh của bạn và cân nhắc hỗ trợ người khác phát triển nhận thức cảm xúc."
+      },
+      {
+        "min": 143,
+        "max": 170,
+        "level": "VERY_HIGH",
+        "emoji": "💖",
+        "title": "Rất cao",
+        "description": "Trí tuệ cảm xúc của bạn rất cao. Bạn hiểu sâu sắc cảm xúc ở bản thân mình và người khác và quản lý chúng một cách hiệu quả.",
+        "recommendation": "Sử dụng trí tuệ cảm xúc cao của bạn để giúp người khác phát triển các kỹ năng và nhận thức cảm xúc."
+      }
+    ]
+  }
+}
