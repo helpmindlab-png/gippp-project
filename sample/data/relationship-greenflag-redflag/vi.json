@@ -1,0 +1,287 @@
+{
+  "meta": {
+    "id": "relationship-greenflag-redflag",
+    "order": 4,
+    "version": "1.0",
+    "language": "vi",
+    "rtl": false,
+    "author": "GIPPP Research Team",
+    "lastUpdated": "2026-01-21",
+    "category": "Bài kiểm tra có tính lan rộng cao",
+    "itemCount": 25
+  },
+  "ui": {
+    "testName": "Mối quan hệ của bạn có khỏe mạnh không?",
+    "description": "Xác định các dấu hiệu xanh và đỏ trong mối quan hệ của bạn",
+    "security": "🔒 Bảo mật: Dữ liệu của bạn không được lưu trữ",
+    "processing": "Đang phân tích các tín hiệu mối quan hệ của bạn...",
+    "reportTitle": "Báo cáo Sức khỏe Mối quan hệ của Bạn",
+    "careerTitle": "💡 Đánh giá Mối quan hệ",
+    "actions": {
+      "report": "Xem báo cáo",
+      "viewAmazon": "Sách được đề xuất",
+      "saveImg": "Lưu dưới dạng hình ảnh",
+      "retest": "Làm lại bài kiểm tra",
+      "qrNote": "Chia sẻ với bạn bè qua QR"
+    },
+    "viral": {
+      "title": "Mối quan hệ của bạn khỏe mạnh như thế nào?",
+      "subtitle": "Kiểm tra các dấu hiệu xanh và đỏ cùng nhau!"
+    },
+    "labels": [
+      "Hoàn toàn không đồng ý",
+      "Không đồng ý",
+      "Trung lập",
+      "Đồng ý",
+      "Hoàn toàn đồng ý"
+    ],
+    "amazonKeywords": {
+      "GREENFLAG": "mối quan hệ lành mạnh, dấu hiệu tốt, cải thiện mối quan hệ",
+      "REDFLAG": "dấu hiệu cảnh báo mối quan hệ, mối quan hệ độc hại, vấn đề mối quan hệ",
+      "COMMUNICATION": "giao tiếp, đối thoại, tâm trí mở",
+      "RESPECT": "tôn trọng, giới hạn, tin tưởng",
+      "GROWTH": "tăng trưởng, phát triển, thay đổi"
+    }
+  },
+  "guide": {
+    "ipipId": "IPIP-GF-25",
+    "purpose": "Bài kiểm tra này giúp bạn xác định các mẫu lành mạnh và đáng lo ngại trong mối quan hệ của mình. Đây là một công cụ tự hiểu biết, không phải tư vấn chuyên nghiệp.",
+    "instruction": "Hãy đọc mỗi câu trong 25 câu dưới đây và xếp hạng mức độ đồng ý của bạn dựa trên kinh nghiệm mối quan hệ hiện tại hoặc quá khứ của bạn trên thang điểm 5. Sự trung thực là hữu ích nhất.",
+    "interpretation": "Điểm cao: Mối quan hệ của bạn cho thấy dấu hiệu lành mạnh | Điểm trung bình: Mối quan hệ của bạn có cả mẫu tích cực và tiêu cực | Điểm thấp: Mối quan hệ của bạn cho thấy dấu hiệu cảnh báo đáng lo ngại",
+    "startBtn": "Bắt đầu bài kiểm tra"
+  },
+  "traitNames": {
+    "GREENFLAG": "Dấu hiệu xanh",
+    "REDFLAG": "Dấu hiệu đỏ",
+    "COMMUNICATION": "Giao tiếp",
+    "RESPECT": "Tôn trọng & Tin tưởng",
+    "GROWTH": "Tăng trưởng Lẫn nhau"
+  },
+  "descriptions": {
+    "GREENFLAG": {
+      "emoji": "🟢",
+      "name": "Dấu hiệu xanh",
+      "detail": "Bạn tình tôn trọng bạn, trung thực và lắng nghe ý kiến của bạn. Bạn xây dựng một tương lai cùng nhau và phát triển như những cá nhân.",
+      "tip": "💡 Quý trọng những dấu hiệu này và tiếp tục nuôi dưỡng chúng."
+    },
+    "REDFLAG": {
+      "emoji": "🚩",
+      "name": "Dấu hiệu đỏ",
+      "detail": "Bạn tình thao túng bạn, nói dối hoặc bỏ qua cảm xúc của bạn. Mối quan hệ có thể là một chiều hoặc gây hại một cách lặp đi lặp lại.",
+      "tip": "💡 Nếu bạn thấy nhiều dấu hiệu này, hỗ trợ chuyên nghiệp được đề xuất mạnh mẽ."
+    },
+    "COMMUNICATION": {
+      "emoji": "💬",
+      "name": "Giao tiếp",
+      "detail": "Bạn và bạn tình có thể thảo luận bình tĩnh những chủ đề khó không. Giao tiếp mở là nền tảng của các mối quan hệ lành mạnh.",
+      "tip": "💡 Các cuộc trò chuyện thực tế thường xuyên sâu sắc sự hiểu biết lẫn nhau."
+    },
+    "RESPECT": {
+      "emoji": "🤝",
+      "name": "Tôn trọng & Tin tưởng",
+      "detail": "Bạn tình có tôn trọng ranh giới của bạn, tôn trọng bạn bè/gia đình và coi trọng không gian cá nhân và tự chủ của bạn không.",
+      "tip": "💡 Tôn trọng là yếu tố cơ bản nhất của bất kỳ mối quan hệ nào."
+    },
+    "GROWTH": {
+      "emoji": "🌱",
+      "name": "Tăng trưởng Lẫn nhau",
+      "detail": "Bạn và bạn tình có phát triển cùng nhau và hỗ trợ nhau trong những giấc mơ và mục tiêu không.",
+      "tip": "💡 Các mối quan hệ phát triển cùng nhau sâu sắc theo thời gian."
+    }
+  },
+  "items": [
+    {
+      "id": "GF1",
+      "text": "Bạn tình thực sự lắng nghe ý kiến của tôi.",
+      "trait": "COMMUNICATION",
+      "reverse": false
+    },
+    {
+      "id": "GF2",
+      "text": "Bạn tình tôn trọng ranh giới và quyết định của tôi.",
+      "trait": "RESPECT",
+      "reverse": false
+    },
+    {
+      "id": "GF3",
+      "text": "Tôi có thể thảo luận bất kỳ chủ đề nào một cách trung thực với bạn tình.",
+      "trait": "COMMUNICATION",
+      "reverse": false
+    },
+    {
+      "id": "GF4",
+      "text": "Bạn tình tôn trọng bạn bè và gia đình của tôi.",
+      "trait": "RESPECT",
+      "reverse": false
+    },
+    {
+      "id": "GF5",
+      "text": "Chúng tôi lên kế hoạch cho tương lai và chia sẻ những giấc mơ cùng nhau.",
+      "trait": "GROWTH",
+      "reverse": false
+    },
+    {
+      "id": "GF6",
+      "text": "Bạn tình tôn trọng không gian và độc lập cá nhân của tôi.",
+      "trait": "RESPECT",
+      "reverse": false
+    },
+    {
+      "id": "GF7",
+      "text": "Tôi cảm thấy tự tin và được hỗ trợ với bạn tình.",
+      "trait": "GROWTH",
+      "reverse": false
+    },
+    {
+      "id": "GF8",
+      "text": "Bạn tình chấp nhận lỗi và giải quyết vấn đề cùng nhau.",
+      "trait": "COMMUNICATION",
+      "reverse": false
+    },
+    {
+      "id": "GF9",
+      "text": "Bạn tình khuyến khích và hỗ trợ các mục tiêu của tôi.",
+      "trait": "GROWTH",
+      "reverse": false
+    },
+    {
+      "id": "GF10",
+      "text": "Tôi hoàn toàn tin tưởng bạn tình.",
+      "trait": "RESPECT",
+      "reverse": false
+    },
+    {
+      "id": "RF1",
+      "text": "Bạn tình bỏ qua hoặc giảm nhẹ cảm xúc của tôi.",
+      "trait": "REDFLAG",
+      "reverse": false
+    },
+    {
+      "id": "RF2",
+      "text": "Bạn tình thường xuyên nói dối với tôi.",
+      "trait": "REDFLAG",
+      "reverse": false
+    },
+    {
+      "id": "RF3",
+      "text": "Bạn tình cố gắng kiểm soát hành vi của tôi.",
+      "trait": "REDFLAG",
+      "reverse": false
+    },
+    {
+      "id": "RF4",
+      "text": "Bạn tình có thái độ xúc phạm khi tức giận.",
+      "trait": "REDFLAG",
+      "reverse": false
+    },
+    {
+      "id": "RF5",
+      "text": "Mối quan hệ của chúng tôi cảm thấy một chiều.",
+      "trait": "REDFLAG",
+      "reverse": false
+    },
+    {
+      "id": "RF6",
+      "text": "Bạn tình nói tiêu cực về bạn bè hoặc gia đình của tôi.",
+      "trait": "REDFLAG",
+      "reverse": false
+    },
+    {
+      "id": "RF7",
+      "text": "Bạn tình từ chối thừa nhận lỗi của anh ấy/cô ấy.",
+      "trait": "REDFLAG",
+      "reverse": false
+    },
+    {
+      "id": "RF8",
+      "text": "Tôi cảm thấy lo lắng hoặc không an toàn khi ở gần bạn tình.",
+      "trait": "REDFLAG",
+      "reverse": false
+    },
+    {
+      "id": "RF9",
+      "text": "Bạn tình hạn chế thời gian và độc lập cá nhân của tôi.",
+      "trait": "REDFLAG",
+      "reverse": false
+    },
+    {
+      "id": "RF10",
+      "text": "Bạn tình làm suy yếu sự phát triển cá nhân của tôi.",
+      "trait": "REDFLAG",
+      "reverse": false
+    },
+    {
+      "id": "GF11",
+      "text": "Chúng tôi tìm giải pháp cùng nhau ngay cả trong lúc khó khăn.",
+      "trait": "COMMUNICATION",
+      "reverse": false
+    },
+    {
+      "id": "GF12",
+      "text": "Bạn tình chấp nhận tôi như tôi là.",
+      "trait": "RESPECT",
+      "reverse": false
+    },
+    {
+      "id": "GF13",
+      "text": "Mối quan hệ của chúng tôi nuôi dưỡng sự tăng trưởng lẫn nhau.",
+      "trait": "GROWTH",
+      "reverse": false
+    },
+    {
+      "id": "GF14",
+      "text": "Chúng tôi cười và thích thời gian cùng nhau.",
+      "trait": "COMMUNICATION",
+      "reverse": false
+    },
+    {
+      "id": "GF15",
+      "text": "Tôi lạc观于tương lai của chúng tôi cùng nhau.",
+      "trait": "GROWTH",
+      "reverse": false
+    }
+  ],
+  "results": {
+    "ranges": [
+      {
+        "min": 25,
+        "max": 50,
+        "level": "Nhiều dấu hiệu cảnh báo",
+        "emoji": "🚩",
+        "description": "Mối quan hệ của bạn cho thấy nhiều mẫu đáng lo ngại. Mối quan hệ này có thể gây hại cho bạn.",
+        "recommendation": [
+          "Nói chuyện với bạn bè hoặc gia đình đáng tin cậy về tình hình của bạn",
+          "Tư vấn chuyên nghiệp được đề xuất mạnh mẽ",
+          "Ưu tiên sự an toàn và phúc lợi của bạn",
+          "Xem xét liệu rời bỏ mối quan hệ có cần thiết không"
+        ]
+      },
+      {
+        "min": 51,
+        "max": 75,
+        "level": "Tín hiệu hỗn hợp",
+        "emoji": "⚠️",
+        "description": "Mối quan hệ của bạn có cả mẫu tích cực và tiêu cực. Có những lĩnh vực cần cải thiện nhưng cũng có những dấu hiệu đáng mong đợi.",
+        "recommendation": [
+          "Có những cuộc trò chuyện trung thực với bạn tình về mối quan hệ",
+          "Thảo luận các lĩnh vực cụ thể cần cải thiện",
+          "Xem xét tư vấn cặp đôi nếu cần",
+          "Làm việc cùng nhau để tạo ra sự thay đổi tích cực"
+        ]
+      },
+      {
+        "min": 76,
+        "max": 100,
+        "level": "Mối quan hệ lành mạnh",
+        "emoji": "🟢",
+        "description": "Mối quan hệ của bạn cho thấy nhiều dấu hiệu lành mạnh. Sự tôn trọng, tin tưởng và tăng trưởng lẫn nhau đều có mặt.",
+        "recommendation": [
+          "Duy trì các mẫu mối quan hệ tích cực mà bạn đã xây dựng",
+          "Tiếp tục phát triển giao tiếp và sự hiểu biết",
+          "Tiếp tục xây dựng tương lai của bạn cùng nhau",
+          "Những nỗ lực nhỏ để cải thiện luôn có giá trị"
+        ]
+      }
+    ]
+  }
+}
