@@ -1,0 +1,284 @@
+{
+  "meta": {
+    "id": "love-languages-plus",
+    "order": 3,
+    "version": "1.0",
+    "language": "es",
+    "rtl": false,
+    "author": "GIPPP Research Team",
+    "lastUpdated": "2026-01-21",
+    "category": "Prueba de Alto Impacto",
+    "itemCount": 25
+  },
+  "ui": {
+    "testName": "¿Cuál es tu lenguaje del amor?",
+    "description": "Descubre cuál de las 5 formas de expresión amorosa es más significativa para ti",
+    "security": "🔒 Seguridad: Tus datos no se almacenan",
+    "processing": "Analizando tu lenguaje del amor...",
+    "reportTitle": "Tu Reporte de Lenguaje del Amor",
+    "careerTitle": "💡 Guía de Tu Estilo de Amor",
+    "actions": {
+      "report": "Ver Reporte",
+      "viewAmazon": "Libros Recomendados",
+      "saveImg": "Guardar como Imagen",
+      "retest": "Repetir Prueba",
+      "qrNote": "Compartir con Amigos por QR"
+    },
+    "viral": {
+      "title": "¿Cuál es tu lenguaje del amor?",
+      "subtitle": "¡Pruébalo con tu pareja y profundiza tu conexión!"
+    },
+    "labels": [
+      "Totalmente en desacuerdo",
+      "En desacuerdo",
+      "Neutral",
+      "De acuerdo",
+      "Totalmente de acuerdo"
+    ],
+    "amazonKeywords": {
+      "WORDS": "palabras de afirmación, cumplidos, estímulo, comunicación emocional",
+      "TIME": "tiempo juntos, atención, citas",
+      "GIFTS": "regalos, sorpresas, gratitud",
+      "SERVICE": "actos de servicio, ayuda, apoyo",
+      "TOUCH": "contacto físico, afecto, abrazos"
+    }
+  },
+  "guide": {
+    "ipipId": "IPIP-LL-25",
+    "purpose": "Esta prueba te ayuda a comprender tu forma preferida de dar y recibir amor y afecto. Esta es una herramienta de autoconocimiento, no una evaluación diagnóstica.",
+    "instruction": "Lee cada una de las 25 afirmaciones y califica cuánto estás de acuerdo con cada una en una escala de 5 puntos. Considera qué expresión de amor más toca tu corazón.",
+    "interpretation": "Palabras: Te sientes amado a través de cumplidos y estímulo | Tiempo: Los momentos significativos juntos son lo más importante | Regalos: Los regalos significan que te ama | Actos de servicio: Las acciones hablan más que palabras | Toque: La intimidad física te hace sentir amado",
+    "startBtn": "Comenzar Prueba"
+  },
+  "traitNames": {
+    "WORDS": "Palabras de Afirmación",
+    "TIME": "Tiempo Juntos",
+    "GIFTS": "Recibir Regalos",
+    "SERVICE": "Actos de Servicio",
+    "TOUCH": "Contacto Físico"
+  },
+  "descriptions": {
+    "WORDS": {
+      "emoji": "💬",
+      "name": "Palabras de Afirmación",
+      "detail": "Te sientes amado a través de cumplidos, estímulo y palabras agradecidas. Una palabra amable de tu pareja ilumina tu día.",
+      "tip": "💡 Expresa regularmente a tu pareja lo que aprecias específicamente de él/ella."
+    },
+    "TIME": {
+      "emoji": "⏰",
+      "name": "Tiempo Juntos",
+      "detail": "Los momentos de calidad con tu pareja son tu regalo más preciado. La conversación genuina y las experiencias compartidas son lo más valioso.",
+      "tip": "💡 Crea momentos regulares donde dejen sus teléfonos y tengan conversaciones profundas."
+    },
+    "GIFTS": {
+      "emoji": "🎁",
+      "name": "Recibir Regalos",
+      "detail": "Te sientes amado a través de regalos considerados. No son solo objetos, sino prueba de cuánto te ama tu pareja.",
+      "tip": "💡 Los regalos pequeños y considerados pueden ser más significativos que los costosos."
+    },
+    "SERVICE": {
+      "emoji": "🤝",
+      "name": "Actos de Servicio",
+      "detail": "Te sientes amado a través de las acciones de tu pareja. Cuando ayuda en momentos difíciles y se preocupa, te sientes genuinamente cuidado.",
+      "tip": "💡 Anticipa las necesidades de tu pareja y ayuda antes de que pida."
+    },
+    "TOUCH": {
+      "emoji": "🤗",
+      "name": "Contacto Físico",
+      "detail": "Te sientes amado a través de abrazos, sostener la mano y cercanía física. La intimidad física es tu ancla emocional.",
+      "tip": "💡 No dudes en expresar tu necesidad de contacto físico—es una forma hermosa de conexión."
+    }
+  },
+  "items": [
+    {
+      "id": "LL1",
+      "text": "Me siento bien cuando mi pareja me halaga.",
+      "trait": "WORDS",
+      "reverse": false
+    },
+    {
+      "id": "LL2",
+      "text": "Pasar tiempo de calidad con mi pareja me hace más feliz.",
+      "trait": "TIME",
+      "reverse": false
+    },
+    {
+      "id": "LL3",
+      "text": "Los regalos de mi pareja son profundamente significativos para mí.",
+      "trait": "GIFTS",
+      "reverse": false
+    },
+    {
+      "id": "LL4",
+      "text": "Me siento amado cuando mi pareja me ayuda en tiempos difíciles.",
+      "trait": "SERVICE",
+      "reverse": false
+    },
+    {
+      "id": "LL5",
+      "text": "El afecto físico con mi pareja me conforta.",
+      "trait": "TOUCH",
+      "reverse": false
+    },
+    {
+      "id": "LL6",
+      "text": "La gratitud de mi pareja me calienta el corazón.",
+      "trait": "WORDS",
+      "reverse": false
+    },
+    {
+      "id": "LL7",
+      "text": "Las conversaciones significativas son lo más precioso para mí.",
+      "trait": "TIME",
+      "reverse": false
+    },
+    {
+      "id": "LL8",
+      "text": "Me encanta recibir un regalo considerado.",
+      "trait": "GIFTS",
+      "reverse": false
+    },
+    {
+      "id": "LL9",
+      "text": "Me siento cuidado cuando mi pareja atiende mis necesidades.",
+      "trait": "SERVICE",
+      "reverse": false
+    },
+    {
+      "id": "LL10",
+      "text": "Los abrazos y tomarse de la mano son muy importantes para mí.",
+      "trait": "TOUCH",
+      "reverse": false
+    },
+    {
+      "id": "LL11",
+      "text": "Soy más feliz cuando mi pareja reconoce mis esfuerzos.",
+      "trait": "WORDS",
+      "reverse": false
+    },
+    {
+      "id": "LL12",
+      "text": "Las actividades compartidas con mi pareja importan más.",
+      "trait": "TIME",
+      "reverse": false
+    },
+    {
+      "id": "LL13",
+      "text": "Atesoro los regalos que mi pareja me ha dado.",
+      "trait": "GIFTS",
+      "reverse": false
+    },
+    {
+      "id": "LL14",
+      "text": "Me conmueve cuando mi pareja se sacrifica por mí.",
+      "trait": "SERVICE",
+      "reverse": false
+    },
+    {
+      "id": "LL15",
+      "text": "La intimidad física es esencial para mí.",
+      "trait": "TOUCH",
+      "reverse": false
+    },
+    {
+      "id": "LL16",
+      "text": "El estímulo de mi pareja transforma mi día.",
+      "trait": "WORDS",
+      "reverse": false
+    },
+    {
+      "id": "LL17",
+      "text": "Con mi pareja, nada más importa.",
+      "trait": "TIME",
+      "reverse": false
+    },
+    {
+      "id": "LL18",
+      "text": "Me deleito en incluso los pequeños regalos considerados.",
+      "trait": "GIFTS",
+      "reverse": false
+    },
+    {
+      "id": "LL19",
+      "text": "Me siento amado cuando mi pareja hace cosas por mí.",
+      "trait": "SERVICE",
+      "reverse": false
+    },
+    {
+      "id": "LL20",
+      "text": "Sin contacto físico me siento desconectado.",
+      "trait": "TOUCH",
+      "reverse": false
+    },
+    {
+      "id": "LL21",
+      "text": "La retroalimentación positiva me ayuda a crecer.",
+      "trait": "WORDS",
+      "reverse": false
+    },
+    {
+      "id": "LL22",
+      "text": "Quiero experimentar cosas nuevas con mi pareja.",
+      "trait": "TIME",
+      "reverse": false
+    },
+    {
+      "id": "LL23",
+      "text": "El pensamiento detrás de un regalo importa más que su costo.",
+      "trait": "GIFTS",
+      "reverse": false
+    },
+    {
+      "id": "LL24",
+      "text": "Soy más feliz cuando mi pareja alivia mi carga.",
+      "trait": "SERVICE",
+      "reverse": false
+    },
+    {
+      "id": "LL25",
+      "text": "Sin el toque de mi pareja, carezco de estabilidad emocional.",
+      "trait": "TOUCH",
+      "reverse": false
+    }
+  ],
+  "results": {
+    "ranges": [
+      {
+        "min": 25,
+        "max": 45,
+        "level": "Equilibrado",
+        "emoji": "⚖️",
+        "description": "Valoras todos los cinco lenguajes del amor equitativamente. Eres flexible y puedes dar y recibir amor de múltiples maneras.",
+        "recommendation": [
+          "Comparte tus lenguajes de amor primarios con tu pareja",
+          "Expresar amor de varias maneras enriquece tu relación",
+          "Aprecia que tu pareja puede mostrar amor diferente a tu preferencia"
+        ]
+      },
+      {
+        "min": 46,
+        "max": 65,
+        "level": "1-2 Lenguajes Primarios",
+        "emoji": "🎯",
+        "description": "Prefieres 1-2 lenguajes de amor específicos. Cuando se expresan así, te sientes más profundamente amado.",
+        "recommendation": [
+          "Comunica claramente tus lenguajes de amor primarios",
+          "Cuando coinciden, crean conexión profunda",
+          "Aprende y respeta los lenguajes de amor de tu pareja también"
+        ]
+      },
+      {
+        "min": 66,
+        "max": 85,
+        "level": "1 Lenguaje Preferencia Fuerte",
+        "emoji": "💫",
+        "description": "Tienes una preferencia fuerte por un lenguaje de amor específico. Esta es tu conexión emocional más poderosa.",
+        "recommendation": [
+          "Ayuda a tu pareja a entender tu lenguaje de amor primario",
+          "La comunicación clara previene malentendidos",
+          "Explora gradualmente el valor en otros lenguajes de amor"
+        ]
+      }
+    ]
+  }
+}
