@@ -1,0 +1,284 @@
+{
+  "meta": {
+    "id": "love-languages-plus",
+    "order": 3,
+    "version": "1.0",
+    "language": "en",
+    "rtl": false,
+    "author": "GIPPP Research Team",
+    "lastUpdated": "2026-01-21",
+    "category": "Highly Viral Test",
+    "itemCount": 25
+  },
+  "ui": {
+    "testName": "What's Your Love Language?",
+    "description": "Discover which of the 5 love languages resonates most deeply with you",
+    "security": "🔒 Privacy: Your data is not stored",
+    "processing": "Analyzing your love language...",
+    "reportTitle": "Your Love Language Report",
+    "careerTitle": "💡 Your Love Style Guide",
+    "actions": {
+      "report": "View Report",
+      "viewAmazon": "Recommended Books",
+      "saveImg": "Save as Image",
+      "retest": "Retake Test",
+      "qrNote": "Share with Friends via QR"
+    },
+    "viral": {
+      "title": "What's Your Love Language?",
+      "subtitle": "Try it with your partner and deepen your connection!"
+    },
+    "labels": [
+      "Strongly Disagree",
+      "Disagree",
+      "Neutral",
+      "Agree",
+      "Strongly Agree"
+    ],
+    "amazonKeywords": {
+      "WORDS": "words of affirmation, compliments, encouragement, emotional communication",
+      "TIME": "quality time, attention, dates, togetherness",
+      "GIFTS": "gifts, thoughtful presents, gratitude",
+      "SERVICE": "acts of service, helping, support",
+      "TOUCH": "physical touch, affection, hugs"
+    }
+  },
+  "guide": {
+    "ipipId": "IPIP-LL-25",
+    "purpose": "This test helps you understand your preferred way of giving and receiving love and affection. This is a self-awareness tool only, not a diagnostic assessment.",
+    "instruction": "Read each of the 25 statements below and rate how much you agree with each on a 5-point scale. Consider which expression of love and affection most moves your heart in relationships.",
+    "interpretation": "Words: You feel loved through compliments and encouragement | Quality Time: Meaningful moments together matter most | Gifts: Thoughtful presents symbolize love | Acts of Service: Actions speak louder than words | Physical Touch: Physical intimacy makes you feel loved",
+    "startBtn": "Start Test"
+  },
+  "traitNames": {
+    "WORDS": "Words of Affirmation",
+    "TIME": "Quality Time",
+    "GIFTS": "Receiving Gifts",
+    "SERVICE": "Acts of Service",
+    "TOUCH": "Physical Touch"
+  },
+  "descriptions": {
+    "WORDS": {
+      "emoji": "💬",
+      "name": "Words of Affirmation",
+      "detail": "You feel loved through compliments, encouragement, and grateful words. Your partner's kind words brighten your entire day.",
+      "tip": "💡 Regularly express to your partner specifically what you appreciate and how you feel about them."
+    },
+    "TIME": {
+      "emoji": "⏰",
+      "name": "Quality Time",
+      "detail": "Quality moments together are your most treasured gift. Genuine conversation and shared experiences fill your emotional cup.",
+      "tip": "💡 Create regular moments where you put your phone away and have deep conversations with your partner."
+    },
+    "GIFTS": {
+      "emoji": "🎁",
+      "name": "Receiving Gifts",
+      "detail": "You feel loved through thoughtful gifts. They represent tangible evidence that your partner thinks of you and values you.",
+      "tip": "💡 Even small, inexpensive gifts can be deeply meaningful if they show you were on their mind."
+    },
+    "SERVICE": {
+      "emoji": "🤝",
+      "name": "Acts of Service",
+      "detail": "You feel loved through your partner's helpful actions. When they help shoulder your burden, you experience genuine care.",
+      "tip": "💡 Anticipate your partner's needs and actively help before being asked—this shows real care."
+    },
+    "TOUCH": {
+      "emoji": "🤗",
+      "name": "Physical Touch",
+      "detail": "You feel loved through hugs, hand-holding, and physical closeness. Physical intimacy is your emotional anchor.",
+      "tip": "💡 Don't hesitate to express your need for physical affection—it's a valid and beautiful form of connection."
+    }
+  },
+  "items": [
+    {
+      "id": "LL1",
+      "text": "I feel great when my partner compliments me.",
+      "trait": "WORDS",
+      "reverse": false
+    },
+    {
+      "id": "LL2",
+      "text": "Spending quality time with my partner makes me happiest.",
+      "trait": "TIME",
+      "reverse": false
+    },
+    {
+      "id": "LL3",
+      "text": "Gifts from my partner are deeply meaningful to me.",
+      "trait": "GIFTS",
+      "reverse": false
+    },
+    {
+      "id": "LL4",
+      "text": "I feel loved when my partner helps me through difficult times.",
+      "trait": "SERVICE",
+      "reverse": false
+    },
+    {
+      "id": "LL5",
+      "text": "Physical affection with my partner comforts me.",
+      "trait": "TOUCH",
+      "reverse": false
+    },
+    {
+      "id": "LL6",
+      "text": "My partner's appreciation warms my heart.",
+      "trait": "WORDS",
+      "reverse": false
+    },
+    {
+      "id": "LL7",
+      "text": "Meaningful conversations are most precious to me.",
+      "trait": "TIME",
+      "reverse": false
+    },
+    {
+      "id": "LL8",
+      "text": "I'm thrilled when I receive a thoughtful gift.",
+      "trait": "GIFTS",
+      "reverse": false
+    },
+    {
+      "id": "LL9",
+      "text": "I feel cared for when my partner takes care of my needs.",
+      "trait": "SERVICE",
+      "reverse": false
+    },
+    {
+      "id": "LL10",
+      "text": "Hugs and handholding are very important to me.",
+      "trait": "TOUCH",
+      "reverse": false
+    },
+    {
+      "id": "LL11",
+      "text": "I'm happiest when my partner acknowledges my efforts.",
+      "trait": "WORDS",
+      "reverse": false
+    },
+    {
+      "id": "LL12",
+      "text": "Shared activities with my partner matter most.",
+      "trait": "TIME",
+      "reverse": false
+    },
+    {
+      "id": "LL13",
+      "text": "I treasure the gifts my partner has given me.",
+      "trait": "GIFTS",
+      "reverse": false
+    },
+    {
+      "id": "LL14",
+      "text": "I'm moved when my partner sacrifices for me.",
+      "trait": "SERVICE",
+      "reverse": false
+    },
+    {
+      "id": "LL15",
+      "text": "Physical intimacy is essential to me.",
+      "trait": "TOUCH",
+      "reverse": false
+    },
+    {
+      "id": "LL16",
+      "text": "My partner's encouragement transforms my day.",
+      "trait": "WORDS",
+      "reverse": false
+    },
+    {
+      "id": "LL17",
+      "text": "With my partner, nothing else matters.",
+      "trait": "TIME",
+      "reverse": false
+    },
+    {
+      "id": "LL18",
+      "text": "I delight in even small, thoughtful gifts.",
+      "trait": "GIFTS",
+      "reverse": false
+    },
+    {
+      "id": "LL19",
+      "text": "I feel loved when my partner does things for me.",
+      "trait": "SERVICE",
+      "reverse": false
+    },
+    {
+      "id": "LL20",
+      "text": "Without physical affection, I feel disconnected.",
+      "trait": "TOUCH",
+      "reverse": false
+    },
+    {
+      "id": "LL21",
+      "text": "Positive feedback helps me grow.",
+      "trait": "WORDS",
+      "reverse": false
+    },
+    {
+      "id": "LL22",
+      "text": "I want to experience new things with my partner.",
+      "trait": "TIME",
+      "reverse": false
+    },
+    {
+      "id": "LL23",
+      "text": "The thought behind a gift matters more than its cost.",
+      "trait": "GIFTS",
+      "reverse": false
+    },
+    {
+      "id": "LL24",
+      "text": "I'm happiest when my partner lightens my load.",
+      "trait": "SERVICE",
+      "reverse": false
+    },
+    {
+      "id": "LL25",
+      "text": "Without my partner's touch, I lack emotional stability.",
+      "trait": "TOUCH",
+      "reverse": false
+    }
+  ],
+  "results": {
+    "ranges": [
+      {
+        "min": 25,
+        "max": 45,
+        "level": "Balanced",
+        "emoji": "⚖️",
+        "description": "You value all five love languages equally. You're flexible and can both give and receive love in multiple ways.",
+        "recommendation": [
+          "Share your primary love languages with your partner",
+          "Expressing love in various ways enriches your relationship",
+          "Appreciate that your partner may show love differently than you prefer"
+        ]
+      },
+      {
+        "min": 46,
+        "max": 65,
+        "level": "1-2 Languages Primary",
+        "emoji": "🎯",
+        "description": "You prefer 1-2 specific love languages. When expressed this way, you feel most deeply loved.",
+        "recommendation": [
+          "Clearly communicate your primary love languages to your partner",
+          "When matched, these languages create deep connection",
+          "Learn and respect your partner's love language preferences too"
+        ]
+      },
+      {
+        "min": 66,
+        "max": 85,
+        "level": "1 Language Strong Preference",
+        "emoji": "💫",
+        "description": "You have a strong preference for one specific love language. This is your most powerful emotional connector.",
+        "recommendation": [
+          "Help your partner understand your primary love language",
+          "Clear communication prevents misunderstandings",
+          "Gradually explore value in other love languages"
+        ]
+      }
+    ]
+  }
+}
