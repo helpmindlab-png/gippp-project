@@ -1,0 +1,287 @@
+{
+  "meta": {
+    "id": "relationship-greenflag-redflag",
+    "order": 4,
+    "version": "1.0",
+    "language": "ko",
+    "rtl": false,
+    "author": "GIPPP Research Team",
+    "lastUpdated": "2026-01-21",
+    "category": "초고인기 테스트",
+    "itemCount": 25
+  },
+  "ui": {
+    "testName": "우리 관계, 괜찮을까?",
+    "description": "당신의 관계에서 보이는 긍정적, 부정적 신호를 알아보세요",
+    "security": "🔒 보안: 데이터 저장 안 함",
+    "processing": "당신의 관계 신호를 분석 중...",
+    "reportTitle": "나의 관계 신호 리포트",
+    "careerTitle": "💡 관계 건강도 평가",
+    "actions": {
+      "report": "리포트 보기",
+      "viewAmazon": "추천 도서 보기",
+      "saveImg": "이미지로 저장",
+      "retest": "다시 하기",
+      "qrNote": "QR로 친구와 공유하기"
+    },
+    "viral": {
+      "title": "당신의 관계는 몇 점?",
+      "subtitle": "녹색 신호와 빨간 신호를 함께 확인해보세요!"
+    },
+    "labels": [
+      "전혀 아니다",
+      "아니다",
+      "보통이다",
+      "그렇다",
+      "매우 그렇다"
+    ],
+    "amazonKeywords": {
+      "GREENFLAG": "건강한 관계, 좋은 신호, 관계 개선",
+      "REDFLAG": "관계 위험신호, 독성 관계, 관계 문제",
+      "COMMUNICATION": "소통, 대화, 열린 마음",
+      "RESPECT": "존중, 경계, 신뢰",
+      "GROWTH": "성장, 발전, 변화"
+    }
+  },
+  "guide": {
+    "ipipId": "IPIP-GF-25",
+    "purpose": "이 테스트는 당신의 관계에서 건강한 신호와 위험한 신호를 파악하는 데 도움을 줍니다. 본 테스트는 자기이해 도구일 뿐 전문가 상담이 아닙니다.",
+    "instruction": "다음 25개 문항을 읽고 현재 또는 지난 관계에서 경험한 정도를 5점 척도로 선택하세요. 정직한 답변이 가장 도움이 됩니다.",
+    "interpretation": "높은 점수: 관계에서 건강한 신호가 많이 보입니다 | 중간 점수: 긍정적 신호와 부정적 신호가 혼재되어 있습니다 | 낮은 점수: 관계에서 위험한 신호가 많이 보입니다",
+    "startBtn": "시작하기"
+  },
+  "traitNames": {
+    "GREENFLAG": "건강한 신호 (Green Flags)",
+    "REDFLAG": "위험한 신호 (Red Flags)",
+    "COMMUNICATION": "소통 능력",
+    "RESPECT": "존중과 신뢰",
+    "GROWTH": "함께의 성장"
+  },
+  "descriptions": {
+    "GREENFLAG": {
+      "emoji": "🟢",
+      "name": "건강한 신호",
+      "detail": "파트너가 당신을 존중하고, 솔직하며, 당신의 의견을 경청합니다. 함께 미래를 꿈꾸고 서로 성장할 수 있는 관계입니다.",
+      "tip": "💡 이러한 신호들을 소중히 여기고 계속 유지하기 위해 노력하세요."
+    },
+    "REDFLAG": {
+      "emoji": "🚩",
+      "name": "위험한 신호",
+      "detail": "파트너가 당신을 조종하거나, 거짓을 말하거나, 당신의 감정을 무시합니다. 관계가 일방적이거나 당신에게 상처를 주는 패턴이 반복됩니다.",
+      "tip": "💡 이러한 신호가 많다면 전문가와 상담하는 것을 권장합니다."
+    },
+    "COMMUNICATION": {
+      "emoji": "💬",
+      "name": "소통 능력",
+      "detail": "당신과 파트너가 어려운 주제도 차분하게 대화할 수 있는지를 나타냅니다. 열린 대화는 건강한 관계의 기초입니다.",
+      "tip": "💡 정기적인 진정한 대화를 통해 서로를 더 깊이 이해해보세요."
+    },
+    "RESPECT": {
+      "emoji": "🤝",
+      "name": "존중과 신뢰",
+      "detail": "파트너가 당신의 경계를 인정하고, 당신의 친구/가족을 존중하며, 당신의 개인적 시간을 존중하는 정도입니다.",
+      "tip": "💡 존중은 관계에서 가장 기본적인 요소입니다."
+    },
+    "GROWTH": {
+      "emoji": "🌱",
+      "name": "함께의 성장",
+      "detail": "당신과 파트너가 함께 성장하고 변화할 수 있으며, 서로의 꿈과 목표를 응원하는지를 나타냅니다.",
+      "tip": "💡 함께 성장하는 관계는 시간이 지날수록 더 깊어집니다."
+    }
+  },
+  "items": [
+    {
+      "id": "GF1",
+      "text": "파트너는 나의 의견을 진심으로 경청한다.",
+      "trait": "COMMUNICATION",
+      "reverse": false
+    },
+    {
+      "id": "GF2",
+      "text": "파트너는 내가 거절했을 때 쉽게 받아들인다.",
+      "trait": "RESPECT",
+      "reverse": false
+    },
+    {
+      "id": "GF3",
+      "text": "나는 파트너와 어떤 주제든 솔직하게 대화할 수 있다.",
+      "trait": "COMMUNICATION",
+      "reverse": false
+    },
+    {
+      "id": "GF4",
+      "text": "파트너는 내 친구와 가족을 소중히 여긴다.",
+      "trait": "RESPECT",
+      "reverse": false
+    },
+    {
+      "id": "GF5",
+      "text": "우리는 함께 미래를 계획하고 꿈꾼다.",
+      "trait": "GROWTH",
+      "reverse": false
+    },
+    {
+      "id": "GF6",
+      "text": "파트너는 내 개인적 시간과 공간을 존중한다.",
+      "trait": "RESPECT",
+      "reverse": false
+    },
+    {
+      "id": "GF7",
+      "text": "나는 파트너와 함께 있을 때 자신감이 생긴다.",
+      "trait": "GROWTH",
+      "reverse": false
+    },
+    {
+      "id": "GF8",
+      "text": "파트너는 나의 실수를 수용하고 함께 해결한다.",
+      "trait": "COMMUNICATION",
+      "reverse": false
+    },
+    {
+      "id": "GF9",
+      "text": "파트너는 나를 응원하고 격려한다.",
+      "trait": "GROWTH",
+      "reverse": false
+    },
+    {
+      "id": "GF10",
+      "text": "나는 파트너를 완전히 신뢰한다.",
+      "trait": "RESPECT",
+      "reverse": false
+    },
+    {
+      "id": "RF1",
+      "text": "파트너는 내 감정을 무시하거나 폄하한다.",
+      "trait": "REDFLAG",
+      "reverse": false
+    },
+    {
+      "id": "RF2",
+      "text": "파트너는 자주 거짓말을 한다.",
+      "trait": "REDFLAG",
+      "reverse": false
+    },
+    {
+      "id": "RF3",
+      "text": "파트너는 내 행동을 통제하려고 한다.",
+      "trait": "REDFLAG",
+      "reverse": false
+    },
+    {
+      "id": "RF4",
+      "text": "파트너는 화날 때 폭언을 한다.",
+      "trait": "REDFLAG",
+      "reverse": false
+    },
+    {
+      "id": "RF5",
+      "text": "파트너와의 관계는 일방적이다.",
+      "trait": "REDFLAG",
+      "reverse": false
+    },
+    {
+      "id": "RF6",
+      "text": "파트너는 나의 친구나 가족을 부정적으로 말한다.",
+      "trait": "REDFLAG",
+      "reverse": false
+    },
+    {
+      "id": "RF7",
+      "text": "파트너는 자신의 잘못을 인정하지 않는다.",
+      "trait": "REDFLAG",
+      "reverse": false
+    },
+    {
+      "id": "RF8",
+      "text": "파트너와 함께 있을 때 불안감을 느낀다.",
+      "trait": "REDFLAG",
+      "reverse": false
+    },
+    {
+      "id": "RF9",
+      "text": "파트너는 내 개인적 시간을 방해하거나 제한한다.",
+      "trait": "REDFLAG",
+      "reverse": false
+    },
+    {
+      "id": "RF10",
+      "text": "파트너는 나의 성장과 발전을 방해한다.",
+      "trait": "REDFLAG",
+      "reverse": false
+    },
+    {
+      "id": "GF11",
+      "text": "어려운 상황에서도 우리는 함께 해결책을 찾는다.",
+      "trait": "COMMUNICATION",
+      "reverse": false
+    },
+    {
+      "id": "GF12",
+      "text": "파트너는 나를 있는 그대로 받아들인다.",
+      "trait": "RESPECT",
+      "reverse": false
+    },
+    {
+      "id": "GF13",
+      "text": "우리의 관계는 서로 성장하는 자양분이 된다.",
+      "trait": "GROWTH",
+      "reverse": false
+    },
+    {
+      "id": "GF14",
+      "text": "파트너와 함께 웃고 즐길 수 있다.",
+      "trait": "COMMUNICATION",
+      "reverse": false
+    },
+    {
+      "id": "GF15",
+      "text": "나는 파트너와 함께 미래가 밝다고 생각한다.",
+      "trait": "GROWTH",
+      "reverse": false
+    }
+  ],
+  "results": {
+    "ranges": [
+      {
+        "min": 25,
+        "max": 50,
+        "level": "위험 신호 많음",
+        "emoji": "🚩",
+        "description": "당신의 관계에서 위험한 신호가 많이 보입니다. 이 관계가 당신에게 해가 될 가능성이 있습니다.",
+        "recommendation": [
+          "신뢰할 수 있는 친구나 가족과 당신의 상황을 이야기해보세요",
+          "심리상담사나 관계 전문가와 상담하는 것을 강력히 권장합니다",
+          "당신의 안전과 행복을 최우선으로 생각하세요",
+          "필요하다면 관계에서 벗어나는 것도 고려해보세요"
+        ]
+      },
+      {
+        "min": 51,
+        "max": 75,
+        "level": "혼합 신호",
+        "emoji": "⚠️",
+        "description": "당신의 관계에 긍정적 신호와 부정적 신호가 함께 있습니다. 개선할 부분이 있지만 희망적인 신호도 보입니다.",
+        "recommendation": [
+          "파트너와 관계에 대해 솔직하게 대화하세요",
+          "개선할 구체적인 부분들을 함께 논의하세요",
+          "필요하면 부부 상담이나 관계 상담을 받아보세요",
+          "작은 긍정적 변화를 함께 만들어가세요"
+        ]
+      },
+      {
+        "min": 76,
+        "max": 100,
+        "level": "건강한 신호 많음",
+        "emoji": "🟢",
+        "description": "당신의 관계에서 건강한 신호가 많이 보입니다. 존경과 신뢰, 상호 성장이 이루어지고 있습니다.",
+        "recommendation": [
+          "현재의 긍정적인 관계 패턴을 유지하세요",
+          "파트너와의 소통을 계속 발전시켜 나가세요",
+          "함께의 미래를 계속 꿈꾸고 계획하세요",
+          "때로는 관계 개선을 위한 작은 노력도 중요합니다"
+        ]
+      }
+    ]
+  }
+}
