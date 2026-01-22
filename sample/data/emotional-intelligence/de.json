@@ -1,0 +1,288 @@
+{
+  "meta": {
+    "id": "emotional-intelligence",
+    "version": "1.0",
+    "language": "de",
+    "rtl": false,
+    "lastUpdated": "2026-01-22",
+    "itemCount": 28,
+    "traitCount": 4
+  },
+  "ui": {
+    "testName": "Was ist Ihr Emotionalintelligenz-Level?",
+    "description": "Eine 28-teilige Bewertung, die emotionales Bewusstsein, Selbstregulation, Empathie und Beziehungsfähigkeiten misst",
+    "security": "Ihre Antworten werden nicht gespeichert.",
+    "processing": "Analysiere Ihr Emotionalintelligenz-Profil...",
+    "reportTitle": "Ihr Emotionalintelligenz-Profil",
+    "actions": {
+      "restart": "Erneut versuchen",
+      "share": "Teilen",
+      "save": "Speichern"
+    },
+    "labels": ["Stimme überhaupt nicht zu", "Stimme nicht zu", "Neutral", "Stimme zu", "Stimme vollkommen zu"]
+  },
+  "guide": {
+    "ipipId": "IPIP-EI-28 (Emotionalintelligenz-Bewertung, basierend auf dem Mayer-Salovey-Caruso-Modell)",
+    "purpose": "Diese Bewertung hilft Ihnen, Ihr Emotionalintelligenz-Niveau zu verstehen. Sie ist nur zur Selbsterkenntnis und keine diagnostische Methode.",
+    "instruction": "Beantworten Sie basierend auf den letzten 2-4 Wochen ehrlich, inwieweit jede Aussage auf Sie zutrifft.",
+    "interpretation": "Höhere Werte deuten auf höhere Emotionalintelligenz hin, während niedrigere Werte auf niedrigere Emotionalintelligenz hindeuten.",
+    "startBtn": "Bewertung starten"
+  },
+  "traitNames": {
+    "SA": "Selbstbewusstsein",
+    "SR": "Selbstregulation",
+    "EM": "Empathie",
+    "RM": "Beziehungsmanagement"
+  },
+  "descriptions": {
+    "SA": {
+      "emoji": "🔍",
+      "name": "Selbstbewusstsein",
+      "detail": "Ihre Fähigkeit, Ihre eigenen Emotionen zu erkennen und zu verstehen. Sie identifizieren Ihren emotionalen Zustand genau und verstehen, wie er Ihr Verhalten beeinflusst.",
+      "tip": "Beobachten Sie Ihre Emotionen regelmäßig und versuchen Sie, Muster in den Situationen zu finden, die bestimmte Gefühle auslösen."
+    },
+    "SR": {
+      "emoji": "⚖️",
+      "name": "Selbstregulation",
+      "detail": "Ihre Fähigkeit, Ihre Emotionen auf gesunde Weise zu verwalten und zu kontrollieren. Sie werden nicht von negativen Emotionen überwältigt und reagieren auf ausgewogene Weise.",
+      "tip": "Wenn Gefühle aufkommen, machen Sie eine Pause, atmen Sie tief durch oder lenken Sie Ihre Aufmerksamkeit auf eine andere Aktivität."
+    },
+    "EM": {
+      "emoji": "❤️",
+      "name": "Empathie",
+      "detail": "Ihre Fähigkeit, die Emotionen und Perspektiven anderer zu verstehen. Sie können aus ihrer Sicht denken und ihre Gefühle erkennen.",
+      "tip": "Achten Sie während Gesprächen auf Gesichtsausdrücke, Stimmton und Körpersprache."
+    },
+    "RM": {
+      "emoji": "🤝",
+      "name": "Beziehungsmanagement",
+      "detail": "Ihre Fähigkeit, Beziehungen effektiv zu verwalten. Sie nutzen emotionale Fähigkeiten, um positive Interaktionen mit anderen zu schaffen.",
+      "tip": "Versuchen Sie in Konflikten, sowohl die Emotionen des anderen als auch Ihre eigenen in Ihrer Kommunikation anzuerkennen."
+    }
+  },
+  "items": [
+    {
+      "id": "SA_001",
+      "text": "Ich verstehe klar, in welchem emotionalen Zustand ich mich gerade befinde.",
+      "trait": "SA",
+      "reverse": false
+    },
+    {
+      "id": "SA_002",
+      "text": "Ich kann die Ursachen meiner Emotionen identifizieren.",
+      "trait": "SA",
+      "reverse": false
+    },
+    {
+      "id": "SA_003",
+      "text": "Ich verstehe, wie meine Emotionen mein Verhalten beeinflussen.",
+      "trait": "SA",
+      "reverse": false
+    },
+    {
+      "id": "SA_004",
+      "text": "Ich weiß, welche Situationen mir Stress verursachen.",
+      "trait": "SA",
+      "reverse": false
+    },
+    {
+      "id": "SA_005",
+      "text": "Ich bemerke Veränderungen in meinem emotionalen Zustand nicht.",
+      "trait": "SA",
+      "reverse": true
+    },
+    {
+      "id": "SA_006",
+      "text": "Ich verstehe meine Stärken und Schwächen aus emotionaler Perspektive.",
+      "trait": "SA",
+      "reverse": false
+    },
+    {
+      "id": "SA_007",
+      "text": "Ich reflektiere selten über meine Emotionen.",
+      "trait": "SA",
+      "reverse": true
+    },
+    {
+      "id": "SR_001",
+      "text": "Ich kann ruhig bleiben, auch wenn ich wütend bin.",
+      "trait": "SR",
+      "reverse": false
+    },
+    {
+      "id": "SR_002",
+      "text": "Ich erhole mich schnell von negativen Emotionen.",
+      "trait": "SR",
+      "reverse": false
+    },
+    {
+      "id": "SR_003",
+      "text": "Ich handle nicht impulsiv, wenn meine Emotionen hoch sind.",
+      "trait": "SR",
+      "reverse": false
+    },
+    {
+      "id": "SR_004",
+      "text": "Ich kann Stress auf gesunde Weise bewältigen.",
+      "trait": "SR",
+      "reverse": false
+    },
+    {
+      "id": "SR_005",
+      "text": "Ich habe Schwierigkeiten, mich zu beherrschen, wenn ich emotional überfordert bin.",
+      "trait": "SR",
+      "reverse": true
+    },
+    {
+      "id": "SR_006",
+      "text": "Wenn ich Fehler mache, lerne ich daraus, anstatt mich selbst zu verurteilen.",
+      "trait": "SR",
+      "reverse": false
+    },
+    {
+      "id": "SR_007",
+      "text": "Ich versuche, eine positive Einstellung selbst in schwierigen Situationen zu bewahren.",
+      "trait": "SR",
+      "reverse": false
+    },
+    {
+      "id": "EM_001",
+      "text": "Ich kann Veränderungen in den Emotionen anderer erkennen.",
+      "trait": "EM",
+      "reverse": false
+    },
+    {
+      "id": "EM_002",
+      "text": "Ich kann die Gefühle einer Person verstehen, ohne dass sie etwas sagen.",
+      "trait": "EM",
+      "reverse": false
+    },
+    {
+      "id": "EM_003",
+      "text": "Ich versuche, die Dinge aus der Perspektive anderer zu sehen.",
+      "trait": "EM",
+      "reverse": false
+    },
+    {
+      "id": "EM_004",
+      "text": "Ich neige dazu, die Gefühle anderer zu ignorieren.",
+      "trait": "EM",
+      "reverse": true
+    },
+    {
+      "id": "EM_005",
+      "text": "Ich kann andere trösten, wenn sie traurig oder leiden.",
+      "trait": "EM",
+      "reverse": false
+    },
+    {
+      "id": "EM_006",
+      "text": "Mir fällt es schwer, mit dem Leid anderer Mitgefühl zu haben.",
+      "trait": "EM",
+      "reverse": true
+    },
+    {
+      "id": "EM_007",
+      "text": "Ich versuche, verschiedene Standpunkte zu verstehen.",
+      "trait": "EM",
+      "reverse": false
+    },
+    {
+      "id": "RM_001",
+      "text": "Ich gehe mit Konflikten ruhig und konstruktiv um.",
+      "trait": "RM",
+      "reverse": false
+    },
+    {
+      "id": "RM_002",
+      "text": "Ich arbeite daran, Vertrauen in meinen Beziehungen aufzubauen.",
+      "trait": "RM",
+      "reverse": false
+    },
+    {
+      "id": "RM_003",
+      "text": "Ich kann effektiv kommunizieren und gut zuhören.",
+      "trait": "RM",
+      "reverse": false
+    },
+    {
+      "id": "RM_004",
+      "text": "Ich kann andere motivieren.",
+      "trait": "RM",
+      "reverse": false
+    },
+    {
+      "id": "RM_005",
+      "text": "Ich respektiere andere, wenn wir unterschiedliche Meinungen haben.",
+      "trait": "RM",
+      "reverse": false
+    },
+    {
+      "id": "RM_006",
+      "text": "Ich erlebe häufig Konflikte in meinen Beziehungen.",
+      "trait": "RM",
+      "reverse": true
+    },
+    {
+      "id": "RM_007",
+      "text": "Ich verstehe die Bedürfnisse anderer und passe mein Verhalten entsprechend an.",
+      "trait": "RM",
+      "reverse": false
+    },
+    {
+      "id": "RM_008",
+      "text": "Ich trage dazu bei, eine positive Atmosphäre in Gruppen zu schaffen.",
+      "trait": "RM",
+      "reverse": false
+    }
+  ],
+  "results": {
+    "ranges": [
+      {
+        "min": 28,
+        "max": 56,
+        "level": "VERY_LOW",
+        "emoji": "🌙",
+        "title": "Sehr niedrig",
+        "description": "Ihre Emotionalintelligenz ist sehr niedrig. Sie haben Schwierigkeiten, Emotionen in sich selbst und anderen zu erkennen und zu verwalten.",
+        "recommendation": "Versuchen Sie, ein Emotionstagebuch zu führen oder Meditation zu praktizieren, um Ihre Gefühle häufiger zu beobachten. Das Trainieren von aktiven Hörkompetenz ist ebenfalls hilfreich."
+      },
+      {
+        "min": 57,
+        "max": 85,
+        "level": "LOW",
+        "emoji": "⭐",
+        "title": "Niedrig",
+        "description": "Ihre Emotionalintelligenz ist relativ niedrig. Es gibt viel Raum für Verbesserungen im emotionalen Bewusstsein und Verwalten.",
+        "recommendation": "Notieren Sie Ihre emotionalen Reaktionen und üben Sie, die Perspektiven anderer zu betrachten. Das Erlernen von Techniken zur Emotionsregulation kann vorteilhaft sein."
+      },
+      {
+        "min": 86,
+        "max": 114,
+        "level": "MEDIUM",
+        "emoji": "💫",
+        "title": "Durchschnittlich",
+        "description": "Ihre Emotionalintelligenz ist auf einem mittleren Niveau. Sie haben grundlegende Fähigkeiten in der Emotionserkennung und -verwaltung.",
+        "recommendation": "Bauen Sie auf Ihrem Fundament auf, indem Sie Ihr Verständnis Ihrer eigenen und fremden Emotionen vertiefen."
+      },
+      {
+        "min": 115,
+        "max": 142,
+        "level": "HIGH",
+        "emoji": "✨",
+        "title": "Hoch",
+        "description": "Ihre Emotionalintelligenz ist hoch. Sie verstehen Ihre Emotionen gut und bauen effektive Beziehungen mit anderen auf.",
+        "recommendation": "Behalten Sie Ihre Stärken bei und erwägen Sie, andere in emotionalem Bewusstsein und Regulation zu unterstützen."
+      },
+      {
+        "min": 143,
+        "max": 170,
+        "level": "VERY_HIGH",
+        "emoji": "💖",
+        "title": "Sehr hoch",
+        "description": "Ihre Emotionalintelligenz ist sehr hoch. Sie verstehen Emotionen in sich selbst und anderen tief und verwalten sie effektiv.",
+        "recommendation": "Nutzen Sie Ihre hohe Emotionalintelligenz, um anderen zu helfen, ihre emotionalen Fähigkeiten und ihr Bewusstsein zu entwickeln."
+      }
+    ]
+  }
+}
