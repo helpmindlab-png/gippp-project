@@ -1,0 +1,284 @@
+{
+  "meta": {
+    "id": "love-languages-plus",
+    "order": 3,
+    "version": "1.0",
+    "language": "pt",
+    "rtl": false,
+    "author": "GIPPP Research Team",
+    "lastUpdated": "2026-01-21",
+    "category": "Teste de Alto Impacto",
+    "itemCount": 25
+  },
+  "ui": {
+    "testName": "Qual é sua linguagem do amor?",
+    "description": "Descubra qual das 5 formas de expressão de amor é mais significativa para você",
+    "security": "🔒 Segurança: Seus dados não são armazenados",
+    "processing": "Analisando sua linguagem do amor...",
+    "reportTitle": "Seu Relatório de Linguagem do Amor",
+    "careerTitle": "💡 Guia de Seu Estilo de Amor",
+    "actions": {
+      "report": "Ver Relatório",
+      "viewAmazon": "Livros Recomendados",
+      "saveImg": "Salvar como Imagem",
+      "retest": "Repetir Teste",
+      "qrNote": "Compartilhar com Amigos por QR"
+    },
+    "viral": {
+      "title": "Qual é sua linguagem do amor?",
+      "subtitle": "Teste com seu parceiro e aprofunde sua conexão!"
+    },
+    "labels": [
+      "Discordo completamente",
+      "Discordo",
+      "Neutro",
+      "Concordo",
+      "Concordo completamente"
+    ],
+    "amazonKeywords": {
+      "WORDS": "palavras de afirmação, elogios, encorajamento, comunicação emocional",
+      "TIME": "tempo juntos, atenção, encontros",
+      "GIFTS": "presentes, presentes significativos, gratidão",
+      "SERVICE": "atos de serviço, ajuda, apoio",
+      "TOUCH": "toque físico, afeto, abraços"
+    }
+  },
+  "guide": {
+    "ipipId": "IPIP-LL-25",
+    "purpose": "Este teste ajuda você a entender sua maneira preferida de dar e receber amor e afeto. Esta é uma ferramenta de autoconhecimento, não uma avaliação diagnóstica.",
+    "instruction": "Leia cada uma das 25 afirmações e classifique em uma escala de 5 pontos o quanto você concorda com cada uma. Considere qual expressão de amor mais toca seu coração.",
+    "interpretation": "Palavras: Você se sente amado através de elogios e encorajamento | Tempo: Momentos significativos juntos são o mais importante | Presentes: Presentes significativos demonstram amor | Serviço: Ações falam mais alto que palavras | Toque: Intimidade física o faz se sentir amado",
+    "startBtn": "Começar Teste"
+  },
+  "traitNames": {
+    "WORDS": "Palavras de Afirmação",
+    "TIME": "Tempo Juntos",
+    "GIFTS": "Receber Presentes",
+    "SERVICE": "Atos de Serviço",
+    "TOUCH": "Toque Físico"
+  },
+  "descriptions": {
+    "WORDS": {
+      "emoji": "💬",
+      "name": "Palavras de Afirmação",
+      "detail": "Você se sente amado através de elogios, encorajamento e palavras gratas. Uma palavra gentil do seu parceiro ilumina seu dia.",
+      "tip": "💡 Expresse regularmente ao seu parceiro o que você aprecia especificamente nele."
+    },
+    "TIME": {
+      "emoji": "⏰",
+      "name": "Tempo Juntos",
+      "detail": "Momentos de qualidade com seu parceiro são seus mais preciosos. Conversas genuínas e experiências compartilhadas são o melhor.",
+      "tip": "💡 Crie momentos regulares onde você coloca seu telefone de lado e tem conversas profundas."
+    },
+    "GIFTS": {
+      "emoji": "🎁",
+      "name": "Receber Presentes",
+      "detail": "Você se sente amado através de presentes considerados. Não são apenas objetos, mas prova de quanto seu parceiro o ama.",
+      "tip": "💡 Presentes pequenos e significativos podem ser mais importantes que presentes caros."
+    },
+    "SERVICE": {
+      "emoji": "🤝",
+      "name": "Atos de Serviço",
+      "detail": "Você se sente amado através das ações do seu parceiro. Quando ajuda em tempos difíceis e se preocupa, você sente cuidado genuíno.",
+      "tip": "💡 Antecipe as necessidades do seu parceiro e ajude antes que seja pedido."
+    },
+    "TOUCH": {
+      "emoji": "🤗",
+      "name": "Toque Físico",
+      "detail": "Você se sente amado através de abraços, segurar as mãos e proximidade física. A intimidade física é sua âncora emocional.",
+      "tip": "💡 Não hesite em expressar sua necessidade de toque físico—é uma forma válida de conexão."
+    }
+  },
+  "items": [
+    {
+      "id": "LL1",
+      "text": "Me sinto bem quando meu parceiro me elogia.",
+      "trait": "WORDS",
+      "reverse": false
+    },
+    {
+      "id": "LL2",
+      "text": "Passar tempo de qualidade com meu parceiro me faz mais feliz.",
+      "trait": "TIME",
+      "reverse": false
+    },
+    {
+      "id": "LL3",
+      "text": "Presentes do meu parceiro são profundamente significativos para mim.",
+      "trait": "GIFTS",
+      "reverse": false
+    },
+    {
+      "id": "LL4",
+      "text": "Me sinto amado quando meu parceiro me ajuda em tempos difíceis.",
+      "trait": "SERVICE",
+      "reverse": false
+    },
+    {
+      "id": "LL5",
+      "text": "O afeto físico com meu parceiro me conforta.",
+      "trait": "TOUCH",
+      "reverse": false
+    },
+    {
+      "id": "LL6",
+      "text": "A gratidão do meu parceiro aquece meu coração.",
+      "trait": "WORDS",
+      "reverse": false
+    },
+    {
+      "id": "LL7",
+      "text": "Conversas significativas são o mais precioso para mim.",
+      "trait": "TIME",
+      "reverse": false
+    },
+    {
+      "id": "LL8",
+      "text": "Me encanta receber um presente significativo.",
+      "trait": "GIFTS",
+      "reverse": false
+    },
+    {
+      "id": "LL9",
+      "text": "Me sinto cuidado quando meu parceiro atende minhas necessidades.",
+      "trait": "SERVICE",
+      "reverse": false
+    },
+    {
+      "id": "LL10",
+      "text": "Abraços e segurar as mãos são muito importantes para mim.",
+      "trait": "TOUCH",
+      "reverse": false
+    },
+    {
+      "id": "LL11",
+      "text": "Sou mais feliz quando meu parceiro reconhece meus esforços.",
+      "trait": "WORDS",
+      "reverse": false
+    },
+    {
+      "id": "LL12",
+      "text": "Atividades compartilhadas com meu parceiro importam mais.",
+      "trait": "TIME",
+      "reverse": false
+    },
+    {
+      "id": "LL13",
+      "text": "Guardo com cuidado os presentes que meu parceiro me deu.",
+      "trait": "GIFTS",
+      "reverse": false
+    },
+    {
+      "id": "LL14",
+      "text": "Sou tocado quando meu parceiro se sacrifica por mim.",
+      "trait": "SERVICE",
+      "reverse": false
+    },
+    {
+      "id": "LL15",
+      "text": "Intimidade física é essencial para mim.",
+      "trait": "TOUCH",
+      "reverse": false
+    },
+    {
+      "id": "LL16",
+      "text": "O encorajamento do meu parceiro transforma meu dia.",
+      "trait": "WORDS",
+      "reverse": false
+    },
+    {
+      "id": "LL17",
+      "text": "Com meu parceiro, nada mais importa.",
+      "trait": "TIME",
+      "reverse": false
+    },
+    {
+      "id": "LL18",
+      "text": "Me deleito até com pequenos presentes significativos.",
+      "trait": "GIFTS",
+      "reverse": false
+    },
+    {
+      "id": "LL19",
+      "text": "Me sinto amado quando meu parceiro faz coisas por mim.",
+      "trait": "SERVICE",
+      "reverse": false
+    },
+    {
+      "id": "LL20",
+      "text": "Sem o toque do meu parceiro, sinto-me desconectado.",
+      "trait": "TOUCH",
+      "reverse": false
+    },
+    {
+      "id": "LL21",
+      "text": "Feedback positivo me ajuda a crescer.",
+      "trait": "WORDS",
+      "reverse": false
+    },
+    {
+      "id": "LL22",
+      "text": "Quero experimentar coisas novas com meu parceiro.",
+      "trait": "TIME",
+      "reverse": false
+    },
+    {
+      "id": "LL23",
+      "text": "O pensamento atrás de um presente importa mais que seu custo.",
+      "trait": "GIFTS",
+      "reverse": false
+    },
+    {
+      "id": "LL24",
+      "text": "Sou mais feliz quando meu parceiro alivia meu fardo.",
+      "trait": "SERVICE",
+      "reverse": false
+    },
+    {
+      "id": "LL25",
+      "text": "Sem o toque do meu parceiro, carece estabilidade emocional.",
+      "trait": "TOUCH",
+      "reverse": false
+    }
+  ],
+  "results": {
+    "ranges": [
+      {
+        "min": 25,
+        "max": 45,
+        "level": "Equilibrado",
+        "emoji": "⚖️",
+        "description": "Você valoriza igualmente as cinco linguagens do amor. Você é flexível e pode dar e receber amor de múltiplas formas.",
+        "recommendation": [
+          "Compartilhe suas linguagens de amor primárias com seu parceiro",
+          "Expressar amor de várias formas enriquece seu relacionamento",
+          "Aprecie que seu parceiro pode mostrar amor diferentemente"
+        ]
+      },
+      {
+        "min": 46,
+        "max": 65,
+        "level": "1-2 Linguagens Primárias",
+        "emoji": "🎯",
+        "description": "Você prefere 1-2 linguagens de amor específicas. Quando expressadas assim, você se sente mais profundamente amado.",
+        "recommendation": [
+          "Comunique claramente suas linguagens de amor primárias",
+          "Quando combinam, criam conexão profunda",
+          "Aprenda e respeite as linguagens de amor do seu parceiro também"
+        ]
+      },
+      {
+        "min": 66,
+        "max": 85,
+        "level": "1 Linguagem Preferência Forte",
+        "emoji": "💫",
+        "description": "Você tem forte preferência por uma linguagem de amor específica. Esta é sua conexão emocional mais poderosa.",
+        "recommendation": [
+          "Ajude seu parceiro a entender sua linguagem de amor primária",
+          "Comunicação clara previne mal-entendidos",
+          "Explore gradualmente o valor em outras linguagens de amor"
+        ]
+      }
+    ]
+  }
+}
