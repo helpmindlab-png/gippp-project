@@ -1,0 +1,288 @@
+{
+  "meta": {
+    "id": "emotional-intelligence",
+    "version": "1.0",
+    "language": "es",
+    "rtl": false,
+    "lastUpdated": "2026-01-22",
+    "itemCount": 28,
+    "traitCount": 4
+  },
+  "ui": {
+    "testName": "¿Cuál es tu nivel de inteligencia emocional?",
+    "description": "Una evaluación de 28 preguntas que mide conciencia emocional, autorregulación, empatía y habilidades de relación",
+    "security": "Tus respuestas no se guardan.",
+    "processing": "Analizando tu perfil de inteligencia emocional...",
+    "reportTitle": "Tu Perfil de Inteligencia Emocional",
+    "actions": {
+      "restart": "Reintentar",
+      "share": "Compartir",
+      "save": "Guardar"
+    },
+    "labels": ["Muy en desacuerdo", "En desacuerdo", "Neutral", "De acuerdo", "Muy de acuerdo"]
+  },
+  "guide": {
+    "ipipId": "IPIP-EI-28 (Evaluación de Inteligencia Emocional, basado en el Modelo Mayer-Salovey-Caruso)",
+    "purpose": "Esta evaluación te ayuda a entender tu nivel de inteligencia emocional. Es solo para autoconocimiento y no es una herramienta de diagnóstico.",
+    "instruction": "Basándote en las últimas 2-4 semanas, responde honestamente qué tanto aplica cada afirmación a ti.",
+    "interpretation": "Puntuaciones más altas indican mayor inteligencia emocional, mientras que puntuaciones más bajas indican menor inteligencia emocional.",
+    "startBtn": "Comenzar Evaluación"
+  },
+  "traitNames": {
+    "SA": "Autoconciencia",
+    "SR": "Autorregulación",
+    "EM": "Empatía",
+    "RM": "Gestión de Relaciones"
+  },
+  "descriptions": {
+    "SA": {
+      "emoji": "🔍",
+      "name": "Autoconciencia",
+      "detail": "Tu habilidad para reconocer y entender tus propias emociones. Identificas con precisión tu estado emocional y entiendes cómo afecta tu comportamiento.",
+      "tip": "Observa regularmente tus emociones e intenta encontrar patrones en qué situaciones desencadenan ciertos sentimientos."
+    },
+    "SR": {
+      "emoji": "⚖️",
+      "name": "Autorregulación",
+      "detail": "Tu habilidad para manejar y controlar tus emociones de forma saludable. No te abrumarán las emociones negativas y respondes de manera equilibrada.",
+      "tip": "Cuando las emociones aumentan, haz una pausa, respira profundamente o redirige tu enfoque a otra actividad."
+    },
+    "EM": {
+      "emoji": "❤️",
+      "name": "Empatía",
+      "detail": "Tu habilidad para entender las emociones y perspectivas de otros. Puedes pensar desde su punto de vista y reconocer sus sentimientos.",
+      "tip": "Durante las conversaciones, presta atención a las expresiones faciales, el tono de voz y el lenguaje corporal."
+    },
+    "RM": {
+      "emoji": "🤝",
+      "name": "Gestión de Relaciones",
+      "detail": "Tu habilidad para gestionar relaciones de forma efectiva. Utilizas habilidades emocionales para crear interacciones positivas con otros.",
+      "tip": "En conflictos, intenta reconocer tanto las emociones del otro como las tuyas en tu comunicación."
+    }
+  },
+  "items": [
+    {
+      "id": "SA_001",
+      "text": "Entiendo claramente en qué estado emocional me encuentro ahora.",
+      "trait": "SA",
+      "reverse": false
+    },
+    {
+      "id": "SA_002",
+      "text": "Puedo identificar las causas de mis emociones.",
+      "trait": "SA",
+      "reverse": false
+    },
+    {
+      "id": "SA_003",
+      "text": "Entiendo cómo mis emociones afectan mi comportamiento.",
+      "trait": "SA",
+      "reverse": false
+    },
+    {
+      "id": "SA_004",
+      "text": "Sé qué situaciones me causan estrés.",
+      "trait": "SA",
+      "reverse": false
+    },
+    {
+      "id": "SA_005",
+      "text": "No noto cambios en mi estado emocional.",
+      "trait": "SA",
+      "reverse": true
+    },
+    {
+      "id": "SA_006",
+      "text": "Entiendo mis fortalezas y debilidades desde una perspectiva emocional.",
+      "trait": "SA",
+      "reverse": false
+    },
+    {
+      "id": "SA_007",
+      "text": "Rara vez reflexiono sobre mis emociones.",
+      "trait": "SA",
+      "reverse": true
+    },
+    {
+      "id": "SR_001",
+      "text": "Puedo mantener la calma incluso cuando estoy enojado.",
+      "trait": "SR",
+      "reverse": false
+    },
+    {
+      "id": "SR_002",
+      "text": "Me recupero rápidamente de emociones negativas.",
+      "trait": "SR",
+      "reverse": false
+    },
+    {
+      "id": "SR_003",
+      "text": "No actúo impulsivamente cuando mis emociones son intensas.",
+      "trait": "SR",
+      "reverse": false
+    },
+    {
+      "id": "SR_004",
+      "text": "Puedo manejar el estrés de forma saludable.",
+      "trait": "SR",
+      "reverse": false
+    },
+    {
+      "id": "SR_005",
+      "text": "Me resulta difícil controlarme cuando estoy emocionalmente abrumado.",
+      "trait": "SR",
+      "reverse": true
+    },
+    {
+      "id": "SR_006",
+      "text": "Cuando cometo errores, aprendo de ellos en lugar de culparme.",
+      "trait": "SR",
+      "reverse": false
+    },
+    {
+      "id": "SR_007",
+      "text": "Intento mantener una actitud positiva incluso en situaciones difíciles.",
+      "trait": "SR",
+      "reverse": false
+    },
+    {
+      "id": "EM_001",
+      "text": "Puedo detectar cambios en las emociones de otros.",
+      "trait": "EM",
+      "reverse": false
+    },
+    {
+      "id": "EM_002",
+      "text": "Puedo entender los sentimientos de alguien sin que lo diga.",
+      "trait": "EM",
+      "reverse": false
+    },
+    {
+      "id": "EM_003",
+      "text": "Intento ver las cosas desde la perspectiva de otros.",
+      "trait": "EM",
+      "reverse": false
+    },
+    {
+      "id": "EM_004",
+      "text": "Tiendo a ignorar las emociones de otros.",
+      "trait": "EM",
+      "reverse": true
+    },
+    {
+      "id": "EM_005",
+      "text": "Puedo consolar a otros cuando están tristes o sufriendo.",
+      "trait": "EM",
+      "reverse": false
+    },
+    {
+      "id": "EM_006",
+      "text": "Me resulta difícil empatizar con el dolor de otros.",
+      "trait": "EM",
+      "reverse": true
+    },
+    {
+      "id": "EM_007",
+      "text": "Intento entender diferentes puntos de vista.",
+      "trait": "EM",
+      "reverse": false
+    },
+    {
+      "id": "RM_001",
+      "text": "Manejo los conflictos de manera calmada y constructiva.",
+      "trait": "RM",
+      "reverse": false
+    },
+    {
+      "id": "RM_002",
+      "text": "Trabajo por construir confianza en mis relaciones.",
+      "trait": "RM",
+      "reverse": false
+    },
+    {
+      "id": "RM_003",
+      "text": "Me comunico efectivamente y escucho bien.",
+      "trait": "RM",
+      "reverse": false
+    },
+    {
+      "id": "RM_004",
+      "text": "Puedo motivar a otras personas.",
+      "trait": "RM",
+      "reverse": false
+    },
+    {
+      "id": "RM_005",
+      "text": "Respeto a otros cuando tenemos opiniones diferentes.",
+      "trait": "RM",
+      "reverse": false
+    },
+    {
+      "id": "RM_006",
+      "text": "Frecuentemente experimento conflicto en mis relaciones.",
+      "trait": "RM",
+      "reverse": true
+    },
+    {
+      "id": "RM_007",
+      "text": "Entiendo las necesidades de otros y ajusto mi comportamiento en consecuencia.",
+      "trait": "RM",
+      "reverse": false
+    },
+    {
+      "id": "RM_008",
+      "text": "Contribuyo a crear una atmósfera positiva en los grupos.",
+      "trait": "RM",
+      "reverse": false
+    }
+  ],
+  "results": {
+    "ranges": [
+      {
+        "min": 28,
+        "max": 56,
+        "level": "VERY_LOW",
+        "emoji": "🌙",
+        "title": "Muy Bajo",
+        "description": "Tu inteligencia emocional es muy baja. Tienes dificultades para reconocer y manejar emociones en ti mismo y en otros.",
+        "recommendation": "Intenta llevar un diario emocional o practicar meditación para observar tus sentimientos más frecuentemente. Trabajar en habilidades de escucha activa también ayuda."
+      },
+      {
+        "min": 57,
+        "max": 85,
+        "level": "LOW",
+        "emoji": "⭐",
+        "title": "Bajo",
+        "description": "Tu inteligencia emocional es relativamente baja. Hay mucho espacio para mejorar en la conciencia y el manejo emocional.",
+        "recommendation": "Registra tus reacciones emocionales y practica ver las perspectivas de otros. Aprender técnicas de regulación emocional puede ser beneficioso."
+      },
+      {
+        "min": 86,
+        "max": 114,
+        "level": "MEDIUM",
+        "emoji": "💫",
+        "title": "Moderado",
+        "description": "Tu inteligencia emocional está en un nivel moderado. Tienes habilidades básicas en el reconocimiento y manejo de emociones.",
+        "recommendation": "Continúa construyendo sobre tu base profundizando tu comprensión de tus emociones y las de otros."
+      },
+      {
+        "min": 115,
+        "max": 142,
+        "level": "HIGH",
+        "emoji": "✨",
+        "title": "Alto",
+        "description": "Tu inteligencia emocional es alta. Entiendes bien tus emociones y construyes relaciones efectivas con otros.",
+        "recommendation": "Mantén tus fortalezas y considera mentorear a otros en la conciencia y regulación emocional."
+      },
+      {
+        "min": 143,
+        "max": 170,
+        "level": "VERY_HIGH",
+        "emoji": "💖",
+        "title": "Muy Alto",
+        "description": "Tu inteligencia emocional es muy alta. Comprendes profundamente las emociones en ti mismo y en otros y las manejas efectivamente.",
+        "recommendation": "Utiliza tu alta inteligencia emocional para ayudar a otros a desarrollar sus habilidades y conciencia emocional."
+      }
+    ]
+  }
+}
