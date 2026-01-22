@@ -1,0 +1,287 @@
+{
+  "meta": {
+    "id": "relationship-greenflag-redflag",
+    "order": 4,
+    "version": "1.0",
+    "language": "zh",
+    "rtl": false,
+    "author": "GIPPP Research Team",
+    "lastUpdated": "2026-01-21",
+    "category": "超人气测试",
+    "itemCount": 25
+  },
+  "ui": {
+    "testName": "你的关系健康吗？",
+    "description": "发现你的关系中的积极和消极信号",
+    "security": "🔒 安全保障：数据不被保存",
+    "processing": "正在分析你的关系信号...",
+    "reportTitle": "你的关系健康报告",
+    "careerTitle": "💡 关系评估",
+    "actions": {
+      "report": "查看报告",
+      "viewAmazon": "推荐书籍",
+      "saveImg": "保存为图像",
+      "retest": "重新测试",
+      "qrNote": "通过二维码与朋友分享"
+    },
+    "viral": {
+      "title": "你的关系有多健康？",
+      "subtitle": "一起检查积极和消极信号！"
+    },
+    "labels": [
+      "完全不同意",
+      "不同意",
+      "中立",
+      "同意",
+      "非常同意"
+    ],
+    "amazonKeywords": {
+      "GREENFLAG": "健康的关系，积极信号，关系改善",
+      "REDFLAG": "关系警告信号，有害关系，关系问题",
+      "COMMUNICATION": "沟通，对话，开放心态",
+      "RESPECT": "尊重，边界，信任",
+      "GROWTH": "成长，发展，变化"
+    }
+  },
+  "guide": {
+    "ipipId": "IPIP-GF-25",
+    "purpose": "这个测试帮助你识别关系中健康和令人担忧的模式。这是一个自我认识工具，而不是专业咨询。",
+    "instruction": "阅读以下25个陈述，并根据你当前或过去的关系经验在5点量表上评分。诚实最有帮助。",
+    "interpretation": "高分：你的关系显示健康迹象 | 中等分：你的关系有积极和消极模式 | 低分：你的关系显示令人担忧的警告信号",
+    "startBtn": "开始测试"
+  },
+  "traitNames": {
+    "GREENFLAG": "绿色信号",
+    "REDFLAG": "红色信号",
+    "COMMUNICATION": "沟通",
+    "RESPECT": "尊重与信任",
+    "GROWTH": "相互成长"
+  },
+  "descriptions": {
+    "GREENFLAG": {
+      "emoji": "🟢",
+      "name": "绿色信号",
+      "detail": "你的伴侣尊重你，诚实，并倾听你的意见。你们一起构建未来并作为个体成长。",
+      "tip": "💡 珍视这些信号并继续培养它们。"
+    },
+    "REDFLAG": {
+      "emoji": "🚩",
+      "name": "红色信号",
+      "detail": "你的伴侣操纵你，说谎，或忽视你的感受。这段关系可能是片面的或反复伤害你。",
+      "tip": "💡 如果你看到许多这样的信号，强烈建议寻求专业支持。"
+    },
+    "COMMUNICATION": {
+      "emoji": "💬",
+      "name": "沟通",
+      "detail": "你和伴侣是否能冷静地讨论困难话题。开放沟通是健康关系的基础。",
+      "tip": "💡 定期真诚的对话能加深相互理解。"
+    },
+    "RESPECT": {
+      "emoji": "🤝",
+      "name": "尊重与信任",
+      "detail": "伴侣是否尊重你的边界，尊重你的朋友/家人，并重视你的个人空间和自主权。",
+      "tip": "💡 尊重是关系中最基本的要素。"
+    },
+    "GROWTH": {
+      "emoji": "🌱",
+      "name": "相互成长",
+      "detail": "你和伴侣是否能一起成长并相互支持彼此的梦想和目标。",
+      "tip": "💡 一起成长的关系会随着时间深化。"
+    }
+  },
+  "items": [
+    {
+      "id": "GF1",
+      "text": "伴侣真诚地倾听我的意见。",
+      "trait": "COMMUNICATION",
+      "reverse": false
+    },
+    {
+      "id": "GF2",
+      "text": "伴侣尊重我的边界和决定。",
+      "trait": "RESPECT",
+      "reverse": false
+    },
+    {
+      "id": "GF3",
+      "text": "我可以与伴侣诚实讨论任何话题。",
+      "trait": "COMMUNICATION",
+      "reverse": false
+    },
+    {
+      "id": "GF4",
+      "text": "伴侣尊重我的朋友和家人。",
+      "trait": "RESPECT",
+      "reverse": false
+    },
+    {
+      "id": "GF5",
+      "text": "我们一起为未来计划并分享梦想。",
+      "trait": "GROWTH",
+      "reverse": false
+    },
+    {
+      "id": "GF6",
+      "text": "伴侣尊重我的个人空间和独立性。",
+      "trait": "RESPECT",
+      "reverse": false
+    },
+    {
+      "id": "GF7",
+      "text": "与伴侣在一起时，我感到自信和被支持。",
+      "trait": "GROWTH",
+      "reverse": false
+    },
+    {
+      "id": "GF8",
+      "text": "伴侣接受错误并一起解决问题。",
+      "trait": "COMMUNICATION",
+      "reverse": false
+    },
+    {
+      "id": "GF9",
+      "text": "伴侣鼓励和支持我的目标。",
+      "trait": "GROWTH",
+      "reverse": false
+    },
+    {
+      "id": "GF10",
+      "text": "我完全信任伴侣。",
+      "trait": "RESPECT",
+      "reverse": false
+    },
+    {
+      "id": "RF1",
+      "text": "伴侣忽视或贬低我的感受。",
+      "trait": "REDFLAG",
+      "reverse": false
+    },
+    {
+      "id": "RF2",
+      "text": "伴侣经常对我撒谎。",
+      "trait": "REDFLAG",
+      "reverse": false
+    },
+    {
+      "id": "RF3",
+      "text": "伴侣试图控制我的行为。",
+      "trait": "REDFLAG",
+      "reverse": false
+    },
+    {
+      "id": "RF4",
+      "text": "伴侣生气时言语辱骂。",
+      "trait": "REDFLAG",
+      "reverse": false
+    },
+    {
+      "id": "RF5",
+      "text": "我们的关系是片面的。",
+      "trait": "REDFLAG",
+      "reverse": false
+    },
+    {
+      "id": "RF6",
+      "text": "伴侣负面评价我的朋友或家人。",
+      "trait": "REDFLAG",
+      "reverse": false
+    },
+    {
+      "id": "RF7",
+      "text": "伴侣拒绝承认自己的错误。",
+      "trait": "REDFLAG",
+      "reverse": false
+    },
+    {
+      "id": "RF8",
+      "text": "与伴侣在一起时我感到焦虑或不安全。",
+      "trait": "REDFLAG",
+      "reverse": false
+    },
+    {
+      "id": "RF9",
+      "text": "伴侣限制我的个人时间和独立性。",
+      "trait": "REDFLAG",
+      "reverse": false
+    },
+    {
+      "id": "RF10",
+      "text": "伴侣阻止我的个人成长。",
+      "trait": "REDFLAG",
+      "reverse": false
+    },
+    {
+      "id": "GF11",
+      "text": "即使在困难时刻我们也能找到解决方案。",
+      "trait": "COMMUNICATION",
+      "reverse": false
+    },
+    {
+      "id": "GF12",
+      "text": "伴侣接受原本的我。",
+      "trait": "RESPECT",
+      "reverse": false
+    },
+    {
+      "id": "GF13",
+      "text": "我们的关系培养相互成长。",
+      "trait": "GROWTH",
+      "reverse": false
+    },
+    {
+      "id": "GF14",
+      "text": "我们一起笑并享受时光。",
+      "trait": "COMMUNICATION",
+      "reverse": false
+    },
+    {
+      "id": "GF15",
+      "text": "我对我们的未来感到乐观。",
+      "trait": "GROWTH",
+      "reverse": false
+    }
+  ],
+  "results": {
+    "ranges": [
+      {
+        "min": 25,
+        "max": 50,
+        "level": "警告信号多",
+        "emoji": "🚩",
+        "description": "你的关系显示许多令人担忧的模式。这段关系可能对你有害。",
+        "recommendation": [
+          "与信任的朋友或家人讨论你的情况",
+          "强烈建议寻求专业咨询",
+          "优先考虑你的安全和幸福",
+          "考虑是否需要离开这段关系"
+        ]
+      },
+      {
+        "min": 51,
+        "max": 75,
+        "level": "混合信号",
+        "emoji": "⚠️",
+        "description": "你的关系既有积极也有消极的模式。有需要改进的地方，但也有希望的迹象。",
+        "recommendation": [
+          "与伴侣进行关系的坦诚对话",
+          "讨论需要改进的具体领域",
+          "必要时考虑进行伴侣咨询",
+          "一起创造积极的改变"
+        ]
+      },
+      {
+        "min": 76,
+        "max": 100,
+        "level": "健康关系",
+        "emoji": "🟢",
+        "description": "你的关系显示许多健康迹象。尊重、信任和相互成长都在进行中。",
+        "recommendation": [
+          "保持你建立的积极关系模式",
+          "继续发展沟通和理解",
+          "继续一起建设未来",
+          "改进的小努力总是有价值的"
+        ]
+      }
+    ]
+  }
+}
