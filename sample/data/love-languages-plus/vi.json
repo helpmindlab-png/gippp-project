@@ -1,0 +1,284 @@
+{
+  "meta": {
+    "id": "love-languages-plus",
+    "order": 3,
+    "version": "1.0",
+    "language": "vi",
+    "rtl": false,
+    "author": "GIPPP Research Team",
+    "lastUpdated": "2026-01-21",
+    "category": "Bài kiểm tra có tính lan rộng cao",
+    "itemCount": 25
+  },
+  "ui": {
+    "testName": "Ngôn ngữ yêu thương của bạn là gì?",
+    "description": "Khám phá trong 5 cách thể hiện yêu thương, cách nào ý nghĩa nhất với bạn",
+    "security": "🔒 Bảo mật: Dữ liệu của bạn không được lưu trữ",
+    "processing": "Đang phân tích ngôn ngữ yêu thương của bạn...",
+    "reportTitle": "Báo cáo Ngôn ngữ Yêu thương của Bạn",
+    "careerTitle": "💡 Hướng dẫn Phong cách Yêu thương của Bạn",
+    "actions": {
+      "report": "Xem báo cáo",
+      "viewAmazon": "Sách được đề xuất",
+      "saveImg": "Lưu dưới dạng hình ảnh",
+      "retest": "Làm lại bài kiểm tra",
+      "qrNote": "Chia sẻ với bạn bè qua QR"
+    },
+    "viral": {
+      "title": "Ngôn ngữ yêu thương của bạn là gì?",
+      "subtitle": "Hãy thử với bạn tình của bạn và sâu sắc hơn nữa!"
+    },
+    "labels": [
+      "Hoàn toàn không đồng ý",
+      "Không đồng ý",
+      "Trung lập",
+      "Đồng ý",
+      "Hoàn toàn đồng ý"
+    ],
+    "amazonKeywords": {
+      "WORDS": "lời khen ngợi, khen tặng, khuyến khích, giao tiếp cảm xúc",
+      "TIME": "thời gian bên nhau, chú ý, cuộc hẹn",
+      "GIFTS": "quà tặng, quà tặng có ý nghĩa, lòng biết ơn",
+      "SERVICE": "những hành động tử tế, giúp đỡ, hỗ trợ",
+      "TOUCH": "tiếp xúc vật lý, bộ lộ tình cảm, ôm"
+    }
+  },
+  "guide": {
+    "ipipId": "IPIP-LL-25",
+    "purpose": "Bài kiểm tra này giúp bạn hiểu cách ưu tiên của bạn để cho và nhận yêu thương và tình cảm. Đây là một công cụ tự hiểu biết chứ không phải đánh giá chẩn đoán.",
+    "instruction": "Hãy đọc mỗi câu trong 25 câu dưới đây và xếp hạng trên thang điểm 5 mức độ bạn đồng ý với mỗi câu. Hãy xem xét cách bộc lộ yêu thương nào chạm vào trái tim bạn nhất.",
+    "interpretation": "Lời nói: Bạn cảm thấy được yêu thương qua lời khen ngợi và khuyến khích | Thời gian: Những khoảnh khắc ý nghĩa bên nhau là quan trọng nhất | Quà tặng: Những món quà có ý nghĩa biểu tượng tình yêu | Hành động: Hành động nói lớn hơn lời nói | Chạm: Sự thân mật thể chất giúp bạn cảm thấy được yêu thương",
+    "startBtn": "Bắt đầu bài kiểm tra"
+  },
+  "traitNames": {
+    "WORDS": "Lời khen ngợi",
+    "TIME": "Thời gian Bên Nhau",
+    "GIFTS": "Nhận Quà Tặng",
+    "SERVICE": "Những Hành động Tử tế",
+    "TOUCH": "Tiếp xúc Vật lý"
+  },
+  "descriptions": {
+    "WORDS": {
+      "emoji": "💬",
+      "name": "Lời khen ngợi",
+      "detail": "Bạn cảm thấy được yêu thương qua lời khen ngợi, khuyến khích và lời tạ ơn. Một lời tốt của bạn tình làm sáng suốt cả ngày của bạn.",
+      "tip": "💡 Thường xuyên bộc lộ điều bạn trân trọng cụ thể ở bạn tình của bạn."
+    },
+    "TIME": {
+      "emoji": "⏰",
+      "name": "Thời gian Bên Nhau",
+      "detail": "Những khoảnh khắc chất lượng với bạn tình là điều quý giá nhất của bạn. Những cuộc trò chuyện thực tế và trải nghiệm chia sẻ là tốt nhất.",
+      "tip": "💡 Tạo những khoảnh khắc thường xuyên nơi bạn để điện thoại sang một bên và có những cuộc trò chuyện sâu sắc."
+    },
+    "GIFTS": {
+      "emoji": "🎁",
+      "name": "Quà Tặng",
+      "detail": "Bạn cảm thấy được yêu thương qua những món quà có ý nghĩa. Chúng không chỉ là những vật phẩm mà là bằng chứng bạn tình yêu bạn bao nhiêu.",
+      "tip": "💡 Những món quà nhỏ và ý nghĩa có thể quan trọng hơn những món quà mắc tiền."
+    },
+    "SERVICE": {
+      "emoji": "🤝",
+      "name": "Những Hành động Tử tế",
+      "detail": "Bạn cảm thấy được yêu thương qua hành động của bạn tình. Khi giúp đỡ trong những lúc khó khăn, bạn cảm thấy được chăm sóc thực tế.",
+      "tip": "💡 Dự đoán nhu cầu của bạn tình và giúp đỡ trước khi được yêu cầu."
+    },
+    "TOUCH": {
+      "emoji": "🤗",
+      "name": "Tiếp xúc Vật lý",
+      "detail": "Bạn cảm thấy được yêu thương qua những cái ôm, giữ tay và sự gần gũi về thể chất. Sự thân mật vật lý là cách buộc cảm xúc của bạn.",
+      "tip": "💡 Đừng ngại bộc lộ nhu cầu tiếp xúc vật lý của bạn—đó là một cách hợp lệ để kết nối."
+    }
+  },
+  "items": [
+    {
+      "id": "LL1",
+      "text": "Tôi cảm thấy tốt khi bạn tình khen tôi.",
+      "trait": "WORDS",
+      "reverse": false
+    },
+    {
+      "id": "LL2",
+      "text": "Dành thời gian chất lượng với bạn tình giúp tôi hạnh phúc nhất.",
+      "trait": "TIME",
+      "reverse": false
+    },
+    {
+      "id": "LL3",
+      "text": "Những món quà từ bạn tình rất ý nghĩa với tôi.",
+      "trait": "GIFTS",
+      "reverse": false
+    },
+    {
+      "id": "LL4",
+      "text": "Tôi cảm thấy được yêu thương khi bạn tình giúp tôi trong những lúc khó khăn.",
+      "trait": "SERVICE",
+      "reverse": false
+    },
+    {
+      "id": "LL5",
+      "text": "Sự yêu chiều vật lý với bạn tình làm tôi cảm thấy thoải mái.",
+      "trait": "TOUCH",
+      "reverse": false
+    },
+    {
+      "id": "LL6",
+      "text": "Lòng biết ơn của bạn tình ấm lòng tôi.",
+      "trait": "WORDS",
+      "reverse": false
+    },
+    {
+      "id": "LL7",
+      "text": "Những cuộc trò chuyện ý nghĩa là quý báu nhất với tôi.",
+      "trait": "TIME",
+      "reverse": false
+    },
+    {
+      "id": "LL8",
+      "text": "Tôi rất vui khi nhận được một món quà có ý nghĩa.",
+      "trait": "GIFTS",
+      "reverse": false
+    },
+    {
+      "id": "LL9",
+      "text": "Tôi cảm thấy được chăm sóc khi bạn tình đáp ứng nhu cầu của tôi.",
+      "trait": "SERVICE",
+      "reverse": false
+    },
+    {
+      "id": "LL10",
+      "text": "Những cái ôm và giữ tay rất quan trọng với tôi.",
+      "trait": "TOUCH",
+      "reverse": false
+    },
+    {
+      "id": "LL11",
+      "text": "Tôi hạnh phúc nhất khi bạn tình công nhận nỗ lực của tôi.",
+      "trait": "WORDS",
+      "reverse": false
+    },
+    {
+      "id": "LL12",
+      "text": "Các hoạt động chia sẻ với bạn tình quan trọng nhất.",
+      "trait": "TIME",
+      "reverse": false
+    },
+    {
+      "id": "LL13",
+      "text": "Tôi trân trọng những món quà bạn tình đã tặng cho tôi.",
+      "trait": "GIFTS",
+      "reverse": false
+    },
+    {
+      "id": "LL14",
+      "text": "Tôi xúc động khi bạn tình hy sinh cho tôi.",
+      "trait": "SERVICE",
+      "reverse": false
+    },
+    {
+      "id": "LL15",
+      "text": "Sự thân mật vật lý rất cần thiết với tôi.",
+      "trait": "TOUCH",
+      "reverse": false
+    },
+    {
+      "id": "LL16",
+      "text": "Sự khuyến khích của bạn tình biến đổi ngày của tôi.",
+      "trait": "WORDS",
+      "reverse": false
+    },
+    {
+      "id": "LL17",
+      "text": "Với bạn tình, không có gì khác quan trọng.",
+      "trait": "TIME",
+      "reverse": false
+    },
+    {
+      "id": "LL18",
+      "text": "Tôi vui với những món quà nhỏ và ý nghĩa.",
+      "trait": "GIFTS",
+      "reverse": false
+    },
+    {
+      "id": "LL19",
+      "text": "Tôi cảm thấy được yêu thương khi bạn tình làm việc gì cho tôi.",
+      "trait": "SERVICE",
+      "reverse": false
+    },
+    {
+      "id": "LL20",
+      "text": "Không có sự chạm của bạn tình, tôi cảm thấy bị cách ly.",
+      "trait": "TOUCH",
+      "reverse": false
+    },
+    {
+      "id": "LL21",
+      "text": "Phản hồi tích cực giúp tôi phát triển.",
+      "trait": "WORDS",
+      "reverse": false
+    },
+    {
+      "id": "LL22",
+      "text": "Tôi muốn trải nghiệm những điều mới với bạn tình.",
+      "trait": "TIME",
+      "reverse": false
+    },
+    {
+      "id": "LL23",
+      "text": "Ý định đằng sau một món quà quan trọng hơn giá tiền của nó.",
+      "trait": "GIFTS",
+      "reverse": false
+    },
+    {
+      "id": "LL24",
+      "text": "Tôi hạnh phúc nhất khi bạn tình giảm nhẹ gánh nặng của tôi.",
+      "trait": "SERVICE",
+      "reverse": false
+    },
+    {
+      "id": "LL25",
+      "text": "Không có sự chạm của bạn tình, tôi thiếu sự ổn định cảm xúc.",
+      "trait": "TOUCH",
+      "reverse": false
+    }
+  ],
+  "results": {
+    "ranges": [
+      {
+        "min": 25,
+        "max": 45,
+        "level": "Cân bằng",
+        "emoji": "⚖️",
+        "description": "Bạn đánh giá ngang nhau cả năm ngôn ngữ yêu thương. Bạn linh hoạt và có thể cho và nhận yêu thương theo nhiều cách.",
+        "recommendation": [
+          "Chia sẻ ngôn ngữ yêu thương chính của bạn với bạn tình",
+          "Biểu hiện yêu thương theo nhiều cách làm phong phú mối quan hệ",
+          "Đánh giá cao rằng bạn tình có thể thể hiện yêu thương khác biệt"
+        ]
+      },
+      {
+        "min": 46,
+        "max": 65,
+        "level": "1-2 Ngôn ngữ Chính",
+        "emoji": "🎯",
+        "description": "Bạn thích 1-2 ngôn ngữ yêu thương cụ thể. Khi thể hiện theo cách này, bạn cảm thấy được yêu thương sâu sắc.",
+        "recommendation": [
+          "Thông báo rõ ràng ngôn ngữ yêu thương chính của bạn",
+          "Khi chúng trùng khớp, sẽ tạo ra kết nối sâu sắc",
+          "Học và tôn trọng ngôn ngữ yêu thương của bạn tình"
+        ]
+      },
+      {
+        "min": 66,
+        "max": 85,
+        "level": "1 Ngôn ngữ Ưa thích Mạnh",
+        "emoji": "💫",
+        "description": "Bạn có ưa thích mạnh đối với một ngôn ngữ yêu thương cụ thể. Đây là cách kết nối cảm xúc mạnh nhất của bạn.",
+        "recommendation": [
+          "Giúp bạn tình hiểu ngôn ngữ yêu thương chính của bạn",
+          "Giao tiếp rõ ràng ngăn chặn sự hiểu lầm",
+          "Khám phá dần giá trị của những ngôn ngữ yêu thương khác"
+        ]
+      }
+    ]
+  }
+}
