@@ -1,0 +1,284 @@
+{
+  "meta": {
+    "id": "love-languages-plus",
+    "order": 3,
+    "version": "1.0",
+    "language": "zh",
+    "rtl": false,
+    "author": "GIPPP Research Team",
+    "lastUpdated": "2026-01-21",
+    "category": "超人气测试",
+    "itemCount": 25
+  },
+  "ui": {
+    "testName": "你的爱的语言是什么？",
+    "description": "发现5种爱的表达方式中，你最珍视的是哪一种",
+    "security": "🔒 安全保障：数据不被保存",
+    "processing": "正在分析你的爱的语言...",
+    "reportTitle": "我的爱的语言报告",
+    "careerTitle": "💡 你的爱的风格指南",
+    "actions": {
+      "report": "查看报告",
+      "viewAmazon": "推荐书籍",
+      "saveImg": "保存为图像",
+      "retest": "重新测试",
+      "qrNote": "通过二维码与朋友分享"
+    },
+    "viral": {
+      "title": "你的爱的语言是什么？",
+      "subtitle": "和伴侣一起试试。你们的关系会更深！"
+    },
+    "labels": [
+      "完全不同意",
+      "不同意",
+      "中立",
+      "同意",
+      "非常同意"
+    ],
+    "amazonKeywords": {
+      "WORDS": "言语表达，赞美，鼓励，情感沟通",
+      "TIME": "陪伴时间，关注，约会",
+      "GIFTS": "礼物，惊喜礼物，感谢",
+      "SERVICE": "行动表示，服务，帮助",
+      "TOUCH": "身体接触，亲情表示，拥抱"
+    }
+  },
+  "guide": {
+    "ipipId": "IPIP-LL-25",
+    "purpose": "这个测试帮助你理解你偏好给予和接收爱和感情的方式。这是一个自我理解工具，不是诊断评估。",
+    "instruction": "阅读以下25个陈述，并在5点量表上表示每个陈述与你的匹配程度。思考在关系中最能打动你心的爱情表达方式。",
+    "interpretation": "言语表达：你通过赞美和鼓励感到被爱 | 陪伴时间：伴侣的陪伴对你最重要 | 礼物：物质表达是爱的证明 | 行动服务：行动表达爱最有意义 | 身体接触：你通过身体亲密感受到爱",
+    "startBtn": "开始测试"
+  },
+  "traitNames": {
+    "WORDS": "言语表达（Words of Affirmation）",
+    "TIME": "陪伴时间（Quality Time）",
+    "GIFTS": "礼物（Receiving Gifts）",
+    "SERVICE": "行动服务（Acts of Service）",
+    "TOUCH": "身体接触（Physical Touch）"
+  },
+  "descriptions": {
+    "WORDS": {
+      "emoji": "💬",
+      "name": "言语表达",
+      "detail": "你通过赞美、鼓励和感谢的话语感受到爱。伴侣的一句话能让你的整个一天变得光彩。",
+      "tip": "💡 经常向伴侣明确表达你的想法和感谢。"
+    },
+    "TIME": {
+      "emoji": "⏰",
+      "name": "陪伴时间",
+      "detail": "与伴侣共度的高质量时光对你最珍贵。真诚的对话和共享的经历充满你的爱的能量。",
+      "tip": "💡 定期创造放下手机与伴侣深入交流的时光。"
+    },
+    "GIFTS": {
+      "emoji": "🎁",
+      "name": "礼物",
+      "detail": "你通过用心的礼物感到被爱。礼物不仅是物品，而是伴侣有多重视你的证明。",
+      "tip": "💡 小而贴心的礼物比昂贵的礼物更有意义。"
+    },
+    "SERVICE": {
+      "emoji": "🤝",
+      "name": "行动服务",
+      "detail": "你通过伴侣的实际行动感受到爱。在困难时伸出援手，在疲惫时体贴照顾，这些实际行动最能打动你。",
+      "tip": "💡 主动察觉伴侣的需求，在他们开口前就主动帮助。"
+    },
+    "TOUCH": {
+      "emoji": "🤗",
+      "name": "身体接触",
+      "detail": "你通过拥抱、牵手和亲密接触感受到爱。身体接触是你情感稳定的源泉。",
+      "tip": "💡 不要羞于表达你对身体接触的渴望——这是有效的爱的方式。"
+    }
+  },
+  "items": [
+    {
+      "id": "LL1",
+      "text": "伴侣表扬我时，我感到高兴。",
+      "trait": "WORDS",
+      "reverse": false
+    },
+    {
+      "id": "LL2",
+      "text": "与伴侣共度时光让我最快乐。",
+      "trait": "TIME",
+      "reverse": false
+    },
+    {
+      "id": "LL3",
+      "text": "伴侣给的礼物对我很有意义。",
+      "trait": "GIFTS",
+      "reverse": false
+    },
+    {
+      "id": "LL4",
+      "text": "伴侣在我困难时帮助我时，我感到被爱。",
+      "trait": "SERVICE",
+      "reverse": false
+    },
+    {
+      "id": "LL5",
+      "text": "与伴侣的身体接触让我感到安慰。",
+      "trait": "TOUCH",
+      "reverse": false
+    },
+    {
+      "id": "LL6",
+      "text": "伴侣的感谢让我心里温暖。",
+      "trait": "WORDS",
+      "reverse": false
+    },
+    {
+      "id": "LL7",
+      "text": "有意义的对话时光对我最宝贵。",
+      "trait": "TIME",
+      "reverse": false
+    },
+    {
+      "id": "LL8",
+      "text": "收到用心的礼物时我非常高兴。",
+      "trait": "GIFTS",
+      "reverse": false
+    },
+    {
+      "id": "LL9",
+      "text": "伴侣照顾我的需求时，我感到被关心。",
+      "trait": "SERVICE",
+      "reverse": false
+    },
+    {
+      "id": "LL10",
+      "text": "拥抱和牵手对我很重要。",
+      "trait": "TOUCH",
+      "reverse": false
+    },
+    {
+      "id": "LL11",
+      "text": "伴侣认可我的努力时我最开心。",
+      "trait": "WORDS",
+      "reverse": false
+    },
+    {
+      "id": "LL12",
+      "text": "与伴侣共同活动最重要。",
+      "trait": "TIME",
+      "reverse": false
+    },
+    {
+      "id": "LL13",
+      "text": "我珍藏伴侣给的每件礼物。",
+      "trait": "GIFTS",
+      "reverse": false
+    },
+    {
+      "id": "LL14",
+      "text": "伴侣为我牺牲时我很感动。",
+      "trait": "SERVICE",
+      "reverse": false
+    },
+    {
+      "id": "LL15",
+      "text": "身体亲密对我至关重要。",
+      "trait": "TOUCH",
+      "reverse": false
+    },
+    {
+      "id": "LL16",
+      "text": "伴侣的鼓励能改变我的一天。",
+      "trait": "WORDS",
+      "reverse": false
+    },
+    {
+      "id": "LL17",
+      "text": "与伴侣在一起，其他一切都不重要。",
+      "trait": "TIME",
+      "reverse": false
+    },
+    {
+      "id": "LL18",
+      "text": "即使很小的礼物我也很开心。",
+      "trait": "GIFTS",
+      "reverse": false
+    },
+    {
+      "id": "LL19",
+      "text": "伴侣为我做事时我感到被爱。",
+      "trait": "SERVICE",
+      "reverse": false
+    },
+    {
+      "id": "LL20",
+      "text": "没有身体接触我会感到失落。",
+      "trait": "TOUCH",
+      "reverse": false
+    },
+    {
+      "id": "LL21",
+      "text": "积极的反馈帮我成长。",
+      "trait": "WORDS",
+      "reverse": false
+    },
+    {
+      "id": "LL22",
+      "text": "我想与伴侣体验新事物。",
+      "trait": "TIME",
+      "reverse": false
+    },
+    {
+      "id": "LL23",
+      "text": "礼物的心意比价格重要。",
+      "trait": "GIFTS",
+      "reverse": false
+    },
+    {
+      "id": "LL24",
+      "text": "伴侣减轻我的负担时我最开心。",
+      "trait": "SERVICE",
+      "reverse": false
+    },
+    {
+      "id": "LL25",
+      "text": "没有伴侣的接触我缺乏情感稳定。",
+      "trait": "TOUCH",
+      "reverse": false
+    }
+  ],
+  "results": {
+    "ranges": [
+      {
+        "min": 25,
+        "max": 45,
+        "level": "平衡型",
+        "emoji": "⚖️",
+        "description": "你平等重视这5种爱的语言。你灵活地给予和接收多种形式的爱。",
+        "recommendation": [
+          "与伴侣分享各自的主要爱的语言",
+          "用多种方式表达爱会丰富你们的关系",
+          "理解伴侣可能用不同方式表达爱"
+        ]
+      },
+      {
+        "min": 46,
+        "max": 65,
+        "level": "1-2种语言优先",
+        "emoji": "🎯",
+        "description": "你优先选择1-2种特定的爱的语言。用这种方式表达时，你感到最深的被爱。",
+        "recommendation": [
+          "清楚地告诉伴侣你主要的爱的语言",
+          "互相匹配时会产生深层联系",
+          "也要尊重和学习伴侣的爱的语言"
+        ]
+      },
+      {
+        "min": 66,
+        "max": 85,
+        "level": "1种语言强烈偏好",
+        "emoji": "💫",
+        "description": "你对一种特定的爱的语言有强烈偏好。这是你最强的情感连接方式。",
+        "recommendation": [
+          "帮助伴侣理解你主要的爱的语言",
+          "清晰沟通能防止误解",
+          "逐步探索其他爱的语言的价值"
+        ]
+      }
+    ]
+  }
+}
