@@ -1,0 +1,264 @@
+{
+  "meta": {
+    "id": "dating-style",
+    "version": "1.0",
+    "language": "en",
+    "rtl": false,
+    "lastUpdated": "2026-01-22",
+    "itemCount": 25,
+    "traitCount": 4
+  },
+  "ui": {
+    "testName": "What's Your Dating Style?",
+    "description": "A 25-item assessment revealing your authentic approach to romance and relationships",
+    "security": "Your responses are not saved.",
+    "processing": "Analyzing your dating style...",
+    "reportTitle": "Your Dating Style Profile",
+    "actions": {
+      "restart": "Retake",
+      "share": "Share",
+      "save": "Save"
+    },
+    "labels": ["Strongly Disagree", "Disagree", "Neutral", "Agree", "Strongly Agree"]
+  },
+  "guide": {
+    "ipipId": "IPIP-DS-25 (Dating Style Assessment, based on Big Five)",
+    "purpose": "This assessment helps you understand your dating approach and relationship patterns. It is for self-awareness only and not a diagnostic tool.",
+    "instruction": "Based on the last 2-4 weeks, honestly answer how much each statement applies to you.",
+    "interpretation": "Higher scores indicate stronger tendencies in that trait, while lower scores indicate weaker tendencies.",
+    "startBtn": "Start Assessment"
+  },
+  "traitNames": {
+    "AC": "Active Pursuit",
+    "CA": "Cautious Approach",
+    "IE": "Independent Expression",
+    "RE": "Relationship-Centered"
+  },
+  "descriptions": {
+    "AC": {
+      "emoji": "🔥",
+      "name": "Active Pursuit",
+      "detail": "You actively seek partners and express interest openly. You are comfortable with new romantic encounters and feel at ease sharing your feelings.",
+      "tip": "Higher scores mean you initiate and pursue connections actively; lower scores mean you prefer waiting for others' signals."
+    },
+    "CA": {
+      "emoji": "🤔",
+      "name": "Cautious Approach",
+      "detail": "You evaluate potential partners carefully and value deep connections. You prefer understanding someone thoroughly before committing emotionally.",
+      "tip": "Higher scores indicate thoughtfulness and caution; lower scores indicate spontaneity and emotional immediacy."
+    },
+    "IE": {
+      "emoji": "🗣️",
+      "name": "Independent Expression",
+      "detail": "You clearly express your feelings and needs while valuing personal freedom. You maintain independence even within relationships.",
+      "tip": "Higher scores mean you assert boundaries and maintain autonomy; lower scores mean you accommodate your partner's needs."
+    },
+    "RE": {
+      "emoji": "💕",
+      "name": "Relationship-Centered",
+      "detail": "You prioritize your partner's needs and emotions. You seek deep intimacy and show strong commitment in relationships.",
+      "tip": "Higher scores indicate deep emotional engagement; lower scores indicate preference for emotional distance."
+    }
+  },
+  "items": [
+    {
+      "id": "AC_001",
+      "text": "When I meet someone I'm attracted to, I make the first move to contact them.",
+      "trait": "AC",
+      "reverse": false
+    },
+    {
+      "id": "AC_002",
+      "text": "I enjoy meeting new people and exploring romantic possibilities.",
+      "trait": "AC",
+      "reverse": false
+    },
+    {
+      "id": "AC_003",
+      "text": "I directly express my feelings to someone I'm interested in.",
+      "trait": "AC",
+      "reverse": false
+    },
+    {
+      "id": "AC_004",
+      "text": "I feel anxious about starting new romantic relationships.",
+      "trait": "AC",
+      "reverse": true
+    },
+    {
+      "id": "AC_005",
+      "text": "I prefer to wait for the other person to show interest before I act.",
+      "trait": "AC",
+      "reverse": true
+    },
+    {
+      "id": "AC_006",
+      "text": "I tend to hide my feelings when I develop romantic interest.",
+      "trait": "AC",
+      "reverse": true
+    },
+    {
+      "id": "AC_007",
+      "text": "I actively try not to miss opportunities to start new relationships.",
+      "trait": "AC",
+      "reverse": false
+    },
+    {
+      "id": "CA_001",
+      "text": "I take time to think carefully before starting a relationship with someone new.",
+      "trait": "CA",
+      "reverse": false
+    },
+    {
+      "id": "CA_002",
+      "text": "I wait to understand someone's true character before revealing deeper feelings.",
+      "trait": "CA",
+      "reverse": false
+    },
+    {
+      "id": "CA_003",
+      "text": "I thoughtfully evaluate my compatibility with a potential partner.",
+      "trait": "CA",
+      "reverse": false
+    },
+    {
+      "id": "CA_004",
+      "text": "I tend to fall for someone quickly on a first date.",
+      "trait": "CA",
+      "reverse": true
+    },
+    {
+      "id": "CA_005",
+      "text": "I make relationship decisions based on emotional impulses.",
+      "trait": "CA",
+      "reverse": true
+    },
+    {
+      "id": "CA_006",
+      "text": "I lose interest quickly if I notice flaws in someone I'm dating.",
+      "trait": "CA",
+      "reverse": true
+    },
+    {
+      "id": "IE_001",
+      "text": "I need adequate personal time and space even when in a relationship.",
+      "trait": "IE",
+      "reverse": false
+    },
+    {
+      "id": "IE_002",
+      "text": "I clearly express my thoughts and needs in romantic relationships.",
+      "trait": "IE",
+      "reverse": false
+    },
+    {
+      "id": "IE_003",
+      "text": "I prefer to maintain my independence rather than become dependent on my partner.",
+      "trait": "IE",
+      "reverse": false
+    },
+    {
+      "id": "IE_004",
+      "text": "I'm willing to sacrifice my plans and dreams for my partner.",
+      "trait": "IE",
+      "reverse": true
+    },
+    {
+      "id": "IE_005",
+      "text": "I often hide my opinions to accommodate my partner's preferences.",
+      "trait": "IE",
+      "reverse": true
+    },
+    {
+      "id": "IE_006",
+      "text": "I feel the need to control my partner's actions and decisions.",
+      "trait": "IE",
+      "reverse": true
+    },
+    {
+      "id": "RE_001",
+      "text": "I'm sensitive to my partner's emotional state.",
+      "trait": "RE",
+      "reverse": false
+    },
+    {
+      "id": "RE_002",
+      "text": "I prioritize caring for my partner and their happiness.",
+      "trait": "RE",
+      "reverse": false
+    },
+    {
+      "id": "RE_003",
+      "text": "I deeply value intimate and meaningful connection with my partner.",
+      "trait": "RE",
+      "reverse": false
+    },
+    {
+      "id": "RE_004",
+      "text": "I don't easily notice changes in my partner's emotions.",
+      "trait": "RE",
+      "reverse": true
+    },
+    {
+      "id": "RE_005",
+      "text": "I prefer to maintain emotional distance in my relationships.",
+      "trait": "RE",
+      "reverse": true
+    },
+    {
+      "id": "RE_006",
+      "text": "I often feel lonely in my romantic relationships.",
+      "trait": "RE",
+      "reverse": true
+    }
+  ],
+  "results": {
+    "ranges": [
+      {
+        "min": 25,
+        "max": 50,
+        "level": "VERY_LOW",
+        "emoji": "🌙",
+        "title": "Very Low",
+        "description": "This trait is very weak in your approach.",
+        "recommendation": "Understand your current patterns and practice adjusting when needed."
+      },
+      {
+        "min": 51,
+        "max": 75,
+        "level": "LOW",
+        "emoji": "⭐",
+        "title": "Low",
+        "description": "This trait is moderately weak.",
+        "recommendation": "Respect your natural tendencies while developing flexibility when the situation calls for it."
+      },
+      {
+        "min": 76,
+        "max": 100,
+        "level": "MEDIUM",
+        "emoji": "💫",
+        "title": "Moderate",
+        "description": "This trait is balanced.",
+        "recommendation": "Keep your balanced approach."
+      },
+      {
+        "min": 101,
+        "max": 125,
+        "level": "HIGH",
+        "emoji": "✨",
+        "title": "High",
+        "description": "This trait is notably strong.",
+        "recommendation": "Use your strength wisely while watching for imbalances."
+      },
+      {
+        "min": 126,
+        "max": 150,
+        "level": "VERY_HIGH",
+        "emoji": "💖",
+        "title": "Very High",
+        "description": "This trait is very strong.",
+        "recommendation": "Channel your strength positively and work toward balance."
+      }
+    ]
+  }
+}
